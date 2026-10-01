@@ -39,6 +39,8 @@ interface GitStatus {
   repo: boolean;
   branch: string | null;
   files: { path: string; status: string; staged: boolean }[];
+  /** Commits not pushed yet; null when the branch has no remote yet. */
+  ahead?: number | null;
 }
 
 /**
@@ -505,14 +507,20 @@ export class DevMode {
     }
   }
 
-  protected commit(): void {
+  /** Commits the site folder; with `andPush` also pushes (which publishes on Vercel). */
+  protected commit(andPush = false): void {
     const message = this.commitMessage().trim();
     if (!message) return;
     if (this.dirtyCount() && !confirm('Some open files have unsaved changes that will not be committed. Commit anyway?')) return;
     void this.gitAction(async () => {
       await api('POST', '/api/git/commit', { message });
       this.commitMessage.set('');
-    }, 'Committed');
+      if (andPush) await api('POST', '/api/git/push');
+    }, andPush ? 'Committed and pushed — Vercel will publish it in a minute' : 'Committed');
+  }
+
+  protected push(): void {
+    void this.gitAction(() => api('POST', '/api/git/push'), 'Pushed — Vercel will publish it in a minute');
   }
 
   protected revertGit(path: string): void {

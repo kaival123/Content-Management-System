@@ -103,9 +103,20 @@
                 <button type="button" class="btn btn-sm btn-secondary" [disabled]="gitBusy()" (click)="newBranch()">New branch</button>
               </div>
               <textarea rows="2" placeholder="Commit message" [value]="commitMessage()" (input)="setCommitMessage($event)"></textarea>
-              <button type="button" class="btn btn-sm btn-primary btn-block" [disabled]="!commitMessage().trim() || !g.files.length || gitBusy()" (click)="commit()">
-                <app-icon name="check" [size]="14" /> Commit {{ g.files.length }} change{{ g.files.length === 1 ? '' : 's' }}
-              </button>
+              <div class="dev-commit-row">
+                <button type="button" class="btn btn-sm btn-secondary" [disabled]="!commitMessage().trim() || !g.files.length || gitBusy()" (click)="commit()">
+                  <app-icon name="check" [size]="14" /> Commit {{ g.files.length }}
+                </button>
+                <button type="button" class="btn btn-sm btn-primary" [disabled]="!commitMessage().trim() || !g.files.length || gitBusy()" (click)="commit(true)" title="Commit, then push to GitHub — Vercel publishes the websites in site/dist">
+                  <app-icon name="upload" [size]="14" /> Commit &amp; push
+                </button>
+              </div>
+              @if (g.ahead !== 0) {
+                <button type="button" class="btn btn-sm btn-secondary btn-block" [disabled]="gitBusy()" (click)="push()">
+                  <app-icon name="upload" [size]="14" /> {{ g.ahead === null ? 'Push branch' : 'Push ' + g.ahead + ' commit' + (g.ahead === 1 ? '' : 's') }}
+                </button>
+              }
+              <p class="field-hint">Pushing publishes your websites (site/dist) on Vercel.</p>
             </div>
             <div class="dev-side-sub">Changes</div>
             <ul class="dev-changes">

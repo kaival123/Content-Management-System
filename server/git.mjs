@@ -51,6 +51,9 @@ export class Git {
     const lines = out.split('\n').filter(Boolean);
     const branchLine = lines[0]?.startsWith('## ') ? lines.shift().slice(3) : '';
     const branch = branchLine.split('...')[0].replace(/^No commits yet on /, '');
+    // "main...origin/main [ahead 2, behind 1]": commits not pushed yet (null: no remote branch).
+    const upstream = branchLine.includes('...');
+    const ahead = upstream ? Number(/ahead (\d+)/.exec(branchLine)?.[1] ?? 0) : null;
     const files = [];
     for (const line of lines) {
       const code = line.slice(0, 2);
@@ -60,7 +63,7 @@ export class Git {
       const status = code === '??' ? 'untracked' : code.includes('D') ? 'deleted' : code.includes('A') ? 'added' : code.includes('R') ? 'renamed' : 'modified';
       files.push({ path: await this.toSite(file), status, staged: code[0] !== ' ' && code[0] !== '?' });
     }
-    return { repo: true, branch, files };
+    return { repo: true, branch, files, ahead };
   }
 
   /** File content at a ref (default HEAD), or null if it didn't exist there. */
@@ -113,6 +116,21 @@ export class Git {
     await run(['add', '-A', '--', spec], root);
     const out = await run(['commit', '-m', message.trim(), '--', spec], root);
     return out.trim().split('\n')[0];
+  }
+
+  /** Pushes the current branch (setting its upstream on the first push). Uses your Git credentials. */
+  async push() {
+    const root = await this.repoRoot();
+    if (!root) throw new ProjectError(400, 'This project is not a Git repository');
+    const branch = (await run(['rev-parse', '--abbrev-ref', 'HEAD'], root)).trim();
+    const upstream = await run(['rev-parse', '--abbrev-ref', '--symbolic-full-name', '@{u}'], root).then(
+      () => true,
+      () => false,
+    );
+    const remotes = (await run(['remote'], root)).split('\n').filter(Boolean);
+    if (!remotes.length) throw new ProjectError(400, 'No Git remote is set up (e.g. GitHub). Add one with "git remote add origin <url>".');
+    await run(upstream ? ['push'] : ['push', '-u', remotes.includes('origin') ? 'origin' : remotes[0], branch], root);
+    return { branch };
   }
 
   async createBranch(name, checkout = true) {

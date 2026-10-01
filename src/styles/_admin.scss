@@ -3798,3 +3798,14 @@ button.adm-card-thumb {
 .signin-error {
   color: #b91c1c !important;
 }
+
+// Developer mode → Git: "Commit" and "Commit & push" side by side
+.dev-commit-row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 6px;
+
+  .btn {
+    justify-content: center;
+  }
+}
