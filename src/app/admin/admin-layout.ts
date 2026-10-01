@@ -35,7 +35,9 @@ import { Icon } from '../shared/icon';
           <span class="conn" [class.conn-ok]="project.status() === 'ready'" [class.conn-bad]="project.status() === 'offline'">
             {{ project.status() === 'ready' ? 'Synced with project folder' : project.status() === 'offline' ? 'Project server offline' : 'Connecting…' }}
           </span>
-          @if (project.siteDir()) {
+          @if (project.session().auth) {
+            <button type="button" class="adm-folder" (click)="project.signOut()"><app-icon name="back" [size]="13" /> Sign out</button>
+          } @else if (project.siteDir()) {
             <button type="button" class="adm-folder" [title]="'Open ' + project.siteDir() + ' in VS Code'" (click)="openInVsCode()">
               <app-icon name="external" [size]="13" /> {{ project.siteDir() }}
             </button>
@@ -46,11 +48,16 @@ import { Icon } from '../shared/icon';
         @if (project.status() === 'offline' && !pages.loaded()) {
           <div class="adm-empty offline">
             <h2>Can't reach the project server</h2>
-            <p>The CMS reads and writes your landing pages as files in the <code>site/</code> folder through a small local server (port 4310).</p>
+            <p>The CMS reads and writes your websites as files in the <code>site/</code> folder through the project server (<code>server/index.mjs</code>).</p>
             @if (project.error(); as err) {
               <p class="offline-reason">{{ err }}</p>
             }
             <div class="offline-steps">
+              <div>
+                <strong>On a hosted server</strong>, the project server must run there too:
+                <pre>npm run build && npm run serve:prod</pre>
+                with <code>CMS_ADMIN_PASSWORD</code> set — see <code>DEPLOY.md</code>.
+              </div>
               <div>
                 <strong>Start everything</strong> (CMS + project server):
                 <pre>npm start -- --host 0.0.0.0 --port 4200</pre>
