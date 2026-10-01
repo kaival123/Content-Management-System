@@ -1,0 +1,23 @@
+{
+  "id": "s_mumpib627ee77i",
+  "type": "hero",
+  "visible": true,
+  "data": {
+    "eyebrow": "November 12–14 · Bengaluru",
+    "heading": "The developer conference of the year",
+    "subheading": "Three days of talks, workshops and networking with the people building the future of software.",
+    "primaryLabel": "Get your ticket",
+    "primaryHref": "#pricing",
+    "secondaryLabel": "View agenda",
+    "secondaryHref": "#features",
+    "image": "https://images4.alphacoders.com/101/thumb-1920-1012509.jpg",
+    "layout": "split"
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 96,
+    "align": "center",
+    "width": "boxed"
+  }
+}

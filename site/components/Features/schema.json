@@ -1,0 +1,124 @@
+{
+  "type": "features",
+  "label": "Features",
+  "description": "Grid of features with icon, title and text",
+  "icon": "grid",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "type": "textarea"
+    },
+    {
+      "key": "items",
+      "label": "Features",
+      "type": "list",
+      "itemLabel": "Feature",
+      "itemFields": [
+        {
+          "key": "icon",
+          "label": "Icon (emoji)",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "kind": "text",
+      "fields": [
+        "subheading"
+      ]
+    },
+    {
+      "key": "card",
+      "label": "Feature cards",
+      "kind": "box",
+      "list": "items",
+      "fields": [
+        "icon",
+        "title",
+        "text"
+      ]
+    },
+    {
+      "key": "icon",
+      "label": "Icons",
+      "kind": "box",
+      "list": "items",
+      "fields": [
+        "icon"
+      ]
+    },
+    {
+      "key": "title",
+      "label": "Feature titles",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "title"
+      ]
+    },
+    {
+      "key": "text",
+      "label": "Feature text",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "text"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "features",
+    "heading": "Everything you need",
+    "subheading": "Powerful features that help your team move faster.",
+    "items": [
+      {
+        "icon": "⚡",
+        "title": "Lightning fast",
+        "text": "Optimised for speed so your visitors never wait."
+      },
+      {
+        "icon": "🔒",
+        "title": "Secure by default",
+        "text": "Enterprise-grade security built into every layer."
+      },
+      {
+        "icon": "📈",
+        "title": "Grows with you",
+        "text": "From your first customer to your millionth."
+      }
+    ]
+  },
+  "grid": {
+    "desktop": 3,
+    "tablet": 2,
+    "mobile": 1
+  }
+}

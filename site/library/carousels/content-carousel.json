@@ -1,0 +1,97 @@
+{
+  "name": "Content carousel",
+  "description": "One text slide at a time with title, text and button.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "How it works",
+      "subheading": "Five simple steps from idea to live page.",
+      "variant": "content",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Pick a template",
+          "eyebrow": "Step 1",
+          "text": "Start from dozens of conversion-tested layouts or a blank canvas.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "Browse templates",
+          "buttonHref": "#templates",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Make it yours",
+          "eyebrow": "Step 2",
+          "text": "Swap in your copy, colours and images with the visual editor.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "See the editor",
+          "buttonHref": "#editor",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Connect your tools",
+          "eyebrow": "Step 3",
+          "text": "Send leads straight to your CRM, email platform or Slack.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "View integrations",
+          "buttonHref": "#integrations",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Publish in one click",
+          "eyebrow": "Step 4",
+          "text": "Go live on your own domain with SSL and a global CDN.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "Learn about hosting",
+          "buttonHref": "#hosting",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Measure and improve",
+          "eyebrow": "Step 5",
+          "text": "Track conversions and run A/B tests to keep getting better.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "Explore analytics",
+          "buttonHref": "#analytics",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "align": "center",
+      "width": "narrow"
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 24,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

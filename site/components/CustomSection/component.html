@@ -1,0 +1,72 @@
+{{!--
+  Custom section: columns of freely arranged elements, built in the visual editor.
+  Each element's type decides its markup below; its style comes from the editor.
+--}}
+<div
+  class="lp-cols lp-stack-{{default stackOn "tablet"}}"
+  style="grid-template-columns: {{columns layout}}; gap: {{default gap 32}}px; align-items: {{default verticalAlign "start"}}"
+>
+  {{#each columns}}
+  <div class="lp-col" data-el="col:{{id}}">
+    {{#each elements}}
+      {{#is type "heading"}}
+      <{{tag data.level}} class="lp-{{tag data.level}}" data-el="el:{{id}}" data-edit="text" data-ph="Heading">{{data.text}}</{{tag data.level}}>
+      {{/is}}
+      {{#is type "text"}}
+      <p class="lp-b-text lp-pre" data-el="el:{{id}}" data-edit="text" data-ph="Text">{{data.text}}</p>
+      {{/is}}
+      {{#is type "image"}}
+      <figure class="lp-b-image">
+        {{#if data.href}}{{#unless @editor}}<a href="{{data.href}}">{{/unless}}{{/if}}
+        <img data-el="el:{{id}}" src="{{data.src}}" alt="{{data.alt}}" />
+        {{#if data.href}}{{#unless @editor}}</a>{{/unless}}{{/if}}
+        {{#if data.caption}}<figcaption>{{data.caption}}</figcaption>{{/if}}
+      </figure>
+      {{/is}}
+      {{#is type "button"}}
+      <div class="lp-b-button">
+        <a
+          class="lp-btn lp-btn-{{default data.variant "primary"}}"
+          data-el="el:{{id}}"
+          data-edit="label"
+          href="{{data.href}}"
+          {{#if data.newTab}}target="_blank" rel="noopener"{{/if}}
+        >{{data.label}}</a>
+      </div>
+      {{/is}}
+      {{#is type "list"}}
+      <ul class="lp-checks lp-b-list" data-el="el:{{id}}" style="--marker: {{marker data.marker}}">
+        {{#each data.items}}{{#if this}}<li>{{this}}</li>{{/if}}{{/each}}
+      </ul>
+      {{/is}}
+      {{#is type "icon"}}
+      <div class="lp-b-icon" data-el="el:{{id}}" style="font-size: {{default data.size 40}}px">{{data.icon}}</div>
+      {{/is}}
+      {{#is type "video"}}
+      <div class="lp-b-video" data-el="el:{{id}}">
+        {{#video data.url}}
+        <iframe src="{{this}}" title="Video" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        {{else}}
+        <span class="lp-b-placeholder">Paste a YouTube or Vimeo link</span>
+        {{/video}}
+      </div>
+      {{/is}}
+      {{#is type "spacer"}}
+      <div class="lp-b-spacer" data-el="el:{{id}}" style="height: {{default data.height 40}}px"></div>
+      {{/is}}
+      {{#is type "divider"}}
+      <hr
+        class="lp-b-divider"
+        data-el="el:{{id}}"
+        style="border-top-width: {{default data.thickness 1}}px; border-top-color: {{color data.color}}; width: {{default data.width 100}}%"
+      />
+      {{/is}}
+      {{#is type "html"}}
+      <div class="lp-b-html" data-el="el:{{id}}">{{{data.html}}}</div>
+      {{/is}}
+    {{else}}
+      {{#if @editor}}<div class="lp-col-empty">Empty column — add elements from the panel</div>{{/if}}
+    {{/each}}
+  </div>
+  {{/each}}
+</div>

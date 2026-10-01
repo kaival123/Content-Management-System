@@ -1,0 +1,148 @@
+{
+  "name": "Three feature columns",
+  "description": "Three equal columns, each with an icon, heading, text and link.",
+  "section": {
+    "type": "custom",
+    "data": {
+      "anchor": "",
+      "layout": "1-1-1",
+      "gap": 32,
+      "verticalAlign": "start",
+      "stackOn": "tablet",
+      "columns": [
+        {
+          "id": "c8",
+          "style": {},
+          "elements": [
+            {
+              "id": "e9",
+              "type": "icon",
+              "data": {
+                "icon": "⚡",
+                "size": 40
+              },
+              "style": {}
+            },
+            {
+              "id": "e10",
+              "type": "heading",
+              "data": {
+                "text": "Fast by default",
+                "level": "h3"
+              },
+              "style": {}
+            },
+            {
+              "id": "e11",
+              "type": "text",
+              "data": {
+                "text": "Every page is optimised automatically for speed and SEO."
+              },
+              "style": {}
+            },
+            {
+              "id": "e12",
+              "type": "button",
+              "data": {
+                "label": "Learn more",
+                "href": "#",
+                "variant": "link",
+                "newTab": false
+              },
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "c13",
+          "style": {},
+          "elements": [
+            {
+              "id": "e14",
+              "type": "icon",
+              "data": {
+                "icon": "🎨",
+                "size": 40
+              },
+              "style": {}
+            },
+            {
+              "id": "e15",
+              "type": "heading",
+              "data": {
+                "text": "Beautifully on-brand",
+                "level": "h3"
+              },
+              "style": {}
+            },
+            {
+              "id": "e16",
+              "type": "text",
+              "data": {
+                "text": "Your colours and fonts, applied consistently across every page."
+              },
+              "style": {}
+            },
+            {
+              "id": "e17",
+              "type": "button",
+              "data": {
+                "label": "Learn more",
+                "href": "#",
+                "variant": "link",
+                "newTab": false
+              },
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "c18",
+          "style": {},
+          "elements": [
+            {
+              "id": "e19",
+              "type": "icon",
+              "data": {
+                "icon": "📈",
+                "size": 40
+              },
+              "style": {}
+            },
+            {
+              "id": "e20",
+              "type": "heading",
+              "data": {
+                "text": "Built to convert",
+                "level": "h3"
+              },
+              "style": {}
+            },
+            {
+              "id": "e21",
+              "type": "text",
+              "data": {
+                "text": "Proven layouts and built-in A/B testing help you grow."
+              },
+              "style": {}
+            },
+            {
+              "id": "e22",
+              "type": "button",
+              "data": {
+                "label": "Learn more",
+                "href": "#",
+                "variant": "link",
+                "newTab": false
+              },
+              "style": {}
+            }
+          ]
+        }
+      ]
+    },
+    "style": {
+      "align": "center"
+    }
+  }
+}

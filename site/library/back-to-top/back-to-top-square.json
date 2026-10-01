@@ -1,0 +1,15 @@
+{
+  "name": "Back to top · square, left",
+  "description": "Dark rounded square with a double chevron on the left.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "rounded",
+      "icon": "double",
+      "position": "left",
+      "background": "__text__",
+      "iconColor": "__bg__",
+      "size": 46
+    }
+  }
+}

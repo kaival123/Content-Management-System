@@ -1,0 +1,30 @@
+{
+  "id": "s_mumpib62itojth",
+  "type": "footer",
+  "visible": true,
+  "data": {
+    "brand": "DevSummit",
+    "tagline": "See you there.",
+    "links": [
+      {
+        "label": "Privacy",
+        "href": "#"
+      },
+      {
+        "label": "Terms",
+        "href": "#"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "copyright": "© 2026 Brand. All rights reserved."
+  },
+  "style": {
+    "background": "#060914",
+    "textColor": "#cbd5e1",
+    "paddingY": 40,
+    "align": "center"
+  }
+}

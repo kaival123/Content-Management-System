@@ -1,0 +1,38 @@
+{{!--
+  Back to top button. On the site it floats in a corner (position: fixed), fades in once
+  the visitor has scrolled "showAfter" px, and scrolls back up when clicked — the site
+  runtime (initBackToTop) does that for every [data-back-to-top] button. In the editor it
+  is shown in place with a note, since a floating button would cover the canvas.
+  Add it once per page; its place in the section list doesn't matter.
+--}}
+{{#if @editor}}
+<div class="lp-btt-editor">
+  <span class="lp-btt-note">
+    <strong>Back to top button</strong>
+    Floats at the bottom {{default position "right"}} of the page and appears after scrolling {{default showAfter 300}}px. Use Preview to try it.
+  </span>
+{{/if}}
+<button
+  type="button"
+  class="lp-btt lp-btt-{{default shape "circle"}} lp-btt-pos-{{default position "right"}}{{#if shadow}} lp-btt-shadow{{/if}}{{#if hideOnMobile}} lp-btt-hide-m{{/if}}{{#if progress}} lp-btt-has-progress{{/if}}"
+  data-el="button"
+  {{#unless @editor}}data-back-to-top data-show-after="{{default showAfter 300}}" data-smooth="{{#if smooth}}true{{else}}false{{/if}}"{{/unless}}
+  aria-label="{{default label "Back to top"}}"
+  title="{{default label "Back to top"}}"
+  style="--btt-size: {{default size 48}}px; --btt-s-n: {{default size 48}}; --btt-bg: {{color background}}; --btt-fg: {{color iconColor}}; --btt-x: {{default offsetX 24}}px; --btt-y: {{default offsetY 24}}px; --btt-ring-w: {{default ringWidth 3}}{{#if ringColor}}; --btt-ring: {{color ringColor}}{{/if}}"
+>
+  {{#if progress}}
+  <svg class="lp-btt-ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="lp-btt-track" cx="24" cy="24" r="22" /><circle class="lp-btt-fill" cx="24" cy="24" r="22" pathLength="100" /></svg>
+  {{/if}}
+  <svg class="lp-btt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    {{#is icon "chevron"}}<path d="m18 15-6-6-6 6" />{{/is}}
+    {{#is icon "double"}}<path d="m17 18-5-5-5 5" /><path d="m17 11-5-5-5 5" />{{/is}}
+    {{#is icon "caret"}}<path d="M12 7 6 15h12z" fill="currentColor" />{{/is}}
+    {{#unless icon}}<path d="M12 19V5" /><path d="m5 12 7-7 7 7" />{{/unless}}
+    {{#is icon "arrow"}}<path d="M12 19V5" /><path d="m5 12 7-7 7 7" />{{/is}}
+  </svg>
+  {{#is shape "pill"}}<span class="lp-btt-label">{{default label "Back to top"}}</span>{{/is}}
+</button>
+{{#if @editor}}
+</div>
+{{/if}}

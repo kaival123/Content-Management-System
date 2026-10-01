@@ -1,0 +1,19 @@
+{
+  "name": "Newsletter signup",
+  "description": "Email capture with a short pitch and privacy note.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "heading": "Get smarter about growth",
+      "text": "One practical email every other week with tactics, teardowns and templates. No fluff.",
+      "placeholder": "you@company.com",
+      "buttonLabel": "Subscribe",
+      "note": "Join 18,000 readers. Unsubscribe with one click.",
+      "successMessage": "You are in! Check your inbox to confirm."
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center"
+    }
+  }
+}

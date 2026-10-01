@@ -1,0 +1,88 @@
+{
+  "name": "Hero slider · numbered",
+  "description": "Full-width hero slides with numbers over the image and minimal arrows.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "",
+      "subheading": "",
+      "variant": "hero",
+      "slideHeight": 600,
+      "overlay": 50,
+      "slides": [
+        {
+          "heading": "Build pages people remember",
+          "eyebrow": "New in 2026",
+          "text": "Design, launch and optimise landing pages without code.",
+          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Start free trial",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Work together, in real time",
+          "eyebrow": "Collaboration",
+          "text": "Invite your team, comment and approve in one place.",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "See how",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Know what converts",
+          "eyebrow": "Analytics",
+          "text": "Built-in insights show what works, so every page beats the last.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Explore analytics",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Launch in an afternoon",
+          "eyebrow": "Templates",
+          "text": "Start from a proven layout and make it yours.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Browse templates",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": true,
+      "autoplaySpeed": 5500,
+      "speed": 700,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "sides",
+      "arrowStyle": "minimal",
+      "arrowSize": 56,
+      "dotsPosition": "overlay",
+      "dotsStyle": "numbers",
+      "controlColor": "#ffffff"
+    }
+  }
+}

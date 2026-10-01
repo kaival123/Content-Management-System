@@ -1,0 +1,515 @@
+@if (page(); as p) {
+  <header class="ed-top">
+    <a class="btn-icon" routerLink="/admin" title="Back to pages"><app-icon name="back" /></a>
+    <div class="ed-title">
+      <span class="ed-crumb">
+        <button type="button" class="link" (click)="leftTab.set('pages')" [title]="'Pages of ' + (website()?.name ?? '')">{{ website()?.name }}</button> ›
+      </span>
+      <input class="ed-title-input" [value]="p.title" (input)="setTitle($event)" aria-label="Page name" />
+      <span class="ed-meta">
+        <span class="badge" [class.badge-live]="p.status === 'published'">{{ p.status === 'published' ? 'Published' : 'Draft' }}</span>
+        @switch (saveState()) {
+          @case ('saving') {
+            <span class="ed-saved"><span class="dot dot-busy"></span> Saving to files…</span>
+          }
+          @case ('dirty') {
+            <span class="ed-saved"><span class="dot dot-busy"></span> Unsaved changes</span>
+          }
+          @case ('conflict') {
+            <span class="ed-saved ed-saved-bad"><app-icon name="help" [size]="13" /> Conflict — not saved</span>
+          }
+          @case ('error') {
+            <span class="ed-saved ed-saved-bad"><app-icon name="x" [size]="13" /> Not saved</span>
+          }
+          @default {
+            <span class="ed-saved" [title]="'Saved to site/websites/' + p.website + '/pages/' + p.slug + '/'"><app-icon name="check" [size]="13" /> Saved to files {{ p.updatedAt | date: 'h:mm:ss a' }}</span>
+          }
+        }
+      </span>
+    </div>
+
+    <div class="ed-top-center">
+      <div class="seg">
+        @for (d of devices; track d.value) {
+          <button type="button" [class.active]="device() === d.value" [title]="d.label" (click)="device.set(d.value)">
+            <app-icon [name]="d.icon" [size]="16" />
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="ed-top-actions">
+      <button type="button" class="btn-icon" title="Undo (Ctrl+Z)" [disabled]="!canUndo()" (click)="undo()"><app-icon name="undo" /></button>
+      <button type="button" class="btn-icon" title="Redo (Ctrl+Shift+Z)" [disabled]="!canRedo()" (click)="redo()"><app-icon name="redo" /></button>
+      <button type="button" class="btn-icon" title="Open this page's files in VS Code" (click)="openInVsCode()"><app-icon name="code" /></button>
+      <a class="btn btn-secondary" [href]="previewUrl()" target="_blank"><app-icon name="eye" [size]="16" /> Preview</a>
+      <button type="button" class="btn" [class.btn-primary]="p.status === 'draft'" [class.btn-secondary]="p.status === 'published'" (click)="togglePublish()">
+        <app-icon [name]="p.status === 'published' ? 'eye-off' : 'globe'" [size]="16" />
+        {{ p.status === 'published' ? 'Unpublish website' : 'Publish website' }}
+      </button>
+    </div>
+  </header>
+
+  @if (saveState() === 'conflict') {
+    <div class="ed-banner ed-banner-warn">
+      <app-icon name="help" />
+      <span>
+        <strong>This page was changed outside the visual editor</strong> (e.g. in VS Code) while you had unsaved edits —
+        {{ conflicts().length === 1 ? '1 file differs' : conflicts().length + ' files differ' }}. Nothing has been overwritten.
+      </span>
+      <button type="button" class="btn btn-sm btn-primary" (click)="reviewing.set(true)">Review changes</button>
+      <button type="button" class="btn btn-sm btn-secondary" (click)="keepTheirs()">Use code version</button>
+      <button type="button" class="btn btn-sm btn-secondary" (click)="keepMine()">Keep my version</button>
+    </div>
+  } @else if (saveState() === 'error') {
+    <div class="ed-banner ed-banner-err">
+      <app-icon name="x" />
+      <span><strong>Couldn't save:</strong> {{ saveError() }}</span>
+      <button type="button" class="btn btn-sm btn-secondary" (click)="retrySave()">Retry</button>
+    </div>
+  }
+  @if (libraryOpen()) {
+    <app-section-library [theme]="p.theme" (insert)="insertPreset($event)" (close)="libraryOpen.set(false)" />
+  }
+  @if (savingPreset(); as sp) {
+    <div class="modal-backdrop" (click)="savingPreset.set(null)"></div>
+    <form class="modal" role="dialog" aria-modal="true" aria-labelledby="sv-title" (submit)="saveToLibrary($event)">
+      <header class="modal-head">
+        <div>
+          <h2 id="sv-title">Save as reusable section</h2>
+          <p>Saves this section with its content and styling to <code>site/library/saved/</code>. Insert it on any page from Add section → Saved sections.</p>
+        </div>
+        <button type="button" class="btn-icon" title="Close" (click)="savingPreset.set(null)"><app-icon name="x" /></button>
+      </header>
+      <div class="modal-body">
+        <div class="field">
+          <label for="sv-name">Name</label>
+          <input id="sv-name" name="name" type="text" required autofocus [value]="def(sp).label + ' — ' + p.title" />
+        </div>
+      </div>
+      <footer class="modal-foot">
+        <button type="button" class="btn btn-secondary" (click)="savingPreset.set(null)">Cancel</button>
+        <button type="submit" class="btn btn-primary"><app-icon name="check" [size]="16" /> Save to library</button>
+      </footer>
+    </form>
+  }
+  @if (reviewing()) {
+    <app-conflict-dialog [files]="conflicts()" (resolve)="applyMerge($event)" (cancel)="reviewing.set(false)" />
+  }
+
+  <div class="ed-body">
+    <!-- Left panel -->
+    <aside class="ed-left">
+      <div class="tabs tabs-stacked">
+        <button type="button" [class.active]="leftTab() === 'pages'" (click)="leftTab.set('pages')"><app-icon name="file" [size]="15" /> Pages</button>
+        <button type="button" [class.active]="leftTab() === 'sections'" (click)="leftTab.set('sections')"><app-icon name="layers" [size]="15" /> Sections</button>
+        <button type="button" [class.active]="leftTab() === 'theme'" (click)="leftTab.set('theme')"><app-icon name="palette" [size]="15" /> Theme</button>
+        <button type="button" [class.active]="leftTab() === 'settings'" (click)="leftTab.set('settings')"><app-icon name="settings" [size]="15" /> Settings</button>
+      </div>
+
+      <div class="ed-left-body">
+        @switch (leftTab()) {
+          @case ('pages') {
+            @if (website(); as w) {
+              <app-pages-panel [website]="w" [currentId]="id()" (open)="openPage($event)" />
+            }
+          }
+          @case ('sections') {
+            <ul class="sec-list">
+              @for (s of p.sections; track s.id; let i = $index, first = $first, last = $last) {
+                <li
+                  class="sec-item"
+                  [class.selected]="selectedId() === s.id"
+                  [class.hidden-sec]="!s.visible"
+                  [class.drop-target]="dropIndex() === i && dragIndex() !== i"
+                  [class.dragging]="dragIndex() === i"
+                  draggable="true"
+                  (dragstart)="onDragStart(i, $event)"
+                  (dragover)="onDragOver(i, $event)"
+                  (drop)="onDrop(i, $event)"
+                  (dragend)="onDragEnd()"
+                  (click)="selectSection(s.id, true)"
+                >
+                  <span class="sec-grip" title="Drag to reorder"><app-icon name="grip" [size]="14" /></span>
+                  <span class="sec-icon"><app-icon [name]="def(s).icon" [size]="16" /></span>
+                  <span class="sec-name">
+                    {{ def(s).label }}
+                    @if (s.data.heading || s.data.brand) {
+                      <small>{{ s.data.heading || s.data.brand }}</small>
+                    }
+                  </span>
+                  <span class="sec-actions">
+                    <button type="button" class="btn-icon sm" title="Move up" [disabled]="first" (click)="move(i, -1, $event)"><app-icon name="up" [size]="14" /></button>
+                    <button type="button" class="btn-icon sm" title="Move down" [disabled]="last" (click)="move(i, 1, $event)"><app-icon name="down" [size]="14" /></button>
+                    <button type="button" class="btn-icon sm" [title]="s.visible ? 'Hide' : 'Show'" (click)="toggleVisible(s, $event)">
+                      <app-icon [name]="s.visible ? 'eye' : 'eye-off'" [size]="14" />
+                    </button>
+                  </span>
+                </li>
+              } @empty {
+                <li class="sec-empty">No sections yet. Add one below.</li>
+              }
+            </ul>
+
+            <button type="button" class="btn btn-primary btn-block" (click)="libraryOpen.set(true)">
+              <app-icon name="plus" [size]="16" /> Add section
+            </button>
+            @if (!hasBackToTop()) {
+              <button type="button" class="link-btn sec-quick-add" title="Floating arrow that appears when visitors scroll down" (click)="addBackToTop()">
+                <app-icon name="chevron-up" [size]="14" /> Back to top button
+              </button>
+            }
+          }
+
+          @case ('theme') {
+            @let t = theme();
+            <p class="tip"><app-icon name="globe" [size]="13" /> The theme applies to every page of “{{ website()?.name }}”.</p>
+            <h3 class="panel-label">Presets</h3>
+            <div class="presets">
+              @for (preset of presets; track preset.name) {
+                <button type="button" class="preset" (click)="applyPreset(preset.theme)" [title]="preset.name">
+                  <span class="preset-swatch" [style.background]="preset.theme.backgroundColor">
+                    <i [style.background]="preset.theme.primaryColor"></i>
+                    <i [style.background]="preset.theme.accentColor"></i>
+                  </span>
+                  {{ preset.name }}
+                </button>
+              }
+            </div>
+
+            <details class="grp" open>
+              <summary>Colours</summary>
+              @for (c of themeColors; track c.key) {
+                <div class="field field-row">
+                  <label [attr.for]="'th-' + c.key">{{ c.label }}</label>
+                  <div class="color-input">
+                    <input type="color" [value]="p.theme[c.key]" (input)="themeText(c.key, $event)" [attr.aria-label]="c.label" />
+                    <input [id]="'th-' + c.key" type="text" [value]="p.theme[c.key]" (change)="themeText(c.key, $event)" />
+                  </div>
+                </div>
+              }
+            </details>
+
+            <details class="grp" open>
+              <summary>Typography</summary>
+              <datalist id="font-list">
+                @for (f of fonts; track f) {
+                  <option [value]="f"></option>
+                }
+              </datalist>
+              <div class="field">
+                <label for="th-heading">Heading font</label>
+                <input id="th-heading" type="text" list="font-list" [value]="t.headingFont" (change)="themeText('headingFont', $event)" />
+              </div>
+              <div class="field">
+                <label for="th-body">Body font</label>
+                <input id="th-body" type="text" list="font-list" [value]="t.fontFamily" (change)="themeText('fontFamily', $event)" />
+                <span class="field-hint">Pick from the list or type any Google Fonts family name.</span>
+              </div>
+              <app-range-control label="Body text size" [value]="p.theme.baseFontSize" [min]="12" [max]="22" [fallback]="16" placeholder="16px" (valueChange)="setTheme('baseFontSize', $event)" />
+              <app-range-control label="Line height" [value]="p.theme.lineHeight" [min]="1.1" [max]="2.2" [step]="0.05" unit="" [fallback]="1.6" placeholder="1.6" (valueChange)="setTheme('lineHeight', $event)" />
+              <app-range-control label="H1 size" [value]="p.theme.h1Size" [min]="32" [max]="110" [fallback]="64" placeholder="64px" (valueChange)="setTheme('h1Size', $event)" />
+              <app-range-control label="H2 size" [value]="p.theme.h2Size" [min]="24" [max]="80" [fallback]="44" placeholder="44px" (valueChange)="setTheme('h2Size', $event)" />
+              <app-range-control label="H3 size" [value]="p.theme.h3Size" [min]="14" [max]="40" [fallback]="20" placeholder="20px" (valueChange)="setTheme('h3Size', $event)" />
+              <app-seg-control label="Heading weight" [options]="headingWeights" [value]="t.headingWeight" (valueChange)="setTheme('headingWeight', $event)" />
+              <app-range-control label="Heading letter spacing" [value]="p.theme.headingLetterSpacing" [min]="-0.08" [max]="0.2" [step]="0.01" unit="em" [fallback]="-0.02" placeholder="-0.02em" (valueChange)="setTheme('headingLetterSpacing', $event)" />
+              <app-toggle-control label="Uppercase headings" [value]="t.headingTransform === 'uppercase'" (valueChange)="setTheme('headingTransform', $event ? 'uppercase' : undefined)" />
+            </details>
+
+            <details class="grp" open>
+              <summary>Buttons</summary>
+              <app-range-control label="Corner radius" [value]="p.theme.buttonRadius" [min]="0" [max]="40" [fallback]="12" placeholder="12px" (valueChange)="setTheme('buttonRadius', $event)" />
+              <app-range-control label="Padding (top/bottom)" [value]="p.theme.buttonPaddingY" [min]="4" [max]="28" [fallback]="14" placeholder="14px" (valueChange)="setTheme('buttonPaddingY', $event)" />
+              <app-range-control label="Padding (left/right)" [value]="p.theme.buttonPaddingX" [min]="8" [max]="60" [fallback]="26" placeholder="26px" (valueChange)="setTheme('buttonPaddingX', $event)" />
+              <app-seg-control label="Weight" [options]="buttonWeights" [value]="t.buttonWeight" (valueChange)="setTheme('buttonWeight', $event)" />
+              <app-toggle-control label="Uppercase labels" [value]="t.buttonUppercase" (valueChange)="setTheme('buttonUppercase', $event || undefined)" />
+            </details>
+
+            <details class="grp" open>
+              <summary>Layout</summary>
+              <app-range-control label="Card corner radius" [value]="p.theme.radius" [min]="0" [max]="40" [fallback]="12" (valueChange)="setTheme('radius', $event ?? 12)" />
+              <app-range-control label="Content width" [value]="p.theme.maxWidth" [min]="800" [max]="1600" [step]="20" [fallback]="1140" (valueChange)="setTheme('maxWidth', $event ?? 1140)" />
+            </details>
+
+            <details class="grp">
+              <summary>Custom CSS</summary>
+              <div class="field">
+                <label for="th-site-css">Website CSS <small>(website.css — every page)</small></label>
+                <textarea
+                  id="th-site-css"
+                  class="code"
+                  rows="7"
+                  spellcheck="false"
+                  placeholder="/* Applies to every page of this website */&#10;.lp-btn { letter-spacing: 0.02em; }"
+                  [value]="website()?.customCss ?? ''"
+                  (input)="setWebsiteCss($event)"
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="th-page-css">Page CSS <small>(page.css — this page only)</small></label>
+                <textarea
+                  id="th-page-css"
+                  class="code"
+                  rows="7"
+                  spellcheck="false"
+                  placeholder="/* Applies to this page only */&#10;h2 { letter-spacing: 0; }"
+                  [value]="t.customCss"
+                  (input)="themeText('customCss', $event)"
+                ></textarea>
+                <span class="field-hint">Each section also has its own Custom CSS under Advanced.</span>
+              </div>
+            </details>
+          }
+
+          @case ('settings') {
+            <h3 class="panel-label">Page</h3>
+            <div class="field">
+              <label for="st-slug">URL</label>
+              <div class="input-prefix">
+                <span>/{{ p.website }}/</span>
+                <input id="st-slug" type="text" [value]="p.slug" (change)="setSlug($event)" />
+              </div>
+              @if (slugError()) {
+                <span class="field-error">{{ slugError() }}</span>
+              }
+            </div>
+            <div class="btn-row">
+              <button type="button" class="btn btn-sm btn-secondary" (click)="copyLink()"><app-icon name="copy" [size]="14" /> Copy link</button>
+              <button type="button" class="btn btn-sm btn-secondary" (click)="exportPage()"><app-icon name="download" [size]="14" /> Export JSON</button>
+            </div>
+
+            <h3 class="panel-label">SEO</h3>
+            <div class="field">
+              <label for="st-mt">Meta title</label>
+              <input id="st-mt" type="text" [value]="p.seo.metaTitle" [placeholder]="p.title" (input)="setSeo('metaTitle', $event)" />
+            </div>
+            <div class="field">
+              <label for="st-md">Meta description <span class="val">{{ p.seo.metaDescription.length }}/160</span></label>
+              <textarea id="st-md" rows="4" [value]="p.seo.metaDescription" (input)="setSeo('metaDescription', $event)"></textarea>
+            </div>
+            <div class="serp">
+              <div class="serp-url">{{ previewUrl().split('?')[0] }}</div>
+              <div class="serp-title">{{ p.seo.metaTitle || p.title }}</div>
+              <div class="serp-desc">{{ p.seo.metaDescription || 'Add a meta description to control how this page appears in search results.' }}</div>
+            </div>
+          }
+        }
+      </div>
+    </aside>
+
+    <!-- Live preview -->
+    <main class="ed-canvas" #canvas (click)="clearSelection()">
+      <div class="ed-frame" #preview [class.device]="device() !== 'desktop'" [style.width.px]="frameWidth()" [style.zoom]="frameZoom()">
+        <app-page-renderer [page]="p" [editable]="true" [selection]="selection()" (selectionChange)="onSelect($event)" (textEdit)="onTextEdit($event)" />
+        @if (!p.sections.length) {
+          <div class="canvas-add">
+            <button type="button" class="btn btn-primary" (click)="$event.stopPropagation(); libraryOpen.set(true)"><app-icon name="plus" [size]="16" /> Add section</button>
+          </div>
+        }
+      </div>
+    </main>
+
+    <!-- Inspector -->
+    <aside class="ed-right">
+      @if (selected(); as s) {
+        @if (element(); as info) {
+          <!-- Element panel -->
+          <div class="insp-head">
+            <button type="button" class="btn-icon sm" title="Back to section (Esc)" (click)="backToSection()"><app-icon name="back" [size]="16" /></button>
+            <div>
+              <small class="crumb">{{ selectedDef()!.label }}</small>
+              <strong>{{ info.label }}</strong>
+            </div>
+            <button type="button" class="btn-icon sm" title="Close" (click)="clearSelection()"><app-icon name="x" [size]="16" /></button>
+          </div>
+          @if (info.index !== null && info.count > 1) {
+            <div class="item-stepper">
+              <button type="button" class="btn-icon sm" title="Previous item" (click)="stepItem(-1)"><app-icon name="chevron-left" [size]="15" /></button>
+              <span>Item {{ info.index + 1 }} of {{ info.count }}</span>
+              <button type="button" class="btn-icon sm" title="Next item" (click)="stepItem(1)"><app-icon name="chevron-right" [size]="15" /></button>
+            </div>
+          }
+          <div class="tabs">
+            @if (info.source !== 'column') {
+              <button type="button" [class.active]="effectiveElementTab() === 'content'" (click)="elementTab.set('content')">Content</button>
+            }
+            <button type="button" [class.active]="effectiveElementTab() === 'style'" (click)="elementTab.set('style')">Style</button>
+            <button type="button" [class.active]="effectiveElementTab() === 'advanced'" (click)="elementTab.set('advanced')">Advanced</button>
+          </div>
+          <div class="insp-body">
+            @switch (effectiveElementTab()) {
+              @case ('content') {
+                @if (info.fields.length) {
+                  <app-section-form [fields]="info.fields" [data]="info.data" (patch)="patchElementContent($event)" [pages]="sitePages()" />
+                } @else {
+                  <p class="field-hint">This element has no content of its own — style it in the Style tab.</p>
+                }
+                <p class="tip"><app-icon name="edit" [size]="13" /> Tip: click text on the page to type directly.</p>
+              }
+              @case ('style') {
+                @if (info.index !== null && info.count > 1) {
+                  <p class="tip"><app-icon name="layers" [size]="13" /> Style changes apply to all {{ info.count }} {{ info.label.toLowerCase() }}.</p>
+                }
+                <app-element-style-form [kind]="info.kind" [value]="info.style" mode="style" (patch)="patchElementStyle($event)" />
+              }
+              @case ('advanced') {
+                <app-element-style-form [kind]="info.kind" [value]="info.style" mode="advanced" (patch)="patchElementStyle($event)" />
+              }
+            }
+          </div>
+          <div class="insp-foot">
+            @if (info.source === 'builder') {
+              <button type="button" class="btn btn-sm btn-secondary" (click)="duplicateBuilderElement()"><app-icon name="copy" [size]="14" /> Duplicate</button>
+              <button type="button" class="btn btn-sm btn-danger" (click)="removeBuilderElement()"><app-icon name="trash" [size]="14" /> Delete</button>
+            } @else if (info.source === 'preset') {
+              <button type="button" class="btn btn-sm btn-secondary" (click)="toggleElementHidden()">
+                <app-icon [name]="info.style?.hidden ? 'eye' : 'eye-off'" [size]="14" /> {{ info.style?.hidden ? 'Show' : 'Hide' }}
+              </button>
+            }
+            <button type="button" class="btn btn-sm btn-secondary" (click)="resetElementStyle()"><app-icon name="undo" [size]="14" /> Reset style</button>
+          </div>
+        } @else {
+          <!-- Section panel -->
+          <div class="insp-head">
+            <span class="sec-icon"><app-icon [name]="selectedDef()!.icon" [size]="16" /></span>
+            <div>
+              <strong>{{ selectedDef()!.label }}</strong>
+              <small>{{ selectedDef()!.description }}</small>
+            </div>
+            <button type="button" class="btn-icon sm" title="Close" (click)="clearSelection()"><app-icon name="x" [size]="16" /></button>
+          </div>
+          <div class="tabs">
+            <button type="button" [class.active]="sectionTab() === 'content'" (click)="setSectionTab('content')">Content</button>
+            @if (selectedCarousel()) {
+              <button type="button" [class.active]="sectionTab() === 'slider'" (click)="setSectionTab('slider')">Slider</button>
+            }
+            @if (selectedGrid()) {
+              <button type="button" [class.active]="sectionTab() === 'grid'" (click)="setSectionTab('grid')">Grid</button>
+            }
+            <button type="button" [class.active]="sectionTab() === 'style'" (click)="setSectionTab('style')">Style</button>
+            <button type="button" [class.active]="sectionTab() === 'advanced'" (click)="setSectionTab('advanced')">Advanced</button>
+          </div>
+          <div class="insp-body">
+            @switch (sectionTab()) {
+              @case ('content') {
+                @if (s.type === 'custom') {
+                  <app-custom-builder [section]="s" [selection]="selection()" (dataChange)="setCustomData(s.id, $event)" (selectionChange)="onSelect($event)" (elementAdded)="onElementAdded($event)" />
+                } @else {
+                  @if (selectedDef()!.elements?.length) {
+                    <h3 class="panel-label">Elements</h3>
+                    <div class="el-chips">
+                      @for (e of selectedDef()!.elements; track e.key) {
+                        <button type="button" class="el-chip" [class.hidden-el]="s.elements?.[e.key]?.hidden" (click)="selectElement(e.key)">
+                          <app-icon [name]="'kind-' + e.kind" [size]="13" /> {{ e.label }}
+                        </button>
+                      }
+                    </div>
+                    <p class="field-hint">Or click any element in the preview to style it.</p>
+                    <h3 class="panel-label">All content</h3>
+                  }
+                  <app-section-form [fields]="selectedDef()!.fields" [data]="s.data" (patch)="patchSection(s.id, $event)" [pages]="sitePages()" />
+                }
+              }
+              @case ('slider') {
+                <app-carousel-settings [section]="s" [device]="device()" (patch)="patchCarousel(s.id, $event)" (resetSettings)="resetCarousel(s.id)" (previewDevice)="device.set($event)" (stylePatch)="patchSectionStyles(s.id, $event)" />
+              }
+              @case ('grid') {
+                @if (selectedGrid(); as g) {
+                  <!-- Live mini diagram of the layout on the device being previewed -->
+                  <div class="grid-diagram" [style.--dcols]="g[device()]" [style.gap.px]="g.gap / 4">
+                    @for (b of diagramBlocks(s); track $index) {
+                      <span [style.grid-column]="'span ' + b.c" [style.grid-row]="'span ' + b.r"></span>
+                    }
+                  </div>
+                  <p class="grid-diagram-cap">{{ g[device()] }} column{{ g[device()] === 1 ? '' : 's' }} on {{ device() }}</p>
+
+                  <h3 class="panel-label">Columns per device</h3>
+                  @for (d of gridDevices; track d.key) {
+                    <div class="grid-row" [class.current]="device() === d.key">
+                      <button type="button" class="grid-row-label" [title]="'Preview on ' + d.label" (click)="device.set(d.key)">
+                        <app-icon [name]="d.icon" [size]="15" /> {{ d.label }}
+                      </button>
+                      <div class="seg seg-num">
+                        @for (n of d.options; track n) {
+                          <button type="button" [class.active]="g[d.key] === n" (click)="setColumns(s.id, d.key, n)">{{ n }}</button>
+                        }
+                      </div>
+                    </div>
+                  }
+
+                  <h3 class="panel-label">Spacing</h3>
+                  <app-range-control label="Gap between items" [value]="g.gap" [min]="0" [max]="80" [step]="2" [fallback]="24" (valueChange)="setGrid(s.id, 'gap', $event ?? 24)" />
+                  @if (s.type === 'grid') {
+                    <app-range-control label="Row height" [value]="g.rowHeight" [min]="80" [max]="480" [step]="10" [fallback]="200" (valueChange)="setGrid(s.id, 'rowHeight', $event ?? 200)" />
+                    <p class="field-hint">Set each block's width and height by clicking it and opening Content.</p>
+                  }
+
+                  <h3 class="panel-label">Items</h3>
+                  <div class="field">
+                    <label>Card style</label>
+                    <div class="card-styles">
+                      @for (c of cardStyles; track c.value) {
+                        <button type="button" class="card-style" [class.active]="g.cardStyle === c.value" (click)="setGrid(s.id, 'cardStyle', c.value)">
+                          <span class="card-style-swatch cs-{{ c.value }}"></span>
+                          {{ c.label }}
+                        </button>
+                      }
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label>Vertical alignment</label>
+                    <div class="seg">
+                      @for (a of itemAligns; track a.value) {
+                        <button type="button" [class.active]="g.itemAlign === a.value" (click)="setGrid(s.id, 'itemAlign', a.value)">{{ a.label }}</button>
+                      }
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label>Text inside items</label>
+                    <div class="seg">
+                      <button type="button" [class.active]="g.textAlign === 'left'" (click)="setGrid(s.id, 'textAlign', 'left')">Left</button>
+                      <button type="button" [class.active]="g.textAlign === 'center'" (click)="setGrid(s.id, 'textAlign', 'center')">Center</button>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-secondary" (click)="resetGrid(s.id)"><app-icon name="undo" [size]="14" /> Reset grid to defaults</button>
+                }
+              }
+              @case ('style') {
+                <app-section-settings [section]="s" mode="style" (patch)="patchSectionStyle(s.id, $event)" (patchMany)="patchSectionStyles(s.id, $event)" />
+              }
+              @case ('advanced') {
+                <app-section-settings [section]="s" mode="advanced" (patch)="patchSectionStyle(s.id, $event)" (anchorChange)="setAnchor(s.id, $event)" />
+              }
+            }
+          </div>
+          <div class="insp-foot">
+            <button type="button" class="btn btn-sm btn-secondary" (click)="duplicateSection(s)"><app-icon name="copy" [size]="14" /> Duplicate</button>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="savingPreset.set(s)" title="Reuse this section on other pages"><app-icon name="download" [size]="14" /> Save to library</button>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="toggleVisible(s)">
+              <app-icon [name]="s.visible ? 'eye-off' : 'eye'" [size]="14" /> {{ s.visible ? 'Hide' : 'Show' }}
+            </button>
+            <button type="button" class="btn btn-sm btn-danger" (click)="removeSection(s)"><app-icon name="trash" [size]="14" /> Delete</button>
+            <div class="code-links">
+              <app-icon name="code" [size]="13" />
+              <button type="button" class="link" (click)="editCode(s, 'section')">Section file</button>
+              <button type="button" class="link" (click)="editCode(s, 'component')">Component code</button>
+              <button type="button" class="link" (click)="openInVsCode(s)">Open in VS Code</button>
+            </div>
+          </div>
+        }
+      } @else {
+        <div class="insp-empty">
+          <app-icon name="cursor" [size]="28" />
+          <h3>Click anything to edit it</h3>
+          <p>Select a section or any heading, text, button or image in the preview. Click text to type directly on the page.</p>
+        </div>
+      }
+    </aside>
+  </div>
+} @else {
+  <div class="adm-empty ed-missing">
+    <h2>Page not found</h2>
+    <p>It may have been deleted.</p>
+    <a class="btn btn-primary" routerLink="/admin">Back to pages</a>
+  </div>
+}

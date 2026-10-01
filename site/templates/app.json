@@ -1,0 +1,215 @@
+{
+  "id": "app",
+  "kind": "single",
+  "category": "Mobile App",
+  "name": "Mobile App",
+  "description": "Showcase an app with screenshots, features, reviews and download links.",
+  "preview": [
+    "#fdf4ff",
+    "#c026d3",
+    "#7c3aed"
+  ],
+  "theme": {
+    "primaryColor": "#c026d3",
+    "accentColor": "#7c3aed",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#fdf4ff",
+    "textColor": "#1f1235",
+    "fontFamily": "DM Sans",
+    "headingFont": "Poppins",
+    "radius": 20,
+    "maxWidth": 1160
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Habitly",
+            "links": [
+              {
+                "label": "Features",
+                "href": "#features"
+              },
+              {
+                "label": "How it works",
+                "href": "#about"
+              },
+              {
+                "label": "Reviews",
+                "href": "#reviews"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Download",
+            "ctaHref": "#cta"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "#1 in Health & Fitness",
+            "heading": "Build better habits, one day at a time",
+            "subheading": "Habitly helps you track goals, stay motivated and celebrate progress.",
+            "primaryLabel": "Download on App Store",
+            "primaryHref": "#cta",
+            "secondaryLabel": "Get it on Google Play",
+            "secondaryHref": "#cta",
+            "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Small steps, big changes",
+            "subheading": "Everything you need to stick with it.",
+            "items": [
+              {
+                "icon": "✅",
+                "title": "Daily check-ins",
+                "text": "Tap once to log progress."
+              },
+              {
+                "icon": "🔔",
+                "title": "Smart reminders",
+                "text": "Nudges at the right time."
+              },
+              {
+                "icon": "📊",
+                "title": "Insights",
+                "text": "See trends over weeks and months."
+              },
+              {
+                "icon": "🏆",
+                "title": "Streaks",
+                "text": "Stay motivated with rewards."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "flat",
+            "textAlign": "center"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Designed around real life",
+            "text": "Habitly adapts to your schedule, not the other way round. Set flexible goals, skip days without guilt and watch your consistency grow.",
+            "bullets": [
+              "Works offline",
+              "Syncs with Apple Health and Google Fit",
+              "Private by design — your data stays yours"
+            ],
+            "buttonLabel": "Download free",
+            "buttonHref": "#cta",
+            "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80",
+            "imageSide": "right"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "2M+",
+                "label": "Downloads"
+              },
+              {
+                "value": "4.8★",
+                "label": "App Store rating"
+              },
+              {
+                "value": "150M",
+                "label": "Habits logged"
+              },
+              {
+                "value": "87%",
+                "label": "Still active after 30 days"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "anchor": "reviews",
+            "heading": "People love Habitly"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Questions",
+            "items": [
+              {
+                "question": "Is Habitly free?",
+                "answer": "Yes. The core app is free forever. Habitly Plus unlocks unlimited habits and advanced insights for $3.99/month."
+              },
+              {
+                "question": "Which devices are supported?",
+                "answer": "iPhone, iPad, Apple Watch and Android phones running Android 10 or later."
+              },
+              {
+                "question": "Can I export my data?",
+                "answer": "Any time, as CSV, from Settings → Data."
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Start building habits today",
+            "text": "Free on iOS and Android. Takes less than a minute to set up.",
+            "buttonLabel": "Download free",
+            "buttonHref": "#cta"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Habitly",
+            "tagline": "Better habits, one day at a time.",
+            "links": [
+              {
+                "label": "Features",
+                "href": "#features"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              },
+              {
+                "label": "Privacy",
+                "href": "#"
+              },
+              {
+                "label": "Support",
+                "href": "#"
+              }
+            ],
+            "copyright": "© 2026 Habitly. All rights reserved."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+/* Stats section */
+
+.lp-stat {
+  padding: 20px;
+}
+
+.lp-stat-value {
+  font-family: var(--lp-heading-font);
+  font-size: clamp(2rem, 5cqi, 3rem);
+  font-weight: 800;
+  color: var(--lp-primary);
+}
+
+.lp-stat-label {
+  opacity: 0.7;
+}

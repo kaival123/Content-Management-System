@@ -1,0 +1,19 @@
+{
+  "name": "Simple centered page header",
+  "description": "Centered page title with a short intro for inner pages.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "",
+      "heading": "Our story",
+      "text": "We started with a simple idea: great tools should get out of your way. Here is how it is going.",
+      "buttonLabel": "",
+      "buttonHref": ""
+    },
+    "style": {
+      "align": "center",
+      "background": "__surface__",
+      "paddingY": 88
+    }
+  }
+}

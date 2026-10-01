@@ -1,0 +1,305 @@
+{
+  "id": "agency",
+  "kind": "single",
+  "category": "Agency",
+  "name": "Creative Agency",
+  "description": "A bold one-page site for a creative agency with services, selected work, clients and team.",
+  "preview": [
+    "#ffffff",
+    "#7c3aed",
+    "#f43f5e"
+  ],
+  "theme": {
+    "primaryColor": "#7c3aed",
+    "accentColor": "#f43f5e",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#faf5ff",
+    "textColor": "#1e1b4b",
+    "fontFamily": "Outfit",
+    "headingFont": "Outfit",
+    "radius": 16,
+    "maxWidth": 1200
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Brightside Studio",
+            "links": [
+              {
+                "label": "Services",
+                "href": "#services"
+              },
+              {
+                "label": "Work",
+                "href": "#work"
+              },
+              {
+                "label": "Team",
+                "href": "#team"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "ctaLabel": "Start a project",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Brand · Digital · Campaigns",
+            "heading": "We make brands impossible to ignore",
+            "subheading": "Brightside is an independent creative agency helping ambitious companies stand out with strategy, design and storytelling.",
+            "primaryLabel": "Start a project",
+            "primaryHref": "#contact",
+            "secondaryLabel": "See our work",
+            "secondaryHref": "#work",
+            "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"
+          },
+          "style": {
+            "backgroundType": "gradient",
+            "gradientFrom": "#faf5ff",
+            "gradientTo": "#ffe4e6",
+            "gradientAngle": 135,
+            "paddingY": 120
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Brands we have worked with",
+            "logos": [
+              {
+                "name": "Oatly",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Vanta",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Nomad",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Brewline",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Kitefly",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Solace",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "anchor": "services",
+            "heading": "What we do",
+            "subheading": "Full-service creative, from first idea to launch day.",
+            "items": [
+              {
+                "icon": "🎯",
+                "title": "Brand strategy",
+                "text": "Positioning, naming and messaging that sets you apart."
+              },
+              {
+                "icon": "🎨",
+                "title": "Visual identity",
+                "text": "Logos, systems and guidelines built to flex."
+              },
+              {
+                "icon": "💻",
+                "title": "Web & digital",
+                "text": "Websites and products that look sharp and perform."
+              },
+              {
+                "icon": "📣",
+                "title": "Campaigns",
+                "text": "Integrated campaigns across social, video and OOH."
+              },
+              {
+                "icon": "🎬",
+                "title": "Content & motion",
+                "text": "Films, animation and social content at scale."
+              },
+              {
+                "icon": "📦",
+                "title": "Packaging",
+                "text": "Shelf-stopping packaging for consumer brands."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "shadow"
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "anchor": "work",
+            "heading": "Selected work",
+            "subheading": "A few projects from the last twelve months."
+          },
+          "grid": {
+            "desktop": 3,
+            "gap": 20
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "120+",
+                "label": "Brands launched"
+              },
+              {
+                "value": "18",
+                "label": "Industry awards"
+              },
+              {
+                "value": "9",
+                "label": "Years independent"
+              },
+              {
+                "value": "35",
+                "label": "Makers & thinkers"
+              }
+            ]
+          }
+        },
+        {
+          "type": "team",
+          "data": {
+            "anchor": "team",
+            "heading": "The people behind the work",
+            "subheading": "A small senior team, hands-on from brief to delivery.",
+            "members": [
+              {
+                "name": "Aisha Khan",
+                "role": "Founder & Creative Director",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Marco Rossi",
+                "role": "Design Director",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Lena Park",
+                "role": "Head of Digital",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "David Osei",
+                "role": "Strategy Lead",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Clients on Brightside",
+            "items": [
+              {
+                "quote": "They understood our brand better than we did. The rebrand lifted sign-ups by 40%.",
+                "name": "Hannah Cole",
+                "role": "CMO, Kitefly",
+                "avatar": ""
+              },
+              {
+                "quote": "Brilliant ideas, delivered on time and on budget. A true creative partner.",
+                "name": "Oliver Grant",
+                "role": "Founder, Brewline",
+                "avatar": ""
+              },
+              {
+                "quote": "Our launch campaign was the most successful in company history.",
+                "name": "Nina Patel",
+                "role": "Brand Director, Solace",
+                "avatar": ""
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Have a project in mind?",
+            "text": "Tell us about your goals, timeline and budget. We reply to every enquiry within 48 hours.",
+            "email": "hello@brightside.studio",
+            "phone": "+44 20 7946 0321",
+            "address": "12 Shoreditch High Street\nLondon E1 6PQ",
+            "buttonLabel": "Send brief",
+            "successMessage": "Thanks! We will be in touch within 48 hours."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Brightside Studio",
+            "tagline": "Independent creative agency, London.",
+            "links": [
+              {
+                "label": "Services",
+                "href": "#services"
+              },
+              {
+                "label": "Work",
+                "href": "#work"
+              },
+              {
+                "label": "Team",
+                "href": "#team"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Brightside Studio. All rights reserved."
+          },
+          "style": {
+            "background": "#1e1b4b",
+            "textColor": "#c4b5fd"
+          }
+        }
+      ]
+    }
+  ]
+}

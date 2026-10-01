@@ -1,0 +1,26 @@
+{{!--
+  Login / register layout. This is the front end only: set "action" to your
+  authentication endpoint. The form is never submitted from the visual editor.
+--}}
+<div class="lp-auth{{#if image}} lp-auth-split{{/if}}">
+  <form class="lp-card lp-form lp-auth-form" data-el="form" method="post"{{#if action}} action="{{action}}"{{/if}}>
+    <h2 class="lp-h2" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h2>
+    {{#if text}}<p class="lp-muted lp-pre" data-el="text" data-edit="text">{{text}}</p>{{/if}}
+    {{#is mode "register"}}
+    <label>Full name<input name="name" required autocomplete="name" /></label>
+    {{/is}}
+    <label>Email<input name="email" type="email" required autocomplete="email" /></label>
+    <label>Password<input name="password" type="password" required autocomplete="{{#is mode "register"}}new-password{{else}}current-password{{/is}}" /></label>
+    {{#is mode "login"}}
+    <div class="lp-auth-row">
+      <label class="lp-auth-check"><input type="checkbox" name="remember" /> Remember me</label>
+      <a href="#">Forgot password?</a>
+    </div>
+    {{/is}}
+    <button class="lp-btn lp-btn-primary" type="submit" data-el="button" data-edit="buttonLabel">{{buttonLabel}}</button>
+    {{#if switchLabel}}
+    <p class="lp-auth-switch">{{switchText}} <a href="{{switchHref}}">{{switchLabel}}</a></p>
+    {{/if}}
+  </form>
+  {{#if image}}<img class="lp-auth-img" data-el="image" src="{{image}}" alt="" />{{/if}}
+</div>

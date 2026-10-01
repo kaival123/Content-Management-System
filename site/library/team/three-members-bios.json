@@ -1,0 +1,45 @@
+{
+  "name": "Team of three with bios",
+  "description": "Three leaders with photos, roles and short bios in cards.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "The people behind the product",
+      "subheading": "Experienced, curious and always happy to hear from you.",
+      "members": [
+        {
+          "name": "Aisha Khan",
+          "role": "Founder & CEO",
+          "bio": "Spent a decade building products at fast-growing startups before founding the company in 2019.",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Marco Rossi",
+          "role": "Head of Design",
+          "bio": "Leads a design team obsessed with clarity, accessibility and the small details.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Lena Park",
+          "role": "Lead Engineer",
+          "bio": "Keeps our platform fast and reliable, and still reviews every pull request.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "bordered",
+      "textAlign": "center"
+    }
+  }
+}

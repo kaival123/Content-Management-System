@@ -1,0 +1,49 @@
+/* CustomGrid section */
+
+.lp-blocks {
+  grid-auto-rows: minmax(var(--row, 200px), auto);
+  grid-auto-flow: dense;
+}
+
+.lp-block {
+  grid-column: span min(var(--span, 1), var(--cols));
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.lp-block-media {
+  width: 100%;
+  flex: 1 1 0;
+  min-height: 160px;
+  object-fit: cover;
+}
+
+.lp-block-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  padding: 26px;
+}
+
+.lp-block-body p {
+  opacity: 0.8;
+}
+
+.lp-block-body .lp-btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.lp-block-img .lp-block-body {
+  flex-grow: 0;
+}
+
+.lp-text-center .lp-block-body .lp-btn {
+  align-self: center;
+}
+
+.lp-cards-none .lp-block-body {
+  padding: 16px 0 0;
+}

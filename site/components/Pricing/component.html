@@ -1,0 +1,20 @@
+<header class="lp-head">
+  <h2 class="lp-h2" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h2>
+  {{#if subheading}}
+  <p class="lp-lead lp-pre" data-el="subheading" data-edit="subheading">{{subheading}}</p>
+  {{/if}}
+</header>
+<div class="lp-grid lp-plans" data-grid>
+  {{#each plans}}
+  <div class="lp-card lp-plan{{#if highlighted}} lp-plan-hl{{/if}}" data-el="card">
+    {{#if highlighted}}<span class="lp-badge">Most popular</span>{{/if}}
+    <h3 class="lp-h3" data-el="planName" data-edit="name">{{name}}</h3>
+    <p class="lp-muted" data-el="planDesc" data-edit="description">{{description}}</p>
+    <div class="lp-price" data-el="price">{{price}}<small>{{period}}</small></div>
+    <ul class="lp-checks" data-el="planFeatures">
+      {{#each features}}{{#if this}}<li>{{this}}</li>{{/if}}{{/each}}
+    </ul>
+    <a class="lp-btn {{#if highlighted}}lp-btn-primary{{else}}lp-btn-ghost{{/if}}" data-el="planButton" data-edit="buttonLabel" href="{{buttonHref}}">{{buttonLabel}}</a>
+  </div>
+  {{/each}}
+</div>

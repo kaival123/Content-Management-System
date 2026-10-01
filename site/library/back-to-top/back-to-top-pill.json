@@ -1,0 +1,14 @@
+{
+  "name": "Back to top · pill with label",
+  "description": "Labelled \"Back to top\" pill, bottom centre.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "pill",
+      "position": "center",
+      "label": "Back to top",
+      "size": 44,
+      "offsetY": 28
+    }
+  }
+}

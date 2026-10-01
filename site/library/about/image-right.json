@@ -1,0 +1,20 @@
+{
+  "name": "Text left, image right",
+  "description": "Heading, story and bullets on the left with a photo on the right.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "From first sketch to final launch",
+      "text": "Our process keeps you involved at every step. Clear milestones, honest timelines and work you are proud to put your name on.",
+      "bullets": [
+        "Discovery workshop in week one",
+        "Weekly progress reviews",
+        "Launch support included"
+      ],
+      "buttonLabel": "See our process",
+      "buttonHref": "#process",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+      "imageSide": "right"
+    }
+  }
+}

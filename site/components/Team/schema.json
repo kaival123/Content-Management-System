@@ -1,0 +1,42 @@
+{
+  "type": "team",
+  "label": "Team",
+  "description": "Grid of team members with photo, name and role",
+  "icon": "users",
+  "fields": [
+    { "key": "heading", "label": "Heading", "type": "text" },
+    { "key": "subheading", "label": "Subheading", "type": "textarea" },
+    {
+      "key": "members",
+      "label": "Team members",
+      "type": "list",
+      "itemLabel": "Member",
+      "itemFields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "role", "label": "Role", "type": "text" },
+        { "key": "bio", "label": "Short bio", "type": "textarea" },
+        { "key": "photo", "label": "Photo", "type": "image" },
+        { "key": "link", "label": "Profile link (LinkedIn, etc.)", "type": "url" }
+      ]
+    }
+  ],
+  "elements": [
+    { "key": "heading", "label": "Heading", "kind": "text", "fields": ["heading"] },
+    { "key": "subheading", "label": "Subheading", "kind": "text", "fields": ["subheading"] },
+    { "key": "card", "label": "Member cards", "kind": "box", "list": "members", "fields": ["name", "role", "bio", "photo", "link"] },
+    { "key": "photo", "label": "Photos", "kind": "image", "list": "members", "fields": ["photo"] },
+    { "key": "name", "label": "Names", "kind": "text", "list": "members", "fields": ["name"] },
+    { "key": "role", "label": "Roles", "kind": "text", "list": "members", "fields": ["role"] }
+  ],
+  "defaults": {
+    "heading": "Meet the team",
+    "subheading": "The people who make it happen.",
+    "members": [
+      { "name": "Aisha Khan", "role": "Founder & CEO", "bio": "", "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80", "link": "" },
+      { "name": "Marco Rossi", "role": "Head of Design", "bio": "", "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80", "link": "" },
+      { "name": "Lena Park", "role": "Lead Engineer", "bio": "", "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80", "link": "" },
+      { "name": "David Osei", "role": "Customer Success", "bio": "", "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80", "link": "" }
+    ]
+  },
+  "grid": { "desktop": 4, "tablet": 2, "mobile": 1, "cardStyle": "none", "textAlign": "center" }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Navbar with site menu and button",
+  "description": "Brand, automatic page menu and a call-to-action button.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Northstar",
+      "useSiteMenu": true,
+      "ctaLabel": "Start free trial",
+      "ctaHref": "#cta",
+      "sticky": true
+    }
+  }
+}

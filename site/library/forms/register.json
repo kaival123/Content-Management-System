@@ -1,0 +1,18 @@
+{
+  "name": "Registration form",
+  "description": "Sign-up form with a side image and link to log in.",
+  "section": {
+    "type": "auth",
+    "data": {
+      "mode": "register",
+      "heading": "Create your account",
+      "text": "Start your 14-day free trial. No credit card required.",
+      "buttonLabel": "Create account",
+      "switchText": "Already have an account?",
+      "switchLabel": "Log in",
+      "switchHref": "#login",
+      "action": "",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "name": "Gallery slider · thumbnails",
+  "description": "Large images with a row of clickable thumbnails underneath.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "Project gallery",
+      "subheading": "",
+      "variant": "image",
+      "slideHeight": 520,
+      "slides": [
+        {
+          "heading": "Brand refresh",
+          "eyebrow": "",
+          "text": "Brand refresh",
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Studio space",
+          "eyebrow": "",
+          "text": "Studio space",
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Mobile app",
+          "eyebrow": "",
+          "text": "Mobile app",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Workshop",
+          "eyebrow": "",
+          "text": "Workshop",
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Travel booking",
+          "eyebrow": "",
+          "text": "Travel booking",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Web platform",
+          "eyebrow": "",
+          "text": "Web platform",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 600,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "fade",
+      "pauseOnHover": true,
+      "arrowPosition": "sides",
+      "arrowStyle": "circle",
+      "arrowSize": 44,
+      "dotsPosition": "below",
+      "dotsStyle": "thumbs",
+      "controlColor": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+/* ImageText section */
+
+.lp-reverse > :first-child {
+  order: 2;
+}
+
+@container (max-width: 700px) {
+  .lp-reverse > :first-child {
+    order: 0;
+  }
+}

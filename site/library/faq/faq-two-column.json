@@ -1,0 +1,46 @@
+{
+  "name": "FAQ · two columns",
+  "description": "Six questions in two columns of cards.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "heading": "Everything you need to know",
+      "subheading": "Can’t find an answer? Our team is happy to help.",
+      "items": [
+        {
+          "question": "Is there a free trial?",
+          "answer": "Yes — every plan comes with a 14-day free trial. No credit card required.",
+          "icon": ""
+        },
+        {
+          "question": "Can I cancel anytime?",
+          "answer": "Absolutely. Cancel or change your plan at any time from your account settings.",
+          "icon": ""
+        },
+        {
+          "question": "Do you offer support?",
+          "answer": "Our team is available around the clock by chat and email, and we reply within an hour.",
+          "icon": ""
+        },
+        {
+          "question": "Can I use my own domain?",
+          "answer": "Yes. Connect any domain you own in a couple of clicks; SSL is included.",
+          "icon": ""
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Data is encrypted in transit and at rest, backed up daily and hosted in the EU.",
+          "icon": ""
+        },
+        {
+          "question": "Do you offer discounts?",
+          "answer": "Nonprofits, students and yearly plans get up to 30% off. Contact us for details.",
+          "icon": ""
+        }
+      ],
+      "layout": "two-column",
+      "style": "cards",
+      "icon": "circle"
+    }
+  }
+}

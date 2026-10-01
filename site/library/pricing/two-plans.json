@@ -1,0 +1,53 @@
+{
+  "name": "Two pricing plans",
+  "description": "Monthly and yearly plans side by side.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "One plan, two ways to pay",
+      "subheading": "Every feature included. Save 20% when you pay yearly.",
+      "plans": [
+        {
+          "name": "Monthly",
+          "price": "$19",
+          "period": "/month",
+          "description": "Flexible, cancel anytime",
+          "features": [
+            "All features included",
+            "Unlimited projects",
+            "Email support"
+          ],
+          "buttonLabel": "Choose monthly",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Yearly",
+          "price": "$182",
+          "period": "/year",
+          "description": "Two months free",
+          "features": [
+            "All features included",
+            "Unlimited projects",
+            "Priority support",
+            "Early access to new features"
+          ],
+          "buttonLabel": "Choose yearly",
+          "buttonHref": "#",
+          "highlighted": true
+        }
+      ]
+    },
+    "style": {
+      "align": "center",
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "bordered"
+    }
+  }
+}

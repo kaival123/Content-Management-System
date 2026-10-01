@@ -1,0 +1,27 @@
+{
+  "type": "page-header",
+  "label": "Page header",
+  "description": "Title banner for inner pages, with breadcrumb and intro text",
+  "icon": "heading",
+  "fields": [
+    { "key": "breadcrumb", "label": "Breadcrumb / small text", "type": "text" },
+    { "key": "heading", "label": "Page title", "type": "text" },
+    { "key": "text", "label": "Intro text", "type": "textarea" },
+    { "key": "buttonLabel", "label": "Button label (optional)", "type": "text" },
+    { "key": "buttonHref", "label": "Button link", "type": "url" }
+  ],
+  "elements": [
+    { "key": "breadcrumb", "label": "Breadcrumb", "kind": "text", "fields": ["breadcrumb"] },
+    { "key": "heading", "label": "Title", "kind": "text", "fields": ["heading"] },
+    { "key": "text", "label": "Intro text", "kind": "text", "fields": ["text"] },
+    { "key": "button", "label": "Button", "kind": "button", "fields": ["buttonLabel", "buttonHref"] }
+  ],
+  "defaults": {
+    "breadcrumb": "Home / About",
+    "heading": "About us",
+    "text": "A short introduction to what this page is about.",
+    "buttonLabel": "",
+    "buttonHref": ""
+  },
+  "defaultStyle": { "paddingY": 88, "background": "__surface__" }
+}

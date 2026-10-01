@@ -1,0 +1,127 @@
+{
+  "type": "navbar",
+  "label": "Navigation bar",
+  "description": "Logo, menu links and a call-to-action button",
+  "icon": "menu",
+  "fields": [
+    {
+      "key": "brand",
+      "label": "Brand name",
+      "type": "text"
+    },
+    {
+      "key": "logo",
+      "label": "Logo image",
+      "type": "image"
+    },
+    {
+      "key": "useSiteMenu",
+      "label": "Use the website's page menu (links to every page; sub-pages become dropdowns)",
+      "type": "toggle"
+    },
+    {
+      "key": "links",
+      "label": "Custom links (used when the page menu is off)",
+      "type": "list",
+      "itemLabel": "Link",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Link",
+          "type": "url",
+          "placeholder": "#features"
+        }
+      ]
+    },
+    {
+      "key": "ctaLabel",
+      "label": "Button label",
+      "type": "text"
+    },
+    {
+      "key": "ctaHref",
+      "label": "Button link",
+      "type": "url"
+    },
+    {
+      "key": "sticky",
+      "label": "Stick to top on scroll",
+      "type": "toggle"
+    }
+  ],
+  "elements": [
+    {
+      "key": "logo",
+      "label": "Logo",
+      "kind": "image",
+      "fields": [
+        "logo"
+      ]
+    },
+    {
+      "key": "brand",
+      "label": "Brand name",
+      "kind": "text",
+      "fields": [
+        "brand"
+      ]
+    },
+    {
+      "key": "link",
+      "label": "Menu links",
+      "kind": "text",
+      "list": "links",
+      "fields": [
+        "label",
+        "href"
+      ]
+    },
+    {
+      "key": "menuLink",
+      "label": "Page menu links",
+      "kind": "text",
+      "fields": [
+        "useSiteMenu"
+      ]
+    },
+    {
+      "key": "cta",
+      "label": "Button",
+      "kind": "button",
+      "fields": [
+        "ctaLabel",
+        "ctaHref"
+      ]
+    }
+  ],
+  "defaults": {
+    "brand": "Brand",
+    "logo": "",
+    "links": [
+      {
+        "label": "Features",
+        "href": "#features"
+      },
+      {
+        "label": "Pricing",
+        "href": "#pricing"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      }
+    ],
+    "ctaLabel": "Get started",
+    "ctaHref": "#cta",
+    "sticky": true,
+    "useSiteMenu": false
+  },
+  "defaultStyle": {
+    "paddingY": 16
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "type": "carousel",
+  "label": "Carousel / slider",
+  "description": "Slides of images, cards, testimonials, logos, products or team members",
+  "icon": "slides",
+  "fields": [
+    { "key": "heading", "label": "Heading (above the slider)", "type": "text" },
+    { "key": "subheading", "label": "Subheading", "type": "textarea" },
+    {
+      "key": "variant",
+      "label": "Slide layout",
+      "type": "select",
+      "options": [
+        { "label": "Hero (full background image)", "value": "hero" },
+        { "label": "Image with caption", "value": "image" },
+        { "label": "Card (image, title, text, button)", "value": "card" },
+        { "label": "Content (title, text, button)", "value": "content" },
+        { "label": "Testimonial", "value": "testimonial" },
+        { "label": "Logo", "value": "logo" },
+        { "label": "Product", "value": "product" },
+        { "label": "Team member", "value": "team" },
+        { "label": "Portfolio item", "value": "portfolio" }
+      ]
+    },
+    { "key": "slideHeight", "label": "Slide height in px (0 = automatic)", "type": "number" },
+    { "key": "overlay", "label": "Image overlay strength % (hero / portfolio)", "type": "number" },
+    {
+      "key": "slides",
+      "label": "Slides",
+      "type": "list",
+      "itemLabel": "Slide",
+      "itemFields": [
+        { "key": "heading", "label": "Title / name", "type": "text" },
+        { "key": "eyebrow", "label": "Small text (eyebrow, role or category)", "type": "text" },
+        { "key": "text", "label": "Text / quote / caption", "type": "textarea" },
+        { "key": "image", "label": "Image", "type": "image" },
+        { "key": "price", "label": "Price (products)", "type": "text" },
+        { "key": "buttonLabel", "label": "Button label", "type": "text" },
+        { "key": "buttonHref", "label": "Button link", "type": "url" },
+        { "key": "background", "label": "Slide background", "type": "color" },
+        { "key": "textColor", "label": "Slide text colour", "type": "color" },
+        { "key": "html", "label": "Custom HTML (optional, shown below the text)", "type": "textarea" }
+      ]
+    }
+  ],
+  "elements": [
+    { "key": "heading", "label": "Heading", "kind": "text", "fields": ["heading"] },
+    { "key": "subheading", "label": "Subheading", "kind": "text", "fields": ["subheading"] },
+    { "key": "slide", "label": "Slides", "kind": "box", "list": "slides", "fields": ["heading", "eyebrow", "text", "image", "price", "buttonLabel", "buttonHref", "background", "textColor", "html"] },
+    { "key": "slideImage", "label": "Slide images", "kind": "image", "list": "slides", "fields": ["image"] },
+    { "key": "slideEyebrow", "label": "Slide small text", "kind": "text", "list": "slides", "fields": ["eyebrow"] },
+    { "key": "slideHeading", "label": "Slide titles", "kind": "text", "list": "slides", "fields": ["heading"] },
+    { "key": "slideText", "label": "Slide text", "kind": "text", "list": "slides", "fields": ["text"] },
+    { "key": "slidePrice", "label": "Prices", "kind": "text", "list": "slides", "fields": ["price"] },
+    { "key": "slideButton", "label": "Slide buttons", "kind": "button", "list": "slides", "fields": ["buttonLabel", "buttonHref"] }
+  ],
+  "defaults": {
+    "heading": "Featured work",
+    "subheading": "Swipe, drag or use the arrows to browse.",
+    "variant": "card",
+    "slideHeight": 0,
+    "overlay": 45,
+    "slides": [
+      { "heading": "Brand refresh", "eyebrow": "Branding", "text": "A new identity for a fast-growing fintech.", "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80", "price": "", "buttonLabel": "View project", "buttonHref": "#", "background": "", "textColor": "", "html": "" },
+      { "heading": "Mobile banking app", "eyebrow": "Product design", "text": "Designing a calmer way to manage money.", "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80", "price": "", "buttonLabel": "View project", "buttonHref": "#", "background": "", "textColor": "", "html": "" },
+      { "heading": "E-commerce relaunch", "eyebrow": "Web", "text": "A storefront that doubled conversion.", "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80", "price": "", "buttonLabel": "View project", "buttonHref": "#", "background": "", "textColor": "", "html": "" },
+      { "heading": "Analytics dashboard", "eyebrow": "SaaS", "text": "Turning complex data into clear decisions.", "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80", "price": "", "buttonLabel": "View project", "buttonHref": "#", "background": "", "textColor": "", "html": "" },
+      { "heading": "Travel booking", "eyebrow": "UX research", "text": "Simplifying multi-city trip planning.", "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80", "price": "", "buttonLabel": "View project", "buttonHref": "#", "background": "", "textColor": "", "html": "" }
+    ]
+  },
+  "carousel": {
+    "perViewDesktop": 3,
+    "perViewTablet": 2,
+    "perViewMobile": 1,
+    "gap": 24,
+    "autoplay": false,
+    "autoplaySpeed": 4000,
+    "speed": 500,
+    "loop": true,
+    "arrows": true,
+    "dots": true,
+    "drag": true,
+    "touch": true,
+    "keyboard": true,
+    "center": false,
+    "transition": "slide",
+    "pauseOnHover": true
+  }
+}

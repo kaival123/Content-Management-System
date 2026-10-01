@@ -1,0 +1,67 @@
+{
+  "type": "cta",
+  "label": "Call to action",
+  "description": "Bold banner with a heading and a button",
+  "icon": "megaphone",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "type": "textarea"
+    },
+    {
+      "key": "buttonLabel",
+      "label": "Button label",
+      "type": "text"
+    },
+    {
+      "key": "buttonHref",
+      "label": "Button link",
+      "type": "url"
+    }
+  ],
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "kind": "text",
+      "fields": [
+        "text"
+      ]
+    },
+    {
+      "key": "button",
+      "label": "Button",
+      "kind": "button",
+      "fields": [
+        "buttonLabel",
+        "buttonHref"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "cta",
+    "heading": "Ready to get started?",
+    "text": "Join thousands of teams already using our product.",
+    "buttonLabel": "Start your free trial",
+    "buttonHref": "#"
+  },
+  "defaultStyle": {
+    "background": "__primary__",
+    "textColor": "#ffffff",
+    "align": "center"
+  }
+}

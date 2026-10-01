@@ -1,0 +1,238 @@
+{
+  "id": "landing-page",
+  "kind": "single",
+  "category": "Landing Page",
+  "name": "Lead Generation",
+  "description": "A short, focused page with benefits, social proof and a contact form to capture leads.",
+  "preview": [
+    "#ffffff",
+    "#059669",
+    "#0ea5e9"
+  ],
+  "theme": {
+    "primaryColor": "#059669",
+    "accentColor": "#0ea5e9",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f0fdf4",
+    "textColor": "#0f172a",
+    "fontFamily": "Inter",
+    "headingFont": "Montserrat",
+    "radius": 10,
+    "maxWidth": 1120
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "GreenLeaf Consulting",
+            "links": [
+              {
+                "label": "Benefits",
+                "href": "#benefits"
+              },
+              {
+                "label": "How it works",
+                "href": "#about"
+              },
+              {
+                "label": "Reviews",
+                "href": "#reviews"
+              }
+            ],
+            "ctaLabel": "Book a call",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Free 30-minute consultation",
+            "heading": "Grow your business with a clear strategy",
+            "subheading": "We help small businesses find new customers and scale sustainably — with a plan you can start using this week.",
+            "primaryLabel": "Book your free call",
+            "primaryHref": "#contact",
+            "secondaryLabel": "How it works",
+            "secondaryHref": "#about",
+            "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "As featured in",
+            "logos": [
+              {
+                "name": "Forbes",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Inc.",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Entrepreneur",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Fast Company",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "TechCrunch",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "HBR",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "anchor": "benefits",
+            "heading": "What you get",
+            "subheading": "A focused session with a senior growth consultant.",
+            "items": [
+              {
+                "icon": "🔍",
+                "title": "Honest audit",
+                "text": "A clear look at what is working and what is holding you back."
+              },
+              {
+                "icon": "🗺️",
+                "title": "90-day roadmap",
+                "text": "Three priorities you can act on right away."
+              },
+              {
+                "icon": "📈",
+                "title": "Growth benchmarks",
+                "text": "See how you compare with similar businesses."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "flat"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "How it works",
+            "text": "Book a time that suits you, answer five quick questions, and join a video call with one of our consultants. You leave with a written summary and next steps — whether or not you work with us.",
+            "bullets": [
+              "Pick a time in under a minute",
+              "Speak with a senior consultant",
+              "Receive your written plan within 24 hours"
+            ],
+            "buttonLabel": "Book my call",
+            "buttonHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80"
+          },
+          "style": {
+            "background": "__surface__",
+            "align": "left"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "1,200+",
+                "label": "Businesses helped"
+              },
+              {
+                "value": "3.2x",
+                "label": "Average ROI"
+              },
+              {
+                "value": "92%",
+                "label": "Would recommend"
+              },
+              {
+                "value": "30 min",
+                "label": "To a clear plan"
+              }
+            ]
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "anchor": "reviews",
+            "heading": "Owners who took the call",
+            "items": [
+              {
+                "quote": "In 30 minutes I got more clarity than a year of guessing. We doubled leads in a quarter.",
+                "name": "Laura Chen",
+                "role": "Owner, Bloom Florist",
+                "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+              },
+              {
+                "quote": "Straightforward, practical advice. No hard sell — just a plan that worked.",
+                "name": "Marcus Hill",
+                "role": "Founder, Hill Plumbing",
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+              },
+              {
+                "quote": "The roadmap was so clear my whole team understood it immediately.",
+                "name": "Anita Rao",
+                "role": "Director, Rao Dental",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Book your free consultation",
+            "text": "Leave your details and we will confirm a time within one business day.",
+            "email": "hello@greenleaf.co",
+            "phone": "+1 (415) 555-0199",
+            "address": "48 Market Street\nSan Francisco, CA",
+            "buttonLabel": "Book my free call",
+            "successMessage": "Thanks! We will confirm your call time shortly."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "GreenLeaf",
+            "tagline": "Clear strategy for growing businesses.",
+            "links": [
+              {
+                "label": "Privacy",
+                "href": "#"
+              },
+              {
+                "label": "Terms",
+                "href": "#"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 GreenLeaf. All rights reserved."
+          }
+        }
+      ]
+    }
+  ]
+}

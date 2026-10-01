@@ -1,0 +1,8 @@
+{
+  "name": "Back to top · circle",
+  "description": "Round arrow button in the bottom-right corner.",
+  "section": {
+    "type": "back-to-top",
+    "data": {}
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "name": "Testimonial carousel",
+  "description": "Customer quotes with names and roles, three per view.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "What customers are saying",
+      "subheading": "",
+      "variant": "testimonial",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Priya Sharma",
+          "eyebrow": "CTO, Acme",
+          "text": "We replaced three tools with one and cut planning time in half.",
+          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Daniel Lee",
+          "eyebrow": "Founder, Northwind",
+          "text": "Onboarding the whole company took a single afternoon.",
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Maria Garcia",
+          "eyebrow": "Head of Ops, Globex",
+          "text": "Support answers in minutes and actually fixes things.",
+          "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "David Osei",
+          "eyebrow": "Marketing Lead, Initech",
+          "text": "Our conversion rate more than doubled after the relaunch.",
+          "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Sofia Martins",
+          "eyebrow": "Designer, Lumen",
+          "text": "Finally a tool designers and developers both enjoy.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "James Okafor",
+          "eyebrow": "VP Product, Brightline",
+          "text": "We ship a new campaign page every week without a single ticket.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__"
+    },
+    "carousel": {
+      "perViewDesktop": 3,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 24,
+      "autoplay": true,
+      "autoplaySpeed": 5000,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

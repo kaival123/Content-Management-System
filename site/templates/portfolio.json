@@ -1,0 +1,248 @@
+{
+  "id": "portfolio",
+  "kind": "single",
+  "category": "Portfolio",
+  "name": "Designer Portfolio",
+  "description": "A clean one-page portfolio with a featured-work slider, project gallery, services and contact form.",
+  "preview": [
+    "#fafaf9",
+    "#111827",
+    "#f97316"
+  ],
+  "theme": {
+    "primaryColor": "#111827",
+    "accentColor": "#f97316",
+    "backgroundColor": "#fafaf9",
+    "surfaceColor": "#f1f0ee",
+    "textColor": "#111827",
+    "fontFamily": "DM Sans",
+    "headingFont": "Space Grotesk",
+    "radius": 6,
+    "maxWidth": 1200
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Mira Sato",
+            "links": [
+              {
+                "label": "Work",
+                "href": "#work"
+              },
+              {
+                "label": "Projects",
+                "href": "#projects"
+              },
+              {
+                "label": "About",
+                "href": "#about"
+              },
+              {
+                "label": "Services",
+                "href": "#services"
+              }
+            ],
+            "ctaLabel": "Let's talk",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Product & brand designer · Berlin",
+            "heading": "I design brands and products people remember",
+            "subheading": "Ten years helping startups and studios turn complex ideas into simple, beautiful experiences.",
+            "primaryLabel": "See my work",
+            "primaryHref": "#work",
+            "secondaryLabel": "Get in touch",
+            "secondaryHref": "#contact",
+            "image": "",
+            "layout": "center"
+          },
+          "style": {
+            "paddingY": 140
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "anchor": "work",
+            "heading": "Featured work",
+            "subheading": "A few recent projects I am proud of.",
+            "variant": "portfolio",
+            "slides": [
+              {
+                "heading": "Fintech brand refresh",
+                "eyebrow": "Branding",
+                "buttonHref": "#projects",
+                "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80"
+              },
+              {
+                "heading": "Calm banking app",
+                "eyebrow": "Product design",
+                "buttonHref": "#projects",
+                "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80"
+              },
+              {
+                "heading": "Storefront relaunch",
+                "eyebrow": "Web",
+                "buttonHref": "#projects",
+                "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80"
+              },
+              {
+                "heading": "Analytics dashboard",
+                "eyebrow": "SaaS",
+                "buttonHref": "#projects",
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80"
+              },
+              {
+                "heading": "Multi-city travel",
+                "eyebrow": "UX research",
+                "buttonHref": "#projects",
+                "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 3,
+            "gap": 20
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "anchor": "projects",
+            "heading": "More projects",
+            "subheading": "Identity, packaging, web and campaign work from the last few years."
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Hi, I'm Mira",
+            "text": "I am an independent designer working with founders, agencies and in-house teams. I care about clear thinking, honest craft and design that earns its place.",
+            "bullets": [
+              "Previously design lead at two Berlin startups",
+              "Clients in 12 countries",
+              "Speaker at Design Matters and Config"
+            ],
+            "buttonLabel": "Download CV",
+            "buttonHref": "#",
+            "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&q=80",
+            "imageSide": "left"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "anchor": "services",
+            "heading": "What I do",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "✏️",
+                "title": "Brand identity",
+                "text": "Logos, type, colour and guidelines that scale."
+              },
+              {
+                "icon": "📱",
+                "title": "Product design",
+                "text": "Research-led UX and polished interfaces for web and mobile."
+              },
+              {
+                "icon": "🖥️",
+                "title": "Websites",
+                "text": "Marketing sites designed to convert, built with your team."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "flat"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Kind words",
+            "items": [
+              {
+                "quote": "Mira took our half-formed idea and gave it a clear, confident identity. Investors noticed.",
+                "name": "Jonas Weber",
+                "role": "Founder, Ledgerly",
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              },
+              {
+                "quote": "A rare designer who thinks like a product manager. Our activation rate jumped 28%.",
+                "name": "Emma Laurent",
+                "role": "VP Product, Calmly",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              },
+              {
+                "quote": "Fast, thoughtful and a pleasure to work with. We keep coming back.",
+                "name": "Arjun Mehta",
+                "role": "Creative Director, Northfold",
+                "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Let's work together",
+            "text": "I take on a small number of projects each quarter. Tell me about yours.",
+            "email": "hello@mirasato.design",
+            "phone": "+49 30 5550 1234",
+            "address": "Kreuzberg, Berlin",
+            "buttonLabel": "Send message",
+            "successMessage": "Thanks! I will reply within two working days."
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Mira Sato",
+            "tagline": "Brand & product design.",
+            "links": [
+              {
+                "label": "Dribbble",
+                "href": "#"
+              },
+              {
+                "label": "LinkedIn",
+                "href": "#"
+              },
+              {
+                "label": "Instagram",
+                "href": "#"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Mira Sato. All rights reserved."
+          },
+          "style": {
+            "background": "#111827",
+            "textColor": "#d1d5db"
+          }
+        }
+      ]
+    }
+  ]
+}

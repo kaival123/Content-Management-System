@@ -1,0 +1,272 @@
+{
+  "type": "faq",
+  "label": "FAQ / accordion",
+  "description": "Expandable questions and answers, or any accordion list",
+  "icon": "help",
+  "fields": [
+    {
+      "key": "eyebrow",
+      "label": "Small text above the heading",
+      "type": "text"
+    },
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "type": "textarea"
+    },
+    {
+      "key": "layout",
+      "label": "Layout",
+      "type": "select",
+      "options": [
+        {
+          "label": "Stacked",
+          "value": "stacked"
+        },
+        {
+          "label": "Two columns",
+          "value": "two-column"
+        },
+        {
+          "label": "Split — heading left, questions right",
+          "value": "split"
+        }
+      ]
+    },
+    {
+      "key": "style",
+      "label": "Style",
+      "type": "select",
+      "options": [
+        {
+          "label": "Boxed",
+          "value": "boxed"
+        },
+        {
+          "label": "Divided lines",
+          "value": "divided"
+        },
+        {
+          "label": "Filled",
+          "value": "filled"
+        },
+        {
+          "label": "Cards with shadow",
+          "value": "cards"
+        },
+        {
+          "label": "Accent bar",
+          "value": "accent"
+        },
+        {
+          "label": "Minimal",
+          "value": "minimal"
+        }
+      ]
+    },
+    {
+      "key": "icon",
+      "label": "Icon",
+      "type": "select",
+      "options": [
+        {
+          "label": "Plus",
+          "value": "plus"
+        },
+        {
+          "label": "Chevron",
+          "value": "chevron"
+        },
+        {
+          "label": "Circle",
+          "value": "circle"
+        },
+        {
+          "label": "None",
+          "value": "none"
+        }
+      ]
+    },
+    {
+      "key": "iconPosition",
+      "label": "Icon side",
+      "type": "select",
+      "options": [
+        {
+          "label": "Right",
+          "value": "right"
+        },
+        {
+          "label": "Left",
+          "value": "left"
+        }
+      ]
+    },
+    {
+      "key": "numbered",
+      "label": "Number the questions (01, 02…)",
+      "type": "toggle"
+    },
+    {
+      "key": "singleOpen",
+      "label": "Only one answer open at a time",
+      "type": "toggle"
+    },
+    {
+      "key": "openFirst",
+      "label": "First answer open when the page loads",
+      "type": "toggle"
+    },
+    {
+      "key": "speed",
+      "label": "Open / close speed (ms)",
+      "type": "number"
+    },
+    {
+      "key": "items",
+      "label": "Questions",
+      "type": "list",
+      "itemLabel": "Question",
+      "itemFields": [
+        {
+          "key": "question",
+          "label": "Question / title",
+          "type": "text"
+        },
+        {
+          "key": "answer",
+          "label": "Answer / text",
+          "type": "textarea"
+        },
+        {
+          "key": "icon",
+          "label": "Icon (emoji, optional)",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "ctaText",
+      "label": "Text above the button (e.g. “Still have questions?”)",
+      "type": "text"
+    },
+    {
+      "key": "buttonLabel",
+      "label": "Button label (empty = no button)",
+      "type": "text"
+    },
+    {
+      "key": "buttonHref",
+      "label": "Button link",
+      "type": "url"
+    }
+  ],
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Small text",
+      "kind": "text",
+      "fields": [
+        "eyebrow"
+      ]
+    },
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "kind": "text",
+      "fields": [
+        "subheading"
+      ]
+    },
+    {
+      "key": "item",
+      "label": "Question boxes",
+      "kind": "box",
+      "fields": [
+        "question",
+        "answer",
+        "icon"
+      ],
+      "list": "items"
+    },
+    {
+      "key": "question",
+      "label": "Questions",
+      "kind": "text",
+      "fields": [
+        "question"
+      ],
+      "list": "items"
+    },
+    {
+      "key": "answer",
+      "label": "Answers",
+      "kind": "text",
+      "fields": [
+        "answer"
+      ],
+      "list": "items"
+    },
+    {
+      "key": "ctaText",
+      "label": "Text above the button",
+      "kind": "text",
+      "fields": [
+        "ctaText"
+      ]
+    },
+    {
+      "key": "button",
+      "label": "Button",
+      "kind": "button",
+      "fields": [
+        "buttonLabel",
+        "buttonHref"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "faq",
+    "eyebrow": "",
+    "heading": "Frequently asked questions",
+    "subheading": "",
+    "layout": "stacked",
+    "style": "boxed",
+    "icon": "plus",
+    "iconPosition": "right",
+    "numbered": false,
+    "singleOpen": false,
+    "openFirst": false,
+    "speed": 320,
+    "items": [
+      {
+        "question": "Is there a free trial?",
+        "answer": "Yes, every plan comes with a 14-day free trial. No credit card required."
+      },
+      {
+        "question": "Can I cancel anytime?",
+        "answer": "Absolutely. You can cancel or change your plan at any time from your account settings."
+      },
+      {
+        "question": "Do you offer support?",
+        "answer": "Our team is available around the clock via chat and email."
+      }
+    ],
+    "ctaText": "",
+    "buttonLabel": "",
+    "buttonHref": "#contact"
+  }
+}

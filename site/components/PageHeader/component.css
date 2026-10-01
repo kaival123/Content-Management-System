@@ -1,0 +1,23 @@
+/* Page header (inner page title banner) */
+
+.lp-page-header {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.lp-left .lp-page-header {
+  margin-left: 0;
+}
+
+.lp-crumbs {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--lp-primary);
+}
+
+.lp-page-header .lp-btn {
+  margin-top: 1rem;
+}

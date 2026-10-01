@@ -1,0 +1,130 @@
+{
+  "type": "hero",
+  "label": "Hero",
+  "description": "Large headline, subtext, buttons and an image",
+  "icon": "star",
+  "fields": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow text",
+      "type": "text"
+    },
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "textarea"
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "type": "textarea"
+    },
+    {
+      "key": "primaryLabel",
+      "label": "Primary button",
+      "type": "text"
+    },
+    {
+      "key": "primaryHref",
+      "label": "Primary button link",
+      "type": "url"
+    },
+    {
+      "key": "secondaryLabel",
+      "label": "Secondary button",
+      "type": "text"
+    },
+    {
+      "key": "secondaryHref",
+      "label": "Secondary button link",
+      "type": "url"
+    },
+    {
+      "key": "image",
+      "label": "Image",
+      "type": "image"
+    },
+    {
+      "key": "layout",
+      "label": "Layout",
+      "type": "select",
+      "options": [
+        {
+          "label": "Centered",
+          "value": "center"
+        },
+        {
+          "label": "Text left, image right",
+          "value": "split"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "kind": "button",
+      "fields": [
+        "eyebrow"
+      ]
+    },
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "kind": "text",
+      "fields": [
+        "subheading"
+      ]
+    },
+    {
+      "key": "primary",
+      "label": "Primary button",
+      "kind": "button",
+      "fields": [
+        "primaryLabel",
+        "primaryHref"
+      ]
+    },
+    {
+      "key": "secondary",
+      "label": "Secondary button",
+      "kind": "button",
+      "fields": [
+        "secondaryLabel",
+        "secondaryHref"
+      ]
+    },
+    {
+      "key": "image",
+      "label": "Image",
+      "kind": "image",
+      "fields": [
+        "image",
+        "layout"
+      ]
+    }
+  ],
+  "defaults": {
+    "eyebrow": "New release",
+    "heading": "Build something people love",
+    "subheading": "A short, clear sentence that explains the value of your product and why visitors should care.",
+    "primaryLabel": "Start free trial",
+    "primaryHref": "#cta",
+    "secondaryLabel": "Learn more",
+    "secondaryHref": "#features",
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
+    "layout": "split"
+  },
+  "defaultStyle": {
+    "paddingY": 96
+  }
+}

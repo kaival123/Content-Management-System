@@ -1,0 +1,268 @@
+{
+  "id": "event",
+  "kind": "single",
+  "category": "Event",
+  "name": "Event / Webinar",
+  "description": "Promote a conference, meetup or webinar with speakers, agenda highlights, tickets and FAQ.",
+  "preview": [
+    "#0b1020",
+    "#f59e0b",
+    "#f43f5e"
+  ],
+  "theme": {
+    "primaryColor": "#f59e0b",
+    "accentColor": "#f43f5e",
+    "backgroundColor": "#0b1020",
+    "surfaceColor": "#131a33",
+    "textColor": "#e2e8f0",
+    "fontFamily": "Inter",
+    "headingFont": "Space Grotesk",
+    "radius": 12,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "DevSummit 2026",
+            "links": [
+              {
+                "label": "About",
+                "href": "#features"
+              },
+              {
+                "label": "Speakers",
+                "href": "#speakers"
+              },
+              {
+                "label": "Tickets",
+                "href": "#pricing"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Register",
+            "ctaHref": "#pricing"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "November 12–14 · Bengaluru",
+            "heading": "The developer conference of the year",
+            "subheading": "Three days of talks, workshops and networking with the people building the future of software.",
+            "primaryLabel": "Get your ticket",
+            "primaryHref": "#pricing",
+            "secondaryLabel": "Meet the speakers",
+            "secondaryHref": "#speakers",
+            "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "40+",
+                "label": "Speakers"
+              },
+              {
+                "value": "3",
+                "label": "Days"
+              },
+              {
+                "value": "2,000",
+                "label": "Attendees"
+              },
+              {
+                "value": "25",
+                "label": "Workshops"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "What to expect",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🎤",
+                "title": "Keynotes",
+                "text": "Inspiring talks from industry leaders."
+              },
+              {
+                "icon": "🛠️",
+                "title": "Hands-on workshops",
+                "text": "Learn by building with expert guidance."
+              },
+              {
+                "icon": "🤝",
+                "title": "Networking",
+                "text": "Meet peers, hiring managers and founders."
+              }
+            ]
+          }
+        },
+        {
+          "type": "team",
+          "data": {
+            "anchor": "speakers",
+            "heading": "Featured speakers",
+            "subheading": "Engineers, founders and researchers shaping how software is built.",
+            "members": [
+              {
+                "name": "Aisha Khan",
+                "role": "VP Engineering, Cloudnine",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Marco Rossi",
+                "role": "Creator of Fastpack",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Lena Park",
+                "role": "AI Research Lead, Nova",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "David Osei",
+                "role": "CTO, Paystack Labs",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+                "link": ""
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Tickets",
+            "subheading": "Early-bird pricing ends October 1.",
+            "plans": [
+              {
+                "name": "Online",
+                "price": "$49",
+                "period": "",
+                "description": "Live stream access",
+                "features": [
+                  "All keynotes",
+                  "Recordings"
+                ],
+                "buttonLabel": "Buy online pass",
+                "buttonHref": "#pricing",
+                "highlighted": false
+              },
+              {
+                "name": "In-person",
+                "price": "$299",
+                "period": "",
+                "description": "Full conference pass",
+                "features": [
+                  "All talks & workshops",
+                  "Lunch & after-party",
+                  "Recordings"
+                ],
+                "buttonLabel": "Buy ticket",
+                "buttonHref": "#pricing",
+                "highlighted": true
+              },
+              {
+                "name": "Team",
+                "price": "$1,199",
+                "period": "",
+                "description": "5 in-person passes",
+                "features": [
+                  "Everything in In-person",
+                  "Reserved seating",
+                  "Team dinner"
+                ],
+                "buttonLabel": "Buy team pack",
+                "buttonHref": "#pricing",
+                "highlighted": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Frequently asked questions",
+            "items": [
+              {
+                "question": "Where is the venue?",
+                "answer": "DevSummit takes place at the Bangalore International Exhibition Centre, with shuttles from the city centre."
+              },
+              {
+                "question": "Will talks be recorded?",
+                "answer": "Yes. Every ticket includes access to all recordings within a week of the event."
+              },
+              {
+                "question": "Can I get a refund?",
+                "answer": "Tickets are fully refundable until October 15 and transferable at any time."
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Don't miss DevSummit 2026",
+            "text": "Early-bird tickets are limited. Secure your seat today.",
+            "buttonLabel": "Register now",
+            "buttonHref": "#pricing"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "DevSummit",
+            "tagline": "See you there.",
+            "links": [
+              {
+                "label": "Tickets",
+                "href": "#pricing"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              },
+              {
+                "label": "Code of conduct",
+                "href": "#"
+              }
+            ],
+            "copyright": "© 2026 DevSummit. All rights reserved."
+          },
+          "style": {
+            "background": "#060914"
+          }
+        }
+      ]
+    }
+  ]
+}

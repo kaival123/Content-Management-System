@@ -1,0 +1,872 @@
+{
+  "id": "saas-website",
+  "kind": "multi",
+  "category": "SaaS",
+  "name": "SaaS Website",
+  "description": "A full SaaS marketing site with features, pricing, customer stories, blog, contact and login/register pages.",
+  "preview": [
+    "#ffffff",
+    "#0891b2",
+    "#8b5cf6"
+  ],
+  "theme": {
+    "primaryColor": "#0891b2",
+    "accentColor": "#8b5cf6",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f0f9ff",
+    "textColor": "#0b1324",
+    "fontFamily": "Plus Jakarta Sans",
+    "headingFont": "Plus Jakarta Sans",
+    "radius": 14,
+    "maxWidth": 1200
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Pulsegrid",
+            "useSiteMenu": true,
+            "ctaLabel": "Start free",
+            "ctaHref": "page:register"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "New: AI-powered insights",
+            "heading": "Understand every user, in real time",
+            "subheading": "Pulsegrid is the product analytics platform that shows you what users do, why they churn and what to build next.",
+            "primaryLabel": "Start free trial",
+            "primaryHref": "page:register",
+            "secondaryLabel": "Explore features",
+            "secondaryHref": "page:features",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
+          },
+          "style": {
+            "backgroundType": "gradient",
+            "gradientFrom": "#f0f9ff",
+            "gradientTo": "#ede9fe",
+            "gradientAngle": 160,
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Powering 4,000+ product teams",
+            "logos": [
+              {
+                "name": "Linear",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Notion",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Loom",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Raycast",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Vercel",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Retool",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Analytics without the busywork",
+            "subheading": "Answers in seconds — no SQL required.",
+            "items": [
+              {
+                "icon": "📈",
+                "title": "Funnels & retention",
+                "text": "See where users drop off and who comes back."
+              },
+              {
+                "icon": "🧠",
+                "title": "AI insights",
+                "text": "Ask questions in plain English and get charts instantly."
+              },
+              {
+                "icon": "⚡",
+                "title": "Real-time events",
+                "text": "Live data from web, mobile and backend."
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "One source of truth for your product",
+            "text": "Replace scattered spreadsheets and dashboards with a single, trusted view of how your product performs.",
+            "bullets": [
+              "Install in 5 minutes with one snippet",
+              "GDPR and SOC 2 compliant",
+              "Unlimited seats on every plan"
+            ],
+            "buttonLabel": "See all features",
+            "buttonHref": "page:features",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "40B",
+                "label": "Events per month"
+              },
+              {
+                "value": "4,000+",
+                "label": "Teams"
+              },
+              {
+                "value": "99.99%",
+                "label": "Uptime"
+              },
+              {
+                "value": "< 2s",
+                "label": "Query time"
+              }
+            ]
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "Teams ship smarter with Pulsegrid",
+            "subheading": "",
+            "variant": "testimonial",
+            "slides": [
+              {
+                "heading": "Sarah Johnson",
+                "eyebrow": "Head of Product, Loom",
+                "text": "We found our biggest onboarding leak in a day. Activation is up 22%.",
+                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              },
+              {
+                "heading": "Kenji Watanabe",
+                "eyebrow": "Growth Lead, Raycast",
+                "text": "The AI insights feel like having a data analyst on the team.",
+                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              },
+              {
+                "heading": "Clara Müller",
+                "eyebrow": "CPO, Retool",
+                "text": "Finally, analytics our whole company actually uses.",
+                "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 2,
+            "perViewTablet": 1,
+            "autoplay": true
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Start understanding your users today",
+            "text": "Free for 14 days. No credit card required.",
+            "buttonLabel": "Start free trial",
+            "buttonHref": "page:register"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Pulsegrid",
+            "tagline": "Product analytics for modern teams.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Pulsegrid. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "features",
+      "title": "Features",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Pulsegrid",
+            "useSiteMenu": true,
+            "ctaLabel": "Start free",
+            "ctaHref": "page:register"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Features",
+            "heading": "Features",
+            "text": "Everything you need to understand and grow your product.",
+            "buttonLabel": "Start free trial",
+            "buttonHref": "page:register"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Core analytics",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🔀",
+                "title": "Funnels",
+                "text": "Measure conversion across any sequence of steps."
+              },
+              {
+                "icon": "🔁",
+                "title": "Retention",
+                "text": "Cohort charts that show who sticks around."
+              },
+              {
+                "icon": "🧭",
+                "title": "User paths",
+                "text": "See the real journeys users take."
+              },
+              {
+                "icon": "🎯",
+                "title": "Segments",
+                "text": "Slice by any property, event or behaviour."
+              },
+              {
+                "icon": "🧪",
+                "title": "Experiments",
+                "text": "Run and analyse A/B tests natively."
+              },
+              {
+                "icon": "🔔",
+                "title": "Alerts",
+                "text": "Get notified when key metrics change."
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "anchor": "ai",
+            "heading": "Ask Pulsegrid anything",
+            "text": "Type a question like 'Which features do retained users adopt in week one?' and get an answer with a chart in seconds.",
+            "bullets": [
+              "Natural-language queries",
+              "Automatic anomaly detection",
+              "Weekly insight digests"
+            ],
+            "buttonLabel": "Try it free",
+            "buttonHref": "page:register",
+            "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+            "imageSide": "right"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Integrates with your stack",
+            "subheading": "Send data from anywhere and push insights where your team works.",
+            "items": [
+              {
+                "heading": "SDKs for every platform",
+                "text": "JavaScript, iOS, Android, React Native, Python and Go.",
+                "icon": "🧰",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "2",
+                "rowSpan": "1",
+                "background": "__surface__",
+                "textColor": ""
+              },
+              {
+                "heading": "Warehouse sync",
+                "text": "Two-way sync with Snowflake, BigQuery and Redshift.",
+                "icon": "🗄️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "2",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Slack & Teams",
+                "text": "Share charts and alerts in the channels you already use.",
+                "icon": "💬",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "2",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Enterprise-grade security",
+                "text": "SSO, SAML, audit logs, data residency in the EU or US.",
+                "icon": "🔒",
+                "image": "",
+                "buttonLabel": "View pricing",
+                "buttonHref": "page:pricing",
+                "colSpan": "2",
+                "rowSpan": "1",
+                "background": "__surface__",
+                "textColor": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "See it with your own data",
+            "text": "",
+            "buttonLabel": "Start free trial",
+            "buttonHref": "page:register"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Pulsegrid",
+            "tagline": "Product analytics for modern teams.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Pulsegrid. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pricing",
+      "title": "Pricing",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Pulsegrid",
+            "useSiteMenu": true,
+            "ctaLabel": "Start free",
+            "ctaHref": "page:register"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Pricing",
+            "heading": "Pricing that scales with you",
+            "text": "Start free, upgrade when you grow. Every plan includes unlimited seats."
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "plans": [
+              {
+                "name": "Free",
+                "price": "$0",
+                "period": "/month",
+                "description": "Up to 100k events",
+                "features": [
+                  "Core analytics",
+                  "90-day history",
+                  "Community support"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "page:register",
+                "highlighted": false
+              },
+              {
+                "name": "Growth",
+                "price": "$99",
+                "period": "/month",
+                "description": "Up to 5M events",
+                "features": [
+                  "Everything in Free",
+                  "AI insights",
+                  "Experiments",
+                  "Unlimited history",
+                  "Email support"
+                ],
+                "buttonLabel": "Start free trial",
+                "buttonHref": "page:register",
+                "highlighted": true
+              },
+              {
+                "name": "Enterprise",
+                "price": "Custom",
+                "period": "",
+                "description": "Unlimited events",
+                "features": [
+                  "SSO & SAML",
+                  "Warehouse sync",
+                  "Dedicated success manager",
+                  "99.99% SLA"
+                ],
+                "buttonLabel": "Contact sales",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Pricing FAQ",
+            "items": [
+              {
+                "question": "What counts as an event?",
+                "answer": "Any action you track, like a page view, click or purchase. Identify calls are free."
+              },
+              {
+                "question": "What happens if I go over my limit?",
+                "answer": "We never stop collecting data. We will contact you to discuss upgrading."
+              },
+              {
+                "question": "Do you offer discounts?",
+                "answer": "Yes — 50% off for startups under two years old and for non-profits."
+              },
+              {
+                "question": "Can I cancel anytime?",
+                "answer": "Yes. Plans are monthly or annual, and you can downgrade at any time."
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Questions about plans?",
+            "text": "Talk to our team and find the right fit.",
+            "buttonLabel": "Contact sales",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Pulsegrid",
+            "tagline": "Product analytics for modern teams.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Pulsegrid. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "customers",
+      "title": "Customers",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Pulsegrid",
+            "useSiteMenu": true,
+            "ctaLabel": "Start free",
+            "ctaHref": "page:register"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Customers",
+            "heading": "Customer stories",
+            "text": "See how product teams use Pulsegrid to grow faster."
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Trusted by product teams at",
+            "logos": [
+              {
+                "name": "Linear",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Notion",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Loom",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Raycast",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Vercel",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Retool",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Pitch",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Cal.com",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Supabase",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Arc",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Mercury",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Ramp",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "22%",
+                "label": "Avg. activation lift"
+              },
+              {
+                "value": "3x",
+                "label": "Faster insights"
+              },
+              {
+                "value": "-18%",
+                "label": "Churn reduction"
+              },
+              {
+                "value": "4.8★",
+                "label": "G2 rating"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "In their words",
+            "items": [
+              {
+                "quote": "We found our biggest onboarding leak in a day. Activation is up 22%.",
+                "name": "Sarah Johnson",
+                "role": "Head of Product, Loom",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              },
+              {
+                "quote": "The AI insights feel like having a data analyst on the team.",
+                "name": "Kenji Watanabe",
+                "role": "Growth Lead, Raycast",
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              },
+              {
+                "quote": "Finally, analytics our whole company actually uses.",
+                "name": "Clara Müller",
+                "role": "CPO, Retool",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              },
+              {
+                "quote": "Migrating from our old tool took one afternoon.",
+                "name": "Ben Carter",
+                "role": "CTO, Pitch",
+                "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+              },
+              {
+                "quote": "Experiments and analytics in one place changed how we ship.",
+                "name": "Isabel Rocha",
+                "role": "PM, Supabase",
+                "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+              },
+              {
+                "quote": "The support team replies in minutes, every time.",
+                "name": "Omar Haddad",
+                "role": "Founder, Cal.com",
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Join 4,000+ product teams",
+            "text": "",
+            "buttonLabel": "Start free trial",
+            "buttonHref": "page:register"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Pulsegrid",
+            "tagline": "Product analytics for modern teams.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Pulsegrid. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "blog",
+      "title": "Blog",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Pulsegrid",
+            "useSiteMenu": true,
+            "ctaLabel": "Start free",
+            "ctaHref": "page:register"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Blog",
+            "heading": "The Pulsegrid blog",
+            "text": "Guides and ideas on product analytics, growth and experimentation."
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "Latest posts",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "The 5 metrics every product team should track",
+                "excerpt": "Start with these before you build another dashboard.",
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+                "category": "Guides",
+                "date": "Sep 20, 2026",
+                "author": "Sarah Lin",
+                "link": "#"
+              },
+              {
+                "title": "How Loom lifted activation by 22%",
+                "excerpt": "A step-by-step look at their onboarding funnel.",
+                "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+                "category": "Case study",
+                "date": "Sep 6, 2026",
+                "author": "Kenji Watanabe",
+                "link": "#"
+              },
+              {
+                "title": "Introducing AI insights",
+                "excerpt": "Ask questions in plain English, get answers in seconds.",
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+                "category": "Product",
+                "date": "Aug 25, 2026",
+                "author": "Pulsegrid Team",
+                "link": "#"
+              }
+            ]
+          }
+        },
+        {
+          "type": "newsletter",
+          "data": {
+            "heading": "Get product insights in your inbox",
+            "text": "Twice a month. Practical, never spammy."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Pulsegrid",
+            "tagline": "Product analytics for modern teams.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Pulsegrid. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Pulsegrid",
+            "useSiteMenu": true,
+            "ctaLabel": "Start free",
+            "ctaHref": "page:register"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "Questions about Pulsegrid, pricing or enterprise plans? We are here to help."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Talk to our team",
+            "text": "Sales, support or partnerships — send a message and we will reply within a few hours.",
+            "email": "hello@pulsegrid.io",
+            "phone": "+1 (628) 555-0110",
+            "address": "535 Mission Street\nSan Francisco, CA 94105",
+            "buttonLabel": "Send message",
+            "successMessage": "Thanks! Our team will reply shortly."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Pulsegrid",
+            "tagline": "Product analytics for modern teams.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Pulsegrid. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "login",
+      "title": "Login",
+      "hideInMenu": true,
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Pulsegrid",
+            "useSiteMenu": true,
+            "ctaLabel": "Start free",
+            "ctaHref": "page:register"
+          }
+        },
+        {
+          "type": "auth",
+          "data": {
+            "mode": "login",
+            "heading": "Welcome back",
+            "text": "Log in to your Pulsegrid workspace.",
+            "buttonLabel": "Log in",
+            "switchText": "New to Pulsegrid?",
+            "switchLabel": "Create an account",
+            "switchHref": "page:register",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Pulsegrid",
+            "tagline": "Product analytics for modern teams.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Pulsegrid. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "register",
+      "title": "Register",
+      "hideInMenu": true,
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Pulsegrid",
+            "useSiteMenu": true,
+            "ctaLabel": "Start free",
+            "ctaHref": "page:register"
+          }
+        },
+        {
+          "type": "auth",
+          "data": {
+            "mode": "register",
+            "heading": "Start your free trial",
+            "text": "14 days free. No credit card required.",
+            "buttonLabel": "Create account",
+            "switchText": "Already have an account?",
+            "switchLabel": "Log in",
+            "switchHref": "page:login",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Pulsegrid",
+            "tagline": "Product analytics for modern teams.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Pulsegrid. All rights reserved."
+          }
+        }
+      ]
+    }
+  ]
+}

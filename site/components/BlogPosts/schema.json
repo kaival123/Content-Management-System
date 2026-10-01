@@ -1,0 +1,43 @@
+{
+  "type": "blog",
+  "label": "Blog posts",
+  "description": "Grid of article cards with image, date and excerpt",
+  "icon": "text",
+  "fields": [
+    { "key": "heading", "label": "Heading", "type": "text" },
+    { "key": "subheading", "label": "Subheading", "type": "textarea" },
+    {
+      "key": "posts",
+      "label": "Posts",
+      "type": "list",
+      "itemLabel": "Post",
+      "itemFields": [
+        { "key": "title", "label": "Title", "type": "text" },
+        { "key": "excerpt", "label": "Excerpt", "type": "textarea" },
+        { "key": "image", "label": "Cover image", "type": "image" },
+        { "key": "category", "label": "Category", "type": "text" },
+        { "key": "date", "label": "Date", "type": "text" },
+        { "key": "author", "label": "Author", "type": "text" },
+        { "key": "link", "label": "Link", "type": "url" }
+      ]
+    }
+  ],
+  "elements": [
+    { "key": "heading", "label": "Heading", "kind": "text", "fields": ["heading"] },
+    { "key": "subheading", "label": "Subheading", "kind": "text", "fields": ["subheading"] },
+    { "key": "card", "label": "Post cards", "kind": "box", "list": "posts", "fields": ["title", "excerpt", "image", "category", "date", "author", "link"] },
+    { "key": "image", "label": "Cover images", "kind": "image", "list": "posts", "fields": ["image"] },
+    { "key": "title", "label": "Post titles", "kind": "text", "list": "posts", "fields": ["title"] },
+    { "key": "excerpt", "label": "Excerpts", "kind": "text", "list": "posts", "fields": ["excerpt"] }
+  ],
+  "defaults": {
+    "heading": "From the blog",
+    "subheading": "Ideas, guides and news from our team.",
+    "posts": [
+      { "title": "10 landing page tips that actually convert", "excerpt": "Small changes that make a big difference to sign-ups.", "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80", "category": "Marketing", "date": "Sep 12, 2026", "author": "Aisha Khan", "link": "#" },
+      { "title": "How we design for speed", "excerpt": "Our process for shipping fast without cutting corners.", "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80", "category": "Design", "date": "Aug 28, 2026", "author": "Marco Rossi", "link": "#" },
+      { "title": "A beginner's guide to analytics", "excerpt": "The five numbers every founder should track.", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80", "category": "Growth", "date": "Aug 3, 2026", "author": "Lena Park", "link": "#" }
+    ]
+  },
+  "grid": { "desktop": 3, "tablet": 2, "mobile": 1, "cardStyle": "bordered" }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "s_mumpib62wyohpj",
+  "type": "faq",
+  "visible": true,
+  "data": {
+    "anchor": "faq",
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Is there a free trial?",
+        "answer": "Yes, every plan comes with a 14-day free trial. No credit card required."
+      },
+      {
+        "question": "Can I cancel anytime?",
+        "answer": "Absolutely. You can cancel or change your plan at any time from your account settings."
+      },
+      {
+        "question": "Do you offer support?",
+        "answer": "Our team is available around the clock via chat and email."
+      }
+    ],
+    "singleOpen": true,
+    "openFirst": true,
+    "numbered": true,
+    "icon": "plus",
+    "iconPosition": "right",
+    "style": "boxed",
+    "layout": "stacked"
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 80,
+    "align": "center",
+    "width": "boxed",
+    "heightUnit": "px",
+    "heightDesktop": 600,
+    "animation": "fade"
+  }
+}

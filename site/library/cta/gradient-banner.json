@@ -1,0 +1,27 @@
+{
+  "name": "Gradient banner",
+  "description": "Call-to-action on a vivid gradient background.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "See it in action",
+      "text": "Book a 20-minute walkthrough with our team and get a tailored setup plan.",
+      "buttonLabel": "Book a demo",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "__primary__",
+      "gradientTo": "__accent__",
+      "gradientAngle": 120,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 96
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      }
+    }
+  }
+}

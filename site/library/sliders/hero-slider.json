@@ -1,0 +1,70 @@
+{
+  "name": "Hero slider",
+  "description": "Three full-image hero slides that advance automatically.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "",
+      "subheading": "",
+      "variant": "hero",
+      "slideHeight": 560,
+      "overlay": 45,
+      "slides": [
+        {
+          "heading": "Build pages people remember",
+          "eyebrow": "New in 2026",
+          "text": "Design, launch and optimise landing pages without writing a line of code.",
+          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Start free trial",
+          "buttonHref": "#cta",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Work together, in real time",
+          "eyebrow": "Collaboration",
+          "text": "Invite your team, leave comments and approve changes in one place.",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "See how it works",
+          "buttonHref": "#features",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Grow with every launch",
+          "eyebrow": "Analytics",
+          "text": "Built-in insights show what converts, so every page beats the last.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Explore analytics",
+          "buttonHref": "#stats",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": true,
+      "autoplaySpeed": 5000,
+      "speed": 700,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

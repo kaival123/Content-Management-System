@@ -1,0 +1,174 @@
+{
+  "type": "back-to-top",
+  "label": "Back to top button",
+  "description": "Floating arrow that appears when visitors scroll down and takes them back to the top",
+  "icon": "chevron-up",
+  "fields": [
+    {
+      "key": "shape",
+      "label": "Shape",
+      "type": "select",
+      "options": [
+        {
+          "label": "Circle",
+          "value": "circle"
+        },
+        {
+          "label": "Rounded square",
+          "value": "rounded"
+        },
+        {
+          "label": "Square",
+          "value": "square"
+        },
+        {
+          "label": "Pill with label",
+          "value": "pill"
+        }
+      ]
+    },
+    {
+      "key": "icon",
+      "label": "Icon",
+      "type": "select",
+      "options": [
+        {
+          "label": "Arrow",
+          "value": "arrow"
+        },
+        {
+          "label": "Chevron",
+          "value": "chevron"
+        },
+        {
+          "label": "Double chevron",
+          "value": "double"
+        },
+        {
+          "label": "Triangle",
+          "value": "caret"
+        }
+      ]
+    },
+    {
+      "key": "label",
+      "label": "Label (shown with the pill shape, and read by screen readers)",
+      "type": "text"
+    },
+    {
+      "key": "position",
+      "label": "Position",
+      "type": "select",
+      "options": [
+        {
+          "label": "Bottom right",
+          "value": "right"
+        },
+        {
+          "label": "Bottom left",
+          "value": "left"
+        },
+        {
+          "label": "Bottom centre",
+          "value": "center"
+        }
+      ]
+    },
+    {
+      "key": "offsetX",
+      "label": "Distance from the side (px)",
+      "type": "number"
+    },
+    {
+      "key": "offsetY",
+      "label": "Distance from the bottom (px)",
+      "type": "number"
+    },
+    {
+      "key": "size",
+      "label": "Size (px)",
+      "type": "number"
+    },
+    {
+      "key": "background",
+      "label": "Button colour",
+      "type": "color"
+    },
+    {
+      "key": "iconColor",
+      "label": "Icon colour",
+      "type": "color"
+    },
+    {
+      "key": "showAfter",
+      "label": "Show after scrolling (px)",
+      "type": "number"
+    },
+    {
+      "key": "progress",
+      "label": "Show scroll progress ring",
+      "type": "toggle"
+    },
+    {
+      "key": "ringColor",
+      "label": "Progress ring colour (empty = button colour)",
+      "type": "color"
+    },
+    {
+      "key": "ringWidth",
+      "label": "Progress ring thickness (px)",
+      "type": "number"
+    },
+    {
+      "key": "shadow",
+      "label": "Shadow",
+      "type": "toggle"
+    },
+    {
+      "key": "smooth",
+      "label": "Smooth scrolling",
+      "type": "toggle"
+    },
+    {
+      "key": "hideOnMobile",
+      "label": "Hide on phones",
+      "type": "toggle"
+    }
+  ],
+  "elements": [
+    {
+      "key": "button",
+      "label": "Button",
+      "kind": "button",
+      "fields": [
+        "shape",
+        "icon",
+        "label",
+        "background",
+        "iconColor",
+        "size"
+      ]
+    }
+  ],
+  "defaults": {
+    "shape": "circle",
+    "icon": "arrow",
+    "label": "Back to top",
+    "position": "right",
+    "offsetX": 24,
+    "offsetY": 24,
+    "size": 48,
+    "background": "__primary__",
+    "iconColor": "#ffffff",
+    "showAfter": 300,
+    "progress": false,
+    "shadow": true,
+    "smooth": true,
+    "hideOnMobile": false,
+    "ringColor": "",
+    "ringWidth": 3
+  },
+  "defaultStyle": {
+    "paddingY": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Left-aligned header with breadcrumb",
+  "description": "Left-aligned title with breadcrumb, intro text and a call-to-action button.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Home / Resources / Guides",
+      "heading": "Guides and tutorials",
+      "text": "Step-by-step walkthroughs to help you get the most out of every feature.",
+      "buttonLabel": "Browse all guides",
+      "buttonHref": "#guides"
+    },
+    "style": {
+      "align": "left",
+      "background": "__surface__",
+      "paddingY": 80
+    }
+  }
+}

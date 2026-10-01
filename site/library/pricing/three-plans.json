@@ -1,0 +1,67 @@
+{
+  "name": "Three pricing plans",
+  "description": "Starter, Pro and Business plans with the middle one highlighted.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Pricing that grows with you",
+      "subheading": "Start free. Upgrade when you are ready. Cancel anytime.",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$0",
+          "period": "/month",
+          "description": "For side projects",
+          "features": [
+            "1 published site",
+            "1,000 monthly visitors",
+            "Community support"
+          ],
+          "buttonLabel": "Start for free",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Pro",
+          "price": "$24",
+          "period": "/month",
+          "description": "For growing businesses",
+          "features": [
+            "10 published sites",
+            "Unlimited visitors",
+            "Custom domains",
+            "Priority email support"
+          ],
+          "buttonLabel": "Start 14-day trial",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Business",
+          "price": "$79",
+          "period": "/month",
+          "description": "For teams and agencies",
+          "features": [
+            "Unlimited sites",
+            "Team roles & permissions",
+            "SSO and audit log",
+            "Dedicated success manager"
+          ],
+          "buttonLabel": "Talk to sales",
+          "buttonHref": "#contact",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "bordered"
+    }
+  }
+}

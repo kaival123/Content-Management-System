@@ -1,0 +1,36 @@
+{
+  "name": "Light simple footer",
+  "description": "Minimal light footer with brand, a few links and copyright.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "brand": "Studio Nine",
+      "tagline": "Independent design studio.",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Privacy",
+          "href": "#"
+        },
+        {
+          "label": "Terms",
+          "href": "#"
+        },
+        {
+          "label": "Careers",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Studio Nine. All rights reserved."
+    },
+    "style": {
+      "background": "__surface__",
+      "textColor": "__text__",
+      "paddingY": 40
+    }
+  }
+}

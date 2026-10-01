@@ -1,0 +1,21 @@
+{{#if heading}}
+<header class="lp-head">
+  <h2 class="lp-h2" data-el="heading" data-edit="heading">{{heading}}</h2>
+  {{#if subheading}}<p class="lp-lead lp-pre" data-el="subheading" data-edit="subheading">{{subheading}}</p>{{/if}}
+</header>
+{{/if}}
+<div class="lp-grid lp-gallery{{#if captionOnHover}} lp-gallery-hover{{/if}}" data-grid style="--shape: {{default shape "4/3"}}">
+  {{#each images}}
+  <figure class="lp-card lp-gallery-item" data-el="item">
+    {{#if link}}<a href="{{link}}">{{/if}}
+    <img data-el="image" src="{{image}}" alt="{{title}}" />
+    {{#if title}}
+    <figcaption>
+      <strong data-el="title" data-edit="title">{{title}}</strong>
+      {{#if caption}}<small>{{caption}}</small>{{/if}}
+    </figcaption>
+    {{/if}}
+    {{#if link}}</a>{{/if}}
+  </figure>
+  {{/each}}
+</div>

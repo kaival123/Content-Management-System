@@ -1,0 +1,99 @@
+{
+  "name": "Carousel · classic Owl navigation",
+  "description": "Four cards per view with arrows either side of the dots below.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "Shop the collection",
+      "subheading": "Hand-picked favourites, shipped free.",
+      "variant": "product",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Wireless headphones",
+          "eyebrow": "Audio",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
+          "price": "$129",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Minimal watch",
+          "eyebrow": "Accessories",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80",
+          "price": "$189",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Ceramic mug set",
+          "eyebrow": "Home",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&q=80",
+          "price": "$34",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Everyday backpack",
+          "eyebrow": "Travel",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80",
+          "price": "$89",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Desk lamp",
+          "eyebrow": "Workspace",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
+          "price": "$59",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 4,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 24,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "bottom-center",
+      "arrowStyle": "outline",
+      "arrowSize": 40,
+      "dotsPosition": "below",
+      "dotsStyle": "dots",
+      "controlColor": ""
+    }
+  }
+}

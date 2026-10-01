@@ -1,0 +1,587 @@
+{
+  "id": "portfolio-website",
+  "kind": "multi",
+  "category": "Portfolio",
+  "name": "Portfolio Website",
+  "description": "An elegant multi-page portfolio for photographers and creatives with work, about, services and contact pages.",
+  "preview": [
+    "#faf7f2",
+    "#9a3412",
+    "#0f766e"
+  ],
+  "theme": {
+    "primaryColor": "#9a3412",
+    "accentColor": "#0f766e",
+    "backgroundColor": "#faf7f2",
+    "surfaceColor": "#f1ebe1",
+    "textColor": "#1c1917",
+    "fontFamily": "DM Sans",
+    "headingFont": "Playfair Display",
+    "radius": 4,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Elena Brooks",
+            "useSiteMenu": true,
+            "ctaLabel": "Hire me",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Photographer & art director · Lisbon",
+            "heading": "Images with quiet confidence",
+            "subheading": "I create photography for brands, editorials and architects who value light, space and honesty.",
+            "primaryLabel": "View work",
+            "primaryHref": "page:work",
+            "secondaryLabel": "About me",
+            "secondaryHref": "page:about",
+            "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1200&q=80"
+          },
+          "style": {
+            "paddingY": 120
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "Recent commissions",
+            "subheading": "",
+            "variant": "portfolio",
+            "slides": [
+              {
+                "heading": "Coastal residence",
+                "eyebrow": "Architecture",
+                "buttonHref": "page:work",
+                "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80"
+              },
+              {
+                "heading": "Portrait series",
+                "eyebrow": "Editorial",
+                "buttonHref": "page:work",
+                "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=80"
+              },
+              {
+                "heading": "Alpine light",
+                "eyebrow": "Landscape",
+                "buttonHref": "page:work",
+                "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80"
+              },
+              {
+                "heading": "Studio still life",
+                "eyebrow": "Product",
+                "buttonHref": "page:work",
+                "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 3,
+            "gap": 16
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Hello, I'm Elena",
+            "text": "For twelve years I have photographed spaces, people and products for clients across Europe. My work is calm, considered and always made in natural light where possible.",
+            "bullets": [
+              "Published in Kinfolk, Wallpaper* and Dezeen",
+              "Clients include Aesop, Muji and Vitra"
+            ],
+            "buttonLabel": "More about me",
+            "buttonHref": "page:about",
+            "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=80",
+            "imageSide": "left"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Selected clients",
+            "logos": [
+              {
+                "name": "Aesop",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Muji",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Vitra",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Kinfolk",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "HAY",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Dezeen",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Planning a shoot?",
+            "text": "I take a limited number of commissions each season.",
+            "buttonLabel": "Get in touch",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Elena Brooks",
+            "tagline": "Photography & art direction.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Elena Brooks. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "work",
+      "title": "Work",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Elena Brooks",
+            "useSiteMenu": true,
+            "ctaLabel": "Hire me",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Work",
+            "heading": "Selected work",
+            "text": "Architecture, editorial, product and landscape photography."
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "shape": "3/4",
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
+                "title": "Coastal residence",
+                "caption": "Architecture",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=80",
+                "title": "Portrait series",
+                "caption": "Editorial",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80",
+                "title": "Alpine light",
+                "caption": "Landscape",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=80",
+                "title": "Lisbon apartment",
+                "caption": "Interiors",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+                "title": "Studio still life",
+                "caption": "Product",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+                "title": "City at dusk",
+                "caption": "Travel",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "Featured projects",
+            "subheading": "Swipe through a few longer stories.",
+            "variant": "portfolio",
+            "slides": [
+              {
+                "heading": "Casa do Mar",
+                "eyebrow": "Architecture · 2026",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80"
+              },
+              {
+                "heading": "Faces of Alfama",
+                "eyebrow": "Editorial · 2025",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=80"
+              },
+              {
+                "heading": "Quiet Objects",
+                "eyebrow": "Product · 2025",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=900&q=80"
+              },
+              {
+                "heading": "High Places",
+                "eyebrow": "Landscape · 2024",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 2,
+            "perViewTablet": 1,
+            "gap": 24
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Like what you see?",
+            "text": "",
+            "buttonLabel": "Book a shoot",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Elena Brooks",
+            "tagline": "Photography & art direction.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Elena Brooks. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Elena Brooks",
+            "useSiteMenu": true,
+            "ctaLabel": "Hire me",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / About",
+            "heading": "About",
+            "text": "Photographer, art director and lover of good light."
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "My approach",
+            "text": "I believe the best images come from patience and preparation. Every project starts with a conversation about what you want people to feel — then I plan the light, the location and the details to get there.",
+            "bullets": [
+              "12 years of professional practice",
+              "Based in Lisbon, working worldwide",
+              "Fluent in English, Portuguese and Spanish"
+            ],
+            "buttonLabel": "See services",
+            "buttonHref": "page:services",
+            "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=80"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "12",
+                "label": "Years shooting"
+              },
+              {
+                "value": "300+",
+                "label": "Commissions"
+              },
+              {
+                "value": "18",
+                "label": "Countries"
+              },
+              {
+                "value": "9",
+                "label": "Awards"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Client notes",
+            "items": [
+              {
+                "quote": "Elena captured our building exactly as we imagined it — and better.",
+                "name": "Rui Almeida",
+                "role": "Partner, Almeida Arquitetos",
+                "avatar": ""
+              },
+              {
+                "quote": "Calm, prepared and endlessly creative on set.",
+                "name": "Hanna Berg",
+                "role": "Editor, Nordic Living",
+                "avatar": ""
+              },
+              {
+                "quote": "Our product photos have never looked so good.",
+                "name": "Lucas Martin",
+                "role": "Brand Lead, Atelier Nord",
+                "avatar": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Elena Brooks",
+            "tagline": "Photography & art direction.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Elena Brooks. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Elena Brooks",
+            "useSiteMenu": true,
+            "ctaLabel": "Hire me",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Services",
+            "heading": "Services",
+            "text": "Photography and art direction for brands, publications and architects."
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "What I offer",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🏛️",
+                "title": "Architecture & interiors",
+                "text": "Spaces photographed with natural light and precise composition."
+              },
+              {
+                "icon": "🧑‍🎨",
+                "title": "Editorial & portrait",
+                "text": "People photographed with warmth and honesty."
+              },
+              {
+                "icon": "📦",
+                "title": "Product & still life",
+                "text": "Considered imagery for e-commerce and campaigns."
+              },
+              {
+                "icon": "🎬",
+                "title": "Art direction",
+                "text": "Concept, styling and crew for larger productions."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 2,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Day rates",
+            "subheading": "Every commission includes pre-production and retouched final images.",
+            "plans": [
+              {
+                "name": "Half day",
+                "price": "€950",
+                "period": "",
+                "description": "Up to 4 hours on location",
+                "features": [
+                  "20 edited images",
+                  "Web & print licence"
+                ],
+                "buttonLabel": "Enquire",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              },
+              {
+                "name": "Full day",
+                "price": "€1,700",
+                "period": "",
+                "description": "Up to 8 hours on location",
+                "features": [
+                  "50 edited images",
+                  "Web & print licence",
+                  "Pre-shoot planning call"
+                ],
+                "buttonLabel": "Enquire",
+                "buttonHref": "page:contact",
+                "highlighted": true
+              },
+              {
+                "name": "Production",
+                "price": "Custom",
+                "period": "",
+                "description": "Multi-day and campaign work",
+                "features": [
+                  "Art direction",
+                  "Crew & styling",
+                  "Extended licensing"
+                ],
+                "buttonLabel": "Request a quote",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Have a project in mind?",
+            "text": "",
+            "buttonLabel": "Request a quote",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Elena Brooks",
+            "tagline": "Photography & art direction.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Elena Brooks. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Elena Brooks",
+            "useSiteMenu": true,
+            "ctaLabel": "Hire me",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Let's work together",
+            "text": "Tell me about your project, dates and location."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Get in touch",
+            "text": "I reply to every enquiry within two working days.",
+            "email": "studio@elenabrooks.com",
+            "phone": "+351 912 555 014",
+            "address": "Rua da Rosa 112\nLisbon, Portugal",
+            "buttonLabel": "Send enquiry",
+            "successMessage": "Thank you! I will be in touch soon."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Elena Brooks",
+            "tagline": "Photography & art direction.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Elena Brooks. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    }
+  ]
+}

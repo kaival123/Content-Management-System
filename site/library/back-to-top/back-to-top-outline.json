@@ -1,0 +1,17 @@
+{
+  "name": "Back to top · outline ring",
+  "description": "Light circle with a thick progress ring in the accent colour.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "circle",
+      "icon": "chevron",
+      "background": "__bg__",
+      "iconColor": "__text__",
+      "progress": true,
+      "ringColor": "__accent__",
+      "ringWidth": 4,
+      "size": 50
+    }
+  }
+}

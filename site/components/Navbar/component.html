@@ -1,0 +1,33 @@
+{{!--
+  Navigation bar. With "useSiteMenu" on, links come from the website's page tree
+  (@menu: label, href, active, children); otherwise from the custom "links" list.
+  The ☰ button toggles the menu on small screens (handled by the site runtime).
+--}}
+<nav class="lp-nav">
+  <a class="lp-brand" href="{{default @homeHref "#"}}">
+    {{#if logo}}<img data-el="logo" src="{{logo}}" alt="{{brand}}" />{{/if}}
+    <span data-el="brand" data-edit="brand">{{brand}}</span>
+  </a>
+  <button class="lp-nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="lp-nav-links">
+    {{#if useSiteMenu}}
+      {{#each @menu}}
+      <div class="lp-nav-item{{#if children}} has-sub{{/if}}">
+        <a data-el="menuLink" href="{{href}}"{{#if active}} class="is-active" aria-current="page"{{/if}}>{{label}}</a>
+        {{#if children}}
+        <div class="lp-nav-sub">
+          {{#each children}}<a href="{{href}}"{{#if active}} class="is-active" aria-current="page"{{/if}}>{{label}}</a>{{/each}}
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+    {{else}}
+      {{#each links}}
+      <a data-el="link" data-edit="label" href="{{href}}">{{label}}</a>
+      {{/each}}
+    {{/if}}
+    {{#if ctaLabel}}
+    <a class="lp-btn lp-btn-primary lp-btn-sm lp-nav-cta" data-el="cta" data-edit="ctaLabel" href="{{ctaHref}}">{{ctaLabel}}</a>
+    {{/if}}
+  </div>
+</nav>

@@ -1,0 +1,38 @@
+{
+  "name": "Full-height image hero",
+  "description": "Full-height background photo with a dark overlay and centered text.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Spring collection",
+      "heading": "Designed for the places you love",
+      "subheading": "Thoughtfully made essentials for work, travel and everything in between.",
+      "primaryLabel": "Shop the collection",
+      "primaryHref": "#products",
+      "secondaryLabel": "Our story",
+      "secondaryHref": "#about",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80",
+      "overlayColor": "#0f172a",
+      "overlayOpacity": 55,
+      "minHeight": 90,
+      "verticalAlign": "center",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 96
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 64
+      },
+      "subheading": {
+        "color": "#f1f5f9"
+      }
+    }
+  }
+}

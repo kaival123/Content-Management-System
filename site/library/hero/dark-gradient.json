@@ -1,0 +1,35 @@
+{
+  "name": "Dark gradient hero",
+  "description": "Centered hero on a deep gradient background with white text.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Introducing v3.0",
+      "heading": "Analytics that explain themselves",
+      "subheading": "Turn raw numbers into clear, shareable insights your whole company can act on.",
+      "primaryLabel": "Try it free",
+      "primaryHref": "#cta",
+      "secondaryLabel": "Book a demo",
+      "secondaryHref": "#contact",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+      "layout": "center"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0f172a",
+      "gradientTo": "#4338ca",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 120
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "subheading": {
+        "color": "#e0e7ff"
+      }
+    }
+  }
+}

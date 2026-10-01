@@ -1,0 +1,17 @@
+<div class="lp-split lp-about-inner{{#is imageSide "right"}} lp-reverse{{/is}}">
+  {{#if image}}
+  <img class="lp-about-img" data-el="image" src="{{image}}" alt="" />
+  {{/if}}
+  <div>
+    <h2 class="lp-h2" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h2>
+    <p class="lp-lead lp-pre" data-el="text" data-edit="text">{{text}}</p>
+    {{#if bullets}}
+    <ul class="lp-checks" data-el="bullets">
+      {{#each bullets}}{{#if this}}<li>{{this}}</li>{{/if}}{{/each}}
+    </ul>
+    {{/if}}
+    {{#if buttonLabel}}
+    <a class="lp-btn lp-btn-primary" data-el="button" data-edit="buttonLabel" href="{{buttonHref}}">{{buttonLabel}}</a>
+    {{/if}}
+  </div>
+</div>

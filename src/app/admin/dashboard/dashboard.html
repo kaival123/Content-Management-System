@@ -1,0 +1,95 @@
+<header class="adm-page-head">
+  <div>
+    <h1>Websites</h1>
+    <p class="adm-sub">Single landing pages and multi-page websites, stored as files in your project.</p>
+  </div>
+  <div class="adm-head-actions">
+    <label class="btn btn-secondary">
+      <app-icon name="upload" /> Import page
+      <input type="file" accept="application/json,.json" hidden (change)="importPage($event)" />
+    </label>
+    <a class="btn btn-primary" routerLink="/admin/new"><app-icon name="plus" /> Create new website</a>
+  </div>
+</header>
+
+<section class="adm-stats">
+  <div class="adm-stat"><span>Websites</span><strong>{{ stats().websites }}</strong></div>
+  <div class="adm-stat"><span>Pages</span><strong>{{ stats().pages }}</strong></div>
+  <div class="adm-stat"><span>Published</span><strong class="text-success">{{ stats().published }}</strong></div>
+  <div class="adm-stat"><span>Form submissions</span><strong>{{ stats().leads }}</strong></div>
+</section>
+
+@if (browserPages()) {
+  <div class="adm-notice">
+    <app-icon name="download" />
+    <span>Found {{ browserPages() }} page{{ browserPages() === 1 ? '' : 's' }} saved in this browser by the previous version. Import them into the project folder so they are saved as files.</span>
+    <button type="button" class="btn btn-sm btn-primary" (click)="importBrowserPages()">Import</button>
+  </div>
+}
+
+<div class="adm-toolbar">
+  <label class="adm-search">
+    <app-icon name="search" [size]="16" />
+    <input type="search" placeholder="Search websites…" [value]="query()" (input)="setQuery($event)" />
+  </label>
+  <div class="seg">
+    @for (f of filters; track f.value) {
+      <button type="button" [class.active]="filter() === f.value" (click)="filter.set(f.value)">{{ f.label }}</button>
+    }
+  </div>
+</div>
+
+<div class="adm-cards">
+  @for (w of visible(); track w.slug) {
+    <article class="adm-card">
+      <button type="button" class="adm-card-thumb" (click)="edit(w)" [attr.aria-label]="'Edit ' + w.name">
+        @if (homepage(w); as home) {
+          @if (home.sections.length) {
+            <app-page-thumb [page]="home" />
+          } @else {
+            <span class="thumb-empty"><app-icon name="plus" [size]="22" /> Empty page</span>
+          }
+        }
+      </button>
+      <div class="adm-card-body">
+        <div class="adm-card-title">
+          <h2>{{ w.name }}</h2>
+          <span class="badge" [class.badge-live]="w.status === 'published'">{{ w.status === 'published' ? 'Published' : 'Draft' }}</span>
+        </div>
+        <p class="adm-card-meta">
+          <code>/{{ w.slug }}</code> · {{ pageCount(w) }} page{{ pageCount(w) === 1 ? '' : 's' }} · Updated {{ w.updatedAt | date: 'MMM d, h:mm a' }}
+        </p>
+        @if (pageCount(w) > 1) {
+          <div class="tpl-pages">
+            @for (t of pageTitles(w); track $index) {
+              <span>{{ t }}</span>
+            }
+          </div>
+        }
+        <div class="adm-card-actions">
+          <button type="button" class="btn btn-sm btn-primary" (click)="edit(w)"><app-icon name="edit" [size]="15" /> Edit</button>
+          <a class="btn btn-sm btn-secondary" [routerLink]="['/', w.slug]" [queryParams]="w.status === 'draft' ? { preview: 1 } : {}" target="_blank">
+            <app-icon name="external" [size]="15" /> View
+          </a>
+          <button type="button" class="btn btn-sm btn-secondary" (click)="togglePublish(w)">
+            <app-icon [name]="w.status === 'published' ? 'eye-off' : 'globe'" [size]="15" />
+            {{ w.status === 'published' ? 'Unpublish' : 'Publish' }}
+          </button>
+          <span class="spacer"></span>
+          <button type="button" class="btn-icon" title="Open files in VS Code" (click)="openInVsCode(w)"><app-icon name="code" [size]="16" /></button>
+          <button type="button" class="btn-icon danger" title="Delete website" (click)="remove(w)"><app-icon name="trash" [size]="16" /></button>
+        </div>
+      </div>
+    </article>
+  } @empty {
+    <div class="adm-empty">
+      @if (websites.websites().length) {
+        <p>No websites match your search.</p>
+      } @else {
+        <h2>No websites yet</h2>
+        <p>Start from a single-page or multi-page template, or a blank canvas.</p>
+        <a class="btn btn-primary" routerLink="/admin/new"><app-icon name="plus" /> Create new website</a>
+      }
+    </div>
+  }
+</div>

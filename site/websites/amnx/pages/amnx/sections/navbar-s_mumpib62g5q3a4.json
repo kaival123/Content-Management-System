@@ -1,0 +1,32 @@
+{
+  "id": "s_mumpib62g5q3a4",
+  "type": "navbar",
+  "visible": true,
+  "data": {
+    "brand": "DevSummit 2026",
+    "logo": "",
+    "links": [
+      {
+        "label": "Speakers",
+        "href": "#features"
+      },
+      {
+        "label": "Tickets",
+        "href": "#pricing"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      }
+    ],
+    "ctaLabel": "Register",
+    "ctaHref": "#cta",
+    "sticky": true
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 16,
+    "align": "center"
+  }
+}

@@ -1,0 +1,27 @@
+{{#if heading}}
+<header class="lp-head">
+  <h2 class="lp-h2" data-el="heading" data-edit="heading">{{heading}}</h2>
+  {{#if subheading}}
+  <p class="lp-lead lp-pre" data-el="subheading" data-edit="subheading">{{subheading}}</p>
+  {{/if}}
+</header>
+{{/if}}
+<div class="lp-grid lp-blocks" data-grid>
+  {{#each items}}
+  <article
+    class="lp-card lp-block{{#if image}} lp-block-img{{/if}}"
+    data-el="card"
+    style="--span: {{default colSpan 1}}; grid-row: span {{default rowSpan 1}}; background: {{color background}}; color: {{color textColor}}"
+  >
+    {{#if image}}<img class="lp-block-media" data-el="itemImage" src="{{image}}" alt="" />{{/if}}
+    <div class="lp-block-body">
+      {{#if icon}}<div class="lp-feature-icon" data-el="icon">{{icon}}</div>{{/if}}
+      {{#if heading}}<h3 class="lp-h3" data-el="itemHeading" data-edit="heading">{{heading}}</h3>{{/if}}
+      {{#if text}}<p class="lp-pre" data-el="itemText" data-edit="text">{{text}}</p>{{/if}}
+      {{#if buttonLabel}}
+      <a class="lp-btn lp-btn-primary lp-btn-sm" data-el="itemButton" data-edit="buttonLabel" href="{{buttonHref}}">{{buttonLabel}}</a>
+      {{/if}}
+    </div>
+  </article>
+  {{/each}}
+</div>

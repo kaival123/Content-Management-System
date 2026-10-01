@@ -1,0 +1,42 @@
+{
+  "name": "Testimonials on surface background",
+  "description": "Centered customer quotes on a soft surface background.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Loved by 4,000+ teams",
+      "items": [
+        {
+          "quote": "Our conversion rate went from 2.1% to 5.4% in the first month after relaunch.",
+          "name": "Sofia Martins",
+          "role": "Marketing Lead, Lumen",
+          "avatar": ""
+        },
+        {
+          "quote": "Finally, a tool our designers and developers both enjoy using.",
+          "name": "James Okafor",
+          "role": "VP Product, Brightline",
+          "avatar": ""
+        },
+        {
+          "quote": "We launch a new campaign page every week now, without filing a single ticket.",
+          "name": "Hannah Weber",
+          "role": "Growth Manager, Parcel",
+          "avatar": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "flat",
+      "textAlign": "center"
+    }
+  }
+}

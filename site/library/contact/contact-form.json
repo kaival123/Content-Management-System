@@ -1,0 +1,16 @@
+{
+  "name": "Contact form with details",
+  "description": "Contact form alongside email, phone and office address.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Let's talk",
+      "text": "Tell us a little about your project and we will reply within one business day.",
+      "email": "hello@northstar.studio",
+      "phone": "+1 (415) 555-0142",
+      "address": "548 Market Street, Suite 300\nSan Francisco, CA 94104",
+      "buttonLabel": "Send message",
+      "successMessage": "Thanks for reaching out! We will be in touch within one business day."
+    }
+  }
+}

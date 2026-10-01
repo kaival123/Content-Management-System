@@ -1,0 +1,39 @@
+/* Testimonials section */
+
+.lp-quote {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lp-quote blockquote {
+  margin: 0;
+  font-size: 1.05rem;
+  flex: 1;
+}
+
+.lp-quote figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lp-quote figcaption small {
+  display: block;
+  opacity: 0.65;
+}
+
+.lp-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--lp-primary), var(--lp-accent));
+  flex-shrink: 0;
+}

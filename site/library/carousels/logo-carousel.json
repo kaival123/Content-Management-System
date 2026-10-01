@@ -1,0 +1,133 @@
+{
+  "name": "Logo carousel",
+  "description": "Continuously scrolling row of partner names.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "Trusted by fast-growing teams",
+      "subheading": "",
+      "variant": "logo",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Acme",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Globex",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Initech",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Umbrella",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Northwind",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Hooli",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Stark",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Wayne & Co",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "align": "center",
+      "paddingY": 48
+    },
+    "carousel": {
+      "perViewDesktop": 6,
+      "perViewTablet": 4,
+      "perViewMobile": 2,
+      "gap": 16,
+      "autoplay": true,
+      "autoplaySpeed": 2500,
+      "speed": 500,
+      "loop": true,
+      "arrows": false,
+      "dots": false,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

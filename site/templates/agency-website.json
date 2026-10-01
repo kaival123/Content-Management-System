@@ -1,0 +1,1182 @@
+{
+  "id": "agency-website",
+  "kind": "multi",
+  "category": "Agency",
+  "name": "Agency Website",
+  "description": "A dark, modern website for a digital agency with service pages, portfolio, team, blog and contact.",
+  "preview": [
+    "#0c0a09",
+    "#ea580c",
+    "#facc15"
+  ],
+  "theme": {
+    "primaryColor": "#ea580c",
+    "accentColor": "#facc15",
+    "backgroundColor": "#0c0a09",
+    "surfaceColor": "#1c1917",
+    "textColor": "#f5f5f4",
+    "fontFamily": "Inter",
+    "headingFont": "Space Grotesk",
+    "radius": 4,
+    "maxWidth": 1240
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Kinetic",
+            "useSiteMenu": true,
+            "ctaLabel": "Start a project",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Digital agency · Amsterdam",
+            "heading": "We design and build digital products that move people",
+            "subheading": "Kinetic partners with brands and startups to craft websites, apps and identities that perform as good as they look.",
+            "primaryLabel": "See our work",
+            "primaryHref": "page:portfolio",
+            "secondaryLabel": "Our services",
+            "secondaryHref": "page:services",
+            "image": "",
+            "layout": "center"
+          },
+          "style": {
+            "backgroundType": "image",
+            "backgroundImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&q=80",
+            "overlayColor": "#0c0a09",
+            "overlayOpacity": 75,
+            "minHeight": 85,
+            "paddingY": 140
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Selected clients",
+            "logos": [
+              {
+                "name": "Adyen",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Mollie",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Bunq",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Picnic",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Framer",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Miro",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "What we do",
+            "subheading": "Three disciplines, one integrated team.",
+            "items": [
+              {
+                "icon": "🎨",
+                "title": "Web Design",
+                "text": "Research-led UX and bold visual design."
+              },
+              {
+                "icon": "💻",
+                "title": "Development",
+                "text": "Fast, accessible sites and apps built to scale."
+              },
+              {
+                "icon": "✨",
+                "title": "Branding",
+                "text": "Identities with a clear point of view."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "Recent projects",
+            "subheading": "",
+            "variant": "portfolio",
+            "slides": [
+              {
+                "heading": "Fintech rebrand",
+                "eyebrow": "Branding",
+                "buttonHref": "page:portfolio",
+                "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80"
+              },
+              {
+                "heading": "Banking app",
+                "eyebrow": "Product",
+                "buttonHref": "page:portfolio",
+                "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80"
+              },
+              {
+                "heading": "Retail platform",
+                "eyebrow": "Development",
+                "buttonHref": "page:portfolio",
+                "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80"
+              },
+              {
+                "heading": "Data dashboard",
+                "eyebrow": "Web Design",
+                "buttonHref": "page:portfolio",
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 3,
+            "gap": 16
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "150+",
+                "label": "Projects shipped"
+              },
+              {
+                "value": "12",
+                "label": "Awwwards"
+              },
+              {
+                "value": "8",
+                "label": "Years"
+              },
+              {
+                "value": "24",
+                "label": "People"
+              }
+            ]
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Clients say",
+            "items": [
+              {
+                "quote": "Kinetic rebuilt our platform in 12 weeks. Conversions are up 45%.",
+                "name": "Sanne de Vries",
+                "role": "Head of Digital, Picnic",
+                "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+              },
+              {
+                "quote": "The most talented team we have worked with, full stop.",
+                "name": "Luca Bianchi",
+                "role": "CMO, Mollie",
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              },
+              {
+                "quote": "They brought ideas we never would have thought of.",
+                "name": "Amara Okafor",
+                "role": "Founder, Lumo",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Have a project in mind?",
+            "text": "Let's build something great together.",
+            "buttonLabel": "Start a project",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Kinetic",
+            "tagline": "Design and technology studio.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Kinetic. All rights reserved."
+          },
+          "style": {
+            "background": "#0a0a0a",
+            "textColor": "#a8a29e"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Kinetic",
+            "useSiteMenu": true,
+            "ctaLabel": "Start a project",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / About",
+            "heading": "About Kinetic",
+            "text": "An independent studio of designers, developers and strategists."
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Small team, big ambition",
+            "text": "Kinetic was founded in 2018 by a designer and an engineer who were tired of hand-offs. Today we are 24 people working in small, cross-functional squads — so ideas go from sketch to shipped without getting lost.",
+            "bullets": [
+              "Senior-only team",
+              "Design and code under one roof",
+              "Carbon-neutral studio"
+            ],
+            "buttonLabel": "Meet the team",
+            "buttonHref": "page:team",
+            "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "How we work",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🔬",
+                "title": "Research first",
+                "text": "We start with your users and your data."
+              },
+              {
+                "icon": "⚡",
+                "title": "Ship early",
+                "text": "Working prototypes in weeks, not months."
+              },
+              {
+                "icon": "🔁",
+                "title": "Iterate together",
+                "text": "Weekly demos and a shared roadmap."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "flat"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "24",
+                "label": "Specialists"
+              },
+              {
+                "value": "18",
+                "label": "Countries served"
+              },
+              {
+                "value": "92%",
+                "label": "Repeat clients"
+              },
+              {
+                "value": "2018",
+                "label": "Founded"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Want to join us or work with us?",
+            "text": "",
+            "buttonLabel": "Say hello",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Kinetic",
+            "tagline": "Design and technology studio.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Kinetic. All rights reserved."
+          },
+          "style": {
+            "background": "#0a0a0a",
+            "textColor": "#a8a29e"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Kinetic",
+            "useSiteMenu": true,
+            "ctaLabel": "Start a project",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Services",
+            "heading": "Services",
+            "text": "End-to-end digital services, from first idea to launch and beyond."
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Our disciplines",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Web Design",
+                "text": "UX research, interface design and design systems.",
+                "icon": "🎨",
+                "image": "",
+                "buttonLabel": "Web Design",
+                "buttonHref": "page:web-design",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Development",
+                "text": "Websites, web apps and headless commerce.",
+                "icon": "💻",
+                "image": "",
+                "buttonLabel": "Development",
+                "buttonHref": "page:development",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Branding",
+                "text": "Strategy, naming and visual identity.",
+                "icon": "✨",
+                "image": "",
+                "buttonLabel": "Branding",
+                "buttonHref": "page:branding",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 3,
+            "tablet": 1,
+            "gap": 20
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Every project includes",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🧑‍💼",
+                "title": "A dedicated lead",
+                "text": "One point of contact from kickoff to launch."
+              },
+              {
+                "icon": "📅",
+                "title": "Clear timelines",
+                "text": "Fixed milestones and weekly updates."
+              },
+              {
+                "icon": "🛟",
+                "title": "Launch support",
+                "text": "30 days of care after go-live."
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Let's scope your project",
+            "text": "",
+            "buttonLabel": "Get a proposal",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Kinetic",
+            "tagline": "Design and technology studio.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Kinetic. All rights reserved."
+          },
+          "style": {
+            "background": "#0a0a0a",
+            "textColor": "#a8a29e"
+          }
+        }
+      ],
+      "children": [
+        {
+          "slug": "web-design",
+          "title": "Web Design",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Kinetic",
+                "useSiteMenu": true,
+                "ctaLabel": "Start a project",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Web Design",
+                "heading": "Web Design",
+                "text": "Interfaces that are clear, beautiful and built around real users."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "Design that earns attention",
+                "text": "We combine user research, content strategy and bold visual design to create sites and products people enjoy using.",
+                "bullets": [
+                  "User research & testing",
+                  "Wireframes and prototypes",
+                  "Design systems in Figma"
+                ],
+                "buttonLabel": "View design work",
+                "buttonHref": "page:portfolio",
+                "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1200&q=80"
+              }
+            },
+            {
+              "type": "features",
+              "data": {
+                "heading": "Deliverables",
+                "subheading": "",
+                "items": [
+                  {
+                    "icon": "🧪",
+                    "title": "Research report",
+                    "text": "Insights from interviews and analytics."
+                  },
+                  {
+                    "icon": "🗂️",
+                    "title": "Prototype",
+                    "text": "Clickable flows tested with users."
+                  },
+                  {
+                    "icon": "🎛️",
+                    "title": "Design system",
+                    "text": "Components your team can reuse."
+                  }
+                ]
+              },
+              "style": {
+                "background": "__surface__"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Need a better website?",
+                "text": "",
+                "buttonLabel": "Start a design project",
+                "buttonHref": "page:contact"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Kinetic",
+                "tagline": "Design and technology studio.",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Kinetic. All rights reserved."
+              },
+              "style": {
+                "background": "#0a0a0a",
+                "textColor": "#a8a29e"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "development",
+          "title": "Development",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Kinetic",
+                "useSiteMenu": true,
+                "ctaLabel": "Start a project",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Development",
+                "heading": "Development",
+                "text": "Fast, accessible and maintainable code, from marketing sites to complex web apps."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "Engineering you can rely on",
+                "text": "Our engineers build with modern frameworks, automated testing and performance budgets — then hand over clean, documented code.",
+                "bullets": [
+                  "Angular, React, Next.js & Astro",
+                  "Headless CMS and commerce",
+                  "Core Web Vitals in the green"
+                ],
+                "buttonLabel": "Talk to an engineer",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+                "imageSide": "right"
+              }
+            },
+            {
+              "type": "stats",
+              "data": {
+                "items": [
+                  {
+                    "value": "99",
+                    "label": "Avg. Lighthouse score"
+                  },
+                  {
+                    "value": "< 1s",
+                    "label": "Median load time"
+                  },
+                  {
+                    "value": "AA",
+                    "label": "WCAG compliance"
+                  },
+                  {
+                    "value": "100%",
+                    "label": "Code handover"
+                  }
+                ]
+              },
+              "style": {
+                "background": "__surface__"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Ready to build?",
+                "text": "",
+                "buttonLabel": "Start a development project",
+                "buttonHref": "page:contact"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Kinetic",
+                "tagline": "Design and technology studio.",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Kinetic. All rights reserved."
+              },
+              "style": {
+                "background": "#0a0a0a",
+                "textColor": "#a8a29e"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "branding",
+          "title": "Branding",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Kinetic",
+                "useSiteMenu": true,
+                "ctaLabel": "Start a project",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Branding",
+                "heading": "Branding",
+                "text": "Identities with a clear story and a distinct look."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "Brands with a point of view",
+                "text": "From positioning workshops to logo, typography and motion, we build identity systems that work everywhere your brand shows up.",
+                "bullets": [
+                  "Brand strategy and naming",
+                  "Logo and visual identity",
+                  "Guidelines and brand toolkit"
+                ],
+                "buttonLabel": "See branding work",
+                "buttonHref": "page:portfolio",
+                "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80"
+              }
+            },
+            {
+              "type": "gallery",
+              "data": {
+                "heading": "Identity work",
+                "subheading": "",
+                "images": [
+                  {
+                    "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+                    "title": "Studio identity",
+                    "caption": "Branding",
+                    "link": ""
+                  },
+                  {
+                    "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+                    "title": "Coffee packaging",
+                    "caption": "Packaging",
+                    "link": ""
+                  },
+                  {
+                    "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+                    "title": "Launch campaign",
+                    "caption": "Campaign",
+                    "link": ""
+                  }
+                ]
+              },
+              "style": {
+                "background": "__surface__"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Let's shape your brand",
+                "text": "",
+                "buttonLabel": "Start a branding project",
+                "buttonHref": "page:contact"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Kinetic",
+                "tagline": "Design and technology studio.",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Kinetic. All rights reserved."
+              },
+              "style": {
+                "background": "#0a0a0a",
+                "textColor": "#a8a29e"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "portfolio",
+      "title": "Portfolio",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Kinetic",
+            "useSiteMenu": true,
+            "ctaLabel": "Start a project",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Portfolio",
+            "heading": "Our work",
+            "text": "A selection of projects across web, product and brand."
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+                "title": "Studio identity",
+                "caption": "Branding",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+                "title": "Coffee packaging",
+                "caption": "Packaging",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+                "title": "Portfolio site",
+                "caption": "Web Design",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&q=80",
+                "title": "App redesign",
+                "caption": "Product",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+                "title": "Campaign",
+                "caption": "Marketing",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+                "title": "Poster series",
+                "caption": "Print",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+                "title": "Analytics dashboard",
+                "caption": "Development",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+                "title": "Storefront",
+                "caption": "E-commerce",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80",
+                "title": "Banking app",
+                "caption": "Product",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Results that speak",
+            "items": [
+              {
+                "quote": "Our new site paid for itself in the first month.",
+                "name": "Jasper Visser",
+                "role": "CEO, Bunq Travel",
+                "avatar": ""
+              },
+              {
+                "quote": "A brand we are proud to show investors and customers.",
+                "name": "Elif Yilmaz",
+                "role": "Founder, Nomad",
+                "avatar": ""
+              },
+              {
+                "quote": "The app redesign cut support tickets in half.",
+                "name": "Tom Hendriks",
+                "role": "Product Lead, Framer",
+                "avatar": ""
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Want results like these?",
+            "text": "",
+            "buttonLabel": "Start a project",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Kinetic",
+            "tagline": "Design and technology studio.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Kinetic. All rights reserved."
+          },
+          "style": {
+            "background": "#0a0a0a",
+            "textColor": "#a8a29e"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "team",
+      "title": "Team",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Kinetic",
+            "useSiteMenu": true,
+            "ctaLabel": "Start a project",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Team",
+            "heading": "Meet the team",
+            "text": "Designers, developers and strategists who love what they do."
+          }
+        },
+        {
+          "type": "team",
+          "data": {
+            "heading": "Leadership",
+            "subheading": "",
+            "members": [
+              {
+                "name": "Sophie Janssen",
+                "role": "Co-founder & Design Director",
+                "bio": "Ex-IDEO, 15 years in product design.",
+                "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Ravi Kapoor",
+                "role": "Co-founder & CTO",
+                "bio": "Built platforms for Booking.com and Adyen.",
+                "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Emma Clarke",
+                "role": "Head of Brand",
+                "bio": "Leads identity and campaign work.",
+                "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Noah Williams",
+                "role": "Engineering Lead",
+                "bio": "Obsessed with performance and accessibility.",
+                "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "The studio",
+            "subheading": "",
+            "variant": "team",
+            "slides": [
+              {
+                "heading": "Aisha Khan",
+                "eyebrow": "Senior Designer",
+                "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              },
+              {
+                "heading": "Marco Rossi",
+                "eyebrow": "Motion Designer",
+                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              },
+              {
+                "heading": "Lena Park",
+                "eyebrow": "Front-end Developer",
+                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              },
+              {
+                "heading": "David Osei",
+                "eyebrow": "Strategist",
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+              },
+              {
+                "heading": "Julia Novak",
+                "eyebrow": "Project Manager",
+                "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 4,
+            "perViewTablet": 2,
+            "perViewMobile": 1
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "We're hiring",
+            "text": "Designers and engineers who care about craft — we would love to hear from you.",
+            "buttonLabel": "Get in touch",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Kinetic",
+            "tagline": "Design and technology studio.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Kinetic. All rights reserved."
+          },
+          "style": {
+            "background": "#0a0a0a",
+            "textColor": "#a8a29e"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "blog",
+      "title": "Blog",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Kinetic",
+            "useSiteMenu": true,
+            "ctaLabel": "Start a project",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Blog",
+            "heading": "Journal",
+            "text": "Notes on design, engineering and building great digital products."
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "Latest articles",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "Designing for speed: our performance playbook",
+                "excerpt": "How we keep every site under one second.",
+                "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+                "category": "Development",
+                "date": "Sep 18, 2026",
+                "author": "Noah Williams",
+                "link": "#"
+              },
+              {
+                "title": "What makes a brand system flexible",
+                "excerpt": "Lessons from ten identity projects.",
+                "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+                "category": "Branding",
+                "date": "Sep 2, 2026",
+                "author": "Emma Clarke",
+                "link": "#"
+              },
+              {
+                "title": "Running user research on a startup budget",
+                "excerpt": "Five methods that fit any timeline.",
+                "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+                "category": "Web Design",
+                "date": "Aug 20, 2026",
+                "author": "Sophie Janssen",
+                "link": "#"
+              },
+              {
+                "title": "Headless commerce, explained",
+                "excerpt": "When it makes sense — and when it doesn't.",
+                "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+                "category": "Development",
+                "date": "Aug 5, 2026",
+                "author": "Ravi Kapoor",
+                "link": "#"
+              },
+              {
+                "title": "Writing briefs that get great work",
+                "excerpt": "A template we give every client.",
+                "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+                "category": "Process",
+                "date": "Jul 22, 2026",
+                "author": "Julia Novak",
+                "link": "#"
+              },
+              {
+                "title": "Motion that serves the story",
+                "excerpt": "Principles for purposeful animation.",
+                "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&q=80",
+                "category": "Design",
+                "date": "Jul 8, 2026",
+                "author": "Marco Rossi",
+                "link": "#"
+              }
+            ]
+          }
+        },
+        {
+          "type": "newsletter",
+          "data": {
+            "heading": "Get the Kinetic journal",
+            "text": "One thoughtful email a month. No fluff."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Kinetic",
+            "tagline": "Design and technology studio.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Kinetic. All rights reserved."
+          },
+          "style": {
+            "background": "#0a0a0a",
+            "textColor": "#a8a29e"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Kinetic",
+            "useSiteMenu": true,
+            "ctaLabel": "Start a project",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Let's talk",
+            "text": "Tell us about your project and we will reply within two business days."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Start a project",
+            "text": "Share a few details about your goals, timeline and budget.",
+            "email": "hello@kinetic.studio",
+            "phone": "+31 20 555 0147",
+            "address": "Keizersgracht 241\n1016 EA Amsterdam",
+            "buttonLabel": "Send enquiry",
+            "successMessage": "Thanks! We will be in touch within two business days."
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Before you get in touch",
+            "items": [
+              {
+                "question": "What is your typical budget range?",
+                "answer": "Most projects range from €25k to €250k depending on scope."
+              },
+              {
+                "question": "How soon can you start?",
+                "answer": "We usually book projects three to six weeks in advance."
+              },
+              {
+                "question": "Do you work with international clients?",
+                "answer": "Yes — about half of our clients are outside the Netherlands."
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Kinetic",
+            "tagline": "Design and technology studio.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Kinetic. All rights reserved."
+          },
+          "style": {
+            "background": "#0a0a0a",
+            "textColor": "#a8a29e"
+          }
+        }
+      ]
+    }
+  ]
+}

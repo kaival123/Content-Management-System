@@ -1,0 +1,44 @@
+{
+  "name": "Two-column shadow cards",
+  "description": "Four larger features in soft shadow cards, two per row.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Made for how modern teams work",
+      "subheading": "Powerful where it matters, simple everywhere else.",
+      "items": [
+        {
+          "icon": "🧭",
+          "title": "Roadmaps that stay current",
+          "text": "Link goals to tasks so everyone can see progress without chasing status updates."
+        },
+        {
+          "icon": "🗂️",
+          "title": "Docs next to the work",
+          "text": "Specs, notes and decisions live beside the projects they belong to."
+        },
+        {
+          "icon": "🔔",
+          "title": "Smart notifications",
+          "text": "Only hear about what needs you, with quiet hours and daily digests."
+        },
+        {
+          "icon": "📊",
+          "title": "Reports in one click",
+          "text": "Share clean, always up-to-date reports with clients and leadership."
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    }
+  }
+}

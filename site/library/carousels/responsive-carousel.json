@@ -1,0 +1,105 @@
+{
+  "name": "Responsive carousel",
+  "description": "Shows 4 cards on desktop, 2 on tablet and 1 on mobile, with manual navigation and no looping or autoplay.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "Popular articles",
+      "subheading": "Browse at your own pace.",
+      "variant": "card",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Getting started guide",
+          "eyebrow": "Guide",
+          "text": "Everything you need to launch your first page today.",
+          "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Read guide",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Design system basics",
+          "eyebrow": "Design",
+          "text": "Set colours and fonts once, use them everywhere.",
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Conversion playbook",
+          "eyebrow": "Marketing",
+          "text": "Proven patterns for pages that turn visitors into customers.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Get the playbook",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Team workflows",
+          "eyebrow": "Collaboration",
+          "text": "Review, approve and publish together without the chaos.",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "price": "",
+          "buttonLabel": "See workflows",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Integrations directory",
+          "eyebrow": "Tools",
+          "text": "Connect your CRM, email and analytics in a click.",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Browse",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Customer stories",
+          "eyebrow": "Case studies",
+          "text": "How teams like yours grew with better pages.",
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Read stories",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 4,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 20,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 500,
+      "loop": false,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

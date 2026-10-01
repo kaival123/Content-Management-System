@@ -1,0 +1,11 @@
+/* CallToAction section */
+
+.lp-cta-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.lp-cta-inner .lp-lead {
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}

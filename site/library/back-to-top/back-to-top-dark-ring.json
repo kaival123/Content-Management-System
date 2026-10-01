@@ -1,0 +1,17 @@
+{
+  "name": "Back to top · dark with accent ring",
+  "description": "Dark circle with an arrow and a thin ring in the accent colour.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "circle",
+      "icon": "arrow",
+      "background": "__text__",
+      "iconColor": "__bg__",
+      "progress": true,
+      "ringColor": "__accent__",
+      "ringWidth": 2,
+      "size": 50
+    }
+  }
+}

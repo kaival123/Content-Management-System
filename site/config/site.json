@@ -1,0 +1,144 @@
+{
+  "name": "My landing pages",
+  "componentOrder": [
+    "navbar",
+    "page-header",
+    "hero",
+    "carousel",
+    "features",
+    "about",
+    "stats",
+    "logos",
+    "grid",
+    "custom",
+    "gallery",
+    "team",
+    "products",
+    "testimonials",
+    "pricing",
+    "blog",
+    "faq",
+    "newsletter",
+    "auth",
+    "cta",
+    "contact",
+    "footer",
+    "back-to-top"
+  ],
+  "defaultTheme": {
+    "primaryColor": "#4f46e5",
+    "accentColor": "#06b6d4",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f8fafc",
+    "textColor": "#0f172a",
+    "fontFamily": "Inter",
+    "headingFont": "Inter",
+    "radius": 12,
+    "maxWidth": 1140
+  },
+  "libraryCategories": [
+    {
+      "id": "hero",
+      "label": "Hero"
+    },
+    {
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "id": "navigation",
+      "label": "Navigation"
+    },
+    {
+      "id": "back-to-top",
+      "label": "Back to top"
+    },
+    {
+      "id": "about",
+      "label": "About"
+    },
+    {
+      "id": "features",
+      "label": "Features"
+    },
+    {
+      "id": "services",
+      "label": "Services"
+    },
+    {
+      "id": "testimonials",
+      "label": "Testimonials"
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio"
+    },
+    {
+      "id": "team",
+      "label": "Team"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ"
+    },
+    {
+      "id": "accordions",
+      "label": "Accordions"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    },
+    {
+      "id": "cta",
+      "label": "Call to action"
+    },
+    {
+      "id": "footer",
+      "label": "Footer"
+    },
+    {
+      "id": "gallery",
+      "label": "Gallery"
+    },
+    {
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "id": "logos",
+      "label": "Logos"
+    },
+    {
+      "id": "statistics",
+      "label": "Statistics"
+    },
+    {
+      "id": "forms",
+      "label": "Forms"
+    },
+    {
+      "id": "sliders",
+      "label": "Sliders"
+    },
+    {
+      "id": "carousels",
+      "label": "Carousels"
+    },
+    {
+      "id": "custom",
+      "label": "Custom sections"
+    },
+    {
+      "id": "saved",
+      "label": "Saved sections"
+    }
+  ],
+  "export": {
+    "formEndpoint": ""
+  }
+}

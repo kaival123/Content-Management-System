@@ -1,0 +1,20 @@
+{
+  "id": "blank",
+  "kind": "single",
+  "category": "Blank",
+  "name": "Blank Single Page",
+  "description": "A completely empty page — start from scratch.",
+  "preview": [
+    "#ffffff",
+    "#e2e8f0",
+    "#94a3b8"
+  ],
+  "theme": {},
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": []
+    }
+  ]
+}

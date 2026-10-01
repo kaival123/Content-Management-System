@@ -1,0 +1,269 @@
+{
+  "id": "ecommerce",
+  "kind": "single",
+  "category": "E-commerce",
+  "name": "Product Launch Store",
+  "description": "Launch a product line with a hero, best sellers, a product slider, reviews and a newsletter signup.",
+  "preview": [
+    "#fffdf8",
+    "#0f766e",
+    "#f59e0b"
+  ],
+  "theme": {
+    "primaryColor": "#0f766e",
+    "accentColor": "#f59e0b",
+    "backgroundColor": "#fffdf8",
+    "surfaceColor": "#f5f1ea",
+    "textColor": "#1c1917",
+    "fontFamily": "Manrope",
+    "headingFont": "Playfair Display",
+    "radius": 14,
+    "maxWidth": 1200
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Wander Goods",
+            "links": [
+              {
+                "label": "Shop",
+                "href": "#shop"
+              },
+              {
+                "label": "New in",
+                "href": "#new"
+              },
+              {
+                "label": "Why us",
+                "href": "#why"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Shop now",
+            "ctaHref": "#shop"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "New collection · Autumn 2026",
+            "heading": "Everyday gear, made to last",
+            "subheading": "Thoughtfully designed essentials for work, travel and weekends. Free shipping and 60-day returns.",
+            "primaryLabel": "Shop the collection",
+            "primaryHref": "#shop",
+            "secondaryLabel": "What's new",
+            "secondaryHref": "#new",
+            "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1200&q=80"
+          },
+          "style": {
+            "background": "__surface__",
+            "paddingY": 100
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "anchor": "shop",
+            "heading": "Best sellers",
+            "subheading": "Our most-loved pieces, shipped free."
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "anchor": "new",
+            "heading": "Just landed",
+            "subheading": "Fresh arrivals for the new season.",
+            "variant": "product",
+            "slides": [
+              {
+                "heading": "Trail Sneaker",
+                "eyebrow": "Footwear",
+                "price": "$120",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#shop",
+                "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=900&q=80"
+              },
+              {
+                "heading": "Studio Headphones",
+                "eyebrow": "Audio",
+                "price": "$149",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#shop",
+                "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=80"
+              },
+              {
+                "heading": "Field Watch",
+                "eyebrow": "Accessories",
+                "price": "$199",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#shop",
+                "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80"
+              },
+              {
+                "heading": "Runner Classic",
+                "eyebrow": "Footwear",
+                "price": "$110",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#shop",
+                "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=80"
+              },
+              {
+                "heading": "Stoneware Mugs",
+                "eyebrow": "Home",
+                "price": "$34",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#shop",
+                "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=900&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 4,
+            "perViewTablet": 2,
+            "perViewMobile": 1,
+            "gap": 20
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "anchor": "why",
+            "heading": "Why Wander Goods",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🚚",
+                "title": "Free shipping",
+                "text": "On every order over $50, delivered in 2–4 days."
+              },
+              {
+                "icon": "↩️",
+                "title": "60-day returns",
+                "text": "Not right? Send it back, no questions asked."
+              },
+              {
+                "icon": "🌱",
+                "title": "Responsibly made",
+                "text": "Recycled materials and certified factories."
+              },
+              {
+                "icon": "🛡️",
+                "title": "Lifetime warranty",
+                "text": "We repair or replace anything that fails."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "none",
+            "textAlign": "center"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "4.8 stars from 12,000+ reviews",
+            "items": [
+              {
+                "quote": "The backpack has been around the world with me twice and still looks new.",
+                "name": "Chloe Martin",
+                "role": "Verified buyer",
+                "avatar": ""
+              },
+              {
+                "quote": "Beautiful quality and shipping was faster than promised.",
+                "name": "Ethan Brooks",
+                "role": "Verified buyer",
+                "avatar": ""
+              },
+              {
+                "quote": "Returned a size with zero hassle. Customer for life.",
+                "name": "Mei Tanaka",
+                "role": "Verified buyer",
+                "avatar": ""
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Questions, answered",
+            "items": [
+              {
+                "question": "How long does shipping take?",
+                "answer": "Orders ship within 24 hours and arrive in 2–4 business days in the US. International delivery takes 5–10 days."
+              },
+              {
+                "question": "What is your return policy?",
+                "answer": "You have 60 days to return unused items for a full refund. Return shipping is free."
+              },
+              {
+                "question": "Do you ship internationally?",
+                "answer": "Yes, we ship to more than 40 countries. Duties are calculated at checkout."
+              }
+            ]
+          }
+        },
+        {
+          "type": "newsletter",
+          "data": {
+            "heading": "Get 10% off your first order",
+            "text": "Join the list for new drops, restocks and members-only offers.",
+            "buttonLabel": "Get my code",
+            "successMessage": "Welcome! Check your inbox for your code."
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Wander Goods",
+            "tagline": "Everyday gear, made to last.",
+            "links": [
+              {
+                "label": "Shop",
+                "href": "#shop"
+              },
+              {
+                "label": "Shipping",
+                "href": "#faq"
+              },
+              {
+                "label": "Returns",
+                "href": "#faq"
+              },
+              {
+                "label": "Privacy",
+                "href": "#"
+              }
+            ],
+            "copyright": "© 2026 Wander Goods. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Keep line endings identical across platforms so file hashes and diffs match.
+site/** text=auto eol=lf

@@ -1,0 +1,18 @@
+{
+  "name": "Login form",
+  "description": "Sign-in form with a side image and link to register.",
+  "section": {
+    "type": "auth",
+    "data": {
+      "mode": "login",
+      "heading": "Welcome back",
+      "text": "Log in to pick up right where you left off.",
+      "buttonLabel": "Log in",
+      "switchText": "New here?",
+      "switchLabel": "Create an account",
+      "switchHref": "#register",
+      "action": "",
+      "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80"
+    }
+  }
+}

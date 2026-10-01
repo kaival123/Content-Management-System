@@ -1,0 +1,15 @@
+{
+  "name": "Back to top · minimal square",
+  "description": "Small flat square with a chevron, no shadow.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "square",
+      "icon": "chevron",
+      "size": 40,
+      "shadow": false,
+      "offsetX": 20,
+      "offsetY": 20
+    }
+  }
+}

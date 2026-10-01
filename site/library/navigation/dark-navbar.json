@@ -1,0 +1,44 @@
+{
+  "name": "Dark navbar",
+  "description": "Dark background navigation bar with white text and a button.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Nightfall",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Product",
+          "href": "#features"
+        },
+        {
+          "label": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "label": "Customers",
+          "href": "#testimonials"
+        },
+        {
+          "label": "Docs",
+          "href": "#docs"
+        }
+      ],
+      "ctaLabel": "Sign up",
+      "ctaHref": "#signup",
+      "sticky": true
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#ffffff"
+    },
+    "elements": {
+      "brand": {
+        "color": "#ffffff"
+      },
+      "link": {
+        "color": "#e2e8f0"
+      }
+    }
+  }
+}

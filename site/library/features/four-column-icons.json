@@ -1,0 +1,44 @@
+{
+  "name": "Four-column centered icons",
+  "description": "Four compact features with centered icons and no card borders.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Why teams switch to us",
+      "subheading": "",
+      "items": [
+        {
+          "icon": "🚀",
+          "title": "Fast setup",
+          "text": "Go live in an afternoon."
+        },
+        {
+          "icon": "💬",
+          "title": "Human support",
+          "text": "Real people, 24/7."
+        },
+        {
+          "icon": "🌍",
+          "title": "Global CDN",
+          "text": "Speedy in 120+ countries."
+        },
+        {
+          "icon": "💳",
+          "title": "Fair pricing",
+          "text": "No hidden fees, ever."
+        }
+      ]
+    },
+    "style": {
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "none",
+      "textAlign": "center"
+    }
+  }
+}

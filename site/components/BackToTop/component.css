@@ -1,0 +1,151 @@
+/* Back to top button (see component.html). */
+
+/* On the site the section takes no space: only the floating button shows. */
+.lp-sec-back-to-top:has(.lp-btt[data-back-to-top]) {
+  padding: 0 !important;
+  min-height: 0;
+  height: 0;
+  background: none !important;
+}
+
+.lp-btt {
+  --btt-s: var(--btt-size, 48px);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: var(--btt-s);
+  height: var(--btt-s);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--btt-bg, var(--lp-primary));
+  color: var(--btt-fg, #fff);
+  font: 600 0.9rem/1 var(--lp-font);
+  cursor: pointer;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s, filter 0.15s ease;
+}
+
+.lp-btt:hover {
+  filter: brightness(1.08);
+}
+
+.lp-btt:focus-visible {
+  outline: 2px solid var(--btt-bg, var(--lp-primary));
+  outline-offset: 3px;
+}
+
+.lp-btt-icon {
+  width: calc(var(--btt-s) * 0.46);
+  height: calc(var(--btt-s) * 0.46);
+  flex-shrink: 0;
+}
+
+.lp-btt-rounded {
+  border-radius: calc(var(--btt-s) * 0.28);
+}
+
+.lp-btt-square {
+  border-radius: 4px;
+}
+
+.lp-btt-pill {
+  width: auto;
+  padding: 0 calc(var(--btt-s) * 0.42) 0 calc(var(--btt-s) * 0.32);
+  border-radius: 999px;
+}
+
+.lp-btt-shadow {
+  box-shadow: 0 10px 24px -8px rgb(0 0 0 / 0.4);
+}
+
+/* Scroll progress ring (--btt-p: 0 at the top, 1 at the bottom; set by the runtime). */
+.lp-btt-ring {
+  position: absolute;
+  inset: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.lp-btt-ring circle {
+  fill: none;
+  /* The ring colour falls back to the button colour; the track is a faint version of it. */
+  stroke: var(--btt-ring, var(--btt-bg, var(--lp-primary)));
+  stroke-width: calc(var(--btt-ring-w, 3) * 48 / (var(--btt-s-n, 48) + 10));
+}
+
+.lp-btt-ring .lp-btt-track {
+  opacity: 0.22;
+}
+
+.lp-btt-ring .lp-btt-fill {
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: calc(100 - var(--btt-p, 0) * 100);
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.lp-btt-pill .lp-btt-ring {
+  display: none;
+}
+
+/* Floating on the site; hidden until scrolled (the runtime adds .is-visible). */
+.lp-btt[data-back-to-top] {
+  position: fixed;
+  z-index: 60;
+  bottom: var(--btt-y, 24px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+}
+
+.lp-btt[data-back-to-top].is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.lp-btt-pos-right[data-back-to-top] {
+  right: var(--btt-x, 24px);
+}
+
+.lp-btt-pos-left[data-back-to-top] {
+  left: var(--btt-x, 24px);
+}
+
+.lp-btt-pos-center[data-back-to-top] {
+  left: 50%;
+  translate: -50% 0;
+}
+
+@container (max-width: 600px) {
+  .lp-btt-hide-m {
+    display: none !important;
+  }
+}
+
+/* Editor placeholder */
+.lp-btt-editor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  border: 1.5px dashed color-mix(in srgb, currentColor 25%, transparent);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.lp-btt-note {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.lp-btt-note strong {
+  display: block;
+  font-size: 0.95rem;
+  opacity: 1;
+}

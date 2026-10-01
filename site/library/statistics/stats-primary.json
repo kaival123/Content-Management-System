@@ -1,0 +1,49 @@
+{
+  "name": "Stats on primary colour",
+  "description": "Stats row on the primary colour with white text.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "",
+      "items": [
+        {
+          "value": "120+",
+          "label": "Countries served"
+        },
+        {
+          "value": "40%",
+          "label": "Faster time to launch"
+        },
+        {
+          "value": "24/7",
+          "label": "Human support"
+        },
+        {
+          "value": "$0",
+          "label": "Setup fees"
+        }
+      ]
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 64
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "value": {
+        "color": "#ffffff"
+      },
+      "label": {
+        "color": "#ffffff"
+      }
+    }
+  }
+}

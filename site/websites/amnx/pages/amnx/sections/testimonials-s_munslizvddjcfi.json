@@ -1,0 +1,44 @@
+{
+  "id": "s_munslizvddjcfi",
+  "type": "testimonials",
+  "visible": true,
+  "data": {
+    "heading": "What our customers say",
+    "items": [
+      {
+        "quote": "We replaced three tools with one and cut our weekly planning meeting in half.",
+        "name": "Priya Sharma",
+        "role": "CTO, Acme",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+      },
+      {
+        "quote": "Onboarding the whole company took one afternoon. Nobody needed training.",
+        "name": "Daniel Lee",
+        "role": "Founder, Northwind",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+      },
+      {
+        "quote": "The support team answers in minutes and actually fixes things. Rare these days.",
+        "name": "Maria Garcia",
+        "role": "Head of Ops, Globex",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+      }
+    ]
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 80,
+    "align": "center"
+  },
+  "grid": {
+    "desktop": 3,
+    "tablet": 2,
+    "mobile": 1,
+    "gap": 24,
+    "rowHeight": 200,
+    "cardStyle": "bordered",
+    "itemAlign": "stretch",
+    "textAlign": "left"
+  }
+}

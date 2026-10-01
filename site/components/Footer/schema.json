@@ -1,0 +1,116 @@
+{
+  "type": "footer",
+  "label": "Footer",
+  "description": "Brand, links and copyright",
+  "icon": "layout",
+  "fields": [
+    {
+      "key": "brand",
+      "label": "Brand name",
+      "type": "text"
+    },
+    {
+      "key": "tagline",
+      "label": "Tagline",
+      "type": "text"
+    },
+    {
+      "key": "useSiteMenu",
+      "label": "Use the website's page menu (links to every page; sub-pages become dropdowns)",
+      "type": "toggle"
+    },
+    {
+      "key": "links",
+      "label": "Custom links (used when the page menu is off)",
+      "type": "list",
+      "itemLabel": "Link",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Link",
+          "type": "url",
+          "placeholder": "#features"
+        }
+      ]
+    },
+    {
+      "key": "copyright",
+      "label": "Copyright text",
+      "type": "text"
+    }
+  ],
+  "elements": [
+    {
+      "key": "brand",
+      "label": "Brand name",
+      "kind": "text",
+      "fields": [
+        "brand"
+      ]
+    },
+    {
+      "key": "tagline",
+      "label": "Tagline",
+      "kind": "text",
+      "fields": [
+        "tagline"
+      ]
+    },
+    {
+      "key": "link",
+      "label": "Links",
+      "kind": "text",
+      "list": "links",
+      "fields": [
+        "label",
+        "href"
+      ]
+    },
+    {
+      "key": "menuLink",
+      "label": "Page menu links",
+      "kind": "text",
+      "fields": [
+        "useSiteMenu"
+      ]
+    },
+    {
+      "key": "copyright",
+      "label": "Copyright",
+      "kind": "text",
+      "fields": [
+        "copyright"
+      ]
+    }
+  ],
+  "defaults": {
+    "brand": "Brand",
+    "tagline": "Making work simpler.",
+    "links": [
+      {
+        "label": "Privacy",
+        "href": "#"
+      },
+      {
+        "label": "Terms",
+        "href": "#"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "copyright": "© 2026 Brand. All rights reserved.",
+    "useSiteMenu": false
+  },
+  "defaultStyle": {
+    "paddingY": 40,
+    "background": "#0f172a",
+    "textColor": "#cbd5e1"
+  }
+}

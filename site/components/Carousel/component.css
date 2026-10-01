@@ -1,0 +1,851 @@
+/* Carousel / slider section.
+ * Layout works without JavaScript: slides per view come from --per-d/t/m (set from the
+ * section's carousel settings) via container queries. The site runtime then adds
+ * sliding, arrows, dots, autoplay, drag and looping. */
+
+.lp-carousel {
+  --per: var(--per-d, 3);
+  --car-gap: var(--gap, 24px);
+  position: relative;
+  text-align: left;
+}
+
+.lp-car-viewport {
+  overflow: hidden;
+  border-radius: calc(var(--lp-radius) + 4px);
+}
+
+/* Edge to edge (Slider tab → Slider width → Full width): square outer corners, and the
+   heading keeps some space from the screen edge. */
+.lp-edge .lp-car-viewport,
+.lp-edge .lp-car-hero,
+.lp-edge .lp-car-portfolio,
+.lp-edge .lp-car-content {
+  border-radius: 0;
+}
+
+.lp-edge.lp-sec-carousel .lp-head {
+  padding-inline: 24px;
+}
+
+.lp-car-track {
+  display: flex;
+  gap: var(--car-gap);
+}
+
+.lp-car-slide {
+  position: relative;
+  flex: 0 0 calc((100% - var(--car-gap) * (var(--per) - 1)) / var(--per));
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.lp-car-slide > * {
+  flex: 1;
+}
+
+/* Fade transition: slides stacked on top of each other. */
+.lp-car-fade .lp-car-track {
+  display: grid;
+}
+
+.lp-car-fade .lp-car-slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity var(--car-speed, 500ms) ease;
+}
+
+.lp-car-fade .lp-car-slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Flip transition: slides turn around their vertical axis. */
+.lp-car-flipfx .lp-car-track {
+  perspective: 1600px;
+}
+
+.lp-car-flipfx .lp-car-slide {
+  transform: rotateY(-90deg);
+  transform-origin: center;
+  backface-visibility: hidden;
+  transition: transform var(--car-speed, 500ms) ease, opacity var(--car-speed, 500ms) ease;
+}
+
+.lp-car-flipfx .lp-car-slide.is-active {
+  transform: none;
+}
+
+/* Controls (added by the runtime) ------------------------------------------------------
+ * Classes on .lp-carousel pick the layout:
+ *   lp-car-arrows-<sides|outside|top-left|top-right|bottom-center|bottom-left|bottom-right>
+ *   lp-car-arrow-<circle|square|outline|solid|minimal>
+ *   lp-car-dots-<below|below-left|below-right|overlay>
+ *   lp-car-dotstyle-<pills|dots|lines|numbers|fraction|progress|thumbs>
+ * --car-arrow is the arrow size, --car-ctrl the accent colour of the controls. */
+.lp-carousel {
+  --car-ctrl-c: var(--car-ctrl, var(--lp-primary));
+  --car-arrow-s: var(--car-arrow, 44px);
+}
+
+.lp-car-stage {
+  position: relative;
+}
+
+.lp-car-arrow {
+  display: grid;
+  place-items: center;
+  width: var(--car-arrow-s);
+  height: var(--car-arrow-s);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--lp-bg);
+  color: var(--lp-text);
+  box-shadow: 0 6px 20px -6px rgb(0 0 0 / 0.35);
+  font-size: calc(var(--car-arrow-s) * 0.45);
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+/* Per-arrow nudge (Slider tab → Arrows → Move arrows). `translate` adds to the
+   arrow's position without touching `transform`, which the hover effect uses. */
+.lp-car-prev {
+  translate: var(--car-prev-x, 0px) var(--car-prev-y, 0px);
+}
+
+.lp-car-next {
+  translate: var(--car-next-x, 0px) var(--car-next-y, 0px);
+}
+
+.lp-car-arrow:hover:not(:disabled) {
+  transform: scale(1.06);
+}
+
+.lp-car-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* Arrow styles */
+.lp-car-arrow-square .lp-car-arrow {
+  border-radius: calc(var(--lp-radius) * 0.6);
+}
+
+.lp-car-arrow-outline .lp-car-arrow {
+  background: transparent;
+  box-shadow: none;
+  border: 2px solid currentColor;
+  color: inherit;
+}
+
+.lp-car-arrow-outline .lp-car-arrow:hover:not(:disabled),
+.lp-car-arrow-solid .lp-car-arrow {
+  background: var(--car-ctrl-c);
+  border-color: var(--car-ctrl-c);
+  color: #fff;
+}
+
+.lp-car-arrow-minimal .lp-car-arrow {
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: calc(var(--car-arrow-s) * 0.7);
+}
+
+.lp-car-arrow-minimal .lp-car-arrow:hover:not(:disabled) {
+  color: var(--car-ctrl-c);
+}
+
+/* Arrow positions: on the sides of the slides… */
+.lp-car-stage > .lp-car-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  margin-top: calc(var(--car-arrow-s) / -2);
+}
+
+.lp-car-arrows-sides .lp-car-stage > .lp-car-prev {
+  left: 12px;
+}
+
+.lp-car-arrows-sides .lp-car-stage > .lp-car-next {
+  right: 12px;
+}
+
+/* Outside: the slides are narrowed to make room, so the arrows never cover them
+   and never leave the screen, whatever the width. */
+.lp-car-arrows-outside .lp-car-stage {
+  padding: 0 calc(var(--car-arrow-s) + 14px);
+}
+
+.lp-car-arrows-outside .lp-car-stage > .lp-car-prev {
+  left: 0;
+}
+
+.lp-car-arrows-outside .lp-car-stage > .lp-car-next {
+  right: 0;
+}
+
+/* …stacked on the left or right of the slides (which are narrowed to make room)… */
+.lp-car-arrows-left .lp-car-stage {
+  padding-left: calc(var(--car-arrow-s) + 14px);
+}
+
+.lp-car-arrows-right .lp-car-stage {
+  padding-right: calc(var(--car-arrow-s) + 14px);
+}
+
+.lp-car-arrows-left .lp-car-stage > .lp-car-arrow-group,
+.lp-car-arrows-right .lp-car-stage > .lp-car-arrow-group {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+
+.lp-car-arrows-left .lp-car-stage > .lp-car-arrow-group {
+  left: 0;
+}
+
+.lp-car-arrows-right .lp-car-stage > .lp-car-arrow-group {
+  right: 0;
+}
+
+/* …or in a bar above / below them. */
+.lp-car-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lp-car-bar-top {
+  justify-content: flex-end;
+  margin-bottom: 18px;
+}
+
+.lp-car-arrows-top-left .lp-car-bar-top {
+  justify-content: flex-start;
+}
+
+.lp-car-arrows-top-center .lp-car-bar-top {
+  justify-content: center;
+}
+
+.lp-car-bar-bottom {
+  margin-top: 22px;
+}
+
+.lp-car-arrows-bottom-center .lp-car-bar-bottom {
+  justify-content: center;
+}
+
+.lp-car-arrow-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Pagination */
+.lp-car-dots {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lp-car-arrows-bottom-center .lp-car-dots {
+  flex: 0 1 auto;
+}
+
+.lp-car-dots-below-left .lp-car-dots {
+  justify-content: flex-start;
+}
+
+.lp-car-dots-below-right .lp-car-dots {
+  justify-content: flex-end;
+}
+
+.lp-car-dots-overlay .lp-car-stage > .lp-car-dots {
+  position: absolute;
+  inset: auto 0 18px 0;
+  z-index: 3;
+  pointer-events: none;
+  color: #fff;
+}
+
+.lp-car-dots-overlay .lp-car-stage > .lp-car-dots > * {
+  pointer-events: auto;
+}
+
+.lp-car-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentColor 25%, transparent);
+  color: inherit;
+  cursor: pointer;
+  transition: width 0.2s ease, background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.lp-car-dot.is-active {
+  background: var(--car-ctrl-c);
+}
+
+/* pills: the active dot stretches */
+.lp-car-dotstyle-pills .lp-car-dot.is-active {
+  width: 26px;
+}
+
+/* dots: plain circles */
+.lp-car-dotstyle-dots .lp-car-dot {
+  width: 11px;
+  height: 11px;
+}
+
+.lp-car-dotstyle-dots .lp-car-dot.is-active {
+  transform: scale(1.15);
+}
+
+/* lines: thin bars */
+.lp-car-dotstyle-lines .lp-car-dots {
+  gap: 6px;
+}
+
+.lp-car-dotstyle-lines .lp-car-dot {
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* numbers: 01 02 03 */
+.lp-car-dotstyle-numbers .lp-car-dots {
+  gap: 4px;
+}
+
+.lp-car-dotstyle-numbers .lp-car-dot {
+  width: auto;
+  height: auto;
+  padding: 4px 8px;
+  background: none;
+  font: 600 0.9rem/1 var(--lp-heading-font);
+  font-variant-numeric: tabular-nums;
+  opacity: 0.5;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+}
+
+.lp-car-dotstyle-numbers .lp-car-dot.is-active {
+  background: none;
+  opacity: 1;
+  color: var(--car-ctrl-c);
+  border-bottom-color: var(--car-ctrl-c);
+}
+
+/* fraction: 2 / 6 */
+.lp-car-fraction {
+  font: 600 1rem/1 var(--lp-heading-font);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.lp-car-fraction b {
+  color: var(--car-ctrl-c);
+  font-size: 1.35em;
+}
+
+.lp-car-dots-overlay .lp-car-fraction b {
+  color: inherit;
+}
+
+/* progress: a bar that fills up */
+.lp-car-progress {
+  display: block;
+  width: min(100%, 320px);
+  height: 4px;
+  border-radius: 4px;
+  background: color-mix(in srgb, currentColor 18%, transparent);
+  overflow: hidden;
+}
+
+.lp-car-progress > span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: var(--car-ctrl-c);
+  transition: width var(--car-speed, 500ms) ease;
+}
+
+.lp-car-dotstyle-progress.lp-car-dots-below-left .lp-car-progress,
+.lp-car-dotstyle-progress.lp-car-dots-below-right .lp-car-progress {
+  width: 100%;
+}
+
+/* thumbs: small pictures of the slides */
+.lp-car-dotstyle-thumbs .lp-car-dot {
+  width: 64px;
+  height: 44px;
+  border-radius: calc(var(--lp-radius) * 0.5);
+  background: color-mix(in srgb, currentColor 12%, transparent) center / cover no-repeat;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.55;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.lp-car-dotstyle-thumbs .lp-car-dot.is-active {
+  width: 64px;
+  opacity: 1;
+  outline-color: var(--car-ctrl-c);
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+/* Everything fits: nothing to navigate. */
+.lp-carousel.lp-car-static .lp-car-arrow,
+.lp-carousel.lp-car-static .lp-car-dots {
+  display: none;
+}
+
+.lp-carousel.is-dragging .lp-car-track {
+  cursor: grabbing;
+}
+
+.lp-carousel[data-drag='true'] .lp-car-viewport {
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.lp-carousel:focus-visible {
+  outline: 2px solid var(--lp-primary);
+  outline-offset: 6px;
+}
+
+/* Slider height (Slider tab → Slider height): every slide is exactly --car-h tall and
+ * its layout fills it. The per-device values come from the section's carousel settings. */
+.lp-car-fixed-h {
+  --car-h: var(--car-h-d);
+}
+
+.lp-car-fixed-h .lp-car-slide {
+  height: var(--car-h);
+}
+
+.lp-car-fixed-h .lp-car-slide > * {
+  height: 100%;
+  min-height: 0 !important;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.lp-car-fixed-h .lp-car-figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.lp-car-fixed-h .lp-car-figure img,
+.lp-car-fixed-h .lp-car-card .lp-car-media,
+.lp-car-fixed-h .lp-car-team .lp-car-photo {
+  flex: 1;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+.lp-car-fixed-h .lp-car-portfolio img {
+  height: 100%;
+}
+
+.lp-car-fixed-h .lp-car-team {
+  display: flex;
+  flex-direction: column;
+}
+
+.lp-car-fixed-h .lp-car-logo {
+  height: 100%;
+}
+
+/* Slide variants ------------------------------------------------------------------------ */
+
+.lp-car-hero {
+  display: flex;
+  align-items: center;
+  min-height: max(var(--slide-h, 0px), 460px);
+  padding: 56px;
+  border-radius: calc(var(--lp-radius) + 4px);
+  background: var(--lp-primary) center / cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.lp-car-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / var(--overlay, 45%));
+}
+
+.lp-car-hero-body {
+  position: relative;
+  max-width: 640px;
+}
+
+.lp-car-hero .lp-btn {
+  margin-top: 1rem;
+}
+
+.lp-car-figure {
+  margin: 0;
+}
+
+.lp-car-figure img {
+  width: 100%;
+  height: var(--slide-h, auto);
+  min-height: 200px;
+  object-fit: cover;
+  border-radius: var(--lp-radius);
+}
+
+.lp-car-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.lp-car-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.lp-car-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.lp-car-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 22px;
+  flex: 1;
+}
+
+.lp-car-body .lp-btn {
+  margin-top: auto;
+}
+
+.lp-car-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lp-primary);
+}
+
+.lp-car-price {
+  font-family: var(--lp-heading-font);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 4px 0 12px;
+}
+
+.lp-car-content {
+  padding: 48px;
+  border-radius: calc(var(--lp-radius) + 4px);
+  background: color-mix(in srgb, var(--lp-surface) 70%, var(--lp-bg));
+  text-align: center;
+  min-height: var(--slide-h, auto);
+}
+
+.lp-car-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0;
+}
+
+.lp-car-quote blockquote {
+  margin: 0;
+  flex: 1;
+  font-size: 1.05rem;
+}
+
+.lp-car-quote figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lp-car-quote small {
+  display: block;
+  opacity: 0.65;
+}
+
+.lp-car-logo {
+  display: grid;
+  place-items: center;
+  height: max(var(--slide-h, 0px), 88px);
+  padding: 16px;
+  border-radius: var(--lp-radius);
+  background: color-mix(in srgb, var(--lp-text) 4%, transparent);
+  font-family: var(--lp-heading-font);
+  font-weight: 800;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.lp-car-logo img {
+  max-height: 44px;
+  width: auto;
+  filter: grayscale(1);
+  transition: filter 0.2s ease;
+}
+
+.lp-car-logo:hover img {
+  filter: none;
+}
+
+.lp-car-team {
+  margin: 0;
+  text-align: center;
+}
+
+.lp-car-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--lp-radius);
+  margin-bottom: 14px;
+  font-size: 2rem;
+}
+
+.lp-car-team strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.lp-car-team small {
+  display: block;
+  opacity: 0.65;
+}
+
+.lp-car-team p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.lp-car-portfolio {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: calc(var(--lp-radius) + 4px);
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.lp-car-portfolio img {
+  width: 100%;
+  height: max(var(--slide-h, 0px), 320px);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.lp-car-portfolio:hover img {
+  transform: scale(1.05);
+}
+
+.lp-car-portfolio-info {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: grid;
+  padding: 22px;
+  background: linear-gradient(transparent, rgb(0 0 0 / calc(var(--overlay, 45%) + 20%)));
+}
+
+.lp-car-portfolio-info strong {
+  font-size: 1.15rem;
+}
+
+.lp-car-html {
+  margin-top: 8px;
+}
+
+/* Slide content position (Slider tab → Slide content). lp-car-x-* / lp-car-y-* set where the
+ * text sits; without them each layout keeps its own default. */
+.lp-car-x-left { --car-jx: flex-start; --car-ta: left; }
+.lp-car-x-center { --car-jx: center; --car-ta: center; }
+.lp-car-x-right { --car-jx: flex-end; --car-ta: right; }
+.lp-car-y-top { --car-jy: flex-start; }
+.lp-car-y-middle { --car-jy: center; }
+.lp-car-y-bottom { --car-jy: flex-end; }
+
+/* hero: the text block inside the background */
+[class*='lp-car-x-'] .lp-car-hero { justify-content: var(--car-jx); }
+[class*='lp-car-x-'] .lp-car-hero-body { text-align: var(--car-ta); }
+[class*='lp-car-y-'] .lp-car-hero { align-items: var(--car-jy); }
+
+/* content */
+[class*='lp-car-x-'] .lp-car-content,
+[class*='lp-car-y-'] .lp-car-content {
+  display: flex;
+  flex-direction: column;
+}
+[class*='lp-car-x-'] .lp-car-content { align-items: var(--car-jx); text-align: var(--car-ta); }
+[class*='lp-car-y-'] .lp-car-content { justify-content: var(--car-jy); }
+
+/* card / product: the text under the image */
+[class*='lp-car-x-'] .lp-car-body { align-items: var(--car-jx); text-align: var(--car-ta); }
+[class*='lp-car-y-'] .lp-car-body { justify-content: var(--car-jy); }
+[class*='lp-car-y-'] .lp-car-body .lp-btn { margin-top: 12px; }
+
+/* image caption, team, logo, testimonial */
+[class*='lp-car-x-'] .lp-car-figure figcaption,
+[class*='lp-car-x-'] .lp-car-team,
+[class*='lp-car-x-'] .lp-car-quote { text-align: var(--car-ta); }
+[class*='lp-car-x-'] .lp-car-team .lp-car-photo { margin-inline: auto; }
+[class*='lp-car-x-'] .lp-car-quote figcaption { justify-content: var(--car-jx); }
+[class*='lp-car-x-'] .lp-car-logo { justify-items: var(--car-jx); }
+[class*='lp-car-y-'] .lp-car-logo { align-items: var(--car-jy); }
+[class*='lp-car-y-'] .lp-car-team,
+[class*='lp-car-y-'] .lp-car-quote { justify-content: var(--car-jy); }
+
+/* portfolio: the caption over the image */
+[class*='lp-car-x-'] .lp-car-portfolio-info { justify-items: var(--car-jx); text-align: var(--car-ta); }
+.lp-car-y-top .lp-car-portfolio-info {
+  inset: 0 0 auto 0;
+  background: linear-gradient(rgb(0 0 0 / calc(var(--overlay, 45%) + 20%)), transparent);
+}
+.lp-car-y-middle .lp-car-portfolio-info {
+  inset: 0;
+  align-content: center;
+  background: rgb(0 0 0 / var(--overlay, 45%));
+}
+
+/* Move content (Slider tab → Slide content → Move content): shifts the text block of every
+ * layout by --car-cx / --car-cy. `translate` is separate from transform/scale, so it
+ * combines with the position, mirroring and hover effects. */
+.lp-car-hero-body,
+.lp-car-content > *,
+.lp-car-body,
+.lp-car-portfolio-info,
+.lp-car-figure figcaption,
+.lp-car-team figcaption,
+.lp-car-quote > *,
+.lp-car-logo > * {
+  translate: var(--car-cx, 0px) var(--car-cy, 0px);
+}
+
+/* Flip layout: swap the order inside the slide. */
+.lp-car-flip .lp-car-card,
+.lp-car-flip .lp-car-quote,
+.lp-car-flip .lp-car-team {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.lp-car-flip .lp-car-figure {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.lp-car-flip .lp-car-figure figcaption {
+  margin: 0 0 10px;
+}
+.lp-car-flip .lp-car-team .lp-car-photo {
+  margin: 14px 0 0;
+}
+.lp-car-flip .lp-car-quote blockquote {
+  flex: 0 1 auto;
+}
+
+/* Mirror images. The hero's background is mirrored with its box; row-reverse keeps the
+ * text position the same, and the text itself is turned back. */
+.lp-car-mirror .lp-car-slide img:not(.lp-avatar) {
+  scale: -1 1;
+}
+.lp-car-mirror .lp-car-hero {
+  scale: -1 1;
+  flex-direction: row-reverse;
+}
+.lp-car-mirror .lp-car-hero-body {
+  scale: -1 1;
+}
+
+@container (max-width: 900px) {
+  .lp-carousel {
+    --per: var(--per-t, 2);
+  }
+
+  .lp-car-fixed-h {
+    --car-h: var(--car-h-t);
+  }
+}
+
+@container (max-width: 600px) {
+  .lp-carousel {
+    --per: var(--per-m, 1);
+  }
+
+  /* The shift is for larger screens unless "also on phones" is on. (Set on the text blocks:
+     the carousel's inline --car-cx/--car-cy would win over a variable reset here.) */
+  .lp-car-cmove-desk :is(.lp-car-hero-body, .lp-car-content > *, .lp-car-body, .lp-car-portfolio-info, .lp-car-figure figcaption, .lp-car-team figcaption, .lp-car-quote > *, .lp-car-logo > *) {
+    translate: none;
+  }
+
+  .lp-car-fixed-h {
+    --car-h: var(--car-h-m);
+  }
+
+  .lp-car-hero {
+    padding: 32px 24px;
+    min-height: max(var(--slide-h, 0px), 380px);
+  }
+
+  .lp-car-arrows-sides .lp-car-stage > .lp-car-prev {
+    left: 6px;
+  }
+
+  .lp-car-arrows-sides .lp-car-stage > .lp-car-next {
+    right: 6px;
+  }
+
+  .lp-car-dotstyle-thumbs .lp-car-dot,
+  .lp-car-dotstyle-thumbs .lp-car-dot.is-active {
+    width: 48px;
+    height: 34px;
+  }
+}
+
+/* Phones: smaller outside arrows and room, so the slides keep most of the width. */
+@container (max-width: 600px) {
+  .lp-car-arrows-outside {
+    --car-arrow-s: min(var(--car-arrow, 44px), 34px);
+  }
+
+  .lp-car-arrows-outside .lp-car-stage {
+    padding: 0 calc(var(--car-arrow-s) + 6px);
+  }
+
+  .lp-car-arrows-left,
+  .lp-car-arrows-right {
+    --car-arrow-s: min(var(--car-arrow, 44px), 34px);
+  }
+
+  .lp-car-arrows-left .lp-car-stage {
+    padding-left: calc(var(--car-arrow-s) + 6px);
+  }
+
+  .lp-car-arrows-right .lp-car-stage {
+    padding-right: calc(var(--car-arrow-s) + 6px);
+  }
+}

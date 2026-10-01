@@ -1,0 +1,45 @@
+{
+  "name": "Accordion · services with icons",
+  "description": "Services list: icon, title and description that expands.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "anchor": "services",
+      "eyebrow": "What we do",
+      "heading": "Our services",
+      "subheading": "Everything you need to launch and grow, under one roof.",
+      "items": [
+        {
+          "icon": "🎯",
+          "question": "Brand strategy",
+          "answer": "Positioning, naming and messaging workshops that give your brand a clear point of view."
+        },
+        {
+          "icon": "🎨",
+          "question": "Visual identity",
+          "answer": "Logo, colour, type and a flexible design system your whole team can use."
+        },
+        {
+          "icon": "💻",
+          "question": "Websites & apps",
+          "answer": "Fast, accessible websites and products, designed and built end to end."
+        },
+        {
+          "icon": "📣",
+          "question": "Campaigns",
+          "answer": "Launch plans, ads and content that reach the right people at the right time."
+        },
+        {
+          "icon": "📈",
+          "question": "Growth & analytics",
+          "answer": "Experiments, dashboards and reporting so every decision is backed by data."
+        }
+      ],
+      "layout": "split",
+      "style": "filled",
+      "icon": "chevron",
+      "singleOpen": true,
+      "openFirst": true
+    }
+  }
+}

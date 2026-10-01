@@ -1,0 +1,44 @@
+{
+  "name": "Accordion · process steps",
+  "description": "Numbered steps of how you work, one open at a time.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "anchor": "process",
+      "eyebrow": "How it works",
+      "heading": "Our process",
+      "items": [
+        {
+          "icon": "",
+          "question": "Discover",
+          "answer": "We learn about your business, audience and goals in a kick-off workshop."
+        },
+        {
+          "icon": "",
+          "question": "Define",
+          "answer": "Together we agree on scope, success metrics and a realistic timeline."
+        },
+        {
+          "icon": "",
+          "question": "Design",
+          "answer": "Concepts, prototypes and reviews until everything feels right."
+        },
+        {
+          "icon": "",
+          "question": "Build",
+          "answer": "We develop, test and polish — with weekly demos along the way."
+        },
+        {
+          "icon": "",
+          "question": "Launch & grow",
+          "answer": "Go live, measure results and keep improving after launch."
+        }
+      ],
+      "style": "divided",
+      "icon": "plus",
+      "numbered": true,
+      "singleOpen": true,
+      "openFirst": true
+    }
+  }
+}

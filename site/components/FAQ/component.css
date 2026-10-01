@@ -1,0 +1,317 @@
+/* FAQ / accordion section.
+ * Classes on .lp-faq pick the design:
+ *   lp-faq-l-<stacked|two-column|split>       layout
+ *   lp-faq-s-<boxed|divided|filled|cards|accent|minimal>  item style
+ *   lp-faq-i-<plus|chevron|circle|none>       open/close icon, lp-faq-ip-<right|left> its side
+ *   lp-faq-numbered                           01, 02, 03… before each question */
+
+.lp-faq {
+  --faq-line: color-mix(in srgb, var(--lp-text) 12%, transparent);
+  --faq-accent: var(--lp-primary);
+}
+
+.lp-faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+  text-align: left;
+  counter-reset: faq;
+}
+
+/* Layouts */
+.lp-faq-l-two-column .lp-faq-list {
+  max-width: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px 24px;
+}
+
+.lp-faq-l-split {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 56px;
+  align-items: start;
+  text-align: left;
+}
+
+.lp-faq-l-split .lp-faq-head {
+  margin: 0;
+  text-align: left;
+  position: sticky;
+  top: 96px;
+}
+
+.lp-faq-l-split .lp-faq-list {
+  max-width: none;
+  margin: 0;
+}
+
+.lp-faq-l-split:has(.lp-faq-head) .lp-faq-cta-below {
+  display: none;
+}
+
+@container (max-width: 820px) {
+  .lp-faq-l-two-column .lp-faq-list,
+  .lp-faq-l-split {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-faq-l-split {
+    gap: 28px;
+  }
+
+  .lp-faq-l-split .lp-faq-head {
+    position: static;
+  }
+}
+
+/* Item (boxed is the default look) */
+.lp-faq-item {
+  border: 1px solid var(--faq-line);
+  border-radius: var(--lp-radius);
+  padding: 18px 22px;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lp-faq-item[open]:not(.is-closing) {
+  border-color: color-mix(in srgb, var(--faq-accent) 45%, transparent);
+}
+
+.lp-faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.lp-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.lp-faq-item summary:focus-visible {
+  outline: 2px solid var(--faq-accent);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.lp-faq-q {
+  flex: 1;
+}
+
+.lp-faq-emoji {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.lp-faq-answer p {
+  margin: 12px 0 0;
+  opacity: 0.8;
+}
+
+/* Styles */
+.lp-faq-s-divided .lp-faq-list {
+  gap: 0;
+}
+
+.lp-faq-s-divided .lp-faq-item {
+  border: 0;
+  border-bottom: 1px solid var(--faq-line);
+  border-radius: 0;
+  padding: 22px 0;
+}
+
+.lp-faq-s-divided .lp-faq-item:first-child {
+  border-top: 1px solid var(--faq-line);
+}
+
+.lp-faq-s-filled .lp-faq-item {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--lp-text) 5%, transparent);
+}
+
+.lp-faq-s-filled .lp-faq-item[open]:not(.is-closing) {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--faq-accent) 10%, transparent);
+}
+
+.lp-faq-s-cards .lp-faq-item {
+  border-color: transparent;
+  background: var(--lp-bg);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 8px 24px -12px rgb(0 0 0 / 0.25);
+}
+
+.lp-faq-s-cards .lp-faq-item[open]:not(.is-closing) {
+  border-color: transparent;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 16px 36px -14px rgb(0 0 0 / 0.35);
+}
+
+.lp-faq-s-accent .lp-faq-item {
+  border: 0;
+  border-left: 3px solid var(--faq-line);
+  border-radius: 0 var(--lp-radius) var(--lp-radius) 0;
+  background: color-mix(in srgb, var(--lp-text) 3%, transparent);
+}
+
+.lp-faq-s-accent .lp-faq-item[open]:not(.is-closing) {
+  border-left-color: var(--faq-accent);
+}
+
+.lp-faq-s-minimal .lp-faq-list {
+  gap: 4px;
+}
+
+.lp-faq-s-minimal .lp-faq-item {
+  border: 0;
+  border-radius: 0;
+  padding: 12px 0;
+}
+
+.lp-faq-s-minimal .lp-faq-item[open]:not(.is-closing) .lp-faq-q {
+  color: var(--faq-accent);
+}
+
+/* Numbers */
+.lp-faq-num {
+  display: none;
+}
+
+.lp-faq-numbered .lp-faq-item {
+  counter-increment: faq;
+}
+
+.lp-faq-numbered .lp-faq-num {
+  display: block;
+  flex-shrink: 0;
+  min-width: 2ch;
+  color: var(--faq-accent);
+  font-family: var(--lp-heading-font);
+  font-variant-numeric: tabular-nums;
+}
+
+.lp-faq-numbered .lp-faq-num::before {
+  content: counter(faq, decimal-leading-zero);
+}
+
+/* Open / close icon. .is-closing: already turning back while the answer closes. */
+.lp-faq-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  color: var(--faq-accent);
+  transition: rotate var(--faq-speed, 320ms) ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.lp-faq-ip-left .lp-faq-icon {
+  order: -1;
+}
+
+/* plus → × */
+.lp-faq-i-plus .lp-faq-icon::before,
+.lp-faq-i-plus .lp-faq-icon::after,
+.lp-faq-i-circle .lp-faq-icon::before,
+.lp-faq-i-circle .lp-faq-icon::after {
+  content: '';
+  position: absolute;
+  inset: 7px 0 auto;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.lp-faq-i-plus .lp-faq-icon::after,
+.lp-faq-i-circle .lp-faq-icon::after {
+  rotate: 90deg;
+}
+
+.lp-faq-i-plus .lp-faq-item[open]:not(.is-closing) .lp-faq-icon {
+  rotate: 135deg;
+}
+
+/* circle: plus in a filled circle, turns into a minus */
+.lp-faq-i-circle .lp-faq-icon {
+  width: 26px;
+  height: 26px;
+  margin-top: -2px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--faq-accent) 14%, transparent);
+}
+
+.lp-faq-i-circle .lp-faq-icon::before,
+.lp-faq-i-circle .lp-faq-icon::after {
+  inset: 12px 7px auto;
+  transition: rotate var(--faq-speed, 320ms) ease;
+}
+
+.lp-faq-i-circle .lp-faq-item[open]:not(.is-closing) .lp-faq-icon {
+  background: var(--faq-accent);
+  color: #fff;
+}
+
+.lp-faq-i-circle .lp-faq-item[open]:not(.is-closing) .lp-faq-icon::after {
+  rotate: 0deg;
+}
+
+/* chevron: points down, flips up when open */
+.lp-faq-i-chevron .lp-faq-icon::before {
+  content: '';
+  position: absolute;
+  inset: 2px 3px auto;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  rotate: 45deg;
+}
+
+.lp-faq-i-chevron .lp-faq-item[open]:not(.is-closing) .lp-faq-icon {
+  rotate: 180deg;
+}
+
+.lp-faq-i-none .lp-faq-icon {
+  display: none;
+}
+
+/* "Still have questions?" */
+.lp-faq-cta {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  text-align: center;
+}
+
+.lp-faq-cta p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.lp-faq-l-split .lp-faq-head .lp-faq-cta {
+  justify-items: start;
+  text-align: left;
+  margin-top: 24px;
+}
+
+/* The answer fades in as the box opens. */
+.lp-faq-item[data-accordion] .lp-faq-answer {
+  transition: opacity var(--faq-speed, 320ms) ease;
+}
+
+.lp-faq-item[data-accordion].is-closing .lp-faq-answer {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-faq-icon,
+  .lp-faq-icon::before,
+  .lp-faq-icon::after,
+  .lp-faq-item[data-accordion] .lp-faq-answer {
+    transition: none;
+  }
+}

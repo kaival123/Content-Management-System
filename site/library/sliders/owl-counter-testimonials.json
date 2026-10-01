@@ -1,0 +1,87 @@
+{
+  "name": "Testimonials · counter",
+  "description": "Two quotes per view with a 1 / 4 counter and solid arrows at the bottom left.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "Loved by teams everywhere",
+      "subheading": "",
+      "variant": "testimonial",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Maya Chen",
+          "eyebrow": "Head of Growth, Northwind",
+          "text": "“We shipped three campaigns in the time one used to take. The editor just gets out of the way.”",
+          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Daniel Ruiz",
+          "eyebrow": "Founder, Brewline",
+          "text": "“Our conversion rate went up 38% after we rebuilt the landing page here.”",
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Priya Nair",
+          "eyebrow": "Marketing Lead, Kitefly",
+          "text": "“Developers edit the code, marketers edit the page — and nobody overwrites anybody.”",
+          "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Tom Becker",
+          "eyebrow": "CTO, Solace",
+          "text": "“Clean files in Git, a static build we can host anywhere. Exactly what we wanted.”",
+          "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 2,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 28,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "bottom-left",
+      "arrowStyle": "solid",
+      "arrowSize": 42,
+      "dotsPosition": "below-right",
+      "dotsStyle": "fraction",
+      "controlColor": ""
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "type": "about",
+  "label": "Image + text",
+  "description": "Image beside a block of text and a button",
+  "icon": "image",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "type": "textarea"
+    },
+    {
+      "key": "bullets",
+      "label": "Bullet points (one per line)",
+      "type": "lines"
+    },
+    {
+      "key": "buttonLabel",
+      "label": "Button label",
+      "type": "text"
+    },
+    {
+      "key": "buttonHref",
+      "label": "Button link",
+      "type": "url"
+    },
+    {
+      "key": "image",
+      "label": "Image",
+      "type": "image"
+    },
+    {
+      "key": "imageSide",
+      "label": "Image position",
+      "type": "select",
+      "options": [
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "key": "image",
+      "label": "Image",
+      "kind": "image",
+      "fields": [
+        "image",
+        "imageSide"
+      ]
+    },
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "kind": "text",
+      "fields": [
+        "text"
+      ]
+    },
+    {
+      "key": "bullets",
+      "label": "Bullet list",
+      "kind": "text",
+      "fields": [
+        "bullets"
+      ]
+    },
+    {
+      "key": "button",
+      "label": "Button",
+      "kind": "button",
+      "fields": [
+        "buttonLabel",
+        "buttonHref"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "about",
+    "heading": "Designed for the way you work",
+    "text": "Tell your story here. Explain what makes your product different and how it solves a real problem for your customers.",
+    "bullets": [
+      "Set up in minutes",
+      "No credit card required",
+      "Cancel anytime"
+    ],
+    "buttonLabel": "See how it works",
+    "buttonHref": "#",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+    "imageSide": "left"
+  }
+}

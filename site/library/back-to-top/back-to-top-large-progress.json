@@ -1,0 +1,17 @@
+{
+  "name": "Back to top · large with progress",
+  "description": "Big accent button with a thin progress ring; hidden on phones.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "circle",
+      "icon": "double",
+      "size": 60,
+      "background": "__accent__",
+      "progress": true,
+      "ringWidth": 2,
+      "hideOnMobile": true,
+      "showAfter": 600
+    }
+  }
+}

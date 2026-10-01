@@ -1,0 +1,81 @@
+{
+  "type": "custom",
+  "label": "Custom section",
+  "description": "Build your own layout from columns and elements",
+  "icon": "columns",
+  "fields": [],
+  "elements": [],
+  "defaults": {
+    "anchor": "",
+    "layout": "1-1",
+    "gap": 48,
+    "verticalAlign": "center",
+    "stackOn": "tablet",
+    "columns": [
+      {
+        "id": "c_mumoaks9j4l8ni",
+        "elements": [
+          {
+            "id": "e_mumoaks9cjh071",
+            "type": "heading",
+            "data": {
+              "text": "Build any layout you like",
+              "level": "h2"
+            },
+            "style": {}
+          },
+          {
+            "id": "e_mumoaks9mjjjrc",
+            "type": "text",
+            "data": {
+              "text": "This is a custom section. Pick a column layout, add headings, text, images, buttons, videos and more, then style every element."
+            },
+            "style": {}
+          },
+          {
+            "id": "e_mumoaks9j875am",
+            "type": "list",
+            "data": {
+              "items": [
+                "First benefit",
+                "Second benefit",
+                "Third benefit"
+              ],
+              "marker": "✓"
+            },
+            "style": {}
+          },
+          {
+            "id": "e_mumoaks9lvmxun",
+            "type": "button",
+            "data": {
+              "label": "Get started",
+              "href": "#",
+              "variant": "primary",
+              "newTab": false
+            },
+            "style": {}
+          }
+        ],
+        "style": {}
+      },
+      {
+        "id": "c_mumoaks9v3frap",
+        "elements": [
+          {
+            "id": "e_mumoaks9qyej01",
+            "type": "image",
+            "data": {
+              "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+              "alt": "",
+              "href": "",
+              "caption": ""
+            },
+            "style": {}
+          }
+        ],
+        "style": {}
+      }
+    ]
+  }
+}

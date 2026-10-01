@@ -1,0 +1,107 @@
+{{!--
+  Carousel / slider. The slide markup depends on "variant". Behaviour (arrows, dots,
+  autoplay, drag, loop…) comes from the section's carousel settings and is added by the
+  site runtime; without JavaScript the first slides still show, laid out by CSS.
+--}}
+{{#if heading}}
+<header class="lp-head">
+  <h2 class="lp-h2" data-el="heading" data-edit="heading">{{heading}}</h2>
+  {{#if subheading}}<p class="lp-lead lp-pre" data-el="subheading" data-edit="subheading">{{subheading}}</p>{{/if}}
+</header>
+{{/if}}
+<div
+  class="lp-carousel lp-car-v-{{default variant "card"}}"
+  data-carousel
+  style="{{#if slideHeight}}--slide-h: {{slideHeight}}px; {{/if}}--overlay: {{default overlay 45}}%"
+>
+  <div class="lp-car-viewport">
+    <div class="lp-car-track">
+      {{#each slides}}
+      <div class="lp-car-slide" data-el="slide" style="background: {{color background}}; color: {{color textColor}}">
+        {{#is ../variant "hero"}}
+        <div class="lp-car-hero"{{#if image}} style="background-image: url('{{image}}')"{{/if}}>
+          <div class="lp-car-hero-body">
+            {{#if eyebrow}}<span class="lp-eyebrow" data-el="slideEyebrow" data-edit="eyebrow">{{eyebrow}}</span>{{/if}}
+            <h2 class="lp-h1" data-el="slideHeading" data-edit="heading">{{heading}}</h2>
+            {{#if text}}<p class="lp-lead lp-pre" data-el="slideText" data-edit="text">{{text}}</p>{{/if}}
+            {{#if buttonLabel}}<a class="lp-btn lp-btn-primary" data-el="slideButton" data-edit="buttonLabel" href="{{buttonHref}}">{{buttonLabel}}</a>{{/if}}
+            {{#if html}}<div class="lp-car-html">{{{html}}}</div>{{/if}}
+          </div>
+        </div>
+        {{/is}}
+        {{#is ../variant "image"}}
+        <figure class="lp-car-figure">
+          <img data-el="slideImage" src="{{image}}" alt="{{heading}}" />
+          {{#if text}}<figcaption data-el="slideText" data-edit="text">{{text}}</figcaption>{{/if}}
+        </figure>
+        {{/is}}
+        {{#is ../variant "card"}}
+        <article class="lp-card lp-car-card">
+          {{#if image}}<img class="lp-car-media" data-el="slideImage" src="{{image}}" alt="" />{{/if}}
+          <div class="lp-car-body">
+            {{#if eyebrow}}<span class="lp-car-eyebrow" data-el="slideEyebrow" data-edit="eyebrow">{{eyebrow}}</span>{{/if}}
+            <h3 class="lp-h3" data-el="slideHeading" data-edit="heading">{{heading}}</h3>
+            {{#if text}}<p class="lp-pre" data-el="slideText" data-edit="text">{{text}}</p>{{/if}}
+            {{#if html}}<div class="lp-car-html">{{{html}}}</div>{{/if}}
+            {{#if buttonLabel}}<a class="lp-btn lp-btn-ghost lp-btn-sm" data-el="slideButton" data-edit="buttonLabel" href="{{buttonHref}}">{{buttonLabel}}</a>{{/if}}
+          </div>
+        </article>
+        {{/is}}
+        {{#is ../variant "content"}}
+        <div class="lp-car-content">
+          {{#if eyebrow}}<span class="lp-eyebrow" data-el="slideEyebrow" data-edit="eyebrow">{{eyebrow}}</span>{{/if}}
+          <h3 class="lp-h2" data-el="slideHeading" data-edit="heading">{{heading}}</h3>
+          {{#if text}}<p class="lp-lead lp-pre" data-el="slideText" data-edit="text">{{text}}</p>{{/if}}
+          {{#if html}}<div class="lp-car-html">{{{html}}}</div>{{/if}}
+          {{#if buttonLabel}}<a class="lp-btn lp-btn-primary" data-el="slideButton" data-edit="buttonLabel" href="{{buttonHref}}">{{buttonLabel}}</a>{{/if}}
+        </div>
+        {{/is}}
+        {{#is ../variant "testimonial"}}
+        <figure class="lp-card lp-car-quote">
+          <blockquote class="lp-pre" data-el="slideText" data-edit="text">{{text}}</blockquote>
+          <figcaption>
+            {{#if image}}<img class="lp-avatar" data-el="slideImage" src="{{image}}" alt="{{heading}}" />{{else}}<span class="lp-avatar">{{initials heading}}</span>{{/if}}
+            <span><strong data-el="slideHeading" data-edit="heading">{{heading}}</strong><small data-el="slideEyebrow" data-edit="eyebrow">{{eyebrow}}</small></span>
+          </figcaption>
+        </figure>
+        {{/is}}
+        {{#is ../variant "logo"}}
+        <div class="lp-car-logo">
+          {{#if image}}<img data-el="slideImage" src="{{image}}" alt="{{heading}}" />{{else}}<span data-el="slideHeading" data-edit="heading">{{heading}}</span>{{/if}}
+        </div>
+        {{/is}}
+        {{#is ../variant "product"}}
+        <article class="lp-card lp-car-card lp-car-product">
+          {{#if image}}<img class="lp-car-media" data-el="slideImage" src="{{image}}" alt="{{heading}}" />{{/if}}
+          <div class="lp-car-body">
+            {{#if eyebrow}}<span class="lp-car-eyebrow" data-el="slideEyebrow" data-edit="eyebrow">{{eyebrow}}</span>{{/if}}
+            <h3 class="lp-h3" data-el="slideHeading" data-edit="heading">{{heading}}</h3>
+            {{#if price}}<div class="lp-car-price" data-el="slidePrice" data-edit="price">{{price}}</div>{{/if}}
+            {{#if buttonLabel}}<a class="lp-btn lp-btn-primary lp-btn-sm" data-el="slideButton" data-edit="buttonLabel" href="{{buttonHref}}">{{buttonLabel}}</a>{{/if}}
+          </div>
+        </article>
+        {{/is}}
+        {{#is ../variant "team"}}
+        <figure class="lp-car-team">
+          {{#if image}}<img class="lp-car-photo" data-el="slideImage" src="{{image}}" alt="{{heading}}" />{{else}}<span class="lp-avatar lp-car-photo">{{initials heading}}</span>{{/if}}
+          <figcaption>
+            <strong data-el="slideHeading" data-edit="heading">{{heading}}</strong>
+            <small data-el="slideEyebrow" data-edit="eyebrow">{{eyebrow}}</small>
+            {{#if text}}<p class="lp-pre" data-el="slideText" data-edit="text">{{text}}</p>{{/if}}
+          </figcaption>
+        </figure>
+        {{/is}}
+        {{#is ../variant "portfolio"}}
+        <a class="lp-car-portfolio" href="{{default buttonHref "#"}}">
+          <img data-el="slideImage" src="{{image}}" alt="{{heading}}" />
+          <span class="lp-car-portfolio-info">
+            <small data-el="slideEyebrow" data-edit="eyebrow">{{eyebrow}}</small>
+            <strong data-el="slideHeading" data-edit="heading">{{heading}}</strong>
+          </span>
+        </a>
+        {{/is}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

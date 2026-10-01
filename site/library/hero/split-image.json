@@ -1,0 +1,22 @@
+{
+  "name": "Split hero with image",
+  "description": "Headline and buttons on the left, a large image on the right.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Trusted by 4,000+ teams",
+      "heading": "Launch landing pages in minutes, not weeks",
+      "subheading": "Drag, drop and publish beautiful pages that convert, without waiting on a developer.",
+      "primaryLabel": "Get started free",
+      "primaryHref": "#cta",
+      "secondaryLabel": "See examples",
+      "secondaryHref": "#gallery",
+      "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80",
+      "layout": "split"
+    },
+    "style": {
+      "align": "left",
+      "paddingY": 96
+    }
+  }
+}

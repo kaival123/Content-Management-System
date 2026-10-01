@@ -1,0 +1,43 @@
+{
+  "type": "auth",
+  "label": "Login / register",
+  "description": "Sign-in or sign-up form layout with side panel",
+  "icon": "settings",
+  "fields": [
+    {
+      "key": "mode",
+      "label": "Form",
+      "type": "select",
+      "options": [
+        { "label": "Log in", "value": "login" },
+        { "label": "Register", "value": "register" }
+      ]
+    },
+    { "key": "heading", "label": "Heading", "type": "text" },
+    { "key": "text", "label": "Text", "type": "textarea" },
+    { "key": "buttonLabel", "label": "Button label", "type": "text" },
+    { "key": "switchText", "label": "Switch text (e.g. \"No account yet?\")", "type": "text" },
+    { "key": "switchLabel", "label": "Switch link label", "type": "text" },
+    { "key": "switchHref", "label": "Switch link", "type": "url" },
+    { "key": "action", "label": "Form action URL (your auth endpoint)", "type": "url" },
+    { "key": "image", "label": "Side image", "type": "image" }
+  ],
+  "elements": [
+    { "key": "heading", "label": "Heading", "kind": "text", "fields": ["heading"] },
+    { "key": "text", "label": "Text", "kind": "text", "fields": ["text"] },
+    { "key": "form", "label": "Form card", "kind": "box", "fields": ["mode", "buttonLabel", "action"] },
+    { "key": "button", "label": "Button", "kind": "button", "fields": ["buttonLabel"] },
+    { "key": "image", "label": "Side image", "kind": "image", "fields": ["image"] }
+  ],
+  "defaults": {
+    "mode": "login",
+    "heading": "Welcome back",
+    "text": "Log in to your account to continue.",
+    "buttonLabel": "Log in",
+    "switchText": "No account yet?",
+    "switchLabel": "Create one",
+    "switchHref": "#",
+    "action": "",
+    "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Four key stats",
+  "description": "Four big numbers with labels in a single row.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Numbers that speak for themselves",
+      "items": [
+        {
+          "value": "12k+",
+          "label": "Active customers"
+        },
+        {
+          "value": "99.99%",
+          "label": "Uptime last year"
+        },
+        {
+          "value": "3.2M",
+          "label": "Pages published"
+        },
+        {
+          "value": "4.9★",
+          "label": "Average rating"
+        }
+      ]
+    },
+    "style": {
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "center"
+    }
+  }
+}

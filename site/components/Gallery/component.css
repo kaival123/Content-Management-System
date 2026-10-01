@@ -1,0 +1,50 @@
+/* Gallery section */
+
+.lp-gallery-item {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--lp-radius);
+}
+
+.lp-gallery-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lp-gallery-item img {
+  width: 100%;
+  aspect-ratio: var(--shape, 4 / 3);
+  object-fit: cover;
+  border-radius: var(--lp-radius);
+  transition: transform 0.4s ease;
+}
+
+.lp-gallery-item figcaption {
+  display: grid;
+  padding: 10px 2px 0;
+}
+
+.lp-gallery-item small {
+  opacity: 0.65;
+}
+
+/* Captions over the image, revealed on hover. */
+.lp-gallery-hover .lp-gallery-item figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px;
+  color: #fff;
+  background: linear-gradient(transparent, rgb(0 0 0 / 0.7));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.lp-gallery-hover .lp-gallery-item:hover figcaption,
+.lp-editable .lp-gallery-hover .lp-gallery-item figcaption {
+  opacity: 1;
+}
+
+.lp-gallery-item:hover img {
+  transform: scale(1.04);
+}

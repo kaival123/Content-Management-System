@@ -1,0 +1,46 @@
+{
+  "type": "products",
+  "label": "Products",
+  "description": "Product cards with image, price, rating and buy button",
+  "icon": "tag",
+  "fields": [
+    { "key": "heading", "label": "Heading", "type": "text" },
+    { "key": "subheading", "label": "Subheading", "type": "textarea" },
+    {
+      "key": "products",
+      "label": "Products",
+      "type": "list",
+      "itemLabel": "Product",
+      "itemFields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "image", "label": "Image", "type": "image" },
+        { "key": "price", "label": "Price", "type": "text" },
+        { "key": "oldPrice", "label": "Old price (shown crossed out)", "type": "text" },
+        { "key": "badge", "label": "Badge (e.g. New, -20%)", "type": "text" },
+        { "key": "rating", "label": "Rating (e.g. 4.8)", "type": "text" },
+        { "key": "buttonLabel", "label": "Button label", "type": "text" },
+        { "key": "buttonHref", "label": "Button link", "type": "url" }
+      ]
+    }
+  ],
+  "elements": [
+    { "key": "heading", "label": "Heading", "kind": "text", "fields": ["heading"] },
+    { "key": "subheading", "label": "Subheading", "kind": "text", "fields": ["subheading"] },
+    { "key": "card", "label": "Product cards", "kind": "box", "list": "products", "fields": ["name", "image", "price", "oldPrice", "badge", "rating", "buttonLabel", "buttonHref"] },
+    { "key": "image", "label": "Product images", "kind": "image", "list": "products", "fields": ["image"] },
+    { "key": "name", "label": "Product names", "kind": "text", "list": "products", "fields": ["name"] },
+    { "key": "price", "label": "Prices", "kind": "text", "list": "products", "fields": ["price", "oldPrice"] },
+    { "key": "button", "label": "Buttons", "kind": "button", "list": "products", "fields": ["buttonLabel", "buttonHref"] }
+  ],
+  "defaults": {
+    "heading": "Best sellers",
+    "subheading": "Our most-loved products, shipped free.",
+    "products": [
+      { "name": "Everyday Backpack", "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80", "price": "$89", "oldPrice": "", "badge": "New", "rating": "4.9", "buttonLabel": "Add to cart", "buttonHref": "#" },
+      { "name": "Wireless Headphones", "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80", "price": "$129", "oldPrice": "$159", "badge": "-20%", "rating": "4.7", "buttonLabel": "Add to cart", "buttonHref": "#" },
+      { "name": "Ceramic Mug Set", "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&q=80", "price": "$34", "oldPrice": "", "badge": "", "rating": "4.8", "buttonLabel": "Add to cart", "buttonHref": "#" },
+      { "name": "Minimal Watch", "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80", "price": "$199", "oldPrice": "", "badge": "", "rating": "4.6", "buttonLabel": "Add to cart", "buttonHref": "#" }
+    ]
+  },
+  "grid": { "desktop": 4, "tablet": 2, "mobile": 1, "cardStyle": "none" }
+}

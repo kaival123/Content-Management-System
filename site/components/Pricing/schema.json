@@ -1,0 +1,204 @@
+{
+  "type": "pricing",
+  "label": "Pricing",
+  "description": "Pricing plans with feature lists",
+  "icon": "tag",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "type": "textarea"
+    },
+    {
+      "key": "plans",
+      "label": "Plans",
+      "type": "list",
+      "itemLabel": "Plan",
+      "itemFields": [
+        {
+          "key": "name",
+          "label": "Plan name",
+          "type": "text"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text"
+        },
+        {
+          "key": "period",
+          "label": "Period",
+          "type": "text",
+          "placeholder": "/month"
+        },
+        {
+          "key": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "key": "features",
+          "label": "Features (one per line)",
+          "type": "lines"
+        },
+        {
+          "key": "buttonLabel",
+          "label": "Button label",
+          "type": "text"
+        },
+        {
+          "key": "buttonHref",
+          "label": "Button link",
+          "type": "url"
+        },
+        {
+          "key": "highlighted",
+          "label": "Highlight this plan",
+          "type": "toggle"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "kind": "text",
+      "fields": [
+        "subheading"
+      ]
+    },
+    {
+      "key": "card",
+      "label": "Plan cards",
+      "kind": "box",
+      "list": "plans",
+      "fields": [
+        "name",
+        "price",
+        "period",
+        "description",
+        "features",
+        "buttonLabel",
+        "buttonHref",
+        "highlighted"
+      ]
+    },
+    {
+      "key": "planName",
+      "label": "Plan names",
+      "kind": "text",
+      "list": "plans",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "key": "planDesc",
+      "label": "Plan descriptions",
+      "kind": "text",
+      "list": "plans",
+      "fields": [
+        "description"
+      ]
+    },
+    {
+      "key": "price",
+      "label": "Prices",
+      "kind": "text",
+      "list": "plans",
+      "fields": [
+        "price",
+        "period"
+      ]
+    },
+    {
+      "key": "planFeatures",
+      "label": "Feature lists",
+      "kind": "text",
+      "list": "plans",
+      "fields": [
+        "features"
+      ]
+    },
+    {
+      "key": "planButton",
+      "label": "Plan buttons",
+      "kind": "button",
+      "list": "plans",
+      "fields": [
+        "buttonLabel",
+        "buttonHref",
+        "highlighted"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "pricing",
+    "heading": "Simple, transparent pricing",
+    "subheading": "Choose the plan that fits your team.",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "$0",
+        "period": "/month",
+        "description": "For individuals",
+        "features": [
+          "1 project",
+          "Basic analytics",
+          "Community support"
+        ],
+        "buttonLabel": "Get started",
+        "buttonHref": "#",
+        "highlighted": false
+      },
+      {
+        "name": "Pro",
+        "price": "$29",
+        "period": "/month",
+        "description": "For growing teams",
+        "features": [
+          "Unlimited projects",
+          "Advanced analytics",
+          "Priority support"
+        ],
+        "buttonLabel": "Start trial",
+        "buttonHref": "#",
+        "highlighted": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "period": "",
+        "description": "For large organisations",
+        "features": [
+          "SSO & audit logs",
+          "Dedicated manager",
+          "SLA"
+        ],
+        "buttonLabel": "Contact sales",
+        "buttonHref": "#contact",
+        "highlighted": false
+      }
+    ]
+  },
+  "grid": {
+    "desktop": 3,
+    "tablet": 2,
+    "mobile": 1,
+    "gap": 28
+  }
+}

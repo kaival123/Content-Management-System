@@ -1,0 +1,87 @@
+{
+  "name": "Slider · progress bar",
+  "description": "One slide at a time with a progress bar and arrows at the bottom right.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "How it works",
+      "subheading": "",
+      "variant": "content",
+      "slideHeight": 280,
+      "slides": [
+        {
+          "heading": "Plan",
+          "eyebrow": "Step 1",
+          "text": "Map your goal, audience and the one action you want visitors to take.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Design",
+          "eyebrow": "Step 2",
+          "text": "Pick a template, set your theme and arrange sections in minutes.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Launch",
+          "eyebrow": "Step 3",
+          "text": "Publish with one click, or export a static build for any host.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Improve",
+          "eyebrow": "Step 4",
+          "text": "Watch what converts, tweak and publish again — no deploys needed.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 24,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 500,
+      "loop": false,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "bottom-right",
+      "arrowStyle": "solid",
+      "arrowSize": 44,
+      "dotsPosition": "below-left",
+      "dotsStyle": "progress",
+      "controlColor": ""
+    }
+  }
+}

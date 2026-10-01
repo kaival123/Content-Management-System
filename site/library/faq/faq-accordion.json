@@ -1,0 +1,39 @@
+{
+  "name": "FAQ · boxed",
+  "description": "Six common questions in expandable panels.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Is there a free trial?",
+          "answer": "Yes. Every paid plan starts with a 14-day free trial, and no credit card is required."
+        },
+        {
+          "question": "Can I change plans later?",
+          "answer": "Of course. Upgrade, downgrade or cancel at any time from your account settings. Changes are prorated."
+        },
+        {
+          "question": "Do you offer discounts for non-profits?",
+          "answer": "Registered non-profits and schools get 50% off any plan. Contact us with proof of status to apply."
+        },
+        {
+          "question": "Can I use my own domain?",
+          "answer": "Yes. Connect any domain you own in a few clicks, and we will provision SSL for you automatically."
+        },
+        {
+          "question": "Where is my data stored?",
+          "answer": "Data is stored in ISO 27001-certified data centres in the EU and US, with daily encrypted backups."
+        },
+        {
+          "question": "How do I get help?",
+          "answer": "Our support team is available 24/7 via chat and email, and Business customers get a dedicated manager."
+        }
+      ]
+    },
+    "style": {
+      "width": "narrow"
+    }
+  }
+}

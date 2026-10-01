@@ -1,0 +1,317 @@
+{
+  "id": "saas",
+  "kind": "single",
+  "category": "SaaS",
+  "name": "SaaS Product",
+  "description": "Features, social proof, pricing and FAQ for a software product — with a logo strip and testimonial slider.",
+  "preview": [
+    "#ffffff",
+    "#4f46e5",
+    "#06b6d4"
+  ],
+  "theme": {
+    "primaryColor": "#4f46e5",
+    "accentColor": "#06b6d4",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f5f7ff",
+    "textColor": "#0f172a",
+    "fontFamily": "Inter",
+    "headingFont": "Plus Jakarta Sans",
+    "radius": 12,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Launchly",
+            "links": [
+              {
+                "label": "Features",
+                "href": "#features"
+              },
+              {
+                "label": "Customers",
+                "href": "#customers"
+              },
+              {
+                "label": "Pricing",
+                "href": "#pricing"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Start free",
+            "ctaHref": "#cta"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "🚀 Now in public beta",
+            "heading": "Ship your next idea in days, not months",
+            "subheading": "Launchly gives your team the tools to design, build and launch products faster than ever.",
+            "primaryLabel": "Start free trial",
+            "primaryHref": "#cta",
+            "secondaryLabel": "See features",
+            "secondaryHref": "#features",
+            "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80"
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Trusted by product teams at",
+            "logos": [
+              {
+                "name": "Acme",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Globex",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Initech",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Umbrella",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Northwind",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Stark",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "stats",
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Everything you need to launch",
+            "subheading": "One workspace for planning, building and shipping.",
+            "items": [
+              {
+                "icon": "⚡",
+                "title": "Instant environments",
+                "text": "Spin up preview builds for every branch in seconds."
+              },
+              {
+                "icon": "🔒",
+                "title": "Secure by default",
+                "text": "SSO, audit logs and encryption at rest on every plan."
+              },
+              {
+                "icon": "📈",
+                "title": "Built-in analytics",
+                "text": "See how every release performs without extra tools."
+              },
+              {
+                "icon": "🧩",
+                "title": "100+ integrations",
+                "text": "Connect GitHub, Slack, Linear, Figma and more."
+              },
+              {
+                "icon": "🤖",
+                "title": "AI release notes",
+                "text": "Summaries of every change, written for your customers."
+              },
+              {
+                "icon": "🌍",
+                "title": "Global edge network",
+                "text": "Fast for users everywhere, with 99.99% uptime."
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "From idea to launch in one place",
+            "text": "Stop stitching together a dozen tools. Launchly keeps specs, builds, feedback and rollouts connected so your team always knows what ships next.",
+            "bullets": [
+              "Set up in under ten minutes",
+              "No credit card required",
+              "Cancel anytime"
+            ],
+            "buttonLabel": "Start building",
+            "buttonHref": "#cta",
+            "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
+          },
+          "style": {
+            "background": "__surface__",
+            "align": "left"
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Built for modern teams",
+            "subheading": "Flexible enough for startups, robust enough for enterprises."
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "anchor": "customers",
+            "heading": "Loved by teams everywhere",
+            "subheading": "",
+            "variant": "testimonial",
+            "slides": [
+              {
+                "heading": "Priya Sharma",
+                "eyebrow": "CTO, Acme",
+                "text": "We cut our release cycle from three weeks to four days. Launchly is now the centre of how we work.",
+                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              },
+              {
+                "heading": "Daniel Lee",
+                "eyebrow": "Founder, Northwind",
+                "text": "The easiest tool we have adopted this year. Onboarding the whole team took one afternoon.",
+                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              },
+              {
+                "heading": "Maria Garcia",
+                "eyebrow": "Head of Product, Globex",
+                "text": "Preview environments alone saved us hours every week. The analytics are a bonus.",
+                "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              },
+              {
+                "heading": "Tom Becker",
+                "eyebrow": "Engineering Lead, Initech",
+                "text": "Support is incredible and the product keeps getting better every month.",
+                "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 2,
+            "perViewTablet": 1,
+            "autoplay": true,
+            "autoplaySpeed": 5000
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "plans": [
+              {
+                "name": "Starter",
+                "price": "$0",
+                "period": "/month",
+                "description": "For individuals",
+                "features": [
+                  "1 project",
+                  "Basic analytics",
+                  "Community support"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "#cta",
+                "highlighted": false
+              },
+              {
+                "name": "Pro",
+                "price": "$29",
+                "period": "/month",
+                "description": "For growing teams",
+                "features": [
+                  "Unlimited projects",
+                  "Advanced analytics",
+                  "Priority support"
+                ],
+                "buttonLabel": "Start trial",
+                "buttonHref": "#cta",
+                "highlighted": true
+              },
+              {
+                "name": "Enterprise",
+                "price": "Custom",
+                "period": "",
+                "description": "For large organisations",
+                "features": [
+                  "SSO & audit logs",
+                  "Dedicated manager",
+                  "SLA"
+                ],
+                "buttonLabel": "Contact sales",
+                "buttonHref": "#cta",
+                "highlighted": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Ready to ship faster?",
+            "text": "Join 10,000+ teams launching with Launchly. Free for 14 days.",
+            "buttonLabel": "Start your free trial",
+            "buttonHref": "#pricing"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Launchly",
+            "tagline": "Ship your next idea faster.",
+            "links": [
+              {
+                "label": "Features",
+                "href": "#features"
+              },
+              {
+                "label": "Pricing",
+                "href": "#pricing"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              },
+              {
+                "label": "Privacy",
+                "href": "#"
+              },
+              {
+                "label": "Terms",
+                "href": "#"
+              }
+            ],
+            "copyright": "© 2026 Launchly. All rights reserved."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "p_mumpib62v2n9tx",
+  "title": "AMNX",
+  "templateId": "event",
+  "seo": {
+    "metaTitle": "AMNX",
+    "metaDescription": ""
+  },
+  "sections": [
+    "navbar-s_mumpib62g5q3a4",
+    "carousel-s_munseg3h4favru",
+    "hero-s_mumpib627ee77i",
+    "carousel-s_mumqmvbultxti7",
+    "custom-s_mumqmp4eoic0sq",
+    "stats-s_mumpib62ek6lrr",
+    "features-s_mumpib629ehffz",
+    "pricing-s_mumpib62j97wiq",
+    "faq-s_mumpib62wyohpj",
+    "testimonials-s_munslizvddjcfi",
+    "back-to-top-s_munyv8gll65tim",
+    "footer-s_mumpib62itojth"
+  ],
+  "createdAt": "2026-09-29T13:23:00.746Z",
+  "updatedAt": "2026-10-01T10:40:26.974Z"
+}

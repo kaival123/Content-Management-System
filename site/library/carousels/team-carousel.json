@@ -1,0 +1,108 @@
+{
+  "name": "Team carousel",
+  "description": "Team members with photos and roles, four per view.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "Meet the team",
+      "subheading": "The people who make it happen.",
+      "variant": "team",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Aisha Khan",
+          "eyebrow": "Founder & CEO",
+          "text": "Building tools she always wished existed.",
+          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Marco Rossi",
+          "eyebrow": "Head of Design",
+          "text": "Obsessed with clarity and the small details.",
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Lena Park",
+          "eyebrow": "Lead Engineer",
+          "text": "Keeps everything fast and reliable.",
+          "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "David Osei",
+          "eyebrow": "Customer Success",
+          "text": "Your first call when you need a hand.",
+          "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Sofia Martins",
+          "eyebrow": "Product Manager",
+          "text": "Turns customer feedback into roadmaps.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "James Okafor",
+          "eyebrow": "Growth Lead",
+          "text": "Finds new ways to reach the right people.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "align": "center"
+    },
+    "carousel": {
+      "perViewDesktop": 4,
+      "perViewTablet": 3,
+      "perViewMobile": 2,
+      "gap": 20,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

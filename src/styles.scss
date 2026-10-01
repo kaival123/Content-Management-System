@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/admin';
+// Landing-page styles now live in the project (site/styles, site/components) and are
+// loaded at runtime; only the editor's own canvas affordances are bundled here.
+@use 'styles/editor-canvas';

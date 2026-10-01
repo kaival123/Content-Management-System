@@ -1,0 +1,45 @@
+{
+  "name": "Accordion · two-column cards",
+  "description": "Eight short topics in two columns of shadow cards.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "heading": "Good to know",
+      "items": [
+        {
+          "icon": "🕘",
+          "question": "Opening hours",
+          "answer": "Monday to Friday 9:00–18:00, Saturday 10:00–14:00."
+        },
+        {
+          "icon": "📍",
+          "question": "Location",
+          "answer": "12 Market Street, second floor. Step-free access from the side entrance."
+        },
+        {
+          "icon": "🅿️",
+          "question": "Parking",
+          "answer": "Free parking for two hours in the lot behind the building."
+        },
+        {
+          "icon": "💳",
+          "question": "Payment",
+          "answer": "We accept all major cards, Apple Pay and bank transfer."
+        },
+        {
+          "icon": "🗓️",
+          "question": "Bookings",
+          "answer": "Book online up to eight weeks ahead, or call us for same-day slots."
+        },
+        {
+          "icon": "♿",
+          "question": "Accessibility",
+          "answer": "Lift to all floors, accessible restrooms and hearing loop at reception."
+        }
+      ],
+      "layout": "two-column",
+      "style": "cards",
+      "icon": "chevron"
+    }
+  }
+}

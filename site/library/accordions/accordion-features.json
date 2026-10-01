@@ -1,0 +1,36 @@
+{
+  "name": "Accordion · feature details",
+  "description": "Features with an accent bar that lights up when opened.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "anchor": "features",
+      "heading": "Built for how you work",
+      "items": [
+        {
+          "icon": "⚡",
+          "question": "Lightning fast",
+          "answer": "Pages load in under a second on any device, thanks to a global edge network."
+        },
+        {
+          "icon": "🔒",
+          "question": "Secure by default",
+          "answer": "SSL, daily backups and role-based access are included on every plan."
+        },
+        {
+          "icon": "🧩",
+          "question": "Integrations",
+          "answer": "Connect your CRM, analytics and email tools without writing any code."
+        },
+        {
+          "icon": "🌍",
+          "question": "Multi-language",
+          "answer": "Translate pages and serve every visitor in their own language."
+        }
+      ],
+      "style": "accent",
+      "icon": "chevron",
+      "singleOpen": true
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "s_mumpib62j97wiq",
+  "type": "pricing",
+  "visible": true,
+  "data": {
+    "anchor": "pricing",
+    "heading": "Tickets",
+    "subheading": "Early-bird pricing ends soon.",
+    "plans": [
+      {
+        "name": "Online",
+        "price": "$49",
+        "period": "",
+        "description": "Live stream access",
+        "features": [
+          "All keynotes",
+          "Recordings"
+        ],
+        "buttonLabel": "Buy Online Pass",
+        "buttonHref": "#",
+        "highlighted": false
+      },
+      {
+        "name": "In-person",
+        "price": "$299",
+        "period": "",
+        "description": "Full conference pass",
+        "features": [
+          "All talks & workshops",
+          "Lunch & after-party",
+          "Recordings"
+        ],
+        "buttonLabel": "Buy Ticket",
+        "buttonHref": "#",
+        "highlighted": true
+      },
+      {
+        "name": "Offline",
+        "price": "$599",
+        "period": "",
+        "description": "Full access",
+        "features": [
+          "All talks & workshops",
+          "Lunch & after-party",
+          "Recordings"
+        ],
+        "buttonLabel": "Buy Online Pass",
+        "buttonHref": "",
+        "highlighted": false
+      }
+    ]
+  },
+  "style": {
+    "background": "__surface__",
+    "textColor": "",
+    "paddingY": 80,
+    "align": "center"
+  },
+  "grid": {
+    "desktop": 3,
+    "tablet": 2,
+    "mobile": 1,
+    "gap": 28,
+    "rowHeight": 200,
+    "cardStyle": "bordered",
+    "itemAlign": "stretch",
+    "textAlign": "left"
+  }
+}

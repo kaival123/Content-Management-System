@@ -1,0 +1,127 @@
+{
+  "type": "testimonials",
+  "label": "Testimonials",
+  "description": "Customer quotes with name and role",
+  "icon": "quote",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "items",
+      "label": "Testimonials",
+      "type": "list",
+      "itemLabel": "Testimonial",
+      "itemFields": [
+        {
+          "key": "quote",
+          "label": "Quote",
+          "type": "textarea"
+        },
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "key": "role",
+          "label": "Role / company",
+          "type": "text"
+        },
+        {
+          "key": "avatar",
+          "label": "Avatar",
+          "type": "image"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "card",
+      "label": "Testimonial cards",
+      "kind": "box",
+      "list": "items",
+      "fields": [
+        "quote",
+        "name",
+        "role",
+        "avatar"
+      ]
+    },
+    {
+      "key": "quote",
+      "label": "Quotes",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "quote"
+      ]
+    },
+    {
+      "key": "avatar",
+      "label": "Avatars",
+      "kind": "image",
+      "list": "items",
+      "fields": [
+        "avatar"
+      ]
+    },
+    {
+      "key": "name",
+      "label": "Names",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "name"
+      ]
+    },
+    {
+      "key": "role",
+      "label": "Roles",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "role"
+      ]
+    }
+  ],
+  "defaults": {
+    "heading": "Loved by teams everywhere",
+    "items": [
+      {
+        "quote": "This completely changed how our team works. We shipped twice as fast.",
+        "name": "Priya Sharma",
+        "role": "CTO, Acme",
+        "avatar": ""
+      },
+      {
+        "quote": "The easiest tool we have adopted this year. Onboarding took minutes.",
+        "name": "Daniel Lee",
+        "role": "Founder, Northwind",
+        "avatar": ""
+      },
+      {
+        "quote": "Support is incredible and the product just keeps getting better.",
+        "name": "Maria Garcia",
+        "role": "Head of Ops, Globex",
+        "avatar": ""
+      }
+    ]
+  },
+  "grid": {
+    "desktop": 3,
+    "tablet": 2,
+    "mobile": 1
+  }
+}

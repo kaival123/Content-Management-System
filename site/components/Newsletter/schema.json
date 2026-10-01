@@ -1,0 +1,29 @@
+{
+  "type": "newsletter",
+  "label": "Newsletter signup",
+  "description": "Email capture form with heading and privacy note",
+  "icon": "mail",
+  "fields": [
+    { "key": "heading", "label": "Heading", "type": "text" },
+    { "key": "text", "label": "Text", "type": "textarea" },
+    { "key": "placeholder", "label": "Email placeholder", "type": "text" },
+    { "key": "buttonLabel", "label": "Button label", "type": "text" },
+    { "key": "note", "label": "Small print", "type": "text" },
+    { "key": "successMessage", "label": "Success message", "type": "text" }
+  ],
+  "elements": [
+    { "key": "heading", "label": "Heading", "kind": "text", "fields": ["heading"] },
+    { "key": "text", "label": "Text", "kind": "text", "fields": ["text"] },
+    { "key": "form", "label": "Form", "kind": "box", "fields": ["placeholder", "buttonLabel", "successMessage"] },
+    { "key": "button", "label": "Button", "kind": "button", "fields": ["buttonLabel"] }
+  ],
+  "defaults": {
+    "heading": "Get the newsletter",
+    "text": "One email a month with our best ideas. No spam, ever.",
+    "placeholder": "you@example.com",
+    "buttonLabel": "Subscribe",
+    "note": "You can unsubscribe at any time.",
+    "successMessage": "Thanks for subscribing!"
+  },
+  "defaultStyle": { "background": "__surface__" }
+}

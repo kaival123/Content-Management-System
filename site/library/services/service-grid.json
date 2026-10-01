@@ -1,0 +1,79 @@
+{
+  "name": "Service blocks grid",
+  "description": "Mixed-size grid of services with a featured block and buttons.",
+  "section": {
+    "type": "grid",
+    "data": {
+      "heading": "Services built around your goals",
+      "subheading": "Pick a single service or combine them into a full engagement.",
+      "items": [
+        {
+          "heading": "Product design",
+          "text": "Research, UX and UI for web and mobile products, from prototype to polished release.",
+          "icon": "",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80",
+          "buttonLabel": "Explore product design",
+          "buttonHref": "#",
+          "colSpan": "2",
+          "rowSpan": "2",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Consulting",
+          "text": "Hands-on advice for teams scaling their product.",
+          "icon": "🧠",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Content",
+          "text": "Copy, video and photography that tells your story.",
+          "icon": "✍️",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Engineering",
+          "text": "Reliable front-end and back-end development with long-term support.",
+          "icon": "🛠️",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "2",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Not sure where to start?",
+          "text": "Book a free 30-minute call and we will recommend the right mix of services for your budget.",
+          "icon": "📞",
+          "image": "",
+          "buttonLabel": "Book a free call",
+          "buttonHref": "#contact",
+          "colSpan": "4",
+          "rowSpan": "1",
+          "background": "__surface__",
+          "textColor": ""
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20
+    }
+  }
+}

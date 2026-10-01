@@ -1,0 +1,23 @@
+<header class="lp-head">
+  <h2 class="lp-h2" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h2>
+  {{#if subheading}}<p class="lp-lead lp-pre" data-el="subheading" data-edit="subheading">{{subheading}}</p>{{/if}}
+</header>
+<div class="lp-grid" data-grid>
+  {{#each products}}
+  <article class="lp-card lp-product" data-el="card">
+    <div class="lp-product-media">
+      {{#if image}}<img data-el="image" src="{{image}}" alt="{{name}}" />{{/if}}
+      {{#if badge}}<span class="lp-product-badge">{{badge}}</span>{{/if}}
+    </div>
+    <h3 class="lp-h3" data-el="name" data-edit="name">{{name}}</h3>
+    {{#if rating}}<span class="lp-product-rating">★ {{rating}}</span>{{/if}}
+    <div class="lp-product-price" data-el="price">
+      <span data-edit="price">{{price}}</span>
+      {{#if oldPrice}}<s>{{oldPrice}}</s>{{/if}}
+    </div>
+    {{#if buttonLabel}}
+    <a class="lp-btn lp-btn-primary lp-btn-sm lp-el-full" data-el="button" data-edit="buttonLabel" href="{{buttonHref}}">{{buttonLabel}}</a>
+    {{/if}}
+  </article>
+  {{/each}}
+</div>

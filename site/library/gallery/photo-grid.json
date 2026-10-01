@@ -1,0 +1,58 @@
+{
+  "name": "Photo grid",
+  "description": "Three-column photo grid in landscape format.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Life at the studio",
+      "subheading": "Snapshots from workshops, launches and everyday moments.",
+      "shape": "4/3",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+          "title": "Team workshop",
+          "caption": "Culture",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "title": "Our office",
+          "caption": "Workspace",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "title": "Design sprint",
+          "caption": "Process",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "title": "Quiet corner",
+          "caption": "Workspace",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80",
+          "title": "Launch day",
+          "caption": "Events",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+          "title": "Remote Fridays",
+          "caption": "Culture",
+          "link": ""
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "none"
+    }
+  }
+}

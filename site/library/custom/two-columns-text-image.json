@@ -1,0 +1,80 @@
+{
+  "name": "Two columns: text + image",
+  "description": "Heading, text, checklist and button beside a large image.",
+  "section": {
+    "type": "custom",
+    "data": {
+      "anchor": "",
+      "layout": "1-1",
+      "gap": 48,
+      "verticalAlign": "center",
+      "stackOn": "tablet",
+      "columns": [
+        {
+          "id": "c1",
+          "style": {},
+          "elements": [
+            {
+              "id": "e2",
+              "type": "heading",
+              "data": {
+                "text": "Everything in one place",
+                "level": "h2"
+              },
+              "style": {}
+            },
+            {
+              "id": "e3",
+              "type": "text",
+              "data": {
+                "text": "Bring your projects, docs and conversations together so nothing slips through the cracks."
+              },
+              "style": {}
+            },
+            {
+              "id": "e4",
+              "type": "list",
+              "data": {
+                "items": [
+                  "Unlimited projects and pages",
+                  "Real-time collaboration",
+                  "Built-in analytics"
+                ],
+                "marker": "✓"
+              },
+              "style": {}
+            },
+            {
+              "id": "e5",
+              "type": "button",
+              "data": {
+                "label": "Start free trial",
+                "href": "#cta",
+                "variant": "primary",
+                "newTab": false
+              },
+              "style": {}
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "style": {},
+          "elements": [
+            {
+              "id": "e7",
+              "type": "image",
+              "data": {
+                "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+                "alt": "Bright modern office with a team at work",
+                "href": "",
+                "caption": ""
+              },
+              "style": {}
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

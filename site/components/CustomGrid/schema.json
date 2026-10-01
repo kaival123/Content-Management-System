@@ -1,0 +1,263 @@
+{
+  "type": "grid",
+  "label": "Custom grid",
+  "description": "Free-form grid of blocks with adjustable size",
+  "icon": "layout-grid",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "type": "textarea"
+    },
+    {
+      "key": "items",
+      "label": "Blocks",
+      "type": "list",
+      "itemLabel": "Block",
+      "itemFields": [
+        {
+          "key": "heading",
+          "label": "Heading",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea"
+        },
+        {
+          "key": "icon",
+          "label": "Icon (emoji)",
+          "type": "text"
+        },
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image"
+        },
+        {
+          "key": "buttonLabel",
+          "label": "Button label",
+          "type": "text"
+        },
+        {
+          "key": "buttonHref",
+          "label": "Button link",
+          "type": "url"
+        },
+        {
+          "key": "colSpan",
+          "label": "Width (columns)",
+          "type": "select",
+          "options": [
+            {
+              "label": "1 column",
+              "value": "1"
+            },
+            {
+              "label": "2 columns",
+              "value": "2"
+            },
+            {
+              "label": "3 columns",
+              "value": "3"
+            },
+            {
+              "label": "4 columns",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "key": "rowSpan",
+          "label": "Height (rows)",
+          "type": "select",
+          "options": [
+            {
+              "label": "1 row",
+              "value": "1"
+            },
+            {
+              "label": "2 rows",
+              "value": "2"
+            },
+            {
+              "label": "3 rows",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "key": "background",
+          "label": "Background colour",
+          "type": "color"
+        },
+        {
+          "key": "textColor",
+          "label": "Text colour",
+          "type": "color"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "subheading",
+      "label": "Subheading",
+      "kind": "text",
+      "fields": [
+        "subheading"
+      ]
+    },
+    {
+      "key": "card",
+      "label": "Blocks",
+      "kind": "box",
+      "list": "items",
+      "fields": [
+        "heading",
+        "text",
+        "icon",
+        "image",
+        "buttonLabel",
+        "buttonHref",
+        "colSpan",
+        "rowSpan",
+        "background",
+        "textColor"
+      ]
+    },
+    {
+      "key": "itemImage",
+      "label": "Block images",
+      "kind": "image",
+      "list": "items",
+      "fields": [
+        "image"
+      ]
+    },
+    {
+      "key": "icon",
+      "label": "Block icons",
+      "kind": "box",
+      "list": "items",
+      "fields": [
+        "icon"
+      ]
+    },
+    {
+      "key": "itemHeading",
+      "label": "Block headings",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "itemText",
+      "label": "Block text",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "text"
+      ]
+    },
+    {
+      "key": "itemButton",
+      "label": "Block buttons",
+      "kind": "button",
+      "list": "items",
+      "fields": [
+        "buttonLabel",
+        "buttonHref"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "",
+    "heading": "Explore what we offer",
+    "subheading": "Mix and match blocks of different sizes to build any layout.",
+    "items": [
+      {
+        "heading": "Our flagship product",
+        "text": "A bigger block that spans two columns and two rows to grab attention.",
+        "icon": "",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+        "buttonLabel": "Learn more",
+        "buttonHref": "#",
+        "colSpan": "2",
+        "rowSpan": "2",
+        "background": "",
+        "textColor": ""
+      },
+      {
+        "heading": "Fast setup",
+        "text": "Get going in minutes.",
+        "icon": "🚀",
+        "image": "",
+        "buttonLabel": "",
+        "buttonHref": "",
+        "colSpan": "1",
+        "rowSpan": "1",
+        "background": "",
+        "textColor": ""
+      },
+      {
+        "heading": "24/7 support",
+        "text": "Real people, any time.",
+        "icon": "💬",
+        "image": "",
+        "buttonLabel": "",
+        "buttonHref": "",
+        "colSpan": "1",
+        "rowSpan": "1",
+        "background": "",
+        "textColor": ""
+      },
+      {
+        "heading": "Global reach",
+        "text": "Serve customers in 120+ countries with local payment methods.",
+        "icon": "🌍",
+        "image": "",
+        "buttonLabel": "",
+        "buttonHref": "",
+        "colSpan": "2",
+        "rowSpan": "1",
+        "background": "",
+        "textColor": ""
+      },
+      {
+        "heading": "Works with your tools",
+        "text": "Connect Slack, Google Workspace, Stripe and 100+ other integrations in a click.",
+        "icon": "🔌",
+        "image": "",
+        "buttonLabel": "See all integrations",
+        "buttonHref": "#",
+        "colSpan": "4",
+        "rowSpan": "1",
+        "background": "__surface__",
+        "textColor": ""
+      }
+    ]
+  },
+  "grid": {
+    "desktop": 4,
+    "tablet": 2,
+    "mobile": 1,
+    "gap": 20
+  }
+}

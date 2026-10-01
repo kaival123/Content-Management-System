@@ -1,0 +1,293 @@
+{
+  "id": "business",
+  "kind": "single",
+  "category": "Business",
+  "name": "Local Consultancy",
+  "description": "A one-page site for a local consultancy: services, results, testimonials and a contact form.",
+  "preview": [
+    "#ffffff",
+    "#1e3a8a",
+    "#d97706"
+  ],
+  "theme": {
+    "primaryColor": "#1e3a8a",
+    "accentColor": "#d97706",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f8fafc",
+    "textColor": "#0f172a",
+    "fontFamily": "Manrope",
+    "headingFont": "Lora",
+    "radius": 8,
+    "maxWidth": 1160
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Harbor & Pine",
+            "links": [
+              {
+                "label": "Services",
+                "href": "#services"
+              },
+              {
+                "label": "About",
+                "href": "#about"
+              },
+              {
+                "label": "Results",
+                "href": "#results"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Book a consultation",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Advisory for small and mid-sized businesses",
+            "heading": "Clear advice for the decisions that shape your business",
+            "subheading": "Harbor & Pine helps owner-led companies in the Portland area plan growth, fix cash flow and build teams that last.",
+            "primaryLabel": "Book a free consultation",
+            "primaryHref": "#contact",
+            "secondaryLabel": "Our services",
+            "secondaryHref": "#services",
+            "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Trusted by local businesses including",
+            "logos": [
+              {
+                "name": "Cascade Dental",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Riverbend Foods",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Oakline Builders",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Summit Physio",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Pearl Street Cafe",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Willamette Print",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "anchor": "services",
+            "heading": "How we help",
+            "subheading": "Practical support from advisors who have run businesses themselves.",
+            "items": [
+              {
+                "icon": "📊",
+                "title": "Financial planning",
+                "text": "Budgets, forecasts and cash-flow plans you can actually use."
+              },
+              {
+                "icon": "🧭",
+                "title": "Growth strategy",
+                "text": "Find the markets, offers and channels worth your time."
+              },
+              {
+                "icon": "👥",
+                "title": "People & hiring",
+                "text": "Org design, hiring plans and leadership coaching."
+              },
+              {
+                "icon": "⚙️",
+                "title": "Operations",
+                "text": "Streamline processes so the business runs without you."
+              },
+              {
+                "icon": "🤝",
+                "title": "Succession planning",
+                "text": "Prepare for a sale, merger or handover on your terms."
+              },
+              {
+                "icon": "📑",
+                "title": "Board advisory",
+                "text": "An experienced voice in the room for big decisions."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "bordered"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Local advisors, real-world experience",
+            "text": "Founded in 2011, Harbor & Pine is a team of eight advisors with backgrounds in finance, operations and entrepreneurship. We work side by side with owners — no thick reports, just clear priorities and follow-through.",
+            "bullets": [
+              "Fixed-fee engagements, no surprises",
+              "A dedicated advisor for every client",
+              "Monthly check-ins after every project"
+            ],
+            "buttonLabel": "Meet the team",
+            "buttonHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+            "imageSide": "right"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "anchor": "results",
+            "heading": "Results our clients see",
+            "items": [
+              {
+                "value": "240+",
+                "label": "Businesses advised"
+              },
+              {
+                "value": "32%",
+                "label": "Average revenue growth"
+              },
+              {
+                "value": "14 yrs",
+                "label": "Serving the region"
+              },
+              {
+                "value": "4.9★",
+                "label": "Client rating"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "What owners say",
+            "items": [
+              {
+                "quote": "Harbor & Pine gave us a plan we could follow and the confidence to open our second location.",
+                "name": "Rachel Moore",
+                "role": "Owner, Pearl Street Cafe",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              },
+              {
+                "quote": "Within six months our cash flow went from stressful to predictable. Worth every penny.",
+                "name": "James Carter",
+                "role": "Director, Oakline Builders",
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+              },
+              {
+                "quote": "They helped us hire our first managers and finally step back from day-to-day work.",
+                "name": "Sofia Alvarez",
+                "role": "Founder, Summit Physio",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Common questions",
+            "items": [
+              {
+                "question": "How does the first consultation work?",
+                "answer": "It is a free 45-minute call or meeting where we learn about your business and suggest where we can help. No obligation."
+              },
+              {
+                "question": "What does an engagement cost?",
+                "answer": "Most projects are fixed-fee between $2,500 and $12,000 depending on scope. You will know the price before we start."
+              },
+              {
+                "question": "Do you only work with local businesses?",
+                "answer": "Most of our clients are in Oregon and Washington, but we work remotely with companies across the US."
+              },
+              {
+                "question": "How long does a typical project take?",
+                "answer": "Between four and twelve weeks, followed by optional monthly advisory sessions."
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Book your free consultation",
+            "text": "Tell us a little about your business and we will reply within one working day.",
+            "email": "hello@harborandpine.com",
+            "phone": "+1 (503) 555-0142",
+            "address": "210 SW Morrison Street, Suite 400\nPortland, OR 97204",
+            "buttonLabel": "Request consultation",
+            "successMessage": "Thank you — an advisor will be in touch within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Harbor & Pine",
+            "tagline": "Business advisory for owner-led companies.",
+            "links": [
+              {
+                "label": "Services",
+                "href": "#services"
+              },
+              {
+                "label": "About",
+                "href": "#about"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Harbor & Pine. All rights reserved."
+          }
+        }
+      ]
+    }
+  ]
+}

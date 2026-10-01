@@ -1,0 +1,91 @@
+{
+  "id": "s_mumqmp4eoic0sq",
+  "type": "custom",
+  "visible": true,
+  "data": {
+    "anchor": "",
+    "layout": "1-1",
+    "gap": 48,
+    "verticalAlign": "center",
+    "stackOn": "tablet",
+    "columns": [
+      {
+        "id": "c_mumqmp4etgp1ef",
+        "elements": [
+          {
+            "id": "e_mumqmp4e26cbs7",
+            "type": "heading",
+            "data": {
+              "text": "Build any layout you like",
+              "level": "h2"
+            },
+            "style": {}
+          },
+          {
+            "id": "e_mumqmp4edn2rqn",
+            "type": "text",
+            "data": {
+              "text": "This is a custom section. Pick a column layout, add headings, text, images, buttons, videos and more, then style every element."
+            },
+            "style": {}
+          },
+          {
+            "id": "e_mumqmp4eqhcn1r",
+            "type": "list",
+            "data": {
+              "items": [
+                "First benefit",
+                "Second benefit",
+                "Third benefit"
+              ],
+              "marker": "✓"
+            },
+            "style": {}
+          },
+          {
+            "id": "e_mumqmp4e9fzflq",
+            "type": "button",
+            "data": {
+              "label": "Get started",
+              "href": "#",
+              "variant": "primary",
+              "newTab": false
+            },
+            "style": {}
+          }
+        ],
+        "style": {}
+      },
+      {
+        "id": "c_mumqmp4ey8yr2h",
+        "elements": [
+          {
+            "id": "e_mumqmp4enegzqh",
+            "type": "image",
+            "data": {
+              "src": "https://images3.alphacoders.com/141/thumb-1920-1411451.jpg",
+              "alt": "",
+              "href": "",
+              "caption": ""
+            },
+            "style": {
+              "aspectRatio": "4/3",
+              "objectFit": "cover",
+              "radius": 13,
+              "borderWidth": 0,
+              "shadow": "none",
+              "marginTop": 0
+            }
+          }
+        ],
+        "style": {}
+      }
+    ]
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 80,
+    "align": "center"
+  }
+}

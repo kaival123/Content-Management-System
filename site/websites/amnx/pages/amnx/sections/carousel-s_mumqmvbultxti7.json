@@ -1,0 +1,124 @@
+{
+  "id": "s_mumqmvbultxti7",
+  "type": "carousel",
+  "visible": true,
+  "data": {
+    "heading": "Featured work",
+    "subheading": "Swipe, drag or use the arrows to browse.",
+    "variant": "card",
+    "slideHeight": 0,
+    "overlay": 45,
+    "slides": [
+      {
+        "heading": "Brand refresh",
+        "eyebrow": "Branding",
+        "text": "A new identity for a fast-growing fintech.",
+        "image": "https://images.wallpapersden.com/image/download/invincible-prime-superhero_bmZramaUmZqaraWkpJRmbmlprWZlbmk.jpg",
+        "price": "",
+        "buttonLabel": "View project",
+        "buttonHref": "#",
+        "background": "",
+        "textColor": "",
+        "html": ""
+      },
+      {
+        "heading": "Mobile banking app",
+        "eyebrow": "Product design",
+        "text": "Designing a calmer way to manage money.",
+        "image": "https://w0.peakpx.com/wallpaper/25/212/HD-wallpaper-avengers-endgame-final-team.jpg",
+        "price": "",
+        "buttonLabel": "View project",
+        "buttonHref": "#",
+        "background": "",
+        "textColor": "",
+        "html": ""
+      },
+      {
+        "heading": "E-commerce relaunch",
+        "eyebrow": "Web",
+        "text": "A storefront that doubled conversion.",
+        "image": "https://images4.alphacoders.com/140/thumb-1920-1407249.jpg",
+        "price": "",
+        "buttonLabel": "View project",
+        "buttonHref": "#",
+        "background": "",
+        "textColor": "",
+        "html": ""
+      },
+      {
+        "heading": "Analytics dashboard",
+        "eyebrow": "SaaS",
+        "text": "Turning complex data into clear decisions.",
+        "image": "https://4kwallpapers.com/images/walls/thumbs_3t/26919.jpg",
+        "price": "",
+        "buttonLabel": "View project",
+        "buttonHref": "#",
+        "background": "",
+        "textColor": "",
+        "html": ""
+      },
+      {
+        "heading": "Travel booking",
+        "eyebrow": "UX research",
+        "text": "Simplifying multi-city trip planning.",
+        "image": "https://4kwallpapers.com/images/walls/thumbs_3t/17768.jpg",
+        "price": "",
+        "buttonLabel": "View project",
+        "buttonHref": "#",
+        "background": "",
+        "textColor": "",
+        "html": ""
+      }
+    ]
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 80,
+    "align": "center",
+    "paddingTop": 80,
+    "width": "boxed",
+    "backgroundType": "color"
+  },
+  "carousel": {
+    "perViewDesktop": 3,
+    "perViewTablet": 2,
+    "perViewMobile": 1,
+    "gap": 22,
+    "autoplay": true,
+    "autoplaySpeed": 4000,
+    "speed": 500,
+    "loop": true,
+    "arrows": true,
+    "dots": true,
+    "drag": true,
+    "touch": true,
+    "keyboard": true,
+    "center": false,
+    "transition": "slide",
+    "pauseOnHover": true,
+    "arrowPosition": "outside",
+    "arrowStyle": "solid",
+    "arrowSize": 46,
+    "prevX": 0,
+    "prevY": 0,
+    "nextX": 0,
+    "nextY": 0,
+    "dotsPosition": "below",
+    "dotsStyle": "pills",
+    "controlColor": ""
+  },
+  "elements": {
+    "heading": {
+      "fontSize": 30,
+      "lineHeight": 1.35,
+      "textAlign": "center"
+    },
+    "slide": {
+      "fontSize": 19
+    },
+    "slideImage": {
+      "aspectRatio": "auto"
+    }
+  }
+}

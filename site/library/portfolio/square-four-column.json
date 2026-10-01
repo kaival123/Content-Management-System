@@ -1,0 +1,70 @@
+{
+  "name": "Square portfolio grid",
+  "description": "Eight square thumbnails in four columns with captions below.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Recent work",
+      "subheading": "",
+      "shape": "1/1",
+      "captionOnHover": false,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "title": "Brand refresh",
+          "caption": "Branding",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80",
+          "title": "Mobile banking",
+          "caption": "Product",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "title": "Storefront relaunch",
+          "caption": "E-commerce",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+          "title": "Analytics suite",
+          "caption": "SaaS",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Type specimen",
+          "caption": "Print",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+          "title": "Coffee labels",
+          "caption": "Packaging",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "title": "Portfolio site",
+          "caption": "Web",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+          "title": "Product launch",
+          "caption": "Campaign",
+          "link": ""
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 12,
+      "cardStyle": "none"
+    }
+  }
+}

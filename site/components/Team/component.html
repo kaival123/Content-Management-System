@@ -1,0 +1,21 @@
+<header class="lp-head">
+  <h2 class="lp-h2" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h2>
+  {{#if subheading}}<p class="lp-lead lp-pre" data-el="subheading" data-edit="subheading">{{subheading}}</p>{{/if}}
+</header>
+<div class="lp-grid" data-grid>
+  {{#each members}}
+  <figure class="lp-card lp-member" data-el="card">
+    {{#if photo}}
+    <img class="lp-member-photo" data-el="photo" src="{{photo}}" alt="{{name}}" />
+    {{else}}
+    <span class="lp-avatar lp-member-photo" data-el="photo">{{initials name}}</span>
+    {{/if}}
+    <figcaption>
+      <strong class="lp-member-name" data-el="name" data-edit="name">{{name}}</strong>
+      <small class="lp-member-role" data-el="role" data-edit="role">{{role}}</small>
+      {{#if bio}}<p class="lp-pre">{{bio}}</p>{{/if}}
+      {{#if link}}<a class="lp-member-link" href="{{link}}" target="_blank" rel="noopener">Profile →</a>{{/if}}
+    </figcaption>
+  </figure>
+  {{/each}}
+</div>

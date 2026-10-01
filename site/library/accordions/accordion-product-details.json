@@ -1,0 +1,41 @@
+{
+  "name": "Accordion · product details",
+  "description": "Shipping, returns, materials — compact rows for a product page.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "anchor": "details",
+      "heading": "Product details",
+      "items": [
+        {
+          "icon": "📦",
+          "question": "Shipping",
+          "answer": "Free standard shipping on orders over $50. Express delivery in 1–2 business days."
+        },
+        {
+          "icon": "↩️",
+          "question": "Returns",
+          "answer": "30-day free returns. Send it back in its original packaging for a full refund."
+        },
+        {
+          "icon": "🧵",
+          "question": "Materials & care",
+          "answer": "100% organic cotton. Machine wash cold, tumble dry low."
+        },
+        {
+          "icon": "📏",
+          "question": "Size guide",
+          "answer": "True to size. If you’re between sizes, we recommend sizing up."
+        }
+      ],
+      "style": "minimal",
+      "icon": "plus",
+      "iconPosition": "right",
+      "speed": 260
+    },
+    "style": {
+      "paddingTop": 48,
+      "paddingBottom": 48
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/* Team section */
+
+.lp-member {
+  margin: 0;
+}
+
+.lp-member-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--lp-radius);
+  margin-bottom: 14px;
+  font-size: 2.2rem;
+}
+
+.lp-member-name {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.lp-member-role {
+  display: block;
+  opacity: 0.65;
+}
+
+.lp-member p {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.lp-member-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--lp-primary);
+  text-decoration: none;
+}

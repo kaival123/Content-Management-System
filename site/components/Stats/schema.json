@@ -1,0 +1,100 @@
+{
+  "type": "stats",
+  "label": "Stats",
+  "description": "Row of big numbers with labels",
+  "icon": "chart",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "items",
+      "label": "Stats",
+      "type": "list",
+      "itemLabel": "Stat",
+      "itemFields": [
+        {
+          "key": "value",
+          "label": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "card",
+      "label": "Stat boxes",
+      "kind": "box",
+      "list": "items",
+      "fields": [
+        "value",
+        "label"
+      ]
+    },
+    {
+      "key": "value",
+      "label": "Numbers",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "value"
+      ]
+    },
+    {
+      "key": "label",
+      "label": "Labels",
+      "kind": "text",
+      "list": "items",
+      "fields": [
+        "label"
+      ]
+    }
+  ],
+  "defaults": {
+    "heading": "",
+    "items": [
+      {
+        "value": "10k+",
+        "label": "Customers"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime"
+      },
+      {
+        "value": "24/7",
+        "label": "Support"
+      },
+      {
+        "value": "4.9★",
+        "label": "Average rating"
+      }
+    ]
+  },
+  "defaultStyle": {
+    "paddingY": 56
+  },
+  "grid": {
+    "desktop": 4,
+    "tablet": 2,
+    "mobile": 2,
+    "cardStyle": "none",
+    "textAlign": "center"
+  }
+}

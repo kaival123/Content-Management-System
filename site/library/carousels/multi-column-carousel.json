@@ -1,0 +1,129 @@
+{
+  "name": "Multi-column carousel",
+  "description": "Compact cards, five per view on desktop with a tight gap.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "Explore categories",
+      "subheading": "",
+      "variant": "card",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Branding",
+          "eyebrow": "",
+          "text": "Logos, identity and guidelines.",
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Web design",
+          "eyebrow": "",
+          "text": "Sites that load fast and convert.",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Mobile apps",
+          "eyebrow": "",
+          "text": "iOS and Android products.",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "E-commerce",
+          "eyebrow": "",
+          "text": "Storefronts that sell.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Dashboards",
+          "eyebrow": "",
+          "text": "Data made readable.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Packaging",
+          "eyebrow": "",
+          "text": "Products worth unboxing.",
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Campaigns",
+          "eyebrow": "",
+          "text": "Launches people notice.",
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Print",
+          "eyebrow": "",
+          "text": "Posters, books and more.",
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 5,
+      "perViewTablet": 3,
+      "perViewMobile": 2,
+      "gap": 16,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

@@ -1,0 +1,924 @@
+{
+  "id": "corporate-website",
+  "kind": "multi",
+  "category": "Corporate",
+  "name": "Corporate Website",
+  "description": "A professional corporate site with company, leadership, careers, services, investor relations and news pages.",
+  "preview": [
+    "#ffffff",
+    "#0f3d5e",
+    "#14b8a6"
+  ],
+  "theme": {
+    "primaryColor": "#0f3d5e",
+    "accentColor": "#14b8a6",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f3f6f9",
+    "textColor": "#102a43",
+    "fontFamily": "Manrope",
+    "headingFont": "Montserrat",
+    "radius": 6,
+    "maxWidth": 1200
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Meridian Group",
+            "useSiteMenu": true,
+            "ctaLabel": "Contact us",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Engineering · Energy · Infrastructure",
+            "heading": "Building the infrastructure of tomorrow",
+            "subheading": "Meridian Group designs, builds and operates sustainable infrastructure in 28 countries.",
+            "primaryLabel": "Our services",
+            "primaryHref": "page:services",
+            "secondaryLabel": "Investor relations",
+            "secondaryHref": "page:investors",
+            "image": "",
+            "layout": "center"
+          },
+          "style": {
+            "backgroundType": "image",
+            "backgroundImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+            "overlayColor": "#0f3d5e",
+            "overlayOpacity": 70,
+            "textColor": "#ffffff",
+            "minHeight": 80,
+            "paddingY": 140
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "$8.4B",
+                "label": "Annual revenue"
+              },
+              {
+                "value": "28",
+                "label": "Countries"
+              },
+              {
+                "value": "21,000",
+                "label": "Employees"
+              },
+              {
+                "value": "1962",
+                "label": "Founded"
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "What we do",
+            "subheading": "Integrated expertise across the full project lifecycle.",
+            "items": [
+              {
+                "icon": "🏗️",
+                "title": "Engineering",
+                "text": "Design and project management for complex assets."
+              },
+              {
+                "icon": "⚡",
+                "title": "Energy",
+                "text": "Renewable generation and grid modernisation."
+              },
+              {
+                "icon": "🚆",
+                "title": "Transport",
+                "text": "Rail, roads and ports that connect communities."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "shadow"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Committed to net zero by 2040",
+            "text": "Sustainability guides every decision we make — from the materials we specify to the projects we choose to pursue.",
+            "bullets": [
+              "62% of revenue from low-carbon projects",
+              "Science-based emissions targets",
+              "Annual independently audited ESG report"
+            ],
+            "buttonLabel": "About Meridian",
+            "buttonHref": "page:about",
+            "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=80",
+            "imageSide": "right"
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "Latest news",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "Meridian wins $1.1B offshore wind contract",
+                "excerpt": "Our largest renewable project to date.",
+                "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+                "category": "Press release",
+                "date": "Sep 22, 2026",
+                "author": "Corporate Communications",
+                "link": "page:news"
+              },
+              {
+                "title": "Q2 2026 results: record order book",
+                "excerpt": "Revenue up 11% year on year.",
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+                "category": "Investors",
+                "date": "Aug 6, 2026",
+                "author": "Investor Relations",
+                "link": "page:investors"
+              },
+              {
+                "title": "Our 2026 sustainability report",
+                "excerpt": "Progress towards net zero.",
+                "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80",
+                "category": "ESG",
+                "date": "Jul 15, 2026",
+                "author": "Sustainability Office",
+                "link": "page:news"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Partner with Meridian",
+            "text": "Talk to our team about your next project.",
+            "buttonLabel": "Contact us",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Meridian Group",
+            "tagline": "Building infrastructure for a sustainable future.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Meridian Group. All rights reserved."
+          },
+          "style": {
+            "background": "#0b2436",
+            "textColor": "#cbd5e1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Meridian Group",
+            "useSiteMenu": true,
+            "ctaLabel": "Contact us",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / About",
+            "heading": "About Meridian",
+            "text": "Six decades of engineering excellence, guided by purpose."
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Our purpose",
+            "text": "We exist to build infrastructure that improves lives and protects the planet. Since 1962 we have delivered more than 4,000 projects, from bridges and hospitals to wind farms and smart grids.",
+            "bullets": [
+              "Headquartered in Rotterdam",
+              "Listed on Euronext Amsterdam",
+              "Operations on five continents"
+            ],
+            "buttonLabel": "Meet our leadership",
+            "buttonHref": "page:leadership",
+            "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Our values",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🛡️",
+                "title": "Safety first",
+                "text": "Everyone goes home safe, every day."
+              },
+              {
+                "icon": "🌱",
+                "title": "Sustainability",
+                "text": "We build for the next generation."
+              },
+              {
+                "icon": "🤝",
+                "title": "Integrity",
+                "text": "We do what we say, openly and honestly."
+              },
+              {
+                "icon": "💡",
+                "title": "Innovation",
+                "text": "We challenge convention to find better ways."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "none",
+            "textAlign": "center"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Learn more",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Leadership",
+                "text": "The executive team and board guiding our strategy.",
+                "icon": "👔",
+                "image": "",
+                "buttonLabel": "Meet the team",
+                "buttonHref": "page:leadership",
+                "colSpan": "2",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Careers",
+                "text": "Join 21,000 people building a better world.",
+                "icon": "🚀",
+                "image": "",
+                "buttonLabel": "View careers",
+                "buttonHref": "page:careers",
+                "colSpan": "2",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Meridian Group",
+            "tagline": "Building infrastructure for a sustainable future.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Meridian Group. All rights reserved."
+          },
+          "style": {
+            "background": "#0b2436",
+            "textColor": "#cbd5e1"
+          }
+        }
+      ],
+      "children": [
+        {
+          "slug": "leadership",
+          "title": "Leadership",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Meridian Group",
+                "useSiteMenu": true,
+                "ctaLabel": "Contact us",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / About / Leadership",
+                "heading": "Leadership",
+                "text": "An experienced team committed to long-term, sustainable growth."
+              }
+            },
+            {
+              "type": "team",
+              "data": {
+                "heading": "Executive committee",
+                "subheading": "",
+                "members": [
+                  {
+                    "name": "Catherine Vos",
+                    "role": "Chief Executive Officer",
+                    "bio": "Joined Meridian in 2004; CEO since 2019.",
+                    "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+                    "link": ""
+                  },
+                  {
+                    "name": "Henrik Larsen",
+                    "role": "Chief Financial Officer",
+                    "bio": "Former CFO of Nordic Energy.",
+                    "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+                    "link": ""
+                  },
+                  {
+                    "name": "Amara Nwosu",
+                    "role": "Chief Operating Officer",
+                    "bio": "25 years leading major projects.",
+                    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+                    "link": ""
+                  },
+                  {
+                    "name": "Thomas Becker",
+                    "role": "Chief Sustainability Officer",
+                    "bio": "Leads our net-zero programme.",
+                    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+                    "link": ""
+                  }
+                ]
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "Governance",
+                "text": "Our Supervisory Board provides independent oversight of strategy, risk and performance, in line with the Dutch Corporate Governance Code.",
+                "bullets": [
+                  "9 board members, 7 independent",
+                  "44% female board representation",
+                  "Audit, remuneration and ESG committees"
+                ],
+                "buttonLabel": "Investor information",
+                "buttonHref": "page:investors",
+                "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
+                "imageSide": "right"
+              },
+              "style": {
+                "background": "__surface__"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Meridian Group",
+                "tagline": "Building infrastructure for a sustainable future.",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Meridian Group. All rights reserved."
+              },
+              "style": {
+                "background": "#0b2436",
+                "textColor": "#cbd5e1"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "careers",
+          "title": "Careers",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Meridian Group",
+                "useSiteMenu": true,
+                "ctaLabel": "Contact us",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / About / Careers",
+                "heading": "Careers at Meridian",
+                "text": "Build a career that builds the future.",
+                "buttonLabel": "Contact recruiting",
+                "buttonHref": "page:contact"
+              }
+            },
+            {
+              "type": "features",
+              "data": {
+                "heading": "Why join us",
+                "subheading": "",
+                "items": [
+                  {
+                    "icon": "🌍",
+                    "title": "Global projects",
+                    "text": "Work on landmark projects in 28 countries."
+                  },
+                  {
+                    "icon": "📚",
+                    "title": "Learning & growth",
+                    "text": "€3,000 annual learning budget for everyone."
+                  },
+                  {
+                    "icon": "⚖️",
+                    "title": "Flexible working",
+                    "text": "Hybrid work and generous parental leave."
+                  }
+                ]
+              }
+            },
+            {
+              "type": "stats",
+              "data": {
+                "items": [
+                  {
+                    "value": "1,800",
+                    "label": "Open roles"
+                  },
+                  {
+                    "value": "4.3★",
+                    "label": "Glassdoor rating"
+                  },
+                  {
+                    "value": "38%",
+                    "label": "Women in leadership"
+                  },
+                  {
+                    "value": "92",
+                    "label": "Nationalities"
+                  }
+                ]
+              },
+              "style": {
+                "background": "__surface__"
+              }
+            },
+            {
+              "type": "testimonials",
+              "data": {
+                "heading": "Life at Meridian",
+                "items": [
+                  {
+                    "quote": "I led my first bridge project at 29. The trust you get here is unique.",
+                    "name": "Yuki Tanaka",
+                    "role": "Project Engineer",
+                    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+                  },
+                  {
+                    "quote": "Great people, meaningful work and real flexibility.",
+                    "name": "Carlos Mendes",
+                    "role": "Energy Analyst",
+                    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+                  }
+                ]
+              },
+              "grid": {
+                "desktop": 2
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Find your next role",
+                "text": "Browse open positions or send us your CV.",
+                "buttonLabel": "Get in touch",
+                "buttonHref": "page:contact"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Meridian Group",
+                "tagline": "Building infrastructure for a sustainable future.",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Meridian Group. All rights reserved."
+              },
+              "style": {
+                "background": "#0b2436",
+                "textColor": "#cbd5e1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Meridian Group",
+            "useSiteMenu": true,
+            "ctaLabel": "Contact us",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Services",
+            "heading": "Services",
+            "text": "End-to-end capabilities across the infrastructure lifecycle."
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Our capabilities",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "📐",
+                "title": "Design & engineering",
+                "text": "Multidisciplinary design for complex assets."
+              },
+              {
+                "icon": "🏗️",
+                "title": "Construction",
+                "text": "Safe, on-time delivery of major projects."
+              },
+              {
+                "icon": "⚡",
+                "title": "Renewable energy",
+                "text": "Wind, solar and storage from concept to operation."
+              },
+              {
+                "icon": "🔌",
+                "title": "Grid & utilities",
+                "text": "Modernising networks for the energy transition."
+              },
+              {
+                "icon": "🚆",
+                "title": "Transport",
+                "text": "Rail, metro, highways and ports."
+              },
+              {
+                "icon": "🛠️",
+                "title": "Operations & maintenance",
+                "text": "Long-term asset performance and care."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Delivering at scale",
+            "text": "From early feasibility to decades of operation, our integrated model reduces risk and cost for clients and partners.",
+            "bullets": [
+              "4,000+ projects delivered",
+              "Average 97% on-time completion",
+              "ISO 9001, 14001 and 45001 certified"
+            ],
+            "buttonLabel": "Discuss a project",
+            "buttonHref": "page:contact",
+            "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Let's build together",
+            "text": "",
+            "buttonLabel": "Contact our team",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Meridian Group",
+            "tagline": "Building infrastructure for a sustainable future.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Meridian Group. All rights reserved."
+          },
+          "style": {
+            "background": "#0b2436",
+            "textColor": "#cbd5e1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "investors",
+      "title": "Investors",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Meridian Group",
+            "useSiteMenu": true,
+            "ctaLabel": "Contact us",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Investors",
+            "heading": "Investor relations",
+            "text": "Financial results, reports and shareholder information."
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "heading": "2025 at a glance",
+            "items": [
+              {
+                "value": "€8.4B",
+                "label": "Revenue"
+              },
+              {
+                "value": "+11%",
+                "label": "Revenue growth"
+              },
+              {
+                "value": "9.2%",
+                "label": "EBITDA margin"
+              },
+              {
+                "value": "€21B",
+                "label": "Order book"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "A resilient growth strategy",
+            "text": "Our strategy focuses on high-growth markets in energy transition and sustainable transport, supported by a strong balance sheet and disciplined capital allocation.",
+            "bullets": [
+              "Progressive dividend policy",
+              "Investment-grade credit rating (BBB+)",
+              "Mid-term target: 10% EBITDA margin"
+            ],
+            "buttonLabel": "Contact investor relations",
+            "buttonHref": "page:contact",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+            "imageSide": "right"
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "Reports & presentations",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "Q2 2026 results",
+                "excerpt": "Half-year report and webcast.",
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+                "category": "Results",
+                "date": "Aug 6, 2026",
+                "author": "Investor Relations",
+                "link": "#"
+              },
+              {
+                "title": "Annual Report 2025",
+                "excerpt": "Integrated annual and sustainability report.",
+                "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80",
+                "category": "Annual report",
+                "date": "Mar 3, 2026",
+                "author": "Investor Relations",
+                "link": "#"
+              },
+              {
+                "title": "Capital Markets Day 2026",
+                "excerpt": "Strategy update and mid-term targets.",
+                "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80",
+                "category": "Presentation",
+                "date": "Nov 18, 2025",
+                "author": "Investor Relations",
+                "link": "#"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Shareholder FAQ",
+            "items": [
+              {
+                "question": "Where are Meridian shares listed?",
+                "answer": "Meridian Group N.V. is listed on Euronext Amsterdam under the ticker MRDN."
+              },
+              {
+                "question": "When is the next results announcement?",
+                "answer": "Q3 2026 trading update: November 5, 2026."
+              },
+              {
+                "question": "How can I receive investor news?",
+                "answer": "Subscribe via the investor relations team using the contact page."
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Meridian Group",
+            "tagline": "Building infrastructure for a sustainable future.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Meridian Group. All rights reserved."
+          },
+          "style": {
+            "background": "#0b2436",
+            "textColor": "#cbd5e1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "news",
+      "title": "News",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Meridian Group",
+            "useSiteMenu": true,
+            "ctaLabel": "Contact us",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / News",
+            "heading": "News & media",
+            "text": "Press releases, stories and updates from across Meridian."
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "Meridian wins $1.1B offshore wind contract",
+                "excerpt": "Our largest renewable project to date.",
+                "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+                "category": "Press release",
+                "date": "Sep 22, 2026",
+                "author": "Corporate Communications",
+                "link": "#"
+              },
+              {
+                "title": "New metro line opens in Copenhagen",
+                "excerpt": "Delivered three months ahead of schedule.",
+                "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+                "category": "Projects",
+                "date": "Sep 4, 2026",
+                "author": "Corporate Communications",
+                "link": "#"
+              },
+              {
+                "title": "Our 2026 sustainability report",
+                "excerpt": "Progress towards net zero.",
+                "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80",
+                "category": "ESG",
+                "date": "Jul 15, 2026",
+                "author": "Sustainability Office",
+                "link": "#"
+              },
+              {
+                "title": "Meridian named a Top Employer 2026",
+                "excerpt": "Recognised in 14 countries.",
+                "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+                "category": "People",
+                "date": "Jun 30, 2026",
+                "author": "HR Communications",
+                "link": "#"
+              },
+              {
+                "title": "Partnership to develop green hydrogen hub",
+                "excerpt": "A joint venture with Port of Rotterdam.",
+                "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
+                "category": "Energy",
+                "date": "Jun 12, 2026",
+                "author": "Corporate Communications",
+                "link": "#"
+              },
+              {
+                "title": "Q1 2026 trading update",
+                "excerpt": "Strong start to the year.",
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+                "category": "Investors",
+                "date": "May 7, 2026",
+                "author": "Investor Relations",
+                "link": "page:investors"
+              }
+            ]
+          }
+        },
+        {
+          "type": "newsletter",
+          "data": {
+            "heading": "Media updates",
+            "text": "Receive Meridian press releases by email.",
+            "buttonLabel": "Subscribe"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Meridian Group",
+            "tagline": "Building infrastructure for a sustainable future.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Meridian Group. All rights reserved."
+          },
+          "style": {
+            "background": "#0b2436",
+            "textColor": "#cbd5e1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Meridian Group",
+            "useSiteMenu": true,
+            "ctaLabel": "Contact us",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "Get in touch with our offices, media team or investor relations."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Head office",
+            "text": "For project enquiries, partnerships, media or investor questions.",
+            "email": "info@meridiangroup.com",
+            "phone": "+31 10 555 0100",
+            "address": "Wilhelminakade 91\n3072 AP Rotterdam\nThe Netherlands",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you. The right team will respond shortly."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Meridian Group",
+            "tagline": "Building infrastructure for a sustainable future.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Meridian Group. All rights reserved."
+          },
+          "style": {
+            "background": "#0b2436",
+            "textColor": "#cbd5e1"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Service cards",
+  "description": "Three agency services in shadow cards with icons.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "What we do",
+      "subheading": "End-to-end digital services for ambitious brands.",
+      "items": [
+        {
+          "icon": "🎯",
+          "title": "Brand strategy",
+          "text": "Positioning, naming and messaging that sets you apart from day one."
+        },
+        {
+          "icon": "🖥️",
+          "title": "Web design & development",
+          "text": "Fast, accessible websites built to convert and easy to update."
+        },
+        {
+          "icon": "📣",
+          "title": "Growth marketing",
+          "text": "Paid, organic and email campaigns measured against real revenue."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+// Editor-only affordances for the visual editor canvas (not part of the site).
+
+.lp-editable .lp-section {
+  cursor: pointer;
+}
+
+.lp-editable .lp-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  transition: outline-color 0.12s ease;
+}
+
+.lp-editable .lp-section:hover::after {
+  outline-color: rgba(99, 102, 241, 0.5);
+}
+
+.lp-editable .lp-section.lp-selected::after {
+  outline: 2px solid #6366f1;
+}
+
+.lp-editable .lp-section:hover .lp-section-tag, .lp-editable .lp-section.lp-selected .lp-section-tag {
+  opacity: 1;
+}
+
+.lp-editable .lp-sticky {
+  position: relative;
+}
+
+.lp-section-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  padding: 3px 10px;
+  font: 600 11px/1.6 Inter, system-ui, sans-serif;
+  color: #fff;
+  background: #6366f1;
+  border-bottom-right-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+
+.lp-col-empty {
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  border: 2px dashed rgba(99, 102, 241, 0.35);
+  border-radius: 10px;
+  color: #6366f1;
+  font: 500 13px/1.4 Inter, system-ui, sans-serif;
+  text-align: center;
+  padding: 16px;
+}
+
+.lp-editable [data-el] {
+  cursor: pointer;
+}
+
+.lp-editable [data-el]:hover {
+  outline: 1px dashed rgba(99, 102, 241, 0.7);
+  outline-offset: 2px;
+}
+
+.lp-editable [contenteditable] {
+  cursor: text;
+}
+
+.lp-editable [contenteditable]:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+}
+
+.lp-editable [contenteditable]:empty::before {
+  content: attr(data-ph);
+  opacity: 0.35;
+}
+
+.lp-editable [contenteditable]:empty {
+  min-width: 2ch;
+  min-height: 1em;
+}
+
+.lp-editable .lp-el-selected {
+  outline: 2px solid #6366f1 !important;
+  outline-offset: 2px;
+}
+
+.lp-editable .lp-el-related {
+  outline: 1px dashed rgba(99, 102, 241, 0.6) !important;
+  outline-offset: 2px;
+}
+
+.lp-editable .lp-el-ghost {
+  opacity: 0.3;
+  outline: 1px dashed currentColor;
+}
+
+.lp-editable .lp-b-video iframe {
+  pointer-events: none;
+}
+
+.lp-editable .lp-b-spacer {
+  background: repeating-linear-gradient(45deg, transparent 0 6px, rgba(99, 102, 241, 0.12) 6px 12px);
+}
+
+// Empty page in the editor: a large drop-zone style prompt.
+.lp-editable .lp-empty-canvas {
+  display: grid;
+  gap: 8px;
+  margin: 24px;
+  padding: 120px 24px 150px; /* bottom: room for the Add section button */
+  border: 2px dashed rgba(99, 102, 241, 0.35);
+  border-radius: 14px;
+  color: #475569;
+  font: 14px/1.5 Inter, system-ui, sans-serif;
+  opacity: 1;
+}
+
+.lp-editable .lp-empty-canvas strong {
+  font-size: 18px;
+  color: #0f172a;
+}

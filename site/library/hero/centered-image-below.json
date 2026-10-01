@@ -1,0 +1,22 @@
+{
+  "name": "Centered hero with image below",
+  "description": "Centered headline, two buttons and a wide product image underneath.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Now in public beta",
+      "heading": "Your whole team, finally in sync",
+      "subheading": "Plan projects, share updates and ship on time from one calm, focused workspace.",
+      "primaryLabel": "Start free trial",
+      "primaryHref": "#cta",
+      "secondaryLabel": "Watch the demo",
+      "secondaryHref": "#features",
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
+      "layout": "center"
+    },
+    "style": {
+      "align": "center",
+      "paddingY": 104
+    }
+  }
+}

@@ -1,0 +1,37 @@
+/* Newsletter signup section */
+
+.lp-newsletter {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.lp-newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.lp-newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 16px;
+  font: inherit;
+  color: var(--lp-text);
+  border: 1px solid color-mix(in srgb, var(--lp-text) 18%, transparent);
+  border-radius: var(--lp-btn-radius, var(--lp-radius));
+  background: var(--lp-bg);
+}
+
+.lp-newsletter-form .lp-success {
+  flex-basis: 100%;
+}
+
+.lp-newsletter-form:has(.lp-success) {
+  flex-wrap: wrap;
+}
+
+@container (max-width: 600px) {
+  .lp-newsletter-form {
+    flex-direction: column;
+  }
+}

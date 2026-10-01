@@ -1,0 +1,51 @@
+{
+  "name": "Three-column feature cards",
+  "description": "Six features in bordered cards, three per row.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Everything your team needs",
+      "subheading": "One platform to plan, build and grow, with no extra plugins required.",
+      "items": [
+        {
+          "icon": "⚡",
+          "title": "Blazing performance",
+          "text": "Pages load in under a second on any device, anywhere in the world."
+        },
+        {
+          "icon": "🔒",
+          "title": "Secure by default",
+          "text": "SSL, backups and role-based access are switched on from day one."
+        },
+        {
+          "icon": "📈",
+          "title": "Built-in analytics",
+          "text": "See what visitors do and which pages convert, without extra tools."
+        },
+        {
+          "icon": "🎨",
+          "title": "On-brand design",
+          "text": "Set your colours and fonts once and every page follows along."
+        },
+        {
+          "icon": "🤝",
+          "title": "Real-time collaboration",
+          "text": "Edit together, leave comments and approve changes in one place."
+        },
+        {
+          "icon": "🔌",
+          "title": "100+ integrations",
+          "text": "Connect your CRM, email platform and payment provider in a click."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "logos",
+  "label": "Logo cloud",
+  "description": "Row of client or partner logos",
+  "icon": "star",
+  "fields": [
+    { "key": "heading", "label": "Heading", "type": "text" },
+    { "key": "grayscale", "label": "Show logos in grey", "type": "toggle" },
+    {
+      "key": "logos",
+      "label": "Logos",
+      "type": "list",
+      "itemLabel": "Logo",
+      "itemFields": [
+        { "key": "name", "label": "Company name (shown when there's no image)", "type": "text" },
+        { "key": "image", "label": "Logo image", "type": "image" },
+        { "key": "link", "label": "Link (optional)", "type": "url" }
+      ]
+    }
+  ],
+  "elements": [
+    { "key": "heading", "label": "Heading", "kind": "text", "fields": ["heading"] },
+    { "key": "logo", "label": "Logos", "kind": "box", "list": "logos", "fields": ["name", "image", "link"] }
+  ],
+  "defaults": {
+    "heading": "Trusted by teams at",
+    "grayscale": true,
+    "logos": [
+      { "name": "Acme", "image": "", "link": "" },
+      { "name": "Globex", "image": "", "link": "" },
+      { "name": "Initech", "image": "", "link": "" },
+      { "name": "Umbrella", "image": "", "link": "" },
+      { "name": "Northwind", "image": "", "link": "" },
+      { "name": "Stark", "image": "", "link": "" }
+    ]
+  },
+  "defaultStyle": { "paddingY": 48 },
+  "grid": { "desktop": 6, "tablet": 3, "mobile": 2, "gap": 16, "cardStyle": "none", "textAlign": "center", "itemAlign": "center" }
+}

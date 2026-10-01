@@ -1,0 +1,15 @@
+<div class="lp-footer-inner">
+  <div>
+    <strong class="lp-brand" data-el="brand" data-edit="brand">{{brand}}</strong>
+    {{#if tagline}}<p class="lp-muted" data-el="tagline" data-edit="tagline">{{tagline}}</p>{{/if}}
+  </div>
+  <div class="lp-footer-links">
+    {{#if useSiteMenu}}
+      {{!-- Top-level pages of the website (see website.json). --}}
+      {{#each @menu}}<a data-el="menuLink" href="{{href}}">{{label}}</a>{{/each}}
+    {{else}}
+      {{#each links}}<a data-el="link" data-edit="label" href="{{href}}">{{label}}</a>{{/each}}
+    {{/if}}
+  </div>
+</div>
+<p class="lp-copyright" data-el="copyright" data-edit="copyright">{{copyright}}</p>

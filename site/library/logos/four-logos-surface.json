@@ -1,0 +1,46 @@
+{
+  "name": "Four logos on surface",
+  "description": "Four featured-in names on a soft surface background.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "heading": "As featured in",
+      "grayscale": true,
+      "logos": [
+        {
+          "name": "TechDaily",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Product Weekly",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "The Launch",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Founders Mag",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center",
+      "paddingY": 56
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "center"
+    }
+  }
+}

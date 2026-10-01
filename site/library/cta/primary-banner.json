@@ -1,0 +1,19 @@
+{
+  "name": "Primary colour banner",
+  "description": "Bold call-to-action on the primary colour with white text.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Ready to launch your next page?",
+      "text": "Join 4,000+ teams building faster. Free for 14 days, no credit card required.",
+      "buttonLabel": "Start your free trial",
+      "buttonHref": "#"
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 80
+    }
+  }
+}

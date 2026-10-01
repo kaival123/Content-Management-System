@@ -1,0 +1,35 @@
+/* Hero section */
+
+.lp-eyebrow {
+  display: inline-block;
+  padding: 6px 14px;
+  margin-bottom: 1.25rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--lp-primary);
+  background: color-mix(in srgb, var(--lp-primary) 12%, transparent);
+}
+
+.lp-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.lp-hero-inner.lp-split {
+  max-width: none;
+}
+
+.lp-hero-inner.lp-split .lp-actions {
+  justify-content: flex-start;
+}
+
+.lp-hero-inner:not(.lp-split) .lp-hero-img {
+  margin-top: 3.5rem;
+}
+
+@container (max-width: 700px) {
+  .lp-hero-inner.lp-split .lp-actions {
+    justify-content: inherit;
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Portfolio grid with hover captions",
+  "description": "Three-column project grid; titles appear on hover.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Selected projects",
+      "subheading": "A few recent collaborations we are especially proud of.",
+      "shape": "4/3",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Studio identity",
+          "caption": "Branding",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+          "title": "Roastery packaging",
+          "caption": "Packaging",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "title": "Architect portfolio",
+          "caption": "Web design",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&q=80",
+          "title": "Banking app redesign",
+          "caption": "Product",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+          "title": "Launch campaign",
+          "caption": "Marketing",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "title": "Festival posters",
+          "caption": "Print",
+          "link": "#"
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "none"
+    }
+  }
+}

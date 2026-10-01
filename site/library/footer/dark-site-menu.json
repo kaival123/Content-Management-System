@@ -1,0 +1,18 @@
+{
+  "name": "Dark footer with page menu",
+  "description": "Dark footer with brand, tagline and the website's page menu.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "brand": "Northstar",
+      "tagline": "Tools for teams that ship.",
+      "useSiteMenu": true,
+      "copyright": "© 2026 Northstar Inc. All rights reserved."
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#cbd5e1",
+      "paddingY": 56
+    }
+  }
+}

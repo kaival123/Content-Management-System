@@ -1,0 +1,47 @@
+{
+  "name": "Latest blog posts",
+  "description": "Three recent articles with cover image, category and date.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Latest from the blog",
+      "subheading": "Practical advice on design, growth and building better products.",
+      "posts": [
+        {
+          "title": "10 landing page tweaks that lift conversion",
+          "excerpt": "Small, testable changes that made a measurable difference for our customers.",
+          "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+          "category": "Marketing",
+          "date": "Sep 18, 2026",
+          "author": "Aisha Khan",
+          "link": "#"
+        },
+        {
+          "title": "How we run design reviews remotely",
+          "excerpt": "The rituals and tools that keep a distributed design team aligned.",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "category": "Design",
+          "date": "Sep 4, 2026",
+          "author": "Marco Rossi",
+          "link": "#"
+        },
+        {
+          "title": "The five metrics every founder should watch",
+          "excerpt": "Skip the vanity numbers and focus on what predicts growth.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "category": "Growth",
+          "date": "Aug 21, 2026",
+          "author": "Lena Park",
+          "link": "#"
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered"
+    }
+  }
+}

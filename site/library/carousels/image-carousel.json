@@ -1,0 +1,105 @@
+{
+  "name": "Image carousel",
+  "description": "Photos with short captions, three per view on desktop.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "Inside the studio",
+      "subheading": "A look at where the work happens.",
+      "variant": "image",
+      "slideHeight": 0,
+      "slides": [
+        {
+          "heading": "Morning stand-up",
+          "eyebrow": "",
+          "text": "Where every day begins.",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "The quiet room",
+          "eyebrow": "",
+          "text": "Deep-focus space for heads-down work.",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Open studio",
+          "eyebrow": "",
+          "text": "Room to spread out and sketch.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Design sprint",
+          "eyebrow": "",
+          "text": "Five days from problem to prototype.",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Launch day",
+          "eyebrow": "",
+          "text": "Celebrating another release.",
+          "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Remote Fridays",
+          "eyebrow": "",
+          "text": "Working from wherever inspires us.",
+          "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 3,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 24,
+      "autoplay": false,
+      "autoplaySpeed": 4000,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

@@ -1,0 +1,268 @@
+<header class="dev-top">
+  <a class="btn-icon" routerLink="/admin" title="Back to pages"><app-icon name="back" /></a>
+  <div class="dev-title">
+    <strong>Developer mode</strong>
+    <small [title]="project.siteDir()">{{ project.siteDir() }}</small>
+  </div>
+  <div class="dev-actions">
+    <button type="button" class="btn btn-sm btn-secondary" (click)="newComponentOpen.set(true)"><app-icon name="plus" [size]="14" /> New component</button>
+    <button type="button" class="btn btn-sm btn-secondary" [disabled]="building()" (click)="buildSite()"><app-icon name="download" [size]="14" /> {{ building() ? 'Building…' : 'Build site' }}</button>
+    <button type="button" class="btn btn-sm btn-secondary" (click)="openInVsCode()"><app-icon name="external" [size]="14" /> Open in VS Code</button>
+    <button type="button" class="btn btn-sm btn-secondary" (click)="openVisualEditor()"><app-icon name="edit" [size]="14" /> Visual editor</button>
+    <button type="button" class="btn-icon" [class.active-icon]="showPreview()" title="Toggle preview" (click)="showPreview.set(!showPreview())"><app-icon name="eye" /></button>
+  </div>
+</header>
+
+<div class="dev-body" [class.no-preview]="!showPreview()">
+  <!-- Activity bar -->
+  <nav class="dev-activity">
+    <button type="button" [class.active]="panel() === 'files'" title="Files" (click)="panel.set('files')"><app-icon name="file" /></button>
+    <button type="button" [class.active]="panel() === 'search'" title="Search (Ctrl+Shift+F)" (click)="panel.set('search')"><app-icon name="search" /></button>
+    <button type="button" [class.active]="panel() === 'git'" title="Source control" (click)="panel.set('git')">
+      <app-icon name="layers" />
+      @if (git()?.files?.length) {
+        <span class="dev-badge">{{ git()!.files.length }}</span>
+      }
+    </button>
+  </nav>
+
+  <!-- Side panel -->
+  <aside class="dev-side">
+    @switch (panel()) {
+      @case ('files') {
+        <div class="dev-side-head">
+          <span>Explorer</span>
+          <button type="button" class="btn-icon sm" title="New file" (click)="newFile()"><app-icon name="plus" [size]="14" /></button>
+        </div>
+        <ul class="dev-tree">
+          @for (r of rows(); track r.path) {
+            <li
+              [class.dir]="r.type === 'dir'"
+              [class.active]="r.path === active()"
+              [style.padding-left.px]="8 + r.depth * 14"
+              (click)="r.type === 'dir' ? toggleDir(r.path) : openFile(r.path)"
+            >
+              @if (r.type === 'dir') {
+                <app-icon [name]="isCollapsed(r.path) ? 'chevron-right' : 'down'" [size]="13" />
+              } @else {
+                <app-icon [name]="icon(r.path)" [size]="13" />
+              }
+              <span class="dev-tree-name">{{ r.name }}</span>
+              @if (isOpenDirty(r.path)) {
+                <span class="dot dot-busy" title="Unsaved"></span>
+              }
+              @if (r.type === 'file') {
+                <button type="button" class="btn-icon sm dev-tree-del" title="Delete file" (click)="deleteFile(r.path, $event)"><app-icon name="trash" [size]="12" /></button>
+              }
+            </li>
+          }
+        </ul>
+      }
+      @case ('search') {
+        <div class="dev-side-head"><span>Search</span></div>
+        <form class="dev-search" (submit)="$event.preventDefault(); search()">
+          <input type="search" placeholder="Search all files…" [value]="searchQuery()" (input)="setSearch($event)" autofocus />
+          <div class="dev-search-opts">
+            <label><input type="checkbox" [checked]="searchCase()" (change)="searchCase.set(!searchCase())" /> Aa</label>
+            <label><input type="checkbox" [checked]="searchRegex()" (change)="searchRegex.set(!searchRegex())" /> .* Regex</label>
+            <button type="submit" class="btn btn-sm btn-primary" [disabled]="searching()">{{ searching() ? '…' : 'Search' }}</button>
+          </div>
+        </form>
+        <div class="dev-results">
+          @for (g of groupedResults(); track g.path) {
+            <div class="dev-result-file">{{ g.path }} <span class="adm-count">{{ g.hits.length }}</span></div>
+            @for (h of g.hits; track $index) {
+              <button type="button" class="dev-result" (click)="openFile(g.path, h.line)">
+                <span class="ln">{{ h.line }}</span><code>{{ h.text.trim() }}</code>
+              </button>
+            }
+          } @empty {
+            @if (searchQuery() && !searching()) {
+              <p class="field-hint dev-pad">No results.</p>
+            }
+          }
+        </div>
+      }
+      @case ('git') {
+        <div class="dev-side-head">
+          <span>Source control</span>
+          <button type="button" class="btn-icon sm" title="Refresh" (click)="refreshGit()"><app-icon name="redo" [size]="14" /></button>
+        </div>
+        @if (git(); as g) {
+          @if (!g.repo) {
+            <p class="field-hint dev-pad">This project isn't in a Git repository yet. Run <code>git init</code> in the project folder.</p>
+          } @else {
+            <div class="dev-pad">
+              <div class="dev-branch">
+                <app-icon name="layers" [size]="14" />
+                <select (change)="switchBranch($event)" [disabled]="gitBusy()" aria-label="Branch">
+                  @for (b of branches().all; track b) {
+                    <option [value]="b" [selected]="b === branches().current">{{ b }}</option>
+                  }
+                </select>
+                <button type="button" class="btn btn-sm btn-secondary" [disabled]="gitBusy()" (click)="newBranch()">New branch</button>
+              </div>
+              <textarea rows="2" placeholder="Commit message" [value]="commitMessage()" (input)="setCommitMessage($event)"></textarea>
+              <button type="button" class="btn btn-sm btn-primary btn-block" [disabled]="!commitMessage().trim() || !g.files.length || gitBusy()" (click)="commit()">
+                <app-icon name="check" [size]="14" /> Commit {{ g.files.length }} change{{ g.files.length === 1 ? '' : 's' }}
+              </button>
+            </div>
+            <div class="dev-side-sub">Changes</div>
+            <ul class="dev-changes">
+              @for (f of g.files; track f.path) {
+                <li (click)="showGitDiff(f.path)" [title]="f.status">
+                  <span class="git-st git-{{ f.status }}">{{ f.status === 'untracked' ? 'U' : f.status[0].toUpperCase() }}</span>
+                  <span class="dev-tree-name">{{ f.path }}</span>
+                  <button type="button" class="btn-icon sm" title="Open" (click)="$event.stopPropagation(); openFile(f.path)"><app-icon name="file" [size]="12" /></button>
+                  <button type="button" class="btn-icon sm danger" title="Discard changes" (click)="$event.stopPropagation(); revertGit(f.path)"><app-icon name="undo" [size]="12" /></button>
+                </li>
+              } @empty {
+                <li class="field-hint">No uncommitted changes.</li>
+              }
+            </ul>
+            <div class="dev-side-sub">Recent commits</div>
+            <ul class="dev-log">
+              @for (c of gitLog(); track c.short) {
+                <li>
+                  <code>{{ c.short }}</code> {{ c.subject }}
+                  <small>{{ c.author }}, {{ c.date }}</small>
+                </li>
+              }
+            </ul>
+          }
+        } @else {
+          <p class="field-hint dev-pad">Git status unavailable.</p>
+        }
+      }
+    }
+  </aside>
+
+  <!-- Editor -->
+  <main class="dev-main">
+    <div class="dev-tabs">
+      @for (f of open(); track f.path) {
+        <button type="button" class="dev-tab" [class.active]="f.path === active() && !diff()" (click)="activate(f.path)" [title]="f.path">
+          <app-icon [name]="icon(f.path)" [size]="13" />
+          {{ f.path.split('/').pop() }}
+          @if (f.problems.length) {
+            <span class="dev-err-badge">{{ f.problems.length }}</span>
+          }
+          @if (f.current !== f.saved) {
+            <span class="dot dot-busy" title="Unsaved"></span>
+          } @else {
+            <span class="dev-tab-x" (click)="closeFile(f.path, $event)" title="Close">×</span>
+          }
+        </button>
+      }
+      @if (diff()) {
+        <span class="dev-tab active"><app-icon name="layers" [size]="13" /> Diff</span>
+      }
+    </div>
+
+    @if (diff(); as d) {
+      <div class="dev-bar">
+        <span>{{ d.title }}</span>
+        @if (d.editable) {
+          <button type="button" class="btn btn-sm btn-primary" (click)="useMerged()">Use right side</button>
+        }
+        <button type="button" class="btn btn-sm btn-secondary" (click)="diff.set(null)">Close diff</button>
+      </div>
+      <div class="dev-diff" #diffHost></div>
+    } @else if (activeFile(); as f) {
+      <div class="dev-bar">
+        <code class="dev-path">{{ f.path }}</code>
+        <span class="spacer"></span>
+        <button type="button" class="btn btn-sm btn-secondary" [disabled]="f.current === f.saved" (click)="revertBuffer()"><app-icon name="undo" [size]="13" /> Revert</button>
+        <button type="button" class="btn btn-sm btn-primary" [disabled]="f.current === f.saved" (click)="save()"><app-icon name="check" [size]="13" /> Save <kbd>Ctrl+S</kbd></button>
+      </div>
+      @if (saveConflict()?.path === f.path || f.diskChanged) {
+        <div class="ed-banner ed-banner-warn">
+          <app-icon name="help" />
+          <span><strong>This file changed on disk</strong> (in VS Code or the visual editor) after you opened it. Your edits aren't saved yet.</span>
+          <button type="button" class="btn btn-sm btn-primary" (click)="compareWithDisk()">Compare</button>
+          <button type="button" class="btn btn-sm btn-secondary" (click)="takeDisk()">Use disk version</button>
+          <button type="button" class="btn btn-sm btn-secondary" (click)="overwriteDisk()">Overwrite with mine</button>
+        </div>
+      }
+      <div class="dev-editor" #editorHost></div>
+      <footer class="dev-status">
+        @if (f.problems.length) {
+          <span class="dev-status-err"><app-icon name="x" [size]="12" /> {{ f.problems.length }} problem{{ f.problems.length === 1 ? '' : 's' }}: {{ f.problems[0].message }}</span>
+        } @else {
+          <span class="dev-status-ok"><app-icon name="check" [size]="12" /> No problems</span>
+        }
+        <span class="spacer"></span>
+        <span>{{ f.path.split('.').pop()?.toUpperCase() }}</span>
+        @if (dirtyCount()) {
+          <span>{{ dirtyCount() }} unsaved (Ctrl+Shift+S saves all)</span>
+        }
+      </footer>
+    } @else {
+      <div class="insp-empty dev-welcome">
+        <app-icon name="code" [size]="32" />
+        <h3>Your landing pages as code</h3>
+        <p>Everything the visual editor does is stored in these files. Edit them here or in VS Code — saves appear in the visual editor immediately, and vice versa.</p>
+        <ul>
+          <li><code>websites/</code> — one folder per website: <code>website.json</code> (pages, menu, theme) and <code>pages/&lt;page&gt;/</code> with a file per section</li>
+          <li><code>library/</code> — section presets for the Add section library, plus saved sections</li>
+          <li><code>components/</code> — each section type: template, CSS and schema</li>
+          <li><code>styles/</code>, <code>scripts/</code>, <code>assets/</code>, <code>templates/</code>, <code>config/</code></li>
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="openFile('README.md')">Read the developer guide</button>
+      </div>
+    }
+  </main>
+
+  <!-- Live preview -->
+  @if (showPreview()) {
+    <section class="dev-preview">
+      <div class="dev-bar">
+        <select (change)="setPreview($event)" aria-label="Page to preview">
+          @for (p of pages(); track p.id) {
+            <option [value]="p.website + '/' + p.slug" [selected]="p.website + '/' + p.slug === previewSlug()">{{ p.title }} ({{ p.website }})</option>
+          }
+        </select>
+        <span class="field-hint">Live · includes unsaved edits</span>
+      </div>
+      <div class="dev-preview-frame">
+        @if (previewPage(); as p) {
+          <app-page-renderer [page]="p" [components]="previewComponents()" [baseCss]="previewBaseCss()" />
+        } @else {
+          <p class="field-hint dev-pad">Create a page to preview it here.</p>
+        }
+      </div>
+    </section>
+  }
+</div>
+
+@if (newComponentOpen()) {
+  <div class="modal-backdrop" (click)="newComponentOpen.set(false)"></div>
+  <form class="modal" role="dialog" aria-modal="true" aria-labelledby="nc-title" (submit)="createComponent($event)">
+    <header class="modal-head">
+      <div>
+        <h2 id="nc-title">New component</h2>
+        <p>Creates <code>components/&lt;Name&gt;/</code> with a template, CSS and schema. It appears in the visual editor's "Add section" menu right away.</p>
+      </div>
+      <button type="button" class="btn-icon" title="Close" (click)="newComponentOpen.set(false)"><app-icon name="x" /></button>
+    </header>
+    <div class="modal-body">
+      <div class="field">
+        <label for="nc-label">Name</label>
+        <input id="nc-label" name="label" type="text" placeholder="e.g. Logo Cloud" required autofocus />
+      </div>
+      <div class="field">
+        <label for="nc-base">Start from</label>
+        <select id="nc-base" name="base">
+          <option value="">Blank component (heading, text, button)</option>
+          @for (c of project.components(); track c.type) {
+            <option [value]="c.type">Copy of {{ c.label }}</option>
+          }
+        </select>
+      </div>
+    </div>
+    <footer class="modal-foot">
+      <button type="button" class="btn btn-secondary" (click)="newComponentOpen.set(false)">Cancel</button>
+      <button type="submit" class="btn btn-primary">Create component</button>
+    </footer>
+  </form>
+}

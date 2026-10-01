@@ -1,0 +1,12 @@
+{{#if heading}}
+<p class="lp-logos-heading" data-el="heading" data-edit="heading">{{heading}}</p>
+{{/if}}
+<div class="lp-grid lp-logos{{#if grayscale}} lp-logos-grey{{/if}}" data-grid>
+  {{#each logos}}
+  <div class="lp-card lp-logo" data-el="logo">
+    {{#if link}}<a href="{{link}}" target="_blank" rel="noopener">{{/if}}
+    {{#if image}}<img src="{{image}}" alt="{{name}}" />{{else}}<span>{{name}}</span>{{/if}}
+    {{#if link}}</a>{{/if}}
+  </div>
+  {{/each}}
+</div>

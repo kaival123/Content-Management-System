@@ -1,0 +1,931 @@
+{
+  "id": "business-website",
+  "kind": "multi",
+  "category": "Business",
+  "name": "Business Website",
+  "description": "A complete company website with services, pricing, FAQ and contact pages — ideal for consultancies and professional firms.",
+  "preview": [
+    "#ffffff",
+    "#2563eb",
+    "#0f172a"
+  ],
+  "theme": {
+    "primaryColor": "#2563eb",
+    "accentColor": "#f59e0b",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f8fafc",
+    "textColor": "#0f172a",
+    "fontFamily": "Inter",
+    "headingFont": "Poppins",
+    "radius": 10,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Northwind Partners",
+            "useSiteMenu": true,
+            "ctaLabel": "Get a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Business consulting since 2009",
+            "heading": "Smarter strategy for companies ready to grow",
+            "subheading": "Northwind Partners helps leadership teams make confident decisions, streamline operations and unlock their next stage of growth.",
+            "primaryLabel": "Explore services",
+            "primaryHref": "page:services",
+            "secondaryLabel": "Talk to us",
+            "secondaryHref": "page:contact",
+            "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Trusted by leading companies",
+            "logos": [
+              {
+                "name": "Contoso",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Fabrikam",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Tailspin",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Woodgrove",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Litware",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Adatum",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "How we help",
+            "subheading": "Practical expertise across the areas that matter most.",
+            "items": [
+              {
+                "icon": "🧭",
+                "title": "Strategy",
+                "text": "Clear direction, measurable goals and a plan to get there."
+              },
+              {
+                "icon": "⚙️",
+                "title": "Operations",
+                "text": "Leaner processes that save time and money."
+              },
+              {
+                "icon": "📊",
+                "title": "Finance",
+                "text": "Forecasting, pricing and funding readiness."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "bordered"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "A partner, not just a consultant",
+            "text": "We embed with your team, stay accountable for outcomes and leave you with the skills to keep improving long after the project ends.",
+            "bullets": [
+              "Senior consultants on every project",
+              "Fixed-fee pricing",
+              "Results tracked from day one"
+            ],
+            "buttonLabel": "About Northwind",
+            "buttonHref": "page:about",
+            "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+            "imageSide": "right"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "350+",
+                "label": "Clients served"
+              },
+              {
+                "value": "$1.2B",
+                "label": "Revenue influenced"
+              },
+              {
+                "value": "15",
+                "label": "Years in business"
+              },
+              {
+                "value": "96%",
+                "label": "Client retention"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "What our clients say",
+            "items": [
+              {
+                "quote": "Northwind helped us enter two new markets in a year. Their team felt like our own.",
+                "name": "Olivia Bennett",
+                "role": "CEO, Tailspin Logistics",
+                "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+              },
+              {
+                "quote": "Clear thinking, practical plans and genuine follow-through.",
+                "name": "Samuel Price",
+                "role": "COO, Fabrikam",
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+              },
+              {
+                "quote": "The best investment we made in our growth.",
+                "name": "Grace Kim",
+                "role": "Founder, Litware Health",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Let's talk about your next move",
+            "text": "Book a free 30-minute strategy call with a senior partner.",
+            "buttonLabel": "Book a call",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Northwind Partners",
+            "tagline": "Advisory and strategy for growing companies.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Northwind Partners. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Northwind Partners",
+            "useSiteMenu": true,
+            "ctaLabel": "Get a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / About",
+            "heading": "About Northwind Partners",
+            "text": "An independent consulting firm helping ambitious companies grow with clarity and confidence."
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Our story",
+            "text": "Founded in 2009 by three former operators, Northwind was built on a simple idea: advice is only valuable when it is acted on. Today our team of 40 works with companies from fast-growing startups to established family businesses.",
+            "bullets": [
+              "Offices in Chicago, Denver and Austin",
+              "40 consultants across 6 disciplines",
+              "Certified B Corporation"
+            ],
+            "buttonLabel": "Our services",
+            "buttonHref": "page:services",
+            "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Our values",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🎯",
+                "title": "Outcomes over output",
+                "text": "We measure success by your results, not our reports."
+              },
+              {
+                "icon": "🤝",
+                "title": "Honest partnership",
+                "text": "We tell you what you need to hear, respectfully."
+              },
+              {
+                "icon": "📚",
+                "title": "Share what we know",
+                "text": "We build your team's capability, not dependence."
+              }
+            ]
+          },
+          "grid": {
+            "cardStyle": "flat"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "team",
+          "data": {
+            "heading": "Leadership team",
+            "subheading": "Experienced operators who have been in your seat.",
+            "members": [
+              {
+                "name": "Elizabeth Hart",
+                "role": "Managing Partner",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Michael Chen",
+                "role": "Partner, Strategy",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Priya Nair",
+                "role": "Partner, Operations",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Robert Adams",
+                "role": "Partner, Finance",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Work with a team that cares about results",
+            "text": "",
+            "buttonLabel": "Get in touch",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Northwind Partners",
+            "tagline": "Advisory and strategy for growing companies.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Northwind Partners. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Northwind Partners",
+            "useSiteMenu": true,
+            "ctaLabel": "Get a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Services",
+            "heading": "Our services",
+            "text": "From strategy to execution, we help you solve the problems that matter most."
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Explore our services",
+            "subheading": "Choose a focused engagement or combine services for end-to-end support.",
+            "items": [
+              {
+                "heading": "Consulting",
+                "text": "Hands-on help with operations, finance and organisational design.",
+                "icon": "⚙️",
+                "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80",
+                "buttonLabel": "Learn about consulting",
+                "buttonHref": "page:consulting",
+                "colSpan": "2",
+                "rowSpan": "2",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Strategy",
+                "text": "Market analysis, growth plans and leadership offsites.",
+                "icon": "🧭",
+                "image": "",
+                "buttonLabel": "Learn about strategy",
+                "buttonHref": "page:strategy",
+                "colSpan": "2",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Financial advisory",
+                "text": "Forecasting, pricing and fundraising support.",
+                "icon": "📊",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Interim leadership",
+                "text": "Experienced executives when you need them most.",
+                "icon": "👔",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Our approach",
+            "subheading": "Every engagement follows a proven four-step process.",
+            "items": [
+              {
+                "icon": "1️⃣",
+                "title": "Discover",
+                "text": "We listen, gather data and understand your goals."
+              },
+              {
+                "icon": "2️⃣",
+                "title": "Diagnose",
+                "text": "We identify the root causes and biggest opportunities."
+              },
+              {
+                "icon": "3️⃣",
+                "title": "Design",
+                "text": "We build a practical plan with your team."
+              },
+              {
+                "icon": "4️⃣",
+                "title": "Deliver",
+                "text": "We support implementation and track results."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "none"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Not sure where to start?",
+            "text": "Tell us about your challenge and we will recommend the right engagement.",
+            "buttonLabel": "Get a recommendation",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Northwind Partners",
+            "tagline": "Advisory and strategy for growing companies.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Northwind Partners. All rights reserved."
+          }
+        }
+      ],
+      "children": [
+        {
+          "slug": "consulting",
+          "title": "Consulting",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Northwind Partners",
+                "useSiteMenu": true,
+                "ctaLabel": "Get a quote",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Consulting",
+                "heading": "Management consulting",
+                "text": "Practical, hands-on help to make your business run better."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "Operations that scale with you",
+                "text": "We work alongside your managers to map processes, remove bottlenecks and put the right systems in place — so growth does not mean chaos.",
+                "bullets": [
+                  "Process mapping and automation",
+                  "KPI dashboards and reporting",
+                  "Organisational design and hiring plans"
+                ],
+                "buttonLabel": "See pricing",
+                "buttonHref": "page:pricing",
+                "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80"
+              }
+            },
+            {
+              "type": "features",
+              "data": {
+                "heading": "What's included",
+                "subheading": "",
+                "items": [
+                  {
+                    "icon": "🔍",
+                    "title": "Operational audit",
+                    "text": "A detailed review of how work gets done today."
+                  },
+                  {
+                    "icon": "🛠️",
+                    "title": "Implementation support",
+                    "text": "We help roll out changes, not just recommend them."
+                  },
+                  {
+                    "icon": "📈",
+                    "title": "Performance tracking",
+                    "text": "Monthly reviews against agreed targets."
+                  }
+                ]
+              },
+              "grid": {
+                "cardStyle": "bordered"
+              },
+              "style": {
+                "background": "__surface__"
+              }
+            },
+            {
+              "type": "testimonials",
+              "data": {
+                "heading": "Consulting results",
+                "items": [
+                  {
+                    "quote": "Order processing time dropped by 60% within three months.",
+                    "name": "Daniel Ruiz",
+                    "role": "COO, Adatum Supply",
+                    "avatar": ""
+                  },
+                  {
+                    "quote": "They gave our managers the tools to run the business without me in every meeting.",
+                    "name": "Karen Walsh",
+                    "role": "Founder, Woodgrove Retail",
+                    "avatar": ""
+                  }
+                ]
+              },
+              "grid": {
+                "desktop": 2
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Ready to fix what's slowing you down?",
+                "text": "",
+                "buttonLabel": "Book a consultation",
+                "buttonHref": "page:contact"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Northwind Partners",
+                "tagline": "Advisory and strategy for growing companies.",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Northwind Partners. All rights reserved."
+              }
+            }
+          ]
+        },
+        {
+          "slug": "strategy",
+          "title": "Strategy",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Northwind Partners",
+                "useSiteMenu": true,
+                "ctaLabel": "Get a quote",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Strategy",
+                "heading": "Growth strategy",
+                "text": "Decide where to play, how to win and what to do first."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "A strategy your team can act on",
+                "text": "We combine market research, customer insight and financial modelling to build a strategy that is ambitious and realistic — then turn it into a 12-month roadmap.",
+                "bullets": [
+                  "Market and competitor analysis",
+                  "Customer research and segmentation",
+                  "Leadership workshops and offsites"
+                ],
+                "buttonLabel": "Talk to a strategist",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+                "imageSide": "right"
+              }
+            },
+            {
+              "type": "stats",
+              "data": {
+                "heading": "Strategy engagements by the numbers",
+                "items": [
+                  {
+                    "value": "120+",
+                    "label": "Strategies delivered"
+                  },
+                  {
+                    "value": "8 wks",
+                    "label": "Average engagement"
+                  },
+                  {
+                    "value": "2.4x",
+                    "label": "Median growth in 3 yrs"
+                  },
+                  {
+                    "value": "100%",
+                    "label": "Senior-led"
+                  }
+                ]
+              },
+              "style": {
+                "background": "__surface__"
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "anchor": "",
+                "heading": "Strategy FAQ",
+                "items": [
+                  {
+                    "question": "How long does a strategy project take?",
+                    "answer": "Most engagements run six to ten weeks, including research, workshops and the final roadmap."
+                  },
+                  {
+                    "question": "Who needs to be involved?",
+                    "answer": "Your leadership team for three half-day workshops, plus a project lead for weekly check-ins."
+                  }
+                ]
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Plan your next chapter",
+                "text": "",
+                "buttonLabel": "Start the conversation",
+                "buttonHref": "page:contact"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Northwind Partners",
+                "tagline": "Advisory and strategy for growing companies.",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Northwind Partners. All rights reserved."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pricing",
+      "title": "Pricing",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Northwind Partners",
+            "useSiteMenu": true,
+            "ctaLabel": "Get a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Pricing",
+            "heading": "Simple, fixed-fee pricing",
+            "text": "Know exactly what you will pay before we begin."
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Choose your engagement",
+            "subheading": "All packages include a dedicated senior consultant.",
+            "plans": [
+              {
+                "name": "Advisory",
+                "price": "$1,500",
+                "period": "/month",
+                "description": "Ongoing expert support",
+                "features": [
+                  "Monthly strategy session",
+                  "Email support",
+                  "Quarterly review"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              },
+              {
+                "name": "Project",
+                "price": "$9,500",
+                "period": "/project",
+                "description": "Focused 6–8 week engagement",
+                "features": [
+                  "Full diagnostic",
+                  "Workshops with your team",
+                  "Written roadmap",
+                  "30 days of follow-up"
+                ],
+                "buttonLabel": "Book a project",
+                "buttonHref": "page:contact",
+                "highlighted": true
+              },
+              {
+                "name": "Partnership",
+                "price": "Custom",
+                "period": "",
+                "description": "Embedded long-term support",
+                "features": [
+                  "Dedicated team",
+                  "Implementation support",
+                  "Board-level reporting"
+                ],
+                "buttonLabel": "Contact us",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Pricing questions",
+            "items": [
+              {
+                "question": "Are there any hidden costs?",
+                "answer": "No. Our fees are fixed and agreed upfront. Travel outside our office cities is billed at cost."
+              },
+              {
+                "question": "Can I change plans later?",
+                "answer": "Yes. Many clients start with a project and move to monthly advisory afterwards."
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Not sure which option fits?",
+            "text": "",
+            "buttonLabel": "Ask us",
+            "buttonHref": "page:faq"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Northwind Partners",
+            "tagline": "Advisory and strategy for growing companies.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Northwind Partners. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "faq",
+      "title": "FAQ",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Northwind Partners",
+            "useSiteMenu": true,
+            "ctaLabel": "Get a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / FAQ",
+            "heading": "Frequently asked questions",
+            "text": "Everything you need to know about working with Northwind."
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "General",
+            "items": [
+              {
+                "question": "What size companies do you work with?",
+                "answer": "Mostly companies with 20 to 500 employees, from startups to established family businesses."
+              },
+              {
+                "question": "Which industries do you specialise in?",
+                "answer": "Professional services, logistics, retail, healthcare and technology — but our methods work across sectors."
+              },
+              {
+                "question": "Do you work remotely?",
+                "answer": "Yes. We combine remote work with on-site workshops at key moments."
+              },
+              {
+                "question": "How quickly can you start?",
+                "answer": "Usually within two weeks of signing an engagement letter."
+              },
+              {
+                "question": "How do you measure success?",
+                "answer": "We agree clear targets at the start and review progress with you every month."
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Still have questions?",
+            "text": "Our team is happy to help.",
+            "buttonLabel": "Contact us",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Northwind Partners",
+            "tagline": "Advisory and strategy for growing companies.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Northwind Partners. All rights reserved."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Northwind Partners",
+            "useSiteMenu": true,
+            "ctaLabel": "Get a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "Tell us about your goals and we will get back to you within one business day."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Send us a message",
+            "text": "Prefer to talk? Call us Monday to Friday, 8am–6pm CT.",
+            "email": "hello@northwindpartners.com",
+            "phone": "+1 (312) 555-0187",
+            "address": "233 S Wacker Drive, Suite 2100\nChicago, IL 60606",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you — we will be in touch within one business day."
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "< 24h",
+                "label": "Response time"
+              },
+              {
+                "value": "3",
+                "label": "US offices"
+              },
+              {
+                "value": "30 min",
+                "label": "Free first call"
+              },
+              {
+                "value": "4.9★",
+                "label": "Client rating"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Northwind Partners",
+            "tagline": "Advisory and strategy for growing companies.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Northwind Partners. All rights reserved."
+          }
+        }
+      ]
+    }
+  ]
+}

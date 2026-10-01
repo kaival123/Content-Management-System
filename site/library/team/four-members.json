@@ -1,0 +1,52 @@
+{
+  "name": "Team of four",
+  "description": "Four team members with photo, name and role.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Meet the team",
+      "subheading": "A small crew with big ambitions.",
+      "members": [
+        {
+          "name": "Aisha Khan",
+          "role": "Founder & CEO",
+          "bio": "",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": ""
+        },
+        {
+          "name": "Marco Rossi",
+          "role": "Head of Design",
+          "bio": "",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": ""
+        },
+        {
+          "name": "Lena Park",
+          "role": "Lead Engineer",
+          "bio": "",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": ""
+        },
+        {
+          "name": "David Osei",
+          "role": "Customer Success",
+          "bio": "",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "center"
+    }
+  }
+}

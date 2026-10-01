@@ -1,0 +1,103 @@
+@for (f of fields(); track f.key) {
+  @let value = data()[f.key];
+  <div class="field" [class.field-inline]="f.type === 'toggle'">
+    @if (f.type !== 'list') {
+      <label [attr.for]="idp + f.key">{{ f.label }}</label>
+    }
+
+    @switch (f.type) {
+      @case ('textarea') {
+        <textarea [id]="idp + f.key" rows="3" [value]="value ?? ''" (input)="text(f.key, $event)" [placeholder]="f.placeholder ?? ''"></textarea>
+      }
+      @case ('lines') {
+        <textarea [id]="idp + f.key" rows="4" [value]="joinLines(value)" (input)="lines(f.key, $event)"></textarea>
+      }
+      @case ('number') {
+        <input [id]="idp + f.key" type="number" [value]="value ?? 0" (input)="num(f.key, $event)" />
+      }
+      @case ('toggle') {
+        <input [id]="idp + f.key" type="checkbox" class="switch" [checked]="!!value" (change)="check(f.key, $event)" />
+      }
+      @case ('select') {
+        <select [id]="idp + f.key" (change)="text(f.key, $event)">
+          @for (o of f.options; track o.value) {
+            <option [value]="o.value" [selected]="o.value === value">{{ o.label }}</option>
+          }
+        </select>
+      }
+      @case ('color') {
+        <div class="color-input">
+          <input type="color" [value]="value || '#000000'" (input)="text(f.key, $event)" />
+          <input [id]="idp + f.key" type="text" [value]="value ?? ''" (change)="text(f.key, $event)" />
+        </div>
+      }
+      @case ('image') {
+        <div class="image-input">
+          @if (value) {
+            <div class="image-preview">
+              <img [src]="assetUrl(value)" alt="" />
+              <button type="button" class="btn-icon" title="Remove image" (click)="emit(f.key, '')"><app-icon name="x" [size]="14" /></button>
+            </div>
+          }
+          <div class="image-row">
+            <input
+              [id]="idp + f.key"
+              type="url"
+              placeholder="https://… image URL"
+              [value]="value?.startsWith('data:') ? '' : (value ?? '')"
+              (change)="text(f.key, $event)"
+            />
+            <label class="btn btn-sm btn-secondary" title="Upload image">
+              <app-icon name="upload" [size]="14" />
+              <input type="file" accept="image/*" hidden (change)="upload(f.key, $event)" />
+            </label>
+          </div>
+        </div>
+      }
+      @case ('list') {
+        <div class="list-field">
+          <div class="list-head">
+            <span class="list-label">{{ f.label }}</span>
+            <span class="adm-count">{{ items(f.key).length }}</span>
+          </div>
+          @for (item of items(f.key); track $index; let i = $index, first = $first, last = $last) {
+            <div class="list-item" [class.open]="isOpen(f.key, i)">
+              <div class="list-item-head">
+                <button type="button" class="list-item-toggle" (click)="toggle(f.key, i)">
+                  <app-icon [name]="isOpen(f.key, i) ? 'down' : 'up'" [size]="14" class="rot" />
+                  <span>{{ itemTitle(f, item, i) }}</span>
+                </button>
+                <button type="button" class="btn-icon sm" title="Move up" [disabled]="first" (click)="moveItem(f, i, -1)"><app-icon name="up" [size]="14" /></button>
+                <button type="button" class="btn-icon sm" title="Move down" [disabled]="last" (click)="moveItem(f, i, 1)"><app-icon name="down" [size]="14" /></button>
+                <button type="button" class="btn-icon sm" title="Duplicate" (click)="duplicateItem(f, i)"><app-icon name="copy" [size]="14" /></button>
+                <button type="button" class="btn-icon sm danger" title="Remove" (click)="removeItem(f, i)"><app-icon name="trash" [size]="14" /></button>
+              </div>
+              @if (isOpen(f.key, i)) {
+                <div class="list-item-body">
+                  <app-section-form [fields]="f.itemFields ?? []" [data]="item" [pages]="pages()" (patch)="patchItem(f, i, $event)" />
+                </div>
+              }
+            </div>
+          }
+          <button type="button" class="btn btn-sm btn-dashed" (click)="addItem(f)"><app-icon name="plus" [size]="14" /> Add {{ (f.itemLabel ?? 'item').toLowerCase() }}</button>
+        </div>
+      }
+      @case ('url') {
+        <div class="url-input">
+          <input [id]="idp + f.key" type="text" [value]="value ?? ''" (input)="text(f.key, $event)" [placeholder]="f.placeholder ?? 'https://… or #section'" />
+          @if (pages().length) {
+            <select aria-label="Link to a page" (change)="linkPage(f.key, $event)">
+              <option value="">Link to page…</option>
+              @for (pg of pages(); track pg.slug) {
+                <option [value]="pg.slug" [selected]="value === 'page:' + pg.slug">{{ pg.title }}</option>
+              }
+            </select>
+          }
+        </div>
+      }
+      @default {
+        <input [id]="idp + f.key" type="text" [value]="value ?? ''" (input)="text(f.key, $event)" [placeholder]="f.placeholder ?? ''" />
+      }
+    }
+  </div>
+}

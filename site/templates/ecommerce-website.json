@@ -1,0 +1,833 @@
+{
+  "id": "ecommerce-website",
+  "kind": "multi",
+  "category": "E-commerce",
+  "name": "Online Store",
+  "description": "A complete online store with a hero slider, shop, collections, about, FAQ, contact and customer login.",
+  "preview": [
+    "#ffffff",
+    "#b45309",
+    "#1f2937"
+  ],
+  "theme": {
+    "primaryColor": "#b45309",
+    "accentColor": "#1f2937",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#faf6f0",
+    "textColor": "#1c1917",
+    "fontFamily": "Outfit",
+    "headingFont": "Playfair Display",
+    "radius": 8,
+    "maxWidth": 1240
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Lumen Home",
+            "useSiteMenu": true,
+            "ctaLabel": "Shop now",
+            "ctaHref": "page:shop"
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "variant": "hero",
+            "slideHeight": 560,
+            "overlay": 40,
+            "slides": [
+              {
+                "heading": "The Autumn Collection",
+                "eyebrow": "New season",
+                "text": "Warm textures and natural materials for slower days at home.",
+                "buttonLabel": "Shop new in",
+                "buttonHref": "page:shop",
+                "textColor": "#ffffff",
+                "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&q=80"
+              },
+              {
+                "heading": "Light, reimagined",
+                "eyebrow": "Lighting",
+                "text": "Handmade lamps that make every room glow.",
+                "buttonLabel": "Shop lighting",
+                "buttonHref": "page:collections",
+                "textColor": "#ffffff",
+                "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=1600&q=80"
+              },
+              {
+                "heading": "Free shipping over $75",
+                "eyebrow": "This week only",
+                "text": "Plus free returns for 60 days on every order.",
+                "buttonLabel": "Start shopping",
+                "buttonHref": "page:shop",
+                "textColor": "#ffffff",
+                "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 1,
+            "perViewTablet": 1,
+            "perViewMobile": 1,
+            "gap": 0,
+            "autoplay": true,
+            "autoplaySpeed": 5000,
+            "transition": "fade"
+          },
+          "style": {
+            "paddingY": 0,
+            "width": "full"
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "heading": "Best sellers",
+            "subheading": "Customer favourites, back in stock.",
+            "products": [
+              {
+                "name": "Linen Throw",
+                "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80",
+                "price": "$89",
+                "oldPrice": "",
+                "badge": "Best seller",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Arc Table Lamp",
+                "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80",
+                "price": "$149",
+                "oldPrice": "$179",
+                "badge": "-15%",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Stoneware Mug Set",
+                "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&q=80",
+                "price": "$42",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Oak Lounge Chair",
+                "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
+                "price": "$490",
+                "oldPrice": "",
+                "badge": "New",
+                "rating": "4.7",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "Shop by collection",
+            "subheading": "",
+            "shape": "1/1",
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80",
+                "title": "Living",
+                "caption": "Sofas, throws & cushions",
+                "link": "page:collections"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=900&q=80",
+                "title": "Kitchen",
+                "caption": "Tableware & linens",
+                "link": "page:collections"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=900&q=80",
+                "title": "Bedroom",
+                "caption": "Bedding & textiles",
+                "link": "page:collections"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🚚",
+                "title": "Free shipping",
+                "text": "On orders over $75."
+              },
+              {
+                "icon": "↩️",
+                "title": "60-day returns",
+                "text": "Easy, free returns."
+              },
+              {
+                "icon": "🌿",
+                "title": "Sustainably made",
+                "text": "Natural, certified materials."
+              },
+              {
+                "icon": "💬",
+                "title": "Here to help",
+                "text": "Real people, 7 days a week."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "none",
+            "textAlign": "center"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Loved in 50,000 homes",
+            "items": [
+              {
+                "quote": "The linen throw is the softest thing I own. Already ordered a second.",
+                "name": "Hannah R.",
+                "role": "Verified buyer",
+                "avatar": ""
+              },
+              {
+                "quote": "Beautiful packaging and the lamp is even better in person.",
+                "name": "Marcus T.",
+                "role": "Verified buyer",
+                "avatar": ""
+              },
+              {
+                "quote": "Quality that feels far more expensive than it is.",
+                "name": "Priya S.",
+                "role": "Verified buyer",
+                "avatar": ""
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "newsletter",
+          "data": {
+            "heading": "Join the Lumen list",
+            "text": "Get 10% off your first order, plus early access to new collections.",
+            "buttonLabel": "Sign up",
+            "successMessage": "Welcome! Your code is on its way."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Lumen Home",
+            "tagline": "Considered homeware, made to last.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Lumen Home. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "shop",
+      "title": "Shop",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Lumen Home",
+            "useSiteMenu": true,
+            "ctaLabel": "Shop now",
+            "ctaHref": "page:shop"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Shop",
+            "heading": "Shop all",
+            "text": "Homeware made from natural materials by independent makers."
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "heading": "Living",
+            "subheading": "",
+            "products": [
+              {
+                "name": "Linen Throw",
+                "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80",
+                "price": "$89",
+                "oldPrice": "",
+                "badge": "Best seller",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Oak Lounge Chair",
+                "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
+                "price": "$490",
+                "oldPrice": "",
+                "badge": "New",
+                "rating": "4.7",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Ceramic Vase",
+                "image": "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=800&q=80",
+                "price": "$58",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Potted Olive Tree",
+                "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800&q=80",
+                "price": "$75",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "anchor": "kitchen",
+            "heading": "Kitchen & dining",
+            "subheading": "",
+            "products": [
+              {
+                "name": "Stoneware Mug Set",
+                "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800&q=80",
+                "price": "$42",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Walnut Serving Board",
+                "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80",
+                "price": "$64",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Arc Table Lamp",
+                "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80",
+                "price": "$149",
+                "oldPrice": "$179",
+                "badge": "-15%",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              },
+              {
+                "name": "Linen Napkins (4)",
+                "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+                "price": "$36",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.6",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "Recently viewed",
+            "subheading": "",
+            "variant": "product",
+            "slides": [
+              {
+                "heading": "Linen Throw",
+                "eyebrow": "Living",
+                "price": "$89",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop",
+                "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=900&q=80"
+              },
+              {
+                "heading": "Arc Table Lamp",
+                "eyebrow": "Lighting",
+                "price": "$149",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop",
+                "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=900&q=80"
+              },
+              {
+                "heading": "Ceramic Vase",
+                "eyebrow": "Decor",
+                "price": "$58",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop",
+                "image": "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=900&q=80"
+              },
+              {
+                "heading": "Oak Lounge Chair",
+                "eyebrow": "Furniture",
+                "price": "$490",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop",
+                "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=900&q=80"
+              },
+              {
+                "heading": "Potted Olive Tree",
+                "eyebrow": "Plants",
+                "price": "$75",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:shop",
+                "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80"
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 4,
+            "perViewTablet": 2,
+            "perViewMobile": 1,
+            "gap": 20
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Lumen Home",
+            "tagline": "Considered homeware, made to last.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Lumen Home. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "collections",
+      "title": "Collections",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Lumen Home",
+            "useSiteMenu": true,
+            "ctaLabel": "Shop now",
+            "ctaHref": "page:shop"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Collections",
+            "heading": "Collections",
+            "text": "Curated edits for every room in your home."
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "shape": "4/3",
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80",
+                "title": "Living room",
+                "caption": "Sofas, throws & cushions",
+                "link": "page:shop"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=900&q=80",
+                "title": "Kitchen",
+                "caption": "Tableware & linens",
+                "link": "page:shop"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=900&q=80",
+                "title": "Bedroom",
+                "caption": "Bedding & textiles",
+                "link": "page:shop"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=900&q=80",
+                "title": "Lighting",
+                "caption": "Lamps & pendants",
+                "link": "page:shop"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+                "title": "Plants",
+                "caption": "Greenery & planters",
+                "link": "page:shop"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=80",
+                "title": "Autumn edit",
+                "caption": "New season picks",
+                "link": "page:shop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "The Autumn Edit",
+            "text": "Our new season collection brings warm oak, washed linen and hand-glazed ceramics together for rooms that feel calm and lived-in.",
+            "bullets": [
+              "42 new pieces",
+              "Made by 11 independent studios",
+              "Limited quantities"
+            ],
+            "buttonLabel": "Shop the edit",
+            "buttonHref": "page:shop",
+            "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Lumen Home",
+            "tagline": "Considered homeware, made to last.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Lumen Home. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Lumen Home",
+            "useSiteMenu": true,
+            "ctaLabel": "Shop now",
+            "ctaHref": "page:shop"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / About",
+            "heading": "Our story",
+            "text": "Fewer, better things for the home."
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Made slowly, built to last",
+            "text": "Lumen Home began in 2017 in a small Copenhagen studio. Today we work with independent makers across Europe to create homeware from natural materials — designed to be used every day and kept for years.",
+            "bullets": [
+              "FSC-certified wood and organic linen",
+              "Fair wages for every maker",
+              "Plastic-free packaging"
+            ],
+            "buttonLabel": "Shop the collection",
+            "buttonHref": "page:shop",
+            "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "50k+",
+                "label": "Happy homes"
+              },
+              {
+                "value": "35",
+                "label": "Partner makers"
+              },
+              {
+                "value": "100%",
+                "label": "Plastic-free shipping"
+              },
+              {
+                "value": "4.9★",
+                "label": "Average review"
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "team",
+          "data": {
+            "heading": "The founders",
+            "subheading": "",
+            "members": [
+              {
+                "name": "Freja Nielsen",
+                "role": "Co-founder & Design",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Jonas Holm",
+                "role": "Co-founder & Operations",
+                "bio": "",
+                "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+                "link": ""
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 2
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Lumen Home",
+            "tagline": "Considered homeware, made to last.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Lumen Home. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "faq",
+      "title": "FAQ",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Lumen Home",
+            "useSiteMenu": true,
+            "ctaLabel": "Shop now",
+            "ctaHref": "page:shop"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / FAQ",
+            "heading": "Help & FAQ",
+            "text": "Answers about orders, shipping and returns."
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Orders & shipping",
+            "items": [
+              {
+                "question": "How long does delivery take?",
+                "answer": "Most orders arrive within 3–5 business days. Furniture ships within 2 weeks."
+              },
+              {
+                "question": "Is shipping free?",
+                "answer": "Yes, on all orders over $75. Otherwise shipping is a flat $6."
+              },
+              {
+                "question": "Do you ship internationally?",
+                "answer": "We ship to the US, Canada, the UK and the EU."
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "anchor": "returns",
+            "heading": "Returns & care",
+            "items": [
+              {
+                "question": "What is your return policy?",
+                "answer": "Return any unused item within 60 days for a full refund. Returns are free."
+              },
+              {
+                "question": "How do I care for linen?",
+                "answer": "Machine wash at 40°C and line dry. Linen gets softer with every wash."
+              },
+              {
+                "question": "What if an item arrives damaged?",
+                "answer": "Send us a photo within 7 days and we will replace it right away."
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Still need help?",
+            "text": "Our team replies within a few hours, 7 days a week.",
+            "buttonLabel": "Contact us",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Lumen Home",
+            "tagline": "Considered homeware, made to last.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Lumen Home. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Lumen Home",
+            "useSiteMenu": true,
+            "ctaLabel": "Shop now",
+            "ctaHref": "page:shop"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "Questions about an order or a product? We are happy to help."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "heading": "Customer care",
+            "text": "Monday to Sunday, 9am–6pm CET.",
+            "email": "care@lumenhome.com",
+            "phone": "+45 32 55 01 20",
+            "address": "Jægersborggade 14\n2200 Copenhagen N, Denmark",
+            "buttonLabel": "Send message",
+            "successMessage": "Thanks! We will reply within a few hours."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Lumen Home",
+            "tagline": "Considered homeware, made to last.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Lumen Home. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "login",
+      "title": "Login",
+      "hideInMenu": true,
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Lumen Home",
+            "useSiteMenu": true,
+            "ctaLabel": "Shop now",
+            "ctaHref": "page:shop"
+          }
+        },
+        {
+          "type": "auth",
+          "data": {
+            "mode": "login",
+            "heading": "Welcome back",
+            "text": "Log in to track orders and manage your account.",
+            "buttonLabel": "Log in",
+            "switchText": "New here?",
+            "switchLabel": "Shop the collection",
+            "switchHref": "page:shop",
+            "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Lumen Home",
+            "tagline": "Considered homeware, made to last.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Lumen Home. All rights reserved."
+          },
+          "style": {
+            "background": "#1c1917",
+            "textColor": "#d6d3d1"
+          }
+        }
+      ]
+    }
+  ]
+}

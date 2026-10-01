@@ -1,0 +1,74 @@
+{
+  "name": "Full-width slider",
+  "description": "Edge-to-edge hero slider with no section padding.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "",
+      "subheading": "",
+      "variant": "hero",
+      "slideHeight": 640,
+      "overlay": 40,
+      "slides": [
+        {
+          "heading": "Ideas that move people",
+          "eyebrow": "Creative studio",
+          "text": "Brand, web and campaigns for companies with something to say.",
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "View our work",
+          "buttonHref": "#work",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Design with purpose",
+          "eyebrow": "Branding",
+          "text": "Identities built on strategy, not trends.",
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Branding projects",
+          "buttonHref": "#work",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Digital products people love",
+          "eyebrow": "Product design",
+          "text": "From first prototype to polished release.",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Product projects",
+          "buttonHref": "#work",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "width": "full",
+      "paddingY": 0
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": true,
+      "autoplaySpeed": 6000,
+      "speed": 800,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true
+    }
+  }
+}

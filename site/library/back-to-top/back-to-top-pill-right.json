@@ -1,0 +1,16 @@
+{
+  "name": "Back to top · label, bottom right",
+  "description": "“Top” pill with an arrow in the bottom-right corner.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "pill",
+      "icon": "arrow",
+      "label": "Top",
+      "position": "right",
+      "size": 42,
+      "background": "__text__",
+      "iconColor": "__bg__"
+    }
+  }
+}

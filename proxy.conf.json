@@ -1,0 +1,14 @@
+{
+  "/api": {
+    "target": "http://127.0.0.1:4310",
+    "secure": false,
+    "changeOrigin": true,
+    "xfwd": true
+  },
+  "/site": {
+    "target": "http://127.0.0.1:4310",
+    "secure": false,
+    "changeOrigin": true,
+    "xfwd": true
+  }
+}

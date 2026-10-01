@@ -1,0 +1,107 @@
+<header class="adm-page-head">
+  <div>
+    <a class="adm-back" routerLink="/admin"><app-icon name="back" [size]="16" /> All websites</a>
+    <h1>Create new website</h1>
+    <p class="adm-sub">Pick what you're building and a starting template — everything can be changed in the editor.</p>
+  </div>
+</header>
+
+<form class="adm-new" (submit)="create($event)" novalidate>
+  <section class="panel">
+    <h2 class="panel-title">1. What are you building?</h2>
+    <div class="kind-grid" role="radiogroup" aria-label="Website type">
+      <button type="button" class="kind-card" role="radio" [attr.aria-checked]="kind() === 'single'" [class.selected]="kind() === 'single'" (click)="setKind('single')">
+        <span class="kind-art kind-art-single"><i></i><i></i><i></i></span>
+        <strong>Single page</strong>
+        <small>One landing page: product launch, event, lead capture…</small>
+      </button>
+      <button type="button" class="kind-card" role="radio" [attr.aria-checked]="kind() === 'multi'" [class.selected]="kind() === 'multi'" (click)="setKind('multi')">
+        <span class="kind-art kind-art-multi"><i></i><i></i><i></i><i></i></span>
+        <strong>Multi-page website</strong>
+        <small>Home, About, Services, Blog, Contact… connected by a shared menu and theme.</small>
+      </button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 class="panel-title">2. Choose a template</h2>
+    @for (g of groups(); track g.category) {
+      <h3 class="panel-label">{{ g.category === 'Blank' ? 'Blank templates' : g.category }}</h3>
+      <div class="tpl-grid" role="radiogroup" [attr.aria-label]="g.category + ' templates'">
+        @for (t of g.templates; track t.id) {
+          <button
+            type="button"
+            class="tpl-card"
+            role="radio"
+            [attr.aria-checked]="selected()?.id === t.id"
+            [class.selected]="selected()?.id === t.id"
+            (click)="templateId.set(t.id)"
+          >
+            <div class="tpl-thumb" [class.tpl-thumb-blank]="!preview(t).sections.length">
+              @if (preview(t).sections.length) {
+                <app-page-thumb [page]="preview(t)" />
+              } @else {
+                <span><app-icon name="plus" [size]="22" /> Empty canvas</span>
+              }
+            </div>
+            <div class="tpl-info">
+              <div class="tpl-name">
+                {{ t.name }}
+                @if (selected()?.id === t.id) {
+                  <app-icon name="check" [size]="16" />
+                }
+              </div>
+              <p>{{ t.description }}</p>
+              @if (t.kind === 'multi') {
+                <div class="tpl-pages">
+                  @for (title of pageTitles(t); track $index) {
+                    <span>{{ title }}</span>
+                  }
+                </div>
+              }
+              <div class="swatches">
+                @for (c of t.preview; track $index) {
+                  <span [style.background]="c"></span>
+                }
+              </div>
+            </div>
+          </button>
+        }
+      </div>
+    } @empty {
+      <p class="field-hint">No templates found in <code>site/templates/</code>.</p>
+    }
+  </section>
+
+  <section class="panel">
+    <h2 class="panel-title">3. Name your website</h2>
+    <div class="field">
+      <label for="np-name">Website name</label>
+      <input id="np-name" type="text" placeholder="e.g. Northwind Consulting" [value]="name()" (input)="setName($event)" />
+      @if (nameError()) {
+        <span class="field-error">{{ nameError() }}</span>
+      }
+    </div>
+    <div class="field">
+      <label for="np-slug">URL</label>
+      <div class="input-prefix">
+        <span>/</span>
+        <input id="np-slug" type="text" placeholder="northwind" [value]="slug()" (change)="setSlug($event)" />
+      </div>
+      @if (slugTaken()) {
+        <span class="field-hint">This URL is in use (by another website or by the CMS itself, like /admin) — a number will be added to keep it unique.</span>
+      }
+    </div>
+    <div class="field">
+      <label for="np-desc">Description <small>(used for SEO, optional)</small></label>
+      <textarea id="np-desc" rows="2" placeholder="A short summary for search engines and social shares" [value]="description()" (input)="setDescription($event)"></textarea>
+    </div>
+  </section>
+
+  <div class="adm-new-foot">
+    <a class="btn btn-secondary" routerLink="/admin">Cancel</a>
+    <button class="btn btn-primary" type="submit" [disabled]="creating()">
+      {{ creating() ? 'Creating…' : 'Create & open editor' }} <app-icon name="back" [size]="16" class="flip" />
+    </button>
+  </div>
+</form>

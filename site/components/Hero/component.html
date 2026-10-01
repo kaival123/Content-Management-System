@@ -1,0 +1,22 @@
+<div class="lp-hero-inner{{#is layout "split"}}{{#if image}} lp-split{{/if}}{{/is}}">
+  <div class="lp-hero-copy">
+    {{#if eyebrow}}
+    <span class="lp-eyebrow" data-el="eyebrow" data-edit="eyebrow">{{eyebrow}}</span>
+    {{/if}}
+    <h1 class="lp-h1" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h1>
+    {{#if subheading}}
+    <p class="lp-lead lp-pre" data-el="subheading" data-edit="subheading">{{subheading}}</p>
+    {{/if}}
+    <div class="lp-actions">
+      {{#if primaryLabel}}
+      <a class="lp-btn lp-btn-primary" data-el="primary" data-edit="primaryLabel" href="{{primaryHref}}">{{primaryLabel}}</a>
+      {{/if}}
+      {{#if secondaryLabel}}
+      <a class="lp-btn lp-btn-ghost" data-el="secondary" data-edit="secondaryLabel" href="{{secondaryHref}}">{{secondaryLabel}}</a>
+      {{/if}}
+    </div>
+  </div>
+  {{#if image}}
+  <img class="lp-hero-img" data-el="image" src="{{image}}" alt="" />
+  {{/if}}
+</div>
