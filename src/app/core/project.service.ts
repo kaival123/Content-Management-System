@@ -1,5 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
-import { ApiError, SIGN_IN_REQUIRED, api } from './api';
+import { ApiError, api } from './api';
 import { ComponentDef } from './engine/render';
 import { LandingPage, Theme, Website } from './models';
 import { setSectionDefs } from './section-registry';
@@ -70,10 +70,7 @@ export function assetUrl(value: string | null | undefined): string {
  */
 @Injectable({ providedIn: 'root' })
 export class ProjectService {
-  /** 'signin': the server runs in production mode and needs the admin password. */
-  readonly status = signal<'connecting' | 'ready' | 'offline' | 'signin'>('connecting');
-  /** From /api/session: whether this server requires sign-in (production) at all. */
-  readonly session = signal<{ auth: boolean; production: boolean }>({ auth: false, production: false });
+  readonly status = signal<'connecting' | 'ready' | 'offline'>('connecting');
   readonly error = signal<string | null>(null);
   readonly siteDir = signal('');
   readonly config = signal<ProjectSnapshot['config']>({});
@@ -101,34 +98,9 @@ export class ProjectService {
     return () => this.listeners.delete(listener);
   }
 
-  constructor() {
-    window.addEventListener(SIGN_IN_REQUIRED, () => this.requireSignIn());
-  }
-
   async connect(): Promise<void> {
-    await api<{ auth: boolean; production: boolean }>('GET', '/api/session')
-      .then((s) => this.session.set({ auth: !!s.auth, production: !!s.production }))
-      .catch(() => {});
     await this.load(true);
-    if (this.status() === 'ready') this.listen();
-  }
-
-  /** Signs in with the admin password (production mode), then loads the project. */
-  async signIn(password: string): Promise<void> {
-    await api('POST', '/api/login', { password });
-    await this.connect();
-  }
-
-  async signOut(): Promise<void> {
-    await api('POST', '/api/logout').catch(() => {});
-    this.requireSignIn();
-  }
-
-  private requireSignIn(): void {
-    this.events?.close();
-    this.events = null;
-    this.status.set('signin');
-    this.error.set(null);
+    this.listen();
   }
 
   /** Loads the whole project. With `includePages` false only components/templates/config are refreshed. */
@@ -147,10 +119,6 @@ export class ProjectService {
       this.status.set('ready');
       this.error.set(null);
     } catch (e) {
-      if (e instanceof ApiError && e.status === 401) {
-        this.requireSignIn();
-        return;
-      }
       this.status.set('offline');
       this.error.set(e instanceof ApiError ? e.message : String(e));
     }
@@ -175,12 +143,6 @@ export class ProjectService {
       wasOffline = true;
       this.status.set('offline');
       this.error.set('Lost connection to the project server. Reconnecting…');
-      // In production the stream also fails when the session has expired.
-      if (this.session().auth) {
-        void api<{ signedIn: boolean }>('GET', '/api/session')
-          .then((s) => !s.signedIn && this.requireSignIn())
-          .catch(() => {});
-      }
     };
     events.onopen = () => {
       if (this.status() === 'offline') this.status.set('ready');

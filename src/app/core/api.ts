@@ -9,9 +9,6 @@ export class ApiError extends Error {
   }
 }
 
-/** Fired on window when the server asks to sign in (production mode, session expired). */
-export const SIGN_IN_REQUIRED = 'cms:sign-in-required';
-
 /**
  * Calls the local project server (server/index.mjs). Every request carries the
  * X-CMS header the server requires for anything that changes files.
@@ -38,7 +35,6 @@ export async function api<T = any>(method: string, url: string, body?: unknown):
     }
     throw new ApiError(res.status || 502, 'The project server (port 4310) is not running. Start it with "npm run start:server", or use "npm start" to start everything.', null);
   }
-  if (res.status === 401 && data?.signIn) window.dispatchEvent(new Event(SIGN_IN_REQUIRED));
   if (!res.ok) throw new ApiError(res.status, data?.error ?? res.statusText, data);
   return data as T;
 }

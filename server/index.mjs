@@ -4,23 +4,15 @@
 //   - REST API for pages, files, assets, search, Git and static export
 //   - Server-Sent Events (/api/events) announcing every file change on disk
 //
-// Development: node server/index.mjs   (env: CMS_SITE_DIR, CMS_PORT)
-//   Listens on 127.0.0.1 only, next to `ng serve`; see checkRequest() for how browsers on
-//   other sites are kept out. No sign-in.
-//
-// Production: node server/index.mjs --prod   (or NODE_ENV=production; see DEPLOY.md)
-//   One process serves the built CMS app, the API and the published websites, on
-//   CMS_HOST:PORT (default 0.0.0.0:8080). The admin and the API need a sign-in with
-//   CMS_ADMIN_PASSWORD; visitors only ever get the static build in site/dist/.
+// Usage: node server/index.mjs   (env: CMS_SITE_DIR, CMS_PORT)
+// Listens on 127.0.0.1 only; see checkRequest() for how browsers on other sites are kept out.
 
 import { spawn } from 'node:child_process';
 import { mkdirSync, realpathSync, watch } from 'node:fs';
 import fs from 'node:fs/promises';
 import http from 'node:http';
 import path from 'node:path';
-import { Auth, clientIp, isHttps } from './auth.mjs';
 import { Git } from './git.mjs';
-import { PublicFiles } from './public.mjs';
 import { IGNORED_DIRS, Project, ProjectError, hash, readText, toPosix, writeText } from './project.mjs';
 
 // Real, long-form path: Windows file watching asserts on 8.3 short names (e.g. KAIVAL~1).
@@ -29,22 +21,7 @@ const SITE_DIR = (() => {
   mkdirSync(dir, { recursive: true });
   return realpathSync.native(dir);
 })();
-const PROD = process.argv.includes('--prod') || process.env.NODE_ENV === 'production';
-// PORT is what most hosting platforms set; in development it belongs to `ng serve`.
-const PORT = Number(process.env.CMS_PORT ?? (PROD ? (process.env.PORT ?? 8080) : 4310));
-const HOST = process.env.CMS_HOST ?? (PROD ? '0.0.0.0' : '127.0.0.1');
-/** The built CMS app (npm run build). */
-const APP_DIR = path.resolve(process.env.CMS_APP_DIR ?? 'dist/cms/browser');
-
-const auth = (() => {
-  if (!PROD) return null;
-  const password = process.env.CMS_ADMIN_PASSWORD ?? '';
-  if (password.length < 8) {
-    console.error('Production mode needs an admin password of at least 8 characters: set CMS_ADMIN_PASSWORD.');
-    process.exit(1);
-  }
-  return new Auth({ password });
-})();
+const PORT = Number(process.env.CMS_PORT ?? 4310);
 const MAX_BODY = 25 * 1024 * 1024;
 
 const project = new Project(SITE_DIR);
@@ -68,11 +45,6 @@ const MIME = {
   '.html': 'text/html; charset=utf-8',
   '.mp4': 'video/mp4',
   '.pdf': 'application/pdf',
-  '.txt': 'text/plain; charset=utf-8',
-  '.xml': 'application/xml; charset=utf-8',
-  '.map': 'application/json; charset=utf-8',
-  '.webmanifest': 'application/manifest+json',
-  '.webm': 'video/webm',
 };
 
 // --- security ---------------------------------------------------------------------------
@@ -110,7 +82,6 @@ function isAllowedHost(hostname) {
  *   preflight which this server never approves.
  */
 function checkRequest(req) {
-  if (PROD) return checkProductionRequest(req);
   if (!LOCAL_HOSTS.has(hostnameOf(req.headers.host ?? ''))) return 'Bad host';
   const forwarded = String(req.headers['x-forwarded-host'] ?? '').split(',')[0].trim();
   const openedAt = forwarded || req.headers.host;
@@ -121,21 +92,6 @@ function checkRequest(req) {
     const origin = hostnameOf(req.headers.origin);
     if (origin !== hostnameOf(openedAt) && !LOCAL_HOSTS.has(origin)) return 'Bad origin';
   }
-  if (!['GET', 'HEAD'].includes(req.method) && req.headers['x-cms'] !== '1') return 'Missing X-CMS header';
-  return null;
-}
-
-/**
- * Production: the server faces the internet, so access is guarded by the sign-in. On top:
- * - with CMS_ALLOWED_HOSTS set, only those domain names are served,
- * - Origin, when sent, must match the address the site was opened at,
- * - state-changing requests must carry X-CMS (see above).
- */
-function checkProductionRequest(req) {
-  const forwarded = String(req.headers['x-forwarded-host'] ?? '').split(',')[0].trim();
-  const openedAt = hostnameOf(forwarded || req.headers.host || '');
-  if (EXTRA_HOSTS.size && !EXTRA_HOSTS.has(openedAt) && !LOCAL_HOSTS.has(openedAt)) return 'Unknown host';
-  if (req.headers.origin && hostnameOf(req.headers.origin) !== openedAt) return 'Bad origin';
   if (!['GET', 'HEAD'].includes(req.method) && req.headers['x-cms'] !== '1') return 'Missing X-CMS header';
   return null;
 }
@@ -383,7 +339,6 @@ route('POST', /^\/api\/export$/, async (req) => {
 
 /** Opens the project (or a file in it) in VS Code, if the `code` command is installed. */
 route('POST', /^\/api\/open$/, async (req) => {
-  if (PROD) throw new ProjectError(400, 'Opening VS Code is only available when the CMS runs on your own computer.');
   const { path: rel } = await readBody(req);
   const target = rel ? project.resolve(rel) : SITE_DIR;
   const win = process.platform === 'win32';
@@ -423,46 +378,10 @@ route('POST', /^\/api\/git\/revert$/, async (req) => {
 
 // --- server -------------------------------------------------------------------------------
 
-const publicFiles = PROD ? new PublicFiles({ appDir: APP_DIR, distDir: path.join(SITE_DIR, 'dist'), mime: MIME }) : null;
-
-/** Sign-in endpoints; they work without a session. Returns true if handled. */
-async function handleAuth(req, res, url) {
-  if (url.pathname === '/api/session' && req.method === 'GET') {
-    send(res, 200, { auth: !!auth, signedIn: !auth || auth.isSignedIn(req), production: PROD });
-    return true;
-  }
-  if (!auth) return false;
-  if (url.pathname === '/api/login' && req.method === 'POST') {
-    if (auth.isLimited(clientIp(req))) {
-      send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
-      return true;
-    }
-    const { password } = await readBody(req).catch(() => ({}));
-    const cookie = auth.signIn(req, password, isHttps(req));
-    if (!cookie) {
-      send(res, 401, { error: 'Wrong password.' });
-      return true;
-    }
-    res.setHeader('Set-Cookie', cookie);
-    send(res, 200, { ok: true });
-    return true;
-  }
-  if (url.pathname === '/api/logout' && req.method === 'POST') {
-    res.setHeader('Set-Cookie', auth.signOut(req, isHttps(req)));
-    send(res, 200, { ok: true });
-    return true;
-  }
-  return false;
-}
-
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url ?? '/', 'http://localhost');
   const denied = checkRequest(req);
   if (denied) return send(res, 403, { error: denied });
-
-  if (await handleAuth(req, res, url)) return;
-  const isApi = url.pathname.startsWith('/api/') || url.pathname.startsWith('/site/');
-  if (auth && isApi && !auth.isSignedIn(req)) return send(res, 401, { error: 'Sign in required', signIn: true });
 
   if (url.pathname === '/api/events') {
     res.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive' });
@@ -499,14 +418,6 @@ const server = http.createServer(async (req, res) => {
       return send(res, status, { error: e.message, ...(e.extra ?? {}) });
     }
   }
-  if (publicFiles && !isApi) {
-    try {
-      if (await publicFiles.handle(req, res, url)) return;
-    } catch (e) {
-      console.error(e);
-      return send(res, 500, { error: 'Server error' });
-    }
-  }
   send(res, 404, { error: 'Not found' });
 });
 
@@ -517,27 +428,7 @@ watch(SITE_DIR, { recursive: true }, (_event, filename) => queueChange(filename?
   console.error('File watching stopped:', e.message),
 );
 
-if (PROD) {
-  const appIndex = await fs.stat(path.join(APP_DIR, 'index.html')).catch(() => null);
-  if (!appIndex) {
-    console.error(`The built CMS app was not found in ${APP_DIR}. Run "npm run build" first (or set CMS_APP_DIR).`);
-    process.exit(1);
-  }
-  // Visitors are served site/dist/; published websites without a build there aren't public yet.
-  for (const site of await project.websiteSlugs()) {
-    const { website } = await project.readWebsite(site).catch(() => ({ website: null }));
-    if (website?.status === 'published' && !(await fs.stat(path.join(SITE_DIR, 'dist', site)).catch(() => null))) {
-      console.warn(`"${site}" is published but has no static build yet: sign in to /admin and use Developer mode → Build site (or save any change).`);
-    }
-  }
-}
-
-server.listen(PORT, HOST, () => {
-  if (PROD) {
-    console.log(`CMS running (production): http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}/admin`);
-    console.log(`App:            ${APP_DIR}`);
-  } else {
-    console.log(`CMS project server: http://127.0.0.1:${PORT}`);
-  }
-  console.log(`Project folder: ${SITE_DIR}`);
+server.listen(PORT, '127.0.0.1', () => {
+  console.log(`CMS project server: http://127.0.0.1:${PORT}`);
+  console.log(`Project folder:     ${SITE_DIR}`);
 });
