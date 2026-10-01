@@ -407,7 +407,6 @@ route('GET', /^\/api\/git\/branches$/, async () => git.branches());
 route('GET', /^\/api\/git\/diff$/, async (_req, _m, url) => ({ diff: await git.diff(url.searchParams.get('path')) }));
 route('GET', /^\/api\/git\/show$/, async (_req, _m, url) => ({ content: await git.show(url.searchParams.get('path'), url.searchParams.get('ref') ?? 'HEAD') }));
 route('POST', /^\/api\/git\/commit$/, async (req) => ({ summary: await git.commit((await readBody(req)).message) }));
-route('POST', /^\/api\/git\/push$/, async () => git.push());
 route('POST', /^\/api\/git\/branch$/, async (req) => {
   const { name } = await readBody(req);
   await git.createBranch(name, true);

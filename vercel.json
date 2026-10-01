@@ -1,8 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "installCommand": "echo \"Nothing to install: publishing the prebuilt websites in site/dist\"",
-  "buildCommand": "echo \"Nothing to build: the CMS writes site/dist when you save\"",
-  "outputDirectory": "site/dist",
-  "trailingSlash": true
-}
