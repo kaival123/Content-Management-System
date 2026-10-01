@@ -1,0 +1,340 @@
+{
+  "category": "Agriculture",
+  "id": "agri-produce-market",
+  "kind": "single",
+  "name": "Farm-to-Door Produce Market",
+  "description": "An online farmers’ market landing page: seasonal produce, how it works, partner farms, delivery FAQ and newsletter.",
+  "preview": [
+    "#ffffff",
+    "#15803d",
+    "#1f2937"
+  ],
+  "theme": {
+    "primaryColor": "#15803d",
+    "accentColor": "#f97316",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f3f8f1",
+    "textColor": "#1f2937",
+    "fontFamily": "Plus Jakarta Sans",
+    "headingFont": "Plus Jakarta Sans",
+    "radius": 14,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "FarmFresh Direct",
+            "links": [
+              {
+                "label": "Shop",
+                "href": "#products"
+              },
+              {
+                "label": "How it works",
+                "href": "#how"
+              },
+              {
+                "label": "Our farms",
+                "href": "#farms"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Shop now",
+            "ctaHref": "#products"
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "variant": "hero",
+            "slideHeight": 0,
+            "overlay": 45,
+            "slides": [
+              {
+                "heading": "The farmers’ market, delivered",
+                "eyebrow": "Harvested yesterday",
+                "text": "Fruit, vegetables, dairy and eggs from 40 local farms — at your door within 24 hours.",
+                "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1920&q=80",
+                "price": "",
+                "buttonLabel": "Shop now",
+                "buttonHref": "#products",
+                "background": "",
+                "textColor": "#ffffff",
+                "html": ""
+              },
+              {
+                "heading": "Crisp apples from local orchards",
+                "eyebrow": "Autumn harvest",
+                "text": "Twelve varieties, picked at peak ripeness.",
+                "image": "https://images.unsplash.com/photo-1727120279660-5c28b8461609?w=1920&q=80",
+                "price": "",
+                "buttonLabel": "Shop fruit",
+                "buttonHref": "#products",
+                "background": "",
+                "textColor": "#ffffff",
+                "html": ""
+              },
+              {
+                "heading": "Farmers keep 70% of every sale",
+                "eyebrow": "Support local",
+                "text": "Fair prices for growers, fresher food for you.",
+                "image": "https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?w=1920&q=80",
+                "price": "",
+                "buttonLabel": "Meet the farms",
+                "buttonHref": "#farms",
+                "background": "",
+                "textColor": "#ffffff",
+                "html": ""
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 1,
+            "perViewTablet": 1,
+            "perViewMobile": 1,
+            "gap": 0,
+            "autoplay": true,
+            "autoplaySpeed": 5500,
+            "speed": 700,
+            "arrowStyle": "minimal",
+            "arrowSize": 52,
+            "dotsStyle": "numbers",
+            "dotsPosition": "overlay",
+            "controlColor": "#ffffff",
+            "heightMode": "screen",
+            "screenDesktop": 80,
+            "screenTablet": 70,
+            "screenMobile": 70
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "heading": "In season now",
+            "subheading": "Prices per bunch, kilo or dozen.",
+            "products": [
+              {
+                "name": "Heirloom tomatoes 1kg",
+                "image": "https://images.unsplash.com/photo-1662370761575-05ff1ee40d7d?w=800&q=80",
+                "price": "$6.50",
+                "oldPrice": "",
+                "badge": "Local",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#products"
+              },
+              {
+                "name": "Rainbow carrots",
+                "image": "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?w=800&q=80",
+                "price": "$3.20",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#products"
+              },
+              {
+                "name": "Orchard apples 2kg",
+                "image": "https://images.unsplash.com/photo-1599678914948-8e0a39f42a31?w=800&q=80",
+                "price": "$7.00",
+                "oldPrice": "$8.50",
+                "badge": "Sale",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#products"
+              },
+              {
+                "name": "Veg box — mixed",
+                "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=800&q=80",
+                "price": "$29",
+                "oldPrice": "",
+                "badge": "Popular",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#products"
+              }
+            ],
+            "anchor": "products"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "How it works",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🛒",
+                "title": "Shop online",
+                "text": "Choose from what our farms harvest this week."
+              },
+              {
+                "icon": "🚜",
+                "title": "Farms harvest",
+                "text": "Your order is picked and packed the day before delivery."
+              },
+              {
+                "icon": "🚲",
+                "title": "We deliver",
+                "text": "Electric vans and cargo bikes, in a 2-hour slot you choose."
+              }
+            ],
+            "anchor": "how"
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "Our partner farms",
+            "subheading": "Small, independent and local.",
+            "captionOnHover": true,
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1537721664796-76f77222a5d0?w=900&q=80",
+                "title": "Green Acres",
+                "caption": "Vegetables",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1635778528589-b5df9e10d7cd?w=900&q=80",
+                "title": "Hillside Orchard",
+                "caption": "Fruit",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1657206456366-ac81460011ee?w=900&q=80",
+                "title": "Meadowbrook Dairy",
+                "caption": "Milk & cheese",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1556316918-880f9e893822?w=900&q=80",
+                "title": "Sunrise Poultry",
+                "caption": "Eggs",
+                "link": ""
+              }
+            ],
+            "anchor": "farms"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "40",
+                "label": "Local farms"
+              },
+              {
+                "value": "24h",
+                "label": "Field to door"
+              },
+              {
+                "value": "70%",
+                "label": "Goes to the farmer"
+              },
+              {
+                "value": "0",
+                "label": "Plastic packaging"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Delivery questions",
+            "items": [
+              {
+                "question": "Where do you deliver?",
+                "answer": "Across the city and suburbs within 25 km. Enter your postcode at checkout.",
+                "icon": ""
+              },
+              {
+                "question": "Is there a minimum order?",
+                "answer": "$25. Delivery is free on orders over $50.",
+                "icon": ""
+              },
+              {
+                "question": "What if something isn’t perfect?",
+                "answer": "Tell us within 48 hours and we’ll refund or replace it — no questions asked.",
+                "icon": ""
+              }
+            ],
+            "anchor": "faq",
+            "style": "minimal",
+            "icon": "plus",
+            "iconPosition": "left"
+          }
+        },
+        {
+          "type": "newsletter",
+          "data": {
+            "heading": "This week’s harvest, in your inbox",
+            "text": "New arrivals, recipes and farm stories every Friday.",
+            "placeholder": "you@example.com",
+            "buttonLabel": "Subscribe",
+            "note": "One email a month. Unsubscribe anytime.",
+            "successMessage": "Thanks — see you in your inbox!"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "FarmFresh Direct",
+            "tagline": "Local food, fairly sold.",
+            "links": [
+              {
+                "label": "Shop",
+                "href": "#products"
+              },
+              {
+                "label": "How it works",
+                "href": "#how"
+              },
+              {
+                "label": "Our farms",
+                "href": "#farms"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "copyright": "© 2026 FarmFresh Direct. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        },
+        {
+          "type": "back-to-top",
+          "data": {
+            "icon": "chevron",
+            "progress": true,
+            "background": "__primary__",
+            "ringColor": "__accent__"
+          }
+        }
+      ]
+    }
+  ]
+}

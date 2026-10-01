@@ -1,0 +1,677 @@
+{
+  "category": "Agriculture",
+  "id": "agri-farm-website",
+  "kind": "multi",
+  "name": "Farm & Agritourism Website",
+  "description": "A complete farm website: story, seasonal produce, farm stays and pick-your-own visits, farm shop and contact.",
+  "preview": [
+    "#fbf8f1",
+    "#5b7d2e",
+    "#2b2a24"
+  ],
+  "theme": {
+    "primaryColor": "#5b7d2e",
+    "accentColor": "#d9822b",
+    "backgroundColor": "#fbf8f1",
+    "surfaceColor": "#f0ead9",
+    "textColor": "#2b2a24",
+    "fontFamily": "Lato",
+    "headingFont": "Merriweather",
+    "radius": 12,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "useSiteMenu": true,
+            "ctaLabel": "Plan a visit",
+            "ctaHref": "page:visit"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Family farm · Farm shop · Farm stays",
+            "heading": "Come and taste the countryside",
+            "subheading": "Pick your own fruit, stay in our farmhouse cottages and take home produce grown right here.",
+            "primaryLabel": "Plan a visit",
+            "primaryHref": "page:visit",
+            "secondaryLabel": "Visit the shop",
+            "secondaryHref": "page:shop",
+            "image": "https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?w=1200&q=80",
+            "layout": "center"
+          },
+          "style": {
+            "paddingY": 150,
+            "background": "__text__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Things to do",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🍓",
+                "title": "Pick your own",
+                "text": "Strawberries in June, apples and pumpkins in autumn."
+              },
+              {
+                "icon": "🏡",
+                "title": "Farm stays",
+                "text": "Cosy cottages with views over the fields."
+              },
+              {
+                "icon": "🐄",
+                "title": "Meet the animals",
+                "text": "Feed the calves and collect eggs with the kids."
+              },
+              {
+                "icon": "🛍️",
+                "title": "Farm shop",
+                "text": "Our produce, local cheese, honey and bread."
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Farming this valley since 1952",
+            "text": "Willow Creek is a mixed family farm of crops, orchards and animals. We open our gates so families can see where their food comes from — and enjoy a day out doing it.",
+            "bullets": [
+              "200 acres of fields and orchards",
+              "LEAF-certified sustainable farming",
+              "Open all year round"
+            ],
+            "buttonLabel": "Our story",
+            "buttonHref": "page:our-farm",
+            "image": "https://images.unsplash.com/photo-1727120279660-5c28b8461609?w=1200&q=80"
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "A year at Willow Creek",
+            "subheading": "",
+            "captionOnHover": true,
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1635778528589-b5df9e10d7cd?w=900&q=80",
+                "title": "Apple blossom",
+                "caption": "Spring",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=900&q=80",
+                "title": "Wheat harvest",
+                "caption": "Summer",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1567197420939-9d6511cdc34a?w=900&q=80",
+                "title": "Apple picking",
+                "caption": "Autumn",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1686381656402-c380157b76f6?w=900&q=80",
+                "title": "Hay bales",
+                "caption": "Summer",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1641939193329-7071068dc40f?w=900&q=80",
+                "title": "Our herd",
+                "caption": "All year",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+                "title": "Farm shop",
+                "caption": "All year",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Visitors say",
+            "items": [
+              {
+                "quote": "A perfect family day out. The kids still talk about feeding the calves.",
+                "name": "Anna Lee",
+                "role": "Visited in August",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              },
+              {
+                "quote": "The cottage was spotless and the farm breakfast was the best I’ve had.",
+                "name": "Ravi Kapoor",
+                "role": "Farm stay guest",
+                "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Plan your visit",
+            "text": "Opening times, pick-your-own seasons and cottage availability.",
+            "buttonLabel": "Plan a visit",
+            "buttonHref": "page:visit"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "tagline": "A working family farm, open to all.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Willow Creek Farm. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "our-farm",
+      "title": "Our Farm",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "useSiteMenu": true,
+            "ctaLabel": "Plan a visit",
+            "ctaHref": "page:visit"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Our Farm",
+            "heading": "Our farm and family",
+            "text": "Three generations, 200 acres and a lot of muddy boots."
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "How we farm",
+            "text": "We rotate crops, plant hedgerows for wildlife and keep our animals outdoors whenever the weather allows. Nothing fancy — just careful farming that leaves the land better for the next generation.",
+            "bullets": [
+              "Crop rotation and cover crops",
+              "5 km of new hedgerows",
+              "Solar-powered farm buildings"
+            ],
+            "image": "https://images.unsplash.com/photo-1504224357642-c87eacea1da4?w=1200&q=80",
+            "imageSide": "left"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "1952",
+                "label": "Founded"
+              },
+              {
+                "value": "200",
+                "label": "Acres"
+              },
+              {
+                "value": "3",
+                "label": "Generations"
+              },
+              {
+                "value": "25",
+                "label": "Crops & fruits"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "team",
+          "data": {
+            "heading": "The family",
+            "subheading": "",
+            "members": [
+              {
+                "name": "Peter Willow",
+                "role": "Farmer & founder’s grandson",
+                "bio": "Runs the fields and the herd.",
+                "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Margaret Willow",
+                "role": "Farm shop & cottages",
+                "bio": "The reason everyone comes back.",
+                "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Emma Willow",
+                "role": "Orchards & events",
+                "bio": "Pick-your-own and school visits.",
+                "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Willow Creek Farm. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "produce",
+      "title": "Produce",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "useSiteMenu": true,
+            "ctaLabel": "Visit the shop",
+            "ctaHref": "page:shop"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Produce",
+            "heading": "What we grow",
+            "text": "Seasonal fruit, vegetables, grains, milk and eggs."
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Through the seasons",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Spring",
+                "text": "Asparagus, rhubarb, salad leaves and the first strawberries.",
+                "icon": "🌱",
+                "image": "https://images.unsplash.com/photo-1533321942807-08e4008b2025?w=900&q=80",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Summer",
+                "text": "Strawberries, tomatoes, courgettes and wheat harvest.",
+                "icon": "☀️",
+                "image": "https://images.unsplash.com/photo-1566218246241-934ad8b38ea6?w=900&q=80",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Autumn",
+                "text": "Apples, pumpkins, potatoes and squash.",
+                "icon": "🍂",
+                "image": "https://images.unsplash.com/photo-1627571191459-04a621d280c4?w=900&q=80",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Winter",
+                "text": "Leeks, cabbages, root vegetables and our own beef.",
+                "icon": "❄️",
+                "image": "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?w=900&q=80",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Produce FAQ",
+            "items": [
+              {
+                "question": "Do you use pesticides?",
+                "answer": "Only as a last resort, following integrated pest management. Our soft fruit is grown pesticide-free.",
+                "icon": ""
+              },
+              {
+                "question": "Can I order for events?",
+                "answer": "Yes — we supply weddings, cafés and caterers. Ask in the farm shop or via the contact page.",
+                "icon": ""
+              }
+            ],
+            "style": "divided",
+            "icon": "chevron"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Willow Creek Farm. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "visit",
+      "title": "Visit",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "useSiteMenu": true,
+            "ctaLabel": "Book a stay",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Visit",
+            "heading": "Plan your visit",
+            "text": "Pick your own, farm walks, animal feeding and cottage stays."
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Day visits & stays",
+            "subheading": "Children under 3 go free.",
+            "plans": [
+              {
+                "name": "Farm day pass",
+                "price": "$8",
+                "period": "/person",
+                "description": "Farm walk & animals",
+                "features": [
+                  "Animal feeding",
+                  "Play barn",
+                  "Tractor ride"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              },
+              {
+                "name": "Pick your own",
+                "price": "$4",
+                "period": "/kg",
+                "description": "In season",
+                "features": [
+                  "Strawberries (June–July)",
+                  "Apples (Sep–Oct)",
+                  "Pumpkins (October)"
+                ],
+                "buttonLabel": "Choose plan",
+                "buttonHref": "page:contact",
+                "highlighted": true
+              },
+              {
+                "name": "Farm stay",
+                "price": "$140",
+                "period": "/night",
+                "description": "Cottage for 4",
+                "features": [
+                  "Breakfast hamper",
+                  "Free day passes",
+                  "Fire pit & BBQ"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Visiting FAQ",
+            "items": [
+              {
+                "question": "When are you open?",
+                "answer": "Daily 9am–5pm, March to December. Weekends only in January and February.",
+                "icon": ""
+              },
+              {
+                "question": "Can I bring my dog?",
+                "answer": "Dogs on leads are welcome on footpaths, but not in the animal barns or pick-your-own fields.",
+                "icon": ""
+              },
+              {
+                "question": "Is the farm accessible?",
+                "answer": "Main paths, the shop and café are step-free. Ask us about access to the fields.",
+                "icon": ""
+              }
+            ],
+            "style": "filled",
+            "icon": "circle",
+            "singleOpen": true,
+            "openFirst": true
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Willow Creek Farm. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "shop",
+      "title": "Farm Shop",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "useSiteMenu": true,
+            "ctaLabel": "Plan a visit",
+            "ctaHref": "page:visit"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Farm Shop",
+            "heading": "The farm shop",
+            "text": "Open daily — or order a hamper for delivery."
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "heading": "Shop favourites",
+            "subheading": "",
+            "products": [
+              {
+                "name": "Farm veg box",
+                "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
+                "price": "$25",
+                "oldPrice": "",
+                "badge": "Popular",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:contact"
+              },
+              {
+                "name": "Apple juice 75cl",
+                "image": "https://images.unsplash.com/photo-1599678914948-8e0a39f42a31?w=800&q=80",
+                "price": "$4.50",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:contact"
+              },
+              {
+                "name": "Free-range eggs · 12",
+                "image": "https://images.unsplash.com/photo-1556316918-880f9e893822?w=800&q=80",
+                "price": "$5",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:contact"
+              },
+              {
+                "name": "Farmhouse milk 2L",
+                "image": "https://images.unsplash.com/photo-1576186726115-4d51596775d1?w=800&q=80",
+                "price": "$3.20",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "page:contact"
+              }
+            ]
+          }
+        },
+        {
+          "type": "newsletter",
+          "data": {
+            "heading": "Seasonal news from the farm",
+            "text": "Harvest dates, events and shop offers.",
+            "placeholder": "you@example.com",
+            "buttonLabel": "Subscribe",
+            "note": "One email a month. Unsubscribe anytime.",
+            "successMessage": "Thanks — see you in your inbox!"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Willow Creek Farm. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "useSiteMenu": true,
+            "ctaLabel": "Get in touch",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "We’d love to hear from you. Bookings, events, school visits or a question about our produce."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Send us a message",
+            "text": "We reply within one working day.",
+            "email": "hello@willowcreek.farm",
+            "phone": "+1 555 0102",
+            "address": "Willow Creek Farm\nValley Road, Hood River, OR 97031",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Willow Creek Farm",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Willow Creek Farm. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}

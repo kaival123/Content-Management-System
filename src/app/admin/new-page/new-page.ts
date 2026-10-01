@@ -109,7 +109,18 @@ export class NewPage {
     event.preventDefault();
     this.submitted.set(true);
     const template = this.selected();
-    if (!this.name().trim() || !template) return;
+    if (!template) {
+      this.toast.show('Choose a template first.', 'error');
+      return;
+    }
+    if (!this.name().trim()) {
+      // The name field is far below the templates: bring it into view so the reason is obvious.
+      const input = document.getElementById('np-name') as HTMLInputElement | null;
+      input?.scrollIntoView({ block: 'center' });
+      input?.focus({ preventScroll: true });
+      this.toast.show('Give your website a name to create it.', 'error');
+      return;
+    }
     this.creating.set(true);
     try {
       const home = await this.site.createWebsite({ name: this.name(), slug: this.slug(), template, description: this.description() });

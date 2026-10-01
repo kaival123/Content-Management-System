@@ -1,0 +1,353 @@
+{
+  "category": "Agriculture",
+  "id": "agri-tech",
+  "kind": "single",
+  "name": "Smart Farming / AgriTech",
+  "description": "A modern landing page for agri-tech products — soil sensors, drones and farm analytics — with features, results, pricing and FAQ.",
+  "preview": [
+    "#f6faf6",
+    "#16a34a",
+    "#0b1f14"
+  ],
+  "theme": {
+    "primaryColor": "#16a34a",
+    "accentColor": "#0ea5e9",
+    "backgroundColor": "#f6faf6",
+    "surfaceColor": "#e9f5ec",
+    "textColor": "#0b1f14",
+    "fontFamily": "Inter",
+    "headingFont": "Space Grotesk",
+    "radius": 12,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "FieldSense",
+            "links": [
+              {
+                "label": "Platform",
+                "href": "#features"
+              },
+              {
+                "label": "Results",
+                "href": "#results"
+              },
+              {
+                "label": "Pricing",
+                "href": "#pricing"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Book a demo",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Precision agriculture platform",
+            "heading": "See every acre. Grow more with less.",
+            "subheading": "Soil sensors, drone imaging and weather data in one dashboard — so you water, feed and harvest at exactly the right time.",
+            "primaryLabel": "Book a demo",
+            "primaryHref": "#contact",
+            "secondaryLabel": "See how it works",
+            "secondaryHref": "#features",
+            "image": "https://images.unsplash.com/photo-1713952160156-bb59cac789a9?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Trusted by 2,000+ farms and co-ops",
+            "grayscale": true,
+            "logos": [
+              {
+                "name": "AgriCo",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "GreenFields",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Prairie Growers",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Delta Farms",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Harvest Union",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "One platform for the whole farm",
+            "subheading": "Connect your fields in a day — no IT team needed.",
+            "items": [
+              {
+                "icon": "📡",
+                "title": "Soil sensors",
+                "text": "Moisture, temperature and nutrients every 15 minutes."
+              },
+              {
+                "icon": "🛸",
+                "title": "Drone imaging",
+                "text": "NDVI maps spot crop stress before you can see it."
+              },
+              {
+                "icon": "🌦️",
+                "title": "Hyper-local weather",
+                "text": "Field-level forecasts and frost alerts."
+              },
+              {
+                "icon": "💧",
+                "title": "Smart irrigation",
+                "text": "Water only the zones that need it — automatically."
+              },
+              {
+                "icon": "📈",
+                "title": "Yield forecasts",
+                "text": "Machine-learning models trained on 10M acres."
+              },
+              {
+                "icon": "📱",
+                "title": "Mobile app",
+                "text": "Alerts and tasks for your whole crew, offline-ready."
+              }
+            ],
+            "anchor": "features"
+          },
+          "grid": {
+            "desktop": 3,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Know exactly what your crops need",
+            "text": "FieldSense combines sensor readings, satellite and drone imagery into one simple map of your farm. Get a daily to-do list instead of a wall of data.",
+            "bullets": [
+              "Set up in under an hour per field",
+              "Works with John Deere, CNH and AGCO equipment",
+              "Your data stays yours — export any time"
+            ],
+            "buttonLabel": "Book a demo",
+            "buttonHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1656407410275-e63e689bcd90?w=1200&q=80",
+            "imageSide": "right"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "28%",
+                "label": "Less water used"
+              },
+              {
+                "value": "15%",
+                "label": "Higher average yield"
+              },
+              {
+                "value": "4.2M",
+                "label": "Acres monitored"
+              },
+              {
+                "value": "9 days",
+                "label": "Earlier disease detection"
+              }
+            ],
+            "anchor": "results"
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Growers see results in one season",
+            "items": [
+              {
+                "quote": "We cut irrigation by a third on our almonds and the yield went up. It paid for itself in months.",
+                "name": "Daniel Ruiz",
+                "role": "Almond grower, California",
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              },
+              {
+                "quote": "The drone maps found a drainage problem we had missed for years.",
+                "name": "Sophie Janssen",
+                "role": "Arable farm manager",
+                "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+              },
+              {
+                "quote": "Our whole co-op runs on FieldSense now. Training took one afternoon.",
+                "name": "Tom Becker",
+                "role": "Cooperative agronomist",
+                "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Simple per-acre pricing",
+            "subheading": "Hardware included. Cancel any time.",
+            "plans": [
+              {
+                "name": "Starter",
+                "price": "$2",
+                "period": "/acre/yr",
+                "description": "Up to 200 acres",
+                "features": [
+                  "Soil sensors",
+                  "Weather alerts",
+                  "Mobile app"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "#contact",
+                "highlighted": false
+              },
+              {
+                "name": "Pro",
+                "price": "$4",
+                "period": "/acre/yr",
+                "description": "Unlimited acres",
+                "features": [
+                  "Everything in Starter",
+                  "Drone imaging monthly",
+                  "Smart irrigation",
+                  "Yield forecasts"
+                ],
+                "buttonLabel": "Choose plan",
+                "buttonHref": "#contact",
+                "highlighted": true
+              },
+              {
+                "name": "Enterprise",
+                "price": "Custom",
+                "period": "",
+                "description": "Co-ops and agribusiness",
+                "features": [
+                  "Everything in Pro",
+                  "API & integrations",
+                  "Dedicated agronomist"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "#contact",
+                "highlighted": false
+              }
+            ],
+            "anchor": "pricing"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Frequently asked questions",
+            "items": [
+              {
+                "question": "Do I need internet in the field?",
+                "answer": "No. Sensors use long-range radio to a solar gateway; the app works offline and syncs later.",
+                "icon": ""
+              },
+              {
+                "question": "How long do sensors last?",
+                "answer": "Batteries last 5 years. Replacement is free on Pro and Enterprise.",
+                "icon": ""
+              },
+              {
+                "question": "Which crops are supported?",
+                "answer": "Over 60 crops including corn, wheat, soy, rice, vines, orchards and vegetables.",
+                "icon": ""
+              },
+              {
+                "question": "Who owns the data?",
+                "answer": "You do. Export everything as CSV or via the API whenever you like.",
+                "icon": ""
+              }
+            ],
+            "anchor": "faq",
+            "layout": "split",
+            "style": "divided",
+            "icon": "plus",
+            "ctaText": "Still have questions?",
+            "buttonLabel": "Talk to an agronomist",
+            "buttonHref": "#contact"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Book a 20-minute demo",
+            "text": "Tell us about your farm and we’ll show you FieldSense on your own fields.",
+            "email": "demo@fieldsense.io",
+            "phone": "+1 555 0199",
+            "address": "500 Innovation Way\nDavis, CA 95616",
+            "buttonLabel": "Request demo",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "FieldSense",
+            "tagline": "Precision agriculture made simple.",
+            "links": [
+              {
+                "label": "Platform",
+                "href": "#features"
+              },
+              {
+                "label": "Pricing",
+                "href": "#pricing"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 FieldSense. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}

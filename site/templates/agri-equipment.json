@@ -1,0 +1,307 @@
+{
+  "category": "Agriculture",
+  "id": "agri-equipment",
+  "kind": "single",
+  "name": "Farm Equipment Dealer & Rental",
+  "description": "For tractor and machinery dealers: equipment carousel, rental and finance options, service department and enquiries.",
+  "preview": [
+    "#ffffff",
+    "#c2410c",
+    "#1c1917"
+  ],
+  "theme": {
+    "primaryColor": "#c2410c",
+    "accentColor": "#facc15",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f5f5f4",
+    "textColor": "#1c1917",
+    "fontFamily": "Roboto",
+    "headingFont": "Oswald",
+    "radius": 6,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Ridgeway Tractors",
+            "links": [
+              {
+                "label": "Equipment",
+                "href": "#equipment"
+              },
+              {
+                "label": "Rental",
+                "href": "#rental"
+              },
+              {
+                "label": "Service",
+                "href": "#service"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "ctaLabel": "Get a quote",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Sales · Rental · Service",
+            "heading": "Machinery that works as hard as you do",
+            "subheading": "New and used tractors, harvesters and implements — with flexible finance, daily rental and a mobile service team.",
+            "primaryLabel": "Browse equipment",
+            "primaryHref": "#equipment",
+            "secondaryLabel": "Rent a machine",
+            "secondaryHref": "#rental",
+            "image": "https://images.unsplash.com/photo-1564868480822-32f714a0e763?w=1200&q=80",
+            "layout": "center"
+          },
+          "style": {
+            "paddingY": 140,
+            "background": "__text__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "Featured equipment",
+            "subheading": "In stock and ready for the field.",
+            "variant": "product",
+            "slideHeight": 0,
+            "anchor": "equipment",
+            "slides": [
+              {
+                "heading": "Compact tractor 45 HP",
+                "eyebrow": "New",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1594771804886-a933bb2d609b?w=900&q=80",
+                "price": "From $28,900",
+                "buttonLabel": "Get a quote",
+                "buttonHref": "#contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              },
+              {
+                "heading": "Utility tractor 90 HP",
+                "eyebrow": "New",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?w=900&q=80",
+                "price": "From $54,500",
+                "buttonLabel": "Get a quote",
+                "buttonHref": "#contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              },
+              {
+                "heading": "Combine harvester",
+                "eyebrow": "Used · 2,100 hrs",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1565647952915-9644fcd446a4?w=900&q=80",
+                "price": "$148,000",
+                "buttonLabel": "Get a quote",
+                "buttonHref": "#contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              },
+              {
+                "heading": "Field sprayer 24m",
+                "eyebrow": "Used",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1627920769541-daa658ed6b59?w=900&q=80",
+                "price": "$32,000",
+                "buttonLabel": "Get a quote",
+                "buttonHref": "#contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              },
+              {
+                "heading": "Classic red tractor",
+                "eyebrow": "Restored",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1606739211185-2c846d734a6d?w=900&q=80",
+                "price": "$12,400",
+                "buttonLabel": "Get a quote",
+                "buttonHref": "#contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 3,
+            "perViewTablet": 2,
+            "perViewMobile": 1,
+            "arrowPosition": "top-right",
+            "arrowStyle": "square",
+            "dotsStyle": "lines",
+            "dotsPosition": "below-left"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Rent by the day, week or season",
+            "subheading": "Delivered to your field with a full tank.",
+            "items": [
+              {
+                "icon": "📅",
+                "title": "Flexible terms",
+                "text": "Daily, weekly and seasonal rates."
+              },
+              {
+                "icon": "🚚",
+                "title": "Field delivery",
+                "text": "We deliver and collect within 80 miles."
+              },
+              {
+                "icon": "🛠️",
+                "title": "Fully serviced",
+                "text": "Every machine checked before it leaves the yard."
+              },
+              {
+                "icon": "💳",
+                "title": "Finance options",
+                "text": "0% finance on selected new machines."
+              }
+            ],
+            "anchor": "rental"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "anchor": "service",
+            "heading": "A service team that comes to you",
+            "text": "Breakdowns don’t wait for office hours, and neither do we. Our mobile engineers carry common parts and can be on your farm the same day.",
+            "bullets": [
+              "Same-day callout in harvest season",
+              "Genuine parts for all major brands",
+              "Annual service plans"
+            ],
+            "buttonLabel": "Book a service",
+            "buttonHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1614977645540-7abd88ba8e56?w=1200&q=80",
+            "imageSide": "left"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "35",
+                "label": "Years in business"
+              },
+              {
+                "value": "600+",
+                "label": "Machines in stock"
+              },
+              {
+                "value": "24/7",
+                "label": "Harvest support"
+              },
+              {
+                "value": "5,000",
+                "label": "Farm customers"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "What farmers say",
+            "items": [
+              {
+                "quote": "Our combine broke down mid-harvest. Ridgeway had an engineer out within three hours.",
+                "name": "Mark Davies",
+                "role": "Arable farmer",
+                "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+              },
+              {
+                "quote": "Renting for the season was far cheaper than buying. Great machines.",
+                "name": "Lisa Moreno",
+                "role": "Contract grower",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Need a machine this week?",
+            "text": "Call us or send a quote request — we answer within the hour.",
+            "buttonLabel": "Get a quote",
+            "buttonHref": "#contact"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Request a quote",
+            "text": "Tell us the machine, dates and location.",
+            "email": "sales@ridgewaytractors.com",
+            "phone": "+1 555 0167",
+            "address": "Highway 12, Exit 40\nCedar Falls, IA 50613",
+            "buttonLabel": "Request quote",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Ridgeway Tractors",
+            "tagline": "Sales, rental and service since 1990.",
+            "links": [
+              {
+                "label": "Equipment",
+                "href": "#equipment"
+              },
+              {
+                "label": "Rental",
+                "href": "#rental"
+              },
+              {
+                "label": "Service",
+                "href": "#service"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Ridgeway Tractors. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}

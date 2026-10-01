@@ -1,0 +1,356 @@
+{
+  "category": "Agriculture",
+  "id": "agri-organic-farm",
+  "kind": "single",
+  "name": "Organic Family Farm",
+  "description": "A warm one-page site for a family farm selling weekly organic veg boxes: story, produce, box plans, reviews and pick-up details.",
+  "preview": [
+    "#fbf8f1",
+    "#3f7d3a",
+    "#2b2a24"
+  ],
+  "theme": {
+    "primaryColor": "#3f7d3a",
+    "accentColor": "#e2a52b",
+    "backgroundColor": "#fbf8f1",
+    "surfaceColor": "#f1ece0",
+    "textColor": "#2b2a24",
+    "fontFamily": "Nunito",
+    "headingFont": "Playfair Display",
+    "radius": 14,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Green Acres Farm",
+            "links": [
+              {
+                "label": "Our farm",
+                "href": "#about"
+              },
+              {
+                "label": "Produce",
+                "href": "#produce"
+              },
+              {
+                "label": "Boxes",
+                "href": "#plans"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Order a box",
+            "ctaHref": "#plans"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Certified organic since 1998",
+            "heading": "Fresh from our fields to your table",
+            "subheading": "Seasonal vegetables, picked the morning they reach you. Grown without pesticides on 40 acres of family land.",
+            "primaryLabel": "Order a veg box",
+            "primaryHref": "#plans",
+            "secondaryLabel": "Visit the farm",
+            "secondaryHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "40",
+                "label": "Acres of organic land"
+              },
+              {
+                "value": "60+",
+                "label": "Varieties grown"
+              },
+              {
+                "value": "1,200",
+                "label": "Weekly boxes"
+              },
+              {
+                "value": "3",
+                "label": "Generations of farmers"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "anchor": "about",
+            "heading": "A family farm, three generations strong",
+            "text": "Grandpa Joe planted our first field of potatoes in 1971. Today we grow more than sixty varieties of vegetables, herbs and fruit — rotating crops, composting everything and letting the soil do the work.",
+            "bullets": [
+              "No synthetic pesticides or fertilisers",
+              "Picked within 24 hours of delivery",
+              "Plastic-free, compostable packaging"
+            ],
+            "buttonLabel": "Visit the farm",
+            "buttonHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1537721664796-76f77222a5d0?w=1200&q=80",
+            "imageSide": "left"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Why our veg tastes better",
+            "subheading": "Good food starts with healthy soil.",
+            "items": [
+              {
+                "icon": "🌱",
+                "title": "Living soil",
+                "text": "Cover crops and compost keep our soil rich and full of life."
+              },
+              {
+                "icon": "🐝",
+                "title": "Pollinator friendly",
+                "text": "Wildflower strips between fields bring the bees back."
+              },
+              {
+                "icon": "💧",
+                "title": "Rain-fed",
+                "text": "We collect rainwater and irrigate only when the plants need it."
+              },
+              {
+                "icon": "🚜",
+                "title": "Small batches",
+                "text": "We harvest by hand, field by field, every week."
+              }
+            ]
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "This season on the farm",
+            "subheading": "",
+            "captionOnHover": true,
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?w=900&q=80",
+                "title": "Carrots",
+                "caption": "Autumn",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1662370761575-05ff1ee40d7d?w=900&q=80",
+                "title": "Heirloom tomatoes",
+                "caption": "Summer",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1533321942807-08e4008b2025?w=900&q=80",
+                "title": "Butter lettuce",
+                "caption": "Spring",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1551649001-7a2482d98d05?w=900&q=80",
+                "title": "Beetroot",
+                "caption": "Autumn",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=900&q=80",
+                "title": "Mixed greens",
+                "caption": "All year",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1627571191459-04a621d280c4?w=900&q=80",
+                "title": "Orchard apples",
+                "caption": "Autumn",
+                "link": ""
+              }
+            ],
+            "anchor": "produce"
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Choose your veg box",
+            "subheading": "Weekly or fortnightly. Pause or cancel any time.",
+            "plans": [
+              {
+                "name": "Small",
+                "price": "$24",
+                "period": "/box",
+                "description": "1–2 people · 6–8 items",
+                "features": [
+                  "Seasonal vegetables",
+                  "Fresh herbs",
+                  "Recipe card"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "#contact",
+                "highlighted": false
+              },
+              {
+                "name": "Family",
+                "price": "$38",
+                "period": "/box",
+                "description": "3–4 people · 10–12 items",
+                "features": [
+                  "Seasonal vegetables",
+                  "Fruit from our orchard",
+                  "Herbs & salad",
+                  "Free delivery"
+                ],
+                "buttonLabel": "Choose plan",
+                "buttonHref": "#contact",
+                "highlighted": true
+              },
+              {
+                "name": "Large",
+                "price": "$52",
+                "period": "/box",
+                "description": "5+ people · 14–16 items",
+                "features": [
+                  "Everything in Family",
+                  "Free-range eggs",
+                  "Priority picks"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "#contact",
+                "highlighted": false
+              }
+            ],
+            "anchor": "plans"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Loved by local families",
+            "items": [
+              {
+                "quote": "The carrots actually taste like carrots. Our kids now ask for veg!",
+                "name": "Priya Shah",
+                "role": "Subscriber since 2021",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              },
+              {
+                "quote": "Reliable, fresh and beautifully packed every single week.",
+                "name": "Tom Becker",
+                "role": "Family box",
+                "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+              },
+              {
+                "quote": "Visiting the farm with the kids was the highlight of our summer.",
+                "name": "Anna Lee",
+                "role": "Local customer",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Questions about our boxes",
+            "items": [
+              {
+                "question": "Where do you deliver?",
+                "answer": "Within 30 miles of the farm, every Thursday and Friday. You can also collect from our farm shop.",
+                "icon": ""
+              },
+              {
+                "question": "Can I swap items I don’t like?",
+                "answer": "Yes — add up to five “never send” items in your account and we will swap them.",
+                "icon": ""
+              },
+              {
+                "question": "Is everything organic?",
+                "answer": "Everything we grow is certified organic. The few items we buy in come from certified neighbours.",
+                "icon": ""
+              },
+              {
+                "question": "How do I pause my box?",
+                "answer": "Pause any week from your account up to Monday midnight.",
+                "icon": ""
+              }
+            ],
+            "anchor": "faq",
+            "style": "divided",
+            "icon": "chevron"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Visit or get in touch",
+            "text": "Our farm shop is open Wednesday to Saturday, 9am–5pm.",
+            "email": "hello@greenacres.farm",
+            "phone": "+1 555 0142",
+            "address": "2140 Meadow Lane\nWillow Creek, OR 97000",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Green Acres Farm",
+            "tagline": "Organic vegetables, grown with care.",
+            "links": [
+              {
+                "label": "Our farm",
+                "href": "#about"
+              },
+              {
+                "label": "Boxes",
+                "href": "#plans"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Green Acres Farm. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        },
+        {
+          "type": "back-to-top",
+          "data": {
+            "icon": "chevron",
+            "progress": true,
+            "background": "__primary__",
+            "ringColor": "__accent__"
+          }
+        }
+      ]
+    }
+  ]
+}

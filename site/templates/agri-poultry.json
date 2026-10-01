@@ -1,0 +1,289 @@
+{
+  "category": "Agriculture",
+  "id": "agri-poultry",
+  "kind": "single",
+  "name": "Poultry & Egg Farm",
+  "description": "For free-range egg and poultry farms: welfare story, egg range, farm-gate and wholesale ordering, FAQ and contact.",
+  "preview": [
+    "#fffbeb",
+    "#d97706",
+    "#3b2a12"
+  ],
+  "theme": {
+    "primaryColor": "#d97706",
+    "accentColor": "#65a30d",
+    "backgroundColor": "#fffbeb",
+    "surfaceColor": "#fdf2d6",
+    "textColor": "#3b2a12",
+    "fontFamily": "Nunito",
+    "headingFont": "Nunito",
+    "radius": 18,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Sunrise Poultry Farm",
+            "links": [
+              {
+                "label": "Our hens",
+                "href": "#about"
+              },
+              {
+                "label": "Eggs",
+                "href": "#products"
+              },
+              {
+                "label": "Wholesale",
+                "href": "#wholesale"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Order eggs",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Free-range · Pasture-raised",
+            "heading": "Happy hens lay better eggs",
+            "subheading": "Our hens roam freely on green pasture all day. Collected every morning and sold fresh at the farm gate and in local shops.",
+            "primaryLabel": "Order eggs",
+            "primaryHref": "#contact",
+            "secondaryLabel": "Meet our hens",
+            "secondaryHref": "#about",
+            "image": "https://images.unsplash.com/photo-1690756628737-558c3b9858b6?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "How our hens live",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🌿",
+                "title": "8 m² of pasture each",
+                "text": "Far more space than free-range standards require."
+              },
+              {
+                "icon": "🌽",
+                "title": "Natural feed",
+                "text": "Locally grown grain, no antibiotics or additives."
+              },
+              {
+                "icon": "🏡",
+                "title": "Mobile hen houses",
+                "text": "Moved weekly so the grass stays fresh."
+              },
+              {
+                "icon": "🩺",
+                "title": "Vet-checked flocks",
+                "text": "Regular health checks by our farm vet."
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "anchor": "about",
+            "heading": "4,000 hens on 30 acres",
+            "text": "We started with twelve hens in the back garden. Today our flocks roam 30 acres of pasture, and our eggs are known for their deep orange yolks and rich taste.",
+            "bullets": [
+              "RSPCA Assured welfare standards",
+              "Eggs collected twice a day",
+              "Farm shop open seven days a week"
+            ],
+            "buttonLabel": "Order eggs",
+            "buttonHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1556316918-880f9e893822?w=1200&q=80",
+            "imageSide": "left"
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "heading": "Fresh from the farm",
+            "subheading": "Available at our farm shop and for local delivery.",
+            "products": [
+              {
+                "name": "Free-range eggs · 12",
+                "image": "https://images.unsplash.com/photo-1694984716506-525271247a72?w=800&q=80",
+                "price": "$5.50",
+                "oldPrice": "",
+                "badge": "Best seller",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Pasture-raised eggs · 6",
+                "image": "https://images.unsplash.com/photo-1556316918-b8b177b155cc?w=800&q=80",
+                "price": "$3.80",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Duck eggs · 6",
+                "image": "https://images.unsplash.com/photo-1611782303839-dd7d9dde9435?w=800&q=80",
+                "price": "$5.20",
+                "oldPrice": "",
+                "badge": "Limited",
+                "rating": "4.7",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Whole free-range chicken",
+                "image": "https://images.unsplash.com/photo-1569466593977-94ee7ed02ec9?w=800&q=80",
+                "price": "$16",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              }
+            ],
+            "anchor": "products"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "4,000",
+                "label": "Free-range hens"
+              },
+              {
+                "value": "3,200",
+                "label": "Eggs a day"
+              },
+              {
+                "value": "30",
+                "label": "Acres of pasture"
+              },
+              {
+                "value": "15",
+                "label": "Local shops stock us"
+              }
+            ],
+            "anchor": "wholesale"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Cafés, bakeries & shops",
+            "text": "Wholesale trays delivered twice a week. Ask for our trade price list.",
+            "buttonLabel": "Request price list",
+            "buttonHref": "#contact"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Questions",
+            "items": [
+              {
+                "question": "Are your eggs organic?",
+                "answer": "Our eggs are free-range and pasture-raised. Our organic flock’s eggs are certified and labelled.",
+                "icon": ""
+              },
+              {
+                "question": "How long do eggs keep?",
+                "answer": "Up to 28 days from laying. Ours reach you within two days.",
+                "icon": ""
+              },
+              {
+                "question": "Can we visit the hens?",
+                "answer": "Yes! Farm tours run on Saturday mornings in spring and summer — book via the form below.",
+                "icon": ""
+              }
+            ],
+            "anchor": "faq",
+            "style": "cards",
+            "icon": "circle",
+            "layout": "two-column"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Order eggs or book a visit",
+            "text": "Local delivery Tuesday and Friday. Farm shop open daily 8am–6pm.",
+            "email": "eggs@sunrisepoultry.farm",
+            "phone": "+1 555 0134",
+            "address": "Sunrise Farm, 77 Hill Road\nLancaster, PA 17600",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Sunrise Poultry Farm",
+            "tagline": "Free-range eggs from happy hens.",
+            "links": [
+              {
+                "label": "Our hens",
+                "href": "#about"
+              },
+              {
+                "label": "Eggs",
+                "href": "#products"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Sunrise Poultry Farm. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        },
+        {
+          "type": "back-to-top",
+          "data": {
+            "icon": "chevron",
+            "progress": true,
+            "background": "__primary__",
+            "ringColor": "__accent__"
+          }
+        }
+      ]
+    }
+  ]
+}

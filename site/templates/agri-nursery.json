@@ -1,0 +1,275 @@
+{
+  "category": "Agriculture",
+  "id": "agri-nursery",
+  "kind": "single",
+  "name": "Plant Nursery & Greenhouse",
+  "description": "For nurseries and greenhouse growers selling seedlings and plants to gardeners and farms — gallery, plant range, grower services and visit info.",
+  "preview": [
+    "#f7faf5",
+    "#2f6f4f",
+    "#1b2a22"
+  ],
+  "theme": {
+    "primaryColor": "#2f6f4f",
+    "accentColor": "#d4a373",
+    "backgroundColor": "#f7faf5",
+    "surfaceColor": "#e8f0e6",
+    "textColor": "#1b2a22",
+    "fontFamily": "DM Sans",
+    "headingFont": "DM Sans",
+    "radius": 20,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Leaf & Root Nursery",
+            "links": [
+              {
+                "label": "Plants",
+                "href": "#plants"
+              },
+              {
+                "label": "Growers",
+                "href": "#growers"
+              },
+              {
+                "label": "Gallery",
+                "href": "#gallery"
+              },
+              {
+                "label": "Visit",
+                "href": "#contact"
+              }
+            ],
+            "ctaLabel": "Visit us",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Grown under glass in our own greenhouses",
+            "heading": "Healthy seedlings, ready to grow",
+            "subheading": "Vegetable starts, fruit trees, herbs and houseplants — raised with care and ready for your garden or farm.",
+            "primaryLabel": "See our plants",
+            "primaryHref": "#plants",
+            "secondaryLabel": "Grower orders",
+            "secondaryHref": "#growers",
+            "image": "https://images.unsplash.com/photo-1708796705570-33fd29ef67d0?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "heading": "Popular this month",
+            "subheading": "",
+            "products": [
+              {
+                "name": "Tomato seedlings · 6 pack",
+                "image": "https://images.unsplash.com/photo-1566218246241-934ad8b38ea6?w=800&q=80",
+                "price": "$7.50",
+                "oldPrice": "",
+                "badge": "Spring",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Mixed herb tray",
+                "image": "https://images.unsplash.com/photo-1615671524827-c1fe3973b648?w=800&q=80",
+                "price": "$12",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Lettuce plugs · 24",
+                "image": "https://images.unsplash.com/photo-1533321942807-08e4008b2025?w=800&q=80",
+                "price": "$9",
+                "oldPrice": "",
+                "badge": "Fast growing",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Apple tree (2-yr)",
+                "image": "https://images.unsplash.com/photo-1635778528589-b5df9e10d7cd?w=800&q=80",
+                "price": "$34",
+                "oldPrice": "$39",
+                "badge": "Sale",
+                "rating": "4.7",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Why grow with us",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🌡️",
+                "title": "Climate-controlled",
+                "text": "Greenhouses tuned for strong roots and sturdy stems."
+              },
+              {
+                "icon": "🌍",
+                "title": "Peat-free compost",
+                "text": "Kinder to the planet, just as good for plants."
+              },
+              {
+                "icon": "🧑‍🌾",
+                "title": "Expert advice",
+                "text": "Our growers help you pick the right plants."
+              }
+            ],
+            "anchor": "plants"
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "Inside our greenhouses",
+            "subheading": "",
+            "captionOnHover": true,
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1637987327476-5c77df3cb16d?w=900&q=80",
+                "title": "Propagation house",
+                "caption": "",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1591754060004-f91c95f5cf05?w=900&q=80",
+                "title": "Hydroponics",
+                "caption": "",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1701186598427-5eb8f1717d2a?w=900&q=80",
+                "title": "Houseplant room",
+                "caption": "",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1569736957322-b5e515f249b0?w=900&q=80",
+                "title": "Herb tables",
+                "caption": "",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1623136299195-570a06bdae6b?w=900&q=80",
+                "title": "Vegetable starts",
+                "caption": "",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+                "title": "Fresh sprouts",
+                "caption": "",
+                "link": ""
+              }
+            ],
+            "anchor": "gallery"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "anchor": "growers",
+            "heading": "Contract growing for farms",
+            "text": "We raise millions of vegetable transplants every year for local farms — grown to your variety, tray size and planting date, and delivered on time.",
+            "bullets": [
+              "Any variety, grown from your seed or ours",
+              "Delivered on your planting schedule",
+              "Disease-tested, uniform plugs"
+            ],
+            "buttonLabel": "Request a grower quote",
+            "buttonHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1637987327476-5c77df3cb16d?w=1200&q=80",
+            "imageSide": "right"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Happy gardeners and growers",
+            "items": [
+              {
+                "quote": "Every seedling took off. The best tomatoes I’ve ever grown.",
+                "name": "Emma Clarke",
+                "role": "Home gardener",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              },
+              {
+                "quote": "Reliable, uniform transplants delivered exactly when we needed them.",
+                "name": "Luca Bianchi",
+                "role": "Market gardener",
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Visit the nursery",
+            "text": "Open Tuesday–Sunday, 9am–5pm. Free parking and plant advice.",
+            "email": "hello@leafandroot.co",
+            "phone": "+1 555 0155",
+            "address": "14 Glasshouse Lane\nAsheville, NC 28800",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Leaf & Root Nursery",
+            "tagline": "Plants grown with patience.",
+            "links": [
+              {
+                "label": "Plants",
+                "href": "#plants"
+              },
+              {
+                "label": "Growers",
+                "href": "#growers"
+              },
+              {
+                "label": "Gallery",
+                "href": "#gallery"
+              },
+              {
+                "label": "Visit",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Leaf & Root Nursery. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}

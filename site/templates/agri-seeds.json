@@ -1,0 +1,314 @@
+{
+  "category": "Agriculture",
+  "id": "agri-seeds",
+  "kind": "single",
+  "name": "Seeds & Agro Inputs Store",
+  "description": "For seed, fertiliser and crop-protection suppliers: product categories, best sellers, agronomy advice and dealer enquiries.",
+  "preview": [
+    "#fffdf7",
+    "#b45309",
+    "#292524"
+  ],
+  "theme": {
+    "primaryColor": "#b45309",
+    "accentColor": "#15803d",
+    "backgroundColor": "#fffdf7",
+    "surfaceColor": "#f7f1e3",
+    "textColor": "#292524",
+    "fontFamily": "Open Sans",
+    "headingFont": "Montserrat",
+    "radius": 10,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Harvest Seeds Co.",
+            "links": [
+              {
+                "label": "Categories",
+                "href": "#categories"
+              },
+              {
+                "label": "Best sellers",
+                "href": "#products"
+              },
+              {
+                "label": "Advice",
+                "href": "#advice"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "ctaLabel": "Find a dealer",
+            "ctaHref": "#contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Certified seed · Tested in our own trial fields",
+            "heading": "Better seed, bigger harvests",
+            "subheading": "High-germination seed, balanced fertilisers and expert agronomy support for every season.",
+            "primaryLabel": "Shop best sellers",
+            "primaryHref": "#products",
+            "secondaryLabel": "Ask an agronomist",
+            "secondaryHref": "#advice",
+            "image": "https://images.unsplash.com/photo-1712342109846-a8fcb1c883ba?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Shop by category",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Vegetable seed",
+                "text": "Tomato, chilli, onion, okra and 200 more varieties.",
+                "icon": "🥕",
+                "image": "https://images.unsplash.com/photo-1618158807634-d9c98a91ac8b?w=900&q=80",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Field crops",
+                "text": "Hybrid maize, wheat, rice and pulses.",
+                "icon": "🌾",
+                "image": "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=900&q=80",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Fertilisers",
+                "text": "NPK blends, micronutrients and organic compost.",
+                "icon": "🧪",
+                "image": "https://images.unsplash.com/photo-1752775312083-1cefe2f93358?w=900&q=80",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop protection",
+                "text": "Bio-pesticides and integrated pest management kits.",
+                "icon": "🛡️",
+                "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ],
+            "anchor": "categories"
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "heading": "Best sellers this season",
+            "subheading": "Free delivery on orders over $150.",
+            "products": [
+              {
+                "name": "Hybrid tomato seed (10g)",
+                "image": "https://images.unsplash.com/photo-1566218246241-934ad8b38ea6?w=800&q=80",
+                "price": "$14",
+                "oldPrice": "",
+                "badge": "Best seller",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Organic compost 25kg",
+                "image": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=800&q=80",
+                "price": "$18",
+                "oldPrice": "$22",
+                "badge": "-18%",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Mixed bean seed pack",
+                "image": "https://images.unsplash.com/photo-1542990253-a781e04c0082?w=800&q=80",
+                "price": "$9",
+                "oldPrice": "",
+                "badge": "New",
+                "rating": "4.7",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              },
+              {
+                "name": "Lettuce seed — 5 varieties",
+                "image": "https://images.unsplash.com/photo-1533321942807-08e4008b2025?w=800&q=80",
+                "price": "$11",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#contact"
+              }
+            ],
+            "anchor": "products"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "98%",
+                "label": "Average germination"
+              },
+              {
+                "value": "350+",
+                "label": "Varieties"
+              },
+              {
+                "value": "12,000",
+                "label": "Farmers served"
+              },
+              {
+                "value": "24",
+                "label": "Dealers nationwide"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "anchor": "advice",
+            "heading": "Free agronomy advice with every order",
+            "text": "Not sure which variety suits your soil or season? Our agronomists will recommend seed rates, fertiliser plans and a spray calendar — for free.",
+            "bullets": [
+              "Soil-test based fertiliser plans",
+              "Variety selection for your region",
+              "WhatsApp support from planting to harvest"
+            ],
+            "buttonLabel": "Ask an agronomist",
+            "buttonHref": "#contact",
+            "image": "https://images.unsplash.com/photo-1569880153113-76e33fc52d5f?w=1200&q=80",
+            "imageSide": "left"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Farmers trust our seed",
+            "items": [
+              {
+                "quote": "Germination was nearly perfect and the plants stayed healthy all season.",
+                "name": "Ramesh Patel",
+                "role": "Vegetable grower",
+                "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
+              },
+              {
+                "quote": "Their fertiliser plan saved me money and my yield went up 20%.",
+                "name": "Maya Chen",
+                "role": "Smallholder farmer",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Ordering & delivery",
+            "items": [
+              {
+                "question": "How fast do you deliver?",
+                "answer": "Orders before 2pm ship the same day; most areas receive them in 2–3 days.",
+                "icon": ""
+              },
+              {
+                "question": "Do you sell in bulk?",
+                "answer": "Yes — bulk and dealer pricing is available. Contact us with your quantities.",
+                "icon": ""
+              },
+              {
+                "question": "Is your seed treated?",
+                "answer": "We offer both treated and untreated seed; organic-certified options are marked on each product.",
+                "icon": ""
+              }
+            ],
+            "style": "boxed",
+            "icon": "chevron"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Find a dealer or place a bulk order",
+            "text": "Send us your location and requirements — we reply within one working day.",
+            "email": "sales@harvestseeds.co",
+            "phone": "+1 555 0123",
+            "address": "88 Market Road\nFresno, CA 93700",
+            "buttonLabel": "Send enquiry",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Harvest Seeds Co.",
+            "tagline": "Quality seed and inputs since 1985.",
+            "links": [
+              {
+                "label": "Categories",
+                "href": "#categories"
+              },
+              {
+                "label": "Best sellers",
+                "href": "#products"
+              },
+              {
+                "label": "Advice",
+                "href": "#advice"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Harvest Seeds Co.. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}

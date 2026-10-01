@@ -1,0 +1,3021 @@
+{
+  "id": "agri-dss-portal",
+  "kind": "multi",
+  "category": "Agriculture",
+  "name": "Agriculture Decision Support Portal",
+  "description": "A national-scale agri-data portal: full-screen aerial hero, modules with sub-pages, map dashboard, collaborators, data catalog, data exchange, login and policy pages.",
+  "preview": [
+    "#f4faf7",
+    "#164936",
+    "#7cc142"
+  ],
+  "theme": {
+    "primaryColor": "#164936",
+    "accentColor": "#7cc142",
+    "backgroundColor": "#f4faf7",
+    "surfaceColor": "#e4f4ed",
+    "textColor": "#164936",
+    "fontFamily": "Inter",
+    "headingFont": "Poppins",
+    "radius": 20,
+    "maxWidth": 1240
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "",
+            "subheading": "",
+            "variant": "hero",
+            "slideHeight": 0,
+            "overlay": 35,
+            "slides": [
+              {
+                "heading": "Geospatial data, information and customised solutions for informed decision making in agriculture",
+                "eyebrow": "",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?w=1920&q=80",
+                "price": "",
+                "buttonLabel": "Explore modules",
+                "buttonHref": "page:modules",
+                "background": "",
+                "textColor": "#ffffff",
+                "html": ""
+              },
+              {
+                "heading": "Gateway to a repository of data layers with advanced analytics for agriculture",
+                "eyebrow": "",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1503054578884-5753a0efe39f?w=1920&q=80",
+                "price": "",
+                "buttonLabel": "Open dashboard",
+                "buttonHref": "page:dashboard",
+                "background": "",
+                "textColor": "#ffffff",
+                "html": ""
+              },
+              {
+                "heading": "Discovering the power of data and analytics to modernise decision making in agriculture",
+                "eyebrow": "",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=1920&q=80",
+                "price": "",
+                "buttonLabel": "Browse the data catalog",
+                "buttonHref": "page:data-catalog",
+                "background": "",
+                "textColor": "#ffffff",
+                "html": ""
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 1,
+            "perViewTablet": 1,
+            "perViewMobile": 1,
+            "gap": 0,
+            "autoplay": true,
+            "autoplaySpeed": 6000,
+            "speed": 800,
+            "loop": true,
+            "transition": "fade",
+            "arrowPosition": "bottom-right",
+            "arrowStyle": "solid",
+            "arrowSize": 46,
+            "dotsStyle": "fraction",
+            "dotsPosition": "below-left",
+            "controlColor": "__accent__",
+            "heightMode": "screen",
+            "screenDesktop": 85,
+            "screenTablet": 70,
+            "screenMobile": 75,
+            "contentX": "left",
+            "contentY": "middle"
+          },
+          "style": {
+            "paddingY": 0,
+            "width": "full",
+            "paddingSide": 0
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Unlocking the power of data for enhancing the performance of agriculture",
+            "text": "A geospatial platform hosting a wide range of agricultural datasets, with analytics and deep insights for every stakeholder. It supports evidence-based decisions and the efficient implementation of agricultural programmes and schemes — aligning agriculture with climate-resilient and sustainable development goals.",
+            "bullets": [
+              "Satellite, weather, soil and crop data in one place",
+              "Analytics from national down to field-parcel level",
+              "Open standards and APIs for partners"
+            ],
+            "image": "https://images.unsplash.com/photo-1656407410275-e63e689bcd90?w=1200&q=80",
+            "imageSide": "right"
+          },
+          "style": {
+            "background": "__bg__"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Supporting multiple stakeholders — from farmers to policy makers",
+            "text": "A single window for multiple datasets and thematic information products, minimising the effort of collecting and processing data. Registered users get exclusive services such as closed-group interactions, blogs, news and surveys.",
+            "bullets": [
+              "Policy makers and planners",
+              "Researchers and start-ups",
+              "Extension officers and farmers"
+            ],
+            "image": "https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?w=1200&q=80",
+            "imageSide": "left",
+            "buttonLabel": "Register now",
+            "buttonHref": "page:login"
+          },
+          "style": {
+            "background": "__bg__"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Bringing new forms of data, information and knowledge to agriculture",
+            "text": "Spatial and non-spatial datasets are fetched from many sources, standardised and integrated, so every user group gets customised data and information services without duplicated effort.",
+            "bullets": [
+              "Standardised, integrated datasets",
+              "Geospatial maps and digital infrastructure",
+              "Comprehensive, regularly updated databases"
+            ],
+            "image": "https://images.unsplash.com/photo-1609412058473-c199497c3c5d?w=1200&q=80",
+            "imageSide": "right",
+            "buttonLabel": "Explore the data catalog",
+            "buttonHref": "page:data-catalog"
+          },
+          "style": {
+            "background": "__bg__"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "14",
+                "label": "Analytical modules"
+              },
+              {
+                "value": "250+",
+                "label": "Data layers"
+              },
+              {
+                "value": "36",
+                "label": "States & territories"
+              },
+              {
+                "value": "1.2M",
+                "label": "Field parcels mapped"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Modules",
+            "subheading": "Integrated tools for every stage of the crop cycle.",
+            "items": [
+              {
+                "heading": "Field Parcel Mapping",
+                "text": "Digitised field boundaries linked to land records for parcel-level analysis.",
+                "icon": "🗺️",
+                "image": "",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:modules",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Ground Truth & Spectral Library",
+                "text": "Geo-tagged field observations and crop spectral signatures for model training.",
+                "icon": "📍",
+                "image": "",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:modules",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop Weather Watch & Drought Monitoring",
+                "text": "Rainfall, temperature, dry spells and drought indicators, updated daily.",
+                "icon": "🌦️",
+                "image": "",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:modules",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Drought Vulnerability Assessment",
+                "text": "District and block-level vulnerability indices for planning and relief.",
+                "icon": "⚠️",
+                "image": "",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:modules",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Flood Impact Assessment",
+                "text": "Satellite-based flood extent mapping and crop damage estimates.",
+                "icon": "🌊",
+                "image": "",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:modules",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Soil Information System",
+                "text": "Unified soil type, nutrient and health-card data on a single map.",
+                "icon": "🧪",
+                "image": "",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:modules",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Pictorial Analysis",
+                "text": "Time-series imagery and field photos to compare seasons visually.",
+                "icon": "📸",
+                "image": "",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:modules",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop Mapping & Inventory",
+                "text": "Season-wise crop type maps and acreage statistics.",
+                "icon": "🌾",
+                "image": "",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:modules",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Data partners & collaborators",
+            "grayscale": false,
+            "logos": [
+              {
+                "name": "Space Research Agency",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Meteorological Department",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Soil & Land Use Survey",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Water Resources Commission",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Agricultural Universities",
+                "image": "",
+                "link": ""
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "News & updates",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "Kharif crop condition bulletin released",
+                "excerpt": "NDVI-based crop condition maps for all districts are now available.",
+                "image": "https://images.unsplash.com/photo-1544644181-af0e1e14916f?w=900&q=80",
+                "category": "Bulletin",
+                "date": "Sep 28, 2026",
+                "author": "Portal team",
+                "link": "#"
+              },
+              {
+                "title": "New soil moisture layer added",
+                "excerpt": "Daily root-zone soil moisture at 1 km resolution.",
+                "image": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=900&q=80",
+                "category": "Data",
+                "date": "Sep 15, 2026",
+                "author": "Portal team",
+                "link": "#"
+              },
+              {
+                "title": "Flood impact assessment for monsoon 2026",
+                "excerpt": "Satellite-derived flood extent and affected crop area.",
+                "image": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=900&q=80",
+                "category": "Assessment",
+                "date": "Aug 30, 2026",
+                "author": "Portal team",
+                "link": "#"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Register to unlock exclusive services",
+            "text": "Closed-group discussions, data downloads, alerts and surveys for registered users.",
+            "buttonLabel": "Register / Login",
+            "buttonHref": "page:login"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        },
+        {
+          "type": "back-to-top",
+          "data": {
+            "icon": "chevron",
+            "progress": true,
+            "background": "__primary__",
+            "ringColor": "__accent__"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / About",
+            "heading": "About the platform",
+            "text": "A geospatial decision support system for agriculture."
+          },
+          "style": {
+            "backgroundType": "image",
+            "backgroundImage": "https://images.unsplash.com/photo-1503054578884-5753a0efe39f?w=1920&q=80",
+            "overlayColor": "#0f2f23",
+            "overlayOpacity": 70,
+            "textColor": "#ffffff",
+            "paddingY": 96
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Our mission",
+            "text": "To modernise decision making in agriculture with reliable geospatial data, advanced analytics and digital services — supporting programmes that benefit millions of farmers.",
+            "bullets": [
+              "Data-driven, evidence-based decisions",
+              "Faster, better-targeted programme delivery",
+              "Climate-resilient, sustainable agriculture"
+            ],
+            "image": "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1200&q=80",
+            "imageSide": "right"
+          },
+          "style": {
+            "background": "__bg__"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Objectives",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🛰️",
+                "title": "Single source of truth",
+                "text": "Integrate satellite, weather, soil and crop data on one platform."
+              },
+              {
+                "icon": "📊",
+                "title": "Advanced analytics",
+                "text": "Models for crop condition, yield, drought and floods."
+              },
+              {
+                "icon": "🤝",
+                "title": "Partnerships",
+                "text": "Enable collaboration between departments, researchers and industry."
+              },
+              {
+                "icon": "📱",
+                "title": "Last-mile reach",
+                "text": "Deliver insights to extension workers and farmers."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "14",
+                "label": "Modules"
+              },
+              {
+                "value": "250+",
+                "label": "Data layers"
+              },
+              {
+                "value": "20+",
+                "label": "Partner institutions"
+              },
+              {
+                "value": "Daily",
+                "label": "Data updates"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "About the platform",
+            "items": [
+              {
+                "question": "Who runs the platform?",
+                "answer": "Replace this with your organisation’s name and role.",
+                "icon": ""
+              },
+              {
+                "question": "Who can use it?",
+                "answer": "Government departments, researchers, start-ups, extension officers and registered members of the public.",
+                "icon": ""
+              },
+              {
+                "question": "Is the data free?",
+                "answer": "Most map layers are free to view. Downloads and APIs may require registration or approval.",
+                "icon": ""
+              }
+            ],
+            "style": "filled",
+            "icon": "circle",
+            "singleOpen": true,
+            "openFirst": true
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "modules",
+      "title": "Modules",
+      "children": [
+        {
+          "slug": "crop-monitoring",
+          "title": "Crop Monitoring",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "AgriSight DSS",
+                "useSiteMenu": true,
+                "ctaLabel": "Login",
+                "ctaHref": "page:login",
+                "sticky": true
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Modules / Crop Monitoring",
+                "heading": "Crop mapping, monitoring & yield estimation",
+                "text": "Season-wise crop maps, vegetation-index monitoring and model-based yield estimates from national to field level."
+              },
+              "style": {
+                "backgroundType": "image",
+                "backgroundImage": "https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=1920&q=80",
+                "overlayColor": "#0f2f23",
+                "overlayOpacity": 70,
+                "textColor": "#ffffff",
+                "paddingY": 96
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What the module provides",
+                "text": "Season-wise crop maps, vegetation-index monitoring and model-based yield estimates from national to field level.",
+                "bullets": [
+                  "Crop type maps",
+                  "NDVI & LSWI condition",
+                  "Sowing progress",
+                  "Yield forecasts"
+                ],
+                "image": "https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=1200&q=80",
+                "imageSide": "right"
+              },
+              "style": {
+                "background": "__bg__"
+              }
+            },
+            {
+              "type": "grid",
+              "data": {
+                "heading": "Data layers & outputs",
+                "subheading": "",
+                "items": [
+                  {
+                    "heading": "Crop type maps",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🛰️",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "NDVI & LSWI condition",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📊",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Sowing progress",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🗺️",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Yield forecasts",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📥",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Crop-cutting support",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🔔",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "District reports",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📑",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  }
+                ]
+              },
+              "grid": {
+                "desktop": 3,
+                "cardStyle": "bordered"
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "heading": "Module FAQ",
+                "items": [
+                  {
+                    "question": "How often are crop maps updated?",
+                    "answer": "Every season, with in-season updates as new satellite data arrives.",
+                    "icon": ""
+                  },
+                  {
+                    "question": "At what resolution?",
+                    "answer": "Typically 10 m for crop maps and field-parcel level for analytics.",
+                    "icon": ""
+                  }
+                ],
+                "style": "divided",
+                "icon": "chevron"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Explore this module on the dashboard",
+                "text": "Sign in to view layers for your state, district or village.",
+                "buttonLabel": "Open dashboard",
+                "buttonHref": "page:dashboard"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "AgriSight DSS",
+                "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+                "links": [
+                  {
+                    "label": "Home",
+                    "href": "page:home"
+                  },
+                  {
+                    "label": "About",
+                    "href": "page:about"
+                  },
+                  {
+                    "label": "Modules",
+                    "href": "page:modules"
+                  },
+                  {
+                    "label": "Dashboard",
+                    "href": "page:dashboard"
+                  },
+                  {
+                    "label": "Data Exchange",
+                    "href": "page:data-exchange"
+                  },
+                  {
+                    "label": "Collaborators",
+                    "href": "page:collaborators"
+                  },
+                  {
+                    "label": "Feedback",
+                    "href": "page:contact"
+                  },
+                  {
+                    "label": "Privacy Policy",
+                    "href": "page:privacy-policy"
+                  },
+                  {
+                    "label": "Terms & Conditions",
+                    "href": "page:terms"
+                  }
+                ],
+                "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#cfe7da"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "weather-drought",
+          "title": "Weather & Drought",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "AgriSight DSS",
+                "useSiteMenu": true,
+                "ctaLabel": "Login",
+                "ctaHref": "page:login",
+                "sticky": true
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Modules / Weather & Drought",
+                "heading": "Crop weather watch & drought monitoring",
+                "text": "Rainfall, temperature, forecasts, warnings and drought indicators to anticipate risk and plan interventions."
+              },
+              "style": {
+                "backgroundType": "image",
+                "backgroundImage": "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1920&q=80",
+                "overlayColor": "#0f2f23",
+                "overlayOpacity": 70,
+                "textColor": "#ffffff",
+                "paddingY": 96
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What the module provides",
+                "text": "Rainfall, temperature, forecasts, warnings and drought indicators to anticipate risk and plan interventions.",
+                "bullets": [
+                  "Rainfall & deviation",
+                  "Temperature & anomalies",
+                  "7-day forecasts",
+                  "Weather warnings"
+                ],
+                "image": "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1200&q=80",
+                "imageSide": "right"
+              },
+              "style": {
+                "background": "__bg__"
+              }
+            },
+            {
+              "type": "grid",
+              "data": {
+                "heading": "Data layers & outputs",
+                "subheading": "",
+                "items": [
+                  {
+                    "heading": "Rainfall & deviation",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🛰️",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Temperature & anomalies",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📊",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "7-day forecasts",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🗺️",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Weather warnings",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📥",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Dry-spell mapper",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🔔",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Standardised Precipitation Index",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📑",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  }
+                ]
+              },
+              "grid": {
+                "desktop": 3,
+                "cardStyle": "bordered"
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "heading": "Module FAQ",
+                "items": [
+                  {
+                    "question": "Where does the weather data come from?",
+                    "answer": "From partner meteorological agencies and automatic weather stations.",
+                    "icon": ""
+                  },
+                  {
+                    "question": "Can I get alerts?",
+                    "answer": "Registered users can subscribe to district-level warnings.",
+                    "icon": ""
+                  }
+                ],
+                "style": "divided",
+                "icon": "chevron"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Explore this module on the dashboard",
+                "text": "Sign in to view layers for your state, district or village.",
+                "buttonLabel": "Open dashboard",
+                "buttonHref": "page:dashboard"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "AgriSight DSS",
+                "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+                "links": [
+                  {
+                    "label": "Home",
+                    "href": "page:home"
+                  },
+                  {
+                    "label": "About",
+                    "href": "page:about"
+                  },
+                  {
+                    "label": "Modules",
+                    "href": "page:modules"
+                  },
+                  {
+                    "label": "Dashboard",
+                    "href": "page:dashboard"
+                  },
+                  {
+                    "label": "Data Exchange",
+                    "href": "page:data-exchange"
+                  },
+                  {
+                    "label": "Collaborators",
+                    "href": "page:collaborators"
+                  },
+                  {
+                    "label": "Feedback",
+                    "href": "page:contact"
+                  },
+                  {
+                    "label": "Privacy Policy",
+                    "href": "page:privacy-policy"
+                  },
+                  {
+                    "label": "Terms & Conditions",
+                    "href": "page:terms"
+                  }
+                ],
+                "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#cfe7da"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "soil-information",
+          "title": "Soil Information",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "AgriSight DSS",
+                "useSiteMenu": true,
+                "ctaLabel": "Login",
+                "ctaHref": "page:login",
+                "sticky": true
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Modules / Soil Information",
+                "heading": "Soil information system",
+                "text": "A unified view of soil type, nutrients, moisture and land-use data to guide crop and fertiliser decisions."
+              },
+              "style": {
+                "backgroundType": "image",
+                "backgroundImage": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=1920&q=80",
+                "overlayColor": "#0f2f23",
+                "overlayOpacity": 70,
+                "textColor": "#ffffff",
+                "paddingY": 96
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What the module provides",
+                "text": "A unified view of soil type, nutrients, moisture and land-use data to guide crop and fertiliser decisions.",
+                "bullets": [
+                  "Soil type maps",
+                  "Nutrient status",
+                  "Root-zone soil moisture",
+                  "Land use / land cover"
+                ],
+                "image": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=1200&q=80",
+                "imageSide": "right"
+              },
+              "style": {
+                "background": "__bg__"
+              }
+            },
+            {
+              "type": "grid",
+              "data": {
+                "heading": "Data layers & outputs",
+                "subheading": "",
+                "items": [
+                  {
+                    "heading": "Soil type maps",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🛰️",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Nutrient status",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📊",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Root-zone soil moisture",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🗺️",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Land use / land cover",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📥",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Watershed boundaries",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🔔",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Soil health cards",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📑",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  }
+                ]
+              },
+              "grid": {
+                "desktop": 3,
+                "cardStyle": "bordered"
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "heading": "Module FAQ",
+                "items": [
+                  {
+                    "question": "Can I see data for my village?",
+                    "answer": "Yes — zoom to village level on the dashboard after signing in.",
+                    "icon": ""
+                  },
+                  {
+                    "question": "How is soil moisture measured?",
+                    "answer": "From satellite radar combined with hydrological models.",
+                    "icon": ""
+                  }
+                ],
+                "style": "divided",
+                "icon": "chevron"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Explore this module on the dashboard",
+                "text": "Sign in to view layers for your state, district or village.",
+                "buttonLabel": "Open dashboard",
+                "buttonHref": "page:dashboard"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "AgriSight DSS",
+                "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+                "links": [
+                  {
+                    "label": "Home",
+                    "href": "page:home"
+                  },
+                  {
+                    "label": "About",
+                    "href": "page:about"
+                  },
+                  {
+                    "label": "Modules",
+                    "href": "page:modules"
+                  },
+                  {
+                    "label": "Dashboard",
+                    "href": "page:dashboard"
+                  },
+                  {
+                    "label": "Data Exchange",
+                    "href": "page:data-exchange"
+                  },
+                  {
+                    "label": "Collaborators",
+                    "href": "page:collaborators"
+                  },
+                  {
+                    "label": "Feedback",
+                    "href": "page:contact"
+                  },
+                  {
+                    "label": "Privacy Policy",
+                    "href": "page:privacy-policy"
+                  },
+                  {
+                    "label": "Terms & Conditions",
+                    "href": "page:terms"
+                  }
+                ],
+                "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#cfe7da"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "disaster-assessment",
+          "title": "Flood & Drought Impact",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "AgriSight DSS",
+                "useSiteMenu": true,
+                "ctaLabel": "Login",
+                "ctaHref": "page:login",
+                "sticky": true
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Modules / Flood & Drought Impact",
+                "heading": "Flood & drought impact assessment",
+                "text": "Satellite-based flood mapping and drought vulnerability indices to support relief, insurance and planning."
+              },
+              "style": {
+                "backgroundType": "image",
+                "backgroundImage": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=1920&q=80",
+                "overlayColor": "#0f2f23",
+                "overlayOpacity": 70,
+                "textColor": "#ffffff",
+                "paddingY": 96
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What the module provides",
+                "text": "Satellite-based flood mapping and drought vulnerability indices to support relief, insurance and planning.",
+                "bullets": [
+                  "Flood extent maps",
+                  "Affected crop area",
+                  "Drought vulnerability index",
+                  "Reservoir storage"
+                ],
+                "image": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=1200&q=80",
+                "imageSide": "right"
+              },
+              "style": {
+                "background": "__bg__"
+              }
+            },
+            {
+              "type": "grid",
+              "data": {
+                "heading": "Data layers & outputs",
+                "subheading": "",
+                "items": [
+                  {
+                    "heading": "Flood extent maps",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🛰️",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Affected crop area",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📊",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Drought vulnerability index",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🗺️",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Reservoir storage",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📥",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Groundwater levels",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "🔔",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  },
+                  {
+                    "heading": "Damage reports",
+                    "text": "Available as map layer, chart and downloadable table.",
+                    "icon": "📑",
+                    "image": "",
+                    "buttonLabel": "",
+                    "buttonHref": "",
+                    "colSpan": "1",
+                    "rowSpan": "1",
+                    "background": "",
+                    "textColor": ""
+                  }
+                ]
+              },
+              "grid": {
+                "desktop": 3,
+                "cardStyle": "bordered"
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "heading": "Module FAQ",
+                "items": [
+                  {
+                    "question": "How fast are flood maps available?",
+                    "answer": "Usually within 24–48 hours of a satellite pass over the affected area.",
+                    "icon": ""
+                  },
+                  {
+                    "question": "Are these used for insurance?",
+                    "answer": "Yes, as supporting evidence for faster loss assessment.",
+                    "icon": ""
+                  }
+                ],
+                "style": "divided",
+                "icon": "chevron"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Explore this module on the dashboard",
+                "text": "Sign in to view layers for your state, district or village.",
+                "buttonLabel": "Open dashboard",
+                "buttonHref": "page:dashboard"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "AgriSight DSS",
+                "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+                "links": [
+                  {
+                    "label": "Home",
+                    "href": "page:home"
+                  },
+                  {
+                    "label": "About",
+                    "href": "page:about"
+                  },
+                  {
+                    "label": "Modules",
+                    "href": "page:modules"
+                  },
+                  {
+                    "label": "Dashboard",
+                    "href": "page:dashboard"
+                  },
+                  {
+                    "label": "Data Exchange",
+                    "href": "page:data-exchange"
+                  },
+                  {
+                    "label": "Collaborators",
+                    "href": "page:collaborators"
+                  },
+                  {
+                    "label": "Feedback",
+                    "href": "page:contact"
+                  },
+                  {
+                    "label": "Privacy Policy",
+                    "href": "page:privacy-policy"
+                  },
+                  {
+                    "label": "Terms & Conditions",
+                    "href": "page:terms"
+                  }
+                ],
+                "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#cfe7da"
+              }
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Modules",
+            "heading": "Modules",
+            "text": "Fourteen integrated tools covering the whole crop cycle."
+          },
+          "style": {
+            "backgroundType": "image",
+            "backgroundImage": "https://images.unsplash.com/photo-1627920769541-daa658ed6b59?w=1920&q=80",
+            "overlayColor": "#0f2f23",
+            "overlayOpacity": 70,
+            "textColor": "#ffffff",
+            "paddingY": 96
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "All modules",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Field Parcel Mapping",
+                "text": "Digitised field boundaries linked to land records for parcel-level analysis.",
+                "icon": "🗺️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Ground Truth & Spectral Library",
+                "text": "Geo-tagged field observations and crop spectral signatures for model training.",
+                "icon": "📍",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop Weather Watch & Drought Monitoring",
+                "text": "Rainfall, temperature, dry spells and drought indicators, updated daily.",
+                "icon": "🌦️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Drought Vulnerability Assessment",
+                "text": "District and block-level vulnerability indices for planning and relief.",
+                "icon": "⚠️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Flood Impact Assessment",
+                "text": "Satellite-based flood extent mapping and crop damage estimates.",
+                "icon": "🌊",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Soil Information System",
+                "text": "Unified soil type, nutrient and health-card data on a single map.",
+                "icon": "🧪",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Pictorial Analysis",
+                "text": "Time-series imagery and field photos to compare seasons visually.",
+                "icon": "📸",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop Mapping & Inventory",
+                "text": "Season-wise crop type maps and acreage statistics.",
+                "icon": "🌾",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop Monitoring",
+                "text": "Vegetation indices (NDVI, LSWI) to track crop condition through the season.",
+                "icon": "📈",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop Yield Estimation",
+                "text": "Model-based yield forecasts at district and field level.",
+                "icon": "⚖️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop Insurance Solutions",
+                "text": "Technology-driven loss assessment to speed up insurance claims.",
+                "icon": "🛡️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Agroforestry & Horticulture",
+                "text": "Mapping of orchards, plantations and tree cover on farmland.",
+                "icon": "🌳",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Field-level Crop Analytics",
+                "text": "Crop health, sowing and harvest insights for each field parcel.",
+                "icon": "🔎",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Custom Scripting & Innovations",
+                "text": "Sandbox for researchers and start-ups to build their own analytics.",
+                "icon": "💡",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 3,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Explore in detail",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Crop monitoring",
+                "text": "Crop maps, condition and yield.",
+                "icon": "🌾",
+                "image": "https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=900&q=80",
+                "buttonLabel": "Open",
+                "buttonHref": "page:crop-monitoring",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Weather & drought",
+                "text": "Forecasts, warnings and drought indicators.",
+                "icon": "🌦️",
+                "image": "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=900&q=80",
+                "buttonLabel": "Open",
+                "buttonHref": "page:weather-drought",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Soil information",
+                "text": "Soil type, nutrients and moisture.",
+                "icon": "🧪",
+                "image": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=900&q=80",
+                "buttonLabel": "Open",
+                "buttonHref": "page:soil-information",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Flood & drought impact",
+                "text": "Flood maps and vulnerability.",
+                "icon": "🌊",
+                "image": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=900&q=80",
+                "buttonLabel": "Open",
+                "buttonHref": "page:disaster-assessment",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "dashboard",
+      "title": "Dashboard",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Dashboard",
+            "heading": "Dashboard",
+            "text": "Interactive maps and analytics — sign in to explore layers for your area."
+          },
+          "style": {
+            "backgroundType": "image",
+            "backgroundImage": "https://images.unsplash.com/photo-1566678408000-b4ed750a936e?w=1920&q=80",
+            "overlayColor": "#0f2f23",
+            "overlayOpacity": 70,
+            "textColor": "#ffffff",
+            "paddingY": 96
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Data visualisation layers",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Satellite images",
+                "text": "Latest optical and radar imagery.",
+                "icon": "🛰️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Rainfall",
+                "text": "Cumulative rainfall, deviation and SPI.",
+                "icon": "🌧️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Temperature",
+                "text": "Minimum, maximum, average and anomaly.",
+                "icon": "🌡️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Weather forecast",
+                "text": "7-day forecast and nowcasts.",
+                "icon": "⛅",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Weather warnings",
+                "text": "Heatwave, cold wave and hailstorm warnings.",
+                "icon": "⚠️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Remote sensing indices",
+                "text": "NDVI, LSWI and vegetation condition.",
+                "icon": "🌿",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Soil moisture",
+                "text": "Root-zone status, adequacy and anomaly.",
+                "icon": "💧",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Hydrological indicators",
+                "text": "Reservoir storage, groundwater, basins.",
+                "icon": "🏞️",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Active fire locations",
+                "text": "Crop-residue burning hotspots.",
+                "icon": "🔥",
+                "image": "",
+                "buttonLabel": "",
+                "buttonHref": "",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 3,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "gallery",
+          "data": {
+            "heading": "Map previews",
+            "subheading": "",
+            "captionOnHover": true,
+            "images": [
+              {
+                "image": "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?w=900&q=80",
+                "title": "Crop inventory",
+                "caption": "Sample layer",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1656407410275-e63e689bcd90?w=900&q=80",
+                "title": "Vegetation condition",
+                "caption": "Sample layer",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=900&q=80",
+                "title": "Flood extent",
+                "caption": "Sample layer",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1503054578884-5753a0efe39f?w=900&q=80",
+                "title": "Field parcels",
+                "caption": "Sample layer",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?w=900&q=80",
+                "title": "Land use / land cover",
+                "caption": "Sample layer",
+                "link": ""
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1748432171507-c1d62fe2e859?w=900&q=80",
+                "title": "Soil moisture",
+                "caption": "Sample layer",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Sign in to open the live dashboard",
+            "text": "Select state, district, taluka and village to explore every layer.",
+            "buttonLabel": "Login",
+            "buttonHref": "page:login"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "collaborators",
+      "title": "Collaborators",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Collaborators",
+            "heading": "Collaborators",
+            "text": "Departments and institutions that contribute data and expertise."
+          },
+          "style": {
+            "backgroundType": "image",
+            "backgroundImage": "https://images.unsplash.com/photo-1609412058473-c199497c3c5d?w=1920&q=80",
+            "overlayColor": "#0f2f23",
+            "overlayOpacity": 70,
+            "textColor": "#ffffff",
+            "paddingY": 96
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Working together",
+            "text": "Several departments and institutions contribute to the platform: satellite imagery and geospatial layers, weather forecasts, soil surveys and water-resource monitoring. International satellite data adds real-time information on crop health and land use — together enabling precision farming and timely interventions.",
+            "bullets": [
+              "Satellite and geospatial data",
+              "Weather forecasts and warnings",
+              "Soil surveys and water monitoring"
+            ],
+            "image": "https://images.unsplash.com/photo-1713952160156-bb59cac789a9?w=1200&q=80",
+            "imageSide": "right"
+          },
+          "style": {
+            "background": "__bg__"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Partner contributions",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🛰️",
+                "title": "Space Research Agency",
+                "text": "Satellite imagery, soil moisture, land use and flood hazard layers."
+              },
+              {
+                "icon": "🌦️",
+                "title": "Meteorological Department",
+                "text": "Forecasts and warnings for planting and harvest planning."
+              },
+              {
+                "icon": "🧪",
+                "title": "Soil & Land Use Survey",
+                "text": "Soil health, nutrient levels and soil structure."
+              },
+              {
+                "icon": "💧",
+                "title": "Water Resources Commission",
+                "text": "Reservoirs, irrigation and water conservation data."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Our partners",
+            "grayscale": false,
+            "logos": [
+              {
+                "name": "Space Research Agency",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Meteorological Department",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Soil & Land Use Survey",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Water Resources Commission",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Agricultural Universities",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Remote Sensing Centre",
+                "image": "",
+                "link": ""
+              }
+            ]
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "data-catalog",
+      "title": "Data Catalog",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Data Catalog",
+            "heading": "Data catalog",
+            "text": "Browse spatial and non-spatial datasets available on the platform."
+          },
+          "style": {
+            "backgroundType": "image",
+            "backgroundImage": "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?w=1920&q=80",
+            "overlayColor": "#0f2f23",
+            "overlayOpacity": 70,
+            "textColor": "#ffffff",
+            "paddingY": 96
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Dataset categories",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Crop",
+                "text": "Crop type maps, acreage, condition and yield.",
+                "icon": "🌾",
+                "image": "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=900&q=80",
+                "buttonLabel": "Request access",
+                "buttonHref": "page:contact",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Weather",
+                "text": "Station and gridded rainfall and temperature.",
+                "icon": "🌦️",
+                "image": "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=900&q=80",
+                "buttonLabel": "Request access",
+                "buttonHref": "page:contact",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Soil",
+                "text": "Soil type, nutrients and moisture.",
+                "icon": "🧪",
+                "image": "https://images.unsplash.com/photo-1752775312083-1cefe2f93358?w=900&q=80",
+                "buttonLabel": "Request access",
+                "buttonHref": "page:contact",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Water",
+                "text": "Reservoirs, groundwater and irrigation.",
+                "icon": "💧",
+                "image": "https://images.unsplash.com/photo-1743742566156-f1745850281a?w=900&q=80",
+                "buttonLabel": "Request access",
+                "buttonHref": "page:contact",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Land",
+                "text": "Land use, field parcels and boundaries.",
+                "icon": "🗺️",
+                "image": "https://images.unsplash.com/photo-1503054578884-5753a0efe39f?w=900&q=80",
+                "buttonLabel": "Request access",
+                "buttonHref": "page:contact",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Disaster",
+                "text": "Flood extent, drought and fire hotspots.",
+                "icon": "⚠️",
+                "image": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=900&q=80",
+                "buttonLabel": "Request access",
+                "buttonHref": "page:contact",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 3
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Using the data",
+            "items": [
+              {
+                "question": "Which formats are available?",
+                "answer": "GeoTIFF, Shapefile, GeoJSON, CSV and OGC web services (WMS/WFS).",
+                "icon": ""
+              },
+              {
+                "question": "Is there a licence?",
+                "answer": "Replace with your data licence. Most layers are free for non-commercial use with attribution.",
+                "icon": ""
+              },
+              {
+                "question": "How do I request restricted data?",
+                "answer": "Sign in and submit a request with your purpose; approvals usually take 3–5 working days.",
+                "icon": ""
+              }
+            ],
+            "layout": "two-column",
+            "style": "cards",
+            "icon": "chevron"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "data-exchange",
+      "title": "Data Exchange",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Data Exchange",
+            "heading": "Data exchange",
+            "text": "Share and consume data through standard, secure interfaces."
+          },
+          "style": {
+            "backgroundType": "image",
+            "backgroundImage": "https://images.unsplash.com/photo-1566678408000-b4ed750a936e?w=1920&q=80",
+            "overlayColor": "#0f2f23",
+            "overlayOpacity": 70,
+            "textColor": "#ffffff",
+            "paddingY": 96
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "How partners exchange data",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🔌",
+                "title": "REST APIs",
+                "text": "Programmatic access to layers and statistics."
+              },
+              {
+                "icon": "🌐",
+                "title": "OGC services",
+                "text": "WMS, WFS and WCS for GIS software."
+              },
+              {
+                "icon": "🔐",
+                "title": "Secure access",
+                "text": "API keys, roles and audit logs."
+              },
+              {
+                "icon": "📐",
+                "title": "Open standards",
+                "text": "Common data models and metadata."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 4,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Becoming a data partner",
+            "items": [
+              {
+                "question": "Register your organisation",
+                "answer": "Create an account and submit your organisation details.",
+                "icon": ""
+              },
+              {
+                "question": "Sign the data-sharing agreement",
+                "answer": "Agree on datasets, frequency and access rules.",
+                "icon": ""
+              },
+              {
+                "question": "Get your API keys",
+                "answer": "Keys are issued for test and production environments.",
+                "icon": ""
+              },
+              {
+                "question": "Go live",
+                "answer": "Publish or consume data; usage is monitored on your partner dashboard.",
+                "icon": ""
+              }
+            ],
+            "style": "divided",
+            "icon": "plus",
+            "numbered": true,
+            "singleOpen": true,
+            "openFirst": true
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Want to share or use data?",
+            "text": "Contact the data exchange team to get started.",
+            "buttonLabel": "Contact us",
+            "buttonHref": "page:contact"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "Questions, feedback or data requests — we’re here to help."
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Send us a message",
+            "text": "Replace these details with your organisation’s support contacts.",
+            "email": "support@agrisight.example",
+            "phone": "+00 000 000 0000",
+            "address": "Your organisation name\nStreet, City, PIN code",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you for your feedback. Our team will respond within two working days."
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Support",
+            "items": [
+              {
+                "question": "I forgot my password",
+                "answer": "Use “Forgot password” on the login page; a reset link will be emailed to you.",
+                "icon": ""
+              },
+              {
+                "question": "Can I report a data error?",
+                "answer": "Yes — use this form and include the layer name, location and date.",
+                "icon": ""
+              }
+            ],
+            "style": "minimal",
+            "icon": "plus"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "login",
+      "title": "Login",
+      "hideInMenu": true,
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "auth",
+          "data": {
+            "mode": "login",
+            "heading": "Sign in to the portal",
+            "text": "Access dashboards, data downloads and member services.",
+            "buttonLabel": "Sign in",
+            "switchText": "New user?",
+            "switchLabel": "Register",
+            "switchHref": "page:contact",
+            "image": "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?w=1200&q=80"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "privacy-policy",
+      "title": "Privacy Policy",
+      "hideInMenu": true,
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Privacy Policy",
+            "heading": "Privacy policy",
+            "text": "Replace this text with your organisation’s privacy policy."
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Summary",
+            "items": [
+              {
+                "question": "What information do we collect?",
+                "answer": "Registration details and usage information needed to provide the service.",
+                "icon": ""
+              },
+              {
+                "question": "How is it used?",
+                "answer": "Only to operate the portal and improve its services; it is not sold to third parties.",
+                "icon": ""
+              },
+              {
+                "question": "How do I contact you about my data?",
+                "answer": "Write to the support address on the Contact page.",
+                "icon": ""
+              }
+            ],
+            "style": "divided",
+            "icon": "chevron"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "terms",
+      "title": "Terms & Conditions",
+      "hideInMenu": true,
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "AgriSight DSS",
+            "useSiteMenu": true,
+            "ctaLabel": "Login",
+            "ctaHref": "page:login",
+            "sticky": true
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Terms & Conditions",
+            "heading": "Terms & conditions",
+            "text": "Replace this text with your terms of use, copyright and hyperlinking policies."
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Key terms",
+            "items": [
+              {
+                "question": "Use of content",
+                "answer": "Content may be used with attribution unless stated otherwise.",
+                "icon": ""
+              },
+              {
+                "question": "Hyperlinking",
+                "answer": "You may link to this portal; please don’t present it inside frames on other sites.",
+                "icon": ""
+              },
+              {
+                "question": "Disclaimer",
+                "answer": "Data is provided for decision support and may contain errors; verify before critical use.",
+                "icon": ""
+              }
+            ],
+            "style": "divided",
+            "icon": "chevron"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "AgriSight DSS",
+            "tagline": "Geospatial data and analytics for informed decisions in agriculture. Support: +00 000 000 0000 · support@agrisight.example",
+            "links": [
+              {
+                "label": "Home",
+                "href": "page:home"
+              },
+              {
+                "label": "About",
+                "href": "page:about"
+              },
+              {
+                "label": "Modules",
+                "href": "page:modules"
+              },
+              {
+                "label": "Dashboard",
+                "href": "page:dashboard"
+              },
+              {
+                "label": "Data Exchange",
+                "href": "page:data-exchange"
+              },
+              {
+                "label": "Collaborators",
+                "href": "page:collaborators"
+              },
+              {
+                "label": "Feedback",
+                "href": "page:contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "page:privacy-policy"
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "page:terms"
+              }
+            ],
+            "copyright": "© 2026 AgriSight DSS — your organisation name. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#cfe7da"
+          }
+        }
+      ]
+    }
+  ]
+}

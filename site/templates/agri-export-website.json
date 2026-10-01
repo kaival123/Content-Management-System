@@ -1,0 +1,820 @@
+{
+  "category": "Agriculture",
+  "id": "agri-export-website",
+  "kind": "multi",
+  "name": "Agribusiness & Export Company",
+  "description": "For agro-processing and export firms: product catalogue with sub-pages, quality and certifications, global reach and enquiries.",
+  "preview": [
+    "#ffffff",
+    "#a16207",
+    "#1c1917"
+  ],
+  "theme": {
+    "primaryColor": "#a16207",
+    "accentColor": "#166534",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#faf6ee",
+    "textColor": "#1c1917",
+    "fontFamily": "Work Sans",
+    "headingFont": "Playfair Display",
+    "radius": 8,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "useSiteMenu": true,
+            "ctaLabel": "Request a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Grains · Pulses · Spices — exported to 32 countries",
+            "heading": "Premium agricultural produce, sourced from the farm",
+            "subheading": "We work directly with 5,000 farmers to deliver clean, graded and certified produce to importers worldwide.",
+            "primaryLabel": "Our products",
+            "primaryHref": "page:products",
+            "secondaryLabel": "Request a quote",
+            "secondaryHref": "page:contact",
+            "image": "https://images.unsplash.com/photo-1632723893457-47e3abc47526?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "Certified by",
+            "grayscale": true,
+            "logos": [
+              {
+                "name": "ISO 22000",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "HACCP",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "BRCGS",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Organic EU",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "FSSAI",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Our product range",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Grains",
+                "text": "Basmati and non-basmati rice, wheat and maize.",
+                "icon": "🌾",
+                "image": "https://images.unsplash.com/photo-1728895604559-a4e16081504e?w=900&q=80",
+                "buttonLabel": "View grains",
+                "buttonHref": "page:grains",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Pulses",
+                "text": "Chickpeas, lentils, kidney beans and more.",
+                "icon": "🫘",
+                "image": "https://images.unsplash.com/photo-1542990253-a781e04c0082?w=900&q=80",
+                "buttonLabel": "View pulses",
+                "buttonHref": "page:pulses",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Nuts & seeds",
+                "text": "Almonds, walnuts and oil seeds.",
+                "icon": "🌰",
+                "image": "https://images.unsplash.com/photo-1508061110522-9ee0a799e290?w=900&q=80",
+                "buttonLabel": "View range",
+                "buttonHref": "page:spices",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "32",
+                "label": "Export countries"
+              },
+              {
+                "value": "85,000 t",
+                "label": "Shipped last year"
+              },
+              {
+                "value": "5,000",
+                "label": "Partner farmers"
+              },
+              {
+                "value": "20+",
+                "label": "Years of trade"
+              }
+            ]
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Farm-to-port traceability",
+            "text": "Every lot is traced back to the village it came from. We clean, grade, test and pack in our own facilities, so quality is consistent from the first container to the hundredth.",
+            "bullets": [
+              "Own processing and packing plant",
+              "Lab-tested for residues and moisture",
+              "Private labelling available"
+            ],
+            "buttonLabel": "Quality & certifications",
+            "buttonHref": "page:quality",
+            "image": "https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=1200&q=80"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Importers trust us",
+            "items": [
+              {
+                "quote": "Consistent quality across 40 containers this year. Documentation is always perfect.",
+                "name": "Sanne de Vries",
+                "role": "Food importer, Netherlands",
+                "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+              },
+              {
+                "quote": "Reliable partner for our private-label rice — on time, every time.",
+                "name": "Luca Bianchi",
+                "role": "Retail buyer, Italy",
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Request specifications and pricing",
+            "text": "Tell us the product, grade, quantity and destination port.",
+            "buttonLabel": "Request a quote",
+            "buttonHref": "page:contact"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "tagline": "Agricultural exports since 2004.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Golden Harvest Agro Exports. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "useSiteMenu": true,
+            "ctaLabel": "Request a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / About",
+            "heading": "About Golden Harvest",
+            "text": "Two decades of connecting farmers with the world."
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Rooted in farming communities",
+            "text": "We started as a small rice trader in 2004. Today we run a 12-acre processing campus and work with 5,000 farmers on better seed, fair prices and sustainable practices.",
+            "bullets": [
+              "Contract farming with fair minimum prices",
+              "Farmer training on residue-free farming",
+              "Solar-powered processing plant"
+            ],
+            "image": "https://images.unsplash.com/photo-1530507629858-e4977d30e9e0?w=1200&q=80",
+            "imageSide": "left"
+          }
+        },
+        {
+          "type": "team",
+          "data": {
+            "heading": "Leadership",
+            "subheading": "",
+            "members": [
+              {
+                "name": "Ravi Kapoor",
+                "role": "Managing Director",
+                "bio": "Founded the company in 2004.",
+                "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Sophie Janssen",
+                "role": "Head of Exports",
+                "bio": "15 years in European food trade.",
+                "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Daniel Ruiz",
+                "role": "Quality Director",
+                "bio": "Food scientist, HACCP lead auditor.",
+                "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Golden Harvest Agro Exports. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "products",
+      "title": "Products",
+      "children": [
+        {
+          "slug": "grains",
+          "title": "Grains",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Golden Harvest Agro Exports",
+                "useSiteMenu": true,
+                "ctaLabel": "Request a quote",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Products / Grains",
+                "heading": "Grains",
+                "text": "Rice, wheat and maize — cleaned, graded and packed to your specification."
+              }
+            },
+            {
+              "type": "products",
+              "data": {
+                "heading": "Grains we export",
+                "subheading": "Minimum order: one 20ft container.",
+                "products": [
+                  {
+                    "name": "1121 Basmati rice",
+                    "image": "https://images.unsplash.com/photo-1561504935-4e7d4516a2d1?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "Premium",
+                    "rating": "4.9",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Non-basmati rice",
+                    "image": "https://images.unsplash.com/photo-1559628233-100c798642d4?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.8",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Milling wheat",
+                    "image": "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.8",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Yellow maize",
+                    "image": "https://images.unsplash.com/photo-1544644181-af0e1e14916f?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.7",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Need specifications or samples?",
+                "text": "We send product specs, certificates and samples within 48 hours.",
+                "buttonLabel": "Request a quote",
+                "buttonHref": "page:contact"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Golden Harvest Agro Exports",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Golden Harvest Agro Exports. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "pulses",
+          "title": "Pulses",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Golden Harvest Agro Exports",
+                "useSiteMenu": true,
+                "ctaLabel": "Request a quote",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Products / Pulses",
+                "heading": "Pulses",
+                "text": "Chickpeas, lentils and beans — machine-cleaned and sorted."
+              }
+            },
+            {
+              "type": "products",
+              "data": {
+                "heading": "Pulses we export",
+                "subheading": "Minimum order: one 20ft container.",
+                "products": [
+                  {
+                    "name": "Kabuli chickpeas",
+                    "image": "https://images.unsplash.com/photo-1508748169069-82590c9f26e6?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "Best seller",
+                    "rating": "4.9",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Mixed beans",
+                    "image": "https://images.unsplash.com/photo-1542990253-a781e04c0082?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.8",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Red lentils",
+                    "image": "https://images.unsplash.com/photo-1508748169069-82590c9f26e6?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.8",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Kidney beans",
+                    "image": "https://images.unsplash.com/photo-1542990253-a781e04c0082?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.7",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Need specifications or samples?",
+                "text": "We send product specs, certificates and samples within 48 hours.",
+                "buttonLabel": "Request a quote",
+                "buttonHref": "page:contact"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Golden Harvest Agro Exports",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Golden Harvest Agro Exports. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "spices",
+          "title": "Nuts & Seeds",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "Golden Harvest Agro Exports",
+                "useSiteMenu": true,
+                "ctaLabel": "Request a quote",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Products / Nuts & Seeds",
+                "heading": "Nuts & seeds",
+                "text": "Almonds, walnuts and oil seeds, sorted and packed for export."
+              }
+            },
+            {
+              "type": "products",
+              "data": {
+                "heading": "Nuts & Seeds we export",
+                "subheading": "Minimum order: one 20ft container.",
+                "products": [
+                  {
+                    "name": "California-type almonds",
+                    "image": "https://images.unsplash.com/photo-1508061110522-9ee0a799e290?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "Premium",
+                    "rating": "4.9",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Walnut kernels",
+                    "image": "https://images.unsplash.com/photo-1517817500400-c961b0488325?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.8",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Mixed seeds",
+                    "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.7",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  },
+                  {
+                    "name": "Oil seeds",
+                    "image": "https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=800&q=80",
+                    "price": "On request",
+                    "oldPrice": "",
+                    "badge": "",
+                    "rating": "4.7",
+                    "buttonLabel": "Add to cart",
+                    "buttonHref": "page:contact"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Need specifications or samples?",
+                "text": "We send product specs, certificates and samples within 48 hours.",
+                "buttonLabel": "Request a quote",
+                "buttonHref": "page:contact"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "Golden Harvest Agro Exports",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 Golden Harvest Agro Exports. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "useSiteMenu": true,
+            "ctaLabel": "Request a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Products",
+            "heading": "Our products",
+            "text": "Choose a category for grades, packing and specifications."
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "Product categories",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Grains",
+                "text": "Rice, wheat and maize.",
+                "icon": "🌾",
+                "image": "https://images.unsplash.com/photo-1728895604559-a4e16081504e?w=900&q=80",
+                "buttonLabel": "View",
+                "buttonHref": "page:grains",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Pulses",
+                "text": "Chickpeas, lentils and beans.",
+                "icon": "🫘",
+                "image": "https://images.unsplash.com/photo-1542990253-a781e04c0082?w=900&q=80",
+                "buttonLabel": "View",
+                "buttonHref": "page:pulses",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Nuts & seeds",
+                "text": "Almonds, walnuts and oil seeds.",
+                "icon": "🌰",
+                "image": "https://images.unsplash.com/photo-1508061110522-9ee0a799e290?w=900&q=80",
+                "buttonLabel": "View",
+                "buttonHref": "page:spices",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Golden Harvest Agro Exports. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "quality",
+      "title": "Quality",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "useSiteMenu": true,
+            "ctaLabel": "Request a quote",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Quality",
+            "heading": "Quality & certifications",
+            "text": "Tested, traceable and certified at every step."
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Our quality process",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🌱",
+                "title": "At the farm",
+                "text": "Approved seed and residue-free practices."
+              },
+              {
+                "icon": "🔬",
+                "title": "In the lab",
+                "text": "Moisture, purity, aflatoxin and pesticide tests per lot."
+              },
+              {
+                "icon": "🏭",
+                "title": "In processing",
+                "text": "Sortex cleaning, grading and metal detection."
+              },
+              {
+                "icon": "🚢",
+                "title": "At shipment",
+                "text": "Fumigation, SGS inspection and full documents."
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Quality FAQ",
+            "items": [
+              {
+                "question": "Can you meet EU residue limits?",
+                "answer": "Yes. Our contract-farmed lots are grown to EU MRLs and tested by accredited labs.",
+                "icon": ""
+              },
+              {
+                "question": "Do you offer organic produce?",
+                "answer": "Selected rice and pulses are certified organic (EU and NOP).",
+                "icon": ""
+              },
+              {
+                "question": "Can we audit your facility?",
+                "answer": "Of course. Buyers and third-party auditors are welcome by appointment.",
+                "icon": ""
+              }
+            ],
+            "style": "boxed",
+            "icon": "plus"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Golden Harvest Agro Exports. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "useSiteMenu": true,
+            "ctaLabel": "Get in touch",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "We’d love to hear from you. Send us the product, grade, quantity and destination port."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Send us a message",
+            "text": "We reply within one working day.",
+            "email": "exports@goldenharvest.com",
+            "phone": "+1 555 0188",
+            "address": "Golden Harvest Agro Exports\nPort Industrial Area, Plot 22",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Golden Harvest Agro Exports",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Golden Harvest Agro Exports. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}

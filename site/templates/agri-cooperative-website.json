@@ -1,0 +1,880 @@
+{
+  "category": "Agriculture",
+  "id": "agri-cooperative-website",
+  "kind": "multi",
+  "name": "Farmers Cooperative Website",
+  "description": "For farmer cooperatives and producer organisations: services with sub-pages, membership plans, news and contact.",
+  "preview": [
+    "#ffffff",
+    "#166534",
+    "#14231a"
+  ],
+  "theme": {
+    "primaryColor": "#166534",
+    "accentColor": "#eab308",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f2f7f1",
+    "textColor": "#14231a",
+    "fontFamily": "Open Sans",
+    "headingFont": "Poppins",
+    "radius": 10,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "useSiteMenu": true,
+            "ctaLabel": "Become a member",
+            "ctaHref": "page:membership"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Owned by 3,400 farming families",
+            "heading": "Stronger together, from seed to market",
+            "subheading": "Shared equipment, expert crop advice and fair prices for our members’ harvest.",
+            "primaryLabel": "Become a member",
+            "primaryHref": "page:membership",
+            "secondaryLabel": "Our services",
+            "secondaryHref": "page:services",
+            "image": "https://images.unsplash.com/photo-1609412058473-c199497c3c5d?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "3,400",
+                "label": "Member farms"
+              },
+              {
+                "value": "$48M",
+                "label": "Paid to members last year"
+              },
+              {
+                "value": "120",
+                "label": "Shared machines"
+              },
+              {
+                "value": "18",
+                "label": "Collection centres"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "How we help our members",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Crop advisory",
+                "text": "Field visits, soil tests and season plans from our agronomists.",
+                "icon": "🌾",
+                "image": "https://images.unsplash.com/photo-1569880153113-76e33fc52d5f?w=900&q=80",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:crop-advisory",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Equipment sharing",
+                "text": "Book tractors, harvesters and sprayers at cost price.",
+                "icon": "🚜",
+                "image": "https://images.unsplash.com/photo-1602446692855-6d096499f69b?w=900&q=80",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:equipment-sharing",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Market access",
+                "text": "We sell members’ produce together for better prices.",
+                "icon": "📦",
+                "image": "https://images.unsplash.com/photo-1579113800032-c38bd7635818?w=900&q=80",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:market-access",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "A cooperative run by farmers, for farmers",
+            "text": "Founded in 1978 by 40 smallholders, we are now one of the region’s largest producer organisations. Every member has an equal vote, and profits go back to the farms.",
+            "bullets": [
+              "One member, one vote",
+              "Profits shared every year",
+              "Training for young farmers"
+            ],
+            "buttonLabel": "About us",
+            "buttonHref": "page:about",
+            "image": "https://images.unsplash.com/photo-1530507629858-e4977d30e9e0?w=1200&q=80"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Members say",
+            "items": [
+              {
+                "quote": "Selling through the co-op got me 30% more for my rice than the local trader paid.",
+                "name": "Ramesh Patel",
+                "role": "Member since 2015",
+                "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
+              },
+              {
+                "quote": "I could never afford a harvester. Now I book one for a day.",
+                "name": "Maya Chen",
+                "role": "Smallholder member",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "Latest news",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "Record paddy prices for members this season",
+                "excerpt": "Collective selling secured a 12% premium.",
+                "image": "https://images.unsplash.com/photo-1728895604559-a4e16081504e?w=900&q=80",
+                "category": "Markets",
+                "date": "Sep 12, 2026",
+                "author": "Co-op team",
+                "link": "#"
+              },
+              {
+                "title": "New soil-testing lab opens",
+                "excerpt": "Free soil tests for all members from October.",
+                "image": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=900&q=80",
+                "category": "Advisory",
+                "date": "Aug 28, 2026",
+                "author": "Agronomy team",
+                "link": "#"
+              },
+              {
+                "title": "Drip irrigation subsidy available",
+                "excerpt": "Members can apply for 50% support.",
+                "image": "https://images.unsplash.com/photo-1748432171507-c1d62fe2e859?w=900&q=80",
+                "category": "Funding",
+                "date": "Aug 10, 2026",
+                "author": "Co-op office",
+                "link": "#"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Join 3,400 farming families",
+            "text": "Membership starts at $25 a year.",
+            "buttonLabel": "Become a member",
+            "buttonHref": "page:membership"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "tagline": "Owned by farmers since 1978.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "useSiteMenu": true,
+            "ctaLabel": "Become a member",
+            "ctaHref": "page:membership"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / About",
+            "heading": "About the cooperative",
+            "text": "Our history, values and the people who run it."
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Our story",
+            "text": "In 1978 forty farmers pooled their savings to buy one tractor and sell their harvest together. Today we serve 3,400 families across 120 villages.",
+            "bullets": [
+              "Democratic: one member, one vote",
+              "Fair: profits shared with members",
+              "Local: decisions made in the villages"
+            ],
+            "image": "https://images.unsplash.com/photo-1504224357642-c87eacea1da4?w=1200&q=80",
+            "imageSide": "left"
+          }
+        },
+        {
+          "type": "team",
+          "data": {
+            "heading": "Elected board",
+            "subheading": "Chosen by members every three years.",
+            "members": [
+              {
+                "name": "Sunita Rao",
+                "role": "Chairperson",
+                "bio": "Rice and pulses farmer, 25 years.",
+                "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Daniel Ruiz",
+                "role": "Treasurer",
+                "bio": "Runs a 40-acre mixed farm.",
+                "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+                "link": ""
+              },
+              {
+                "name": "Ravi Kapoor",
+                "role": "Secretary",
+                "bio": "Dairy and fodder grower.",
+                "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "children": [
+        {
+          "slug": "crop-advisory",
+          "title": "Crop Advisory",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "United Farmers Co-op",
+                "useSiteMenu": true,
+                "ctaLabel": "Become a member",
+                "ctaHref": "page:membership"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Crop Advisory",
+                "heading": "Crop advisory",
+                "text": "Our agronomists visit your fields, test your soil and build a plan for seed, fertiliser and pest control."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What members get",
+                "text": "Our agronomists visit your fields, test your soil and build a plan for seed, fertiliser and pest control.",
+                "bullets": [
+                  "Free soil test every year",
+                  "Field visits in critical stages",
+                  "WhatsApp advice line"
+                ],
+                "buttonLabel": "Become a member",
+                "buttonHref": "page:membership",
+                "image": "https://images.unsplash.com/photo-1569880153113-76e33fc52d5f?w=1200&q=80",
+                "imageSide": "left"
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "heading": "Questions",
+                "items": [
+                  {
+                    "question": "How do I book a field visit?",
+                    "answer": "Call your collection centre or use the member app.",
+                    "icon": ""
+                  },
+                  {
+                    "question": "Is advice free?",
+                    "answer": "Yes, for all members. Lab tests beyond the annual one are at cost.",
+                    "icon": ""
+                  }
+                ],
+                "style": "divided",
+                "icon": "chevron"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "United Farmers Co-op",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "equipment-sharing",
+          "title": "Equipment Sharing",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "United Farmers Co-op",
+                "useSiteMenu": true,
+                "ctaLabel": "Become a member",
+                "ctaHref": "page:membership"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Equipment Sharing",
+                "heading": "Equipment sharing",
+                "text": "Book tractors, harvesters, sprayers and seed drills by the day — at cost price, with an operator if you need one."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What members get",
+                "text": "Book tractors, harvesters, sprayers and seed drills by the day — at cost price, with an operator if you need one.",
+                "bullets": [
+                  "120 machines across 18 centres",
+                  "Operators available",
+                  "Fuel included in day rates"
+                ],
+                "buttonLabel": "Become a member",
+                "buttonHref": "page:membership",
+                "image": "https://images.unsplash.com/photo-1527847263472-aa5338d178b8?w=1200&q=80",
+                "imageSide": "left"
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "heading": "Questions",
+                "items": [
+                  {
+                    "question": "How far ahead can I book?",
+                    "answer": "Up to 30 days. Harvest-season slots open on the 1st of each month.",
+                    "icon": ""
+                  },
+                  {
+                    "question": "What if a machine breaks down?",
+                    "answer": "Our mechanics repair or replace it, usually the same day.",
+                    "icon": ""
+                  }
+                ],
+                "style": "divided",
+                "icon": "chevron"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "United Farmers Co-op",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "market-access",
+          "title": "Market Access",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "United Farmers Co-op",
+                "useSiteMenu": true,
+                "ctaLabel": "Become a member",
+                "ctaHref": "page:membership"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Market Access",
+                "heading": "Market access",
+                "text": "We grade, store and sell members’ produce together — to mills, exporters and supermarkets — for better, fairer prices."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What members get",
+                "text": "We grade, store and sell members’ produce together — to mills, exporters and supermarkets — for better, fairer prices.",
+                "bullets": [
+                  "Transparent grading at every centre",
+                  "Payment within 7 days",
+                  "Warehouse storage at low cost"
+                ],
+                "buttonLabel": "Become a member",
+                "buttonHref": "page:membership",
+                "image": "https://images.unsplash.com/photo-1632723893457-47e3abc47526?w=1200&q=80",
+                "imageSide": "left"
+              }
+            },
+            {
+              "type": "faq",
+              "data": {
+                "heading": "Questions",
+                "items": [
+                  {
+                    "question": "Which crops do you buy?",
+                    "answer": "Rice, wheat, pulses, maize, onions and potatoes; more each season.",
+                    "icon": ""
+                  },
+                  {
+                    "question": "How is the price set?",
+                    "answer": "Prices follow the regional market daily; members also share year-end profits.",
+                    "icon": ""
+                  }
+                ],
+                "style": "divided",
+                "icon": "chevron"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "United Farmers Co-op",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "useSiteMenu": true,
+            "ctaLabel": "Become a member",
+            "ctaHref": "page:membership"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Services",
+            "heading": "Our services",
+            "text": "Everything a member farm needs, from planting to payment."
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "All services",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🌾",
+                "title": "Crop advisory",
+                "text": "Plans, soil tests and field visits."
+              },
+              {
+                "icon": "🚜",
+                "title": "Equipment sharing",
+                "text": "Machines by the day at cost."
+              },
+              {
+                "icon": "📦",
+                "title": "Market access",
+                "text": "Collective selling, fair prices."
+              },
+              {
+                "icon": "💰",
+                "title": "Credit & insurance",
+                "text": "Low-interest seasonal loans and crop insurance."
+              },
+              {
+                "icon": "🎓",
+                "title": "Training",
+                "text": "Workshops for members and young farmers."
+              },
+              {
+                "icon": "🧪",
+                "title": "Inputs store",
+                "text": "Seed and fertiliser at member prices."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 3,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "membership",
+      "title": "Membership",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "useSiteMenu": true,
+            "ctaLabel": "Contact us",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Membership",
+            "heading": "Become a member",
+            "text": "Open to every farming household in our region."
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Membership options",
+            "subheading": "",
+            "plans": [
+              {
+                "name": "Smallholder",
+                "price": "$25",
+                "period": "/year",
+                "description": "Up to 5 acres",
+                "features": [
+                  "All advisory services",
+                  "Equipment booking",
+                  "Collective selling"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              },
+              {
+                "name": "Family farm",
+                "price": "$60",
+                "period": "/year",
+                "description": "5–50 acres",
+                "features": [
+                  "Everything in Smallholder",
+                  "Priority harvest slots",
+                  "Credit facility"
+                ],
+                "buttonLabel": "Choose plan",
+                "buttonHref": "page:contact",
+                "highlighted": true
+              },
+              {
+                "name": "Producer group",
+                "price": "$200",
+                "period": "/year",
+                "description": "Groups of 10+ farms",
+                "features": [
+                  "Everything in Family farm",
+                  "Dedicated field officer",
+                  "Bulk input discounts"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Membership FAQ",
+            "items": [
+              {
+                "question": "Who can join?",
+                "answer": "Any farmer in our 120 villages. Tenant farmers and women farmers are encouraged to join.",
+                "icon": ""
+              },
+              {
+                "question": "How do I join?",
+                "answer": "Visit any collection centre with an ID and land or tenancy record, or apply through the contact page.",
+                "icon": ""
+              },
+              {
+                "question": "Do I get a share of profits?",
+                "answer": "Yes. Each year’s surplus is shared according to the produce you sold through the co-op.",
+                "icon": ""
+              }
+            ],
+            "style": "accent",
+            "icon": "chevron",
+            "numbered": true,
+            "singleOpen": true,
+            "openFirst": true
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "news",
+      "title": "News",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "useSiteMenu": true,
+            "ctaLabel": "Become a member",
+            "ctaHref": "page:membership"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / News",
+            "heading": "News & updates",
+            "text": "Prices, programmes and stories from our members."
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "Recent posts",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "Record paddy prices for members this season",
+                "excerpt": "Collective selling secured a 12% premium.",
+                "image": "https://images.unsplash.com/photo-1728895604559-a4e16081504e?w=900&q=80",
+                "category": "Markets",
+                "date": "Sep 12, 2026",
+                "author": "Co-op team",
+                "link": "#"
+              },
+              {
+                "title": "New soil-testing lab opens",
+                "excerpt": "Free soil tests for all members from October.",
+                "image": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=900&q=80",
+                "category": "Advisory",
+                "date": "Aug 28, 2026",
+                "author": "Agronomy team",
+                "link": "#"
+              },
+              {
+                "title": "Drip irrigation subsidy available",
+                "excerpt": "Members can apply for 50% support.",
+                "image": "https://images.unsplash.com/photo-1748432171507-c1d62fe2e859?w=900&q=80",
+                "category": "Funding",
+                "date": "Aug 10, 2026",
+                "author": "Co-op office",
+                "link": "#"
+              },
+              {
+                "title": "Young farmers training starts",
+                "excerpt": "Twelve-week course on modern farming.",
+                "image": "https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?w=900&q=80",
+                "category": "Training",
+                "date": "Jul 22, 2026",
+                "author": "Training team",
+                "link": "#"
+              },
+              {
+                "title": "Harvester fleet doubles",
+                "excerpt": "Twenty new machines for the rice season.",
+                "image": "https://images.unsplash.com/photo-1565647952915-9644fcd446a4?w=900&q=80",
+                "category": "Equipment",
+                "date": "Jul 3, 2026",
+                "author": "Co-op team",
+                "link": "#"
+              },
+              {
+                "title": "Women farmers network launched",
+                "excerpt": "Monthly meetings in every block.",
+                "image": "https://images.unsplash.com/photo-1505471768190-275e2ad7b3f9?w=900&q=80",
+                "category": "Community",
+                "date": "Jun 15, 2026",
+                "author": "Co-op office",
+                "link": "#"
+              }
+            ]
+          }
+        },
+        {
+          "type": "newsletter",
+          "data": {
+            "heading": "Get co-op news by SMS or email",
+            "text": "Market prices every morning during harvest.",
+            "placeholder": "you@example.com",
+            "buttonLabel": "Subscribe",
+            "note": "One email a month. Unsubscribe anytime.",
+            "successMessage": "Thanks — see you in your inbox!"
+          },
+          "style": {
+            "background": "__surface__"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "useSiteMenu": true,
+            "ctaLabel": "Get in touch",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "We’d love to hear from you. Visit your nearest collection centre or send us a message."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Send us a message",
+            "text": "We reply within one working day.",
+            "email": "office@unitedfarmers.coop",
+            "phone": "+1 555 0111",
+            "address": "United Farmers Co-op\nMain Market Road, Block 4",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "United Farmers Co-op",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 United Farmers Co-op. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,814 @@
+{
+  "category": "Agriculture",
+  "id": "agri-consulting-website",
+  "kind": "multi",
+  "name": "Agronomy Consulting Website",
+  "description": "For agronomists and farm consultants: services with sub-pages, case studies, pricing, FAQ and booking.",
+  "preview": [
+    "#ffffff",
+    "#0f766e",
+    "#0f1f1d"
+  ],
+  "theme": {
+    "primaryColor": "#0f766e",
+    "accentColor": "#f59e0b",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#eef6f5",
+    "textColor": "#0f1f1d",
+    "fontFamily": "Inter",
+    "headingFont": "Manrope",
+    "radius": 10,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "useSiteMenu": true,
+            "ctaLabel": "Book a consultation",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Independent agronomy advice",
+            "heading": "Healthier soil. Higher yields. Lower costs.",
+            "subheading": "Soil testing, irrigation design and crop planning from agronomists who have walked thousands of fields.",
+            "primaryLabel": "Book a consultation",
+            "primaryHref": "page:contact",
+            "secondaryLabel": "Our services",
+            "secondaryHref": "page:services",
+            "image": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "grid",
+          "data": {
+            "heading": "How we help",
+            "subheading": "",
+            "items": [
+              {
+                "heading": "Soil testing",
+                "text": "Lab analysis and a clear fertiliser plan.",
+                "icon": "🧪",
+                "image": "https://images.unsplash.com/photo-1752775312083-1cefe2f93358?w=900&q=80",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:soil-testing",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Irrigation design",
+                "text": "Drip and sprinkler systems sized for your fields.",
+                "icon": "💧",
+                "image": "https://images.unsplash.com/photo-1743742566156-f1745850281a?w=900&q=80",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:irrigation-design",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              },
+              {
+                "heading": "Crop planning",
+                "text": "Variety choice, rotations and season calendars.",
+                "icon": "📋",
+                "image": "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?w=900&q=80",
+                "buttonLabel": "Learn more",
+                "buttonHref": "page:crop-planning",
+                "colSpan": "1",
+                "rowSpan": "1",
+                "background": "",
+                "textColor": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "stats",
+          "data": {
+            "items": [
+              {
+                "value": "1,800",
+                "label": "Farms advised"
+              },
+              {
+                "value": "22%",
+                "label": "Average yield increase"
+              },
+              {
+                "value": "31%",
+                "label": "Less fertiliser used"
+              },
+              {
+                "value": "15",
+                "label": "Years of experience"
+              }
+            ]
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "heading": "Advice you can trust",
+            "text": "We don’t sell seed, chemicals or machinery — so our only interest is your results. Every recommendation is based on your soil, your climate and your budget.",
+            "bullets": [
+              "Fully independent",
+              "Certified crop advisers",
+              "Results tracked season after season"
+            ],
+            "buttonLabel": "See case studies",
+            "buttonHref": "page:case-studies",
+            "image": "https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?w=1200&q=80"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Clients say",
+            "items": [
+              {
+                "quote": "TerraGrow’s soil plan cut our fertiliser bill by a third — and yields went up.",
+                "name": "Mark Davies",
+                "role": "Arable farmer, 800 acres",
+                "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+              },
+              {
+                "quote": "The drip system they designed paid for itself in two seasons.",
+                "name": "Lisa Moreno",
+                "role": "Vegetable grower",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Book a free first consultation",
+            "text": "For farms under 100 acres. Larger farms: ask for a proposal.",
+            "buttonLabel": "Book now",
+            "buttonHref": "page:contact"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "tagline": "Independent agronomy since 2011.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "children": [
+        {
+          "slug": "soil-testing",
+          "title": "Soil Testing",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "TerraGrow Agronomy",
+                "useSiteMenu": true,
+                "ctaLabel": "Book a consultation",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Soil Testing",
+                "heading": "Soil testing & nutrient plans",
+                "text": "We sample your fields on a GPS grid, analyse 14 nutrients and organic matter, and turn the results into a simple fertiliser plan."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What’s included",
+                "text": "We sample your fields on a GPS grid, analyse 14 nutrients and organic matter, and turn the results into a simple fertiliser plan.",
+                "bullets": [
+                  "GPS grid sampling",
+                  "Lab analysis of 14 nutrients",
+                  "Variable-rate fertiliser maps"
+                ],
+                "buttonLabel": "Book a consultation",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1492496913980-501348b61469?w=1200&q=80",
+                "imageSide": "right"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Ready to get started?",
+                "text": "First consultation is free for farms under 100 acres.",
+                "buttonLabel": "Book a consultation",
+                "buttonHref": "page:contact"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "TerraGrow Agronomy",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "irrigation-design",
+          "title": "Irrigation Design",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "TerraGrow Agronomy",
+                "useSiteMenu": true,
+                "ctaLabel": "Book a consultation",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Irrigation Design",
+                "heading": "Irrigation design",
+                "text": "From drip lines for vegetables to centre pivots for grain, we design systems that use every drop wisely."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What’s included",
+                "text": "From drip lines for vegetables to centre pivots for grain, we design systems that use every drop wisely.",
+                "bullets": [
+                  "Water-source and pump sizing",
+                  "Drip, sprinkler and pivot layouts",
+                  "Scheduling with soil-moisture sensors"
+                ],
+                "buttonLabel": "Book a consultation",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1692369584496-3216a88f94c1?w=1200&q=80",
+                "imageSide": "right"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Ready to get started?",
+                "text": "First consultation is free for farms under 100 acres.",
+                "buttonLabel": "Book a consultation",
+                "buttonHref": "page:contact"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "TerraGrow Agronomy",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        },
+        {
+          "slug": "crop-planning",
+          "title": "Crop Planning",
+          "sections": [
+            {
+              "type": "navbar",
+              "data": {
+                "brand": "TerraGrow Agronomy",
+                "useSiteMenu": true,
+                "ctaLabel": "Book a consultation",
+                "ctaHref": "page:contact"
+              }
+            },
+            {
+              "type": "page-header",
+              "data": {
+                "breadcrumb": "Home / Services / Crop Planning",
+                "heading": "Crop planning",
+                "text": "Choose the right crops and varieties, plan rotations and get a week-by-week calendar for the whole season."
+              }
+            },
+            {
+              "type": "about",
+              "data": {
+                "heading": "What’s included",
+                "text": "Choose the right crops and varieties, plan rotations and get a week-by-week calendar for the whole season.",
+                "bullets": [
+                  "Variety trials data for your region",
+                  "Rotation and cover-crop plans",
+                  "Season calendar with reminders"
+                ],
+                "buttonLabel": "Book a consultation",
+                "buttonHref": "page:contact",
+                "image": "https://images.unsplash.com/photo-1544644181-af0e1e14916f?w=1200&q=80",
+                "imageSide": "right"
+              }
+            },
+            {
+              "type": "cta",
+              "data": {
+                "heading": "Ready to get started?",
+                "text": "First consultation is free for farms under 100 acres.",
+                "buttonLabel": "Book a consultation",
+                "buttonHref": "page:contact"
+              },
+              "style": {
+                "background": "__primary__",
+                "textColor": "#ffffff"
+              }
+            },
+            {
+              "type": "footer",
+              "data": {
+                "brand": "TerraGrow Agronomy",
+                "tagline": "",
+                "useSiteMenu": true,
+                "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+              },
+              "style": {
+                "background": "__text__",
+                "textColor": "#d6d3cd"
+              }
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "useSiteMenu": true,
+            "ctaLabel": "Book a consultation",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Services",
+            "heading": "Services",
+            "text": "Pick one service or a full-season advisory package."
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "Everything we offer",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "🧪",
+                "title": "Soil testing",
+                "text": "Grid sampling and nutrient plans."
+              },
+              {
+                "icon": "💧",
+                "title": "Irrigation design",
+                "text": "Efficient systems for any crop."
+              },
+              {
+                "icon": "📋",
+                "title": "Crop planning",
+                "text": "Varieties, rotations, calendars."
+              },
+              {
+                "icon": "🐛",
+                "title": "Pest & disease scouting",
+                "text": "Weekly field scouting in season."
+              },
+              {
+                "icon": "🌍",
+                "title": "Sustainability audits",
+                "text": "Carbon and water footprint reports."
+              },
+              {
+                "icon": "🎓",
+                "title": "Farm training",
+                "text": "On-farm workshops for your team."
+              }
+            ]
+          },
+          "grid": {
+            "desktop": 3,
+            "cardStyle": "bordered"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "case-studies",
+      "title": "Case Studies",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "useSiteMenu": true,
+            "ctaLabel": "Book a consultation",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Case Studies",
+            "heading": "Case studies",
+            "text": "Real farms, measured results."
+          }
+        },
+        {
+          "type": "carousel",
+          "data": {
+            "heading": "Recent projects",
+            "subheading": "",
+            "variant": "portfolio",
+            "slideHeight": 360,
+            "overlay": 40,
+            "slides": [
+              {
+                "heading": "+28% wheat yield",
+                "eyebrow": "Soil testing · 800 acres",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=900&q=80",
+                "price": "",
+                "buttonLabel": "",
+                "buttonHref": "page:contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              },
+              {
+                "heading": "40% water saved",
+                "eyebrow": "Drip irrigation · Vegetables",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1748432171507-c1d62fe2e859?w=900&q=80",
+                "price": "",
+                "buttonLabel": "",
+                "buttonHref": "page:contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              },
+              {
+                "heading": "Rotation redesign",
+                "eyebrow": "Crop planning · Mixed farm",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?w=900&q=80",
+                "price": "",
+                "buttonLabel": "",
+                "buttonHref": "page:contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              },
+              {
+                "heading": "Orchard nutrition",
+                "eyebrow": "Soil testing · Apples",
+                "text": "",
+                "image": "https://images.unsplash.com/photo-1635778528589-b5df9e10d7cd?w=900&q=80",
+                "price": "",
+                "buttonLabel": "",
+                "buttonHref": "page:contact",
+                "background": "",
+                "textColor": "",
+                "html": ""
+              }
+            ]
+          },
+          "carousel": {
+            "perViewDesktop": 3,
+            "perViewTablet": 2,
+            "perViewMobile": 1,
+            "center": true,
+            "arrowPosition": "outside"
+          }
+        },
+        {
+          "type": "blog",
+          "data": {
+            "heading": "Case study articles",
+            "subheading": "",
+            "posts": [
+              {
+                "title": "How a 800-acre farm cut fertiliser by 31%",
+                "excerpt": "Grid sampling revealed huge variation across fields.",
+                "image": "https://images.unsplash.com/photo-1602446692855-6d096499f69b?w=900&q=80",
+                "category": "Soil",
+                "date": "Aug 2026",
+                "author": "TerraGrow",
+                "link": "#"
+              },
+              {
+                "title": "Drip irrigation on a vegetable farm",
+                "excerpt": "Water down 40%, yields up 18%.",
+                "image": "https://images.unsplash.com/photo-1748432171507-c1d62fe2e859?w=900&q=80",
+                "category": "Irrigation",
+                "date": "Jun 2026",
+                "author": "TerraGrow",
+                "link": "#"
+              },
+              {
+                "title": "Cover crops that paid for themselves",
+                "excerpt": "A three-year rotation trial.",
+                "image": "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=900&q=80",
+                "category": "Planning",
+                "date": "Apr 2026",
+                "author": "TerraGrow",
+                "link": "#"
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "pricing",
+      "title": "Pricing",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "useSiteMenu": true,
+            "ctaLabel": "Book a consultation",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Pricing",
+            "heading": "Pricing",
+            "text": "Clear prices, no commission on inputs."
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Advisory packages",
+            "subheading": "Prices per farm per season.",
+            "plans": [
+              {
+                "name": "Soil plan",
+                "price": "$450",
+                "period": "/season",
+                "description": "Up to 100 acres",
+                "features": [
+                  "Grid soil sampling",
+                  "Lab analysis",
+                  "Fertiliser plan"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              },
+              {
+                "name": "Full season",
+                "price": "$1,900",
+                "period": "/season",
+                "description": "Up to 300 acres",
+                "features": [
+                  "Everything in Soil plan",
+                  "Crop plan & calendar",
+                  "Monthly field visits",
+                  "Phone & WhatsApp support"
+                ],
+                "buttonLabel": "Choose plan",
+                "buttonHref": "page:contact",
+                "highlighted": true
+              },
+              {
+                "name": "Enterprise",
+                "price": "Custom",
+                "period": "",
+                "description": "Large farms & agribusiness",
+                "features": [
+                  "Dedicated agronomist",
+                  "Weekly scouting",
+                  "Sustainability reporting"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "page:contact",
+                "highlighted": false
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "faq",
+      "title": "FAQ",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "useSiteMenu": true,
+            "ctaLabel": "Book a consultation",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / FAQ",
+            "heading": "Frequently asked questions",
+            "text": ""
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Working with TerraGrow",
+            "items": [
+              {
+                "question": "Which regions do you cover?",
+                "answer": "We visit farms within 300 km of our offices and advise further afield remotely.",
+                "icon": ""
+              },
+              {
+                "question": "Do you sell any products?",
+                "answer": "No. We are fully independent and take no commission on seed, fertiliser or equipment.",
+                "icon": ""
+              },
+              {
+                "question": "How soon will I get my soil results?",
+                "answer": "Usually within 10 working days of sampling.",
+                "icon": ""
+              },
+              {
+                "question": "Can you work with my existing agronomist?",
+                "answer": "Yes — we often support farm teams and other advisers with data and second opinions.",
+                "icon": ""
+              }
+            ],
+            "layout": "split",
+            "style": "divided",
+            "icon": "plus",
+            "singleOpen": true,
+            "openFirst": true,
+            "ctaText": "Still unsure?",
+            "buttonLabel": "Ask us",
+            "buttonHref": "page:contact"
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "useSiteMenu": true,
+            "ctaLabel": "Get in touch",
+            "ctaHref": "page:contact"
+          }
+        },
+        {
+          "type": "page-header",
+          "data": {
+            "breadcrumb": "Home / Contact",
+            "heading": "Contact us",
+            "text": "We’d love to hear from you. Tell us about your farm, crops and goals."
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Send us a message",
+            "text": "We reply within one working day.",
+            "email": "advice@terragrow.ag",
+            "phone": "+1 555 0177",
+            "address": "TerraGrow Agronomy\n310 Field Station Road, Ames, IA 50010",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "TerraGrow Agronomy",
+            "tagline": "",
+            "useSiteMenu": true,
+            "copyright": "© 2026 TerraGrow Agronomy. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}

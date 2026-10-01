@@ -309,7 +309,10 @@ export class PageRenderer {
     // Links to other pages of the website (/<site>/…) stay inside the app.
     if (isAppPath(href) && !event.ctrlKey && !event.metaKey && anchor?.target !== '_blank') {
       event.preventDefault();
-      void this.router.navigateByUrl(href);
+      // Previewing a draft: stay in preview mode on the next page (drafts 404 without it).
+      const target = new URL(href, location.origin);
+      if (new URLSearchParams(location.search).has('preview') && !target.searchParams.has('preview')) target.searchParams.set('preview', '1');
+      void this.router.navigateByUrl(target.pathname + target.search + target.hash);
       return;
     }
     // With <base href="/"> a plain "#id" link would navigate to the site root instead of scrolling.

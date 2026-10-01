@@ -1,0 +1,334 @@
+{
+  "category": "Agriculture",
+  "id": "agri-dairy",
+  "kind": "single",
+  "name": "Dairy Farm & Milk Delivery",
+  "description": "For dairy farms selling fresh milk, butter and yoghurt by subscription — with herd story, product range, delivery plans and FAQ.",
+  "preview": [
+    "#ffffff",
+    "#1d6fb8",
+    "#13293d"
+  ],
+  "theme": {
+    "primaryColor": "#1d6fb8",
+    "accentColor": "#f2b134",
+    "backgroundColor": "#ffffff",
+    "surfaceColor": "#f2f7fc",
+    "textColor": "#13293d",
+    "fontFamily": "Inter",
+    "headingFont": "Poppins",
+    "radius": 16,
+    "maxWidth": 1180
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "sections": [
+        {
+          "type": "navbar",
+          "data": {
+            "brand": "Meadowbrook Dairy",
+            "links": [
+              {
+                "label": "Our herd",
+                "href": "#about"
+              },
+              {
+                "label": "Products",
+                "href": "#products"
+              },
+              {
+                "label": "Delivery",
+                "href": "#plans"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ],
+            "ctaLabel": "Start delivery",
+            "ctaHref": "#plans"
+          }
+        },
+        {
+          "type": "hero",
+          "data": {
+            "eyebrow": "Grass-fed · Glass bottles · Delivered by 7am",
+            "heading": "Fresh farm milk at your doorstep",
+            "subheading": "Milked this morning from our happy, grass-fed herd and delivered in returnable glass bottles.",
+            "primaryLabel": "Start delivery",
+            "primaryHref": "#plans",
+            "secondaryLabel": "Meet the herd",
+            "secondaryHref": "#about",
+            "image": "https://images.unsplash.com/photo-1523473827533-2a64d0d36748?w=1200&q=80",
+            "layout": "split"
+          },
+          "style": {
+            "paddingY": 110
+          }
+        },
+        {
+          "type": "logos",
+          "data": {
+            "heading": "As featured in",
+            "grayscale": true,
+            "logos": [
+              {
+                "name": "Farm Weekly",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "The Food Guide",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Green Living",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Local Times",
+                "image": "",
+                "link": ""
+              },
+              {
+                "name": "Dairy Today",
+                "image": "",
+                "link": ""
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "data": {
+            "anchor": "about",
+            "heading": "120 cows, 300 acres of pasture",
+            "text": "Our Jersey and Friesian cows spend spring to autumn grazing outdoors. That rich pasture gives our milk its creamy taste and golden colour — no additives, just gently pasteurised.",
+            "bullets": [
+              "Pasture-grazed 200+ days a year",
+              "Non-homogenised, gently pasteurised",
+              "Carbon-neutral delivery vans"
+            ],
+            "buttonLabel": "See our products",
+            "buttonHref": "#products",
+            "image": "https://images.unsplash.com/photo-1641939193329-7071068dc40f?w=1200&q=80"
+          }
+        },
+        {
+          "type": "products",
+          "data": {
+            "heading": "From our dairy",
+            "subheading": "Bottled and churned on the farm.",
+            "products": [
+              {
+                "name": "Whole milk 1L",
+                "image": "https://images.unsplash.com/photo-1576186726115-4d51596775d1?w=800&q=80",
+                "price": "$2.40",
+                "oldPrice": "",
+                "badge": "Best seller",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#plans"
+              },
+              {
+                "name": "Organic milk 1L",
+                "image": "https://images.unsplash.com/photo-1635436338433-89747d0ca0ef?w=800&q=80",
+                "price": "$2.90",
+                "oldPrice": "",
+                "badge": "Organic",
+                "rating": "4.9",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#plans"
+              },
+              {
+                "name": "Farmhouse yoghurt",
+                "image": "https://images.unsplash.com/photo-1585083969600-495ee7e3604b?w=800&q=80",
+                "price": "$3.80",
+                "oldPrice": "",
+                "badge": "",
+                "rating": "4.8",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#plans"
+              },
+              {
+                "name": "Milk & cookies box",
+                "image": "https://images.unsplash.com/photo-1634141510639-d691d86f47be?w=800&q=80",
+                "price": "$9.50",
+                "oldPrice": "$11.00",
+                "badge": "Kids love it",
+                "rating": "4.7",
+                "buttonLabel": "Add to cart",
+                "buttonHref": "#plans"
+              }
+            ],
+            "anchor": "products"
+          }
+        },
+        {
+          "type": "features",
+          "data": {
+            "heading": "How delivery works",
+            "subheading": "",
+            "items": [
+              {
+                "icon": "📱",
+                "title": "Choose",
+                "text": "Pick your products and delivery days online."
+              },
+              {
+                "icon": "🌅",
+                "title": "We deliver",
+                "text": "Fresh bottles on your doorstep before 7am."
+              },
+              {
+                "icon": "♻️",
+                "title": "Return",
+                "text": "Leave the empty bottles out — we collect and reuse them."
+              }
+            ]
+          }
+        },
+        {
+          "type": "pricing",
+          "data": {
+            "heading": "Delivery plans",
+            "subheading": "No contract. Change or pause your order any time.",
+            "plans": [
+              {
+                "name": "Weekly",
+                "price": "$12",
+                "period": "/week",
+                "description": "4 bottles a week",
+                "features": [
+                  "Whole or semi-skimmed",
+                  "Free bottle collection"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "#contact",
+                "highlighted": false
+              },
+              {
+                "name": "Every other day",
+                "price": "$22",
+                "period": "/week",
+                "description": "7 bottles a week",
+                "features": [
+                  "Mix any products",
+                  "Free delivery",
+                  "Holiday pause"
+                ],
+                "buttonLabel": "Choose plan",
+                "buttonHref": "#contact",
+                "highlighted": true
+              },
+              {
+                "name": "Family",
+                "price": "$34",
+                "period": "/week",
+                "description": "12 bottles a week",
+                "features": [
+                  "Everything in Every other day",
+                  "Free yoghurt weekly"
+                ],
+                "buttonLabel": "Get started",
+                "buttonHref": "#contact",
+                "highlighted": false
+              }
+            ],
+            "anchor": "plans"
+          }
+        },
+        {
+          "type": "testimonials",
+          "data": {
+            "heading": "Neighbours say",
+            "items": [
+              {
+                "quote": "Tastes like the milk I had as a child. We will never go back to supermarket milk.",
+                "name": "Margaret Hill",
+                "role": "Customer for 6 years",
+                "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+              },
+              {
+                "quote": "Love that the bottles are reused. Delivery is always on time.",
+                "name": "Ravi Kapoor",
+                "role": "Weekly plan",
+                "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
+              }
+            ]
+          }
+        },
+        {
+          "type": "faq",
+          "data": {
+            "heading": "Good to know",
+            "items": [
+              {
+                "question": "Which areas do you deliver to?",
+                "answer": "All postcodes within 25 miles of the farm. Enter yours at checkout to check.",
+                "icon": ""
+              },
+              {
+                "question": "Is your milk organic?",
+                "answer": "Our organic range is certified; all milk is free from additives and growth hormones.",
+                "icon": ""
+              },
+              {
+                "question": "What if I’m on holiday?",
+                "answer": "Pause deliveries in your account up to 8pm the evening before.",
+                "icon": ""
+              }
+            ],
+            "anchor": "faq",
+            "style": "filled",
+            "icon": "circle",
+            "singleOpen": true
+          }
+        },
+        {
+          "type": "cta",
+          "data": {
+            "heading": "Taste the difference this week",
+            "text": "Your first delivery comes with a free bottle of organic milk.",
+            "buttonLabel": "Start delivery",
+            "buttonHref": "#plans"
+          },
+          "style": {
+            "background": "__primary__",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "type": "contact",
+          "data": {
+            "anchor": "contact",
+            "heading": "Contact the dairy",
+            "text": "Questions about your order or a farm visit? We’re here to help.",
+            "email": "milk@meadowbrook.farm",
+            "phone": "+1 555 0178",
+            "address": "Meadowbrook Farm\nRiverside Road, Vermont 05000",
+            "buttonLabel": "Send message",
+            "successMessage": "Thank you! We will get back to you within one working day."
+          }
+        },
+        {
+          "type": "footer",
+          "data": {
+            "brand": "Meadowbrook Dairy",
+            "tagline": "Grass-fed milk from our family farm.",
+            "useSiteMenu": true,
+            "copyright": "© 2026 Meadowbrook Dairy. All rights reserved."
+          },
+          "style": {
+            "background": "__text__",
+            "textColor": "#d6d3cd"
+          }
+        }
+      ]
+    }
+  ]
+}
