@@ -114,6 +114,10 @@
       "label": "Logos"
     },
     {
+      "id": "marquee",
+      "label": "Marquee"
+    },
+    {
       "id": "statistics",
       "label": "Statistics"
     },

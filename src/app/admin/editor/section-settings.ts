@@ -5,7 +5,7 @@ import { readImageAsDataUrl } from '../../shared/files';
 import { Icon } from '../../shared/icon';
 import { ToastService } from '../../shared/toast';
 import { ColorControl, HideOnControl, RangeControl, SegControl, SegOption, ToggleControl } from './controls';
-import { ANIMATION_OPTIONS } from './element-style-form';
+import { AnimationControl } from './animation-control';
 
 export interface SectionStylePatch {
   key: keyof SectionStyle;
@@ -18,7 +18,7 @@ let nextId = 0;
 @Component({
   selector: 'app-section-settings',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [Icon, ColorControl, RangeControl, SegControl, ToggleControl, HideOnControl],
+  imports: [AnimationControl, Icon, ColorControl, RangeControl, SegControl, ToggleControl, HideOnControl],
   template: `
     @let st = section().style;
     @if (mode() === 'style') {
@@ -125,7 +125,7 @@ let nextId = 0;
       </details>
     } @else {
       <app-hide-on-control [value]="st.hideOn" (valueChange)="set('hideOn', $event)" />
-      <app-seg-control label="Entrance animation" [options]="animations" [value]="st.animation ?? 'none'" (valueChange)="set('animation', $event === 'none' ? undefined : $event)" />
+      <app-animation-control [value]="st.animation" [duration]="st.animationDuration" [delay]="st.animationDelay" [easing]="st.animationEasing" [repeat]="st.animationRepeat" (patch)="set($event.key, $event.value)" />
       <div class="field">
         <label [attr.for]="id + 'anchor'">Anchor id</label>
         <input [id]="id + 'anchor'" type="text" placeholder="e.g. pricing" [value]="section().data.anchor ?? ''" (change)="setAnchor($event)" />
@@ -165,7 +165,6 @@ export class SectionSettings {
   private readonly project = inject(ProjectService);
   protected readonly assetUrl = assetUrl;
   protected readonly id = `ss${nextId++}`;
-  protected readonly animations = ANIMATION_OPTIONS;
   protected readonly bgTypes: SegOption<'color' | 'gradient' | 'image'>[] = [
     { value: 'color', label: 'Colour' },
     { value: 'gradient', label: 'Gradient' },

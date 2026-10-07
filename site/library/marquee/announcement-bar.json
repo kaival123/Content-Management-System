@@ -1,0 +1,35 @@
+{
+  "name": "Announcement bar",
+  "description": "A thin coloured strip with a scrolling message.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Free shipping on orders over $50",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "New collection is live",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Join today and get 10% off",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "size": "small",
+      "separator": "arrow",
+      "speed": 25,
+      "fade": false
+    },
+    "style": {
+      "background": "#111827",
+      "textColor": "#ffffff",
+      "paddingY": 14
+    }
+  }
+}

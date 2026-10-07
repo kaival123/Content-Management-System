@@ -91,6 +91,8 @@ export const DEFAULT_CAROUSEL: CarouselSettings = {
   center: false,
   transition: 'slide',
   pauseOnHover: true,
+  playButton: false,
+  easing: 'default',
   arrowPosition: 'sides',
   arrowStyle: 'circle',
   arrowSize: 44,

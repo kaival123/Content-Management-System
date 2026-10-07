@@ -1,0 +1,45 @@
+{
+  "name": "Two opposite rows",
+  "description": "Two lines scrolling in opposite directions.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Websites",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Apps",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Brands",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Campaigns",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Stores",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Content",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "size": "large",
+      "separator": "slash",
+      "secondRow": true,
+      "speed": 35
+    }
+  }
+}

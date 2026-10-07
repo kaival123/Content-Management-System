@@ -1,0 +1,36 @@
+{
+  "name": "Huge outlined text",
+  "description": "Giant outlined headline words that drift across the page.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Create",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Inspire",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Deliver",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Repeat",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "size": "huge",
+      "separator": "dot",
+      "outline": true,
+      "speed": 40,
+      "fade": false
+    }
+  }
+}

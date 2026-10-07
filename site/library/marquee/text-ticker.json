@@ -1,0 +1,44 @@
+{
+  "name": "Text ticker",
+  "description": "Large words scrolling right to left, separated by stars.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Design",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Branding",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Development",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Strategy",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Motion",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Photography",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "size": "large",
+      "separator": "star",
+      "speed": 30
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{{!--
+  Marquee: rows that scroll endlessly. The items are repeated once so the loop is seamless;
+  in the editor only one copy is shown and nothing moves, so the items can be selected and edited.
+  The optional second row scrolls the other way.
+--}}
+{{#if heading}}
+<p class="lp-mq-heading" data-el="heading" data-edit="heading">{{heading}}</p>
+{{/if}}
+<div
+  class="lp-marquee lp-mq-{{default direction "left"}} lp-mq-size-{{default size "large"}} lp-mq-sep-{{default separator "star"}}{{#if outline}} lp-mq-outline{{/if}}{{#if fade}} lp-mq-fade{{/if}}{{#if pause}} lp-mq-pause{{/if}}"
+  style="--mq-speed: {{default speed 30}}s; --mq-gap: {{default gap 40}}px"
+>
+  <div class="lp-mq-track">
+    <div class="lp-mq-group">
+      {{#each items}}
+      <span class="lp-mq-item" data-el="item">{{#if link}}<a href="{{link}}">{{/if}}{{#if image}}<img src="{{image}}" alt="" />{{/if}}<span data-edit="text">{{text}}</span>{{#if link}}</a>{{/if}}</span>
+      {{/each}}
+    </div>
+    {{#unless @editor}}
+    <div class="lp-mq-group" aria-hidden="true">
+      {{#each items}}
+      <span class="lp-mq-item">{{#if link}}<a href="{{link}}">{{/if}}{{#if image}}<img src="{{image}}" alt="" />{{/if}}<span>{{text}}</span>{{#if link}}</a>{{/if}}</span>
+      {{/each}}
+    </div>
+    {{/unless}}
+  </div>
+  {{#if secondRow}}
+  <div class="lp-mq-track lp-mq-track-alt">
+    <div class="lp-mq-group">
+      {{#each items}}
+      <span class="lp-mq-item">{{#if link}}<a href="{{link}}">{{/if}}{{#if image}}<img src="{{image}}" alt="" />{{/if}}<span>{{text}}</span>{{#if link}}</a>{{/if}}</span>
+      {{/each}}
+    </div>
+    {{#unless @editor}}
+    <div class="lp-mq-group" aria-hidden="true">
+      {{#each items}}
+      <span class="lp-mq-item">{{#if link}}<a href="{{link}}">{{/if}}{{#if image}}<img src="{{image}}" alt="" />{{/if}}<span>{{text}}</span>{{#if link}}</a>{{/if}}</span>
+      {{/each}}
+    </div>
+    {{/unless}}
+  </div>
+  {{/if}}
+</div>

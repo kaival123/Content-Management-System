@@ -144,6 +144,7 @@
                     <button type="button" class="btn-icon sm" [title]="s.visible ? 'Hide' : 'Show'" (click)="toggleVisible(s, $event)">
                       <app-icon [name]="s.visible ? 'eye' : 'eye-off'" [size]="14" />
                     </button>
+                    <button type="button" class="btn-icon sm danger-hover" title="Remove section" aria-label="Remove section" (click)="removeSection(s, $event)"><app-icon name="trash" [size]="14" /></button>
                   </span>
                 </li>
               } @empty {
@@ -154,6 +155,11 @@
             <button type="button" class="btn btn-primary btn-block" (click)="libraryOpen.set(true)">
               <app-icon name="plus" [size]="16" /> Add section
             </button>
+            @if (selected(); as sel) {
+              <button type="button" class="btn btn-secondary btn-block btn-remove-section" (click)="removeSection(sel)">
+                <app-icon name="trash" [size]="16" /> Remove section
+              </button>
+            }
             @if (!hasBackToTop()) {
               <button type="button" class="link-btn sec-quick-add" title="Floating arrow that appears when visitors scroll down" (click)="addBackToTop()">
                 <app-icon name="chevron-up" [size]="14" /> Back to top button

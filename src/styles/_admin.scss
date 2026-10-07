@@ -1235,6 +1235,21 @@ code {
   transition: opacity 0.12s;
 }
 
+.btn-remove-section {
+  margin-top: 8px;
+  color: #d92d20;
+  border-color: #fecdca;
+
+  &:hover {
+    background: #fef3f2;
+  }
+}
+
+.sec-actions .danger-hover:hover {
+  color: #d92d20;
+  background: #fef3f2;
+}
+
 .sec-empty {
   padding: 16px;
   text-align: center;
@@ -2273,6 +2288,20 @@ code {
     flex: 1;
     justify-content: center;
     padding: 5px 6px;
+    font-size: 12.5px;
+  }
+}
+
+/* A segmented control with many options: the buttons wrap onto extra rows instead of overflowing. */
+.seg-wrap .seg {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  button {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 5px 8px;
     font-size: 12.5px;
   }
 }

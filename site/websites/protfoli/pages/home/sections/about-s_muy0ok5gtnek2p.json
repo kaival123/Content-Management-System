@@ -1,0 +1,25 @@
+{
+  "id": "s_muy0ok5gtnek2p",
+  "type": "about",
+  "visible": true,
+  "data": {
+    "anchor": "about",
+    "heading": "Hi, I'm Mira",
+    "text": "I am an independent designer working with founders, agencies and in-house teams. I care about clear thinking, honest craft and design that earns its place.",
+    "bullets": [
+      "Previously design lead at two Berlin startups",
+      "Clients in 12 countries",
+      "Speaker at Design Matters and Config"
+    ],
+    "buttonLabel": "Download CV",
+    "buttonHref": "#",
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&q=80",
+    "imageSide": "left"
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 80,
+    "align": "center"
+  }
+}

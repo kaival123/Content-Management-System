@@ -141,7 +141,7 @@ export interface CarouselPatch {
       </div>
     }
     @if (stacked()) {
-      <p class="field-hint">{{ c.transition === 'flip' ? 'Flip' : 'Fade' }} shows one slide at a time.</p>
+      <p class="field-hint">This transition shows one slide at a time.</p>
     } @else if (tooFew(); as t) {
       <p class="field-hint warn">{{ t }}</p>
     }
@@ -205,13 +205,15 @@ export interface CarouselPatch {
     }
 
     <h3 class="panel-label">Motion</h3>
-    <app-seg-control label="Transition" [options]="transitions" [value]="c.transition" (valueChange)="set('transition', $event)" />
+    <app-seg-control class="seg-wrap" label="Transition" [options]="transitions" [value]="c.transition" (valueChange)="set('transition', $event)" />
+    <app-seg-control class="seg-wrap" label="Motion smoothness" [options]="easings" [value]="c.easing" (valueChange)="set('easing', $event ?? 'default')" />
     <app-range-control label="Gap between slides" [value]="c.gap" [min]="0" [max]="80" [step]="2" [fallback]="24" (valueChange)="set('gap', $event ?? 24)" />
     <app-range-control label="Animation speed" [value]="c.speed" [min]="100" [max]="2000" [step]="50" unit="ms" [fallback]="500" (valueChange)="set('speed', $event ?? 500)" />
     <app-toggle-control label="Autoplay" [value]="c.autoplay" (valueChange)="set('autoplay', $event)" />
     @if (c.autoplay) {
       <app-range-control label="Time per slide" [value]="c.autoplaySpeed" [min]="1000" [max]="15000" [step]="250" unit="ms" [fallback]="4000" (valueChange)="set('autoplaySpeed', $event ?? 4000)" />
       <app-toggle-control label="Pause on hover" [value]="c.pauseOnHover" (valueChange)="set('pauseOnHover', $event)" />
+      <app-toggle-control label="Play / pause button (visitors switch autoplay on and off)" [value]="c.playButton" (valueChange)="set('playButton', $event)" />
       <p class="field-hint">Autoplay and dragging are paused inside the editor so they don't get in the way — use Preview to see them.</p>
     }
     <app-toggle-control label="Infinite loop" [value]="c.loop" (valueChange)="set('loop', $event)" />
@@ -419,10 +421,43 @@ export class CarouselSettingsForm {
     { value: 'progress', label: 'Progress' },
     { value: 'thumbs', label: 'Thumbnails' },
   ];
-  protected readonly transitions: SegOption<'slide' | 'fade' | 'flip'>[] = [
+  protected readonly transitions: SegOption<CarouselSettings['transition']>[] = [
     { value: 'slide', label: 'Slide' },
     { value: 'fade', label: 'Fade' },
     { value: 'flip', label: 'Flip', title: '3D flip, one slide at a time' },
+    { value: 'auto', label: 'Auto', title: 'Cycles through the mask effects: a different one on every change' },
+    { value: 'mask-ink', label: 'Ink', title: 'Ink-splash mask, like the Codrops CSS Mask Transition demo 1' },
+    { value: 'mask-circle', label: 'Circle', title: 'Mask reveal: grows from the centre' },
+    { value: 'mask-wipe', label: 'Wipe', title: 'Mask reveal: soft diagonal wipe' },
+    { value: 'mask-blinds', label: 'Blinds', title: 'Mask reveal: vertical blinds open' },
+    { value: 'mask-split', label: 'Split', title: 'Mask reveal: opens outward from the middle' },
+    { value: 'mask-rise', label: 'Rise', title: 'Mask reveal: soft wipe from bottom to top' },
+    { value: 'mask-clock', label: 'Clock', title: 'Mask reveal: sweeps around like a clock hand' },
+    { value: 'mask-rows', label: 'Rows', title: 'Mask reveal: horizontal blinds open' },
+    { value: 'mask-corner', label: 'Corner', title: 'Mask reveal: grows from the top-left corner' },
+    { value: 'mask-dots', label: 'Dots', title: 'Mask reveal: a grid of dots grows together' },
+    { value: 'mask-zoom', label: 'Zoom', title: 'Smooth zoom-and-fade' },
+    { value: 'mask-diamond', label: 'Diamond', title: 'Mask reveal: a diamond opens from the centre' },
+    { value: 'mask-sweep', label: 'Sweep', title: 'Mask reveal: soft wipe from right to left' },
+    { value: 'mask-fall', label: 'Fall', title: 'Mask reveal: soft wipe from top to bottom' },
+    { value: 'mask-box', label: 'Box', title: 'Mask reveal: a rectangle grows from the centre' },
+    { value: 'mask-cross', label: 'Cross', title: 'Mask reveal: a cross opens from the centre' },
+    { value: 'mask-tiles', label: 'Tiles', title: 'Mask reveal: a grid of squares grows together' },
+    { value: 'mask-fan', label: 'Fan', title: 'Mask reveal: fans open from the bottom centre' },
+    { value: 'mask-arc', label: 'Arc', title: 'Mask reveal: a circle rises from the bottom' },
+    { value: 'mask-bars', label: 'Bars', title: 'Mask reveal: many thin vertical bars open' },
+    { value: 'mask-slats', label: 'Slats', title: 'Mask reveal: diagonal slats grow together' },
+    { value: 'mask-open', label: 'Open', title: 'Mask reveal: opens vertically from the middle' },
+    { value: 'mask-diagonal', label: 'Diagonal', title: 'Mask reveal: soft diagonal wipe from the top left' },
+  ];
+
+  protected readonly easings: SegOption<CarouselSettings['easing']>[] = [
+    { value: 'default', label: 'Default', title: 'Each transition\'s own curve' },
+    { value: 'smooth', label: 'Smooth', title: 'Fast start, long soft landing' },
+    { value: 'gentle', label: 'Gentle', title: 'Eases in and out evenly' },
+    { value: 'snappy', label: 'Snappy', title: 'Quick and decisive' },
+    { value: 'bounce', label: 'Bounce', title: 'Overshoots slightly, then settles' },
+    { value: 'linear', label: 'Linear', title: 'Constant speed' },
   ];
 
   /** Pixels moved per click on the nudge pad. */
@@ -443,8 +478,7 @@ export class CarouselSettingsForm {
   }
 
   /** Fade and flip show one slide at a time. */
-  protected readonly stacked = computed(() => this.settings().transition !== 'slide');
-  protected readonly posX = ['left', 'center', 'right'] as const;
+  protected readonly stacked = computed(() => this.settings().transition !== 'slide');  protected readonly posX = ['left', 'center', 'right'] as const;
   protected readonly posY = ['top', 'middle', 'bottom'] as const;
   protected readonly variant = computed(() => String(this.section().data.variant || 'card'));
 

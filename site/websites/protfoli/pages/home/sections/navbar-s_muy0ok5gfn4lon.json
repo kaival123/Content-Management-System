@@ -1,0 +1,37 @@
+{
+  "id": "s_muy0ok5gfn4lon",
+  "type": "navbar",
+  "visible": true,
+  "data": {
+    "brand": "Mira Sato",
+    "logo": "",
+    "links": [
+      {
+        "label": "Work",
+        "href": "#work"
+      },
+      {
+        "label": "Projects",
+        "href": "#projects"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Services",
+        "href": "#services"
+      }
+    ],
+    "ctaLabel": "Let's talk",
+    "ctaHref": "#contact",
+    "sticky": true,
+    "useSiteMenu": false
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 16,
+    "align": "center"
+  }
+}

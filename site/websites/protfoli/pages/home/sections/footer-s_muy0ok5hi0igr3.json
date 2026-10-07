@@ -1,0 +1,35 @@
+{
+  "id": "s_muy0ok5hi0igr3",
+  "type": "footer",
+  "visible": true,
+  "data": {
+    "brand": "Mira Sato",
+    "tagline": "Brand & product design.",
+    "links": [
+      {
+        "label": "Dribbble",
+        "href": "#"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "label": "Instagram",
+        "href": "#"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "copyright": "© 2026 Mira Sato. All rights reserved.",
+    "useSiteMenu": false
+  },
+  "style": {
+    "background": "#111827",
+    "textColor": "#d1d5db",
+    "paddingY": 40,
+    "align": "center"
+  }
+}

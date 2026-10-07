@@ -1,0 +1,199 @@
+{
+  "type": "marquee",
+  "label": "Marquee",
+  "description": "Endlessly scrolling text or logo ticker",
+  "icon": "layout",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading (optional)",
+      "type": "text"
+    },
+    {
+      "key": "items",
+      "label": "Items",
+      "type": "list",
+      "itemLabel": "Item",
+      "itemFields": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text"
+        },
+        {
+          "key": "image",
+          "label": "Image or logo (optional)",
+          "type": "image"
+        },
+        {
+          "key": "link",
+          "label": "Link (optional)",
+          "type": "url"
+        }
+      ]
+    },
+    {
+      "key": "direction",
+      "label": "Direction",
+      "type": "select",
+      "options": [
+        {
+          "label": "Right to left",
+          "value": "left"
+        },
+        {
+          "label": "Left to right",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "key": "speed",
+      "label": "Time for one loop (seconds, higher = slower)",
+      "type": "number"
+    },
+    {
+      "key": "secondRow",
+      "label": "Second row (scrolls the opposite way)",
+      "type": "toggle"
+    },
+    {
+      "key": "size",
+      "label": "Text size",
+      "type": "select",
+      "options": [
+        {
+          "label": "Small",
+          "value": "small"
+        },
+        {
+          "label": "Medium",
+          "value": "medium"
+        },
+        {
+          "label": "Large",
+          "value": "large"
+        },
+        {
+          "label": "Huge",
+          "value": "huge"
+        }
+      ]
+    },
+    {
+      "key": "separator",
+      "label": "Between items",
+      "type": "select",
+      "options": [
+        {
+          "label": "Dot",
+          "value": "dot"
+        },
+        {
+          "label": "Star",
+          "value": "star"
+        },
+        {
+          "label": "Slash",
+          "value": "slash"
+        },
+        {
+          "label": "Arrow",
+          "value": "arrow"
+        },
+        {
+          "label": "Nothing",
+          "value": "none"
+        }
+      ]
+    },
+    {
+      "key": "gap",
+      "label": "Space between items (px)",
+      "type": "number"
+    },
+    {
+      "key": "outline",
+      "label": "Outlined text",
+      "type": "toggle"
+    },
+    {
+      "key": "fade",
+      "label": "Fade out at the edges",
+      "type": "toggle"
+    },
+    {
+      "key": "pause",
+      "label": "Pause on hover",
+      "type": "toggle"
+    }
+  ],
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "item",
+      "label": "Items",
+      "kind": "box",
+      "list": "items",
+      "fields": [
+        "text",
+        "image",
+        "link"
+      ]
+    }
+  ],
+  "defaults": {
+    "heading": "",
+    "items": [
+      {
+        "text": "Design",
+        "image": "",
+        "link": ""
+      },
+      {
+        "text": "Branding",
+        "image": "",
+        "link": ""
+      },
+      {
+        "text": "Development",
+        "image": "",
+        "link": ""
+      },
+      {
+        "text": "Strategy",
+        "image": "",
+        "link": ""
+      },
+      {
+        "text": "Motion",
+        "image": "",
+        "link": ""
+      },
+      {
+        "text": "Photography",
+        "image": "",
+        "link": ""
+      }
+    ],
+    "direction": "left",
+    "speed": 30,
+    "size": "large",
+    "separator": "star",
+    "gap": 40,
+    "outline": false,
+    "fade": true,
+    "pause": true,
+    "secondRow": false
+  },
+  "defaultStyle": {
+    "paddingY": 32
+  }
+}

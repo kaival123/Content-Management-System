@@ -20,6 +20,7 @@ export interface SiteRuntime {
   initCarousel(el: HTMLElement, opts: { editor: boolean; startIndex?: number }): CarouselController;
   /** Mobile menu (☰) toggles, via event delegation on `root`. */
   initNav(root: HTMLElement | Document): void;
+  initImageFallback(root: HTMLElement | Document): void;
   initAnimations(root: ParentNode): void;
   /** Contact/newsletter forms on exported pages (optionally POSTed to `endpoint`). */
   initForms(root: HTMLElement | Document, endpoint?: string): void;
@@ -51,8 +52,9 @@ export function siteRuntime(): SiteRuntime {
     touch: boolean;
     keyboard: boolean;
     center: boolean;
-    transition: 'slide' | 'fade' | 'flip';
+    transition: string;
     pauseOnHover: boolean;
+    playButton?: boolean;
     arrowPosition?: string;
     dotsPosition?: string;
     dotsStyle?: string;
@@ -79,12 +81,19 @@ export function siteRuntime(): SiteRuntime {
     if (!n) return noop;
 
     // Fade and flip stack the slides and show one at a time.
-    const fade = cfg.transition === 'fade' || cfg.transition === 'flip';
+    const fade = !!cfg.transition && cfg.transition !== 'slide';
+    const auto = cfg.transition === 'auto';
+    const mask = auto || (!!cfg.transition && cfg.transition.startsWith('mask-'));
+    const AUTO_EFFECTS = ['mask-ink', 'mask-circle', 'mask-wipe', 'mask-clock', 'mask-blinds', 'mask-corner', 'mask-rise', 'mask-dots', 'mask-rows', 'mask-split', 'mask-diamond', 'mask-sweep', 'mask-box', 'mask-fan', 'mask-tiles', 'mask-fall', 'mask-arc', 'mask-cross', 'mask-bars', 'mask-diagonal', 'mask-slats', 'mask-open', 'mask-zoom'];
+    let autoStep = 0;
     // In the editor, sliding by itself or dragging would fight with selecting and typing.
     const autoplay = !!cfg.autoplay && !opts.editor;
     const drag = !opts.editor && (cfg.drag || cfg.touch);
     const speed = Math.max(0, Number(cfg.speed) || 0);
     const gap = Math.max(0, Number(cfg.gap) || 0);
+
+    /** The easing picked in the slider settings (set as --car-ease), or the browser's "ease". */
+    const ease = () => getComputedStyle(el).getPropertyValue('--car-ease').trim() || 'ease';
 
     let per = 1;
     let clones = 0;
@@ -93,11 +102,27 @@ export function siteRuntime(): SiteRuntime {
     let slideW = 0;
     let timer: ReturnType<typeof setInterval> | undefined;
     let paused = false;
+    /** Switched off by the visitor with the play/pause button. */
+    let stopped = false;
     const cleanup: (() => void)[] = [];
     const listen = (target: EventTarget, type: string, fn: EventListener, o?: AddEventListenerOptions) => {
       target.addEventListener(type, fn, o);
       cleanup.push(() => target.removeEventListener(type, fn, o));
     };
+
+    // A picture that can't load (offline, removed) is replaced by the default one.
+    const fallbackSrc = el.getAttribute('data-car-fallback');
+    if (fallbackSrc) {
+      listen(
+        el,
+        'error',
+        (e) => {
+          const img = e.target as HTMLImageElement;
+          if (img?.tagName === 'IMG' && img.getAttribute('src') !== fallbackSrc) img.src = fallbackSrc;
+        },
+        { capture: true },
+      );
+    }
 
     el.setAttribute('role', 'region');
     el.setAttribute('aria-roledescription', 'carousel');
@@ -306,18 +331,44 @@ export function siteRuntime(): SiteRuntime {
 
     function update(animate: boolean) {
       if (fade) {
-        originals.forEach((s, i) => s.classList.toggle('is-active', i === index));
+        // Mask transitions: the outgoing slide stays visible underneath while the new one is revealed on top.
+        const leaving = mask && animate ? originals.find((s) => s.classList.contains('is-active') && s !== originals[index]) : undefined;
+        originals.forEach((s, i) => {
+          s.classList.toggle('is-active', i === index);
+          if (i !== index) s.classList.remove('is-entering');
+        });
+        if (mask && animate) {
+          if (auto && leaving) {
+            // A different effect for each change, in turn.
+            AUTO_EFFECTS.forEach((e) => el.classList.remove(`lp-car-${e}`));
+            el.classList.add(`lp-car-${AUTO_EFFECTS[autoStep++ % AUTO_EFFECTS.length]}`);
+          }
+          originals.forEach((s) => s.classList.remove('is-leaving'));
+          const entering = originals[index];
+          entering.classList.remove('is-entering');
+          if (leaving) {
+            leaving.classList.add('is-leaving');
+            void entering.offsetWidth; // restart the CSS animation
+            entering.classList.add('is-entering');
+            setTimeout(() => {
+              leaving.classList.remove('is-leaving');
+              entering.classList.remove('is-entering');
+            }, speed + 50);
+          }
+        }
       } else {
         pos = index + clones;
-        track!.style.transition = animate ? `transform ${speed}ms ease` : 'none';
+        track!.style.transition = animate ? `transform ${speed}ms ${ease()}` : 'none';
         track!.style.transform = `translate3d(${offsetFor(pos)}px, 0, 0)`;
         const all = Array.from(track!.children);
         all.forEach((s, i) => s.classList.toggle('is-active', i === pos));
       }
       markDots(index);
+      // Stacked transitions (fade, flip, masks) loop by wrapping around, so the arrows never run out.
       if (prev && next && !looping()) {
-        prev.disabled = index <= 0;
-        next.disabled = index >= maxIndex();
+        const wraps = fade && !!cfg.loop && n > 1;
+        prev.disabled = !wraps && index <= 0;
+        next.disabled = !wraps && index >= maxIndex();
       }
     }
 
@@ -338,7 +389,7 @@ export function siteRuntime(): SiteRuntime {
         dir = Math.max(-clones, Math.min(clones, dir));
         pos += dir;
         index = (((pos - clones) % n) + n) % n;
-        track!.style.transition = `transform ${speed}ms ease`;
+        track!.style.transition = `transform ${speed}ms ${ease()}`;
         track!.style.transform = `translate3d(${offsetFor(pos)}px, 0, 0)`;
         Array.from(track!.children).forEach((s, k) => s.classList.toggle('is-active', k === pos));
         markDots(index);
@@ -432,10 +483,32 @@ export function siteRuntime(): SiteRuntime {
       const start = () => {
         clearInterval(timer);
         timer = setInterval(() => {
-          if (!paused && !document.hidden) step(1);
+          if (!paused && !stopped && !document.hidden) step(1);
         }, Math.max(800, Number(cfg.autoplaySpeed) || 4000));
       };
       start();
+      if (cfg.playButton) {
+        const PLAY = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>';
+        const PAUSE = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>';
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'lp-car-play';
+        const sync = () => {
+          btn.innerHTML = stopped ? PLAY : PAUSE;
+          btn.setAttribute('aria-label', stopped ? 'Start automatic slide show' : 'Stop automatic slide show');
+          btn.setAttribute('aria-pressed', String(!stopped));
+        };
+        sync();
+        listen(btn, 'click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          stopped = !stopped;
+          if (!stopped) start(); // a full interval before the next change
+          sync();
+        });
+        stage.append(btn);
+        added.push(btn);
+      }
       if (cfg.pauseOnHover) {
         listen(el, 'mouseenter', () => (paused = true));
         listen(el, 'mouseleave', () => (paused = false));
@@ -480,6 +553,20 @@ export function siteRuntime(): SiteRuntime {
     return out;
   }
 
+  /** A content picture that can't load is replaced by the section's default picture (logos and avatars are left alone). */
+  function initImageFallback(root: HTMLElement | Document) {
+    root.addEventListener(
+      'error',
+      (e) => {
+        const img = e.target as HTMLImageElement;
+        if (img?.tagName !== 'IMG' || img.closest('.lp-nav, .lp-logos, .lp-avatar')) return;
+        const fallback = img.closest<HTMLElement>('[data-img-fallback]')?.getAttribute('data-img-fallback');
+        if (fallback && img.getAttribute('src') !== fallback) img.src = fallback;
+      },
+      true,
+    );
+  }
+
   function initNav(root: HTMLElement | Document) {
     root.addEventListener('click', (e) => {
       const btn = (e.target as HTMLElement).closest?.('.lp-nav-toggle');
@@ -495,9 +582,12 @@ export function siteRuntime(): SiteRuntime {
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
+          const repeat = e.target.classList.contains('lp-anim-repeat');
           if (e.isIntersecting) {
             e.target.classList.add('lp-in');
-            io.unobserve(e.target);
+            if (!repeat) io.unobserve(e.target);
+          } else if (repeat) {
+            e.target.classList.remove('lp-in'); // plays again when it scrolls back into view
           }
         }
       },
@@ -614,5 +704,5 @@ export function siteRuntime(): SiteRuntime {
     });
   }
 
-  return { initCarousels, initCarousel, initNav, initAnimations, initForms, initBackToTop, initAccordions };
+  return { initCarousels, initCarousel, initNav, initImageFallback, initAnimations, initForms, initBackToTop, initAccordions };
 }

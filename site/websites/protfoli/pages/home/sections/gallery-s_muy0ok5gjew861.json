@@ -1,0 +1,71 @@
+{
+  "id": "s_muy0ok5gjew861",
+  "type": "gallery",
+  "visible": true,
+  "data": {
+    "heading": "More projects",
+    "subheading": "Identity, packaging, web and campaign work from the last few years.",
+    "shape": "4/3",
+    "captionOnHover": true,
+    "images": [
+      {
+        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+        "title": "Studio identity",
+        "caption": "Branding",
+        "link": ""
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+        "title": "Coffee packaging",
+        "caption": "Packaging",
+        "link": ""
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+        "title": "Portfolio site",
+        "caption": "Web",
+        "link": ""
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&q=80",
+        "title": "App redesign",
+        "caption": "Product",
+        "link": ""
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+        "title": "Campaign",
+        "caption": "Marketing",
+        "link": ""
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+        "title": "Poster series",
+        "caption": "Print",
+        "link": ""
+      }
+    ],
+    "anchor": "projects"
+  },
+  "style": {
+    "background": "__surface__",
+    "textColor": "",
+    "paddingY": 80,
+    "align": "center",
+    "animation": "slide-up",
+    "animationDuration": 1350,
+    "animationDelay": 300,
+    "animationEasing": "ease-out",
+    "animationRepeat": true
+  },
+  "grid": {
+    "desktop": 3,
+    "tablet": 2,
+    "mobile": 1,
+    "gap": 16,
+    "rowHeight": 200,
+    "cardStyle": "none",
+    "itemAlign": "stretch",
+    "textAlign": "left"
+  }
+}

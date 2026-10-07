@@ -19,12 +19,6 @@ import { resolveTheme, themeVars } from '../core/styles';
 import { uid } from '../core/util';
 import { WebsiteStore } from '../core/website-store';
 
-const IMAGE_PLACEHOLDER =
-  'data:image/svg+xml,' +
-  encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0e7ff"/><stop offset="1" stop-color="#cffafe"/></linearGradient></defs><rect width="400" height="300" fill="url(#g)"/><path d="M150 190l40-50 30 35 20-22 40 37z" fill="#a5b4fc"/><circle cx="250" cy="110" r="16" fill="#a5b4fc"/></svg>',
-  );
-
 const runtime = siteRuntime();
 
 interface Linking {
@@ -117,6 +111,8 @@ export class PageRenderer {
     this.root.className = 'lp-root';
     this.host.append(this.styleEl, this.root);
     runtime.initNav(this.host);
+    // A picture that can't load is replaced by the section's default picture.
+    runtime.initImageFallback(this.host);
     // Back to top buttons only exist in the live (non-editor) markup, so this is a no-op in the editor.
     const stopBackToTop = runtime.initBackToTop(this.host);
     // FAQ answers open and close smoothly (editor markup has no data-accordion: always open).
@@ -150,16 +146,6 @@ export class PageRenderer {
       const sel = this.selection();
       untracked(() => this.applySelection(sel));
     });
-
-    // Replace broken images with a placeholder (error events don't bubble, so capture them).
-    this.host.addEventListener(
-      'error',
-      (e) => {
-        const img = e.target as HTMLImageElement;
-        if (img.tagName === 'IMG' && img.src !== IMAGE_PLACEHOLDER) img.src = IMAGE_PLACEHOLDER;
-      },
-      true,
-    );
 
     this.setUpAnimations();
     inject(DestroyRef).onDestroy(() => {

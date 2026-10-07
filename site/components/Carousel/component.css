@@ -53,7 +53,7 @@
 .lp-car-fade .lp-car-slide {
   grid-area: 1 / 1;
   opacity: 0;
-  transition: opacity var(--car-speed, 500ms) ease;
+  transition: opacity var(--car-speed, 500ms) var(--car-ease, ease);
 }
 
 .lp-car-fade .lp-car-slide.is-active {
@@ -70,11 +70,296 @@
   transform: rotateY(-90deg);
   transform-origin: center;
   backface-visibility: hidden;
-  transition: transform var(--car-speed, 500ms) ease, opacity var(--car-speed, 500ms) ease;
+  transition: transform var(--car-speed, 500ms) var(--car-ease, ease), opacity var(--car-speed, 500ms) var(--car-ease, ease);
 }
 
 .lp-car-flipfx .lp-car-slide.is-active {
   transform: none;
+}
+
+/* Mask transitions: the incoming slide is revealed through an animated CSS mask while the
+ * outgoing one stays visible underneath. --mp runs 0 -> 100% (or 120% for soft edges). */
+@property --mp {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+/* Play / pause button for autoplay, in the bottom-left corner of the slides. */
+.lp-car-play {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lp-car-play:hover {
+  background: var(--car-ctrl-c, var(--lp-primary));
+  transform: scale(1.08);
+}
+
+.lp-car-play:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.lp-car-maskfx .lp-car-slide {
+  transition: none;
+}
+
+.lp-car-maskfx .lp-car-slide.is-leaving {
+  opacity: 1;
+  z-index: 0;
+}
+
+.lp-car-maskfx .lp-car-slide.is-entering {
+  animation: lp-car-mask var(--car-speed, 500ms) var(--car-ease, cubic-bezier(0.65, 0, 0.35, 1)) both;
+}
+
+.lp-car-mask-circle .is-entering {
+  --mp-end: 130%;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 calc(var(--mp) - 25%), transparent var(--mp));
+  mask-image: radial-gradient(circle at 50% 50%, #000 calc(var(--mp) - 25%), transparent var(--mp));
+}
+
+.lp-car-mask-wipe .is-entering {
+  --mp-end: 130%;
+  -webkit-mask-image: linear-gradient(105deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+  mask-image: linear-gradient(105deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+}
+
+.lp-car-mask-blinds .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(90deg, #000 var(--mp), transparent var(--mp));
+  mask-image: linear-gradient(90deg, #000 var(--mp), transparent var(--mp));
+  -webkit-mask-size: 12.5% 100%;
+  mask-size: 12.5% 100%;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+}
+
+.lp-car-mask-split .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(#000, #000);
+  mask-image: linear-gradient(#000, #000);
+  -webkit-mask-size: var(--mp) 100%;
+  mask-size: var(--mp) 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* Ink: like Codrops "CSS Mask Transition" demo 1. The OUTGOING slide is masked away frame by
+ * frame with a sprite sheet (steps), uncovering the next slide underneath. */
+.lp-car-maskfx.lp-car-mask-ink .lp-car-slide.is-entering {
+  animation: none;
+  -webkit-mask: none;
+  mask: none;
+  z-index: 1;
+}
+
+.lp-car-mask-ink .lp-car-slide.is-leaving {
+  z-index: 2;
+  -webkit-mask: var(--car-ink-b) 0% 0% / 7100% 100% no-repeat;
+  mask: var(--car-ink-b) 0% 0% / 7100% 100% no-repeat;
+  animation: lp-car-ink var(--car-speed, 500ms) steps(70) forwards;
+}
+
+.lp-car-mask-ink .lp-car-slide.is-leaving:nth-child(2n) {
+  -webkit-mask: var(--car-ink-a) 0% 0% / 2300% 100% no-repeat;
+  mask: var(--car-ink-a) 0% 0% / 2300% 100% no-repeat;
+  animation-timing-function: steps(22);
+}
+
+@keyframes lp-car-ink {
+  from {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+.lp-car-mask-rise .is-entering {
+  --mp-end: 130%;
+  -webkit-mask-image: linear-gradient(0deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+  mask-image: linear-gradient(0deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+}
+
+.lp-car-mask-clock .is-entering {
+  --mp-end: 106%;
+  -webkit-mask-image: conic-gradient(from 0deg at 50% 50%, #000 calc(var(--mp) - 6%), transparent var(--mp));
+  mask-image: conic-gradient(from 0deg at 50% 50%, #000 calc(var(--mp) - 6%), transparent var(--mp));
+}
+
+.lp-car-mask-rows .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(0deg, #000 var(--mp), transparent var(--mp));
+  mask-image: linear-gradient(0deg, #000 var(--mp), transparent var(--mp));
+  -webkit-mask-size: 100% 16.667%;
+  mask-size: 100% 16.667%;
+  -webkit-mask-repeat: repeat-y;
+  mask-repeat: repeat-y;
+}
+
+.lp-car-mask-corner .is-entering {
+  --mp-end: 130%;
+  -webkit-mask-image: radial-gradient(circle at 0 0, #000 calc(var(--mp) - 30%), transparent var(--mp));
+  mask-image: radial-gradient(circle at 0 0, #000 calc(var(--mp) - 30%), transparent var(--mp));
+}
+
+.lp-car-mask-dots .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 calc(var(--mp) - 4%), transparent var(--mp));
+  mask-image: radial-gradient(circle at 50% 50%, #000 calc(var(--mp) - 4%), transparent var(--mp));
+  -webkit-mask-size: 10% 20%;
+  mask-size: 10% 20%;
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+}
+
+.lp-car-mask-diamond .is-entering {
+  --mp-end: 100%;
+  clip-path: polygon(50% calc(50% - var(--mp)), calc(50% + var(--mp)) 50%, 50% calc(50% + var(--mp)), calc(50% - var(--mp)) 50%);
+}
+
+.lp-car-mask-sweep .is-entering {
+  --mp-end: 130%;
+  -webkit-mask-image: linear-gradient(-90deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+  mask-image: linear-gradient(-90deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+}
+
+.lp-car-mask-fall .is-entering {
+  --mp-end: 130%;
+  -webkit-mask-image: linear-gradient(180deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+  mask-image: linear-gradient(180deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+}
+
+.lp-car-mask-diagonal .is-entering {
+  --mp-end: 130%;
+  -webkit-mask-image: linear-gradient(135deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+  mask-image: linear-gradient(135deg, #000 calc(var(--mp) - 30%), transparent var(--mp));
+}
+
+.lp-car-mask-box .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(#000, #000);
+  mask-image: linear-gradient(#000, #000);
+  -webkit-mask-size: var(--mp) var(--mp);
+  mask-size: var(--mp) var(--mp);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.lp-car-mask-open .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(#000, #000);
+  mask-image: linear-gradient(#000, #000);
+  -webkit-mask-size: 100% var(--mp);
+  mask-size: 100% var(--mp);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.lp-car-mask-cross .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  -webkit-mask-size: var(--mp) 100%, 100% var(--mp);
+  mask-size: var(--mp) 100%, 100% var(--mp);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.lp-car-mask-tiles .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(90deg, #000 var(--mp), transparent var(--mp)), linear-gradient(0deg, #000 var(--mp), transparent var(--mp));
+  mask-image: linear-gradient(90deg, #000 var(--mp), transparent var(--mp)), linear-gradient(0deg, #000 var(--mp), transparent var(--mp));
+  -webkit-mask-size: 10% 20%;
+  mask-size: 10% 20%;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.lp-car-mask-slats .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(45deg, #000 var(--mp), transparent var(--mp));
+  mask-image: linear-gradient(45deg, #000 var(--mp), transparent var(--mp));
+  -webkit-mask-size: 8% 14%;
+  mask-size: 8% 14%;
+}
+
+.lp-car-mask-bars .is-entering {
+  --mp-end: 100%;
+  -webkit-mask-image: linear-gradient(90deg, #000 var(--mp), transparent var(--mp));
+  mask-image: linear-gradient(90deg, #000 var(--mp), transparent var(--mp));
+  -webkit-mask-size: 4% 100%;
+  mask-size: 4% 100%;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+}
+
+.lp-car-mask-fan .is-entering {
+  --mp-end: 106%;
+  -webkit-mask-image: conic-gradient(from -90deg at 50% 100%, #000 calc(var(--mp) * 0.5 - 3%), transparent calc(var(--mp) * 0.5));
+  mask-image: conic-gradient(from -90deg at 50% 100%, #000 calc(var(--mp) * 0.5 - 3%), transparent calc(var(--mp) * 0.5));
+}
+
+.lp-car-mask-arc .is-entering {
+  --mp-end: 130%;
+  -webkit-mask-image: radial-gradient(circle at 50% 100%, #000 calc(var(--mp) - 25%), transparent var(--mp));
+  mask-image: radial-gradient(circle at 50% 100%, #000 calc(var(--mp) - 25%), transparent var(--mp));
+}
+
+/* Zoom: no mask, the new slide eases in from slightly larger and transparent. */
+.lp-car-maskfx.lp-car-mask-zoom .lp-car-slide.is-entering {
+  animation: lp-car-zoom var(--car-speed, 500ms) var(--car-ease, cubic-bezier(0.22, 1, 0.36, 1)) both;
+}
+
+@keyframes lp-car-zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lp-car-mask {
+  from {
+    --mp: 0%;
+  }
+  to {
+    --mp: var(--mp-end, 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-car-maskfx .lp-car-slide.is-entering {
+    animation-duration: 1ms;
+  }
 }
 
 /* Controls (added by the runtime) ------------------------------------------------------
@@ -481,6 +766,7 @@
   padding: 56px;
   border-radius: calc(var(--lp-radius) + 4px);
   background: var(--lp-primary) center / cover no-repeat;
+  background-image: var(--car-fallback);
   color: #fff;
   position: relative;
   overflow: hidden;

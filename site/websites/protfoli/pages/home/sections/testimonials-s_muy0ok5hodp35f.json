@@ -1,0 +1,44 @@
+{
+  "id": "s_muy0ok5hodp35f",
+  "type": "testimonials",
+  "visible": true,
+  "data": {
+    "heading": "Kind words",
+    "items": [
+      {
+        "quote": "Mira took our half-formed idea and gave it a clear, confident identity. Investors noticed.",
+        "name": "Jonas Weber",
+        "role": "Founder, Ledgerly",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+      },
+      {
+        "quote": "A rare designer who thinks like a product manager. Our activation rate jumped 28%.",
+        "name": "Emma Laurent",
+        "role": "VP Product, Calmly",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+      },
+      {
+        "quote": "Fast, thoughtful and a pleasure to work with. We keep coming back.",
+        "name": "Arjun Mehta",
+        "role": "Creative Director, Northfold",
+        "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80"
+      }
+    ]
+  },
+  "style": {
+    "background": "",
+    "textColor": "",
+    "paddingY": 80,
+    "align": "center"
+  },
+  "grid": {
+    "desktop": 3,
+    "tablet": 2,
+    "mobile": 1,
+    "gap": 24,
+    "rowHeight": 200,
+    "cardStyle": "bordered",
+    "itemAlign": "stretch",
+    "textAlign": "left"
+  }
+}

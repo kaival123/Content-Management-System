@@ -105,6 +105,16 @@ function elementStyleFor(section: Section, key: string): ElementStyle | undefine
   return section.elements?.[key];
 }
 
+/** Carousel easing curves; 'default' leaves each transition's own curve in place. */
+const CAROUSEL_EASING: Record<string, string | undefined> = {
+  default: undefined,
+  smooth: 'cubic-bezier(0.22, 1, 0.36, 1)',
+  gentle: 'cubic-bezier(0.45, 0, 0.55, 1)',
+  snappy: 'cubic-bezier(0.7, 0, 0.2, 1)',
+  bounce: 'cubic-bezier(0.34, 1.4, 0.64, 1)',
+  linear: 'linear',
+};
+
 function resolveAsset(url: string, base: string): string {
   return url.startsWith('assets/') ? base + url : url;
 }
@@ -169,6 +179,11 @@ function enhance(html: string, section: Section, opts: RenderOptions): string {
         '--per-m': c.perViewMobile,
         '--gap': `${c.gap}px`,
         '--car-speed': `${c.speed}ms`,
+        '--car-ease': CAROUSEL_EASING[c.easing],
+        '--car-fallback': `url(${opts.assetBase}${DEFAULT_SLIDE_IMAGE})`,
+        // Sprite sheets of the ink-splash mask transition.
+        '--car-ink-a': c.transition === 'mask-ink' || c.transition === 'auto' ? `url(${opts.assetBase}assets/masks/nature-sprite.png)` : undefined,
+        '--car-ink-b': c.transition === 'mask-ink' || c.transition === 'auto' ? `url(${opts.assetBase}assets/masks/nature-sprite-2.png)` : undefined,
         '--car-arrow': `${c.arrowSize}px`,
         '--car-prev-x': c.prevX ? `${c.prevX}px` : undefined,
         '--car-prev-y': c.prevY ? `${c.prevY}px` : undefined,
@@ -192,11 +207,15 @@ function enhance(html: string, section: Section, opts: RenderOptions): string {
         : '';
       attrs.set('style', escapeHtml(style) + (attrs.get('style') ? `; ${attrs.get('style')}` : '') + (heightStyle ? `; ${escapeHtml(heightStyle)}` : ''));
       attrs.set('data-carousel', escapeHtml(JSON.stringify(c)));
+      attrs.set('data-car-fallback', escapeHtml(opts.assetBase + DEFAULT_SLIDE_IMAGE));
       // Layout of the controls, so CSS can reserve space for them before the runtime adds them.
       const layout = [`lp-car-arrows-${c.arrowPosition}`, `lp-car-arrow-${c.arrowStyle}`, `lp-car-dots-${c.dotsPosition}`, `lp-car-dotstyle-${c.dotsStyle}`];
       // Fade and flip both stack the slides; flip adds the 3D turn.
-      if (c.transition === 'fade' || c.transition === 'flip') layout.push('lp-car-fade');
+      if (c.transition !== 'slide') layout.push('lp-car-fade');
       if (c.transition === 'flip') layout.push('lp-car-flipfx');
+      // "auto" starts without an effect class; the runtime picks one for every change.
+      if (c.transition.startsWith('mask-')) layout.push('lp-car-maskfx', `lp-car-${c.transition}`);
+      if (c.transition === 'auto') layout.push('lp-car-maskfx');
       if (c.contentX) layout.push(`lp-car-x-${c.contentX}`);
       if (c.contentY) layout.push(`lp-car-y-${c.contentY}`);
       if (c.flipLayout) layout.push('lp-car-flip');
@@ -234,6 +253,44 @@ function enhance(html: string, section: Section, opts: RenderOptions): string {
   });
 }
 
+/** Picture for carousel slides that have none (also the fallback when a slide's image can't load). */
+const DEFAULT_SLIDE_IMAGE = 'assets/images/slide-default.jpg';
+
+/** Carousel slide layouts that show a picture. */
+const IMAGE_VARIANTS = new Set(['hero', 'image', 'card', 'product', 'team', 'portfolio']);
+
+/** Image sections: the list holding the items (none: the section itself) and the field with the picture. */
+const IMAGE_FIELDS: Record<string, { list?: string; field: string }> = {
+  gallery: { list: 'images', field: 'image' },
+  products: { list: 'products', field: 'image' },
+  team: { list: 'members', field: 'photo' },
+  blog: { list: 'posts', field: 'image' },
+  about: { field: 'image' },
+};
+
+/** Fills the image field of an item that has none. */
+function fillImage<T extends Record<string, unknown>>(item: T, field: string): T {
+  return item?.[field] ? item : { ...item, [field]: DEFAULT_SLIDE_IMAGE };
+}
+
+/**
+ * Image sections (carousel, gallery, products, team, blog, image + text) show the default picture
+ * wherever an image is left blank, so a new or empty section never looks broken.
+ */
+function withSampleImages(section: Section): Record<string, unknown> {
+  const data = section.data;
+  if (section.type === 'carousel') {
+    if (!IMAGE_VARIANTS.has(String(data.variant || 'card')) || !Array.isArray(data.slides)) return data;
+    return { ...data, slides: data.slides.map((s: Record<string, unknown>) => fillImage(s, 'image')) };
+  }
+  const spec = IMAGE_FIELDS[section.type];
+  if (!spec) return data;
+  if (!spec.list) return fillImage(data, spec.field);
+  const items = data[spec.list];
+  if (!Array.isArray(items)) return data;
+  return { ...data, [spec.list]: items.map((it: Record<string, unknown>) => fillImage(it, spec.field)) };
+}
+
 /** Renders one section, including its <section> wrapper. */
 export function renderSection(section: Section, def: ComponentDef | undefined, opts: RenderOptions): string {
   let body: string;
@@ -241,7 +298,7 @@ export function renderSection(section: Section, def: ComponentDef | undefined, o
     body = `<div class="lp-missing">Missing component “${escapeHtml(section.type)}”. Add it in site/components/ or remove this section.</div>`;
   } else {
     try {
-      const html = templateFor(def).render(section.data, { helpers: HELPERS, vars: { menu: [], homeHref: '#', ...opts.vars, editor: opts.editor }, sanitizeHtml: opts.sanitizeHtml });
+      const html = templateFor(def).render(withSampleImages(section), { helpers: HELPERS, vars: { menu: [], homeHref: '#', ...opts.vars, editor: opts.editor }, sanitizeHtml: opts.sanitizeHtml });
       body = enhance(html, section, opts);
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
@@ -259,7 +316,7 @@ export function renderSection(section: Section, def: ComponentDef | undefined, o
   const anchor = section.data?.anchor ? ` id="${escapeHtml(section.data.anchor)}"` : '';
   const tag = opts.editor ? `<span class="lp-section-tag">${escapeHtml(def?.label ?? section.type)}</span>` : '';
   return (
-    `<section class="${escapeHtml(classes)}" data-section-id="${escapeHtml(section.id)}"${anchor} style="${escapeHtml(styleString(css.style))}">` +
+    `<section class="${escapeHtml(classes)}" data-section-id="${escapeHtml(section.id)}" data-img-fallback="${escapeHtml(opts.assetBase + DEFAULT_SLIDE_IMAGE)}"${anchor} style="${escapeHtml(styleString(css.style))}">` +
     `${tag}<div class="lp-container">${body}</div></section>`
   );
 }

@@ -22,6 +22,7 @@ function runtimeJs(): string {
   const boot = () => {
     rt.initCarousels(document, { editor: false });
     rt.initNav(document);
+    rt.initImageFallback(document);
     rt.initAnimations(document);
     rt.initForms(document, document.documentElement.dataset.formEndpoint || '');
     rt.initBackToTop(document);

@@ -5,7 +5,16 @@ export type Align = 'left' | 'center';
 export type TextAlign = 'left' | 'center' | 'right';
 export type Device = 'desktop' | 'tablet' | 'mobile';
 export type Shadow = 'none' | 'sm' | 'md' | 'lg';
-export type Animation = 'none' | 'fade' | 'fade-up' | 'fade-left' | 'zoom';
+/** Entrance animations (AOS-style). Named by where the element comes from; 'zoom' and 'fade-left' are the original two. */
+export const ANIMATIONS = [
+  'fade', 'fade-up', 'fade-down', 'fade-left', 'fade-right', 'fade-up-left', 'fade-up-right', 'fade-down-left', 'fade-down-right',
+  'slide-up', 'slide-down', 'slide-left', 'slide-right',
+  'zoom', 'zoom-in', 'zoom-in-up', 'zoom-in-down', 'zoom-in-left', 'zoom-in-right',
+  'zoom-out', 'zoom-out-up', 'zoom-out-down', 'zoom-out-left', 'zoom-out-right',
+  'flip-left', 'flip-right', 'flip-up', 'flip-down',
+] as const;
+export type Animation = 'none' | (typeof ANIMATIONS)[number];
+export type AnimationEasing = 'ease' | 'ease-out' | 'ease-in-out' | 'ease-out-back' | 'linear';
 
 /** Hide an element or section on specific device widths. */
 export interface HideOn {
@@ -63,6 +72,12 @@ export interface SectionStyle {
 
   hideOn?: HideOn;
   animation?: Animation;
+  /** Entrance animation timing, in ms (defaults: 700 / 0). */
+  animationDuration?: number;
+  animationDelay?: number;
+  animationEasing?: AnimationEasing;
+  /** Plays again every time it scrolls into view. */
+  animationRepeat?: boolean;
   cssClass?: string;
   /** Plain CSS scoped to this section. Supports nesting, e.g. `h2 { color: red }`. */
   customCss?: string;
@@ -104,6 +119,12 @@ export interface ElementStyle {
   marginBottom?: number;
 
   animation?: Animation;
+  /** Entrance animation timing, in ms (defaults: 700 / 0). */
+  animationDuration?: number;
+  animationDelay?: number;
+  animationEasing?: AnimationEasing;
+  /** Plays again every time it scrolls into view. */
+  animationRepeat?: boolean;
   cssClass?: string;
 }
 
@@ -159,9 +180,13 @@ export interface CarouselSettings {
   touch: boolean;
   keyboard: boolean;
   center: boolean;
-  /** slide: side by side · fade: cross-fade · flip: 3D flip. Fade and flip show one slide at a time. */
-  transition: 'slide' | 'fade' | 'flip';
+  /** slide: side by side · fade: cross-fade · flip: 3D flip · mask-*: the next slide is revealed through a CSS mask. All but slide show one slide at a time. */
+  transition: 'slide' | 'fade' | 'flip' | 'mask-circle' | 'mask-wipe' | 'mask-blinds' | 'mask-split' | 'mask-ink' | 'mask-rise' | 'mask-clock' | 'mask-rows' | 'mask-corner' | 'mask-dots' | 'mask-zoom' | 'mask-diamond' | 'mask-sweep' | 'mask-fall' | 'mask-box' | 'mask-cross' | 'mask-tiles' | 'mask-fan' | 'mask-arc' | 'mask-bars' | 'mask-slats' | 'mask-open' | 'mask-diagonal' | 'auto';
   pauseOnHover: boolean;
+  /** How the motion accelerates and settles. 'default' keeps each transition's own curve. */
+  easing: 'default' | 'smooth' | 'gentle' | 'snappy' | 'bounce' | 'linear';
+  /** Shows a play/pause button on the slider so visitors can switch autoplay off and on. */
+  playButton: boolean;
   /** Where the text sits inside each slide ('' = the layout's default). */
   contentX: '' | 'left' | 'center' | 'right';
   contentY: '' | 'top' | 'middle' | 'bottom';

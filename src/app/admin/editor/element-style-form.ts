@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
-import { Animation, ElementKind, ElementStyle, Shadow, TextAlign } from '../../core/models';
+import { ElementKind, ElementStyle, Shadow, TextAlign } from '../../core/models';
+import { AnimationControl } from './animation-control';
 import { ColorControl, HideOnControl, RangeControl, SegControl, SegOption, ToggleControl } from './controls';
 
 export interface StylePatch {
@@ -9,14 +10,6 @@ export interface StylePatch {
 
 let nextId = 0;
 
-export const ANIMATION_OPTIONS: SegOption<Animation>[] = [
-  { value: 'none', label: 'None' },
-  { value: 'fade', label: 'Fade' },
-  { value: 'fade-up', label: 'Up' },
-  { value: 'fade-left', label: 'Side' },
-  { value: 'zoom', label: 'Zoom' },
-];
-
 /**
  * Style controls for one element. `mode` splits them across the Style and Advanced tabs.
  * Controls shown depend on the element kind, e.g. images get aspect ratio but no font size.
@@ -24,7 +17,7 @@ export const ANIMATION_OPTIONS: SegOption<Animation>[] = [
 @Component({
   selector: 'app-element-style-form',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ColorControl, RangeControl, SegControl, ToggleControl, HideOnControl],
+  imports: [AnimationControl, ColorControl, RangeControl, SegControl, ToggleControl, HideOnControl],
   template: `
     @let s = value() ?? {};
     @if (mode() === 'style') {
@@ -84,7 +77,7 @@ export const ANIMATION_OPTIONS: SegOption<Animation>[] = [
     } @else {
       <app-toggle-control label="Hide this element" [value]="s.hidden" (valueChange)="set('hidden', $event || undefined)" />
       <app-hide-on-control [value]="s.hideOn" (valueChange)="set('hideOn', $event)" />
-      <app-seg-control label="Entrance animation" [options]="animations" [value]="s.animation ?? 'none'" (valueChange)="set('animation', $event === 'none' ? undefined : $event)" />
+      <app-animation-control [value]="s.animation" [duration]="s.animationDuration" [delay]="s.animationDelay" [easing]="s.animationEasing" [repeat]="s.animationRepeat" (patch)="set($event.key, $event.value)" />
       <div class="field">
         <label [attr.for]="id">CSS class</label>
         <input [id]="id" type="text" placeholder="my-class another-class" [value]="s.cssClass ?? ''" (change)="setText('cssClass', $event)" />
@@ -130,7 +123,6 @@ export class ElementStyleForm {
     { value: 'cover', label: 'Fill (crop)' },
     { value: 'contain', label: 'Fit (no crop)' },
   ];
-  protected readonly animations = ANIMATION_OPTIONS;
 
   protected set(key: keyof ElementStyle, value: unknown): void {
     this.patch.emit({ key, value });

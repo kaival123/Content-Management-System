@@ -171,7 +171,7 @@ export function sectionCss(s: Section): CssResult {
   if (width !== 'boxed') classes.push(`lp-w-${width}`);
   if (st.paddingSide === 0) classes.push('lp-edge');
   if (height) classes.push(`lp-h-${height.mode}`, `lp-valign-${st.verticalAlign ?? 'center'}`);
-  if (st.animation && st.animation !== 'none') classes.push('lp-anim', `lp-anim-${st.animation}`);
+  animationCss(st, style, classes);
   hideClasses(st.hideOn, classes);
   if (st.cssClass) classes.push(...st.cssClass.split(/\s+/).filter(Boolean));
   return { style, classes: classes.join(' ') };
@@ -214,7 +214,7 @@ export function elementCss(e: ElementStyle | undefined): CssResult {
   if (e.fontSize) classes.push('lp-el-fs');
   if (e.fullWidth) classes.push('lp-el-full');
   if (e.hidden) classes.push('lp-el-hidden');
-  if (e.animation && e.animation !== 'none') classes.push('lp-anim', `lp-anim-${e.animation}`);
+  animationCss(e, style, classes);
   hideClasses(e.hideOn, classes);
   if (e.cssClass) classes.push(...e.cssClass.split(/\s+/).filter(Boolean));
   return { style, classes: classes.join(' ') };
@@ -238,4 +238,26 @@ ${siteCss.trim()}
     if (css) parts.push(`${scope} [data-section-id="${s.id.replace(/["\\]/g, '\\$&')}"] {\n${css}\n}`);
   }
   return parts.join('\n');
+}
+
+const EASINGS: Record<string, string> = {
+  ease: 'ease',
+  'ease-out': 'cubic-bezier(0.16, 1, 0.3, 1)',
+  'ease-in-out': 'cubic-bezier(0.65, 0, 0.35, 1)',
+  'ease-out-back': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+  linear: 'linear',
+};
+
+/** Entrance animation: classes for the effect and CSS variables for its timing. */
+function animationCss(
+  a: { animation?: string; animationDuration?: number; animationDelay?: number; animationEasing?: string; animationRepeat?: boolean },
+  style: Record<string, string | number | null>,
+  classes: string[],
+): void {
+  if (!a.animation || a.animation === 'none') return;
+  classes.push('lp-anim', `lp-anim-${a.animation}`);
+  if (a.animationRepeat) classes.push('lp-anim-repeat');
+  if (a.animationDuration) style['--aos-dur'] = `${a.animationDuration}ms`;
+  if (a.animationDelay) style['--aos-delay'] = `${a.animationDelay}ms`;
+  if (a.animationEasing && EASINGS[a.animationEasing]) style['--aos-ease'] = EASINGS[a.animationEasing];
 }
