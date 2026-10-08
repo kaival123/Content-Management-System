@@ -28,6 +28,22 @@ export function verifyPassword(password, stored) {
   return expected.length === dk.length && timingSafeEqual(expected, dk);
 }
 
+// --- phone numbers ------------------------------------------------------------------------
+
+/** Normalizes a mobile number to an optional leading "+" plus digits (so it stores/compares consistently). */
+export function normalizePhone(raw) {
+  const s = String(raw ?? '').trim();
+  if (!s) return '';
+  const plus = s.startsWith('+');
+  return (plus ? '+' : '') + s.replace(/\D/g, '');
+}
+
+/** True when a normalized number has a plausible length (7–15 digits, like E.164). */
+export function isValidPhone(normalized) {
+  const digits = String(normalized).replace(/\D/g, '');
+  return digits.length >= 7 && digits.length <= 15;
+}
+
 // --- database -----------------------------------------------------------------------------
 
 export class Db {
@@ -39,6 +55,7 @@ export class Db {
       CREATE TABLE IF NOT EXISTS users (
         id            TEXT PRIMARY KEY,
         email         TEXT NOT NULL UNIQUE,
+        phone         TEXT,
         password_hash TEXT NOT NULL,
         role          TEXT NOT NULL DEFAULT 'user',
         created_at    TEXT NOT NULL
@@ -59,6 +76,11 @@ export class Db {
         created_at TEXT NOT NULL
       );
     `);
+    // Migrate older databases that predate the phone column.
+    const cols = this.db.prepare('PRAGMA table_info(users)').all().map((c) => c.name);
+    if (!cols.includes('phone')) this.db.exec('ALTER TABLE users ADD COLUMN phone TEXT');
+    // Unique only among accounts that have a number (partial index).
+    this.db.exec('CREATE UNIQUE INDEX IF NOT EXISTS users_phone ON users(phone) WHERE phone IS NOT NULL');
   }
 
   /** Closes the underlying database (releases the file so it can be removed). */
@@ -68,21 +90,35 @@ export class Db {
 
   // --- users ------------------------------------------------------------------------------
 
-  /** Creates a user. Throws if the email is already taken. Returns the public user record. */
-  createUser({ email, password, role = 'user' }) {
+  /** Creates a user (optional mobile number). Throws if the email or number is taken. */
+  createUser({ email, password, role = 'user', phone }) {
     const normalized = String(email).trim().toLowerCase();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(normalized)) throw new Error('Enter a valid email address');
     if (String(password).length < 6) throw new Error('Password must be at least 6 characters');
     if (this.getUserByEmail(normalized)) throw new Error('An account with that email already exists');
-    const user = { id: `u_${randomUUID().replace(/-/g, '').slice(0, 20)}`, email: normalized, role, created_at: new Date().toISOString() };
+
+    let phoneValue = null;
+    if (phone != null && String(phone).trim() !== '') {
+      phoneValue = normalizePhone(phone);
+      if (!isValidPhone(phoneValue)) throw new Error('Enter a valid mobile number');
+      if (this.getUserByPhone(phoneValue)) throw new Error('An account with that mobile number already exists');
+    }
+
+    const user = { id: `u_${randomUUID().replace(/-/g, '').slice(0, 20)}`, email: normalized, phone: phoneValue, role, created_at: new Date().toISOString() };
     this.db
-      .prepare('INSERT INTO users (id, email, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?)')
-      .run(user.id, user.email, hashPassword(password), role, user.created_at);
+      .prepare('INSERT INTO users (id, email, phone, password_hash, role, created_at) VALUES (?, ?, ?, ?, ?, ?)')
+      .run(user.id, user.email, phoneValue, hashPassword(password), role, user.created_at);
     return this.publicUser(user);
   }
 
   getUserByEmail(email) {
     return this.db.prepare('SELECT * FROM users WHERE email = ?').get(String(email).trim().toLowerCase());
+  }
+
+  getUserByPhone(phone) {
+    const n = normalizePhone(phone);
+    if (!n) return undefined;
+    return this.db.prepare('SELECT * FROM users WHERE phone = ?').get(n);
   }
 
   getUserById(id) {
@@ -94,7 +130,7 @@ export class Db {
   }
 
   listUsers() {
-    return this.db.prepare('SELECT id, email, role, created_at FROM users ORDER BY created_at').all();
+    return this.db.prepare('SELECT id, email, phone, role, created_at FROM users ORDER BY created_at').all();
   }
 
   setRole(id, role) {
@@ -110,6 +146,19 @@ export class Db {
     this.db.prepare('UPDATE users SET password_hash = ? WHERE id = ?').run(hashPassword(newPassword), id);
   }
 
+  /** Sets or clears a user's mobile number (empty clears it). Returns the stored value. */
+  updatePhone(id, phone) {
+    let value = null;
+    if (phone != null && String(phone).trim() !== '') {
+      value = normalizePhone(phone);
+      if (!isValidPhone(value)) throw new Error('Enter a valid mobile number');
+      const existing = this.getUserByPhone(value);
+      if (existing && existing.id !== id) throw new Error('An account with that mobile number already exists');
+    }
+    this.db.prepare('UPDATE users SET phone = ? WHERE id = ?').run(value, id);
+    return value;
+  }
+
   /** Verifies a user's current password by id (used before changing it). */
   verifyUserPassword(id, password) {
     const row = this.getUserById(id);
@@ -121,15 +170,18 @@ export class Db {
     this.db.prepare('DELETE FROM users WHERE id = ?').run(id);
   }
 
-  /** Verifies a login. Returns the public user record or null. */
-  authenticate(email, password) {
-    const row = this.getUserByEmail(email);
+  /** Verifies a login by email OR mobile number. Returns the public user record or null. */
+  authenticate(identifier, password) {
+    const id = String(identifier ?? '').trim();
+    if (!id) return null;
+    // An "@" means email; otherwise treat it as a mobile number.
+    const row = id.includes('@') ? this.getUserByEmail(id) : this.getUserByPhone(id);
     if (!row || !verifyPassword(password, row.password_hash)) return null;
     return this.publicUser(row);
   }
 
   publicUser(row) {
-    return { id: row.id, email: row.email, role: row.role };
+    return { id: row.id, email: row.email, phone: row.phone ?? null, role: row.role };
   }
 
   // --- sessions ---------------------------------------------------------------------------
@@ -157,6 +209,11 @@ export class Db {
 
   deleteSession(token) {
     if (token) this.db.prepare('DELETE FROM sessions WHERE token = ?').run(token);
+  }
+
+  /** Signs a user out everywhere (e.g. after an admin resets their password). */
+  deleteUserSessions(userId) {
+    this.db.prepare('DELETE FROM sessions WHERE user_id = ?').run(userId);
   }
 
   // --- submissions ------------------------------------------------------------------------

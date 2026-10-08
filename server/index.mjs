@@ -15,6 +15,7 @@
 //      ADMIN_EMAIL / ADMIN_PASSWORD (seed the first admin on startup).
 
 import { spawn } from 'node:child_process';
+import { randomBytes } from 'node:crypto';
 import { existsSync, mkdirSync, realpathSync, watch } from 'node:fs';
 import fs from 'node:fs/promises';
 import http from 'node:http';
@@ -442,6 +443,17 @@ route('POST', /^\/api\/account\/password$/, async (req, _m, _url, { user }) => {
   return { ok: true };
 });
 
+// Account: the signed-in user sets or clears their own mobile number
+route('POST', /^\/api\/account\/phone$/, async (req, _m, _url, { user }) => {
+  const { phone } = await readBody(req);
+  try {
+    db.updatePhone(user.id, phone);
+  } catch (e) {
+    throw new ProjectError(400, e.message);
+  }
+  return { user: db.publicUser(db.getUserById(user.id)) };
+});
+
 // Admin-only: user management
 const requireAdmin = (user) => {
   if (user.role !== 'admin') throw new ProjectError(403, 'Admins only');
@@ -454,8 +466,8 @@ route('GET', /^\/api\/admin\/users$/, async (_req, _m, _url, { user }) => {
 
 route('POST', /^\/api\/admin\/users$/, async (req, _m, _url, { user }) => {
   requireAdmin(user);
-  const { email, password, role } = await readBody(req);
-  const created = db.createUser({ email, password, role: role === 'admin' ? 'admin' : 'user' });
+  const { email, password, role, phone } = await readBody(req);
+  const created = db.createUser({ email, password, phone, role: role === 'admin' ? 'admin' : 'user' });
   return { user: created };
 });
 
@@ -482,6 +494,20 @@ route('DELETE', /^\/api\/admin\/users\/([a-z0-9_]+)$/, async (_req, [id], _url, 
   return { ok: true };
 });
 
+/** Admin resets a user's password: generates a temporary one, signs them out everywhere, and returns it once. */
+route('POST', /^\/api\/admin\/users\/([a-z0-9_]+)\/password$/, async (_req, [id], _url, { user }) => {
+  requireAdmin(user);
+  const target = db.getUserById(id);
+  if (!target) throw new ProjectError(404, 'User not found');
+  // 10 unambiguous characters (no 0/O/1/l/I) the admin can read out or paste.
+  const alphabet = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const bytes = randomBytes(10);
+  const password = Array.from(bytes, (b) => alphabet[b % alphabet.length]).join('');
+  db.updatePassword(id, password);
+  db.deleteUserSessions(id); // force re-login with the new password
+  return { email: target.email, password };
+});
+
 // --- server -------------------------------------------------------------------------------
 
 const server = http.createServer(async (req, res) => {
@@ -495,16 +521,17 @@ const server = http.createServer(async (req, res) => {
   if (url.pathname.startsWith('/api/auth/')) {
     try {
       if (req.method === 'POST' && url.pathname === '/api/auth/register') {
-        const { email, password } = await readBody(req);
-        const created = db.createUser({ email, password, role: 'user' });
+        const { email, password, phone } = await readBody(req);
+        const created = db.createUser({ email, password, phone, role: 'user' });
         await ensureUserSite(created.id);
         const token = db.createSession(created.id);
         return send(res, 200, { user: created }, { 'Set-Cookie': sessionCookie(token) });
       }
       if (req.method === 'POST' && url.pathname === '/api/auth/login') {
-        const { email, password } = await readBody(req);
-        const authed = db.authenticate(email, password);
-        if (!authed) return send(res, 401, { error: 'Wrong email or password' });
+        // `identifier` may be an email or a mobile number; `email` kept for older clients.
+        const { identifier, email, password } = await readBody(req);
+        const authed = db.authenticate(identifier ?? email, password);
+        if (!authed) return send(res, 401, { error: 'Wrong email/mobile or password' });
         await ensureUserSite(authed.id);
         const token = db.createSession(authed.id);
         return send(res, 200, { user: authed }, { 'Set-Cookie': sessionCookie(token) });
@@ -550,13 +577,27 @@ const server = http.createServer(async (req, res) => {
   // --- everything else under /api requires a session ---
   if (url.pathname.startsWith('/api/')) {
     if (!user) return send(res, 401, { error: 'Not signed in' });
-    await ensureUserSite(user.id);
-    const ctx = { ...contextFor(user.id), user };
+
+    // Admins may view another user's project by passing their id (header for fetch,
+    // ?as= for the EventSource which can't set headers). The project context becomes
+    // that user's; ctx.user stays the real admin so admin-only routes still work.
+    let owner = user;
+    const asId = String(req.headers['x-cms-as'] ?? url.searchParams.get('as') ?? '').trim();
+    if (asId && asId !== user.id) {
+      if (user.role !== 'admin') return send(res, 403, { error: 'Admins only' });
+      const target = db.getUserById(asId);
+      if (!target) return send(res, 404, { error: 'User not found' });
+      owner = db.publicUser(target);
+    }
+
+    await ensureUserSite(owner.id);
+    const ctx = { ...contextFor(owner.id), user };
 
     if (url.pathname === '/api/events') {
       res.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive' });
       res.write(`data: ${JSON.stringify({ type: 'hello', siteDir: ctx.root })}\n\n`);
-      const client = { res, userId: user.id };
+      // Register under the viewed project's id so its file changes reach this stream.
+      const client = { res, userId: owner.id };
       clients.add(client);
       const ping = setInterval(() => res.write(': ping\n\n'), 25_000);
       req.on('close', () => {

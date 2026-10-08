@@ -15,6 +15,16 @@ export function setUnauthorizedHandler(fn: () => void): void {
   onUnauthorized = fn;
 }
 
+/** When an admin is viewing another user's project, their id is sent on every request. */
+let actingAsId: string | null = null;
+export function setActingAs(id: string | null): void {
+  actingAsId = id;
+}
+/** Query suffix for the EventSource URL (which can't send headers). */
+export function actingAsQuery(): string {
+  return actingAsId ? `?as=${encodeURIComponent(actingAsId)}` : '';
+}
+
 /**
  * Calls the project server (server/index.mjs). Every request carries the X-CMS header
  * the server requires for writes, and the session cookie (credentials) for auth.
@@ -25,7 +35,11 @@ export async function api<T = any>(method: string, url: string, body?: unknown):
     res = await fetch(url, {
       method,
       credentials: 'include',
-      headers: { 'X-CMS': '1', ...(body !== undefined ? { 'Content-Type': 'application/json' } : {}) },
+      headers: {
+        'X-CMS': '1',
+        ...(actingAsId ? { 'X-CMS-As': actingAsId } : {}),
+        ...(body !== undefined ? { 'Content-Type': 'application/json' } : {}),
+      },
       body: body !== undefined ? JSON.stringify(body) : undefined,
     });
   } catch {

@@ -108,6 +108,24 @@ describe('security + auth gating', () => {
   });
 });
 
+describe('mobile number login', () => {
+  test('register with a mobile number, then log in with it', async () => {
+    const reg = makeClient();
+    const r = await reg.post('/api/auth/register', { email: 'mobile@example.com', password: 'mobile11', phone: '+1 555 987 6543' });
+    assert.equal(r.status, 200);
+    assert.equal(r.data.user.phone, '+15559876543');
+
+    // Log in by email…
+    const byEmail = makeClient();
+    assert.equal((await byEmail.post('/api/auth/login', { identifier: 'mobile@example.com', password: 'mobile11' })).status, 200);
+    // …and by mobile number.
+    const byPhone = makeClient();
+    assert.equal((await byPhone.post('/api/auth/login', { identifier: '+15559876543', password: 'mobile11' })).status, 200);
+    // Wrong password still fails.
+    assert.equal((await makeClient().post('/api/auth/login', { identifier: '+15559876543', password: 'nope' })).status, 401);
+  });
+});
+
 describe('admin lifecycle: login, project, websites, pages, files', () => {
   const admin = makeClient();
   let siteSlug = 'test-site';
@@ -253,6 +271,35 @@ describe('roles + account', () => {
     assert.equal((await admin.del(`/api/admin/users/${id}`)).status, 200);
   });
 
+  test('admin resets a user password: temp password works, old one is rejected', async () => {
+    const created = await admin.post('/api/admin/users', { email: 'reset-me@example.com', password: 'original1' });
+    const id = created.data.user.id;
+
+    // Original password works first.
+    const before = makeClient();
+    assert.equal((await before.post('/api/auth/login', { email: 'reset-me@example.com', password: 'original1' })).status, 200);
+
+    const reset = await admin.post(`/api/admin/users/${id}/password`);
+    assert.equal(reset.status, 200);
+    assert.equal(reset.data.email, 'reset-me@example.com');
+    assert.ok(reset.data.password && reset.data.password.length >= 8, 'returns a temp password');
+
+    // Old password no longer works; the temp one does.
+    const after = makeClient();
+    assert.equal((await after.post('/api/auth/login', { email: 'reset-me@example.com', password: 'original1' })).status, 401);
+    assert.equal((await after.post('/api/auth/login', { email: 'reset-me@example.com', password: reset.data.password })).status, 200);
+
+    await admin.del(`/api/admin/users/${id}`);
+  });
+
+  test('non-admin cannot reset anyone', async () => {
+    const victim = await admin.post('/api/admin/users', { email: 'victim@example.com', password: 'victim11' });
+    const nonAdmin = makeClient();
+    await nonAdmin.post('/api/auth/register', { email: 'nonadmin@example.com', password: 'napass1' });
+    assert.equal((await nonAdmin.post(`/api/admin/users/${victim.data.user.id}/password`)).status, 403);
+    await admin.del(`/api/admin/users/${victim.data.user.id}`);
+  });
+
   test('admin cannot delete self or demote the last admin', async () => {
     const meId = (await admin.get('/api/auth/me')).data.user.id;
     assert.equal((await admin.del(`/api/admin/users/${meId}`)).status, 400);
@@ -264,6 +311,21 @@ describe('roles + account', () => {
     await bob.post('/api/auth/register', { email: 'bob@example.com', password: 'bobpass' });
     assert.equal((await bob.get('/api/admin/users')).status, 403);
     assert.equal((await bob.post('/api/admin/users', { email: 'x@example.com', password: 'xpass123' })).status, 403);
+  });
+
+  test('user updates their own mobile number, then logs in with it', async () => {
+    const u = makeClient();
+    await u.post('/api/auth/register', { email: 'phoneuser@example.com', password: 'phoneu11' });
+    const res = await u.post('/api/account/phone', { phone: '+1 555 444 3322' });
+    assert.equal(res.status, 200);
+    assert.equal(res.data.user.phone, '+15554443322');
+
+    const byNum = makeClient();
+    assert.equal((await byNum.post('/api/auth/login', { identifier: '+15554443322', password: 'phoneu11' })).status, 200);
+
+    // Clearing it removes number login.
+    assert.equal((await u.post('/api/account/phone', { phone: '' })).data.user.phone, null);
+    assert.equal((await makeClient().post('/api/auth/login', { identifier: '+15554443322', password: 'phoneu11' })).status, 401);
   });
 
   test('user changes their own password; wrong current is rejected', async () => {
@@ -291,6 +353,43 @@ describe('per-user isolation', () => {
     const daveProject = await dave.get('/api/project');
     assert.equal(daveProject.data.websites.length, 0, "dave sees none of admin's sites");
     assert.equal((await dave.get('/api/websites/admin-only')).status, 404);
+  });
+});
+
+describe('admin can view a user\'s websites (X-CMS-As)', () => {
+  const admin = makeClient();
+  let eveId;
+
+  test('a user creates two websites', async () => {
+    const eve = makeClient();
+    const reg = await eve.post('/api/auth/register', { email: 'eve@example.com', password: 'evepass1' });
+    eveId = reg.data.user.id;
+    for (const slug of ['eve-one', 'eve-two']) {
+      await eve.post('/api/websites', {
+        website: { id: slug, slug, name: slug, status: 'draft', templateId: 'blank', homepage: 'home', pages: [{ slug: 'home' }], theme: {}, customCss: '' },
+      });
+    }
+    const own = await eve.get('/api/project');
+    assert.equal(own.data.websites.length, 2);
+  });
+
+  test("admin sees nothing of eve's by default, but sees both with X-CMS-As", async () => {
+    await admin.post('/api/auth/login', ADMIN);
+    const ownView = await admin.get('/api/project');
+    assert.ok(!ownView.data.websites.some((w) => w.website.slug.startsWith('eve-')), 'own project has no eve sites');
+
+    const asEve = await admin.get('/api/project', { 'X-CMS-As': eveId });
+    const slugs = asEve.data.websites.map((w) => w.website.slug).sort();
+    assert.deepEqual(slugs, ['eve-one', 'eve-two'], 'admin sees both of eve\'s sites');
+
+    // Admin can open one of eve's websites directly.
+    assert.equal((await admin.get('/api/websites/eve-one', { 'X-CMS-As': eveId })).status, 200);
+  });
+
+  test('a non-admin cannot use X-CMS-As to view others', async () => {
+    const mallory = makeClient();
+    await mallory.post('/api/auth/register', { email: 'mallory@example.com', password: 'malpass1' });
+    assert.equal((await mallory.get('/api/project', { 'X-CMS-As': eveId })).status, 403);
   });
 });
 

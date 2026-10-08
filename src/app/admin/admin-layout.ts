@@ -74,6 +74,12 @@ import { Icon } from '../shared/icon';
         </div>
       </aside>
       <main class="adm-main">
+        @if (auth.viewingAs(); as viewing) {
+          <div class="adm-viewing">
+            <span><app-icon name="globe" [size]="14" /> Viewing <strong>{{ viewing.email }}</strong>'s websites</span>
+            <button type="button" (click)="exitViewing()">Exit</button>
+          </div>
+        }
         @if (project.status() === 'offline' && !pages.loaded()) {
           <div class="adm-empty offline">
             <h2>Can't reach the project server</h2>
@@ -111,6 +117,34 @@ import { Icon } from '../shared/icon';
   `,
   styles: [
     `
+      .adm-viewing {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 10px 16px;
+        border: 1px solid #fde68a;
+        border-radius: 10px;
+        background: #fffbeb;
+        color: #92400e;
+        font-size: 0.9rem;
+      }
+      .adm-viewing span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .adm-viewing button {
+        padding: 5px 14px;
+        border: 1px solid #f59e0b;
+        border-radius: 8px;
+        background: #fff;
+        color: #92400e;
+        font-weight: 600;
+        cursor: pointer;
+      }
       .adm-account {
         display: flex;
         align-items: center;
@@ -205,5 +239,11 @@ export class AdminLayout {
   protected async logout(): Promise<void> {
     await this.auth.logout();
     await this.router.navigateByUrl('/login');
+  }
+
+  /** Stop viewing another user's websites and reload the admin's own project. */
+  protected async exitViewing(): Promise<void> {
+    this.auth.stopViewing();
+    await this.project.connect();
   }
 }

@@ -1,14 +1,18 @@
 import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiError, api } from '../../core/api';
 import { AuthService } from '../../core/auth.service';
+import { ProjectService } from '../../core/project.service';
 import { Icon } from '../../shared/icon';
+import { PhoneInput, PhoneValue } from '../../shared/phone-input';
 import { Role, RoleSelect } from './role-select';
 
 interface ManagedUser {
   id: string;
   email: string;
+  phone?: string | null;
   role: 'user' | 'admin';
   created_at: string;
 }
@@ -17,7 +21,7 @@ interface ManagedUser {
 @Component({
   selector: 'app-users',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule, DatePipe, Icon, RoleSelect],
+  imports: [FormsModule, DatePipe, Icon, RoleSelect, PhoneInput],
   template: `
     <div class="um">
       <header class="um-head">
@@ -34,6 +38,10 @@ interface ManagedUser {
           <div class="um-field um-field-grow">
             <label for="um-email">Email</label>
             <input id="um-email" type="email" name="email" placeholder="name@company.com" autocomplete="off" [(ngModel)]="email" required />
+          </div>
+          <div class="um-field um-field-grow">
+            <span class="um-label">Mobile number <span class="um-opt">(optional)</span></span>
+            <app-phone-input (changed)="onPhone($event)" />
           </div>
           <div class="um-field um-field-grow">
             <label for="um-password">Temporary password</label>
@@ -67,10 +75,12 @@ interface ManagedUser {
                   <td>
                     <div class="um-user">
                       <span class="um-avatar" [class.um-avatar-admin]="u.role === 'admin'" aria-hidden="true">{{ u.email.charAt(0).toUpperCase() }}</span>
-                      <span class="um-email">{{ u.email }}</span>
-                      @if (u.id === auth.user()?.id) {
-                        <span class="um-you">You</span>
-                      }
+                      <span class="um-identity">
+                        <span class="um-email">{{ u.email }}@if (u.id === auth.user()?.id) {<span class="um-you">You</span>}</span>
+                        @if (u.phone) {
+                          <span class="um-phone">{{ u.phone }}</span>
+                        }
+                      </span>
                     </div>
                   </td>
                   <td>
@@ -85,9 +95,17 @@ interface ManagedUser {
                   <td class="um-date">{{ u.created_at | date: 'd MMM y' }}</td>
                   <td class="um-right">
                     @if (u.id !== auth.user()?.id) {
-                      <button type="button" class="um-del" (click)="remove(u)" [attr.aria-label]="'Delete ' + u.email">
-                        <app-icon name="trash" [size]="14" /> Delete
-                      </button>
+                      <div class="um-actions">
+                        <button type="button" class="um-reset" (click)="viewWebsites(u)" [attr.aria-label]="'View websites of ' + u.email">
+                          View websites
+                        </button>
+                        <button type="button" class="um-reset" (click)="resetPassword(u)" [attr.aria-label]="'Reset password for ' + u.email">
+                          Reset password
+                        </button>
+                        <button type="button" class="um-del" (click)="remove(u)" [attr.aria-label]="'Delete ' + u.email">
+                          <app-icon name="trash" [size]="14" /> Delete
+                        </button>
+                      </div>
                     } @else {
                       <span class="um-dash">—</span>
                     }
@@ -122,8 +140,32 @@ interface ManagedUser {
         </footer>
       </div>
     }
+
+    @if (resetResult(); as r) {
+      <div class="modal-backdrop" (click)="closeReset()"></div>
+      <div class="modal um-confirm" role="alertdialog" aria-modal="true" aria-labelledby="um-reset-title">
+        <header class="modal-head">
+          <h2 id="um-reset-title">Temporary password</h2>
+        </header>
+        <div class="modal-body">
+          <p>
+            A temporary password for <strong>{{ r.email }}</strong> was created. Share it with them securely — it won't be shown again.
+            They'll be signed out everywhere and should change it from <strong>Your profile</strong> after signing in.
+          </p>
+          <div class="um-temp">
+            <code class="um-temp-code">{{ r.password }}</code>
+            <button type="button" class="um-btn um-btn-ghost" (click)="copyTemp(r.password)">
+              <app-icon name="{{ copied() ? 'check' : 'copy' }}" [size]="14" /> {{ copied() ? 'Copied' : 'Copy' }}
+            </button>
+          </div>
+        </div>
+        <footer class="modal-foot">
+          <button type="button" class="um-btn um-btn-primary" (click)="closeReset()">Done</button>
+        </footer>
+      </div>
+    }
   `,
-  host: { '(document:keydown.escape)': 'cancelRole()' },
+  host: { '(document:keydown.escape)': 'cancelRole(); closeReset()' },
   styles: [
     `
       .um {
@@ -330,11 +372,28 @@ interface ManagedUser {
         background: linear-gradient(135deg, #6366f1, #4f46e5);
         color: #fff;
       }
+      .um-identity {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+      }
       .um-email {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
         overflow: hidden;
         font-weight: 600;
         text-overflow: ellipsis;
         white-space: nowrap;
+      }
+      .um-phone {
+        color: #94a3b8;
+        font-size: 0.8rem;
+      }
+      .um-opt {
+        color: #94a3b8;
+        font-weight: 400;
       }
       .um-you {
         padding: 2px 8px;
@@ -372,6 +431,50 @@ interface ManagedUser {
       .um-del:hover {
         border-color: #f97066;
         background: #fef3f2;
+      }
+      .um-actions {
+        display: inline-flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+      .um-reset {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        border: 1px solid #d5dbe6;
+        border-radius: 8px;
+        background: #fff;
+        color: #334155;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s, border-color 0.15s;
+      }
+      .um-reset:hover {
+        border-color: #4f46e5;
+        color: #4f46e5;
+        background: #f5f3ff;
+      }
+      .um-temp {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 14px;
+        padding: 10px 12px;
+        border: 1px dashed #c7d2fe;
+        border-radius: 10px;
+        background: #f5f3ff;
+      }
+      .um-temp-code {
+        flex: 1;
+        font-family: ui-monospace, Menlo, Consolas, monospace;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #3730a3;
+        word-break: break-all;
       }
       .um-empty {
         padding: 36px 24px !important;
@@ -438,6 +541,8 @@ interface ManagedUser {
 })
 export class Users {
   protected readonly auth = inject(AuthService);
+  private readonly project = inject(ProjectService);
+  private readonly router = inject(Router);
 
   readonly users = signal<ManagedUser[]>([]);
   readonly busy = signal(false);
@@ -445,9 +550,19 @@ export class Users {
   /** A role change waiting for the admin's Yes or No. */
   protected readonly pending = signal<{ user: ManagedUser; role: 'user' | 'admin' } | null>(null);
   protected readonly saving = signal(false);
+  /** The one-time temporary password to show the admin after a reset. */
+  protected readonly resetResult = signal<{ email: string; password: string } | null>(null);
+  protected readonly copied = signal(false);
   email = '';
+  phone = '';
+  phoneValid = true;
   password = '';
   role: Role = 'user';
+
+  onPhone(e: PhoneValue): void {
+    this.phone = e.value;
+    this.phoneValid = e.valid;
+  }
 
   constructor() {
     void this.load();
@@ -465,10 +580,14 @@ export class Users {
   async create(): Promise<void> {
     if (this.busy()) return;
     this.error.set('');
+    if (!this.phoneValid) {
+      this.error.set('Enter a valid mobile number for the selected country, or leave it empty.');
+      return;
+    }
     this.busy.set(true);
     try {
-      await api('POST', '/api/admin/users', { email: this.email, password: this.password, role: this.role });
-      this.email = this.password = '';
+      await api('POST', '/api/admin/users', { email: this.email, phone: this.phone, password: this.password, role: this.role });
+      this.email = this.phone = this.password = '';
       this.role = 'user';
       await this.load();
     } catch (e) {
@@ -505,6 +624,39 @@ export class Users {
       this.saving.set(false);
       this.pending.set(null);
       await this.load();
+    }
+  }
+
+  /** Admin reset: the server generates a temporary password, which we then show once. */
+  async resetPassword(u: ManagedUser): Promise<void> {
+    if (!confirm(`Reset the password for ${u.email}? They'll be signed out and need the new temporary password to sign in.`)) return;
+    this.error.set('');
+    try {
+      const res = await api<{ email: string; password: string }>('POST', `/api/admin/users/${u.id}/password`);
+      this.copied.set(false);
+      this.resetResult.set(res);
+    } catch (e) {
+      this.error.set(e instanceof ApiError ? e.message : 'Could not reset the password.');
+    }
+  }
+
+  protected closeReset(): void {
+    this.resetResult.set(null);
+  }
+
+  /** Open a user's websites: switch the project context to them and go to the dashboard. */
+  async viewWebsites(u: ManagedUser): Promise<void> {
+    this.auth.viewAs({ id: u.id, email: u.email });
+    await this.project.connect(); // reloads with the X-CMS-As header → that user's sites
+    await this.router.navigateByUrl('/admin');
+  }
+
+  protected async copyTemp(password: string): Promise<void> {
+    try {
+      await navigator.clipboard.writeText(password);
+      this.copied.set(true);
+    } catch {
+      /* clipboard blocked; the admin can select the text manually */
     }
   }
 

@@ -1,5 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
-import { ApiError, api } from './api';
+import { ApiError, actingAsQuery, api } from './api';
 import { ComponentDef } from './engine/render';
 import { LandingPage, Theme, Website } from './models';
 import { setSectionDefs } from './section-registry';
@@ -126,7 +126,8 @@ export class ProjectService {
 
   private listen(): void {
     this.events?.close();
-    const events = new EventSource('/api/events');
+    // Carry the "view as" id so an admin viewing a user gets that user's file events.
+    const events = new EventSource('/api/events' + actingAsQuery());
     this.events = events;
     let wasOffline = false;
     events.onmessage = (msg) => {

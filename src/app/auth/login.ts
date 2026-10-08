@@ -4,12 +4,13 @@ import { Router } from '@angular/router';
 import { ApiError } from '../core/api';
 import { AuthService } from '../core/auth.service';
 import { ProjectService } from '../core/project.service';
+import { PhoneInput, PhoneValue } from '../shared/phone-input';
 
 /** Sign-in / sign-up screen. On success it routes into the admin dashboard. */
 @Component({
   selector: 'app-login',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule],
+  imports: [FormsModule, PhoneInput],
   template: `
     <div class="login-wrap">
       <form class="login-card" (ngSubmit)="submit()">
@@ -19,10 +20,21 @@ import { ProjectService } from '../core/project.service';
           {{ mode() === 'login' ? 'Sign in to build and manage your websites.' : 'Sign up to start building websites.' }}
         </p>
 
-        <label>
-          Email
-          <input type="email" name="email" [(ngModel)]="email" autocomplete="email" required autofocus />
-        </label>
+        @if (mode() === 'login') {
+          <label>
+            Email or mobile number
+            <input type="text" name="identifier" [(ngModel)]="identifier" autocomplete="username" required autofocus />
+          </label>
+        } @else {
+          <label>
+            Email
+            <input type="email" name="email" [(ngModel)]="email" autocomplete="email" required autofocus />
+          </label>
+          <div class="login-phone">
+            <span class="login-field-label">Mobile number <span class="login-optional">(optional)</span></span>
+            <app-phone-input (changed)="onPhone($event)" />
+          </div>
+        }
         <label>
           Password
           <input type="password" name="password" [(ngModel)]="password" autocomplete="{{ mode() === 'login' ? 'current-password' : 'new-password' }}" required />
@@ -95,6 +107,20 @@ import { ProjectService } from '../core/project.service';
         color: #64748b;
         font-size: 0.9rem;
       }
+      .login-optional {
+        color: #94a3b8;
+        font-weight: 400;
+      }
+      .login-phone {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .login-field-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #334155;
+      }
       label {
         display: flex;
         flex-direction: column;
@@ -162,8 +188,16 @@ export class Login {
   readonly mode = signal<'login' | 'register'>('login');
   readonly busy = signal(false);
   readonly error = signal('');
+  identifier = ''; // email or mobile, used when signing in
   email = '';
+  phone = '';
+  phoneValid = true;
   password = '';
+
+  onPhone(e: PhoneValue): void {
+    this.phone = e.value;
+    this.phoneValid = e.valid;
+  }
 
   toggle(): void {
     this.mode.update((m) => (m === 'login' ? 'register' : 'login'));
@@ -172,11 +206,15 @@ export class Login {
 
   async submit(): Promise<void> {
     if (this.busy()) return;
+    if (this.mode() === 'register' && !this.phoneValid) {
+      this.error.set('Enter a valid mobile number for the selected country, or leave it empty.');
+      return;
+    }
     this.error.set('');
     this.busy.set(true);
     try {
-      if (this.mode() === 'login') await this.auth.login(this.email, this.password);
-      else await this.auth.register(this.email, this.password);
+      if (this.mode() === 'login') await this.auth.login(this.identifier, this.password);
+      else await this.auth.register(this.email, this.password, this.phone);
       // Load this user's project folder now that we have a session, then enter the app.
       await this.project.connect();
       await this.router.navigateByUrl('/admin');
