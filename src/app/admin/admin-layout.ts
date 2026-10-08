@@ -39,11 +39,13 @@ import { Icon } from '../shared/icon';
         <div class="adm-sidebar-foot">
           @if (auth.user(); as user) {
             <div class="adm-account">
-              <span class="adm-account-email" [title]="user.email">
-                {{ user.email }}@if (user.role === 'admin') {<span class="adm-role">admin</span>}
+              <span class="adm-avatar" aria-hidden="true">{{ user.email.charAt(0).toUpperCase() }}</span>
+              <span class="adm-account-info">
+                <span class="adm-account-email" [title]="user.email">{{ user.email }}</span>
+                <span class="adm-role" [class.adm-role-admin]="user.role === 'admin'">{{ user.role === 'admin' ? 'Admin' : 'User' }}</span>
               </span>
-              <button type="button" class="adm-signout" (click)="logout()">Sign out</button>
             </div>
+            <button type="button" class="adm-signout" (click)="logout()">Sign out</button>
           }
           <span class="conn" [class.conn-ok]="project.status() === 'ready'" [class.conn-bad]="project.status() === 'offline'">
             {{ project.status() === 'ready' ? 'Synced with project folder' : project.status() === 'offline' ? 'Project server offline' : 'Connecting…' }}
@@ -96,39 +98,75 @@ import { Icon } from '../shared/icon';
       .adm-account {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-        margin-bottom: 8px;
+        gap: 10px;
+        min-width: 0;
+        margin-bottom: 10px;
+      }
+      .adm-avatar {
+        flex: none;
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #6366f1, #4f46e5);
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+      .adm-account-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        min-width: 0;
       }
       .adm-account-email {
-        font-size: 0.8rem;
-        font-weight: 600;
+        max-width: 100%;
         overflow: hidden;
+        color: #e2e8f0;
+        font-size: 0.82rem;
+        font-weight: 600;
         text-overflow: ellipsis;
         white-space: nowrap;
       }
       .adm-role {
-        margin-left: 6px;
-        padding: 1px 6px;
-        border-radius: 6px;
-        background: #4f46e5;
-        color: #fff;
-        font-size: 0.65rem;
+        padding: 1px 8px;
+        border-radius: 999px;
+        background: rgb(148 163 184 / 18%);
+        color: #cbd5e1;
+        font-size: 0.66rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
-        letter-spacing: 0.04em;
+      }
+      .adm-role-admin {
+        background: rgb(99 102 241 / 28%);
+        color: #c7d2fe;
       }
       .adm-signout {
-        flex: none;
-        background: none;
-        border: 1px solid currentColor;
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 7px 10px;
+        border: 1px solid rgb(148 163 184 / 35%);
         border-radius: 8px;
-        padding: 4px 10px;
-        font-size: 0.78rem;
+        background: transparent;
+        color: #cbd5e1;
+        font: inherit;
+        font-size: 0.8rem;
+        font-weight: 600;
         cursor: pointer;
-        opacity: 0.8;
+        transition: background 0.15s, border-color 0.15s, color 0.15s;
       }
       .adm-signout:hover {
-        opacity: 1;
+        border-color: rgb(248 113 113 / 60%);
+        background: rgb(248 113 113 / 12%);
+        color: #fecaca;
+      }
+      .adm-signout:focus-visible {
+        outline: 2px solid #818cf8;
+        outline-offset: 2px;
       }
     `,
   ],
