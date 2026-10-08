@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, SecurityContext, computed, effect, inject, input, output, untracked } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { api } from '../core/api';
 import { ComponentDef, RenderOptions, renderPageCss, renderSection } from '../core/engine/render';
 import { loadFonts } from '../core/font-loader';
-import { LeadStore } from '../core/lead-store';
 import { LandingPage, Selection } from '../core/models';
 import { MenuItem } from '../core/engine/render';
 import { PageStore } from '../core/page-store';
@@ -76,7 +76,6 @@ export class PageRenderer {
   private readonly pageStore = inject(PageStore);
   private readonly router = inject(Router);
   private readonly sanitizer = inject(DomSanitizer);
-  private readonly leads = inject(LeadStore);
   private readonly host = inject<ElementRef<HTMLElement>>(ElementRef).nativeElement;
 
   private readonly scope = uid('r');
@@ -352,13 +351,18 @@ export class PageRenderer {
     }
     event.preventDefault();
     const data = new FormData(form);
-    this.leads.add({
-      pageId: this.page().id,
-      pageTitle: this.page().title,
+    // Persist to the server (SQLite) and let it email the recipient. The owner is the
+    // signed-in user (server-side); pageSlug + sectionId let the server look up THIS
+    // form's "send submissions to" address — the recipient never comes from the client.
+    void api('POST', '/api/submit', {
+      site: this.page().website,
+      pageSlug: this.page().slug,
+      sectionId: (form.closest('[data-section-id]') as HTMLElement | null)?.dataset['sectionId'] ?? '',
+      page: this.page().title,
       name: String(data.get('name') ?? ''),
       email: String(data.get('email') ?? ''),
       message: String(data.get('message') ?? ''),
-    });
+    }).catch(() => {});
     form.reset();
     form.querySelector('.lp-success')?.remove();
     const msg = document.createElement('p');

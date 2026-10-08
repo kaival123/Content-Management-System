@@ -6,6 +6,7 @@ import { AuthService } from './core/auth.service';
 import { Exporter } from './core/exporter';
 import { PageStore } from './core/page-store';
 import { ProjectService } from './core/project.service';
+import { SubmissionStore } from './core/submission-store';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,13 +20,17 @@ export const appConfig: ApplicationConfig = {
       const auth = inject(AuthService);
       const router = inject(Router);
       const project = inject(ProjectService);
+      const submissions = inject(SubmissionStore);
       // A 401 from any later call means the session ended: drop it and go to login.
       setUnauthorizedHandler(() => {
         auth.clear();
         void router.navigateByUrl('/login');
       });
       await auth.init();
-      if (auth.isLoggedIn()) await project.connect();
+      if (auth.isLoggedIn()) {
+        await project.connect();
+        void submissions.load();
+      }
     }),
   ],
 };

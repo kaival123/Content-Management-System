@@ -39,7 +39,7 @@ if (await serverAlreadyRunning()) {
   // --watch restarts the server automatically when any server/*.mjs file changes, so
   // you never run stale server code after an edit. (Data files aren't imported, so
   // editing websites doesn't trigger a restart.)
-  const server = spawn(process.execPath, ['--watch', '--experimental-sqlite', 'server/index.mjs'], { stdio: 'inherit' });
+  const server = spawn(process.execPath, ['--watch', '--env-file-if-exists=.env', '--experimental-sqlite', 'server/index.mjs'], { stdio: 'inherit' });
   server.on('exit', (code) => {
     if (code) {
       console.error(`Project server exited (code ${code}). Is port ${API_PORT} in use by another program?`);

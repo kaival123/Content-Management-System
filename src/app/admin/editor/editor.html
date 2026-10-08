@@ -413,7 +413,7 @@
                     <p class="field-hint">Or click any element in the preview to style it.</p>
                     <h3 class="panel-label">All content</h3>
                   }
-                  <app-section-form [fields]="selectedDef()!.fields" [data]="s.data" (patch)="patchSection(s.id, $event)" [pages]="sitePages()" />
+                  <app-section-form [fields]="sectionFields()" [data]="s.data" (patch)="patchSection(s.id, $event)" [pages]="sitePages()" />
                 }
               }
               @case ('slider') {

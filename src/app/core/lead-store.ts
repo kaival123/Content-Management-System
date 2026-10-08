@@ -5,6 +5,9 @@ export interface Lead {
   id: string;
   pageId: string;
   pageTitle: string;
+  /** Website slug the submission came from (older entries derive it from pageId). */
+  website?: string;
+  websiteName?: string;
   name: string;
   email: string;
   message: string;

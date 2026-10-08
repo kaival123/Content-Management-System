@@ -20,6 +20,10 @@ services:
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
       # Served over HTTPS by Caddy → cookies must be Secure.
       CMS_SECURE_COOKIE: "1"
+      # Optional: email form submissions to site owners (blank = disabled).
+      EMAIL_PROVIDER: ${EMAIL_PROVIDER:-}
+      EMAIL_API_KEY: ${EMAIL_API_KEY:-}
+      EMAIL_FROM: ${EMAIL_FROM:-}
     volumes:
       - cms-data:/data          # SQLite + all users' website files live here
     restart: unless-stopped

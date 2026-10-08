@@ -48,3 +48,6 @@ Thumbs.db
 
 # Runtime data: SQLite database + per-user website folders (never commit user data)
 /data
+
+# Local env vars (API keys, secrets) — never commit
+/.env

@@ -22,6 +22,7 @@ import http from 'node:http';
 import path from 'node:path';
 import { Db } from './db.mjs';
 import { Git } from './git.mjs';
+import { emailConfigured, sendEmail } from './mail.mjs';
 import { IGNORED_DIRS, Project, ProjectError, hash, readText, toPosix, writeText } from './project.mjs';
 
 const DATA_DIR = (() => {
@@ -53,6 +54,42 @@ const db = new Db(path.join(DATA_DIR, 'cms.db'));
     console.error(`Could not seed the admin account (${email}): ${e.message}. Set valid ADMIN_EMAIL / ADMIN_PASSWORD.`);
   }
 })();
+
+/**
+ * Resolves where a submission is emailed, most specific first:
+ *   the contact section's "Send submissions to" → the website's notify email → the account email.
+ * The recipient is always read from saved data, never from the submitted request.
+ */
+async function recipientFor(owner, site, pageSlug, sectionId) {
+  const project = contextFor(owner.id).project;
+  try {
+    if (pageSlug && sectionId) {
+      const { page } = await project.readPage(site, pageSlug);
+      const section = page.sections.find((s) => s.id === sectionId);
+      const email = section?.data?.notifyEmail?.trim();
+      if (email) return email;
+    }
+  } catch {
+    /* fall through to website/account */
+  }
+  const websiteEmail = (await project.readWebsite(site).catch(() => null))?.website?.notifyEmail?.trim();
+  return websiteEmail || owner.email;
+}
+
+/** Emails `to` about a new form submission (no-op if email isn't configured). */
+function notifySubmission(to, s) {
+  if (!emailConfigured() || !to) return;
+  const lines = [
+    `New form submission on "${s.site || 'your site'}"${s.page ? ` (page: ${s.page})` : ''}.`,
+    '',
+    `Name:    ${s.name || '—'}`,
+    `Email:   ${s.email || '—'}`,
+    `Message: ${s.message || '—'}`,
+  ];
+  sendEmail({ to, subject: `New submission on ${s.site || 'your site'}`, text: lines.join('\n') }).catch((e) =>
+    console.error(`Submission email to ${to} failed: ${e.message}`),
+  );
+}
 
 // One Project/Git per user, created on demand and cached.
 const perUser = new Map();
@@ -553,9 +590,13 @@ const server = http.createServer(async (req, res) => {
   // --- public: form submissions from published pages ---
   if (req.method === 'POST' && url.pathname === '/api/submit') {
     try {
-      const { ownerId, site, name, email, message } = await readBody(req);
-      if (!ownerId || !db.getUserById(ownerId)) return send(res, 400, { error: 'Unknown site owner' });
-      db.addSubmission({ ownerId, site, name, email, message });
+      const { ownerId, site, pageSlug, sectionId, page, name, email, message } = await readBody(req);
+      // The owner is the explicit ownerId (external published pages) or the signed-in
+      // user (a form submitted while viewing one's own site inside the app).
+      const owner = ownerId ? db.getUserById(ownerId) : user ? db.getUserById(user.id) : null;
+      if (!owner) return send(res, 400, { error: 'Unknown site owner' });
+      db.addSubmission({ ownerId: owner.id, site, page, name, email, message });
+      notifySubmission(await recipientFor(owner, site, pageSlug, sectionId), { site, page, name, email, message });
       return send(res, 200, { ok: true });
     } catch (e) {
       return send(res, 400, { error: e.message });

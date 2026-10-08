@@ -142,6 +142,16 @@ export class Editor {
     const s = this.selected();
     return s ? getSectionDef(s.type) : null;
   });
+  /** The section's own fields, plus a "send submissions to" field for contact forms. */
+  protected readonly sectionFields = computed<FieldDef[]>(() => {
+    const def = this.selectedDef();
+    if (!def) return [];
+    if (this.selected()?.type !== 'contact') return def.fields;
+    return [
+      ...def.fields,
+      { key: 'notifyEmail', label: 'Send form submissions to', type: 'text', placeholder: 'defaults to the website / account email' },
+    ];
+  });
   protected readonly selection = computed<Selection | null>(() => {
     const id = this.selectedId();
     if (!id) return null;

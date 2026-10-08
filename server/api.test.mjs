@@ -232,23 +232,30 @@ describe('form submissions', () => {
     ownerId = (await admin.get('/api/auth/me')).data.user.id;
   });
 
-  test('public submit (no session) stores a submission', async () => {
+  test('public submit (no session) with explicit ownerId stores a submission', async () => {
     const anon = makeClient();
-    const r = await anon.post('/api/submit', { ownerId, site: 'test-site', name: 'Lead', email: 'lead@x.com', message: 'interested' });
+    const r = await anon.post('/api/submit', { ownerId, site: 'test-site', page: 'Contact', name: 'Lead', email: 'lead@x.com', message: 'interested' });
     assert.equal(r.status, 200);
   });
 
-  test('submit with unknown owner is rejected', async () => {
+  test('in-app submit (session, no ownerId) is attributed to the signed-in user', async () => {
+    const r = await admin.post('/api/submit', { site: 'test-site', page: 'Home', name: 'Self', email: 'self@x.com', message: 'hi' });
+    assert.equal(r.status, 200);
+  });
+
+  test('submit with unknown owner and no session is rejected', async () => {
     const anon = makeClient();
     assert.equal((await anon.post('/api/submit', { ownerId: 'u_nope', site: 's' })).status, 400);
   });
 
-  test('owner lists their submissions', async () => {
+  test('owner lists their submissions with site + page, then deletes one', async () => {
     const r = await admin.get('/api/submissions');
     assert.equal(r.status, 200);
-    assert.ok(r.data.submissions.length >= 1);
-    const id = r.data.submissions[0].id;
-    assert.equal((await admin.del(`/api/submissions/${id}`)).status, 200);
+    assert.ok(r.data.submissions.length >= 2);
+    const withPage = r.data.submissions.find((s) => s.page === 'Contact');
+    assert.ok(withPage, 'page is stored and returned');
+    assert.equal(withPage.site, 'test-site');
+    assert.equal((await admin.del(`/api/submissions/${r.data.submissions[0].id}`)).status, 200);
   });
 });
 

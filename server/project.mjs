@@ -203,6 +203,7 @@ export class Project {
       pages,
       theme: meta.theme ?? {},
       customCss: css ?? '',
+      notifyEmail: meta.notifyEmail ?? '',
       createdAt: meta.createdAt ?? new Date().toISOString(),
       updatedAt: meta.updatedAt ?? new Date().toISOString(),
     };
@@ -220,6 +221,7 @@ export class Project {
         homepage: website.homepage,
         pages: website.pages,
         theme: website.theme,
+        ...(website.notifyEmail?.trim() ? { notifyEmail: website.notifyEmail.trim() } : {}),
         createdAt: website.createdAt,
         updatedAt: website.updatedAt,
       }),

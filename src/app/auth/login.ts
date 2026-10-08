@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ApiError } from '../core/api';
 import { AuthService } from '../core/auth.service';
 import { ProjectService } from '../core/project.service';
+import { SubmissionStore } from '../core/submission-store';
 import { PhoneInput, PhoneValue } from '../shared/phone-input';
 
 /** Sign-in / sign-up screen. On success it routes into the admin dashboard. */
@@ -183,6 +184,7 @@ import { PhoneInput, PhoneValue } from '../shared/phone-input';
 export class Login {
   private readonly auth = inject(AuthService);
   private readonly project = inject(ProjectService);
+  private readonly submissions = inject(SubmissionStore);
   private readonly router = inject(Router);
 
   readonly mode = signal<'login' | 'register'>('login');
@@ -217,6 +219,7 @@ export class Login {
       else await this.auth.register(this.email, this.password, this.phone);
       // Load this user's project folder now that we have a session, then enter the app.
       await this.project.connect();
+      void this.submissions.load();
       await this.router.navigateByUrl('/admin');
     } catch (e) {
       this.error.set(e instanceof ApiError ? e.message : 'Something went wrong. Try again.');

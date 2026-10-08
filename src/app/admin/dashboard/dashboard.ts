@@ -1,7 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { LeadStore } from '../../core/lead-store';
+import { SubmissionStore } from '../../core/submission-store';
 import { LandingPage, PageStatus, Website } from '../../core/models';
 import { PageStore } from '../../core/page-store';
 import { ProjectService } from '../../core/project.service';
@@ -24,7 +24,7 @@ type Filter = 'all' | PageStatus;
 export class Dashboard {
   protected readonly websites = inject(WebsiteStore);
   protected readonly pages = inject(PageStore);
-  protected readonly leads = inject(LeadStore);
+  protected readonly submissions = inject(SubmissionStore);
   private readonly site = inject(SiteService);
   private readonly project = inject(ProjectService);
   private readonly router = inject(Router);
@@ -38,7 +38,7 @@ export class Dashboard {
   protected readonly stats = computed(() => {
     const sites = this.websites.websites();
     const published = sites.filter((w) => w.status === 'published').length;
-    return { websites: sites.length, pages: this.pages.pages().length, published, leads: this.leads.leads().length };
+    return { websites: sites.length, pages: this.pages.pages().length, published, leads: this.submissions.count() };
   });
 
   protected readonly visible = computed(() => {

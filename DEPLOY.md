@@ -54,6 +54,9 @@ sign in. Data is written under `./data` (git-ignored). The server now runs with
 | `CMS_SECURE_COOKIE` | – | set `1` when served over HTTPS |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | `admin@example.com` / `changeme` | first admin, seeded once |
 | `SESSION_SECRET` | – | long random string (reserved for signing) |
+| `EMAIL_PROVIDER` | – | `resend` or `sendgrid` to email owners on form submissions (blank = off) |
+| `EMAIL_API_KEY` | – | the provider's API key |
+| `EMAIL_FROM` | – | verified sender, e.g. `CMS <no-reply@yourdomain.com>` |
 
 ---
 

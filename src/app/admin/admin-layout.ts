@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { AuthService } from '../core/auth.service';
-import { LeadStore } from '../core/lead-store';
+import { SubmissionStore } from '../core/submission-store';
 import { PageStore } from '../core/page-store';
 import { ProjectService } from '../core/project.service';
 import { WebsiteStore } from '../core/website-store';
@@ -45,8 +45,8 @@ import { Icon } from '../shared/icon';
           }
           <a routerLink="/admin/submissions" routerLinkActive="active">
             <app-icon name="mail" /> Submissions
-            @if (leads.leads().length) {
-              <span class="adm-count">{{ leads.leads().length }}</span>
+            @if (submissions.count()) {
+              <span class="adm-count">{{ submissions.count() }}</span>
             }
           </a>
           <a routerLink="/admin/profile" routerLinkActive="active"><app-icon name="external" /> Your profile</a>
@@ -225,7 +225,7 @@ import { Icon } from '../shared/icon';
 })
 export class AdminLayout {
   protected readonly pages = inject(PageStore);
-  protected readonly leads = inject(LeadStore);
+  protected readonly submissions = inject(SubmissionStore);
   protected readonly project = inject(ProjectService);
   protected readonly websites = inject(WebsiteStore);
   protected readonly auth = inject(AuthService);
@@ -240,6 +240,7 @@ export class AdminLayout {
 
   protected async logout(): Promise<void> {
     await this.auth.logout();
+    this.submissions.clear();
     await this.router.navigateByUrl('/login');
   }
 
@@ -247,5 +248,6 @@ export class AdminLayout {
   protected async exitViewing(): Promise<void> {
     this.auth.stopViewing();
     await this.project.connect();
+    void this.submissions.load();
   }
 }

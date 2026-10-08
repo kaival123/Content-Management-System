@@ -350,6 +350,8 @@ export interface Website {
   theme: Theme;
   /** Site-wide custom CSS (website.css). */
   customCss: string;
+  /** Where this website's form submissions are emailed (empty = the owner's account email). */
+  notifyEmail?: string;
   createdAt: string;
   updatedAt: string;
 }

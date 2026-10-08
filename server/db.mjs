@@ -70,15 +70,18 @@ export class Db {
         id         TEXT PRIMARY KEY,
         owner_id   TEXT NOT NULL,
         site       TEXT NOT NULL,
+        page       TEXT,
         name       TEXT,
         email      TEXT,
         message    TEXT,
         created_at TEXT NOT NULL
       );
     `);
-    // Migrate older databases that predate the phone column.
+    // Migrate older databases that predate newer columns.
     const cols = this.db.prepare('PRAGMA table_info(users)').all().map((c) => c.name);
     if (!cols.includes('phone')) this.db.exec('ALTER TABLE users ADD COLUMN phone TEXT');
+    const subCols = this.db.prepare('PRAGMA table_info(submissions)').all().map((c) => c.name);
+    if (!subCols.includes('page')) this.db.exec('ALTER TABLE submissions ADD COLUMN page TEXT');
     // Unique only among accounts that have a number (partial index).
     this.db.exec('CREATE UNIQUE INDEX IF NOT EXISTS users_phone ON users(phone) WHERE phone IS NOT NULL');
   }
@@ -235,11 +238,11 @@ export class Db {
 
   // --- submissions ------------------------------------------------------------------------
 
-  addSubmission({ ownerId, site, name, email, message }) {
+  addSubmission({ ownerId, site, page, name, email, message }) {
     const row = { id: `s_${randomUUID().replace(/-/g, '').slice(0, 20)}`, created_at: new Date().toISOString() };
     this.db
-      .prepare('INSERT INTO submissions (id, owner_id, site, name, email, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)')
-      .run(row.id, ownerId, site ?? '', name ?? '', email ?? '', message ?? '', row.created_at);
+      .prepare('INSERT INTO submissions (id, owner_id, site, page, name, email, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)')
+      .run(row.id, ownerId, site ?? '', page ?? '', name ?? '', email ?? '', message ?? '', row.created_at);
     return row;
   }
 
