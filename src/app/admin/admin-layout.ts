@@ -36,7 +36,7 @@ import { Icon } from '../shared/icon';
         </a>
         <nav class="adm-nav" (click)="menuOpen.set(false)">
           <a routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            <app-icon name="globe" /> Websites
+            <app-icon name="browser" /> Websites
             <span class="adm-count">{{ websites.websites().length }}</span>
           </a>
           <a routerLink="/admin/new" routerLinkActive="active"><app-icon name="plus" /> Create new website</a>
@@ -49,9 +49,9 @@ import { Icon } from '../shared/icon';
               <span class="adm-count">{{ submissions.count() }}</span>
             }
           </a>
-          <a routerLink="/admin/profile" routerLinkActive="active"><app-icon name="external" /> Your profile</a>
+          <a routerLink="/admin/profile" routerLinkActive="active"><app-icon name="user" /> Your profile</a>
           @if (auth.isAdmin()) {
-            <a routerLink="/admin/users" routerLinkActive="active"><app-icon name="globe" /> User management</a>
+            <a routerLink="/admin/users" routerLinkActive="active"><app-icon name="users" /> User management</a>
           }
         </nav>
         <div class="adm-sidebar-foot">
@@ -68,7 +68,7 @@ import { Icon } from '../shared/icon';
           <span class="conn" [class.conn-ok]="project.status() === 'ready'" [class.conn-bad]="project.status() === 'offline'">
             {{ project.status() === 'ready' ? 'Synced with project folder' : project.status() === 'offline' ? 'Project server offline' : 'Connecting…' }}
           </span>
-          @if (project.siteDir()) {
+          @if (auth.isAdmin() && project.siteDir()) {
             <button type="button" class="adm-folder" [title]="'Open ' + project.siteDir() + ' in VS Code'" (click)="openInVsCode()">
               <app-icon name="external" [size]="13" /> <span>Open in VS Code</span>
             </button>

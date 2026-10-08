@@ -41,7 +41,9 @@
     <div class="ed-top-actions">
       <button type="button" class="btn-icon" title="Undo (Ctrl+Z)" [disabled]="!canUndo()" (click)="undo()"><app-icon name="undo" /></button>
       <button type="button" class="btn-icon" title="Redo (Ctrl+Shift+Z)" [disabled]="!canRedo()" (click)="redo()"><app-icon name="redo" /></button>
-      <button type="button" class="btn-icon" title="Open this page's files in VS Code" (click)="openInVsCode()"><app-icon name="code" /></button>
+      @if (auth.isAdmin()) {
+        <button type="button" class="btn-icon" title="Open this page's files in VS Code" (click)="openInVsCode()"><app-icon name="code" /></button>
+      }
       <a class="btn btn-secondary" [href]="previewUrl()" target="_blank"><app-icon name="eye" [size]="16" /> Preview</a>
       <button type="button" class="btn" [class.btn-primary]="p.status === 'draft'" [class.btn-secondary]="p.status === 'published'" (click)="togglePublish()">
         <app-icon [name]="p.status === 'published' ? 'eye-off' : 'globe'" [size]="16" />
@@ -499,7 +501,9 @@
               <app-icon name="code" [size]="13" />
               <button type="button" class="link" (click)="editCode(s, 'section')">Section file</button>
               <button type="button" class="link" (click)="editCode(s, 'component')">Component code</button>
-              <button type="button" class="link" (click)="openInVsCode(s)">Open in VS Code</button>
+              @if (auth.isAdmin()) {
+                <button type="button" class="link" (click)="openInVsCode(s)">Open in VS Code</button>
+              }
             </div>
           </div>
         }
