@@ -97,7 +97,7 @@
   cursor: pointer;
 }
 
-@container (max-width: 700px) {
+@container (max-width: 1024px) {
   .lp-nav {
     gap: 16px;
   }

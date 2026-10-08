@@ -689,7 +689,7 @@ code {
   min-width: 0; // let children shrink instead of overflowing the viewport
 }
 
-// Mobile top bar + drawer (hidden on desktop; activated under 900px below).
+// Mobile top bar + drawer (hidden on desktop; activated under 1024px below).
 .adm-topbar {
   display: none;
   position: sticky;
@@ -2155,7 +2155,7 @@ code {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .adm-shell {
     grid-template-columns: 1fr;
   }

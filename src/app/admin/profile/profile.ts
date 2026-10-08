@@ -64,55 +64,60 @@ import { PhoneInput, PhoneValue } from '../../shared/phone-input';
   `,
   styles: [
     `
+
+      /* Mobile first: the base rules are the 320px phone layout; wider screens add to them. */
       .prof {
-        max-width: 920px;
-        padding: 24px;
+        width: 100%;
+        min-width: 0;
       }
-      h1 {
-        margin: 0 0 20px;
+      .prof h1 {
+        margin: 0 0 14px;
+        font-size: 1.35rem;
+        letter-spacing: -0.02em;
       }
-      /* Two columns on desktop: Account + Mobile on the left, Change password on the right. */
       .prof-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
         align-items: start;
       }
       .prof-col {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 14px;
         min-width: 0;
       }
-      @media (max-width: 760px) {
-        .prof-grid {
-          grid-template-columns: 1fr;
-        }
-      }
       .prof-card {
-        background: #fff;
-        border: 1px solid #e2e8f0;
+        min-width: 0;
+        padding: 16px;
+        border: 1px solid #e5e9f0;
         border-radius: 14px;
-        padding: 20px 22px;
+        background: #fff;
+        box-shadow: 0 1px 2px rgb(15 23 42 / 4%);
       }
       .prof-card h2 {
-        margin: 0 0 14px;
-        font-size: 1.05rem;
+        margin: 0 0 12px;
+        font-size: 1rem;
+        font-weight: 700;
       }
       .prof-hint {
-        margin: -6px 0 14px;
+        margin: -4px 0 12px;
         color: #64748b;
-        font-size: 0.86rem;
+        font-size: 0.85rem;
+        line-height: 1.45;
       }
       .prof-field-label {
+        color: #334155;
         font-size: 0.85rem;
         font-weight: 600;
-        color: #334155;
       }
       .prof-row {
         display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
         justify-content: space-between;
-        padding: 8px 0;
+        gap: 2px 16px;
+        padding: 10px 0;
         border-bottom: 1px solid #f1f5f9;
       }
       .prof-row:last-child {
@@ -120,6 +125,11 @@ import { PhoneInput, PhoneValue } from '../../shared/phone-input';
       }
       .prof-row span {
         color: #64748b;
+        font-size: 0.88rem;
+      }
+      .prof-row strong {
+        min-width: 0;
+        overflow-wrap: anywhere;
       }
       .prof-role {
         text-transform: capitalize;
@@ -136,40 +146,53 @@ import { PhoneInput, PhoneValue } from '../../shared/phone-input';
         display: flex;
         flex-direction: column;
         gap: 6px;
+        color: #334155;
         font-size: 0.85rem;
         font-weight: 600;
-        color: #334155;
       }
       input {
-        padding: 10px 12px;
-        border: 1px solid #cbd5e1;
+        width: 100%;
+        min-width: 0;
+        height: 44px;
+        padding: 0 12px;
+        border: 1px solid #d5dbe5;
         border-radius: 10px;
-        font-size: 1rem;
-        font-family: inherit;
+        color: #0f172a;
+        font: inherit;
+        font-size: 1rem; /* 16px keeps iOS from zooming into the field */
+        font-weight: 400;
+        transition: border-color 0.15s, box-shadow 0.15s;
       }
       input:focus {
-        outline: 2px solid #4f46e5;
-        border-color: #4f46e5;
+        outline: none;
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgb(99 102 241 / 18%);
       }
       .prof-msg {
         margin: 0;
         padding: 10px 12px;
         border-radius: 10px;
         font-size: 0.85rem;
+        overflow-wrap: anywhere;
       }
       .prof-msg.err {
+        border: 1px solid #fecaca;
         background: #fef2f2;
-        color: #b91c1c;
+        color: #b42318;
       }
       .prof-msg.ok {
-        background: #f0fdf4;
-        color: #15803d;
+        border: 1px solid #abefc6;
+        background: #ecfdf3;
+        color: #067647;
       }
       .btn {
-        align-self: flex-start;
-        padding: 10px 18px;
+        width: 100%;
+        height: 44px;
+        padding: 0 18px;
         border: none;
         border-radius: 10px;
+        font: inherit;
+        font-size: 0.95rem;
         font-weight: 700;
         cursor: pointer;
       }
@@ -177,10 +200,49 @@ import { PhoneInput, PhoneValue } from '../../shared/phone-input';
         background: #4f46e5;
         color: #fff;
       }
+      .btn-primary:hover:not(:disabled) {
+        background: #4338ca;
+      }
       .btn:disabled {
         opacity: 0.6;
         cursor: default;
       }
+
+      /* 480px and up: buttons size to their text */
+      @media (min-width: 480px) {
+        .btn {
+          width: auto;
+          align-self: flex-start;
+        }
+      }
+
+      /* 640px and up: roomier */
+      @media (min-width: 640px) {
+        .prof h1 {
+          margin-bottom: 22px;
+          font-size: 1.7rem;
+        }
+        .prof-grid,
+        .prof-col {
+          gap: 20px;
+        }
+        .prof-card {
+          padding: 22px 24px;
+        }
+        input {
+          height: 42px;
+          font-size: 0.95rem;
+        }
+      }
+
+      /* 760px and up: two columns across the full width. Account and Mobile number stack in the left
+         column, Change password sits in the right one. */
+      @media (min-width: 760px) {
+        .prof-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
     `,
   ],
 })
