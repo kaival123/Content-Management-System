@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { AuthService } from '../core/auth.service';
 import { LeadStore } from '../core/lead-store';
@@ -12,13 +12,29 @@ import { Icon } from '../shared/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet, RouterLink, RouterLinkActive, Icon],
   template: `
-    <div class="adm-shell">
-      <aside class="adm-sidebar">
-        <a class="adm-logo" routerLink="/admin">
+    <div class="adm-shell" [class.menu-open]="menuOpen()">
+      <header class="adm-topbar">
+        <a class="adm-logo" routerLink="/admin" (click)="menuOpen.set(false)">
           <span class="adm-logo-mark">C</span>
           <span>Landing CMS</span>
         </a>
-        <nav class="adm-nav">
+        <button type="button" class="adm-burger" (click)="menuOpen.update((v) => !v)" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            @if (menuOpen()) {
+              <path d="M18 6 6 18M6 6l12 12" />
+            } @else {
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            }
+          </svg>
+        </button>
+      </header>
+      <div class="adm-backdrop" (click)="menuOpen.set(false)"></div>
+      <aside class="adm-sidebar">
+        <a class="adm-logo adm-logo-aside" routerLink="/admin" (click)="menuOpen.set(false)">
+          <span class="adm-logo-mark">C</span>
+          <span>Landing CMS</span>
+        </a>
+        <nav class="adm-nav" (click)="menuOpen.set(false)">
           <a routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
             <app-icon name="globe" /> Websites
             <span class="adm-count">{{ websites.websites().length }}</span>
@@ -140,6 +156,9 @@ export class AdminLayout {
   protected readonly websites = inject(WebsiteStore);
   protected readonly auth = inject(AuthService);
   private readonly router = inject(Router);
+
+  /** Mobile nav drawer open/closed. */
+  protected readonly menuOpen = signal(false);
 
   protected openInVsCode(): void {
     this.project.openInEditor().catch((e: Error) => alert(e.message));

@@ -38,6 +38,7 @@ interface ManagedUser {
 
       <section class="um-card">
         <h2>Accounts <span class="um-count">{{ users().length }}</span></h2>
+        <div class="um-tablewrap">
         <table class="um-table">
           <thead>
             <tr><th>Email</th><th>Role</th><th>Created</th><th></th></tr>
@@ -67,6 +68,7 @@ interface ManagedUser {
             }
           </tbody>
         </table>
+        </div>
       </section>
     </div>
   `,
@@ -116,8 +118,13 @@ interface ManagedUser {
         flex: 1;
         min-width: 180px;
       }
+      .um-tablewrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
       .um-table {
         width: 100%;
+        min-width: 420px;
         border-collapse: collapse;
       }
       .um-table th,

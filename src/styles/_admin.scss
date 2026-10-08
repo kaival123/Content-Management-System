@@ -686,6 +686,45 @@ code {
   padding: 32px 40px 64px;
   // max-width: 1320px;
   width: 100%;
+  min-width: 0; // let children shrink instead of overflowing the viewport
+}
+
+// Mobile top bar + drawer (hidden on desktop; activated under 900px below).
+.adm-topbar {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 56px;
+  padding: 0 14px;
+  background: #0f172a;
+  color: #fff;
+
+  // Reset the sidebar logo's bottom-heavy padding so the text centers in the bar.
+  .adm-logo {
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+.adm-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.08);
+  color: #fff;
+  cursor: pointer;
+}
+
+.adm-backdrop {
+  display: none;
 }
 
 .adm-alert {
@@ -2087,25 +2126,53 @@ code {
     grid-template-columns: 1fr;
   }
 
-  .adm-sidebar {
-    position: static;
-    height: auto;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    overflow-x: auto;
-  }
-
-  .adm-nav {
+  .adm-topbar {
     display: flex;
   }
 
-  .adm-sidebar-foot {
-    display: none;
+  .adm-burger {
+    display: inline-flex;
   }
 
-  .adm-logo {
-    padding: 0 8px;
+  // Off-canvas drawer.
+  .adm-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    max-width: 82vw;
+    height: 100vh;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu-open .adm-sidebar {
+    transform: translateX(0);
+    box-shadow: 0 0 40px rgb(0 0 0 / 0.4);
+  }
+
+  .adm-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgb(2 6 23 / 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .menu-open .adm-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .adm-sidebar-foot {
+    display: block;
   }
 
   .adm-main {
@@ -2135,6 +2202,50 @@ code {
     order: -1;
     max-height: 70vh;
     padding: 12px;
+  }
+}
+
+// Phones ---------------------------------------------------------------------------------
+@media (max-width: 560px) {
+  .adm-main {
+    padding: 18px 14px 40px;
+  }
+
+  .adm-page-head {
+    align-items: flex-start;
+  }
+
+  .adm-page-head h1 {
+    font-size: 20px;
+  }
+
+  // Full-width, evenly split action buttons so nothing gets clipped.
+  .adm-head-actions {
+    width: 100%;
+  }
+
+  .adm-head-actions > * {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+
+  .adm-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .adm-search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .adm-main {
+    padding: 16px 12px 36px;
+  }
+
+  .adm-head-actions {
+    flex-wrap: wrap;
   }
 }
 
