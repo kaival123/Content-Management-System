@@ -14,7 +14,7 @@
 {{/if}}
 <button
   type="button"
-  class="lp-btt lp-btt-{{default shape "circle"}} lp-btt-pos-{{default position "right"}}{{#if shadow}} lp-btt-shadow{{/if}}{{#if hideOnMobile}} lp-btt-hide-m{{/if}}{{#if progress}} lp-btt-has-progress{{/if}}"
+  class="lp-btt lp-btt-{{default shape "circle"}} lp-btt-look-{{default look "solid"}} lp-btt-h-{{default hover "brighten"}} lp-btt-pos-{{default position "right"}}{{#if shadow}} lp-btt-shadow{{/if}}{{#if hideOnMobile}} lp-btt-hide-m{{/if}}{{#if progress}} lp-btt-has-progress{{/if}}"
   data-el="button"
   {{#unless @editor}}data-back-to-top data-show-after="{{default showAfter 300}}" data-smooth="{{#if smooth}}true{{else}}false{{/if}}"{{/unless}}
   aria-label="{{default label "Back to top"}}"
@@ -29,6 +29,8 @@
     {{#is icon "double"}}<path d="m17 18-5-5-5 5" /><path d="m17 11-5-5-5 5" />{{/is}}
     {{#is icon "caret"}}<path d="M12 7 6 15h12z" fill="currentColor" />{{/is}}
     {{#unless icon}}<path d="M12 19V5" /><path d="m5 12 7-7 7 7" />{{/unless}}
+    {{#is icon "thin"}}<path d="M12 21V4" stroke-width="1.6" /><path d="m6 10 6-6 6 6" stroke-width="1.6" />{{/is}}
+    {{#is icon "circle"}}<circle cx="12" cy="12" r="10" /><path d="M12 16V8" /><path d="m8 12 4-4 4 4" />{{/is}}
     {{#is icon "arrow"}}<path d="M12 19V5" /><path d="m5 12 7-7 7 7" />{{/is}}
   </svg>
   {{#is shape "pill"}}<span class="lp-btt-label">{{default label "Back to top"}}</span>{{/is}}

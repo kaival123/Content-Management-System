@@ -18,6 +18,7 @@
     "pricing",
     "blog",
     "faq",
+    "tabs",
     "newsletter",
     "auth",
     "cta",
@@ -88,6 +89,10 @@
     {
       "id": "accordions",
       "label": "Accordions"
+    },
+    {
+      "id": "tabs",
+      "label": "Tabs"
     },
     {
       "id": "contact",

@@ -1,0 +1,39 @@
+{
+  "name": "Navbar · floating pill",
+  "description": "Rounded floating bar with pill links.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Brand",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Features",
+          "href": "#features"
+        },
+        {
+          "label": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "label": "About",
+          "href": "#about"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "ctaLabel": "Get started",
+      "ctaHref": "#cta",
+      "sticky": true,
+      "linkStyle": "pills",
+      "ctaStyle": "pill",
+      "barStyle": "floating"
+    },
+    "style": {
+      "paddingY": 16,
+      "background": "#f8fafc"
+    }
+  }
+}

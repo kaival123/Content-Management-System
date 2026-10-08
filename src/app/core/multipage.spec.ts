@@ -97,7 +97,7 @@ describe('carousel', () => {
 
   it('ships a self-contained runtime (the static build embeds its source)', () => {
     const rt = new Function(`return (${siteRuntime.toString()})()`)();
-    expect(Object.keys(rt).sort()).toEqual(['initAccordions', 'initAnimations', 'initBackToTop', 'initCarousel', 'initCarousels', 'initForms', 'initImageFallback', 'initNav']);
+    expect(Object.keys(rt).sort()).toEqual(['initAccordions', 'initAnimations', 'initBackToTop', 'initCarousel', 'initCarousels', 'initForms', 'initImageFallback', 'initNav', 'initTabs']);
   });
 });
 

@@ -1,0 +1,74 @@
+{
+  "name": "Hero slider · arrows bottom right",
+  "description": "Slide transition, square arrows bottom right, line pagination.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "heading": "",
+      "subheading": "",
+      "variant": "hero",
+      "slideHeight": 560,
+      "overlay": 50,
+      "slides": [
+        {
+          "heading": "Crafted for everyday adventures",
+          "eyebrow": "Spring collection",
+          "text": "Durable, lightweight essentials designed to go wherever you do.",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Shop now",
+          "buttonHref": "#products",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Made to last, built to share",
+          "eyebrow": "Sustainability",
+          "text": "Recycled materials, fair factories and a lifetime repair promise.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Our promise",
+          "buttonHref": "#about",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Free shipping on every order",
+          "eyebrow": "Limited time",
+          "text": "Plus free returns for 60 days. No questions asked.",
+          "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Start shopping",
+          "buttonHref": "#products",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        }
+      ]
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": true,
+      "autoplaySpeed": 5000,
+      "speed": 600,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "bottom-right",
+      "arrowStyle": "square",
+      "dotsPosition": "below-left",
+      "dotsStyle": "lines"
+    }
+  }
+}

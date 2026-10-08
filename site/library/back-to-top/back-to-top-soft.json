@@ -1,0 +1,13 @@
+{
+  "name": "Back to top · soft tint",
+  "description": "Softly tinted rounded square.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "rounded",
+      "look": "soft",
+      "icon": "chevron",
+      "hover": "lift"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Back to top · arrow in circle",
+  "description": "Arrow-in-circle icon with a bouncing arrow.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "rounded",
+      "icon": "circle",
+      "hover": "bounce",
+      "size": 56
+    }
+  }
+}

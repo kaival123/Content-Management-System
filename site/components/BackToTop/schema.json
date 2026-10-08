@@ -24,6 +24,18 @@
         {
           "label": "Pill with label",
           "value": "pill"
+        },
+        {
+          "label": "Leaf",
+          "value": "leaf"
+        },
+        {
+          "label": "Hexagon",
+          "value": "hexagon"
+        },
+        {
+          "label": "Edge tab (docked to the side)",
+          "value": "tab"
         }
       ]
     },
@@ -47,6 +59,60 @@
         {
           "label": "Triangle",
           "value": "caret"
+        },
+        {
+          "label": "Thin arrow",
+          "value": "thin"
+        },
+        {
+          "label": "Arrow in circle",
+          "value": "circle"
+        }
+      ]
+    },
+    {
+      "key": "look",
+      "label": "Look",
+      "type": "select",
+      "options": [
+        {
+          "label": "Solid",
+          "value": "solid"
+        },
+        {
+          "label": "Outline",
+          "value": "outline"
+        },
+        {
+          "label": "Soft tint",
+          "value": "soft"
+        },
+        {
+          "label": "Glass (blurred)",
+          "value": "glass"
+        }
+      ]
+    },
+    {
+      "key": "hover",
+      "label": "Hover effect",
+      "type": "select",
+      "options": [
+        {
+          "label": "Brighten",
+          "value": "brighten"
+        },
+        {
+          "label": "Lift",
+          "value": "lift"
+        },
+        {
+          "label": "Grow",
+          "value": "grow"
+        },
+        {
+          "label": "Bounce arrow",
+          "value": "bounce"
         }
       ]
     },
@@ -166,7 +232,9 @@
     "smooth": true,
     "hideOnMobile": false,
     "ringColor": "",
-    "ringWidth": 3
+    "ringWidth": 3,
+    "look": "solid",
+    "hover": "brighten"
   },
   "defaultStyle": {
     "paddingY": 0

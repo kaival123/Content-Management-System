@@ -1,0 +1,35 @@
+{
+  "name": "Navbar · card mobile menu",
+  "description": "Plain bar; the mobile menu opens as a floating card.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Brand",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Features",
+          "href": "#features"
+        },
+        {
+          "label": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "label": "About",
+          "href": "#about"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "ctaLabel": "Get started",
+      "ctaHref": "#cta",
+      "sticky": true,
+      "barStyle": "shadow",
+      "mobileMenu": "card",
+      "ctaStyle": "pill"
+    }
+  }
+}

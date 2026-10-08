@@ -3,7 +3,7 @@
   (@menu: label, href, active, children); otherwise from the custom "links" list.
   The ☰ button toggles the menu on small screens (handled by the site runtime).
 --}}
-<nav class="lp-nav">
+<nav class="lp-nav lp-nav-l-{{default layout "default"}} lp-nav-ls-{{default linkStyle "plain"}} lp-nav-cs-{{default ctaStyle "solid"}} lp-nav-bar-{{default barStyle "line"}} lp-nav-m-{{default mobileMenu "dropdown"}}">
   <a class="lp-brand" href="{{default @homeHref "#"}}">
     {{#if logo}}<img data-el="logo" src="{{logo}}" alt="{{brand}}" />{{/if}}
     <span data-el="brand" data-edit="brand">{{brand}}</span>

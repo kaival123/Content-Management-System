@@ -1,0 +1,13 @@
+{
+  "name": "Back to top · hexagon",
+  "description": "Hexagon button.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "hexagon",
+      "size": 52,
+      "shadow": false,
+      "hover": "grow"
+    }
+  }
+}

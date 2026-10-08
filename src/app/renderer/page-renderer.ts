@@ -116,6 +116,8 @@ export class PageRenderer {
     const stopBackToTop = runtime.initBackToTop(this.host);
     // FAQ answers open and close smoothly (editor markup has no data-accordion: always open).
     runtime.initAccordions(this.host);
+    // Tabs: in the editor every panel is shown (so all can be edited); switching only matters on the site.
+    runtime.initTabs(this.host);
 
     effect(() => {
       const t = resolveTheme(this.page().theme);

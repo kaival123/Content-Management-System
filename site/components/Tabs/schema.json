@@ -1,0 +1,79 @@
+{
+  "type": "tabs",
+  "label": "Tabs",
+  "description": "Switchable content panels, with tabs across the top or down the side",
+  "icon": "layout",
+  "fields": [
+    { "key": "eyebrow", "label": "Small text above the heading", "type": "text" },
+    { "key": "heading", "label": "Heading", "type": "text" },
+    { "key": "subheading", "label": "Subheading", "type": "textarea" },
+    {
+      "key": "orientation",
+      "label": "Tab direction",
+      "type": "select",
+      "options": [
+        { "label": "Horizontal — tabs across the top", "value": "horizontal" },
+        { "label": "Vertical — tabs down the side", "value": "vertical" }
+      ]
+    },
+    {
+      "key": "style",
+      "label": "Tab style",
+      "type": "select",
+      "options": [
+        { "label": "Underline", "value": "underline" },
+        { "label": "Pills", "value": "pills" },
+        { "label": "Boxed", "value": "boxed" }
+      ]
+    },
+    {
+      "key": "tabAlign",
+      "label": "Horizontal tabs alignment",
+      "type": "select",
+      "options": [
+        { "label": "Left", "value": "left" },
+        { "label": "Center", "value": "center" }
+      ]
+    },
+    {
+      "key": "items",
+      "label": "Tabs",
+      "type": "list",
+      "itemLabel": "Tab",
+      "itemFields": [
+        { "key": "label", "label": "Tab label", "type": "text" },
+        { "key": "icon", "label": "Icon (emoji, optional)", "type": "text" },
+        { "key": "title", "label": "Panel heading", "type": "text" },
+        { "key": "text", "label": "Panel text", "type": "textarea" },
+        { "key": "image", "label": "Panel image (optional)", "type": "image" },
+        { "key": "buttonLabel", "label": "Button label (empty = no button)", "type": "text" },
+        { "key": "buttonHref", "label": "Button link", "type": "url" }
+      ]
+    }
+  ],
+  "elements": [
+    { "key": "eyebrow", "label": "Small text", "kind": "text", "fields": ["eyebrow"] },
+    { "key": "heading", "label": "Heading", "kind": "text", "fields": ["heading"] },
+    { "key": "subheading", "label": "Subheading", "kind": "text", "fields": ["subheading"] },
+    { "key": "tab", "label": "Tab buttons", "kind": "box", "fields": ["label", "icon"], "list": "items" },
+    { "key": "panel", "label": "Panels", "kind": "box", "fields": ["title", "text", "image"], "list": "items" },
+    { "key": "title", "label": "Panel headings", "kind": "text", "fields": ["title"], "list": "items" },
+    { "key": "text", "label": "Panel text", "kind": "text", "fields": ["text"], "list": "items" },
+    { "key": "image", "label": "Panel images", "kind": "image", "fields": ["image"], "list": "items" },
+    { "key": "button", "label": "Buttons", "kind": "button", "fields": ["buttonLabel", "buttonHref"], "list": "items" }
+  ],
+  "defaults": {
+    "anchor": "tabs",
+    "eyebrow": "",
+    "heading": "Everything in one place",
+    "subheading": "",
+    "orientation": "horizontal",
+    "style": "underline",
+    "tabAlign": "left",
+    "items": [
+      { "label": "Overview", "title": "Get the big picture", "text": "A short introduction to what you offer and why it matters to your customers." },
+      { "label": "Features", "title": "Built to save you time", "text": "Describe the key features here. Add as many tabs as you need." },
+      { "label": "Pricing", "title": "Simple, honest pricing", "text": "Explain your plans, what is included and how to get started." }
+    ]
+  }
+}

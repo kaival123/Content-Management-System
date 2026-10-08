@@ -34,6 +34,11 @@ export interface SiteRuntime {
    * and with data-accordion="single" closes the others in the same list.
    */
   initAccordions(root: HTMLElement | Document): void;
+  /**
+   * Tabs sections ([data-tabs]): clicking a [data-tab] shows the [data-tab-panel] at the same
+   * position; arrow keys move between tabs. Works for horizontal and vertical tab lists.
+   */
+  initTabs(root: HTMLElement | Document): void;
 }
 
 export function siteRuntime(): SiteRuntime {
@@ -726,5 +731,43 @@ export function siteRuntime(): SiteRuntime {
     });
   }
 
-  return { initCarousels, initCarousel, initNav, initImageFallback, initAnimations, initForms, initBackToTop, initAccordions };
+  function initTabs(root: HTMLElement | Document) {
+    function select(tab: HTMLElement) {
+      const box = tab.closest<HTMLElement>('[data-tabs]');
+      if (!box) return;
+      const tabs = [...box.querySelectorAll<HTMLElement>('[data-tab]')];
+      const panels = [...box.querySelectorAll<HTMLElement>('[data-tab-panel]')];
+      const at = tabs.indexOf(tab);
+      tabs.forEach((t, i) => {
+        t.classList.toggle('is-active', i === at);
+        t.setAttribute('aria-selected', String(i === at));
+        t.tabIndex = i === at ? 0 : -1;
+      });
+      panels.forEach((p, i) => p.classList.toggle('is-active', i === at));
+    }
+
+    root.addEventListener('click', (e) => {
+      const tab = (e.target as HTMLElement).closest?.<HTMLElement>('[data-tab]');
+      if (tab) select(tab);
+    });
+    root.addEventListener('keydown', (e) => {
+      const ev = e as KeyboardEvent;
+      const tab = (ev.target as HTMLElement).closest?.<HTMLElement>('[data-tab]');
+      const box = tab?.closest<HTMLElement>('[data-tabs]');
+      if (!tab || !box) return;
+      const tabs = [...box.querySelectorAll<HTMLElement>('[data-tab]')];
+      const i = tabs.indexOf(tab);
+      let next = -1;
+      if (ev.key === 'ArrowRight' || ev.key === 'ArrowDown') next = (i + 1) % tabs.length;
+      else if (ev.key === 'ArrowLeft' || ev.key === 'ArrowUp') next = (i - 1 + tabs.length) % tabs.length;
+      else if (ev.key === 'Home') next = 0;
+      else if (ev.key === 'End') next = tabs.length - 1;
+      if (next < 0) return;
+      ev.preventDefault();
+      tabs[next].focus();
+      select(tabs[next]);
+    });
+  }
+
+  return { initCarousels, initCarousel, initNav, initImageFallback, initAnimations, initForms, initBackToTop, initAccordions, initTabs };
 }
