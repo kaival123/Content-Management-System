@@ -1,61 +1,81 @@
-// Builds the CMS Docker image and deploys it to a server over SSH.
-// The persistent volume (user sites + SQLite) is never touched by a deploy.
+// Deploys the Landing CMS (a full-stack Node + Angular app, NOT a static site).
 //
-// Jenkins credentials used:
-//   - 'cms-ssh-key'      : SSH private key for the deploy host (SSH Username with private key)
-//   - 'cms-registry'     : username/password for your container registry (optional)
-// Set REGISTRY / DEPLOY_HOST / DEPLOY_DIR below for your environment.
+// Model: build-on-server, no registry. Jenkins SSHes to your server, updates the
+// code, and rebuilds/restarts the Docker stack. The cms-data volume (SQLite + every
+// user's website files) is never touched, so data survives every deploy.
+//
+// One-time server setup (done once, by hand):
+//   1. Install Docker + the compose plugin.
+//   2. git clone <this repo> into DEPLOY_DIR (e.g. /srv/cms).
+//   3. cd DEPLOY_DIR && cp .env.example .env   and fill it in.
+//   4. Edit Caddyfile with your domain; point the domain's DNS at this server.
+//
+// Jenkins setup:
+//   - Add an SSH key credential with id 'cms-ssh-key' that can log into DEPLOY_HOST.
+//   - Set DEPLOY_HOST / DEPLOY_DIR / APP_URL below.
 
 pipeline {
   agent any
 
   environment {
-    REGISTRY    = 'registry.example.com/landing-cms'
-    DEPLOY_HOST = 'deploy@your-server-ip'
-    DEPLOY_DIR  = '/srv/cms'              // holds docker-compose.yml, Caddyfile, .env on the server
-    IMAGE       = "${REGISTRY}:${BUILD_NUMBER}"
+    DEPLOY_HOST = 'deploy@your-server-ip'   // SSH target for your server
+    DEPLOY_DIR  = '/srv/cms'                 // git clone of this repo on the server
+    BRANCH      = 'main'
+    APP_URL     = 'https://app.yourdomain.com'  // used only for the post-deploy health check
+  }
+
+  options {
+    timestamps()
+    disableConcurrentBuilds()   // never run two deploys at once
   }
 
   stages {
-    stage('Checkout') {
-      steps { checkout scm }
-    }
-
-    stage('Build image') {
+    stage('Deploy') {
       steps {
-        sh 'docker build -t $IMAGE -t $REGISTRY:latest .'
-      }
-    }
+        sshagent(['cms-ssh-key']) {
+          sh '''
+            ssh -o StrictHostKeyChecking=accept-new $DEPLOY_HOST bash -se <<EOF
+              set -euo pipefail
+              cd "$DEPLOY_DIR"
 
-    stage('Push image') {
-      steps {
-        withCredentials([usernamePassword(credentialsId: 'cms-registry', usernameVariable: 'U', passwordVariable: 'P')]) {
-          sh 'echo "$P" | docker login $REGISTRY --username "$U" --password-stdin'
-          sh 'docker push $IMAGE'
-          sh 'docker push $REGISTRY:latest'
+              echo "==> Updating code"
+              git fetch --prune origin
+              git checkout "$BRANCH"
+              git reset --hard "origin/$BRANCH"
+
+              echo "==> Rebuilding and restarting (data volume is preserved)"
+              docker compose up -d --build
+
+              echo "==> Cleaning up old images"
+              docker image prune -f
+EOF
+          '''
         }
       }
     }
 
-    stage('Deploy') {
+    stage('Health check') {
       steps {
         sshagent(['cms-ssh-key']) {
-          // Pull the new image and restart only the cms service; the cms-data volume persists.
-          sh """
-            ssh -o StrictHostKeyChecking=accept-new $DEPLOY_HOST '
-              cd $DEPLOY_DIR &&
-              export CMS_IMAGE=$IMAGE &&
-              docker compose pull cms &&
-              docker compose up -d
-            '
-          """
+          // /api/auth/me needs no session; a 200 means the server is up and serving.
+          sh '''
+            ssh -o StrictHostKeyChecking=accept-new $DEPLOY_HOST bash -se <<EOF
+              set -e
+              for i in \\$(seq 1 20); do
+                code=\\$(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "$APP_URL/api/auth/me" || true)
+                if [ "\\$code" = "200" ]; then echo "Healthy (200)"; exit 0; fi
+                echo "waiting... (\\$code)"; sleep 3
+              done
+              echo "Health check failed"; exit 1
+EOF
+          '''
         }
       }
     }
   }
 
   post {
-    success { echo "Deployed $IMAGE" }
+    success { echo 'Deployed. Data volume preserved.' }
     failure { echo 'Deploy failed — the previous container keeps running.' }
   }
 }

@@ -1,26 +1,28 @@
 # Production deploy: the CMS behind Caddy (automatic HTTPS).
-# Data (user sites + SQLite) persists in the named volume `cms-data`.
+# Accounts + every user's websites persist in the `cms-data` volume across redeploys.
 #
-#   1. Put your real values in a .env file next to this (see .env.example).
-#   2. Edit Caddyfile with your domain.
+#   1. cp .env.example .env   and fill it in
+#   2. edit Caddyfile with your domain
 #   3. docker compose up -d --build
+#
+# Caddy terminates HTTPS and proxies to the cms container on the internal network;
+# the cms port is NOT published to the host, so only Caddy can reach it.
 
 services:
   cms:
-    # Local/VPS: `docker compose up -d --build` builds this and tags it as the image below.
-    # Jenkins/registry: set CMS_IMAGE to the pushed tag and `docker compose pull cms`.
-    image: ${CMS_IMAGE:-landing-cms:latest}
     build: .
+    image: landing-cms:latest
     environment:
-      # Public hostname the CMS is served at (defeats DNS-rebinding; must match Caddy's site).
+      # Public hostname the CMS is served at (must equal the site label in Caddyfile).
       CMS_ALLOWED_HOSTS: ${CMS_DOMAIN}
       SESSION_SECRET: ${SESSION_SECRET}
       ADMIN_EMAIL: ${ADMIN_EMAIL}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      # Served over HTTPS by Caddy → cookies must be Secure.
+      CMS_SECURE_COOKIE: "1"
     volumes:
-      - cms-data:/data          # user websites + cms.db live here, across redeploys
+      - cms-data:/data          # SQLite + all users' website files live here
     restart: unless-stopped
-    # Note: the CMS port is NOT published to the host — only Caddy can reach it.
 
   caddy:
     image: caddy:2
@@ -30,7 +32,7 @@ services:
       - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy-data:/data
+      - caddy-data:/data        # issued TLS certs — must persist
       - caddy-config:/config
     restart: unless-stopped
 

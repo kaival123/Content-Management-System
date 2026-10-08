@@ -69,8 +69,23 @@ describe('users', () => {
     assert.equal(u.phone, '+15551234567'); // normalized
     assert.equal(db.authenticate('phone@example.com', 'secret1').id, u.id);
     assert.equal(db.authenticate('+1 555 123 4567', 'secret1').id, u.id); // same number, different formatting
-    assert.equal(db.authenticate('15551234567', 'secret1'), null); // missing the + → different value
+    // Country code is forgiven: national number, trunk 0, and cc-without-+ all match.
+    assert.equal(db.authenticate('5551234567', 'secret1').id, u.id);
+    assert.equal(db.authenticate('05551234567', 'secret1').id, u.id);
+    assert.equal(db.authenticate('15551234567', 'secret1').id, u.id);
     assert.equal(db.authenticate('+15551234567', 'wrong'), null);
+    assert.equal(db.authenticate('234567', 'secret1'), null); // partial suffix must NOT match
+  });
+
+  test('ambiguous national numbers are rejected at login', () => {
+    // Same national number under two different country codes.
+    db.createUser({ email: 'us@example.com', password: 'secret1', phone: '+15559990000' });
+    db.createUser({ email: 'in@example.com', password: 'secret1', phone: '+915559990000' });
+    // Typing just the national number is ambiguous → no login (use email or the full number).
+    assert.equal(db.authenticate('5559990000', 'secret1'), null);
+    // The full E.164 still works for each.
+    assert.equal(db.authenticate('+15559990000', 'secret1').email, 'us@example.com');
+    assert.equal(db.authenticate('+915559990000', 'secret1').email, 'in@example.com');
   });
 
   test('rejects a duplicate or invalid mobile number', () => {

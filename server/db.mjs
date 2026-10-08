@@ -121,6 +121,23 @@ export class Db {
     return this.db.prepare('SELECT * FROM users WHERE phone = ?').get(n);
   }
 
+  /**
+   * Finds a user by a mobile number typed at login, forgiving the country code.
+   * Numbers are stored as E.164 (+<cc><national>), but people usually type just their
+   * national number ("9876543210") or with a trunk "0". We match when the entered digits
+   * are exactly the national part — i.e. the stored value ends with them and only a
+   * country code ("+", "+91", …) precedes — and only when that match is unambiguous.
+   */
+  findUserByPhoneLogin(input) {
+    const exact = this.getUserByPhone(input);
+    if (exact) return exact;
+    const digits = String(input ?? '').replace(/\D/g, '').replace(/^0+/, '');
+    if (digits.length < 6) return undefined; // too short to match safely
+    const rows = this.db.prepare('SELECT * FROM users WHERE phone IS NOT NULL AND phone LIKE ?').all('%' + digits);
+    const matches = rows.filter((r) => /^\+\d{0,3}$/.test(r.phone.slice(0, r.phone.length - digits.length)));
+    return matches.length === 1 ? matches[0] : undefined;
+  }
+
   getUserById(id) {
     return this.db.prepare('SELECT * FROM users WHERE id = ?').get(id);
   }
@@ -174,8 +191,8 @@ export class Db {
   authenticate(identifier, password) {
     const id = String(identifier ?? '').trim();
     if (!id) return null;
-    // An "@" means email; otherwise treat it as a mobile number.
-    const row = id.includes('@') ? this.getUserByEmail(id) : this.getUserByPhone(id);
+    // An "@" means email; otherwise treat it as a mobile number (country code optional).
+    const row = id.includes('@') ? this.getUserByEmail(id) : this.findUserByPhoneLogin(id);
     if (!row || !verifyPassword(password, row.password_hash)) return null;
     return this.publicUser(row);
   }

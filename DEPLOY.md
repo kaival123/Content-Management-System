@@ -86,17 +86,26 @@ user sites + `cms.db` — is never touched.
 
 ## Deploy with Jenkins
 
-`Jenkinsfile` builds the image, pushes it to your registry, and restarts the `cms` service
-over SSH. The data volume persists across deploys.
+`Jenkinsfile` uses a **build-on-server** flow (no container registry needed): Jenkins SSHes
+to your server, updates the code, and rebuilds/restarts the Docker stack. The `cms-data`
+volume persists across deploys.
 
-Set up in Jenkins:
-- Credentials `cms-ssh-key` (SSH key for the deploy host) and `cms-registry` (registry login).
-- Edit `REGISTRY`, `DEPLOY_HOST`, `DEPLOY_DIR` at the top of the `Jenkinsfile`.
-- The server's `/srv/cms/` must already have `docker-compose.yml`, `Caddyfile` and `.env`
-  (the one-time steps above).
+One-time on the server:
+- `git clone` this repo into `DEPLOY_DIR` (e.g. `/srv/cms`).
+- `cp .env.example .env` and fill it in; edit `Caddyfile` with your domain; point DNS at the server.
 
-Each build: `docker build → push → ssh → docker compose pull cms → up -d`.
-Roll back by deploying an earlier image tag.
+In Jenkins:
+- Add an SSH key credential `cms-ssh-key` that can log into the server.
+- Set `DEPLOY_HOST`, `DEPLOY_DIR`, `APP_URL` at the top of the `Jenkinsfile`.
+
+Each build: `ssh → git reset --hard origin/main → docker compose up -d --build → health check`.
+The data volume is never touched, so accounts and sites are preserved. Roll back by pointing
+`BRANCH` at an earlier commit/tag, or `git reset` on the server.
+
+> **This is a full-stack app, not a static Angular site.** Do not configure the Jenkins/Docker
+> job to `ng build` and serve `dist/` with nginx — that has no backend, no database and no disk,
+> so `/api` fails. The image must run the Node server (it serves the API *and* the built
+> frontend) with the `/data` volume mounted.
 
 ---
 
