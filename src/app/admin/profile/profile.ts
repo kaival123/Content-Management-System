@@ -12,6 +12,7 @@ import { AuthService } from '../../core/auth.service';
     <div class="prof">
       <h1>Your profile</h1>
 
+      <div class="prof-grid">
       <section class="prof-card">
         <h2>Account</h2>
         <div class="prof-row"><span>Email</span><strong>{{ auth.user()?.email }}</strong></div>
@@ -37,32 +38,46 @@ import { AuthService } from '../../core/auth.service';
           <button type="submit" class="btn btn-primary" [disabled]="busy()">{{ busy() ? 'Saving…' : 'Update password' }}</button>
         </form>
       </section>
+      </div>
     </div>
   `,
   styles: [
     `
+
+      /* Mobile first: the base rules are the phone layout; wider screens add to them. */
       .prof {
-        max-width: 560px;
-        padding: 24px;
+        width: 100%;
       }
-      h1 {
-        margin: 0 0 20px;
+      .prof h1 {
+        margin: 0 0 16px;
+        font-size: 1.4rem;
+        letter-spacing: -0.02em;
+      }
+      .prof-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
       }
       .prof-card {
-        background: #fff;
-        border: 1px solid #e2e8f0;
+        padding: 16px;
+        border: 1px solid #e5e9f0;
         border-radius: 14px;
-        padding: 20px 22px;
-        margin-bottom: 18px;
+        background: #fff;
+        box-shadow: 0 1px 2px rgb(15 23 42 / 4%);
       }
       .prof-card h2 {
         margin: 0 0 14px;
-        font-size: 1.05rem;
+        font-size: 1rem;
+        font-weight: 700;
       }
       .prof-row {
         display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
         justify-content: space-between;
-        padding: 8px 0;
+        gap: 2px 16px;
+        padding: 10px 0;
         border-bottom: 1px solid #f1f5f9;
       }
       .prof-row:last-child {
@@ -70,6 +85,11 @@ import { AuthService } from '../../core/auth.service';
       }
       .prof-row span {
         color: #64748b;
+        font-size: 0.88rem;
+      }
+      .prof-row strong {
+        min-width: 0;
+        overflow-wrap: anywhere;
       }
       .prof-role {
         text-transform: capitalize;
@@ -78,48 +98,58 @@ import { AuthService } from '../../core/auth.service';
         color: #4f46e5;
       }
       form {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
       }
       label {
         display: flex;
         flex-direction: column;
         gap: 6px;
+        color: #334155;
         font-size: 0.85rem;
         font-weight: 600;
-        color: #334155;
       }
       input {
-        padding: 10px 12px;
-        border: 1px solid #cbd5e1;
+        width: 100%;
+        height: 44px;
+        padding: 0 12px;
+        border: 1px solid #d5dbe5;
         border-radius: 10px;
-        font-size: 1rem;
-        font-family: inherit;
+        color: #0f172a;
+        font: inherit;
+        font-size: 1rem; /* 16px keeps iOS from zooming into the field */
+        font-weight: 400;
+        transition: border-color 0.15s, box-shadow 0.15s;
       }
       input:focus {
-        outline: 2px solid #4f46e5;
-        border-color: #4f46e5;
+        outline: none;
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgb(99 102 241 / 18%);
       }
       .prof-msg {
         margin: 0;
         padding: 10px 12px;
         border-radius: 10px;
-        font-size: 0.85rem;
+        font-size: 0.86rem;
       }
       .prof-msg.err {
+        border: 1px solid #fecaca;
         background: #fef2f2;
-        color: #b91c1c;
+        color: #b42318;
       }
       .prof-msg.ok {
-        background: #f0fdf4;
-        color: #15803d;
+        border: 1px solid #abefc6;
+        background: #ecfdf3;
+        color: #067647;
       }
       .btn {
-        align-self: flex-start;
-        padding: 10px 18px;
+        height: 44px;
+        padding: 0 20px;
         border: none;
         border-radius: 10px;
+        font: inherit;
+        font-size: 0.95rem;
         font-weight: 700;
         cursor: pointer;
       }
@@ -127,9 +157,54 @@ import { AuthService } from '../../core/auth.service';
         background: #4f46e5;
         color: #fff;
       }
+      .btn-primary:hover:not(:disabled) {
+        background: #4338ca;
+      }
       .btn:disabled {
         opacity: 0.6;
         cursor: default;
+      }
+
+      @media (min-width: 640px) {
+        .prof h1 {
+          margin-bottom: 24px;
+          font-size: 1.7rem;
+        }
+        .prof-grid {
+          gap: 20px;
+        }
+        .prof-card {
+          padding: 22px 24px;
+        }
+        .btn {
+          justify-self: start;
+        }
+        input {
+          height: 42px;
+          font-size: 0.95rem;
+        }
+      }
+
+      /* 960px and up: account details beside the password form, using the full width */
+      @media (min-width: 1281px) {
+        .prof-grid {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+        }
+      }
+
+      /* 1400px and up: the three password fields sit on one row */
+      @media (min-width: 1450px) {
+        .prof-grid {
+          grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+        }
+        form {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          align-items: start;
+        }
+        form .prof-msg,
+        form .btn {
+          grid-column: 1 / -1;
+        }
       }
     `,
   ],

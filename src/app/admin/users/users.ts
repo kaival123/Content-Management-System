@@ -126,28 +126,30 @@ interface ManagedUser {
   host: { '(document:keydown.escape)': 'cancelRole()' },
   styles: [
     `
+
+      /* Mobile first: the base rules are the phone layout; wider screens add to them. */
       .um {
-        max-width: 1040px;
+        width: 100%;
         color: #0f172a;
       }
       .um-head {
-        margin-bottom: 24px;
+        margin-bottom: 18px;
       }
       .um-head h1 {
         margin: 0 0 6px;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         letter-spacing: -0.02em;
       }
       .um-head p {
         margin: 0;
         color: #64748b;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
 
       /* cards */
       .um-card {
-        margin-bottom: 20px;
-        padding: 22px 24px;
+        margin-bottom: 16px;
+        padding: 16px;
         border: 1px solid #e5e9f0;
         border-radius: 14px;
         background: #fff;
@@ -159,23 +161,24 @@ interface ManagedUser {
       }
       .um-card-head {
         display: flex;
+        flex-wrap: wrap;
         align-items: baseline;
         justify-content: space-between;
-        gap: 12px;
-        margin-bottom: 16px;
+        gap: 4px 12px;
+        margin-bottom: 14px;
       }
       .um-pad {
         margin: 0;
-        padding: 20px 24px 14px;
+        padding: 16px 16px 12px;
       }
       .um-card h2 {
         margin: 0;
-        font-size: 1.02rem;
+        font-size: 1rem;
         font-weight: 700;
       }
       .um-hint {
         color: #94a3b8;
-        font-size: 0.82rem;
+        font-size: 0.8rem;
       }
       .um-count {
         margin-left: 8px;
@@ -188,21 +191,17 @@ interface ManagedUser {
         vertical-align: middle;
       }
 
-      /* add form */
+      /* add form: one column on phones */
       .um-new {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        gap: 14px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
       }
       .um-field {
         display: flex;
         flex-direction: column;
         gap: 6px;
-        min-width: 150px;
-      }
-      .um-field-grow {
-        flex: 1 1 220px;
+        min-width: 0;
       }
       .um-field label,
       .um-label {
@@ -211,14 +210,15 @@ interface ManagedUser {
         font-weight: 600;
       }
       .um-field input {
-        height: 42px;
+        width: 100%;
+        height: 44px;
         padding: 0 12px;
         border: 1px solid #d5dbe5;
         border-radius: 10px;
         background: #fff;
         color: #0f172a;
         font: inherit;
-        font-size: 0.93rem;
+        font-size: 1rem; /* 16px keeps iOS from zooming into the field */
         transition: border-color 0.15s, box-shadow 0.15s;
       }
       .um-field input::placeholder {
@@ -232,15 +232,16 @@ interface ManagedUser {
       .um-add {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 6px;
-        height: 42px;
+        height: 44px;
         padding: 0 20px;
         border: 0;
         border-radius: 10px;
         background: #4f46e5;
         color: #fff;
         font: inherit;
-        font-size: 0.92rem;
+        font-size: 0.95rem;
         font-weight: 700;
         cursor: pointer;
         transition: background 0.15s;
@@ -264,62 +265,59 @@ interface ManagedUser {
         color: #b42318;
       }
 
-      /* table */
+      /* accounts: a card per person on phones */
       .um-scroll {
         overflow-x: auto;
       }
-      .um-tablewrap {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+      .um-table,
+      .um-table tbody,
+      .um-table tr,
+      .um-table td {
+        display: block;
       }
-      .um-tablewrap {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+      .um-table thead {
+        /* still read out by screen readers, just not drawn */
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
       }
-      .um-table {
-        width: 100%;
-        min-width: 420px;
-        border-collapse: collapse;
-      }
-      .um-table th {
-        padding: 10px 24px;
-        border-top: 1px solid #eef1f6;
-        border-bottom: 1px solid #eef1f6;
-        background: #f8fafc;
-        color: #64748b;
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-align: left;
-        text-transform: uppercase;
+      .um-table tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px 12px;
+        padding: 14px 16px;
+        border-top: 1px solid #f1f4f8;
       }
       .um-table td {
-        padding: 14px 24px;
-        border-bottom: 1px solid #f1f4f8;
+        padding: 0;
         font-size: 0.92rem;
-        vertical-align: middle;
       }
-      .um-table tbody tr:last-child td {
-        border-bottom: 0;
+      .um-table td:nth-child(1) {
+        grid-column: 1 / -1;
       }
-      .um-table tbody tr:hover td {
-        background: #fafbfe;
+      .um-table td:nth-child(3) {
+        grid-column: 1 / -1;
+        order: 3;
       }
       .um-right {
-        text-align: right !important;
+        text-align: right;
       }
       .um-user {
         display: flex;
         align-items: center;
-        gap: 12px;
+        flex-wrap: wrap;
+        gap: 4px 12px;
         min-width: 0;
       }
       .um-avatar {
         flex: none;
         display: grid;
         place-items: center;
-        width: 34px;
-        height: 34px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background: #e2e8f0;
         color: #475569;
@@ -331,10 +329,9 @@ interface ManagedUser {
         color: #fff;
       }
       .um-email {
-        overflow: hidden;
+        min-width: 0;
         font-weight: 600;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        overflow-wrap: anywhere;
       }
       .um-you {
         padding: 2px 8px;
@@ -348,17 +345,20 @@ interface ManagedUser {
       }
       .um-date {
         color: #64748b;
+        font-size: 0.82rem !important;
         white-space: nowrap;
+      }
+      .um-date::before {
+        content: 'Created ';
       }
       .um-dash {
         color: #cbd5e1;
       }
-
       .um-del {
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        padding: 6px 12px;
+        padding: 8px 12px;
         border: 1px solid #fecdca;
         border-radius: 8px;
         background: #fff;
@@ -374,7 +374,7 @@ interface ManagedUser {
         background: #fef3f2;
       }
       .um-empty {
-        padding: 36px 24px !important;
+        padding: 32px 16px !important;
         color: #94a3b8;
         text-align: center;
       }
@@ -394,7 +394,7 @@ interface ManagedUser {
       }
       .um-btn {
         min-width: 84px;
-        padding: 9px 18px;
+        padding: 10px 18px;
         border: 0;
         border-radius: 9px;
         font: inherit;
@@ -421,16 +421,114 @@ interface ManagedUser {
         background: #4338ca;
       }
 
-      @media (max-width: 720px) {
-        .um-table th,
-        .um-table td {
-          padding-inline: 14px;
+      /* 640px and up: roomier cards, form on one row */
+      @media (min-width: 640px) {
+        .um-head {
+          margin-bottom: 24px;
+        }
+        .um-head h1 {
+          font-size: 1.7rem;
+        }
+        .um-head p {
+          font-size: 0.95rem;
         }
         .um-card {
-          padding-inline: 16px;
+          margin-bottom: 20px;
+          padding: 22px 24px;
         }
-        .um-hint {
-          display: none;
+        .um-card-flush {
+          padding: 0;
+        }
+        .um-pad {
+          padding: 20px 24px 14px;
+        }
+        .um-new {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+          align-items: end;
+        }
+        .um-field input,
+        .um-add {
+          height: 42px;
+        }
+        .um-field input {
+          font-size: 0.93rem;
+        }
+      }
+
+      /* 720px and up: the accounts become a real table */
+      @media (min-width: 720px) {
+        .um-table {
+          display: table;
+          width: 100%;
+          border-collapse: collapse;
+        }
+        .um-table thead {
+          position: static;
+          display: table-header-group;
+          width: auto;
+          height: auto;
+          overflow: visible;
+          clip: auto;
+        }
+        .um-table tbody {
+          display: table-row-group;
+        }
+        .um-table tr {
+          display: table-row;
+          padding: 0;
+          border: 0;
+        }
+        .um-table th,
+        .um-table td {
+          display: table-cell;
+          padding: 14px 24px;
+          border-bottom: 1px solid #f1f4f8;
+          vertical-align: middle;
+          text-align: left;
+        }
+        .um-table th {
+          padding-block: 10px;
+          border-top: 1px solid #eef1f6;
+          border-bottom: 1px solid #eef1f6;
+          background: #f8fafc;
+          color: #64748b;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+        }
+        .um-table tbody tr:last-child td {
+          border-bottom: 0;
+        }
+        .um-table tbody tr:hover td {
+          background: #fafbfe;
+        }
+        .um-table .um-right {
+          text-align: right;
+        }
+        .um-user {
+          flex-wrap: nowrap;
+        }
+        .um-email {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .um-date {
+          font-size: 0.92rem !important;
+        }
+        .um-date::before {
+          content: none;
+        }
+        .um-del {
+          padding: 6px 12px;
+        }
+      }
+
+      /* 1100px and up: the add form fits one row across the full width */
+      @media (min-width: 1100px) {
+        .um-new {
+          grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.4fr) 190px auto;
         }
       }
     `,
