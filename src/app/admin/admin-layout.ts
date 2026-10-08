@@ -40,7 +40,9 @@ import { Icon } from '../shared/icon';
             <span class="adm-count">{{ websites.websites().length }}</span>
           </a>
           <a routerLink="/admin/new" routerLinkActive="active"><app-icon name="plus" /> Create new website</a>
-          <a routerLink="/admin/code"><app-icon name="code" /> Developer mode</a>
+          @if (auth.isAdmin()) {
+            <a routerLink="/admin/code"><app-icon name="code" /> Developer mode</a>
+          }
           <a routerLink="/admin/submissions" routerLinkActive="active">
             <app-icon name="mail" /> Submissions
             @if (leads.leads().length) {

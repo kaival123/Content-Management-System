@@ -63,7 +63,7 @@ export const routes: Routes = [
   {
     path: 'admin/code',
     title: 'Developer mode · CMS',
-    canActivate: [authGuard],
+    canActivate: [adminGuard],
     loadComponent: () => import('./admin/code/dev-mode').then((m) => m.DevMode),
   },
   // /p/<website>/… → /<website>/… (keeps ?preview and #hash)
