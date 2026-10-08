@@ -9,21 +9,30 @@ export class ApiError extends Error {
   }
 }
 
+/** Called when the server reports the session is gone (401), so the app can show the login screen. */
+let onUnauthorized: (() => void) | null = null;
+export function setUnauthorizedHandler(fn: () => void): void {
+  onUnauthorized = fn;
+}
+
 /**
- * Calls the local project server (server/index.mjs). Every request carries the
- * X-CMS header the server requires for anything that changes files.
+ * Calls the project server (server/index.mjs). Every request carries the X-CMS header
+ * the server requires for writes, and the session cookie (credentials) for auth.
  */
 export async function api<T = any>(method: string, url: string, body?: unknown): Promise<T> {
   let res: Response;
   try {
     res = await fetch(url, {
       method,
+      credentials: 'include',
       headers: { 'X-CMS': '1', ...(body !== undefined ? { 'Content-Type': 'application/json' } : {}) },
       body: body !== undefined ? JSON.stringify(body) : undefined,
     });
   } catch {
     throw new ApiError(0, 'Cannot reach the project server. Start it with "npm start".', null);
   }
+  // A lost/expired session on any call except the auth probes sends the user back to login.
+  if (res.status === 401 && !url.startsWith('/api/auth/')) onUnauthorized?.();
   const text = await res.text();
   let data: any = null;
   try {

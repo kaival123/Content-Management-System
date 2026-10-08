@@ -1,0 +1,11 @@
+# Replace app.yourdomain.com with your real domain (and keep it equal to CMS_DOMAIN in .env).
+# Caddy gets a free HTTPS certificate automatically once DNS points here.
+
+app.yourdomain.com {
+	reverse_proxy cms:4310 {
+		# The CMS checks the Host header is local (anti DNS-rebinding); the real public
+		# hostname is passed through as X-Forwarded-Host and allowed via CMS_ALLOWED_HOSTS.
+		header_up Host 127.0.0.1
+		header_up X-Forwarded-Host {host}
+	}
+}

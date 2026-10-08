@@ -4,10 +4,11 @@
   "scripts": {
     "start": "node scripts/dev.mjs",
     "start:app": "ng serve",
-    "start:server": "node server/index.mjs",
+    "start:server": "node --experimental-sqlite server/index.mjs",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:server": "node --experimental-sqlite --test server/*.test.mjs"
   },
   "private": true,
   "packageManager": "npm@12.1.0",
@@ -40,6 +41,7 @@
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.8",
+    "zone.js": "^0.16.3"
   }
 }

@@ -2719,7 +2719,16 @@ textarea.code {
   font-size: 11px;
   text-align: left;
   cursor: pointer;
-  word-break: break-all;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  app-icon {
+    flex: none;
+  }
 
   &:hover {
     color: #e2e8f0;

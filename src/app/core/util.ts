@@ -7,7 +7,7 @@ export function uid(prefix = ''): string {
  * First URL segments the app uses itself. Websites live at /<website>, so these
  * can't be website URLs ("p" was the old /p/<website> prefix and still redirects).
  */
-export const RESERVED_SLUGS = ['admin', 'api', 'site', 'p', 'assets', 'media'];
+export const RESERVED_SLUGS = ['admin', 'api', 'site', 'p', 'assets', 'media', 'login'];
 
 export function isReservedSlug(slug: string): boolean {
   return RESERVED_SLUGS.includes(slug.toLowerCase());

@@ -10,7 +10,8 @@ const children = [];
 /** True if a CMS project server is already answering on the API port. */
 async function serverAlreadyRunning() {
   try {
-    const res = await fetch(`http://127.0.0.1:${API_PORT}/api/files`, { signal: AbortSignal.timeout(1500) });
+    // /api/auth/me needs no session, so it's a safe health check.
+    const res = await fetch(`http://127.0.0.1:${API_PORT}/api/auth/me`, { signal: AbortSignal.timeout(1500) });
     return res.ok;
   } catch {
     return false;
@@ -35,7 +36,7 @@ process.on('SIGTERM', () => stop());
 if (await serverAlreadyRunning()) {
   console.log(`Using the project server already running on port ${API_PORT}.`);
 } else {
-  const server = spawn(process.execPath, ['server/index.mjs'], { stdio: 'inherit' });
+  const server = spawn(process.execPath, ['--experimental-sqlite', 'server/index.mjs'], { stdio: 'inherit' });
   server.on('exit', (code) => {
     if (code) {
       console.error(`Project server exited (code ${code}). Is port ${API_PORT} in use by another program?`);

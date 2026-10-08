@@ -1,5 +1,6 @@
 import { inject } from '@angular/core';
 import { Router, Routes, UrlMatchResult, UrlSegment } from '@angular/router';
+import { adminGuard, authGuard, guestGuard } from './core/auth.guard';
 import { isReservedSlug } from './core/util';
 
 /**
@@ -23,7 +24,14 @@ export function legacyPublicMatcher(segments: UrlSegment[]): UrlMatchResult | nu
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'admin' },
   {
+    path: 'login',
+    title: 'Sign in · CMS',
+    canActivate: [guestGuard],
+    loadComponent: () => import('./auth/login').then((m) => m.Login),
+  },
+  {
     path: 'admin',
+    canActivate: [authGuard],
     loadComponent: () => import('./admin/admin-layout').then((m) => m.AdminLayout),
     children: [
       { path: '', title: 'Websites · CMS', loadComponent: () => import('./admin/dashboard/dashboard').then((m) => m.Dashboard) },
@@ -33,16 +41,29 @@ export const routes: Routes = [
         title: 'Submissions · CMS',
         loadComponent: () => import('./admin/submissions/submissions').then((m) => m.Submissions),
       },
+      {
+        path: 'profile',
+        title: 'Your profile · CMS',
+        loadComponent: () => import('./admin/profile/profile').then((m) => m.Profile),
+      },
+      {
+        path: 'users',
+        title: 'User management · CMS',
+        canActivate: [adminGuard],
+        loadComponent: () => import('./admin/users/users').then((m) => m.Users),
+      },
     ],
   },
   {
     path: 'admin/pages/:id',
     title: 'Editor · CMS',
+    canActivate: [authGuard],
     loadComponent: () => import('./admin/editor/editor').then((m) => m.Editor),
   },
   {
     path: 'admin/code',
     title: 'Developer mode · CMS',
+    canActivate: [authGuard],
     loadComponent: () => import('./admin/code/dev-mode').then((m) => m.DevMode),
   },
   // /p/<website>/… → /<website>/… (keeps ?preview and #hash)
