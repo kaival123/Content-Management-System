@@ -40,6 +40,10 @@ const ARROW_POSITION_GROUPS: { label: string; options: LayoutOption<CarouselArro
     ],
   },
   {
+    label: 'Navigation bar',
+    options: [{ value: 'pill', label: 'Bar over slides', rect: [3, 2, 42, 26], arrows: [[16, 23], [32, 23]], dots: [[22, 23], [24, 23], [26, 23]] }],
+  },
+  {
     label: 'Both sides',
     options: [
       { value: 'sides', label: 'On slides', rect: [3, 4, 42, 22], arrows: [[8, 15], [40, 15]] },
@@ -53,6 +57,7 @@ const DOTS_POSITIONS: LayoutOption<CarouselDotsPosition>[] = [
   { value: 'below-left', label: 'Below, left', rect: [3, 2, 42, 18], dots: [[5, 25], [9, 25], [13, 25]] },
   { value: 'below-right', label: 'Below, right', rect: [3, 2, 42, 18], dots: [[35, 25], [39, 25], [43, 25]] },
   { value: 'overlay', label: 'Over the slides', rect: [3, 2, 42, 26], dots: [[20, 23], [24, 23], [28, 23]] },
+  { value: 'bar', label: 'Navigation bar', rect: [3, 2, 42, 26], arrows: [[16, 23], [32, 23]], dots: [[22, 23], [24, 23], [26, 23]] },
 ];
 
 export interface CarouselPatch {
@@ -116,6 +121,11 @@ export interface CarouselPatch {
     } @else {
       <p class="field-hint">Each slide is as tall as its content{{ section().data.slideHeight ? ' (at least ' + section().data.slideHeight + 'px, from Content → Slide height)' : '' }}.</p>
     }
+
+    <h3 class="panel-label">Corners</h3>
+    <app-range-control label="Slide corner radius" [value]="c.radius ?? undefined" [min]="0" [max]="80" [step]="2" unit="px" [fallback]="12" placeholder="Theme" (valueChange)="set('radius', $event ?? null)" />
+    <app-seg-control class="seg-wrap" [options]="radiusPresets" [value]="c.radius ?? undefined" [clearable]="true" (valueChange)="set('radius', $event ?? null)" />
+    <p class="field-hint">Rounds every slide. Click the chosen preset again, or clear the number, to use the website's own corner style.</p>
 
     <h3 class="panel-label">Slides visible per device</h3>
     @for (d of devices; track d.key) {
@@ -297,6 +307,7 @@ export interface CarouselPatch {
                 @case ('numbers') { <i>01</i><i class="on">02</i><i>03</i> }
                 @case ('fraction') { <b>2</b>&nbsp;/ 6 }
                 @case ('progress') { <i class="bar"><i></i></i> }
+                @case ('capsule') { <i class="on"></i><i class="ring"></i><i class="ring"></i><i class="pp"></i> }
                 @default { <i></i><i class="on"></i><i></i><i></i> }
               }
             </span>
@@ -304,6 +315,15 @@ export interface CarouselPatch {
           </button>
         }
       </div>
+      @if (c.dotsStyle === 'capsule') {
+        <span class="ctl-label">Capsule options</span>
+        <app-toggle-control label="Play / stop button in the capsule" [value]="c.capsulePlay !== false" (valueChange)="set('capsulePlay', $event)" />
+        @if (c.capsulePlay !== false && !c.autoplay) {
+          <p class="field-hint warn">The button only shows once Autoplay is on (Motion → Autoplay). Visitors use it to stop and restart the automatic sliding.</p>
+        }
+        <app-color-control label="Capsule background" [value]="c.paginationBg || undefined" (valueChange)="set('paginationBg', $event ?? '')" />
+        <app-color-control label="Dots and button colour" [value]="c.paginationFg || undefined" (valueChange)="set('paginationFg', $event ?? '')" />
+      }
       <span class="ctl-label">Position</span>
       <div class="layout-picker" role="radiogroup" aria-label="Pagination position">
         @for (o of dotsPositions; track o.value) {
@@ -313,12 +333,19 @@ export interface CarouselPatch {
           </button>
         }
       </div>
-      @if (c.arrows && c.arrowPosition === 'bottom-center' && c.dotsPosition !== 'overlay') {
+      @if (c.dotsPosition === 'bar') {
+        <p class="field-hint">The arrows and the play / pause button join the pagination in one bar over the slides.</p>
+      }
+      @if (c.arrows && c.arrowPosition === 'bottom-center' && c.dotsPosition !== 'overlay' && c.dotsPosition !== 'bar') {
         <p class="field-hint">The pagination sits between the arrows.</p>
       }
     }
     @if (c.arrows || c.dots) {
       <app-color-control label="Control colour (active dot, progress, solid arrows)" [value]="c.controlColor || undefined" (valueChange)="set('controlColor', $event ?? '')" />
+      @if (c.dots && c.dotsStyle !== 'capsule' && (c.dotsPosition === 'bar' || c.arrowPosition === 'pill')) {
+        <app-color-control label="Capsule / bar background" [value]="c.paginationBg || undefined" (valueChange)="set('paginationBg', $event ?? '')" />
+        <app-color-control label="Capsule / bar dots and icons" [value]="c.paginationFg || undefined" (valueChange)="set('paginationFg', $event ?? '')" />
+      }
     }
 
     <h3 class="panel-label">Interaction</h3>
@@ -360,6 +387,13 @@ export class CarouselSettingsForm {
     { value: 'screen', label: 'Screen height', title: 'A share of the screen height' },
   ];
   protected readonly options = Array.from({ length: 12 }, (_, i) => i + 1);
+  protected readonly radiusPresets: SegOption<number>[] = [
+    { value: 0, label: 'Square' },
+    { value: 8, label: 'Small' },
+    { value: 16, label: 'Medium' },
+    { value: 28, label: 'Large' },
+    { value: 48, label: 'Round' },
+  ];
 
   /** Warns when a device shows more slides than exist (they're shown as picked, with empty space). */
   protected readonly tooFew = computed(() => {
@@ -420,6 +454,7 @@ export class CarouselSettingsForm {
     { value: 'fraction', label: 'Counter' },
     { value: 'progress', label: 'Progress' },
     { value: 'thumbs', label: 'Thumbnails' },
+    { value: 'capsule', label: 'Capsule' },
   ];
   protected readonly transitions: SegOption<CarouselSettings['transition']>[] = [
     { value: 'slide', label: 'Slide' },

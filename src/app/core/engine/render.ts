@@ -191,7 +191,10 @@ function enhance(html: string, section: Section, opts: RenderOptions): string {
         '--car-next-y': c.nextY ? `${c.nextY}px` : undefined,
         '--car-cx': c.contentMoveX ? `${c.contentMoveX}px` : undefined,
         '--car-cy': c.contentMoveY ? `${c.contentMoveY}px` : undefined,
+        '--car-radius': c.radius != null ? `${c.radius}px` : undefined,
         '--car-ctrl': resolveColor(c.controlColor) ?? undefined,
+        '--car-pag-bg': resolveColor(c.paginationBg) ?? undefined,
+        '--car-pag-fg': resolveColor(c.paginationFg) ?? undefined,
       });
       // Slider height: per-device values; component.css picks one by container width into
       // --car-h. Set after the template's own style so it wins over its --slide-h.
@@ -220,6 +223,7 @@ function enhance(html: string, section: Section, opts: RenderOptions): string {
       if (c.contentY) layout.push(`lp-car-y-${c.contentY}`);
       if (c.flipLayout) layout.push('lp-car-flip');
       if (c.mirrorImages) layout.push('lp-car-mirror');
+      if (c.radius != null) layout.push('lp-car-rad');
       if ((c.contentMoveX || c.contentMoveY) && !c.contentMovePhones) layout.push('lp-car-cmove-desk');
       if (fixedH) layout.push('lp-car-fixed-h');
       attrs.set('class', `${attrs.get('class') ?? ''} ${layout.join(' ')}`.trim());
