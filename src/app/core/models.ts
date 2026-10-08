@@ -156,11 +156,14 @@ export type CarouselArrowPosition =
   | 'bottom-right'
   /** Both arrows stacked beside the slides, on the left or right. */
   | 'left'
-  | 'right';
+  | 'right'
+  /** Arrows, pagination and the play/pause button together in one bar over the slides. */
+  | 'pill';
 export type CarouselArrowStyle = 'circle' | 'square' | 'outline' | 'solid' | 'minimal';
 /** Where the pagination goes: centred/left/right below the slides, or over them. */
-export type CarouselDotsPosition = 'below' | 'below-left' | 'below-right' | 'overlay';
-export type CarouselDotsStyle = 'pills' | 'dots' | 'lines' | 'numbers' | 'fraction' | 'progress' | 'thumbs';
+/** 'bar': one navigation bar over the slides that holds the pagination, the arrows and play/pause. */
+export type CarouselDotsPosition = 'below' | 'below-left' | 'below-right' | 'overlay' | 'bar';
+export type CarouselDotsStyle = 'pills' | 'dots' | 'lines' | 'numbers' | 'fraction' | 'progress' | 'thumbs' | 'capsule';
 
 /** Behaviour of a carousel section. Slides per view are set per device. */
 export interface CarouselSettings {
@@ -213,6 +216,13 @@ export interface CarouselSettings {
   dotsStyle: CarouselDotsStyle;
   /** Colour of the active dot, progress bar and solid arrows (theme token or CSS colour; '' = primary). */
   controlColor: string;
+  /** Background and dot/icon colours of the capsule pagination and the navigation bar ('' = control colour / white). */
+  /** Corner radius of the slides in px (null: the theme's own radius). */
+  radius: number | null;
+  /** Capsule pagination: show the play / stop button inside the capsule. */
+  capsulePlay: boolean;
+  paginationBg: string;
+  paginationFg: string;
   /** Slide height: from the content, an exact px height, or a share of the screen height. */
   heightMode: 'auto' | 'fixed' | 'screen';
   /** Fixed heights per device, px. */

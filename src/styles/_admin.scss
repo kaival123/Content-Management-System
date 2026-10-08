@@ -1932,6 +1932,40 @@ code {
     }
   }
 
+  &.ds-capsule {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 0 8px;
+    gap: 4px;
+    border-radius: 99px;
+    background: var(--a-primary);
+  }
+
+  &.ds-capsule i {
+    width: 6px;
+    height: 6px;
+    box-sizing: border-box;
+    background: #fff;
+  }
+
+  &.ds-capsule i.on {
+    width: 9px;
+    height: 9px;
+  }
+
+  &.ds-capsule i.ring {
+    background: transparent;
+    border: 1.5px solid #fff;
+  }
+
+  &.ds-capsule i.pp {
+    width: 9px;
+    height: 9px;
+    margin-left: 2px;
+    background: transparent;
+    border: 1.5px solid #fff;
+  }
+
   &.ds-thumbs i {
     width: 12px;
     height: 9px;

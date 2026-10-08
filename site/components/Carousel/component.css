@@ -567,6 +567,162 @@
   pointer-events: auto;
 }
 
+/* Slide corner radius (Slider tab → Corners). Set on the carousel as --car-radius. */
+.lp-carousel.lp-car-rad .lp-car-slide,
+.lp-carousel.lp-car-rad .lp-car-hero,
+.lp-carousel.lp-car-rad .lp-car-card,
+.lp-carousel.lp-car-rad .lp-car-content,
+.lp-carousel.lp-car-rad .lp-car-quote,
+.lp-carousel.lp-car-rad .lp-car-figure,
+.lp-carousel.lp-car-rad .lp-car-figure img,
+.lp-carousel.lp-car-rad .lp-car-portfolio,
+.lp-carousel.lp-car-rad .lp-car-portfolio img,
+.lp-carousel.lp-car-rad .lp-car-team {
+  border-radius: var(--car-radius);
+}
+
+.lp-carousel.lp-car-rad .lp-car-slide,
+.lp-carousel.lp-car-rad .lp-car-card,
+.lp-carousel.lp-car-rad .lp-car-portfolio {
+  overflow: hidden;
+}
+
+/* Navigation bar: arrows, pagination and play/pause together in one bar over the slides. */
+.lp-car-pill {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: calc(100% - 24px);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--car-pag-bg, var(--car-ctrl-c));
+  color: var(--car-pag-fg, #fff);
+  box-shadow: 0 10px 28px -10px rgb(0 0 0 / 0.5);
+  transform: translateX(-50%);
+}
+
+.lp-car-pill .lp-car-arrow {
+  position: static;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: 14px;
+  translate: none;
+}
+
+.lp-car-pill .lp-car-arrow:hover:not(:disabled) {
+  background: color-mix(in srgb, currentColor 22%, transparent);
+  transform: none;
+}
+
+.lp-car-pill .lp-car-dots {
+  position: static;
+  flex: 0 1 auto;
+  flex-wrap: nowrap;
+  padding: 0 6px;
+  color: inherit;
+  pointer-events: auto;
+}
+
+.lp-car-pill .lp-car-dot.is-active {
+  background: currentColor;
+}
+
+.lp-car-pill .lp-car-play {
+  position: static;
+  width: 30px;
+  height: 30px;
+  margin-left: 2px;
+  border: 1.5px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  backdrop-filter: none;
+}
+
+.lp-car-pill .lp-car-play:hover {
+  background: color-mix(in srgb, currentColor 22%, transparent);
+  transform: none;
+}
+
+/* Capsule pagination: hollow dots and a pause button in a rounded capsule. */
+.lp-carousel.lp-car-dotstyle-capsule .lp-car-dots,
+.lp-carousel.lp-car-dotstyle-capsule .lp-car-stage > .lp-car-dots {
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  gap: 9px;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--car-pag-bg, var(--car-ctrl-c));
+  box-shadow: 0 10px 28px -10px rgb(0 0 0 / 0.5);
+  color: var(--car-pag-fg, #fff);
+  pointer-events: auto;
+}
+
+.lp-carousel.lp-car-dots-below-left.lp-car-dotstyle-capsule .lp-car-dots {
+  margin-left: 0;
+}
+
+.lp-carousel.lp-car-dots-below-right.lp-car-dotstyle-capsule .lp-car-dots {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.lp-car-dotstyle-capsule .lp-car-dot {
+  box-sizing: border-box;
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid currentColor;
+  background: transparent;
+  opacity: 0.9;
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+/* The current slide is a bigger, solid dot. */
+.lp-car-dotstyle-capsule .lp-car-dot.is-active {
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+  opacity: 1;
+  transform: none;
+}
+
+.lp-car-dotstyle-capsule .lp-car-play {
+  position: static;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  margin-left: 3px;
+  border: 1.5px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font-size: 11px;
+  backdrop-filter: none;
+}
+
+.lp-car-dotstyle-capsule .lp-car-play:hover {
+  background: color-mix(in srgb, currentColor 22%, transparent);
+  transform: none;
+}
+
+/* Inside the navigation bar the bar is already the capsule. */
+.lp-carousel.lp-car-dotstyle-capsule .lp-car-pill .lp-car-dots {
+  padding: 0 6px;
+  background: transparent;
+  box-shadow: none;
+}
+
 .lp-car-dot {
   width: 9px;
   height: 9px;

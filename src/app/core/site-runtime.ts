@@ -55,6 +55,7 @@ export function siteRuntime(): SiteRuntime {
     transition: string;
     pauseOnHover: boolean;
     playButton?: boolean;
+    capsulePlay?: boolean;
     arrowPosition?: string;
     dotsPosition?: string;
     dotsStyle?: string;
@@ -150,6 +151,8 @@ export function siteRuntime(): SiteRuntime {
     let prev: HTMLButtonElement | null = null;
     let next: HTMLButtonElement | null = null;
     let dotsEl: HTMLElement | null = null;
+    /** The play / pause button when it lives inside the capsule pagination. */
+    let playBtn: HTMLButtonElement | null = null;
     const arrow = (dir: 'prev' | 'next') => {
       const b = document.createElement('button');
       b.type = 'button';
@@ -184,16 +187,27 @@ export function siteRuntime(): SiteRuntime {
       return g;
     };
     const hasArrows = !!(prev && next);
-    const dotsBelow = !!dotsEl && dotsPos !== 'overlay';
-    if (dotsEl && !dotsBelow) stage.append(dotsEl);
-    if (hasArrows && (arrowPos === 'sides' || arrowPos === 'outside')) stage.append(prev!, next!);
-    if (hasArrows && (arrowPos === 'left' || arrowPos === 'right')) stage.append(arrowGroup());
-    if (hasArrows && arrowPos.startsWith('top-')) {
+    // "Navigation bar": arrows, pagination and play/pause together in one bar over the slides.
+    const barMode = (arrowPos === 'pill' || dotsPos === 'bar') && (hasArrows || !!dotsEl);
+    let navBar: HTMLElement | null = null;
+    if (barMode) {
+      navBar = document.createElement('div');
+      navBar.className = 'lp-car-pill';
+      if (hasArrows) navBar.append(prev!);
+      if (dotsEl) navBar.append(dotsEl);
+      if (hasArrows) navBar.append(next!);
+      stage.append(navBar);
+    }
+    const dotsBelow = !barMode && !!dotsEl && dotsPos !== 'overlay';
+    if (dotsEl && !barMode && !dotsBelow) stage.append(dotsEl);
+    if (!barMode && hasArrows && (arrowPos === 'sides' || arrowPos === 'outside')) stage.append(prev!, next!);
+    if (!barMode && hasArrows && (arrowPos === 'left' || arrowPos === 'right')) stage.append(arrowGroup());
+    if (!barMode && hasArrows && arrowPos.startsWith('top-')) {
       const top = bar('top');
       top.append(arrowGroup());
       stage.before(top);
     }
-    if ((hasArrows && arrowPos.startsWith('bottom-')) || dotsBelow) {
+    if ((!barMode && hasArrows && arrowPos.startsWith('bottom-')) || dotsBelow) {
       const bottom = bar('bottom');
       if (hasArrows && arrowPos === 'bottom-center') {
         bottom.append(prev!);
@@ -283,6 +297,8 @@ export function siteRuntime(): SiteRuntime {
         });
         dotsEl.append(d);
       }
+      // The pagination was rebuilt: put the capsule's play / pause button back.
+      if (playBtn) dotsEl.append(playBtn);
     }
 
     /** Highlights the current page in the pagination, whatever its style. */
@@ -487,7 +503,8 @@ export function siteRuntime(): SiteRuntime {
         }, Math.max(800, Number(cfg.autoplaySpeed) || 4000));
       };
       start();
-      if (cfg.playButton) {
+      // The capsule has its own switch; other styles use the general play / pause button setting.
+      if (dotsStyle === 'capsule' && dotsEl ? cfg.capsulePlay !== false : cfg.playButton) {
         const PLAY = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>';
         const PAUSE = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>';
         const btn = document.createElement('button');
@@ -506,7 +523,12 @@ export function siteRuntime(): SiteRuntime {
           if (!stopped) start(); // a full interval before the next change
           sync();
         });
-        stage.append(btn);
+        if (dotsStyle === 'capsule' && dotsEl) {
+          playBtn = btn;
+          dotsEl.append(btn);
+        } else {
+          (navBar ?? stage).append(btn);
+        }
         added.push(btn);
       }
       if (cfg.pauseOnHover) {
