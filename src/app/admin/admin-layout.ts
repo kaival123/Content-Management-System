@@ -52,6 +52,7 @@ import { Icon } from '../shared/icon';
           <a routerLink="/admin/profile" routerLinkActive="active"><app-icon name="external" /> Your profile</a>
           @if (auth.isAdmin()) {
             <a routerLink="/admin/users" routerLinkActive="active"><app-icon name="globe" /> User management</a>
+            <a routerLink="/admin/settings" routerLinkActive="active"><app-icon name="settings" /> Platform settings</a>
           }
         </nav>
         <div class="adm-sidebar-foot">

@@ -52,6 +52,12 @@ export const routes: Routes = [
         canActivate: [adminGuard],
         loadComponent: () => import('./admin/users/users').then((m) => m.Users),
       },
+      {
+        path: 'settings',
+        title: 'Platform settings · CMS',
+        canActivate: [adminGuard],
+        loadComponent: () => import('./admin/settings/platform-settings').then((m) => m.PlatformSettings),
+      },
     ],
   },
   {

@@ -22,7 +22,7 @@ import http from 'node:http';
 import path from 'node:path';
 import { Db } from './db.mjs';
 import { Git } from './git.mjs';
-import { emailConfigured, sendEmail } from './mail.mjs';
+import { emailConfigured, sendEmail, setEmailConfig } from './mail.mjs';
 import { IGNORED_DIRS, Project, ProjectError, hash, readText, toPosix, writeText } from './project.mjs';
 
 const DATA_DIR = (() => {
@@ -40,6 +40,9 @@ const SECURE_COOKIE = process.env.CMS_SECURE_COOKIE === '1';
 const MAX_BODY = 25 * 1024 * 1024;
 
 const db = new Db(path.join(DATA_DIR, 'cms.db'));
+
+// Apply any email provider an admin saved via Platform Settings (falls back to env vars).
+setEmailConfig(db.getEmailSettings());
 
 // Seed an admin account on first boot so there's always a way in.
 (() => {
@@ -76,19 +79,19 @@ async function recipientFor(owner, site, pageSlug, sectionId) {
   return websiteEmail || owner.email;
 }
 
-/** Emails `to` about a new form submission (no-op if email isn't configured). */
+/** Emails `to` about a new submission through the platform provider (no-op if unconfigured). */
 function notifySubmission(to, s) {
-  if (!emailConfigured() || !to) return;
-  const lines = [
+  if (!to || !emailConfigured()) return;
+  const subject = `New submission on ${s.site || 'your site'}`;
+  const text = [
     `New form submission on "${s.site || 'your site'}"${s.page ? ` (page: ${s.page})` : ''}.`,
     '',
     `Name:    ${s.name || '—'}`,
     `Email:   ${s.email || '—'}`,
     `Message: ${s.message || '—'}`,
-  ];
-  sendEmail({ to, subject: `New submission on ${s.site || 'your site'}`, text: lines.join('\n') }).catch((e) =>
-    console.error(`Submission email to ${to} failed: ${e.message}`),
-  );
+  ].join('\n');
+  // reply-to = the person who submitted, so the owner can reply to them directly.
+  sendEmail({ to, subject, text, replyTo: s.email }).catch((e) => console.error(`Submission email to ${to} failed: ${e.message}`));
 }
 
 // One Project/Git per user, created on demand and cached.
@@ -499,6 +502,41 @@ const requireAdmin = (user) => {
 route('GET', /^\/api\/admin\/users$/, async (_req, _m, _url, { user }) => {
   requireAdmin(user);
   return { users: db.listUsers() };
+});
+
+// Platform email settings (admin-only). Secrets (API key, SMTP password) are never sent back.
+route('GET', /^\/api\/admin\/settings$/, async (_req, _m, _url, { user }) => {
+  requireAdmin(user);
+  const e = db.getEmailSettings();
+  return {
+    email: {
+      provider: e.provider,
+      from: e.from,
+      hasApiKey: !!e.apiKey,
+      smtp: { host: e.smtp.host, port: e.smtp.port, secure: e.smtp.secure, user: e.smtp.user, hasPassword: !!e.smtp.pass },
+    },
+    active: emailConfigured(),
+  };
+});
+
+route('PUT', /^\/api\/admin\/settings$/, async (req, _m, _url, { user }) => {
+  requireAdmin(user);
+  const { provider, from, apiKey, smtp } = await readBody(req);
+  if (provider && !['smtp', 'resend', 'sendgrid'].includes(provider)) throw new ProjectError(400, 'Provider must be "smtp", "resend" or "sendgrid"');
+  db.setSetting('email_provider', provider ?? '');
+  db.setSetting('email_from', from ?? '');
+  // API providers: a blank key keeps the saved one.
+  if (apiKey && String(apiKey).trim()) db.setSetting('email_api_key', String(apiKey).trim());
+  // SMTP: save connection details; a blank password keeps the saved one.
+  if (smtp) {
+    db.setSetting('email_smtp_host', smtp.host ?? '');
+    db.setSetting('email_smtp_port', String(Number(smtp.port) || 587));
+    db.setSetting('email_smtp_secure', smtp.secure ? '1' : '');
+    db.setSetting('email_smtp_user', smtp.user ?? '');
+    if (smtp.pass && String(smtp.pass).trim()) db.setSetting('email_smtp_pass', String(smtp.pass));
+  }
+  setEmailConfig(db.getEmailSettings()); // apply immediately — no restart
+  return { ok: true, active: emailConfigured() };
 });
 
 route('POST', /^\/api\/admin\/users$/, async (req, _m, _url, { user }) => {

@@ -66,6 +66,10 @@ export class Db {
         created_at TEXT NOT NULL,
         expires_at INTEGER NOT NULL
       );
+      CREATE TABLE IF NOT EXISTS settings (
+        key   TEXT PRIMARY KEY,
+        value TEXT NOT NULL
+      );
       CREATE TABLE IF NOT EXISTS submissions (
         id         TEXT PRIMARY KEY,
         owner_id   TEXT NOT NULL,
@@ -89,6 +93,36 @@ export class Db {
   /** Closes the underlying database (releases the file so it can be removed). */
   close() {
     this.db.close();
+  }
+
+  // --- platform settings (key/value) ------------------------------------------------------
+
+  getSetting(key) {
+    return this.db.prepare('SELECT value FROM settings WHERE key = ?').get(key)?.value ?? null;
+  }
+
+  setSetting(key, value) {
+    if (value === null || value === undefined || value === '') {
+      this.db.prepare('DELETE FROM settings WHERE key = ?').run(key);
+    } else {
+      this.db.prepare('INSERT INTO settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value').run(key, String(value));
+    }
+  }
+
+  /** Platform email config saved by an admin (provider + from, plus API key or SMTP details). */
+  getEmailSettings() {
+    return {
+      provider: this.getSetting('email_provider') ?? '',
+      from: this.getSetting('email_from') ?? '',
+      apiKey: this.getSetting('email_api_key') ?? '',
+      smtp: {
+        host: this.getSetting('email_smtp_host') ?? '',
+        port: Number(this.getSetting('email_smtp_port')) || 587,
+        secure: this.getSetting('email_smtp_secure') === '1',
+        user: this.getSetting('email_smtp_user') ?? '',
+        pass: this.getSetting('email_smtp_pass') ?? '',
+      },
+    };
   }
 
   // --- users ------------------------------------------------------------------------------
