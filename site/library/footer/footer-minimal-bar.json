@@ -1,0 +1,34 @@
+{
+  "name": "Footer · minimal bar",
+  "description": "Slim one-line bar.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "brand": "Brand",
+      "tagline": "",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Privacy",
+          "href": "#"
+        },
+        {
+          "label": "Terms",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Brand. All rights reserved.",
+      "divider": "none",
+      "copyrightAlign": "right"
+    },
+    "style": {
+      "paddingY": 24,
+      "background": "#ffffff",
+      "textColor": "#475569"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{{!--
+  Tabs. "orientation" puts the tab list above the content (horizontal) or beside it (vertical).
+  On the site the runtime (initTabs) switches panels; the first tab is active when the page
+  loads. In the visual editor every panel stays visible so it can be edited.
+--}}
+<div class="lp-tabs lp-tabs-o-{{default orientation "horizontal"}} lp-tabs-s-{{default style "underline"}} lp-tabs-a-{{default tabAlign "left"}}{{#if @editor}} lp-tabs-editing{{/if}}" data-tabs>
+  {{#if heading}}
+  <header class="lp-head lp-tabs-head">
+    {{#if eyebrow}}<span class="lp-eyebrow" data-el="eyebrow" data-edit="eyebrow">{{eyebrow}}</span>{{/if}}
+    <h2 class="lp-h2" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h2>
+    {{#if subheading}}<p class="lp-lead lp-pre" data-el="subheading" data-edit="subheading">{{subheading}}</p>{{/if}}
+  </header>
+  {{/if}}
+  <div class="lp-tabs-layout">
+    <div class="lp-tabs-list" role="tablist" aria-orientation="{{default orientation "horizontal"}}">
+      {{#each items}}
+      <button type="button" class="lp-tab{{#if @first}} is-active{{/if}}" role="tab" data-tab data-el="tab" aria-selected="{{#if @first}}true{{else}}false{{/if}}">
+        {{#if icon}}<span class="lp-tab-emoji" aria-hidden="true">{{icon}}</span>{{/if}}
+        <span data-edit="label">{{label}}</span>
+      </button>
+      {{/each}}
+    </div>
+    <div class="lp-tabs-panels">
+      {{#each items}}
+      <div class="lp-tab-panel{{#if @first}} is-active{{/if}}" role="tabpanel" data-tab-panel data-el="panel">
+        {{#if image}}<img class="lp-tab-img" data-el="image" src="{{image}}" alt="" />{{/if}}
+        <div class="lp-tab-body">
+          {{#if title}}<h3 class="lp-h3" data-el="title" data-edit="title">{{title}}</h3>{{/if}}
+          <p class="lp-pre" data-el="text" data-edit="text">{{text}}</p>
+          {{#if buttonLabel}}<a class="lp-btn lp-btn-primary" data-el="button" data-edit="buttonLabel" href="{{default buttonHref "#"}}">{{buttonLabel}}</a>{{/if}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

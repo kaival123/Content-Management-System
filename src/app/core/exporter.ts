@@ -27,6 +27,7 @@ function runtimeJs(): string {
     rt.initForms(document, document.documentElement.dataset.formEndpoint || '');
     rt.initBackToTop(document);
     rt.initAccordions(document);
+    rt.initTabs(document);
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();

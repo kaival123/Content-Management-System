@@ -1,3 +1,4 @@
+<div class="lp-footer lp-footer-l-{{default layout "spread"}} lp-footer-ls-{{default linkStyle "plain"}} lp-footer-d-{{default divider "line"}} lp-footer-ca-{{default copyrightAlign "auto"}}">
 <div class="lp-footer-inner">
   <div>
     <strong class="lp-brand" data-el="brand" data-edit="brand">{{brand}}</strong>
@@ -11,5 +12,11 @@
       {{#each links}}<a data-el="link" data-edit="label" href="{{href}}">{{label}}</a>{{/each}}
     {{/if}}
   </div>
+  {{#if socials}}
+  <div class="lp-footer-links lp-footer-social">
+    {{#each socials}}<a data-el="social" data-edit="label" href="{{href}}">{{label}}</a>{{/each}}
+  </div>
+  {{/if}}
 </div>
 <p class="lp-copyright" data-el="copyright" data-edit="copyright">{{copyright}}</p>
+</div>

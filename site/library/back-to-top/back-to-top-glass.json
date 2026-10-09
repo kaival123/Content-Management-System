@@ -1,0 +1,13 @@
+{
+  "name": "Back to top · glass",
+  "description": "Blurred glass circle, bottom left.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "circle",
+      "look": "glass",
+      "position": "left",
+      "icon": "double"
+    }
+  }
+}

@@ -18,6 +18,7 @@ import {
   Selection,
   Theme,
 } from '../../core/models';
+import { AuthService } from '../../core/auth.service';
 import { EditHistory, HistoryTarget } from '../../core/edit-history';
 import { ConflictChoice, PageStore } from '../../core/page-store';
 import { ProjectService, pageDir, sectionFilePath } from '../../core/project.service';
@@ -106,6 +107,7 @@ export class Editor {
   readonly id = input.required<string>();
 
   protected readonly store = inject(PageStore);
+  protected readonly auth = inject(AuthService);
   private readonly toast = inject(ToastService);
   private readonly project = inject(ProjectService);
   private readonly router = inject(Router);

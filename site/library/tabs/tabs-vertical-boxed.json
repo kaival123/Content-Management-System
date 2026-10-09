@@ -1,0 +1,29 @@
+{
+  "name": "Tabs · vertical boxed",
+  "description": "Boxed tabs listed down the left side.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "heading": "Everything in one place",
+      "items": [
+        {
+          "label": "Overview",
+          "title": "Get the big picture",
+          "text": "A short introduction to what you offer and why it matters to your customers."
+        },
+        {
+          "label": "Features",
+          "title": "Built to save you time",
+          "text": "Describe the key features here. Add as many tabs as you need."
+        },
+        {
+          "label": "Pricing",
+          "title": "Simple, honest pricing",
+          "text": "Explain your plans, what is included and how to get started."
+        }
+      ],
+      "orientation": "vertical",
+      "style": "boxed"
+    }
+  }
+}

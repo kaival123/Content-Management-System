@@ -1,0 +1,46 @@
+{
+  "name": "Footer · centered",
+  "description": "Everything centered, with social links.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "brand": "Brand",
+      "tagline": "Making work simpler.",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Privacy",
+          "href": "#"
+        },
+        {
+          "label": "Terms",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Brand. All rights reserved.",
+      "layout": "centered",
+      "socials": [
+        {
+          "label": "Twitter",
+          "href": "#"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "#"
+        },
+        {
+          "label": "Instagram",
+          "href": "#"
+        }
+      ],
+      "linkStyle": "underline"
+    },
+    "style": {
+      "paddingY": 48
+    }
+  }
+}

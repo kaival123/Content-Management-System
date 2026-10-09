@@ -1,0 +1,11 @@
+{
+  "name": "Back to top · leaf",
+  "description": "Leaf-shaped button with a lift on hover.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "leaf",
+      "hover": "lift"
+    }
+  }
+}

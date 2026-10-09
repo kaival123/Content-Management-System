@@ -1,0 +1,34 @@
+{
+  "name": "Navbar · shadow, underline links",
+  "description": "Clean bar with a soft shadow.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Brand",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Features",
+          "href": "#features"
+        },
+        {
+          "label": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "label": "About",
+          "href": "#about"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "ctaLabel": "Get started",
+      "ctaHref": "#cta",
+      "sticky": true,
+      "linkStyle": "underline",
+      "barStyle": "shadow"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Back to top · outline pill",
+  "description": "Outlined pill with label, bottom left.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "pill",
+      "look": "outline",
+      "position": "left",
+      "label": "Top",
+      "hover": "grow"
+    }
+  }
+}

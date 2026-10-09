@@ -49,6 +49,117 @@
       "type": "url"
     },
     {
+      "key": "layout",
+      "label": "Header layout",
+      "type": "select",
+      "options": [
+        {
+          "label": "Logo left, links right",
+          "value": "default"
+        },
+        {
+          "label": "Links centered between logo and button",
+          "value": "centered"
+        },
+        {
+          "label": "Links left, button right",
+          "value": "links-left"
+        },
+        {
+          "label": "Stacked — logo above links",
+          "value": "stacked"
+        }
+      ]
+    },
+    {
+      "key": "linkStyle",
+      "label": "Link style",
+      "type": "select",
+      "options": [
+        {
+          "label": "Plain",
+          "value": "plain"
+        },
+        {
+          "label": "Underline on hover",
+          "value": "underline"
+        },
+        {
+          "label": "Pills",
+          "value": "pills"
+        },
+        {
+          "label": "Dot under active",
+          "value": "dot"
+        }
+      ]
+    },
+    {
+      "key": "ctaStyle",
+      "label": "Button style",
+      "type": "select",
+      "options": [
+        {
+          "label": "Solid",
+          "value": "solid"
+        },
+        {
+          "label": "Outline",
+          "value": "outline"
+        },
+        {
+          "label": "Soft",
+          "value": "soft"
+        },
+        {
+          "label": "Pill",
+          "value": "pill"
+        }
+      ]
+    },
+    {
+      "key": "barStyle",
+      "label": "Bar style",
+      "type": "select",
+      "options": [
+        {
+          "label": "Bottom line",
+          "value": "line"
+        },
+        {
+          "label": "Shadow",
+          "value": "shadow"
+        },
+        {
+          "label": "Plain",
+          "value": "none"
+        },
+        {
+          "label": "Floating rounded bar",
+          "value": "floating"
+        }
+      ]
+    },
+    {
+      "key": "mobileMenu",
+      "label": "Mobile menu",
+      "type": "select",
+      "options": [
+        {
+          "label": "Dropdown panel",
+          "value": "dropdown"
+        },
+        {
+          "label": "Floating card",
+          "value": "card"
+        },
+        {
+          "label": "Full screen",
+          "value": "full"
+        }
+      ]
+    },
+    {
       "key": "sticky",
       "label": "Stick to top on scroll",
       "type": "toggle"
@@ -119,7 +230,12 @@
     "ctaLabel": "Get started",
     "ctaHref": "#cta",
     "sticky": true,
-    "useSiteMenu": false
+    "useSiteMenu": false,
+    "layout": "default",
+    "linkStyle": "plain",
+    "ctaStyle": "solid",
+    "barStyle": "line",
+    "mobileMenu": "dropdown"
   },
   "defaultStyle": {
     "paddingY": 16

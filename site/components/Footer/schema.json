@@ -39,6 +39,104 @@
       ]
     },
     {
+      "key": "socials",
+      "label": "Social links",
+      "type": "list",
+      "itemLabel": "Social link",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Name (e.g. Twitter)",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Link",
+          "type": "url"
+        }
+      ]
+    },
+    {
+      "key": "layout",
+      "label": "Footer layout",
+      "type": "select",
+      "options": [
+        {
+          "label": "Spread — brand left, links right",
+          "value": "spread"
+        },
+        {
+          "label": "Centered",
+          "value": "centered"
+        },
+        {
+          "label": "Stacked, left aligned",
+          "value": "stacked"
+        },
+        {
+          "label": "Columns — brand, links, social",
+          "value": "columns"
+        }
+      ]
+    },
+    {
+      "key": "linkStyle",
+      "label": "Link style",
+      "type": "select",
+      "options": [
+        {
+          "label": "Plain",
+          "value": "plain"
+        },
+        {
+          "label": "Underline on hover",
+          "value": "underline"
+        },
+        {
+          "label": "Pills",
+          "value": "pills"
+        }
+      ]
+    },
+    {
+      "key": "divider",
+      "label": "Line above copyright",
+      "type": "select",
+      "options": [
+        {
+          "label": "Line",
+          "value": "line"
+        },
+        {
+          "label": "None",
+          "value": "none"
+        }
+      ]
+    },
+    {
+      "key": "copyrightAlign",
+      "label": "Copyright alignment",
+      "type": "select",
+      "options": [
+        {
+          "label": "Match layout",
+          "value": "auto"
+        },
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
+    },
+    {
       "key": "copyright",
       "label": "Copyright text",
       "type": "text"
@@ -86,6 +184,15 @@
       "fields": [
         "copyright"
       ]
+    },
+    {
+      "key": "social",
+      "label": "Social links",
+      "kind": "text",
+      "fields": [
+        "socials"
+      ],
+      "list": "socials"
     }
   ],
   "defaults": {
@@ -106,7 +213,12 @@
       }
     ],
     "copyright": "© 2026 Brand. All rights reserved.",
-    "useSiteMenu": false
+    "useSiteMenu": false,
+    "socials": [],
+    "layout": "spread",
+    "linkStyle": "plain",
+    "divider": "line",
+    "copyrightAlign": "auto"
   },
   "defaultStyle": {
     "paddingY": 40,

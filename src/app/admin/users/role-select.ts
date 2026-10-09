@@ -231,8 +231,10 @@ export class RoleSelect {
     const menuHeight = OPTIONS.length * 52 + 14;
     // Opens downwards, or upwards when there is no room below.
     this.top.set(rect.bottom + menuHeight + 12 > window.innerHeight ? rect.top - menuHeight - 6 : rect.bottom + 6);
-    this.left.set(rect.left);
-    this.width.set(Math.max(rect.width, 210));
+    const width = Math.max(rect.width, 210);
+    // Keep the menu inside the viewport when the button sits near the right edge.
+    this.left.set(Math.max(8, Math.min(rect.left, window.innerWidth - width - 8)));
+    this.width.set(width);
     this.active.set(Math.max(0, OPTIONS.findIndex((o) => o.value === this.value())));
     this.open.set(true);
   }

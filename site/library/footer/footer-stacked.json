@@ -1,0 +1,35 @@
+{
+  "name": "Footer · stacked",
+  "description": "Brand above the links, left aligned.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "brand": "Brand",
+      "tagline": "Making work simpler.",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Privacy",
+          "href": "#"
+        },
+        {
+          "label": "Terms",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Brand. All rights reserved.",
+      "layout": "stacked",
+      "linkStyle": "pills",
+      "divider": "none"
+    },
+    "style": {
+      "paddingY": 48,
+      "background": "#111827",
+      "textColor": "#e5e7eb"
+    }
+  }
+}

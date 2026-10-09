@@ -107,7 +107,16 @@ function contextFor(userId) {
 /** Copies the seed site into a user's folder the first time they need it. */
 async function ensureUserSite(userId) {
   const dest = path.join(DATA_DIR, 'users', userId, 'site');
-  if (existsSync(dest)) return;
+  if (existsSync(dest)) {
+    // Existing users get components and library presets added to the seed since their copy was made.
+    // Files they already have are never overwritten, so their edits stay.
+    if (existsSync(SEED_DIR)) {
+      for (const dir of ['components', 'library']) {
+        if (existsSync(path.join(SEED_DIR, dir))) await fs.cp(path.join(SEED_DIR, dir), path.join(dest, dir), { recursive: true, force: false, errorOnExist: false });
+      }
+    }
+    return;
+  }
   if (existsSync(SEED_DIR)) await fs.cp(SEED_DIR, dest, { recursive: true, filter: (src) => !src.includes(`${path.sep}dist`) });
   else mkdirSync(dest, { recursive: true });
 }
