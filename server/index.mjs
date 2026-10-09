@@ -82,7 +82,10 @@ async function recipientFor(owner, site, pageSlug, sectionId) {
 /** Emails `to` about a new submission through the platform provider (no-op if unconfigured). */
 function notifySubmission(to, s) {
   if (!to || !emailConfigured()) return;
-  const subject = `New submission on ${s.site || 'your site'}`;
+  // A unique subject per submission (who + when) so email clients don't thread them into one.
+  const who = (s.name || s.email || 'visitor').trim();
+  const stamp = new Date().toLocaleString('en-GB', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+  const subject = `New inquiry from ${who} — ${s.site || 'your site'} (${stamp})`;
   const text = [
     `New form submission on "${s.site || 'your site'}"${s.page ? ` (page: ${s.page})` : ''}.`,
     '',
