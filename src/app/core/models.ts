@@ -352,6 +352,8 @@ export interface Website {
   customCss: string;
   /** Where this website's form submissions are emailed (empty = the owner's account email). */
   notifyEmail?: string;
+  /** Public URL where the published site is live (its subdomain), if assigned. */
+  publicUrl?: string;
   createdAt: string;
   updatedAt: string;
 }

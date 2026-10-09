@@ -37,6 +37,9 @@ const PORT = Number(process.env.CMS_PORT ?? 4310);
 // Bind to localhost by default; set CMS_HOST=0.0.0.0 in a container (behind a reverse proxy).
 const HOST = process.env.CMS_HOST ?? '127.0.0.1';
 const SECURE_COOKIE = process.env.CMS_SECURE_COOKIE === '1';
+// Base domain for published-site subdomains, e.g. "yourplatform.com" → sites at <slug>.yourplatform.com.
+// Empty disables subdomain hosting.
+const SITE_DOMAIN = (process.env.CMS_SITE_DOMAIN ?? '').toLowerCase().trim();
 const MAX_BODY = 25 * 1024 * 1024;
 
 const db = new Db(path.join(DATA_DIR, 'cms.db'));
@@ -234,12 +237,47 @@ async function serveApp(req, res, pathname) {
   return serveStatic(res, path.join(PUBLIC_DIR, 'index.html'));
 }
 
-async function projectSnapshot(project) {
+/**
+ * Serves a published website's static build for a public hostname (no login). Maps:
+ *   /assets/... and /scripts/...  → dist/<shared>         (shared CSS/runtime/images)
+ *   everything else               → dist/<slug>/<path>     (the site's pages)
+ */
+async function serveSite(req, res, url, siteHost) {
+  if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, { error: 'Method not allowed' });
+  const project = contextFor(siteHost.owner_id).project;
+  const distRoot = project.resolve('dist');
+  if (!existsSync(path.join(distRoot, siteHost.slug, 'index.html'))) {
+    res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+    return res.end('<!doctype html><title>Not published</title><body style="font:16px system-ui;padding:40px">This site has not been published yet.</body>');
+  }
+  let rel = decodeURIComponent(url.pathname).replace(/^\/+/, '');
+  const shared = /^(assets|scripts)\//.test(rel);
+  let abs = shared ? path.resolve(distRoot, rel) : path.resolve(distRoot, siteHost.slug, rel);
+  // Keep the resolved path inside dist (defeats ../ traversal).
+  if (abs !== distRoot && !abs.startsWith(distRoot + path.sep)) return send(res, 404, { error: 'Not found' });
+  // Directory or clean URL → its index.html.
+  if (!shared && (!path.extname(abs) || !existsSync(abs))) {
+    const candidate = path.join(abs, 'index.html');
+    abs = existsSync(candidate) ? candidate : path.join(distRoot, siteHost.slug, 'index.html');
+  }
+  return serveStatic(res, abs);
+}
+
+/** Public hostname of the request (through a reverse proxy, from X-Forwarded-Host). */
+function requestHostname(req) {
+  const forwarded = String(req.headers['x-forwarded-host'] ?? '').split(',')[0].trim();
+  return hostnameOf(forwarded || req.headers.host || '');
+}
+
+async function projectSnapshot(project, ownerId) {
   const websites = [];
   const errors = [];
   for (const site of await project.websiteSlugs()) {
     try {
       const { website, versions } = await project.readWebsite(site);
+      // The public subdomain this site is live at (if one has been assigned).
+      const host = ownerId ? db.hostForSite(ownerId, site) : null;
+      if (host) website.publicUrl = `https://${host}`;
       const pages = [];
       for (const slug of await project.pageSlugs(site)) {
         try {
@@ -312,7 +350,7 @@ function queueChange(relFromData) {
 const routes = [];
 const route = (method, pattern, handler) => routes.push({ method, pattern, handler });
 
-route('GET', /^\/api\/project$/, async (_req, _m, _url, ctx) => projectSnapshot(ctx.project));
+route('GET', /^\/api\/project$/, async (_req, _m, _url, ctx) => projectSnapshot(ctx.project, ctx.ownerId));
 
 const SLUG = '([a-z0-9][a-z0-9-]*)';
 const siteRoute = (suffix = '') => new RegExp(`^/api/websites/${SLUG}${suffix}$`);
@@ -325,14 +363,50 @@ route('POST', /^\/api\/websites$/, async (req, _m, _url, { project }) => {
 
 route('GET', siteRoute(), async (_req, [site], _url, { project }) => project.readWebsite(site));
 
-route('PUT', siteRoute(), async (req, [site], _url, { project }) => {
+route('PUT', siteRoute(), async (req, [site], _url, { project, ownerId }) => {
   const { website, base, force } = await readBody(req);
   if (website.slug !== site) throw new ProjectError(400, 'Website slug mismatch');
-  return project.writeWebsite(website, { base, force: !!force });
+  const saved = await project.writeWebsite(website, { base, force: !!force });
+  // Assign a public subdomain the first time a site is published.
+  if (SITE_DOMAIN && saved.website.status === 'published') {
+    const host = db.claimHost(ownerId, site, SITE_DOMAIN);
+    if (host) saved.website.publicUrl = `https://${host}`;
+  } else if (SITE_DOMAIN) {
+    const host = db.hostForSite(ownerId, site);
+    if (host) saved.website.publicUrl = `https://${host}`;
+  }
+  return saved;
 });
 
-route('DELETE', siteRoute(), async (_req, [site], _url, { project }) => {
+route('DELETE', siteRoute(), async (_req, [site], _url, { project, ownerId }) => {
   await project.deleteWebsite(site);
+  db.releaseHostsForSite(ownerId, site);
+  return { ok: true };
+});
+
+// Domains for a website: the auto subdomain (under CMS_SITE_DOMAIN) plus custom domains.
+route('GET', siteRoute('/domains'), async (_req, [site], _url, { ownerId }) => {
+  const hosts = db.hostsForSite(ownerId, site).map((host) => ({ host, subdomain: !!SITE_DOMAIN && host.endsWith(`.${SITE_DOMAIN}`) }));
+  // The target a CNAME should point at (your platform's app host).
+  return { baseDomain: SITE_DOMAIN, cnameTarget: [...EXTRA_HOSTS][0] ?? (SITE_DOMAIN ? `app.${SITE_DOMAIN}` : ''), hosts };
+});
+
+route('POST', siteRoute('/domains'), async (req, [site], _url, { ownerId }) => {
+  let domain = String((await readBody(req)).domain ?? '').trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+  if (!/^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/.test(domain)) throw new ProjectError(400, 'Enter a valid domain, e.g. www.yourbrand.com');
+  if (SITE_DOMAIN && domain.endsWith(`.${SITE_DOMAIN}`)) throw new ProjectError(400, `Domains under ${SITE_DOMAIN} are assigned automatically — add your own domain instead.`);
+  try {
+    db.addHost(ownerId, site, domain);
+  } catch (e) {
+    throw new ProjectError(409, e.message);
+  }
+  return { ok: true, host: domain };
+});
+
+route('DELETE', siteRoute('/domains'), async (_req, [site], url, { ownerId }) => {
+  const host = (url.searchParams.get('host') ?? '').toLowerCase();
+  if (SITE_DOMAIN && host.endsWith(`.${SITE_DOMAIN}`)) throw new ProjectError(400, 'The automatic subdomain cannot be removed here.');
+  db.removeHost(ownerId, site, host);
   return { ok: true };
 });
 
@@ -599,6 +673,20 @@ route('POST', /^\/api\/admin\/users\/([a-z0-9_]+)\/password$/, async (_req, [id]
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url ?? '/', 'http://localhost');
+
+  // Caddy's on-demand TLS asks here before issuing a cert — allow only hostnames we host.
+  // (Before checkRequest: Caddy calls it with its own Host header.)
+  if (req.method === 'GET' && url.pathname === '/api/tls-check') {
+    const domain = (url.searchParams.get('domain') ?? '').toLowerCase();
+    const ok = !!db.getSiteByHost(domain) || (SITE_DOMAIN && domain.endsWith(`.${SITE_DOMAIN}`));
+    return send(res, ok ? 200 : 404, { ok });
+  }
+
+  // Published sites: if the hostname maps to a website, serve its static build publicly
+  // (no login, read-only) and skip the app's host/API checks entirely.
+  const siteHost = db.getSiteByHost(requestHostname(req));
+  if (siteHost) return serveSite(req, res, url, siteHost);
+
   const denied = checkRequest(req);
   if (denied) return send(res, 403, { error: denied });
 
@@ -682,7 +770,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     await ensureUserSite(owner.id);
-    const ctx = { ...contextFor(owner.id), user };
+    const ctx = { ...contextFor(owner.id), user, ownerId: owner.id };
 
     if (url.pathname === '/api/events') {
       res.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive' });

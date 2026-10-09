@@ -59,6 +59,12 @@
         <p class="adm-card-meta">
           <code>/{{ w.slug }}</code> · {{ pageCount(w) }} page{{ pageCount(w) === 1 ? '' : 's' }} · Updated {{ w.updatedAt | date: 'MMM d, h:mm a' }}
         </p>
+        @if (w.status === 'published' && w.publicUrl) {
+          <p class="adm-card-live">
+            <app-icon name="globe" [size]="13" /> Live at
+            <a [href]="w.publicUrl" target="_blank" rel="noopener">{{ w.publicUrl.replace('https://', '') }}</a>
+          </p>
+        }
         @if (pageCount(w) > 1) {
           <div class="tpl-pages">
             @for (t of pageTitles(w); track $index) {

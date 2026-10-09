@@ -300,6 +300,9 @@
               <div class="serp-title">{{ p.seo.metaTitle || p.title }}</div>
               <div class="serp-desc">{{ p.seo.metaDescription || 'Add a meta description to control how this page appears in search results.' }}</div>
             </div>
+
+            <h3 class="panel-label">Domains</h3>
+            <app-domains [site]="p.website" />
           }
         }
       </div>

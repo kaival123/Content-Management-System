@@ -41,6 +41,7 @@ import { RangeControl, SegControl, SegOption, ToggleControl } from './controls';
 import { ConflictDialog } from './conflict-dialog';
 import { CustomBuilder } from './custom-builder';
 import { ElementStyleForm, StylePatch } from './element-style-form';
+import { Domains } from './domains';
 import { FieldPatch, SectionForm } from './section-form';
 import { SectionSettings, SectionStylePatch } from './section-settings';
 
@@ -83,6 +84,7 @@ function applyPatch<T extends object>(target: T, key: keyof T, value: unknown): 
   selector: 'app-editor',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    Domains,
     RouterLink,
     DatePipe,
     Icon,

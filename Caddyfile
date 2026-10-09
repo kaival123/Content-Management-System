@@ -1,11 +1,40 @@
-# Replace app.yourdomain.com with your real domain (and keep it equal to CMS_DOMAIN in .env).
-# Caddy gets a free HTTPS certificate automatically once DNS points here.
+# Replace cms.com with your real domain throughout.
+#
+# Two things are served, both proxied to the CMS Node server (which decides what to do
+# based on the incoming hostname):
+#   1. cms.com (your main domain)  → the CMS builder (login, editor, API)
+#   2. *.cms.com (subdomains)      → published sites, each at its own subdomain
+#
+# Caddy fetches HTTPS certificates automatically. For the published-site subdomains it uses
+# on-demand TLS, asking the CMS first so it only issues certs for sites we actually host.
 
-app.yourdomain.com {
+{
+	on_demand_tls {
+		ask http://cms:4310/api/tls-check
+	}
+}
+
+# --- the CMS builder (your main domain) --------------------------------------------------
+# Use the apex "cms.com" here (or "app.cms.com" if you'd rather keep the builder on a
+# subdomain). Set CMS_ALLOWED_HOSTS / CMS_DOMAIN to the same value.
+cms.com {
 	reverse_proxy cms:4310 {
-		# The CMS checks the Host header is local (anti DNS-rebinding); the real public
-		# hostname is passed through as X-Forwarded-Host and allowed via CMS_ALLOWED_HOSTS.
+		# The CMS checks the Host header is local; the real public host is forwarded on.
 		header_up Host 127.0.0.1
+		header_up X-Forwarded-Host {host}
+	}
+}
+
+# --- published sites: every <slug>.yourdomain.com AND connected custom domains -----------
+# A catch-all (any host not matched above). Node decides what to serve from the hostname;
+# on-demand TLS issues a cert only after /api/tls-check approves the host.
+:443 {
+	tls {
+		on_demand
+	}
+	reverse_proxy cms:4310 {
+		# Published-site serving keys off the real hostname, so pass it through as the Host.
+		header_up Host {host}
 		header_up X-Forwarded-Host {host}
 	}
 }

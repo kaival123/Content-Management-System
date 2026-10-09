@@ -13,8 +13,10 @@ services:
     build: .
     image: landing-cms:latest
     environment:
-      # Public hostname the CMS is served at (must equal the site label in Caddyfile).
+      # Public hostname the CMS builder is served at (must equal the app site in Caddyfile).
       CMS_ALLOWED_HOSTS: ${CMS_DOMAIN}
+      # Base domain for published-site subdomains (<slug>.yourdomain.com). Blank = disabled.
+      CMS_SITE_DOMAIN: ${CMS_SITE_DOMAIN:-}
       SESSION_SECRET: ${SESSION_SECRET}
       ADMIN_EMAIL: ${ADMIN_EMAIL}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}

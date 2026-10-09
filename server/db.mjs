@@ -70,6 +70,12 @@ export class Db {
         key   TEXT PRIMARY KEY,
         value TEXT NOT NULL
       );
+      CREATE TABLE IF NOT EXISTS site_hosts (
+        host       TEXT PRIMARY KEY,   -- full hostname, e.g. "bakery.yourplatform.com"
+        owner_id   TEXT NOT NULL,
+        slug       TEXT NOT NULL,      -- the website slug in that owner's project
+        created_at TEXT NOT NULL
+      );
       CREATE TABLE IF NOT EXISTS submissions (
         id         TEXT PRIMARY KEY,
         owner_id   TEXT NOT NULL,
@@ -268,6 +274,62 @@ export class Db {
   /** Signs a user out everywhere (e.g. after an admin resets their password). */
   deleteUserSessions(userId) {
     this.db.prepare('DELETE FROM sessions WHERE user_id = ?').run(userId);
+  }
+
+  // --- published-site hostnames (subdomains) ----------------------------------------------
+
+  getSiteByHost(host) {
+    return this.db.prepare('SELECT owner_id, slug FROM site_hosts WHERE host = ?').get(String(host).toLowerCase());
+  }
+
+  /** The first host assigned to a website, or null. */
+  hostForSite(ownerId, slug) {
+    return this.db.prepare('SELECT host FROM site_hosts WHERE owner_id = ? AND slug = ? ORDER BY created_at').get(ownerId, slug)?.host ?? null;
+  }
+
+  /** All hosts (subdomain + custom domains) pointing at a website. */
+  hostsForSite(ownerId, slug) {
+    return this.db.prepare('SELECT host FROM site_hosts WHERE owner_id = ? AND slug = ? ORDER BY created_at').all(ownerId, slug).map((r) => r.host);
+  }
+
+  /** Adds a custom hostname for a website. Throws if it's already used by another site. */
+  addHost(ownerId, slug, host) {
+    const h = String(host).toLowerCase();
+    const owner = this.getSiteByHost(h);
+    if (owner && (owner.owner_id !== ownerId || owner.slug !== slug)) throw new Error('That domain is already connected to another site');
+    if (owner) return h; // already ours
+    this.db.prepare('INSERT INTO site_hosts (host, owner_id, slug, created_at) VALUES (?, ?, ?, ?)').run(h, ownerId, slug, new Date().toISOString());
+    return h;
+  }
+
+  removeHost(ownerId, slug, host) {
+    this.db.prepare('DELETE FROM site_hosts WHERE owner_id = ? AND slug = ? AND host = ?').run(ownerId, slug, String(host).toLowerCase());
+  }
+
+  hostsForOwner(ownerId) {
+    return this.db.prepare('SELECT host, slug FROM site_hosts WHERE owner_id = ?').all(ownerId);
+  }
+
+  /**
+   * Ensures a website has a subdomain under baseDomain. Keeps an existing one; otherwise
+   * claims "<slug>.<baseDomain>", adding -2, -3… if that label is already taken globally.
+   */
+  claimHost(ownerId, slug, baseDomain) {
+    const existing = this.hostForSite(ownerId, slug);
+    if (existing) return existing;
+    const base = String(slug).toLowerCase();
+    for (let i = 1; i < 1000; i++) {
+      const host = `${i === 1 ? base : `${base}-${i}`}.${baseDomain}`.toLowerCase();
+      if (!this.getSiteByHost(host)) {
+        this.db.prepare('INSERT INTO site_hosts (host, owner_id, slug, created_at) VALUES (?, ?, ?, ?)').run(host, ownerId, slug, new Date().toISOString());
+        return host;
+      }
+    }
+    return null;
+  }
+
+  releaseHostsForSite(ownerId, slug) {
+    this.db.prepare('DELETE FROM site_hosts WHERE owner_id = ? AND slug = ?').run(ownerId, slug);
   }
 
   // --- submissions ------------------------------------------------------------------------

@@ -112,6 +112,44 @@ The data volume is never touched, so accounts and sites are preserved. Roll back
 
 ---
 
+## Published sites on their own subdomains (`<slug>.yourdomain.com`)
+
+Each published website is served **publicly** (no login) at its own subdomain, like Vercel's
+`*.vercel.app`. This needs two things:
+
+1. **Env var** — set `CMS_SITE_DOMAIN=yourdomain.com` (in `.env`). When a site is published,
+   the server assigns it `<slug>.yourdomain.com` (adding `-2`, `-3`… if the label is taken),
+   shown on the dashboard card as *"Live at …"*. Blank disables subdomain hosting.
+
+2. **Wildcard DNS** — add a DNS record at your registrar:
+   ```
+   *.yourdomain.com   →   A record to your server's IP
+   ```
+   (Plus `app.yourdomain.com` for the builder.)
+
+The included `Caddyfile` already serves both: `app.yourdomain.com` → the builder, and
+`*.yourdomain.com` → published sites, with **automatic HTTPS**. For the wildcard it uses
+**on-demand TLS**, asking the CMS (`/api/tls-check`) before issuing a cert so it only gets
+certificates for subdomains you actually host.
+
+How it works at runtime:
+```
+Visitor → bakery.yourdomain.com
+   DNS (*.yourdomain.com) → your server → Caddy (auto-HTTPS)
+   → CMS matches the hostname → serves that site's static build (public, read-only)
+```
+
+The CMS builder (login/editor/API) stays locked down; only the published static files are
+served publicly, and only for hostnames in the host table.
+
+### Custom domains (`www.yourbrand.com`)
+Users connect their own domain in the editor → **Settings → Domains**. They type the domain,
+get the **CNAME** to add at their registrar (pointing at `app.yourdomain.com`), and once DNS
+resolves the site is live there with **automatic HTTPS**. The included `Caddyfile` catch-all
+(`:443` with on-demand TLS) serves any connected custom domain; `/api/tls-check` ensures certs
+are issued only for domains a user actually connected. (For a root domain with no `www`, use an
+**A record** to the server's IP instead of a CNAME.)
+
 ## Managed platforms (Render / Railway / Fly.io)
 
 Alternative to a VPS — deploy the Docker image and **attach a persistent disk mounted at
