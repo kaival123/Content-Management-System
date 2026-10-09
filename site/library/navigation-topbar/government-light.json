@@ -1,0 +1,86 @@
+{
+  "name": "Government portal · top bar + menu",
+  "description": "Accessibility bar in the theme color above a clean light navbar, with the page menu.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Swasthya Portal",
+      "useSiteMenu": true,
+      "ctaLabel": "Start free trial",
+      "ctaHref": "#cta",
+      "sticky": true,
+      "topBar": true,
+      "topLinks": [
+        {
+          "label": "Skip to Main Content",
+          "href": "#main"
+        },
+        {
+          "label": "Screen Reader Access",
+          "href": "#screen-reader"
+        }
+      ],
+      "topFontSize": true,
+      "topLanguages": [
+        {
+          "label": "English",
+          "code": "en",
+          "href": ""
+        },
+        {
+          "label": "हिन्दी",
+          "code": "hi",
+          "href": ""
+        },
+        {
+          "label": "ગુજરાતી",
+          "code": "gu",
+          "href": ""
+        }
+      ],
+      "topThemeLabel": "Theme:",
+      "topThemes": [
+        {
+          "name": "Amber",
+          "color": "#d97706",
+          "background": "#fff1d6",
+          "surface": "#fffaf0",
+          "text": "#3b2a12"
+        },
+        {
+          "name": "Red",
+          "color": "#dc2626",
+          "background": "#fde2e2",
+          "surface": "#fff5f5",
+          "text": "#3b1212"
+        },
+        {
+          "name": "Blue",
+          "color": "#2563eb",
+          "background": "#dbe8fb",
+          "surface": "#f3f8ff",
+          "text": "#10264a"
+        },
+        {
+          "name": "Purple",
+          "color": "#7c3aed",
+          "background": "#e9e0fb",
+          "surface": "#f7f3ff",
+          "text": "#261245"
+        },
+        {
+          "name": "Dark",
+          "color": "#f59e0b",
+          "background": "#0b0b0f",
+          "surface": "#17171f",
+          "text": "#f3f4f6",
+          "dot": "#111111"
+        }
+      ],
+      "topKeepColors": false,
+      "topPillStyle": "outline",
+      "topBarColor": "theme",
+      "topTitle": "Government of India, Ministry of Health"
+    }
+  }
+}

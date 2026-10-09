@@ -69,6 +69,16 @@ export const HELPERS: Record<string, Helper> = {
     const q = String(query ?? '').replace(/\s+/g, ' ').trim();
     return q ? `https://www.google.com/maps?q=${encodeURIComponent(q)}&output=embed` : '';
   },
+  /** Lines such as "About us | /about" as [{label, href}] (for sub-menus), or '' when there are none. */
+  pairs: (lines: unknown) => {
+    const list = (Array.isArray(lines) ? lines : [])
+      .map((l) => {
+        const [label, ...rest] = String(l).split('|');
+        return { label: label.trim(), href: rest.join('|').trim() || '#' };
+      })
+      .filter((x) => x.label);
+    return list.length ? list : '';
+  },
   /** Google Maps directions link for an address / place name. */
   mapDirections: (query: string) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(String(query ?? '').trim())}`,
   /** grid-template-columns for a column layout such as "2-1". */

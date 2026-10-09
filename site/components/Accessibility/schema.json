@@ -40,21 +40,17 @@
       ]
     },
     {
-      "key": "buttonStyle",
-      "label": "Button style",
+      "key": "defaultView",
+      "label": "Opens in",
       "type": "select",
       "options": [
         {
-          "label": "Round icon (UX4G)",
-          "value": "round"
+          "label": "Grid View (UX4G)",
+          "value": "grid"
         },
         {
-          "label": "Pill with label",
-          "value": "pill"
-        },
-        {
-          "label": "Rounded square with label",
-          "value": "square"
+          "label": "List View",
+          "value": "list"
         }
       ]
     },
@@ -81,7 +77,7 @@
       "kind": "button",
       "fields": [
         "buttonLabel",
-        "buttonStyle",
+        "defaultView",
         "position",
         "accent"
       ]
@@ -109,14 +105,14 @@
   "defaults": {
     "anchor": "accessibility",
     "buttonLabel": "Accessibility Options",
-    "title": "Accessibility Options by UX4G",
+    "title": "Accessibility Options",
     "intro": "",
     "accent": "#613af5",
     "position": "right",
-    "buttonStyle": "round",
     "essentialOnly": false,
     "helpLabel": "Need Help?",
-    "helpHref": "#contact"
+    "helpHref": "#contact",
+    "defaultView": "grid"
   },
   "defaultStyle": {
     "paddingY": 0

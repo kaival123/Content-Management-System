@@ -152,15 +152,15 @@ body {
  * - the top bar and footer get a deep shade of the accent colour
  * Gradient sections are flattened to the theme too; only sections with a background picture keep it (and their own text colour).
  */
-.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-footer):not([style*="url("]) {
+.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-portal-header):not(.lp-sec-footer):not([style*="url("]) {
   color: var(--lp-text) !important;
 }
 
-.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-footer):not(.lp-sec-navbar):not([style*="url("]) {
+.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-portal-header):not(.lp-sec-footer):not(.lp-sec-navbar):not([style*="url("]) {
   background: var(--lp-bg) !important;
 }
 
-.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-footer):not(.lp-sec-navbar):not([style*="url("]):nth-child(even) {
+.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-portal-header):not(.lp-sec-footer):not(.lp-sec-navbar):not([style*="url("]):nth-child(even) {
   background: var(--lp-surface) !important;
 }
 

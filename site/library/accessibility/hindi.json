@@ -4,15 +4,15 @@
   "section": {
     "type": "accessibility",
     "data": {
+      "title": "सुगम्यता विकल्प",
+      "intro": "",
+      "accent": "#613af5",
+      "buttonLabel": "सुगम्यता विकल्प",
       "helpLabel": "सहायता चाहिए?",
       "helpHref": "#contact",
-      "title": "यूएक्स4जी द्वारा सुगम्यता विकल्प",
-      "intro": "",
       "essentialOnly": false,
-      "buttonLabel": "सुगम्यता विकल्प",
-      "accent": "#613af5",
-      "position": "right",
-      "buttonStyle": "round"
+      "defaultView": "grid",
+      "position": "right"
     },
     "style": {
       "paddingY": 0

@@ -1,0 +1,351 @@
+{
+  "type": "portal-header",
+  "label": "Portal header (logos, tools, login, menu)",
+  "description": "Two-row government portal header: logos and name, accessibility tools, theme dots, login button and a menu with drop-downs",
+  "icon": "layout",
+  "fields": [
+    {
+      "key": "logo",
+      "label": "Main logo",
+      "type": "image"
+    },
+    {
+      "key": "emblem",
+      "label": "Second logo / emblem",
+      "type": "image"
+    },
+    {
+      "key": "title",
+      "label": "Department / site name",
+      "type": "text"
+    },
+    {
+      "key": "subtitle",
+      "label": "Sub-title (one line per row)",
+      "type": "textarea"
+    },
+    {
+      "key": "readerLabel",
+      "label": "Screen reader link label (empty = hide)",
+      "type": "text"
+    },
+    {
+      "key": "showFontSize",
+      "label": "Show text size − A +",
+      "type": "toggle"
+    },
+    {
+      "key": "languages",
+      "label": "Languages (empty = no menu)",
+      "type": "list",
+      "itemLabel": "Language",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "key": "code",
+          "label": "Language code (hi, gu, fr…)",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Own page link (empty = auto-translate)",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "helpHref",
+      "label": "Help (?) link (empty = hide)",
+      "type": "url"
+    },
+    {
+      "key": "themeLabel",
+      "label": "Theme label",
+      "type": "text"
+    },
+    {
+      "key": "themes",
+      "label": "Themes (colour squares)",
+      "type": "list",
+      "itemLabel": "Theme",
+      "itemFields": [
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "key": "color",
+          "label": "Accent colour (buttons, links)",
+          "type": "color"
+        },
+        {
+          "key": "background",
+          "label": "Page background",
+          "type": "color"
+        },
+        {
+          "key": "surface",
+          "label": "Cards / surface colour",
+          "type": "color"
+        },
+        {
+          "key": "text",
+          "label": "Text colour",
+          "type": "color"
+        },
+        {
+          "key": "dot",
+          "label": "Square colour (empty = accent)",
+          "type": "color"
+        }
+      ]
+    },
+    {
+      "key": "defaultTheme",
+      "label": "Theme selected at first (0 = first square)",
+      "type": "number"
+    },
+    {
+      "key": "keepPageColors",
+      "label": "Don't recolour the page until a theme is clicked",
+      "type": "toggle"
+    },
+    {
+      "key": "loginLabel",
+      "label": "Login button label (empty = hide)",
+      "type": "text"
+    },
+    {
+      "key": "loginHref",
+      "label": "Login link",
+      "type": "url"
+    },
+    {
+      "key": "useSiteMenu",
+      "label": "Use this website's pages as the menu",
+      "type": "toggle"
+    },
+    {
+      "key": "links",
+      "label": "Custom menu (used when the page menu is off)",
+      "type": "list",
+      "itemLabel": "Menu item",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Link",
+          "type": "url"
+        },
+        {
+          "key": "submenu",
+          "label": "Drop-down links (one per line: Label | link)",
+          "type": "lines"
+        }
+      ]
+    },
+    {
+      "key": "sticky",
+      "label": "Stay at the top while scrolling",
+      "type": "toggle"
+    },
+    {
+      "key": "allPages",
+      "label": "Show on every page of this website (edit it on this page)",
+      "type": "toggle"
+    }
+  ],
+  "elements": [
+    {
+      "key": "logo",
+      "label": "Main logo",
+      "kind": "image",
+      "fields": [
+        "logo"
+      ]
+    },
+    {
+      "key": "emblem",
+      "label": "Second logo",
+      "kind": "image",
+      "fields": [
+        "emblem"
+      ]
+    },
+    {
+      "key": "title",
+      "label": "Name",
+      "kind": "text",
+      "fields": [
+        "title",
+        "subtitle"
+      ]
+    },
+    {
+      "key": "tools",
+      "label": "Accessibility tools",
+      "kind": "box",
+      "fields": [
+        "readerLabel",
+        "showFontSize",
+        "languages",
+        "helpHref"
+      ]
+    },
+    {
+      "key": "themes",
+      "label": "Theme squares",
+      "kind": "box",
+      "fields": [
+        "themeLabel",
+        "themes",
+        "defaultTheme",
+        "keepPageColors"
+      ]
+    },
+    {
+      "key": "login",
+      "label": "Login button",
+      "kind": "button",
+      "fields": [
+        "loginLabel",
+        "loginHref"
+      ]
+    },
+    {
+      "key": "link",
+      "label": "Menu items",
+      "kind": "text",
+      "list": "links",
+      "fields": [
+        "label",
+        "href",
+        "submenu"
+      ]
+    },
+    {
+      "key": "menuLink",
+      "label": "Page menu links",
+      "kind": "text",
+      "fields": [
+        "useSiteMenu"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "top",
+    "title": "Directorate of Agriculture",
+    "subtitle": "Agriculture, Farmers Welfare and Co-operation Department\nGovernment of Gujarat",
+    "readerLabel": "Screen Reader Access",
+    "showFontSize": true,
+    "languages": [
+      {
+        "label": "English",
+        "code": "en",
+        "href": ""
+      },
+      {
+        "label": "हिन्दी",
+        "code": "hi",
+        "href": ""
+      },
+      {
+        "label": "ગુજરાતી",
+        "code": "gu",
+        "href": ""
+      }
+    ],
+    "helpHref": "#contact",
+    "themeLabel": "Theme:",
+    "themes": [
+      {
+        "name": "Blue",
+        "color": "#2563eb",
+        "background": "#dbe8fb",
+        "surface": "#f3f8ff",
+        "text": "#10264a"
+      },
+      {
+        "name": "Green",
+        "color": "#4cc35b",
+        "background": "#dcf2e3",
+        "surface": "#f3fbf6",
+        "text": "#123222"
+      },
+      {
+        "name": "Orange",
+        "color": "#f97316",
+        "background": "#ffe6d1",
+        "surface": "#fff7ef",
+        "text": "#3b1d0a"
+      },
+      {
+        "name": "Dark",
+        "color": "#4cc35b",
+        "background": "#0b0b0f",
+        "surface": "#17171f",
+        "text": "#f3f4f6",
+        "dot": "#111111"
+      }
+    ],
+    "defaultTheme": 1,
+    "keepPageColors": false,
+    "loginLabel": "Login",
+    "loginHref": "#",
+    "useSiteMenu": false,
+    "links": [
+      {
+        "label": "Home",
+        "href": "#"
+      },
+      {
+        "label": "About Us",
+        "href": "#about",
+        "submenu": [
+          "Our Vision | #about",
+          "Organisation | #team",
+          "Contact Us | #contact"
+        ]
+      },
+      {
+        "label": "Farmer Corner",
+        "href": "#farmers",
+        "submenu": [
+          "Schemes | #services",
+          "Subsidies | #pricing",
+          "Apply Online | #contact"
+        ]
+      },
+      {
+        "label": "Officer Corner",
+        "href": "#officers",
+        "submenu": [
+          "Circulars | #blog",
+          "Reports | #stats"
+        ]
+      },
+      {
+        "label": "Agri Infrastructure",
+        "href": "#infrastructure"
+      }
+    ],
+    "sticky": false,
+    "allPages": true
+  },
+  "defaultStyle": {
+    "paddingY": 0,
+    "align": "left",
+    "backgroundType": "color",
+    "background": "#eaf6ee",
+    "textColor": "#14301f"
+  }
+}

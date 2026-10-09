@@ -3,6 +3,50 @@
   (@menu: label, href, active, children); otherwise from the custom "links" list.
   The ☰ button toggles the menu on small screens (handled by the site runtime).
 --}}
+{{#if topBar}}
+{{!-- Accessibility top bar (the mini header, built into the navbar): skip link, screen reader mode, text size, language and theme dots. The site runtime (initMiniHeader) makes it work. --}}
+<div class="lp-nav-topbar lp-mh-bar-{{default topBarColor "theme"}}"{{#is topBarColor "custom"}} style="{{#if topBg}}background: {{topBg}}; {{/if}}{{#if topText}}color: {{topText}};{{/if}}"{{/is}} data-el="topbar">
+  <div class="lp-mh lp-mh-s-{{default topPillStyle "outline"}}{{#if @editor}} lp-mh-editing{{/if}}" data-mini-header{{#if topKeepColors}} data-mh-keep{{/if}}{{#if @editor}} data-mh-editing{{/if}}>
+    <a class="lp-mh-brand" href="{{default @homeHref "#"}}">
+      {{#if topLogo}}<img data-el="topLogo" src="{{topLogo}}" alt="" />{{/if}}
+      <span data-el="topTitle" data-edit="topTitle">{{topTitle}}</span>
+    </a>
+    <div class="lp-mh-tools">
+      {{#each topLinks}}
+      <a class="lp-mh-pill" data-el="topLink" href="{{default href "#"}}"{{#is href "#screen-reader"}} data-mh-reader aria-pressed="false"{{/is}}><span data-edit="label">{{label}}</span></a>
+      {{/each}}
+      {{#if topFontSize}}
+      <div class="lp-mh-pill lp-mh-font" role="group" aria-label="Text size">
+        <button type="button" data-mh-font="-1" aria-label="Smaller text">&minus;</button>
+        <button type="button" data-mh-font="0" aria-label="Normal text size">A</button>
+        <button type="button" data-mh-font="1" aria-label="Larger text">+</button>
+      </div>
+      {{/if}}
+      {{#if topLanguages}}
+      <div class="lp-mh-langbox notranslate" translate="no">
+        <select class="lp-mh-native" data-mh-lang aria-hidden="true" tabindex="-1">
+          {{#each topLanguages}}<option value="{{#if href}}{{href}}{{else}}#lang:{{code}}{{/if}}">{{label}}</option>{{/each}}
+        </select>
+        <button type="button" class="lp-mh-pill lp-mh-lang-btn" data-mh-lang-btn aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+          <svg class="lp-mh-globe" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <span data-mh-lang-label>{{#each topLanguages}}{{#if @first}}{{label}}{{/if}}{{/each}}</span>
+          <svg class="lp-mh-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <ul class="lp-mh-langlist" role="listbox" aria-label="Language">
+          {{#each topLanguages}}<li class="lp-mh-langopt" role="option" tabindex="-1" data-mh-lang-opt data-value="{{#if href}}{{href}}{{else}}#lang:{{code}}{{/if}}" aria-selected="{{#if @first}}true{{else}}false{{/if}}"><span>{{label}}</span><svg class="lp-mh-tick" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></li>{{/each}}
+        </ul>
+      </div>
+      {{/if}}
+      {{#if topThemes}}
+      <div class="lp-mh-pill lp-mh-themes" role="group" aria-label="Theme colour">
+        {{#if topThemeLabel}}<span data-edit="topThemeLabel">{{topThemeLabel}}</span>{{/if}}
+        {{#each topThemes}}<button type="button" class="lp-mh-dot{{#if @first}} is-active{{/if}}" aria-pressed="{{#if @first}}true{{else}}false{{/if}}" data-mh-theme="{{color}}" data-mh-bg="{{background}}" data-mh-surface="{{surface}}" data-mh-text="{{text}}" style="background: {{default dot color}}" aria-label="{{default name "Theme"}} {{@index}}" title="{{name}}"></button>{{/each}}
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</div>
+{{/if}}
 <nav class="lp-nav lp-nav-l-{{default layout "default"}} lp-nav-ls-{{default linkStyle "plain"}} lp-nav-cs-{{default ctaStyle "solid"}} lp-nav-bar-{{default barStyle "line"}} lp-nav-m-{{default mobileMenu "dropdown"}}">
   <a class="lp-brand" href="{{default @homeHref "#"}}">
     {{#if logo}}<img data-el="logo" src="{{logo}}" alt="{{brand}}" />{{/if}}

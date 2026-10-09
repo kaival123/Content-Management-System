@@ -1,18 +1,18 @@
 {
-  "name": "UX4G Accessibility Widget · essential tools",
+  "name": "UX4G Accessibility Widget · essential tools (right)",
   "description": "Only the most used tools: text size, line height, links, screen reader, pause, invert, dark mode, dyslexia.",
   "section": {
     "type": "accessibility",
     "data": {
+      "title": "Accessibility Options",
+      "intro": "",
+      "accent": "#613af5",
+      "buttonLabel": "Accessibility Options",
       "helpLabel": "Need Help?",
       "helpHref": "#contact",
-      "title": "Accessibility Options by UX4G",
-      "intro": "",
       "essentialOnly": true,
-      "buttonLabel": "Accessibility Options",
-      "accent": "#613af5",
-      "position": "right",
-      "buttonStyle": "round"
+      "defaultView": "grid",
+      "position": "right"
     },
     "style": {
       "paddingY": 0

@@ -4,15 +4,15 @@
   "section": {
     "type": "accessibility",
     "data": {
+      "title": "સુગમ્યતા વિકલ્પો",
+      "intro": "",
+      "accent": "#613af5",
+      "buttonLabel": "સુગમ્યતા વિકલ્પો",
       "helpLabel": "મદદ જોઈએ છે?",
       "helpHref": "#contact",
-      "title": "UX4G દ્વારા સુગમ્યતા વિકલ્પો",
-      "intro": "",
       "essentialOnly": false,
-      "buttonLabel": "સુગમ્યતા વિકલ્પો",
-      "accent": "#613af5",
-      "position": "right",
-      "buttonStyle": "round"
+      "defaultView": "grid",
+      "position": "right"
     },
     "style": {
       "paddingY": 0

@@ -163,6 +163,159 @@
       "key": "sticky",
       "label": "Stick to top on scroll",
       "type": "toggle"
+    },
+    {
+      "key": "topBar",
+      "label": "Show the accessibility top bar (mini header) above the menu",
+      "type": "toggle"
+    },
+    {
+      "key": "topLogo",
+      "label": "Top bar logo / emblem",
+      "type": "image"
+    },
+    {
+      "key": "topTitle",
+      "label": "Top bar title",
+      "type": "text"
+    },
+    {
+      "key": "topLinks",
+      "label": "Top bar quick links",
+      "type": "list",
+      "itemLabel": "Link",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Link (#main = skip to content, #screen-reader = screen reader mode)",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "topFontSize",
+      "label": "Show text size − A +",
+      "type": "toggle"
+    },
+    {
+      "key": "topLanguages",
+      "label": "Languages (empty = no dropdown)",
+      "type": "list",
+      "itemLabel": "Language",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "key": "code",
+          "label": "Language code (hi, gu, fr…)",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Own page link (empty = auto-translate)",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "topThemeLabel",
+      "label": "Theme label",
+      "type": "text"
+    },
+    {
+      "key": "topThemes",
+      "label": "Themes (dots): colours applied to the whole page",
+      "type": "list",
+      "itemLabel": "Theme",
+      "itemFields": [
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "key": "color",
+          "label": "Accent colour (buttons, links)",
+          "type": "color"
+        },
+        {
+          "key": "background",
+          "label": "Page background",
+          "type": "color"
+        },
+        {
+          "key": "surface",
+          "label": "Cards / surface colour",
+          "type": "color"
+        },
+        {
+          "key": "text",
+          "label": "Text colour",
+          "type": "color"
+        },
+        {
+          "key": "dot",
+          "label": "Dot colour (empty = accent)",
+          "type": "color"
+        }
+      ]
+    },
+    {
+      "key": "topKeepColors",
+      "label": "Keep the page colours until a theme dot is clicked",
+      "type": "toggle"
+    },
+    {
+      "key": "topPillStyle",
+      "label": "Top bar button style",
+      "type": "select",
+      "options": [
+        {
+          "label": "Outline",
+          "value": "outline"
+        },
+        {
+          "label": "Filled",
+          "value": "filled"
+        },
+        {
+          "label": "Plain",
+          "value": "plain"
+        }
+      ]
+    },
+    {
+      "key": "topBarColor",
+      "label": "Top bar colour",
+      "type": "select",
+      "options": [
+        {
+          "label": "Selected theme (default)",
+          "value": "theme"
+        },
+        {
+          "label": "Custom",
+          "value": "custom"
+        }
+      ]
+    },
+    {
+      "key": "topBg",
+      "label": "Custom top bar background",
+      "type": "color"
+    },
+    {
+      "key": "topText",
+      "label": "Custom top bar text colour",
+      "type": "color"
     }
   ],
   "elements": [
@@ -208,6 +361,26 @@
         "ctaLabel",
         "ctaHref"
       ]
+    },
+    {
+      "key": "topbar",
+      "label": "Accessibility top bar",
+      "kind": "box",
+      "fields": [
+        "topBar",
+        "topLogo",
+        "topTitle",
+        "topLinks",
+        "topFontSize",
+        "topLanguages",
+        "topThemeLabel",
+        "topThemes",
+        "topKeepColors",
+        "topPillStyle",
+        "topBarColor",
+        "topBg",
+        "topText"
+      ]
     }
   ],
   "defaults": {
@@ -235,7 +408,80 @@
     "linkStyle": "plain",
     "ctaStyle": "solid",
     "barStyle": "line",
-    "mobileMenu": "dropdown"
+    "mobileMenu": "dropdown",
+    "topBar": false,
+    "topLogo": "",
+    "topTitle": "Government of India, Ministry of Health",
+    "topLinks": [
+      {
+        "label": "Skip to Main Content",
+        "href": "#main"
+      },
+      {
+        "label": "Screen Reader Access",
+        "href": "#screen-reader"
+      }
+    ],
+    "topFontSize": true,
+    "topLanguages": [
+      {
+        "label": "English",
+        "code": "en",
+        "href": ""
+      },
+      {
+        "label": "हिन्दी",
+        "code": "hi",
+        "href": ""
+      },
+      {
+        "label": "ગુજરાતી",
+        "code": "gu",
+        "href": ""
+      }
+    ],
+    "topThemeLabel": "Theme:",
+    "topThemes": [
+      {
+        "name": "Amber",
+        "color": "#d97706",
+        "background": "#fff1d6",
+        "surface": "#fffaf0",
+        "text": "#3b2a12"
+      },
+      {
+        "name": "Red",
+        "color": "#dc2626",
+        "background": "#fde2e2",
+        "surface": "#fff5f5",
+        "text": "#3b1212"
+      },
+      {
+        "name": "Blue",
+        "color": "#2563eb",
+        "background": "#dbe8fb",
+        "surface": "#f3f8ff",
+        "text": "#10264a"
+      },
+      {
+        "name": "Purple",
+        "color": "#7c3aed",
+        "background": "#e9e0fb",
+        "surface": "#f7f3ff",
+        "text": "#261245"
+      },
+      {
+        "name": "Dark",
+        "color": "#f59e0b",
+        "background": "#0b0b0f",
+        "surface": "#17171f",
+        "text": "#f3f4f6",
+        "dot": "#111111"
+      }
+    ],
+    "topKeepColors": false,
+    "topPillStyle": "outline",
+    "topBarColor": "theme"
   },
   "defaultStyle": {
     "paddingY": 16

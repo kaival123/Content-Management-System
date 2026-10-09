@@ -873,6 +873,7 @@ export function siteRuntime(): SiteRuntime {
     // First dot = the website's own colours (its template theme): selected by default, it leaves the page untouched,
     // and choosing it again undoes any other theme.
     const addSiteDot = (bar: HTMLElement, dots: HTMLElement[]) => {
+      if (bar.hasAttribute('data-mh-nosite')) return;
       const scope = scopeOf(bar);
       if (!scope.dataset['mhSiteVars']) {
         const cs = getComputedStyle(scope);
@@ -938,8 +939,8 @@ export function siteRuntime(): SiteRuntime {
       const target =
         scope.querySelector<HTMLElement>('#main, [role="main"], main') ??
         // Skip the bars and the banner (header, navigation, hero / slider) and land on the first real content section.
-        Array.from(scope.querySelectorAll<HTMLElement>('.lp-section')).find((x) => !/lp-sec-(mini-header|navbar|page-header|hero|carousel)/.test(x.className)) ??
-        Array.from(scope.querySelectorAll<HTMLElement>('.lp-section')).find((x) => !/lp-sec-(mini-header|navbar)/.test(x.className));
+        Array.from(scope.querySelectorAll<HTMLElement>('.lp-section')).find((x) => !/lp-sec-(mini-header|portal-header|navbar|page-header|hero|carousel)/.test(x.className)) ??
+        Array.from(scope.querySelectorAll<HTMLElement>('.lp-section')).find((x) => !/lp-sec-(mini-header|portal-header|navbar)/.test(x.className));
       if (!target) return;
       // Leave room for a sticky / fixed bar (the navigation) so it doesn't cover the top of the content.
       let offset = 0;
@@ -971,11 +972,11 @@ export function siteRuntime(): SiteRuntime {
         const dots = Array.from(bar.querySelectorAll<HTMLElement>('[data-mh-theme]'));
         if (!dots.length) continue;
         if (bar.hasAttribute('data-mh-keep') && (!persist || store.get('themeIdx') === null)) {
-          dots.forEach((d, i) => d.classList.toggle('is-active', i === 0));
+          dots.forEach((d, i) => d.classList.toggle('is-active', i === (Number(bar.dataset['mhDefault'] ?? 0) || 0)));
           continue;
         }
         const saved = persist ? store.get('themeIdx') : null;
-        const dot = saved !== null && dots[Number(saved)] ? dots[Number(saved)] : dots[0];
+        const dot = saved !== null && dots[Number(saved)] ? dots[Number(saved)] : (dots[Number(bar.dataset['mhDefault'] ?? 0)] ?? dots[0]);
         // Re-render of the bar (new dot elements) or first time: apply; otherwise leave the visitor's choice alone.
         if (!themed.has(scope) || !dots.some((d) => d.classList.contains('is-active')) || scope.dataset['mhDots'] !== String(dots.length)) {
           applyTheme(scope, dots, dot);
@@ -1017,6 +1018,12 @@ export function siteRuntime(): SiteRuntime {
       if (!bar) return;
       const scope = scopeOf(bar);
       const persist = !editing(bar);
+      const menuBtn = t.closest<HTMLElement>('.lp-ph-toggle');
+      if (menuBtn) {
+        const open = bar.classList.toggle('is-menu-open');
+        menuBtn.setAttribute('aria-expanded', String(open));
+        return;
+      }
       const font = t.closest<HTMLElement>('[data-mh-font]');
       if (font) {
         const step = Number(font.dataset['mhFont']);
@@ -1372,6 +1379,13 @@ export function siteRuntime(): SiteRuntime {
     // ----- apply the state to every page on screen -----
     const bound = new WeakSet<Element>();
     function apply() {
+      if (root.querySelector('[data-a11y]') && !document.getElementById('cms-a11y-font')) {
+        const l = document.createElement('link');
+        l.id = 'cms-a11y-font';
+        l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;500;600;700&display=swap';
+        document.head.appendChild(l);
+      }
       const scopes = new Set<HTMLElement>();
       for (const w of Array.from(root.querySelectorAll<HTMLElement>('[data-a11y]'))) scopes.add(scopeOf(w));
       const live = Array.from(root.querySelectorAll<HTMLElement>('[data-a11y]')).filter((w) => !editing(w));
@@ -1499,12 +1513,13 @@ export function siteRuntime(): SiteRuntime {
         groupBtn.setAttribute('aria-expanded', String(!collapsed));
         return;
       }
-      if (t.closest('[data-a11y-view]')) {
-        const grid = widget.classList.toggle('is-grid');
-        const btn = widget.querySelector<HTMLElement>('[data-a11y-view]');
-        btn?.setAttribute('aria-pressed', String(grid));
+      const viewBtn = t.closest<HTMLElement>('[data-a11y-view]');
+      if (viewBtn) {
+        const grid = viewBtn.dataset['a11yView'] === 'grid';
+        widget.classList.toggle('is-grid', grid);
+        widget.querySelectorAll<HTMLElement>('[data-a11y-view]').forEach((b) => b.setAttribute('aria-pressed', String(b === viewBtn)));
         const lab = widget.querySelector('[data-a11y-view-label]');
-        if (lab) lab.textContent = grid ? 'List View' : 'Grid View';
+        if (lab) lab.textContent = grid ? 'Grid View' : 'List View';
         return;
       }
       const step = t.closest<HTMLElement>('[data-a11y-step]');

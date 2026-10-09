@@ -318,3 +318,40 @@
     font-size: 1.15rem;
   }
 }
+
+/*
+ * Built-in accessibility top bar (the mini header inside the navbar). It runs the full width of the page, above the
+ * logo and menu; the mini header's own button, menu and theme styles are reused (see MiniHeader/component.css).
+ */
+.lp-nav-topbar {
+  margin-top: calc(var(--pad-t, 16px) * -1);
+  margin-bottom: 14px;
+  margin-inline: calc(50% - 50cqi);
+  padding-inline: calc(50cqi - 50%);
+  border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.lp-nav-topbar .lp-mh {
+  padding: 8px 0;
+}
+
+.lp-nav-topbar.lp-mh-bar-theme {
+  color: #f8fafc;
+  background: color-mix(in srgb, var(--lp-primary) 24%, #0a0a14);
+}
+
+.lp-themed-dark .lp-nav-topbar.lp-mh-bar-theme {
+  color: var(--lp-text);
+  background: var(--lp-surface);
+}
+
+/* The navbar section is recoloured by a theme (see the mini header), the top bar keeps following it */
+.lp-themed .lp-sec-navbar .lp-nav-topbar.lp-mh-bar-theme {
+  color: #f8fafc;
+  background: color-mix(in srgb, var(--lp-primary) 24%, #0a0a14);
+}
+
+.lp-themed-dark .lp-sec-navbar .lp-nav-topbar.lp-mh-bar-theme {
+  color: var(--lp-text);
+  background: var(--lp-surface);
+}

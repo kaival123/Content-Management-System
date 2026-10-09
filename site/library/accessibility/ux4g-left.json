@@ -1,18 +1,18 @@
 {
-  "name": "UX4G Accessibility Widget · purple (left)",
+  "name": "UX4G Accessibility Widget · left",
   "description": "The same widget docked on the left.",
   "section": {
     "type": "accessibility",
     "data": {
+      "title": "Accessibility Options",
+      "intro": "",
+      "accent": "#613af5",
+      "buttonLabel": "Accessibility Options",
       "helpLabel": "Need Help?",
       "helpHref": "#contact",
-      "title": "Accessibility Options by UX4G",
-      "intro": "",
       "essentialOnly": false,
-      "buttonLabel": "Accessibility Options",
-      "accent": "#613af5",
-      "position": "left",
-      "buttonStyle": "round"
+      "defaultView": "grid",
+      "position": "left"
     },
     "style": {
       "paddingY": 0

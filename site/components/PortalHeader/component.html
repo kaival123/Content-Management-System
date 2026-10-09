@@ -1,0 +1,78 @@
+{{!--
+  Portal header (government portal style): logos and department name on the left, a divider, and on the right a top row
+  (accessibility tools, theme dots, login button) above the main menu with drop-downs.
+  It reuses the mini header's tools: [data-mini-header] makes the site runtime handle text size (− A +), the language
+  menu, theme dots and the screen reader link. "defaultTheme" is the index of the theme dot selected at first.
+  The menu comes from the website's pages (useSiteMenu) or from the custom links; a link's "submenu" lines
+  ("Label | link") make a drop-down.
+--}}
+<header class="lp-ph{{#if @editor}} lp-ph-editing{{/if}}" data-mini-header data-mh-nosite data-mh-default="{{default defaultTheme 1}}"{{#if keepPageColors}} data-mh-keep{{/if}}{{#if @editor}} data-mh-editing{{/if}}>
+  <div class="lp-ph-brandcol">
+    {{#if logo}}<img class="lp-ph-logo" data-el="logo" src="{{logo}}" alt="" />{{/if}}
+    {{#if emblem}}<img class="lp-ph-emblem" data-el="emblem" src="{{emblem}}" alt="" />{{/if}}
+    <a class="lp-ph-name" data-el="title" href="{{default @homeHref "#"}}">
+      <strong data-edit="title">{{title}}</strong>
+      {{#if subtitle}}<span class="lp-pre" data-edit="subtitle">{{subtitle}}</span>{{/if}}
+    </a>
+  </div>
+
+  <div class="lp-ph-main">
+    <div class="lp-ph-top">
+      <div class="lp-ph-tools" data-el="tools">
+        {{#if readerLabel}}<a class="lp-ph-link" href="#screen-reader" data-mh-reader aria-pressed="false"><span data-edit="readerLabel">{{readerLabel}}</span></a>{{/if}}
+        {{#if showFontSize}}
+        <div class="lp-ph-font" role="group" aria-label="Text size">
+          <button type="button" data-mh-font="-1" aria-label="Smaller text">&minus;</button>
+          <button type="button" data-mh-font="0" aria-label="Normal text size">A</button>
+          <button type="button" data-mh-font="1" aria-label="Larger text">+</button>
+        </div>
+        {{/if}}
+        {{#if languages}}
+        <div class="lp-mh-langbox notranslate" translate="no">
+          <select class="lp-mh-native" data-mh-lang aria-hidden="true" tabindex="-1">
+            {{#each languages}}<option value="{{#if href}}{{href}}{{else}}#lang:{{code}}{{/if}}">{{label}}</option>{{/each}}
+          </select>
+          <button type="button" class="lp-mh-pill lp-mh-lang-btn" data-mh-lang-btn aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+            <span data-mh-lang-label>{{#each languages}}{{#if @first}}{{label}}{{/if}}{{/each}}</span>
+            <svg class="lp-mh-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="lp-mh-langlist" role="listbox" aria-label="Language">
+            {{#each languages}}<li class="lp-mh-langopt" role="option" tabindex="-1" data-mh-lang-opt data-value="{{#if href}}{{href}}{{else}}#lang:{{code}}{{/if}}" aria-selected="{{#if @first}}true{{else}}false{{/if}}"><span>{{label}}</span><svg class="lp-mh-tick" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></li>{{/each}}
+          </ul>
+        </div>
+        {{/if}}
+        {{#if helpHref}}<a class="lp-ph-help" data-el="help" href="{{helpHref}}" aria-label="Help">?</a>{{/if}}
+      </div>
+
+      {{#if themes}}
+      <div class="lp-ph-themes" data-el="themes" role="group" aria-label="Theme colour">
+        {{#if themeLabel}}<span data-edit="themeLabel">{{themeLabel}}</span>{{/if}}
+        {{#each themes}}<button type="button" class="lp-mh-dot{{#is @index ../defaultTheme}} is-active{{/is}}" aria-pressed="false" data-mh-theme="{{color}}" data-mh-bg="{{background}}" data-mh-surface="{{surface}}" data-mh-text="{{text}}" style="background: {{default dot color}}" aria-label="{{default name "Theme"}}" title="{{name}}"></button>{{/each}}
+      </div>
+      {{/if}}
+
+      {{#if loginLabel}}<a class="lp-ph-login" data-el="login" data-edit="loginLabel" href="{{default loginHref "#"}}">{{loginLabel}}</a>{{/if}}
+      <button type="button" class="lp-ph-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    </div>
+
+    <nav class="lp-ph-nav" aria-label="Main menu">
+      {{#if useSiteMenu}}
+        {{#each @menu}}
+        <div class="lp-ph-item{{#if children}} has-sub{{/if}}">
+          <a data-el="menuLink" href="{{href}}"{{#if active}} class="is-active" aria-current="page"{{/if}}>{{label}}</a>
+          {{#if children}}
+          <div class="lp-ph-sub">{{#each children}}<a href="{{href}}"{{#if active}} class="is-active" aria-current="page"{{/if}}>{{label}}</a>{{/each}}</div>
+          {{/if}}
+        </div>
+        {{/each}}
+      {{else}}
+        {{#each links}}
+        <div class="lp-ph-item{{#if submenu}} has-sub{{/if}}">
+          <a data-el="link" href="{{default href "#"}}"><span data-edit="label">{{label}}</span></a>
+          {{#pairs submenu}}<div class="lp-ph-sub">{{#each this}}<a href="{{href}}">{{label}}</a>{{/each}}</div>{{/pairs}}
+        </div>
+        {{/each}}
+      {{/if}}
+    </nav>
+  </div>
+</header>

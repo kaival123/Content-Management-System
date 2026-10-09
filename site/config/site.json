@@ -51,12 +51,20 @@
       "label": "Mini header"
     },
     {
+      "id": "portal-header",
+      "label": "Portal header"
+    },
+    {
       "id": "accessibility",
       "label": "Accessibility (UX4G 3.0)"
     },
     {
       "id": "navigation",
       "label": "Navigation"
+    },
+    {
+      "id": "navigation-topbar",
+      "label": "Navbar + accessibility bar"
     },
     {
       "id": "back-to-top",

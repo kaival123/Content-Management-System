@@ -3872,6 +3872,20 @@ button.adm-card-thumb {
   pointer-events: none;
 }
 
+.lib-thumb-ph {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(45deg, #fafbfc 0 10px, #f3f4f8 10px 20px);
+}
+
+.lib-more {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 24px;
+}
+
 .lib-insert {
   position: absolute;
   inset: 0;

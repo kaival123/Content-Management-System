@@ -1,0 +1,104 @@
+{
+  "name": "Portal header · sticky, Hindi",
+  "description": "Hindi names and a header that stays at the top while scrolling.",
+  "section": {
+    "type": "portal-header",
+    "data": {
+      "anchor": "top",
+      "title": "कृषि निदेशालय",
+      "subtitle": "कृषि, किसान कल्याण एवं सहकारिता विभाग\nगुजरात सरकार",
+      "readerLabel": "स्क्रीन रीडर एक्सेस",
+      "showFontSize": true,
+      "languages": [
+        {
+          "label": "English",
+          "code": "en",
+          "href": ""
+        },
+        {
+          "label": "हिन्दी",
+          "code": "hi",
+          "href": ""
+        },
+        {
+          "label": "ગુજરાતી",
+          "code": "gu",
+          "href": ""
+        }
+      ],
+      "helpHref": "#contact",
+      "themeLabel": "थीम:",
+      "themes": [
+        {
+          "name": "Blue",
+          "color": "#2563eb",
+          "background": "#dbe8fb",
+          "surface": "#f3f8ff",
+          "text": "#10264a"
+        },
+        {
+          "name": "Green",
+          "color": "#4cc35b",
+          "background": "#dcf2e3",
+          "surface": "#f3fbf6",
+          "text": "#123222"
+        },
+        {
+          "name": "Orange",
+          "color": "#f97316",
+          "background": "#ffe6d1",
+          "surface": "#fff7ef",
+          "text": "#3b1d0a"
+        },
+        {
+          "name": "Dark",
+          "color": "#4cc35b",
+          "background": "#0b0b0f",
+          "surface": "#17171f",
+          "text": "#f3f4f6",
+          "dot": "#111111"
+        }
+      ],
+      "defaultTheme": 1,
+      "keepPageColors": false,
+      "loginLabel": "लॉगिन",
+      "loginHref": "#",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "मुख्य पृष्ठ",
+          "href": "#"
+        },
+        {
+          "label": "हमारे बारे में",
+          "href": "#about",
+          "submenu": [
+            "दृष्टि | #about",
+            "संगठन | #team"
+          ]
+        },
+        {
+          "label": "किसान कोना",
+          "href": "#farmers",
+          "submenu": [
+            "योजनाएँ | #services",
+            "सब्सिडी | #pricing"
+          ]
+        },
+        {
+          "label": "संपर्क",
+          "href": "#contact"
+        }
+      ],
+      "sticky": true,
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 0,
+      "align": "left",
+      "backgroundType": "color",
+      "background": "#eaf6ee",
+      "textColor": "#14301f"
+    }
+  }
+}

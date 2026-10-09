@@ -1,0 +1,21 @@
+{
+  "name": "UX4G Accessibility Widget · list view (right)",
+  "description": "Opens in List View: one row per tool with its description and a switch.",
+  "section": {
+    "type": "accessibility",
+    "data": {
+      "title": "Accessibility Options",
+      "intro": "",
+      "accent": "#613af5",
+      "buttonLabel": "Accessibility Options",
+      "helpLabel": "Need Help?",
+      "helpHref": "#contact",
+      "essentialOnly": false,
+      "defaultView": "list",
+      "position": "right"
+    },
+    "style": {
+      "paddingY": 0
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "UX4G Accessibility Widget · with intro text (left)",
+  "description": "Intro line, docked on the left.",
+  "section": {
+    "type": "accessibility",
+    "data": {
+      "title": "Accessibility Options",
+      "intro": "Adjust the site to suit you. Your choices are remembered on this device.",
+      "accent": "#613af5",
+      "buttonLabel": "Accessibility Options",
+      "helpLabel": "Need Help?",
+      "helpHref": "#contact",
+      "essentialOnly": false,
+      "defaultView": "grid",
+      "position": "left"
+    },
+    "style": {
+      "paddingY": 0
+    }
+  }
+}

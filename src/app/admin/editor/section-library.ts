@@ -56,7 +56,11 @@ const BASIC = 'components';
           @for (card of shown(); track card.id) {
             <article class="lib-card">
               <button type="button" class="lib-thumb" (click)="choose(card)" [attr.aria-label]="'Insert ' + card.name">
-                <app-page-thumb [page]="previewPage(card)" />
+                @defer (on viewport) {
+                  <app-page-thumb [page]="previewPage(card)" />
+                } @placeholder {
+                  <span class="lib-thumb-ph" aria-hidden="true"></span>
+                }
                 <span class="lib-name">{{ card.name }}</span>
                 <span class="lib-insert"><app-icon name="plus" [size]="16" /> Insert</span>
               </button>
@@ -79,6 +83,11 @@ const BASIC = 'components';
               }
             </p>
           }
+          @if (hidden() > 0) {
+            <div class="lib-more">
+              <button type="button" class="btn" (click)="more()">Show {{ hidden() > pageSize ? pageSize : hidden() }} more <span class="adm-count">{{ hidden() }} not shown</span></button>
+            </div>
+          }
         </div>
       </div>
     </div>
@@ -94,7 +103,14 @@ export class SectionLibrary {
   private readonly project = inject(ProjectService);
   private readonly toast = inject(ToastService);
 
+  /** What is typed in the box (updates at once). */
   protected readonly query = signal('');
+  /** The search actually applied: follows the box after a short pause, so typing never blocks on rendering. */
+  private readonly term = signal('');
+  private termTimer: ReturnType<typeof setTimeout> | undefined;
+  /** Previews are live renders, so long lists are shown a page at a time. */
+  protected readonly pageSize = 24;
+  private readonly limit = signal(this.pageSize);
   protected readonly category = signal('hero');
 
   private readonly cards = computed<Card[]>(() => {
@@ -128,11 +144,20 @@ export class SectionLibrary {
     return [...known, ...extra, { id: BASIC, label: 'Basic components', count: counts.get(BASIC) ?? 0 }];
   });
 
-  protected readonly shown = computed(() => {
-    const q = this.query().trim().toLowerCase();
-    if (q) return this.cards().filter((c) => `${c.name} ${c.description} ${c.category} ${c.preset.type}`.toLowerCase().includes(q));
+  /** Everything that matches the search or the open category. */
+  private readonly matches = computed(() => {
+    const words = this.term().trim().toLowerCase().split(/s+/).filter(Boolean);
+    if (words.length) {
+      return this.cards().filter((c) => {
+        const hay = `${c.name} ${c.description} ${c.category} ${c.preset.type}`.toLowerCase();
+        return words.every((w) => hay.includes(w));
+      });
+    }
     return this.cards().filter((c) => c.category === this.category());
   });
+
+  protected readonly shown = computed(() => this.matches().slice(0, this.limit()));
+  protected readonly hidden = computed(() => Math.max(0, this.matches().length - this.limit()));
 
   private readonly previews = new Map<string, { theme: Theme; page: LandingPage }>();
 
@@ -159,12 +184,25 @@ export class SectionLibrary {
   }
 
   protected pick(id: string): void {
+    clearTimeout(this.termTimer);
     this.query.set('');
+    this.term.set('');
+    this.limit.set(this.pageSize);
     this.category.set(id);
   }
 
   protected setQuery(e: Event): void {
-    this.query.set((e.target as HTMLInputElement).value);
+    const value = (e.target as HTMLInputElement).value;
+    this.query.set(value);
+    clearTimeout(this.termTimer);
+    this.termTimer = setTimeout(() => {
+      this.term.set(value);
+      this.limit.set(this.pageSize);
+    }, 250);
+  }
+
+  protected more(): void {
+    this.limit.update((n) => n + this.pageSize);
   }
 
   protected choose(card: Card): void {
