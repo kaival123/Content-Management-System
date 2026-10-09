@@ -1,0 +1,49 @@
+{
+  "name": "School admissions hero",
+  "description": "Bright, friendly hero for a school with admissions call to action.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Admissions open for 2027",
+      "heading": "Curious minds grow best here",
+      "subheading": "From nursery to Grade 12, our small classes, project-based learning and caring teachers help every child find their spark.",
+      "primaryLabel": "Apply for admission",
+      "primaryHref": "#apply",
+      "secondaryLabel": "Book a campus tour",
+      "secondaryHref": "#tour",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
+      "layout": "split"
+    },
+    "style": {
+      "background": "#fef3c7",
+      "textColor": "#1c1917",
+      "align": "left",
+      "paddingY": 92
+    },
+    "elements": {
+      "eyebrow": {
+        "background": "#fde68a",
+        "color": "#92400e",
+        "radius": 999,
+        "paddingX": 14,
+        "paddingY": 4
+      },
+      "heading": {
+        "color": "#78350f"
+      },
+      "primary": {
+        "background": "#dc2626",
+        "color": "#ffffff",
+        "radius": 12
+      },
+      "secondary": {
+        "color": "#78350f",
+        "borderColor": "#d97706",
+        "radius": 12
+      },
+      "image": {
+        "radius": 32
+      }
+    }
+  }
+}

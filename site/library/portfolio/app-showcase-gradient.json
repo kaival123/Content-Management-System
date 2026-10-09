@@ -1,0 +1,70 @@
+{
+  "name": "App design showcase",
+  "description": "Product work on an indigo gradient with wide thumbnails.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Product design showcase",
+      "subheading": "Mobile and web interfaces we have shipped.",
+      "shape": "16/9",
+      "captionOnHover": false,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&q=80",
+          "title": "Banking redesign",
+          "caption": "Fintech",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80",
+          "title": "Mobile wallet",
+          "caption": "Mobile",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+          "title": "Analytics suite",
+          "caption": "B2B SaaS",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "title": "Growth dashboard",
+          "caption": "Analytics",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#4f46e5",
+      "gradientTo": "#9333ea",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.14)",
+        "radius": 18,
+        "paddingX": 26,
+        "paddingY": 26,
+        "borderWidth": 1,
+        "borderColor": "rgba(255,255,255,0.3)"
+      }
+    }
+  }
+}

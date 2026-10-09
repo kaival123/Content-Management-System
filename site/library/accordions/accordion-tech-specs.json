@@ -1,0 +1,64 @@
+{
+  "name": "Accordion · tech specs",
+  "description": "Dark technical specification list with divided rows.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Specifications",
+      "heading": "Aurora X1 camera",
+      "items": [
+        {
+          "icon": "📷",
+          "question": "Sensor",
+          "answer": "1-inch stacked CMOS, 48 megapixels, native ISO 100 to 12800."
+        },
+        {
+          "icon": "🔋",
+          "question": "Battery",
+          "answer": "4,800 mAh, up to 11 hours of continuous 4K recording. USB-C fast charging."
+        },
+        {
+          "icon": "💾",
+          "question": "Storage",
+          "answer": "Dual card slots, supports CFexpress Type B and UHS-II SD."
+        },
+        {
+          "icon": "🌧️",
+          "question": "Build",
+          "answer": "Magnesium alloy body, weather sealed to IP54."
+        },
+        {
+          "icon": "📡",
+          "question": "Connectivity",
+          "answer": "Wi-Fi 6, Bluetooth 5.3 and tethered streaming over USB."
+        }
+      ],
+      "layout": "split",
+      "style": "divided",
+      "icon": "plus",
+      "iconPosition": "right",
+      "singleOpen": true,
+      "openFirst": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#09090b",
+      "textColor": "#d4d4d8",
+      "paddingY": 100,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#fafafa"
+      },
+      "eyebrow": {
+        "color": "#fb923c",
+        "textTransform": "uppercase",
+        "letterSpacing": 2
+      },
+      "question": {
+        "color": "#fafafa"
+      }
+    }
+  }
+}

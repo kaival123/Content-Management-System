@@ -1,0 +1,61 @@
+{
+  "name": "Featured stories, charcoal",
+  "description": "Two featured stories on a charcoal gradient with large cards.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Featured stories",
+      "subheading": "Our two most read pieces this month.",
+      "posts": [
+        {
+          "title": "Slow travel: why fewer places beat more",
+          "excerpt": "A case for staying a week instead of a day.",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+          "category": "Travel",
+          "date": "Oct 5, 2026",
+          "author": "Sofia Rossi",
+          "link": "#"
+        },
+        {
+          "title": "The small studio manifesto",
+          "excerpt": "Seven principles for staying small on purpose.",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "category": "Work",
+          "date": "Sep 27, 2026",
+          "author": "Nina Petrova",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#111827",
+      "gradientTo": "#374151",
+      "gradientAngle": 180,
+      "textColor": "#f3f4f6",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#1f2937",
+        "color": "#f3f4f6",
+        "radius": 14,
+        "paddingX": 26,
+        "paddingY": 26
+      }
+    }
+  }
+}

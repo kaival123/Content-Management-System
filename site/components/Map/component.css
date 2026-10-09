@@ -1,0 +1,237 @@
+/* Map section */
+
+.lp-map {
+  border-radius: var(--lp-radius);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--lp-text) 15%, transparent);
+}
+
+.lp-map iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.lp-map-gray iframe {
+  filter: grayscale(1) contrast(1.05);
+}
+
+.lp-map-shadow-soft {
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.08);
+}
+
+.lp-map-shadow-medium {
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.15);
+}
+
+.lp-map-shadow-large {
+  box-shadow: 0 20px 50px rgb(0 0 0 / 0.25);
+}
+
+.lp-map-details {
+  margin: 1rem 0 0;
+  font-weight: 500;
+}
+
+.lp-map-info .lp-btn {
+  margin-top: 1.25rem;
+  display: inline-block;
+}
+
+/* Stacked: text above the map */
+.lp-map-layout-stacked .lp-map {
+  margin-top: 24px;
+}
+
+/* Split: text beside the map */
+.lp-map-layout-split,
+.lp-map-layout-split-reverse {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.lp-map-layout-split-reverse .lp-map-info {
+  order: 2;
+}
+
+/* Overlay: info card floating over the map */
+.lp-map-layout-overlay {
+  position: relative;
+}
+
+.lp-map-layout-overlay .lp-map-info {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  left: 24px;
+  max-width: min(360px, calc(100% - 48px));
+  padding: 24px;
+  border-radius: var(--lp-radius);
+  background: var(--lp-bg);
+  color: var(--lp-text);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.2);
+}
+
+.lp-map-layout-overlay .lp-map-info .lp-h2 {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+
+.lp-map-layout-overlay .lp-map-info .lp-lead {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .lp-map-layout-split,
+  .lp-map-layout-split-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-map-layout-split-reverse .lp-map-info {
+    order: 0;
+  }
+
+  .lp-map-layout-overlay .lp-map-info {
+    position: static;
+    max-width: none;
+    margin-bottom: 16px;
+  }
+}
+
+/* Several locations */
+.lp-map-multi-body {
+  margin-top: 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.lp-map-locs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lp-map-loc {
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  display: grid;
+  gap: 2px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: calc(var(--lp-radius) * 0.75);
+  border: 1px solid color-mix(in srgb, var(--lp-text) 18%, transparent);
+  background: transparent;
+}
+
+.lp-map-loc-addr {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.lp-map-loc:hover {
+  border-color: var(--lp-primary);
+}
+
+.lp-map-loc.is-active {
+  border-color: var(--lp-primary);
+  background: color-mix(in srgb, var(--lp-primary) 10%, transparent);
+}
+
+.lp-map-panel {
+  display: none;
+}
+
+.lp-map-panel.is-active,
+.lp-map-editing .lp-map-panel {
+  display: block;
+}
+
+.lp-map-editing .lp-map-panel + .lp-map-panel {
+  margin-top: 24px;
+}
+
+.lp-map-dir {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Side list: locations on the left, map on the right */
+.lp-map-view-side .lp-map-multi-body {
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 2.2fr);
+  align-items: start;
+}
+
+.lp-map-view-side .lp-map-locs {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* Grid: every location with its own map */
+.lp-map-view-grid .lp-map-multi-body {
+  display: block;
+}
+
+.lp-map-view-grid .lp-map-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.lp-map-view-grid .lp-map-panel {
+  display: block;
+}
+
+.lp-map-panel-info {
+  padding-top: 14px;
+}
+
+.lp-map-panel-info .lp-h3 {
+  margin: 0 0 4px;
+}
+
+.lp-map-panel-info p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .lp-map-view-side .lp-map-multi-body {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-map-view-side .lp-map-locs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* One map, many pins: address list beside a Google My Maps embed */
+.lp-map-view-pins .lp-map-multi-body {
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 2.2fr);
+  align-items: start;
+}
+
+.lp-map-view-pins .lp-map-locs {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.lp-map-view-pins .lp-map-loc {
+  cursor: default;
+}
+
+.lp-map-loc-link {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--lp-primary);
+}
+
+@media (max-width: 760px) {
+  .lp-map-view-pins .lp-map-multi-body {
+    grid-template-columns: 1fr;
+  }
+}

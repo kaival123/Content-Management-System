@@ -1,0 +1,30 @@
+{
+  "name": "Cream editorial",
+  "description": "Warm cream background with an editorial tone.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Subscribe to The Slow Letter",
+      "text": "One thoughtful essay on craft and design, every Sunday morning.",
+      "buttonLabel": "Join the readers",
+      "buttonHref": "#newsletter"
+    },
+    "style": {
+      "background": "#fef3c7",
+      "textColor": "#451a03",
+      "align": "center",
+      "paddingY": 84
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 38,
+        "italic": true
+      },
+      "button": {
+        "background": "#451a03",
+        "color": "#fef3c7",
+        "radius": 0
+      }
+    }
+  }
+}

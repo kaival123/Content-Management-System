@@ -1,0 +1,37 @@
+{
+  "name": "Minimal quick links",
+  "description": "Only text size and a few links, no language or theme.",
+  "section": {
+    "type": "mini-header",
+    "data": {
+      "showFontSize": true,
+      "title": "University of Northfield",
+      "links": [
+        {
+          "label": "Skip to content",
+          "href": "#main"
+        },
+        {
+          "label": "Accessibility",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "languages": [],
+      "themes": [],
+      "pillStyle": "outline",
+      "barColor": "theme",
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 6,
+      "backgroundType": "color",
+      "textColor": "#e5e7eb",
+      "align": "left",
+      "background": "#111827"
+    }
+  }
+}

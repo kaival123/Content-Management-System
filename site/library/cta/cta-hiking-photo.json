@@ -1,0 +1,35 @@
+{
+  "name": "Mountain photo",
+  "description": "Mountain landscape with light text, left aligned.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Your next summit is waiting",
+      "text": "Guided treks for every level, with gear, meals and permits included.",
+      "buttonLabel": "View trips",
+      "buttonHref": "#trips"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1920&q=80",
+      "overlayColor": "#0f172a",
+      "overlayOpacity": 45,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingY": 130,
+      "width": "narrow",
+      "verticalAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 50,
+        "fontWeight": 800
+      },
+      "button": {
+        "background": "#22c55e",
+        "color": "#052e16",
+        "radius": 8
+      }
+    }
+  }
+}

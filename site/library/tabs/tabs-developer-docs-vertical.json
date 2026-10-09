@@ -1,0 +1,58 @@
+{
+  "name": "Tabs · developer docs",
+  "description": "Vertical underline tabs for an API product on slate.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Developers",
+      "heading": "Start building in minutes",
+      "subheading": "A clean API, typed SDKs and clear examples.",
+      "orientation": "vertical",
+      "style": "underline",
+      "items": [
+        {
+          "label": "REST API",
+          "icon": "",
+          "title": "Simple and predictable",
+          "text": "Resource-based endpoints, consistent errors and cursor pagination across the board.",
+          "buttonLabel": "Read the reference",
+          "buttonHref": "#docs"
+        },
+        {
+          "label": "SDKs",
+          "icon": "",
+          "title": "Typed clients",
+          "text": "Official libraries for TypeScript, Python, Go and Ruby with full type definitions.",
+          "buttonLabel": "View on GitHub",
+          "buttonHref": "#docs"
+        },
+        {
+          "label": "Webhooks",
+          "icon": "",
+          "title": "React in real time",
+          "text": "Signed events delivered within seconds and retried automatically if your server is busy.",
+          "buttonLabel": "Webhook guide",
+          "buttonHref": "#docs"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#1e293b",
+      "textColor": "#cbd5e1",
+      "paddingY": 96,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#f8fafc"
+      },
+      "eyebrow": {
+        "color": "#34d399"
+      },
+      "subheading": {
+        "color": "#94a3b8"
+      }
+    }
+  }
+}

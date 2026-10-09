@@ -1,0 +1,60 @@
+{
+  "name": "Clinic health tips",
+  "description": "Patient education articles on a light sky panel.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Health tips from our doctors",
+      "subheading": "Plain-language advice you can use today.",
+      "posts": [
+        {
+          "title": "Five habits for a healthier heart",
+          "excerpt": "Small daily changes that add up.",
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "category": "Cardiology",
+          "date": "Oct 2, 2026",
+          "author": "Dr. Rahul Verma",
+          "link": "#"
+        },
+        {
+          "title": "Eating well on a busy schedule",
+          "excerpt": "Simple swaps, no calorie counting.",
+          "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=900&q=80",
+          "category": "Nutrition",
+          "date": "Sep 16, 2026",
+          "author": "Dr. Anita Shah",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0f9ff",
+      "textColor": "#0c4a6e",
+      "align": "center",
+      "paddingTop": 72,
+      "paddingBottom": 72,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#075985"
+      },
+      "card": {
+        "borderColor": "#bae6fd",
+        "radius": 14,
+        "background": "#ffffff",
+        "color": "#0c4a6e",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "University light bar",
+  "description": "Clean white bar with quick links, no language menu.",
+  "section": {
+    "type": "mini-header",
+    "data": {
+      "showFontSize": true,
+      "keepPageColors": false,
+      "pillStyle": "outline",
+      "themeLabel": "Theme:",
+      "links": [
+        {
+          "label": "Skip to content",
+          "href": "#main"
+        },
+        {
+          "label": "Accessibility",
+          "href": "#screen-reader"
+        },
+        {
+          "label": "Apply",
+          "href": "#contact"
+        }
+      ],
+      "languages": [],
+      "themes": [
+        {
+          "name": "Blue",
+          "color": "#2563eb",
+          "background": "#dbe8fb",
+          "surface": "#f3f8ff",
+          "text": "#10264a"
+        },
+        {
+          "name": "Purple",
+          "color": "#7c3aed",
+          "background": "#e9e0fb",
+          "surface": "#f7f3ff",
+          "text": "#261245"
+        },
+        {
+          "name": "Dark",
+          "color": "#f59e0b",
+          "background": "#0b0b0f",
+          "surface": "#17171f",
+          "text": "#f3f4f6",
+          "dot": "#111111"
+        }
+      ],
+      "title": "Northfield University",
+      "barColor": "custom",
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 6,
+      "align": "left",
+      "backgroundType": "color",
+      "textColor": "#0f172a",
+      "background": "#ffffff"
+    }
+  }
+}

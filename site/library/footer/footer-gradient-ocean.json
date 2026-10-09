@@ -1,0 +1,64 @@
+{
+  "name": "Footer · ocean gradient",
+  "description": "Blue gradient footer, centered with pills.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [
+        {
+          "label": "Facebook",
+          "href": "#"
+        },
+        {
+          "label": "Instagram",
+          "href": "#"
+        },
+        {
+          "label": "Pinterest",
+          "href": "#"
+        }
+      ],
+      "divider": "line",
+      "copyrightAlign": "auto",
+      "linkStyle": "pills",
+      "brand": "Wavecrest Travel",
+      "tagline": "Escape, explore, repeat.",
+      "layout": "centered",
+      "links": [
+        {
+          "label": "Destinations",
+          "href": "#"
+        },
+        {
+          "label": "Deals",
+          "href": "#"
+        },
+        {
+          "label": "Travel guides",
+          "href": "#"
+        },
+        {
+          "label": "Help centre",
+          "href": "#"
+        }
+      ],
+      "copyright": "© 2026 Wavecrest Travel Co."
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0369a1",
+      "gradientTo": "#0e7490",
+      "gradientAngle": 150,
+      "textColor": "#e0f2fe",
+      "paddingY": 64,
+      "background": "#0369a1"
+    },
+    "elements": {
+      "brand": {
+        "color": "#ffffff",
+        "fontSize": 26
+      }
+    }
+  }
+}

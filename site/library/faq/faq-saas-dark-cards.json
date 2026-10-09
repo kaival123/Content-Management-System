@@ -1,0 +1,74 @@
+{
+  "name": "FAQ · dark cards",
+  "description": "Dark navy section with shadowed cards and a plus icon.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Help centre",
+      "heading": "Answers before you ask",
+      "subheading": "Everything teams want to know before moving their reporting into Lumen.",
+      "items": [
+        {
+          "question": "How long does setup take?",
+          "answer": "Most teams are live in under an hour. Connect your data sources, pick a template and invite your colleagues.",
+          "icon": ""
+        },
+        {
+          "question": "Which data sources can I connect?",
+          "answer": "Over 80 connectors including Postgres, BigQuery, Stripe, HubSpot and Google Analytics, plus a REST API for anything else.",
+          "icon": ""
+        },
+        {
+          "question": "Can I white-label dashboards for clients?",
+          "answer": "Yes. On the Agency plan you can use your own logo, colours and domain on every shared dashboard.",
+          "icon": ""
+        },
+        {
+          "question": "Is there a limit on viewers?",
+          "answer": "No. Viewers are always free; you only pay for the people who build and edit reports.",
+          "icon": ""
+        },
+        {
+          "question": "Do you offer SSO?",
+          "answer": "SAML single sign-on and SCIM provisioning are included on the Business plan and above.",
+          "icon": ""
+        }
+      ],
+      "layout": "stacked",
+      "style": "cards",
+      "icon": "plus",
+      "iconPosition": "right",
+      "singleOpen": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#0b1220",
+      "textColor": "#e2e8f0",
+      "paddingY": 96,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#7dd3fc"
+      },
+      "subheading": {
+        "color": "#94a3b8"
+      },
+      "item": {
+        "background": "#131c31",
+        "borderColor": "#1f2b47",
+        "borderWidth": 1,
+        "radius": 14
+      },
+      "question": {
+        "color": "#f8fafc"
+      },
+      "answer": {
+        "color": "#a5b4cb"
+      }
+    }
+  }
+}

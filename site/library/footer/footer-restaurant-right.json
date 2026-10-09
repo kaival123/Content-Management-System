@@ -1,0 +1,47 @@
+{
+  "name": "Footer · restaurant",
+  "description": "Dark red spread layout with right aligned copyright.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [],
+      "divider": "line",
+      "copyrightAlign": "right",
+      "linkStyle": "plain",
+      "brand": "Casa Roja",
+      "tagline": "Open daily, 12pm to late.",
+      "layout": "spread",
+      "links": [
+        {
+          "label": "Menu",
+          "href": "#"
+        },
+        {
+          "label": "Reservations",
+          "href": "#contact"
+        },
+        {
+          "label": "Private dining",
+          "href": "#"
+        },
+        {
+          "label": "Gift vouchers",
+          "href": "#"
+        }
+      ],
+      "copyright": "© 2026 Casa Roja Restaurante"
+    },
+    "style": {
+      "paddingY": 44,
+      "background": "#450a0a",
+      "textColor": "#fecaca"
+    },
+    "elements": {
+      "brand": {
+        "color": "#fef2f2",
+        "italic": true
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Services · photo cards",
+  "description": "Three photo-led service cards with buttons.",
+  "section": {
+    "type": "grid",
+    "data": {
+      "heading": "Digital services",
+      "subheading": "Choose a service and see how it works.",
+      "items": [
+        {
+          "heading": "Web design",
+          "text": "Beautiful, fast sites built around your customers.",
+          "icon": "",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#web",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "SEO & content",
+          "text": "Be found by people already searching for you.",
+          "icon": "",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#seo",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Analytics",
+          "text": "Dashboards that show what really drives sales.",
+          "icon": "",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#analytics",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "style": {
+      "paddingY": 80,
+      "background": "#f8fafc"
+    }
+  }
+}

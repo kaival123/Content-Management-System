@@ -1,0 +1,30 @@
+{
+  "name": "Gradient newsletter",
+  "description": "Bold gradient banner for a creative studio.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "Your best email",
+      "buttonLabel": "Send me ideas",
+      "heading": "Ideas in your inbox",
+      "text": "Monthly creative prompts, studio news and early access to our templates.",
+      "note": "Free forever. No spam, promise.",
+      "successMessage": "Done. Inspiration is on its way."
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f97316",
+      "gradientTo": "#db2777",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 88
+    },
+    "elements": {
+      "button": {
+        "background": "#ffffff",
+        "color": "#be185d"
+      }
+    }
+  }
+}

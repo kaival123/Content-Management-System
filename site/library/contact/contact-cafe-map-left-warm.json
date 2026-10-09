@@ -1,0 +1,40 @@
+{
+  "name": "Contact · cafe with map",
+  "description": "Coffee-brown section with the map on the left.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Find us",
+      "text": "Pop in for a coffee or send us a note about catering and events.",
+      "email": "hello@emberroast.cafe",
+      "phone": "+1 (206) 555-0187",
+      "address": "4510 Pike Place\nSeattle, WA 98101",
+      "buttonLabel": "Send note",
+      "successMessage": "Thanks! We will get back to you soon.",
+      "mapAddress": "4510 Pike Place, Seattle, WA 98101",
+      "mapLayout": "side-reverse",
+      "mapRadius": 10,
+      "mapShadow": "soft"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#2b1d14",
+      "textColor": "#e8d9c8",
+      "paddingY": 92,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#f5e6d3"
+      },
+      "text": {
+        "color": "#d6c2aa"
+      },
+      "form": {
+        "background": "#3b2a1d",
+        "borderColor": "#5a4230",
+        "borderWidth": 1
+      }
+    }
+  }
+}

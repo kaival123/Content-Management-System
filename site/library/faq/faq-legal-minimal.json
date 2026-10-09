@@ -1,0 +1,58 @@
+{
+  "name": "FAQ · law firm minimal",
+  "description": "Quiet, minimal questions with generous spacing.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "heading": "Frequently asked questions",
+      "subheading": "Straight answers about how we work with clients.",
+      "items": [
+        {
+          "question": "What does an initial consultation cost?",
+          "answer": "The first 30-minute consultation is free of charge. If we proceed, we agree a fixed fee or hourly rate in writing before any work begins.",
+          "icon": ""
+        },
+        {
+          "question": "How quickly will you respond?",
+          "answer": "We reply to every enquiry within one working day, and urgent matters are triaged the same afternoon.",
+          "icon": ""
+        },
+        {
+          "question": "Will my case go to court?",
+          "answer": "Most disputes settle before a hearing. We prepare every file as if it will go to trial, which is often what produces a fair settlement.",
+          "icon": ""
+        },
+        {
+          "question": "Who will handle my matter?",
+          "answer": "A named partner leads each matter and you will always have a direct line to them.",
+          "icon": ""
+        }
+      ],
+      "layout": "stacked",
+      "style": "minimal",
+      "icon": "none",
+      "iconPosition": "right"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ffffff",
+      "textColor": "#1c1917",
+      "paddingY": 104,
+      "align": "center",
+      "width": "narrow"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 40,
+        "fontWeight": 500,
+        "letterSpacing": -0.5
+      },
+      "question": {
+        "fontWeight": 600
+      },
+      "subheading": {
+        "color": "#57534e"
+      }
+    }
+  }
+}

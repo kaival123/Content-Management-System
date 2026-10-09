@@ -1,0 +1,55 @@
+{
+  "name": "Learning pillars",
+  "description": "Two-column learning pillars on indigo tint.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "How we help you learn",
+      "subheading": "A proven method that turns beginners into job-ready professionals.",
+      "items": [
+        {
+          "icon": "🎓",
+          "title": "Live mentor-led classes",
+          "text": "Small cohorts of 25 with weekly doubt-solving and code reviews."
+        },
+        {
+          "icon": "🧩",
+          "title": "Project-based curriculum",
+          "text": "Build six portfolio-ready projects using real company datasets."
+        },
+        {
+          "icon": "🤝",
+          "title": "Career support",
+          "text": "Resume reviews, mock interviews and introductions to 150 hiring partners."
+        },
+        {
+          "icon": "♾️",
+          "title": "Lifetime access",
+          "text": "Revisit recordings, updates and community any time after graduation."
+        }
+      ]
+    },
+    "style": {
+      "background": "#eef2ff",
+      "textColor": "#1e1b4b"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "elements": {
+      "card": {
+        "radius": 16,
+        "paddingY": 28,
+        "paddingX": 28
+      },
+      "title": {
+        "color": "#3730a3"
+      }
+    }
+  }
+}

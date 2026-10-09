@@ -1,0 +1,84 @@
+{
+  "name": "Health check packages",
+  "description": "Preventive health packages in soft rose cards.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Preventive health packages",
+      "subheading": "Book a morning slot and get your reports within 24 hours.",
+      "plans": [
+        {
+          "name": "Essential",
+          "price": "₹1,999",
+          "period": "",
+          "description": "Annual check",
+          "features": [
+            "Blood count and sugar",
+            "Lipid profile",
+            "Doctor consultation"
+          ],
+          "buttonLabel": "Book Essential",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Complete",
+          "price": "₹4,499",
+          "period": "",
+          "description": "Adults 30+",
+          "features": [
+            "Everything in Essential",
+            "Liver and kidney panel",
+            "ECG",
+            "Diet consultation"
+          ],
+          "buttonLabel": "Book Complete",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Executive",
+          "price": "₹8,999",
+          "period": "",
+          "description": "Full body",
+          "features": [
+            "Everything in Complete",
+            "Ultrasound abdomen",
+            "Cardiac stress test",
+            "Same-day reports"
+          ],
+          "buttonLabel": "Book Executive",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "background": "#fff1f2",
+      "textColor": "#881337",
+      "align": "center",
+      "paddingTop": 84,
+      "paddingBottom": 84
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 26,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#881337"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#4c0519",
+        "radius": 22,
+        "paddingX": 24,
+        "paddingY": 28
+      }
+    }
+  }
+}

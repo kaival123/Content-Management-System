@@ -1,0 +1,659 @@
+/* Accessibility widget (UX4G Accessibility 3.0 look) */
+
+/* The section takes no room on the live page: the round button floats and the drawer slides in from the side. */
+.lp-sec-accessibility {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: 0;
+  overflow: visible;
+}
+
+.lp-sec-accessibility .lp-container {
+  max-width: none;
+}
+
+.lp-a11y {
+  --a11y-accent: #613af5;
+  position: fixed;
+  z-index: 9990;
+  right: 20px;
+  bottom: 24px;
+  font-family: 'Noto Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+  letter-spacing: normal;
+  word-spacing: normal;
+  color: #171717;
+}
+
+.lp-a11y-pos-left {
+  right: auto;
+  left: 20px;
+}
+
+/* Floating button: a round purple button by default (like the UX4G widget) */
+.lp-a11y-launch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 70px;
+  height: 70px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 70px;
+  background: var(--a11y-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 13px 14px -6px rgb(0 0 0 / 0.35);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.lp-a11y-launch:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
+
+.lp-a11y-launch:focus-visible {
+  outline: 3px solid #171717;
+  outline-offset: 3px;
+}
+
+.lp-a11y-btn-round .lp-a11y-launch {
+  width: 70px;
+  padding: 0;
+}
+
+.lp-a11y-btn-square .lp-a11y-launch {
+  border-radius: 18px;
+}
+
+/* The drawer */
+.lp-a11y-panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: min(500px, 100vw);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px 0 0 0;
+  background: #fff;
+  box-shadow: -18px 0 50px -12px rgb(15 23 42 / 0.35);
+  transform: translateX(110%);
+  visibility: hidden;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.28s;
+}
+
+.lp-a11y-pos-left .lp-a11y-panel {
+  right: auto;
+  left: 0;
+  border-radius: 0 20px 0 0;
+  transform: translateX(-110%);
+  box-shadow: 18px 0 50px -12px rgb(15 23 42 / 0.35);
+}
+
+.lp-a11y.is-open .lp-a11y-panel {
+  transform: none;
+  visibility: visible;
+}
+
+.lp-a11y-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px 20px 32px;
+  background: linear-gradient(120deg, var(--a11y-accent), color-mix(in srgb, var(--a11y-accent) 82%, #fff));
+  color: #fff;
+}
+
+.lp-a11y-head strong {
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.lp-a11y-close {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lp-a11y-close:hover,
+.lp-a11y-close:focus-visible {
+  background: rgb(255 255 255 / 0.2);
+  outline: none;
+}
+
+.lp-a11y-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px 20px;
+}
+
+.lp-a11y-viewbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 4px 0 12px;
+}
+
+.lp-a11y-viewbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #212121;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.lp-a11y-viewbtn:hover {
+  background: #f4f5f5;
+}
+
+.lp-a11y-intro {
+  margin: 0 0 14px;
+  color: #525252;
+  font-size: 0.9rem;
+}
+
+/* Groups: grey rounded cards with a collapsible header */
+.lp-a11y-group {
+  margin-bottom: 18px;
+  border-radius: 16px;
+  border: 1px solid #f4f5f5;
+  background: #f4f5f5;
+  padding: 16px;
+}
+
+.lp-a11y-ghead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: #212121;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lp-a11y-gico {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--a11y-accent);
+  color: #fff;
+}
+
+.lp-a11y-gtitle {
+  flex: 1;
+}
+
+.lp-a11y-is-profile .lp-a11y-gtitle,
+.is-profile .lp-a11y-gtitle {
+  font-size: 1.05rem;
+}
+
+.lp-a11y-chev {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 9px solid #171717;
+  transition: transform 0.18s ease;
+}
+
+.is-collapsed .lp-a11y-chev {
+  transform: rotate(180deg);
+}
+
+.lp-a11y-gbody {
+  display: grid;
+  margin-top: 14px;
+}
+
+.is-collapsed .lp-a11y-gbody {
+  display: none;
+}
+
+/* Tool rows (list view) */
+.lp-a11y-item,
+.lp-a11y-prof {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #d9c9ff;
+}
+
+.lp-a11y-gbody > :last-child {
+  border-bottom: 0;
+}
+
+.lp-a11y-prof {
+  width: 100%;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lp-a11y-ico {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  color: #171717;
+}
+
+.lp-a11y-txt {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.lp-a11y-txt strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212121;
+}
+
+.lp-a11y-txt small {
+  font-size: 0.85rem;
+  color: #404040;
+  line-height: 1.4;
+}
+
+.lp-a11y-prof[aria-pressed="true"] .lp-a11y-ico {
+  background: var(--a11y-accent);
+  border-color: var(--a11y-accent);
+  color: #fff;
+}
+
+.lp-a11y-prof[aria-pressed="true"] strong {
+  color: var(--a11y-accent);
+}
+
+/* The switch */
+.lp-a11y-switch {
+  position: relative;
+  flex: none;
+  width: 52px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #c6c6c6;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+.lp-a11y-switch::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+  transition: transform 0.18s ease;
+}
+
+.lp-a11y-switch[aria-checked="true"] {
+  background: var(--a11y-accent);
+}
+
+.lp-a11y-switch[aria-checked="true"]::after {
+  transform: translateX(24px);
+}
+
+.lp-a11y-switch:focus-visible,
+.lp-a11y-prof:focus-visible,
+.lp-a11y-ghead:focus-visible,
+.lp-a11y-viewbtn:focus-visible,
+.lp-a11y-resetbtn:focus-visible,
+.lp-a11y-help:focus-visible,
+.lp-a11y-stepper button:focus-visible {
+  outline: 3px solid #171717;
+  outline-offset: 2px;
+}
+
+/* Levels (bigger text, line height, text spacing) */
+.lp-a11y-stepper {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #404040;
+}
+
+.lp-a11y-item:has(.lp-a11y-switch[aria-checked="true"]) .lp-a11y-stepper {
+  display: inline-flex;
+}
+
+.lp-a11y-stepper button {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid #c7b6f5;
+  background: #fff;
+  color: var(--a11y-accent);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Grid view: the tools become cards */
+.lp-a11y.is-grid .lp-a11y-group:not(.is-profile) .lp-a11y-gbody {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.lp-a11y.is-grid .lp-a11y-item {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid #ebebeb;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.lp-a11y.is-grid .lp-a11y-item .lp-a11y-ico {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: #f4f5f5;
+}
+
+.lp-a11y.is-grid .lp-a11y-item .lp-a11y-txt small {
+  display: none;
+}
+
+.lp-a11y.is-grid .lp-a11y-item .lp-a11y-switch {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 24px;
+}
+
+.lp-a11y.is-grid .lp-a11y-item .lp-a11y-switch::after {
+  width: 18px;
+  height: 18px;
+}
+
+.lp-a11y.is-grid .lp-a11y-item .lp-a11y-switch[aria-checked="true"]::after {
+  transform: translateX(20px);
+}
+
+.lp-a11y-foot {
+  min-height: 1.3em;
+  margin: 0;
+  font-size: 0.85rem;
+  color: #525252;
+}
+
+/* Footer: Reset + Need Help? */
+.lp-a11y-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px 18px;
+  border-top: 1px solid #ebebeb;
+  background: #fff;
+}
+
+.lp-a11y-resetbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 55%;
+  height: 52px;
+  border: 0;
+  border-radius: 12px;
+  background: #ecd4ff;
+  color: #171717;
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lp-a11y-resetbtn:hover {
+  background: #e2bfff;
+}
+
+.lp-a11y-help {
+  color: var(--a11y-accent);
+  font-size: 1.05rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Editor: the drawer is shown open, in the flow, so it can be selected and edited */
+.lp-a11y-editing {
+  position: relative;
+  inset: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+}
+
+.lp-a11y-editing .lp-a11y-panel {
+  position: static;
+  width: min(500px, 100%);
+  max-height: 720px;
+  transform: none;
+  visibility: visible;
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+}
+
+.lp-sec-accessibility:has(.lp-a11y-editing) {
+  height: auto;
+  padding: 24px !important;
+}
+
+/* "Essential tools only" hides the less common rows */
+.lp-a11y-ess .lp-a11y-adv {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .lp-a11y-launch {
+    height: 60px;
+    min-width: 60px;
+  }
+
+  .lp-a11y-btn-round .lp-a11y-launch {
+    width: 60px;
+  }
+
+  .lp-a11y-panel {
+    border-radius: 0;
+  }
+
+  .lp-a11y.is-grid .lp-a11y-group:not(.is-profile) .lp-a11y-gbody {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Effects (classes set on the page by the runtime) ---------- */
+
+.lp-a11y-size .lp-section:not(.lp-sec-accessibility) {
+  zoom: var(--a11y-zoom, 1);
+}
+
+.lp-a11y-spacing .lp-section:not(.lp-sec-accessibility) * {
+  letter-spacing: var(--a11y-ls, 0.12em) !important;
+  word-spacing: var(--a11y-ws, 0.2em) !important;
+}
+
+.lp-a11y-line .lp-section:not(.lp-sec-accessibility) * {
+  line-height: var(--a11y-lh, 1.9) !important;
+}
+
+.lp-a11y-links .lp-section:not(.lp-sec-accessibility) a {
+  text-decoration: underline !important;
+  background: #fde047 !important;
+  color: #111827 !important;
+  outline: 2px solid #111827;
+  outline-offset: 1px;
+}
+
+.lp-a11y-pause .lp-section *,
+.lp-a11y-pause .lp-section *::before,
+.lp-a11y-pause .lp-section *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+.lp-a11y-dyslexia .lp-section:not(.lp-sec-accessibility),
+.lp-a11y-dyslexia .lp-section:not(.lp-sec-accessibility) * {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', 'Comic Neue', Verdana, sans-serif !important;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+.lp-a11y-images .lp-section:not(.lp-sec-accessibility) img,
+.lp-a11y-images .lp-section:not(.lp-sec-accessibility) picture,
+.lp-a11y-images .lp-section:not(.lp-sec-accessibility) video {
+  visibility: hidden !important;
+}
+
+.lp-a11y-images .lp-section[style*="url("],
+.lp-a11y-images .lp-section [style*="url("] {
+  background-image: none !important;
+}
+
+/* Colour filters act on the page sections (not the drawer, so it stays readable and fixed in place). */
+.lp-a11y-f-mono .lp-section:not(.lp-sec-accessibility) {
+  filter: grayscale(1);
+}
+
+.lp-a11y-f-sathigh .lp-section:not(.lp-sec-accessibility) {
+  filter: saturate(1.9) contrast(1.05);
+}
+
+.lp-a11y-f-satlow .lp-section:not(.lp-sec-accessibility) {
+  filter: saturate(0.45);
+}
+
+.lp-a11y-f-invert .lp-section:not(.lp-sec-accessibility) {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.lp-a11y-f-invert .lp-section:not(.lp-sec-accessibility) img,
+.lp-a11y-f-invert .lp-section:not(.lp-sec-accessibility) video,
+.lp-a11y-f-invert .lp-section:not(.lp-sec-accessibility) picture {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Dark mode: the page's own theme variables go dark. */
+.lp-a11y-dark {
+  --lp-bg: #0b0b0f !important;
+  --lp-surface: #17171f !important;
+  --lp-text: #f3f4f6 !important;
+  color-scheme: dark;
+}
+
+.lp-a11y-dark .lp-section:not(.lp-sec-accessibility) {
+  background: var(--lp-bg) !important;
+  color: var(--lp-text) !important;
+}
+
+.lp-a11y-dark .lp-section:not(.lp-sec-accessibility):not([style*="url("]):nth-child(even) {
+  background: var(--lp-surface) !important;
+}
+
+/* Focus mode: only the section under the pointer stays bright. */
+.lp-a11y-focus .lp-section:not(.lp-sec-accessibility) {
+  opacity: 0.3;
+  transition: opacity 0.15s ease;
+}
+
+.lp-a11y-focus .lp-section:not(.lp-sec-accessibility):hover,
+.lp-a11y-focus .lp-section:not(.lp-sec-accessibility):focus-within {
+  opacity: 1;
+}
+
+/* A bigger mouse cursor */
+.lp-a11y-cursor,
+.lp-a11y-cursor * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'><path d='M4 2l16 9-7 2-3 7z' fill='black' stroke='white' stroke-width='1.5' stroke-linejoin='round'/></svg>") 4 2, auto !important;
+}
+
+.lp-a11y-cursor a,
+.lp-a11y-cursor button,
+.lp-a11y-cursor a *,
+.lp-a11y-cursor button * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'><path d='M4 2l16 9-7 2-3 7z' fill='%23facc15' stroke='black' stroke-width='1.5' stroke-linejoin='round'/></svg>") 4 2, pointer !important;
+}
+
+/* Reading guide and text magnifier (elements the runtime creates) */
+.lp-a11y-guide-bar {
+  position: fixed;
+  z-index: 9980;
+  left: 0;
+  right: 0;
+  height: 44px;
+  pointer-events: none;
+  background: rgb(250 204 21 / 0.18);
+  border-top: 2px solid #111827;
+  border-bottom: 2px solid #111827;
+  transform: translateY(-50%);
+}
+
+.lp-a11y-mag {
+  position: fixed;
+  z-index: 9985;
+  max-width: min(520px, 90vw);
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #111827;
+  color: #fff;
+  font: 600 28px/1.35 system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  pointer-events: none;
+  box-shadow: 0 16px 40px -10px rgb(0 0 0 / 0.5);
+}

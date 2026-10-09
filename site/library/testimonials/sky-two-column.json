@@ -1,0 +1,57 @@
+{
+  "name": "Two-column sky quotes",
+  "description": "Two large quotes in a narrow sky-blue panel.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "From the teams we support",
+      "items": [
+        {
+          "quote": "Their IT support is like having an in-house team, minus the overhead.",
+          "name": "Colin Baxter",
+          "role": "Office Manager, Baxter & Sons",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+        },
+        {
+          "quote": "Outages dropped to nearly zero after the migration. We stopped thinking about IT.",
+          "name": "Neelam Shah",
+          "role": "Operations Head, Shah Textiles",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0f9ff",
+      "textColor": "#0c4a6e",
+      "align": "center",
+      "paddingTop": 72,
+      "paddingBottom": 72,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#075985"
+      },
+      "card": {
+        "borderColor": "#bae6fd",
+        "radius": 14,
+        "background": "#ffffff",
+        "color": "#0c4a6e",
+        "paddingX": 24,
+        "paddingY": 24
+      },
+      "quote": {
+        "fontSize": 19,
+        "lineHeight": 1.6
+      }
+    }
+  }
+}

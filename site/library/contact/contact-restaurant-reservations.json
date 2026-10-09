@@ -1,0 +1,34 @@
+{
+  "name": "Contact · restaurant bookings",
+  "description": "Warm cream section for table enquiries.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Reserve your table",
+      "text": "Tell us the date, party size and any dietary needs, and we will confirm by email.",
+      "email": "tables@oliveandember.com",
+      "phone": "+1 (503) 555-0173",
+      "address": "214 Pearl Street\nPortland, OR 97209",
+      "buttonLabel": "Request a table",
+      "successMessage": "Thank you. We will confirm your reservation shortly."
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#fdf6e9",
+      "textColor": "#3b2a1a",
+      "paddingY": 92,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#7c2d12",
+        "fontWeight": 600
+      },
+      "form": {
+        "background": "#ffffff",
+        "radius": 16,
+        "shadow": "soft"
+      }
+    }
+  }
+}

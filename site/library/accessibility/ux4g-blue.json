@@ -1,0 +1,21 @@
+{
+  "name": "UX4G Accessibility Widget · blue",
+  "description": "Blue accent for government blue themes.",
+  "section": {
+    "type": "accessibility",
+    "data": {
+      "helpLabel": "Need Help?",
+      "helpHref": "#contact",
+      "title": "Accessibility Options by UX4G",
+      "intro": "",
+      "essentialOnly": false,
+      "buttonLabel": "Accessibility Options",
+      "accent": "#1d4ed8",
+      "position": "right",
+      "buttonStyle": "round"
+    },
+    "style": {
+      "paddingY": 0
+    }
+  }
+}

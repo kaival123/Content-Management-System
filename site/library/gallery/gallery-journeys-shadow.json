@@ -1,0 +1,62 @@
+{
+  "name": "Journeys with shadow cards",
+  "description": "Square photos on shadowed cards over a surface background.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Trips our travellers shared with us.",
+      "captionOnHover": false,
+      "heading": "Recent journeys",
+      "shape": "1/1",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=80",
+          "title": "Golden fields",
+          "caption": "Highlands",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+          "title": "Summit ridge",
+          "caption": "Alps",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=80",
+          "title": "Forest trail",
+          "caption": "Old town",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+          "title": "City break",
+          "caption": "Skyline",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "title": "Skyline dusk",
+          "caption": "Countryside",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "title": "Quiet valley",
+          "caption": "Peaks",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "paddingY": 80
+    },
+    "grid": {
+      "cardStyle": "shadow",
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 20
+    }
+  }
+}

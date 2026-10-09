@@ -1,0 +1,21 @@
+{
+  "name": "सुगम्यता विजेट (हिन्दी)",
+  "description": "Hindi title and help label.",
+  "section": {
+    "type": "accessibility",
+    "data": {
+      "helpLabel": "सहायता चाहिए?",
+      "helpHref": "#contact",
+      "title": "यूएक्स4जी द्वारा सुगम्यता विकल्प",
+      "intro": "",
+      "essentialOnly": false,
+      "buttonLabel": "सुगम्यता विकल्प",
+      "accent": "#613af5",
+      "position": "right",
+      "buttonStyle": "round"
+    },
+    "style": {
+      "paddingY": 0
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Services · dark icon cards",
+  "description": "Dark section with bordered cards for IT services.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Managed IT services",
+      "subheading": "Keep your systems secure and your team productive.",
+      "items": [
+        {
+          "icon": "🛡️",
+          "title": "Cybersecurity",
+          "text": "24/7 monitoring, endpoint protection and incident response."
+        },
+        {
+          "icon": "☁️",
+          "title": "Cloud migration",
+          "text": "Move workloads to the cloud with zero-downtime cutovers."
+        },
+        {
+          "icon": "💾",
+          "title": "Backup & recovery",
+          "text": "Automated backups tested monthly so you can restore fast."
+        },
+        {
+          "icon": "🧑‍💻",
+          "title": "Help desk",
+          "text": "Friendly support with a 15-minute response time."
+        },
+        {
+          "icon": "🌐",
+          "title": "Networking",
+          "text": "Design, install and monitor secure office networks."
+        },
+        {
+          "icon": "📋",
+          "title": "Compliance",
+          "text": "Audits and policies for ISO 27001 and SOC 2."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "paddingY": 80
+    },
+    "elements": {
+      "card": {
+        "background": "#111c33",
+        "borderColor": "#25334f",
+        "radius": 14
+      },
+      "icon": {
+        "background": "#1e3a8a",
+        "radius": 12
+      }
+    }
+  }
+}

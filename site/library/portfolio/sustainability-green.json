@@ -1,0 +1,65 @@
+{
+  "name": "Sustainability projects",
+  "description": "Environmental projects on a green background.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Projects with measurable impact",
+      "subheading": "Every project is tracked against carbon, water and soil outcomes.",
+      "shape": "4/3",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "title": "Water-saving greenhouse",
+          "caption": "40% less water",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "title": "Urban green roofs",
+          "caption": "1,200 m² planted",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=900&q=80",
+          "title": "Regenerative maize",
+          "caption": "Soil carbon +18%",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+          "title": "Orchard restoration",
+          "caption": "8,000 trees",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#064e3b",
+      "align": "left",
+      "paddingTop": 90,
+      "paddingBottom": 90
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#047857"
+      },
+      "card": {
+        "radius": 14,
+        "background": "#d1fae5",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

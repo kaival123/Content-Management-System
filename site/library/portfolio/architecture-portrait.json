@@ -1,0 +1,47 @@
+{
+  "name": "Architecture portrait tiles",
+  "description": "Tall 3:4 tiles for buildings and interiors, three columns.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Built work",
+      "subheading": "Houses, studios and public spaces from the last five years.",
+      "shape": "3/4",
+      "captionOnHover": false,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
+          "title": "Coastal residence",
+          "caption": "Residential",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "title": "Riverside masterplan",
+          "caption": "Urban design",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "title": "Open-plan workplace",
+          "caption": "Interiors",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "",
+      "align": "left",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    }
+  }
+}

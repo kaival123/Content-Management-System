@@ -1,0 +1,53 @@
+{
+  "name": "Fintech outlined ticker",
+  "description": "Thin outlined words for a fintech product on dark navy.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Payments",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Payouts",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Invoicing",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Treasury",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Cards",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "FX",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "right",
+      "speed": 38,
+      "size": "large",
+      "separator": "arrow",
+      "gap": 44,
+      "outline": true,
+      "fade": true
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#38bdf8",
+      "paddingY": 34
+    }
+  }
+}

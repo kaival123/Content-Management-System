@@ -1,0 +1,65 @@
+{
+  "name": "Agency work, surface",
+  "description": "Six-project grid on a soft surface background with captions below.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Work we are proud of",
+      "subheading": "A selection from the past year.",
+      "shape": "4/3",
+      "captionOnHover": false,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "title": "Studio portfolio site",
+          "caption": "Web",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "title": "Fashion storefront",
+          "caption": "E-commerce",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80",
+          "title": "Wallet app",
+          "caption": "Product",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Ceramics brand",
+          "caption": "Branding",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+          "title": "Summer campaign",
+          "caption": "Marketing",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+          "title": "Ops dashboard",
+          "caption": "SaaS",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "flat",
+      "textAlign": "center"
+    }
+  }
+}

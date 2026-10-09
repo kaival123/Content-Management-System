@@ -1,0 +1,32 @@
+{
+  "name": "Contact · design studio map below",
+  "description": "Light lilac background and a wide map below the form.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Visit the studio",
+      "text": "We are open to visitors on weekdays between 10 and 5. Please let us know you are coming.",
+      "email": "studio@plumandoak.design",
+      "phone": "+49 30 5550 7788",
+      "address": "Torstrasse 112\n10119 Berlin",
+      "buttonLabel": "Send message",
+      "successMessage": "Danke! We will answer very soon.",
+      "mapAddress": "Torstrasse 112, 10119 Berlin",
+      "mapLayout": "below",
+      "mapRadius": 0,
+      "mapShadow": "none"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#f5f3ff",
+      "textColor": "#2e1065",
+      "paddingY": 88,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#4c1d95"
+      }
+    }
+  }
+}

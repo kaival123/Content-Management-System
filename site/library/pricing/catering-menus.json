@@ -1,0 +1,86 @@
+{
+  "name": "Catering packages",
+  "description": "Per-head catering packages with rounded white cards.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Catering for every occasion",
+      "subheading": "Priced per guest. Staff, crockery and setup included.",
+      "plans": [
+        {
+          "name": "Buffet",
+          "price": "₹650",
+          "period": "/guest",
+          "description": "Casual gatherings",
+          "features": [
+            "2 starters, 3 mains",
+            "Dessert counter",
+            "Service staff"
+          ],
+          "buttonLabel": "Get a quote",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Plated",
+          "price": "₹1,150",
+          "period": "/guest",
+          "description": "Weddings and dinners",
+          "features": [
+            "3-course plated menu",
+            "Live counter",
+            "Table decor"
+          ],
+          "buttonLabel": "Get a quote",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Cocktail",
+          "price": "₹900",
+          "period": "/guest",
+          "description": "Receptions",
+          "features": [
+            "8 canapé varieties",
+            "Mocktail bar",
+            "Standing tables"
+          ],
+          "buttonLabel": "Get a quote",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0d9488",
+      "gradientTo": "#10b981",
+      "gradientAngle": 120,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#134e4a",
+        "radius": 20,
+        "paddingX": 24,
+        "paddingY": 28,
+        "shadow": "lg"
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Wedding venue packages",
+  "description": "Venue hire packages in soft lavender cards.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Wedding venue packages",
+      "subheading": "Choose a package, then tailor it with our planners.",
+      "plans": [
+        {
+          "name": "Garden",
+          "price": "$4,200",
+          "period": "",
+          "description": "Up to 80 guests",
+          "features": [
+            "Garden lawn ceremony",
+            "Reception tent",
+            "6 hours access"
+          ],
+          "buttonLabel": "Check dates",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Estate",
+          "price": "$8,900",
+          "period": "",
+          "description": "Up to 160 guests",
+          "features": [
+            "Ceremony and ballroom",
+            "Bridal suite",
+            "10 hours access",
+            "On-site coordinator"
+          ],
+          "buttonLabel": "Check dates",
+          "buttonHref": "#",
+          "highlighted": true
+        }
+      ]
+    },
+    "style": {
+      "background": "#f5f3ff",
+      "textColor": "#4c1d95",
+      "align": "center",
+      "paddingTop": 88,
+      "paddingBottom": 88,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#5b21b6",
+        "italic": true
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#3b0764",
+        "radius": 24,
+        "paddingX": 26,
+        "paddingY": 30
+      }
+    }
+  }
+}

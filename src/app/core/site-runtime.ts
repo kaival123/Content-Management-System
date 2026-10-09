@@ -30,6 +30,18 @@ export interface SiteRuntime {
    */
   initBackToTop(root: HTMLElement | Document): () => void;
   /**
+   * Mini header (top bar) tools under `root`: text size − A + ([data-mh-font]), colour theme dots
+   * ([data-mh-theme]), the language dropdown ([data-mh-lang]), and links to #main (skip to content) and
+   * #screen-reader (accessibility mode). Choices are remembered in localStorage (not while editing).
+   */
+  initMiniHeader(root: HTMLElement | Document): void;
+  /**
+   * Accessibility tools panel ([data-a11y], UX4G Accessibility 3.0 style): bigger text, spacing, line height, link
+   * highlight, screen reader, cursor, pause animation, colour filters, dark mode, dyslexia font, hide images, focus mode,
+   * reading guide, text magnify and voice commands. Choices are applied as classes on the page and remembered.
+   */
+  initAccessibility(root: HTMLElement | Document): void;
+  /**
    * Smooth open/close for <details data-accordion> (FAQ answers): animates the height,
    * and with data-accordion="single" closes the others in the same list.
    */
@@ -769,5 +781,812 @@ export function siteRuntime(): SiteRuntime {
     });
   }
 
-  return { initCarousels, initCarousel, initNav, initImageFallback, initAnimations, initForms, initBackToTop, initAccordions, initTabs };
+  function initMiniHeader(root: HTMLElement | Document) {
+    const store = {
+      get(k: string): string | null {
+        try {
+          return localStorage.getItem('cms-mh-' + k);
+        } catch {
+          return null;
+        }
+      },
+      set(k: string, v: string) {
+        try {
+          localStorage.setItem('cms-mh-' + k, v);
+        } catch {
+          /* storage blocked: the choice just isn't remembered */
+        }
+      },
+    };
+    const scopeOf = (el: Element) => el.closest<HTMLElement>('[data-lp]') ?? document.documentElement;
+    const editing = (el: Element) => !!el.closest('[data-mh-editing]');
+    const setSize = (scope: HTMLElement, level: number) => {
+      scope.dataset['mhLevel'] = String(level);
+      scope.style.setProperty('zoom', level ? String(1 + level * 0.1) : '');
+    };
+    // Keeps the custom language menu (label, selected option) in step with its <select>.
+    const syncLang = (sel: HTMLSelectElement) => {
+      const box = sel.closest<HTMLElement>('.lp-mh-langbox');
+      if (!box) return;
+      const label = box.querySelector('[data-mh-lang-label]');
+      if (label) label.textContent = sel.selectedOptions[0]?.textContent ?? '';
+      box.querySelectorAll<HTMLElement>('[data-mh-lang-opt]').forEach((o) => {
+        const on = o.dataset['value'] === sel.value;
+        o.setAttribute('aria-selected', String(on));
+        o.tabIndex = on ? 0 : -1;
+      });
+    };
+    // A theme dot carries the accent (data-mh-theme) and optional page background / surface / text colours.
+    const applyTheme = (scope: HTMLElement, dots: HTMLElement[], dot: HTMLElement) => {
+      const vars: [string, string | undefined][] = [
+        ['--lp-primary', dot.dataset['mhTheme']],
+        ['--lp-bg', dot.dataset['mhBg']],
+        ['--lp-surface', dot.dataset['mhSurface']],
+        ['--lp-text', dot.dataset['mhText']],
+      ];
+      // The "site colours" dot: remove every override so the page looks exactly as designed.
+      if (dot.hasAttribute('data-mh-reset')) {
+        scope.querySelector(':scope > style[data-mh-theme-css]')?.remove();
+        scope.classList.remove('lp-themed', 'lp-themed-dark');
+        dots.forEach((d) => {
+          d.classList.toggle('is-active', d === dot);
+          d.setAttribute('aria-pressed', String(d === dot));
+        });
+        return;
+      }
+      // A stylesheet rule with !important (not inline style): the page host re-applies its own theme variables inline
+      // and would otherwise win the race.
+      if (!scope.dataset['mhScope']) scope.dataset['mhScope'] = 's' + Math.random().toString(36).slice(2, 8);
+      let sheet = scope.querySelector<HTMLStyleElement>(':scope > style[data-mh-theme-css]');
+      if (!sheet) {
+        sheet = document.createElement('style');
+        sheet.setAttribute('data-mh-theme-css', '');
+        scope.appendChild(sheet);
+      }
+      const rules = vars.filter(([, v]) => v).map(([n, v]) => n + ': ' + String(v).replace(/[;{}<]/g, '') + ' !important;');
+      const sel = '[data-mh-scope="' + scope.dataset['mhScope'] + '"]';
+      sheet.textContent = sel + ' { ' + rules.join(' ') + ' }';
+      // With a page background set, sections follow the theme (see .lp-themed in the mini header CSS).
+      scope.classList.toggle('lp-themed', !!dot.dataset['mhBg']);
+      const bg = dot.dataset['mhBg'] ?? '';
+      scope.classList.toggle('lp-themed-dark', /^#?[0-9a-f]{6}$/i.test(bg) && hsl(bg)[2] < 30);
+      dots.forEach((d) => {
+        d.classList.toggle('is-active', d === dot);
+        d.setAttribute('aria-pressed', String(d === dot));
+      });
+    };
+    const hsl = (colour: string): [number, number, number] => {
+      const m = /^#?([0-9a-f]{6})$/i.exec(colour.trim());
+      if (!m) return [220, 70, 50];
+      const n = parseInt(m[1], 16);
+      const r = ((n >> 16) & 255) / 255;
+      const g = ((n >> 8) & 255) / 255;
+      const b = (n & 255) / 255;
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      const l = (max + min) / 2;
+      const d = max - min;
+      let h = 0;
+      if (d) h = max === r ? ((g - b) / d) % 6 : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
+      return [Math.round((h * 60 + 360) % 360), Math.round((d ? d / (1 - Math.abs(2 * l - 1)) : 0) * 100), Math.round(l * 100)];
+    };
+    // First dot = the website's own colours (its template theme): selected by default, it leaves the page untouched,
+    // and choosing it again undoes any other theme.
+    const addSiteDot = (bar: HTMLElement, dots: HTMLElement[]) => {
+      const scope = scopeOf(bar);
+      if (!scope.dataset['mhSiteVars']) {
+        const cs = getComputedStyle(scope);
+        const v = (n: string) => cs.getPropertyValue(n).trim();
+        scope.dataset['mhSiteVars'] = JSON.stringify([v('--lp-primary'), v('--lp-bg'), v('--lp-surface'), v('--lp-text')]);
+      }
+      if (bar.querySelector('[data-mh-reset]')) return;
+      const [primary, bg, surface, text] = JSON.parse(scope.dataset['mhSiteVars']) as string[];
+      const dot = dots[0].cloneNode(false) as HTMLElement;
+      dot.className = 'lp-mh-dot';
+      dot.setAttribute('aria-pressed', 'false');
+      dot.setAttribute('aria-label', 'Site colours');
+      dot.title = 'Site colours';
+      dot.style.background = primary || '#2563eb';
+      dot.style.boxShadow = 'inset 0 0 0 4px ' + (bg || '#ffffff');
+      dot.dataset['mhTheme'] = primary;
+      dot.dataset['mhBg'] = bg;
+      dot.dataset['mhSurface'] = surface;
+      dot.dataset['mhText'] = text;
+      dot.setAttribute('data-mh-reset', '');
+      dots[0].before(dot);
+    };
+    // Dots added before themes had page colours only carry an accent: derive a matching palette from it and add a Dark theme.
+    const ensureThemes = (bar: HTMLElement) => {
+      const dots = Array.from(bar.querySelectorAll<HTMLElement>('[data-mh-theme]:not([data-mh-reset])'));
+      if (!dots.length) return;
+      addSiteDot(bar, dots);
+      if (dots.some((d) => d.dataset['mhBg'])) return;
+      for (const d of dots) {
+        const [h] = hsl(d.dataset['mhTheme'] ?? '');
+        d.dataset['mhBg'] = 'hsl(' + h + ', 70%, 91%)';
+        d.dataset['mhSurface'] = 'hsl(' + h + ', 70%, 97%)';
+        d.dataset['mhText'] = 'hsl(' + h + ', 45%, 14%)';
+      }
+      const last = dots[dots.length - 1];
+      const dark = last.cloneNode(false) as HTMLElement;
+      dark.className = 'lp-mh-dot';
+      dark.setAttribute('aria-pressed', 'false');
+      dark.setAttribute('aria-label', 'Dark theme');
+      dark.title = 'Dark';
+      dark.style.background = '#111111';
+      dark.dataset['mhTheme'] = '#f59e0b';
+      dark.dataset['mhBg'] = '#0b0b0f';
+      dark.dataset['mhSurface'] = '#17171f';
+      dark.dataset['mhText'] = '#f3f4f6';
+      last.after(dark);
+    };
+    const setReader = (scope: HTMLElement, on: boolean) => {
+      scope.classList.toggle('lp-sr-mode', on);
+      let live = scope.querySelector<HTMLElement>('[data-mh-live]');
+      if (!live) {
+        live = document.createElement('div');
+        live.setAttribute('data-mh-live', '');
+        live.setAttribute('role', 'status');
+        live.setAttribute('aria-live', 'polite');
+        live.style.cssText = 'position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap';
+        scope.prepend(live);
+      }
+      live.textContent = on ? 'Screen reader access mode is on. Links are underlined and focus is highlighted.' : 'Screen reader access mode is off.';
+      scope.querySelectorAll('[data-mh-reader]').forEach((l) => l.setAttribute('aria-pressed', String(on)));
+    };
+    const skipToMain = (scope: HTMLElement) => {
+      const target =
+        scope.querySelector<HTMLElement>('#main, [role="main"], main') ??
+        // Skip the bars and the banner (header, navigation, hero / slider) and land on the first real content section.
+        Array.from(scope.querySelectorAll<HTMLElement>('.lp-section')).find((x) => !/lp-sec-(mini-header|navbar|page-header|hero|carousel)/.test(x.className)) ??
+        Array.from(scope.querySelectorAll<HTMLElement>('.lp-section')).find((x) => !/lp-sec-(mini-header|navbar)/.test(x.className));
+      if (!target) return;
+      // Leave room for a sticky / fixed bar (the navigation) so it doesn't cover the top of the content.
+      let offset = 0;
+      for (const sec of Array.from(scope.querySelectorAll<HTMLElement>('.lp-section'))) {
+        const pos = getComputedStyle(sec).position;
+        if ((pos === 'sticky' || pos === 'fixed') && sec !== target && !sec.contains(target)) offset += sec.offsetHeight;
+      }
+      target.style.scrollMarginTop = offset + 'px';
+      target.setAttribute('tabindex', '-1');
+      target.style.outline = 'none';
+      target.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+      target.focus({ preventScroll: true });
+    };
+
+    // Applies the remembered choices to the bars on the page, or the first theme by default (unless the bar says
+    // data-mh-keep). Sections can render after init and re-render later, so this also runs whenever the DOM under
+    // `root` changes; it only touches a bar once per state, so it never fights the visitor's own clicks.
+    const themed = new Set<HTMLElement>();
+    const restore = () => {
+      const bars = Array.from(root.querySelectorAll<HTMLElement>('[data-mini-header]'));
+      for (const bar of bars) {
+        const scope = scopeOf(bar);
+        const persist = !editing(bar);
+        ensureThemes(bar);
+        if (persist) {
+          const level = Number(store.get('font') ?? 0);
+          if (level !== Number(scope.dataset['mhLevel'] ?? 0)) setSize(scope, level);
+        }
+        const dots = Array.from(bar.querySelectorAll<HTMLElement>('[data-mh-theme]'));
+        if (!dots.length) continue;
+        if (bar.hasAttribute('data-mh-keep') && (!persist || store.get('themeIdx') === null)) {
+          dots.forEach((d, i) => d.classList.toggle('is-active', i === 0));
+          continue;
+        }
+        const saved = persist ? store.get('themeIdx') : null;
+        const dot = saved !== null && dots[Number(saved)] ? dots[Number(saved)] : dots[0];
+        // Re-render of the bar (new dot elements) or first time: apply; otherwise leave the visitor's choice alone.
+        if (!themed.has(scope) || !dots.some((d) => d.classList.contains('is-active')) || scope.dataset['mhDots'] !== String(dots.length)) {
+          applyTheme(scope, dots, dot);
+          scope.dataset['mhDots'] = String(dots.length);
+          themed.add(scope);
+        }
+      }
+      // Language dropdown: show the remembered choice (and translate) once per dropdown.
+      for (const sel of Array.from(root.querySelectorAll<HTMLSelectElement>('select[data-mh-lang]'))) {
+        if (sel.dataset['mhLangInit']) continue;
+        sel.dataset['mhLangInit'] = '1';
+        const saved = store.get('lang');
+        if (!editing(sel) && saved && Array.from(sel.options).some((o) => o.value === '#lang:' + saved)) {
+          sel.value = '#lang:' + saved;
+          if (saved !== (sel.options[0]?.value ?? '').replace('#lang:', '')) chooseLanguage(sel, false);
+        }
+        syncLang(sel);
+        // Load the translator in the background once the page is idle, so choosing a language is instant.
+        if (!editing(sel)) {
+          const warmUp = () => void loadTranslator((sel.options[0]?.value ?? '#lang:en').replace('#lang:', '') || 'en', codesOf(sel));
+          const ric = (window as any).requestIdleCallback as ((cb: () => void, o?: { timeout: number }) => void) | undefined;
+          if (ric) ric(warmUp, { timeout: 2500 });
+          else setTimeout(warmUp, 1200);
+        }
+      }
+      // The bar was removed: drop the theme again.
+      for (const scope of Array.from(themed)) {
+        if (scope.querySelector('[data-mini-header]')) continue;
+        scope.querySelector(':scope > style[data-mh-theme-css]')?.remove();
+        scope.classList.remove('lp-themed', 'lp-themed-dark');
+        delete scope.dataset['mhDots'];
+        themed.delete(scope);
+      }
+    };
+
+    root.addEventListener('click', (e) => {
+      const t = e.target as HTMLElement;
+      const bar = t.closest?.<HTMLElement>('[data-mini-header]');
+      if (!bar) return;
+      const scope = scopeOf(bar);
+      const persist = !editing(bar);
+      const font = t.closest<HTMLElement>('[data-mh-font]');
+      if (font) {
+        const step = Number(font.dataset['mhFont']);
+        const level = step === 0 ? 0 : Math.max(-3, Math.min(5, Number(scope.dataset['mhLevel'] ?? 0) + step));
+        setSize(scope, level);
+        if (persist) store.set('font', String(level));
+        return;
+      }
+      const theme = t.closest<HTMLElement>('[data-mh-theme]');
+      if (theme) {
+        ensureThemes(bar);
+        const dots = Array.from(bar.querySelectorAll<HTMLElement>('[data-mh-theme]'));
+        applyTheme(scope, dots, theme);
+        if (persist) store.set('themeIdx', String(dots.indexOf(theme)));
+        return;
+      }
+      const link = t.closest<HTMLAnchorElement>('a[href]');
+      const href = link?.getAttribute('href') ?? '';
+      if (href === '#main') {
+        e.preventDefault();
+        skipToMain(scope);
+      } else if (href === '#screen-reader') {
+        e.preventDefault();
+        const on = !scope.classList.contains('lp-sr-mode');
+        setReader(scope, on);
+      }
+    });
+    // Page translation through Google's translate element. The script is loaded ahead of time (as soon as the language
+    // menu is pointed at or focused, or right away when a language was chosen earlier) so picking a language is quick, and
+    // the googtrans cookie is set first so the widget translates by itself when it finishes loading.
+    const gt = window as any;
+    let translator: Promise<void> | null = null;
+    const loadTranslator = (pageLang: string, codes: string) => {
+      translator ??= new Promise<void>((resolve) => {
+        for (const href of ['https://translate.google.com', 'https://translate.googleapis.com', 'https://www.gstatic.com']) {
+          if (document.head.querySelector('link[rel="preconnect"][href="' + href + '"]')) continue;
+          const l = document.createElement('link');
+          l.rel = 'preconnect';
+          l.href = href;
+          l.crossOrigin = '';
+          document.head.appendChild(l);
+        }
+        const holder = document.createElement('div');
+        holder.id = 'google_translate_element';
+        holder.style.cssText = 'position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden';
+        document.body.appendChild(holder);
+        gt.cmsGoogleTranslateInit = () => {
+          new gt.google.translate.TranslateElement({ pageLanguage: pageLang, includedLanguages: codes, autoDisplay: false }, 'google_translate_element');
+          resolve();
+        };
+        const script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=cmsGoogleTranslateInit';
+        script.async = true;
+        script.onerror = () => {
+          translator = null;
+          script.remove();
+          holder.remove();
+          resolve();
+        };
+        document.head.appendChild(script);
+      });
+      return translator;
+    };
+    const setTransCookie = (pageLang: string, code: string) => {
+      const on = !!code && code !== pageLang;
+      const value = 'googtrans=' + (on ? '/' + pageLang + '/' + code : '') + '; path=/' + (on ? '' : '; expires=Thu, 01 Jan 1970 00:00:00 GMT');
+      document.cookie = value;
+      const host = window.location.hostname;
+      if (host.includes('.')) document.cookie = value + '; domain=' + host;
+    };
+    const isTranslated = () => /translated-(ltr|rtl)/.test(document.documentElement.className);
+    const setBusy = (on: boolean) => {
+      root.querySelectorAll('.lp-mh-langbox').forEach((x) => x.classList.toggle('is-translating', on));
+    };
+    const codesOf = (sel: HTMLSelectElement) =>
+      Array.from(sel.options)
+        .map((o) => o.value.replace('#lang:', ''))
+        .filter((c) => c && !c.startsWith('/') && !c.startsWith('http') && !c.startsWith('#'))
+        .join(',');
+    const translate = (code: string, pageLang: string, codes: string) => {
+      const toOriginal = code === pageLang;
+      setTransCookie(pageLang, code);
+      setBusy(true);
+      void loadTranslator(pageLang, codes).then(() => {
+        const waitFor = (tries: number) => {
+          const combo = document.querySelector<HTMLSelectElement>('select.goog-te-combo');
+          if (!combo) {
+            if (tries < 160) setTimeout(() => waitFor(tries + 1), 50);
+            else setBusy(false);
+            return;
+          }
+          const run = () => {
+            combo.value = toOriginal ? '' : code;
+            combo.dispatchEvent(new Event('change'));
+          };
+          run();
+          // Wait until the page really is (or is no longer) translated; nudge it once, and as a last resort for going back
+          // to the original text reload the page without the cookie.
+          let waited = 0;
+          const timer = setInterval(() => {
+            waited += 100;
+            const done = toOriginal ? !isTranslated() : isTranslated();
+            if (done) {
+              clearInterval(timer);
+              setBusy(false);
+            } else if (waited === 2500) run();
+            else if (waited >= 9000) {
+              clearInterval(timer);
+              setBusy(false);
+              if (toOriginal) window.location.reload();
+            }
+          }, 100);
+        };
+        waitFor(0);
+      });
+    };
+    const chooseLanguage = (sel: HTMLSelectElement, persist: boolean) => {
+      const v = sel.value;
+      if (v.startsWith('#lang:')) {
+        const lang = v.slice(6);
+        const pageLang = (sel.options[0]?.value ?? '#lang:en').replace('#lang:', '') || 'en';
+        if (persist) store.set('lang', lang);
+        translate(lang, pageLang, codesOf(sel));
+      } else if (v) window.location.href = v;
+    };
+    // Warm the translator up before a language is picked.
+    const warm = (e: Event) => {
+      const sel = (e.target as HTMLElement).closest?.('.lp-mh-langbox')?.querySelector<HTMLSelectElement>('select[data-mh-lang]');
+      if (sel && !editing(sel)) void loadTranslator((sel.options[0]?.value ?? '#lang:en').replace('#lang:', '') || 'en', codesOf(sel));
+    };
+    root.addEventListener('pointerover', warm);
+    root.addEventListener('focusin', warm);
+    root.addEventListener('change', (e) => {
+      const sel = (e.target as HTMLElement).closest?.<HTMLSelectElement>('[data-mh-lang]');
+      if (!sel || editing(sel)) return;
+      chooseLanguage(sel, true);
+    });
+
+    // Custom language menu (a button + list instead of the browser's own dropdown); the hidden <select> stays the source of truth.
+    const closeMenus = (except?: Element | null) => {
+      for (const w of Array.from(root.querySelectorAll<HTMLElement>('.lp-mh-langbox.is-open'))) {
+        if (w === except) continue;
+        w.classList.remove('is-open');
+        w.querySelector('[data-mh-lang-btn]')?.setAttribute('aria-expanded', 'false');
+      }
+    };
+    // A click anywhere outside the page area (or outside the menu) closes it too.
+    document.addEventListener('click', (e) => {
+      if (!(e.target as HTMLElement).closest?.('.lp-mh-langbox')) closeMenus();
+    });
+    root.addEventListener('click', (e) => {
+      const t = e.target as HTMLElement;
+      const box = t.closest?.<HTMLElement>('.lp-mh-langbox');
+      if (!box) {
+        closeMenus();
+        return;
+      }
+      const sel = box.querySelector<HTMLSelectElement>('select[data-mh-lang]');
+      if (t.closest('[data-mh-lang-btn]')) {
+        closeMenus(box);
+        const open = box.classList.toggle('is-open');
+        box.querySelector('[data-mh-lang-btn]')?.setAttribute('aria-expanded', String(open));
+        if (open) box.querySelector<HTMLElement>('[aria-selected="true"]')?.focus();
+        return;
+      }
+      const opt = t.closest<HTMLElement>('[data-mh-lang-opt]');
+      if (opt && sel) {
+        sel.value = opt.dataset['value'] ?? '';
+        syncLang(sel);
+        closeMenus();
+        box.querySelector<HTMLElement>('[data-mh-lang-btn]')?.focus();
+        sel.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+    root.addEventListener('keydown', (e) => {
+      const ev = e as KeyboardEvent;
+      const t = ev.target as HTMLElement;
+      const box = t.closest?.<HTMLElement>('.lp-mh-langbox');
+      if (!box) return;
+      if (ev.key === 'Escape') {
+        closeMenus();
+        box.querySelector<HTMLElement>('[data-mh-lang-btn]')?.focus();
+        return;
+      }
+      const opts = Array.from(box.querySelectorAll<HTMLElement>('[data-mh-lang-opt]'));
+      if (t.closest('[data-mh-lang-btn]') && (ev.key === 'ArrowDown' || ev.key === 'ArrowUp')) {
+        ev.preventDefault();
+        box.classList.add('is-open');
+        box.querySelector('[data-mh-lang-btn]')?.setAttribute('aria-expanded', 'true');
+        (box.querySelector<HTMLElement>('[aria-selected="true"]') ?? opts[0])?.focus();
+      } else if (t.matches('[data-mh-lang-opt]')) {
+        const i = opts.indexOf(t);
+        if (ev.key === 'ArrowDown') {
+          ev.preventDefault();
+          opts[(i + 1) % opts.length].focus();
+        } else if (ev.key === 'ArrowUp') {
+          ev.preventDefault();
+          opts[(i - 1 + opts.length) % opts.length].focus();
+        } else if (ev.key === 'Enter' || ev.key === ' ') {
+          ev.preventDefault();
+          t.click();
+        }
+      }
+    });
+
+    restore();
+    if (typeof MutationObserver !== 'undefined') new MutationObserver(restore).observe(root instanceof Document ? root.documentElement : root, { childList: true, subtree: true });
+  }
+
+  function initAccessibility(root: HTMLElement | Document) {
+    const KEY = 'cms-a11y3';
+    type State = {
+      size: number;
+      spacing: number;
+      line: number;
+      links: boolean;
+      reader: boolean;
+      cursor: boolean;
+      pause: boolean;
+      filter: '' | 'mono' | 'sathigh' | 'satlow' | 'invert';
+      dark: boolean;
+      dyslexia: boolean;
+      images: boolean;
+      focus: boolean;
+      guide: boolean;
+      magnify: boolean;
+      voice: boolean;
+      profile: string;
+    };
+    const blank = (): State => ({ size: 0, spacing: 0, line: 0, links: false, reader: false, cursor: false, pause: false, filter: '', dark: false, dyslexia: false, images: false, focus: false, guide: false, magnify: false, voice: false, profile: '' });
+    const load = (): State => {
+      try {
+        return { ...blank(), ...JSON.parse(localStorage.getItem(KEY) ?? '{}') };
+      } catch {
+        return blank();
+      }
+    };
+    const save = (st: State) => {
+      try {
+        localStorage.setItem(KEY, JSON.stringify(st));
+      } catch {
+        /* storage blocked: the choice just isn't remembered */
+      }
+    };
+    let state = load();
+    const scopeOf = (el: Element) => el.closest<HTMLElement>('[data-lp]') ?? document.documentElement;
+    const editing = (el: Element) => !!el.closest('[data-a11y-editing]');
+    const statusOf = (el: Element) => el.closest('[data-a11y]')?.querySelector<HTMLElement>('[data-a11y-status]');
+    const ZOOM = [1, 1.1, 1.25, 1.4];
+    const SPACING = [
+      ['0.12em', '0.2em'],
+      ['0.2em', '0.35em'],
+    ];
+    const LINE = [1.9, 2.3];
+    const names: Record<string, string> = { size: 'Bigger text', spacing: 'Text spacing', line: 'Line height', links: 'Highlight links', reader: 'Screen reader', cursor: 'Cursor size', pause: 'Pause animation', mono: 'Monochrome', sathigh: 'High saturate', satlow: 'Low saturate', invert: 'Invert color', dark: 'Dark mode', dyslexia: 'Dyslexia friendly', images: 'Hide images', focus: 'Focus mode', guide: 'Reading guide', magnify: 'Text magnify', voice: 'Voice support' };
+    const MAX = { size: ZOOM.length - 1, spacing: SPACING.length, line: LINE.length };
+    // Profiles switch on a ready-made combination of tools (everything else is reset).
+    const PROFILES: Record<string, Partial<State>> = {
+      seizure: { pause: true, filter: 'satlow', links: true, size: 1, line: 1 },
+      colorblind: { filter: 'mono', links: true },
+      lowvision: { size: 2, line: 1, magnify: true, links: true },
+      senior: { size: 2, line: 1, spacing: 1, cursor: true },
+      blind: { reader: true, size: 3, links: true, dark: true },
+      motion: { pause: true, focus: true, cursor: true },
+      dyslexia: { dyslexia: true, spacing: 1, line: 1, guide: true },
+      adhd: { focus: true, guide: true, pause: true, line: 1 },
+    };
+    const profileNames: Record<string, string> = { seizure: 'Seizure Safe', colorblind: 'Color Blindness', lowvision: 'Low Vision', senior: 'Senior Citizens', blind: 'Visually Impaired', motion: 'Motion Impairment', dyslexia: 'Dyslexia', adhd: 'Cognitive & ADHD' };
+
+    // ----- helpers that create or remove page-level pieces -----
+    let guideBar: HTMLElement | null = null;
+    let magBox: HTMLElement | null = null;
+    let recognition: any = null;
+    let speakTimer: ReturnType<typeof setTimeout> | undefined;
+    let voiceFailed = false;
+
+    const speak = (text: string) => {
+      const synth = (window as any).speechSynthesis as SpeechSynthesis | undefined;
+      if (!synth || !text.trim()) return;
+      synth.cancel();
+      const u = new SpeechSynthesisUtterance(text.trim().slice(0, 400));
+      u.lang = document.documentElement.lang || navigator.language || 'en';
+      synth.speak(u);
+    };
+    const textOf = (el: Element | null) => {
+      const t = el?.closest<HTMLElement>('h1,h2,h3,h4,h5,h6,p,li,a,button,label,td,th,figcaption,blockquote,dd,dt,summary,input,textarea,select');
+      if (!t || t.closest('[data-a11y-panel-skip]')) return '';
+      return (t.getAttribute('aria-label') || t.innerText || (t as HTMLInputElement).placeholder || '').replace(/\s+/g, ' ').trim();
+    };
+    const onReaderOver = (e: Event) => {
+      if (!state.reader) return;
+      const text = textOf(e.target as Element);
+      clearTimeout(speakTimer);
+      if (text) speakTimer = setTimeout(() => speak(text), 250);
+    };
+    const onGuideMove = (e: MouseEvent) => {
+      if (guideBar) guideBar.style.top = e.clientY + 'px';
+    };
+    const onMagnifyMove = (e: MouseEvent) => {
+      if (!magBox) return;
+      const text = textOf(e.target as Element).slice(0, 220);
+      magBox.style.display = text ? 'block' : 'none';
+      if (!text) return;
+      magBox.textContent = text;
+      const x = Math.min(e.clientX + 18, window.innerWidth - magBox.offsetWidth - 12);
+      const y = e.clientY + 24 + magBox.offsetHeight > window.innerHeight ? e.clientY - magBox.offsetHeight - 18 : e.clientY + 24;
+      magBox.style.left = Math.max(8, x) + 'px';
+      magBox.style.top = Math.max(8, y) + 'px';
+    };
+    const scrollBy = (dy: number) => window.scrollBy({ top: dy, behavior: state.pause ? 'auto' : 'smooth' });
+    const sections = () => Array.from(document.querySelectorAll<HTMLElement>('.lp-section:not(.lp-sec-accessibility)'));
+    const voiceCommand = (said: string) => {
+      const t = said.toLowerCase().trim();
+      if (/(scroll )?down/.test(t)) scrollBy(window.innerHeight * 0.8);
+      else if (/(scroll )?up/.test(t)) scrollBy(-window.innerHeight * 0.8);
+      else if (/top|beginning/.test(t)) window.scrollTo({ top: 0, behavior: 'smooth' });
+      else if (/bottom|end/.test(t)) window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+      else if (/next/.test(t) || /previous|back/.test(t)) {
+        const list = sections();
+        const here = list.findIndex((x) => x.getBoundingClientRect().bottom > 80);
+        const to = list[Math.max(0, Math.min(list.length - 1, here + (/next/.test(t) ? 1 : -1)))];
+        to?.scrollIntoView({ behavior: 'smooth' });
+      } else if (/stop|off/.test(t)) {
+        state.voice = false;
+        apply();
+      }
+    };
+    const startVoice = (): boolean => {
+      const Rec = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      if (!Rec) return false;
+      recognition = new Rec();
+      recognition.continuous = true;
+      recognition.interimResults = false;
+      recognition.lang = document.documentElement.lang || navigator.language || 'en-IN';
+      recognition.onresult = (ev: any) => voiceCommand(String(ev.results[ev.results.length - 1][0].transcript));
+      recognition.onend = () => {
+        if (state.voice && recognition) {
+          try {
+            recognition.start();
+          } catch {
+            /* already running */
+          }
+        }
+      };
+      try {
+        recognition.start();
+      } catch {
+        return false;
+      }
+      return true;
+    };
+
+    // ----- apply the state to every page on screen -----
+    const bound = new WeakSet<Element>();
+    function apply() {
+      const scopes = new Set<HTMLElement>();
+      for (const w of Array.from(root.querySelectorAll<HTMLElement>('[data-a11y]'))) scopes.add(scopeOf(w));
+      const live = Array.from(root.querySelectorAll<HTMLElement>('[data-a11y]')).filter((w) => !editing(w));
+      for (const scope of scopes) {
+        const on = live.some((w) => scopeOf(w) === scope);
+        const c = scope.classList;
+        c.toggle('lp-a11y-size', on && state.size > 0);
+        scope.style.setProperty('--a11y-zoom', on && state.size > 0 ? String(ZOOM[state.size]) : '');
+        c.toggle('lp-a11y-spacing', on && state.spacing > 0);
+        if (on && state.spacing > 0) {
+          scope.style.setProperty('--a11y-ls', SPACING[state.spacing - 1][0]);
+          scope.style.setProperty('--a11y-ws', SPACING[state.spacing - 1][1]);
+        }
+        c.toggle('lp-a11y-line', on && state.line > 0);
+        if (on && state.line > 0) scope.style.setProperty('--a11y-lh', String(LINE[state.line - 1]));
+        c.toggle('lp-a11y-links', on && state.links);
+        c.toggle('lp-a11y-cursor', on && state.cursor);
+        c.toggle('lp-a11y-pause', on && state.pause);
+        c.toggle('lp-a11y-dark', on && state.dark);
+        c.toggle('lp-a11y-dyslexia', on && state.dyslexia);
+        c.toggle('lp-a11y-images', on && state.images);
+        c.toggle('lp-a11y-focus', on && state.focus);
+        for (const f of ['mono', 'sathigh', 'satlow', 'invert']) c.toggle('lp-a11y-f-' + f, on && state.filter === f);
+      }
+      // Switches (aria-checked), levels and the active profile. Text is only written when it changed: this runs from a
+      // MutationObserver, and a write is itself a mutation.
+      for (const w of Array.from(root.querySelectorAll<HTMLElement>('[data-a11y]'))) {
+        for (const b of Array.from(w.querySelectorAll<HTMLElement>('[data-a11y-tool]'))) {
+          const k = b.dataset['a11yTool'] ?? '';
+          const on = k === 'size' || k === 'spacing' || k === 'line' ? (state as any)[k] > 0 : ['mono', 'sathigh', 'satlow', 'invert'].includes(k) ? state.filter === k : !!(state as any)[k];
+          b.setAttribute('aria-checked', String(on));
+          b.setAttribute('aria-pressed', String(on));
+        }
+        for (const el of Array.from(w.querySelectorAll<HTMLElement>('[data-a11y-level]'))) {
+          const label = String(Math.max(1, (state as any)[el.dataset['a11yLevel'] ?? ''] ?? 1));
+          if (el.textContent !== label) el.textContent = label;
+        }
+        for (const pr of Array.from(w.querySelectorAll<HTMLElement>('[data-a11y-profile]'))) pr.setAttribute('aria-pressed', String(state.profile === pr.dataset['a11yProfile']));
+      }
+      // Page-level helpers
+      if (state.guide && !guideBar) {
+        guideBar = document.createElement('div');
+        guideBar.className = 'lp-a11y-guide-bar';
+        guideBar.style.top = '40%';
+        document.body.appendChild(guideBar);
+        document.addEventListener('mousemove', onGuideMove);
+      } else if (!state.guide && guideBar) {
+        guideBar.remove();
+        guideBar = null;
+        document.removeEventListener('mousemove', onGuideMove);
+      }
+      if (state.magnify && !magBox) {
+        magBox = document.createElement('div');
+        magBox.className = 'lp-a11y-mag';
+        magBox.style.display = 'none';
+        magBox.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(magBox);
+        document.addEventListener('mousemove', onMagnifyMove);
+      } else if (!state.magnify && magBox) {
+        magBox.remove();
+        magBox = null;
+        document.removeEventListener('mousemove', onMagnifyMove);
+      }
+      if (!state.reader) (window as any).speechSynthesis?.cancel();
+      if (state.voice && !recognition) {
+        voiceFailed = false;
+        if (!startVoice()) {
+          state.voice = false;
+          voiceFailed = true;
+          for (const w of live) {
+            const st = statusOf(w);
+            if (st) st.textContent = 'Voice support is not available in this browser.';
+          }
+        }
+      } else if (!state.voice && recognition) {
+        const r = recognition;
+        recognition = null;
+        try {
+          r.stop();
+        } catch {
+          /* not running */
+        }
+      }
+      for (const w of Array.from(root.querySelectorAll<HTMLElement>('[data-a11y]'))) {
+        const v = w.querySelector<HTMLElement>('[data-a11y-tool="voice"]');
+        if (v) {
+          v.setAttribute('aria-pressed', String(state.voice));
+          v.setAttribute('aria-checked', String(state.voice));
+        }
+      }
+      // Re-bind the reader events once (they are cheap and idempotent per document)
+      if (!bound.has(document.documentElement)) {
+        bound.add(document.documentElement);
+        document.addEventListener('mouseover', onReaderOver);
+        document.addEventListener('focusin', onReaderOver);
+      }
+    }
+
+    const say = (el: Element, msg: string) => {
+      const st = statusOf(el);
+      if (st) st.textContent = msg;
+    };
+
+    root.addEventListener('click', (e) => {
+      const t = e.target as HTMLElement;
+      const widget = t.closest?.<HTMLElement>('[data-a11y]');
+      if (!widget || editing(widget)) return;
+      if (t.closest('[data-a11y-toggle]')) {
+        const open = widget.classList.toggle('is-open');
+        widget.querySelector('.lp-a11y-launch')?.setAttribute('aria-expanded', String(open));
+        if (open) widget.querySelector<HTMLElement>('.lp-a11y-close')?.focus();
+        else widget.querySelector<HTMLElement>('.lp-a11y-launch')?.focus();
+        return;
+      }
+      if (t.closest('[data-a11y-reset]')) {
+        state = blank();
+        save(state);
+        apply();
+        say(widget, 'All accessibility settings were reset.');
+        return;
+      }
+      const groupBtn = t.closest<HTMLElement>('[data-a11y-group-toggle]');
+      if (groupBtn) {
+        const collapsed = groupBtn.closest('[data-a11y-group]')?.classList.toggle('is-collapsed');
+        groupBtn.setAttribute('aria-expanded', String(!collapsed));
+        return;
+      }
+      if (t.closest('[data-a11y-view]')) {
+        const grid = widget.classList.toggle('is-grid');
+        const btn = widget.querySelector<HTMLElement>('[data-a11y-view]');
+        btn?.setAttribute('aria-pressed', String(grid));
+        const lab = widget.querySelector('[data-a11y-view-label]');
+        if (lab) lab.textContent = grid ? 'List View' : 'Grid View';
+        return;
+      }
+      const step = t.closest<HTMLElement>('[data-a11y-step]');
+      if (step) {
+        const key = step.dataset['a11yStep'] as 'size' | 'spacing' | 'line';
+        state[key] = Math.max(1, Math.min(MAX[key], state[key] + Number(step.dataset['dir'] ?? 0)));
+        state.profile = '';
+        save(state);
+        apply();
+        say(widget, names[key] + ': level ' + state[key]);
+        return;
+      }
+      const prof = t.closest<HTMLElement>('[data-a11y-profile]');
+      if (prof) {
+        const key = prof.dataset['a11yProfile'] ?? '';
+        const turningOff = state.profile === key;
+        state = turningOff ? blank() : { ...blank(), ...PROFILES[key], profile: key };
+        save(state);
+        apply();
+        say(widget, (profileNames[key] ?? key) + ' profile: ' + (turningOff ? 'off' : 'on'));
+        return;
+      }
+      const tool = t.closest<HTMLElement>('[data-a11y-tool]');
+      if (!tool) return;
+      const k = tool.dataset['a11yTool'] ?? '';
+      state.profile = '';
+      if (k === 'size' || k === 'spacing' || k === 'line') state[k] = state[k] > 0 ? 0 : 1;
+      else if (k === 'mono' || k === 'sathigh' || k === 'satlow' || k === 'invert') state.filter = state.filter === k ? '' : k;
+      else if (k in state) (state as any)[k] = !(state as any)[k];
+      save(state);
+      apply();
+      const level = k === 'size' ? state.size : k === 'spacing' ? state.spacing : k === 'line' ? state.line : null;
+      const on = tool.getAttribute('aria-pressed') === 'true';
+      if (k === 'voice' && voiceFailed) return;
+      say(widget, names[k] + (level !== null ? (level ? ': level ' + level : ': off') : on ? ': on' : ': off'));
+      if (k === 'reader' && state.reader) speak('Screen reader is on. Point at or tab to any text to hear it.');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'F2' || !e.ctrlKey) return;
+      const w = Array.from(root.querySelectorAll<HTMLElement>('[data-a11y]')).find((x) => !editing(x));
+      if (!w) return;
+      e.preventDefault();
+      const open = w.classList.toggle('is-open');
+      w.querySelector('.lp-a11y-launch')?.setAttribute('aria-expanded', String(open));
+      (open ? w.querySelector<HTMLElement>('.lp-a11y-close') : w.querySelector<HTMLElement>('.lp-a11y-launch'))?.focus();
+    });
+    root.addEventListener('keydown', (e) => {
+      const ev = e as KeyboardEvent;
+      const widget = (ev.target as HTMLElement).closest?.<HTMLElement>('[data-a11y]');
+      if (ev.key === 'Escape') {
+        for (const w of Array.from(root.querySelectorAll<HTMLElement>('[data-a11y].is-open'))) {
+          if (editing(w)) continue;
+          w.classList.remove('is-open');
+          w.querySelector('.lp-a11y-launch')?.setAttribute('aria-expanded', 'false');
+          if (widget === w) w.querySelector<HTMLElement>('.lp-a11y-launch')?.focus();
+        }
+      }
+    });
+    // A click outside the open panel closes it.
+    document.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest?.('[data-a11y]')) return;
+      for (const w of Array.from(root.querySelectorAll<HTMLElement>('[data-a11y].is-open'))) {
+        if (editing(w)) continue;
+        w.classList.remove('is-open');
+        w.querySelector('.lp-a11y-launch')?.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // The section can be drawn after init and redrawn later: apply again whenever the page content changes.
+    apply();
+    if (typeof MutationObserver !== 'undefined') {
+      let queued = false;
+      new MutationObserver(() => {
+        if (queued) return;
+        queued = true;
+        queueMicrotask(() => {
+          queued = false;
+          apply();
+        });
+      }).observe(root instanceof Document ? root.documentElement : root, { childList: true, subtree: true });
+    }
+  }
+
+  return { initCarousels, initCarousel, initNav, initImageFallback, initAnimations, initForms, initBackToTop, initAccordions, initTabs, initMiniHeader, initAccessibility };
 }

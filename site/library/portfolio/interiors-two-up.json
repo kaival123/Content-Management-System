@@ -1,0 +1,56 @@
+{
+  "name": "Interior design duo",
+  "description": "Two large landscape spaces with generous padding.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Spaces, finished",
+      "subheading": "Two recent interiors, from first sketch to final styling.",
+      "shape": "4/3",
+      "captionOnHover": false,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "title": "The reading studio",
+          "caption": "Residential",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "title": "Garden room",
+          "caption": "Hospitality",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0f9ff",
+      "textColor": "#0c4a6e",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#075985"
+      },
+      "card": {
+        "borderColor": "#bae6fd",
+        "radius": 14,
+        "background": "#ffffff",
+        "color": "#0c4a6e",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

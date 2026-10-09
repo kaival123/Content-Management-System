@@ -1,0 +1,70 @@
+{
+  "name": "Travel stories on photo",
+  "description": "Destination guides over a darkened photo.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Travel stories",
+      "subheading": "Guides and field notes from the road.",
+      "posts": [
+        {
+          "title": "Three perfect days in Lisbon",
+          "excerpt": "Where to eat, what to skip and how to beat the crowds.",
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "category": "Europe",
+          "date": "Oct 2, 2026",
+          "author": "Julia Stevens",
+          "link": "#"
+        },
+        {
+          "title": "Planning a road trip through the highlands",
+          "excerpt": "Routes, stops and what to pack.",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+          "category": "Road trips",
+          "date": "Sep 18, 2026",
+          "author": "Anil Kumar",
+          "link": "#"
+        },
+        {
+          "title": "Old towns worth the detour",
+          "excerpt": "Quiet streets and honest restaurants.",
+          "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
+          "category": "Culture",
+          "date": "Sep 2, 2026",
+          "author": "Sofia Rossi",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80",
+      "overlayColor": "#0b2436",
+      "overlayOpacity": 68,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 120,
+      "paddingBottom": 120,
+      "parallax": true
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(11,36,54,0.75)",
+        "radius": 12,
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

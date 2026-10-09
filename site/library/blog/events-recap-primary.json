@@ -1,0 +1,68 @@
+{
+  "name": "Event recaps on brand colour",
+  "description": "Conference recaps on a solid brand background.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Event recaps",
+      "subheading": "Highlights, talks and photos from past events.",
+      "posts": [
+        {
+          "title": "Summit 2026 in review",
+          "excerpt": "Twelve talks, 900 attendees, one big idea.",
+          "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80",
+          "category": "Summit",
+          "date": "Oct 1, 2026",
+          "author": "Events Team",
+          "link": "#"
+        },
+        {
+          "title": "Meet the speakers: customer panel",
+          "excerpt": "Four leaders on what changed their minds.",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+          "category": "Panels",
+          "date": "Sep 13, 2026",
+          "author": "Events Team",
+          "link": "#"
+        },
+        {
+          "title": "Behind the scenes of our offsite",
+          "excerpt": "Planning, logistics and a lot of coffee.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "category": "Offsite",
+          "date": "Aug 29, 2026",
+          "author": "People Team",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 92,
+      "paddingBottom": 92
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#0f172a",
+        "radius": 12,
+        "paddingX": 0,
+        "paddingY": 0,
+        "shadow": "md"
+      }
+    }
+  }
+}

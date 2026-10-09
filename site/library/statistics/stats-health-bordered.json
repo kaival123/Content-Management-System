@@ -1,0 +1,46 @@
+{
+  "name": "Healthcare stats",
+  "description": "Four bordered cards for a clinic on white.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Care you can trust",
+      "items": [
+        {
+          "value": "32",
+          "label": "Specialist doctors"
+        },
+        {
+          "value": "15 min",
+          "label": "Average wait time"
+        },
+        {
+          "value": "120K",
+          "label": "Patients treated"
+        },
+        {
+          "value": "4.9★",
+          "label": "Patient satisfaction"
+        }
+      ]
+    },
+    "style": {
+      "background": "#ffffff",
+      "align": "center",
+      "paddingY": 64
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "bordered",
+      "textAlign": "center",
+      "gap": 16
+    },
+    "elements": {
+      "value": {
+        "color": "#0e7490"
+      }
+    }
+  }
+}

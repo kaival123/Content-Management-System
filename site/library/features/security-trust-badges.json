@@ -1,0 +1,55 @@
+{
+  "name": "Security and trust",
+  "description": "Four compact trust points centered on white with dividers via bordered cards.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Security you can verify",
+      "subheading": "Independent audits and clear policies, available on request.",
+      "items": [
+        {
+          "icon": "🔐",
+          "title": "SOC 2 Type II",
+          "text": "Annual independent audit of security, availability and confidentiality."
+        },
+        {
+          "icon": "🗄️",
+          "title": "Encrypted data",
+          "text": "AES-256 at rest and TLS 1.3 in transit, with customer-managed keys."
+        },
+        {
+          "icon": "🌐",
+          "title": "Data residency",
+          "text": "Choose India, EU or US hosting for your workspace."
+        },
+        {
+          "icon": "📋",
+          "title": "GDPR and DPDP ready",
+          "text": "Data processing agreements and subject-request tooling built in."
+        }
+      ]
+    },
+    "style": {
+      "background": "#ffffff",
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "bordered",
+      "textAlign": "center"
+    },
+    "elements": {
+      "card": {
+        "radius": 8,
+        "paddingY": 24,
+        "paddingX": 18
+      },
+      "icon": {
+        "fontSize": 32
+      }
+    }
+  }
+}

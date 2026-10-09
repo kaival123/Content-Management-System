@@ -1,0 +1,54 @@
+{
+  "name": "Five compact stats",
+  "description": "Five small numbers in one tight row.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "",
+      "items": [
+        {
+          "value": "70+",
+          "label": "Experts"
+        },
+        {
+          "value": "16",
+          "label": "Awards"
+        },
+        {
+          "value": "300",
+          "label": "Projects"
+        },
+        {
+          "value": "11",
+          "label": "Years"
+        },
+        {
+          "value": "1",
+          "label": "Team"
+        }
+      ]
+    },
+    "style": {
+      "align": "center",
+      "paddingY": 40
+    },
+    "grid": {
+      "desktop": 5,
+      "tablet": 3,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "center",
+      "gap": 12
+    },
+    "elements": {
+      "value": {
+        "fontSize": 36
+      },
+      "label": {
+        "fontSize": 13,
+        "textTransform": "uppercase",
+        "letterSpacing": 1
+      }
+    }
+  }
+}

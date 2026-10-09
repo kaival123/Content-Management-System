@@ -1,0 +1,50 @@
+{
+  "name": "Navbar · stacked serif",
+  "description": "Large centered brand over a row of underlined links.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "The Meridian Review",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Essays",
+          "href": "#essays"
+        },
+        {
+          "label": "Interviews",
+          "href": "#interviews"
+        },
+        {
+          "label": "Archive",
+          "href": "#archive"
+        },
+        {
+          "label": "Subscribe",
+          "href": "#subscribe"
+        }
+      ],
+      "ctaLabel": "Subscribe",
+      "ctaHref": "#subscribe",
+      "sticky": true,
+      "layout": "stacked",
+      "linkStyle": "underline",
+      "ctaStyle": "solid",
+      "barStyle": "line",
+      "mobileMenu": "full"
+    },
+    "style": {
+      "paddingY": 24,
+      "background": "#ffffff",
+      "textColor": "#111827",
+      "align": "center"
+    },
+    "elements": {
+      "brand": {
+        "fontSize": 30,
+        "fontWeight": 700,
+        "letterSpacing": 1
+      }
+    }
+  }
+}

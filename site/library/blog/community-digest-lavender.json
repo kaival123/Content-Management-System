@@ -1,0 +1,77 @@
+{
+  "name": "Community digest, lavender",
+  "description": "Monthly digest with lavender background and four posts.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Community digest",
+      "subheading": "Highlights from our members, shared every month.",
+      "posts": [
+        {
+          "title": "Member spotlight: a bakery goes online",
+          "excerpt": "How Rosa doubled orders in a season.",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+          "category": "Spotlight",
+          "date": "Oct 1, 2026",
+          "author": "Zoe Mitchell",
+          "link": "#"
+        },
+        {
+          "title": "Meetup recap: remote-first teams",
+          "excerpt": "Notes from the September session.",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "category": "Meetups",
+          "date": "Sep 24, 2026",
+          "author": "Maya Rodriguez",
+          "link": "#"
+        },
+        {
+          "title": "Template of the month",
+          "excerpt": "A free landing page layout for makers.",
+          "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+          "category": "Resources",
+          "date": "Sep 10, 2026",
+          "author": "Ola Nilsson",
+          "link": "#"
+        },
+        {
+          "title": "Ask us anything: open Q and A",
+          "excerpt": "The best questions from our forum.",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "category": "Q and A",
+          "date": "Aug 27, 2026",
+          "author": "Camille Laurent",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f5f3ff",
+      "textColor": "#4c1d95",
+      "align": "center",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#5b21b6",
+        "italic": true
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#3b0764",
+        "radius": 24,
+        "paddingX": 26,
+        "paddingY": 30
+      }
+    }
+  }
+}

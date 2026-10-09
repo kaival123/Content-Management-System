@@ -1,0 +1,66 @@
+{
+  "name": "Services · six flat tiles",
+  "description": "Six home-service tiles with no borders.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Home services you can trust",
+      "subheading": "Vetted local professionals, fixed pricing, same-week appointments.",
+      "items": [
+        {
+          "icon": "🔧",
+          "title": "Plumbing",
+          "text": "Leaks, installs and emergency call-outs."
+        },
+        {
+          "icon": "💡",
+          "title": "Electrical",
+          "text": "Rewiring, lighting and safety checks."
+        },
+        {
+          "icon": "🎨",
+          "title": "Painting",
+          "text": "Interior and exterior, with tidy finishes."
+        },
+        {
+          "icon": "🧹",
+          "title": "Deep cleaning",
+          "text": "Move-in, move-out and seasonal cleans."
+        },
+        {
+          "icon": "🌿",
+          "title": "Gardening",
+          "text": "Lawn care, pruning and landscaping."
+        },
+        {
+          "icon": "🔥",
+          "title": "Heating & AC",
+          "text": "Servicing and installation all year round."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 16,
+      "cardStyle": "flat",
+      "textAlign": "center"
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "paddingY": 72,
+      "align": "center"
+    },
+    "elements": {
+      "card": {
+        "background": "#ffffff",
+        "radius": 16,
+        "paddingY": 28
+      },
+      "icon": {
+        "fontSize": 36
+      }
+    }
+  }
+}

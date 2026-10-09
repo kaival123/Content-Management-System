@@ -1,0 +1,54 @@
+{
+  "name": "Store promises strip",
+  "description": "Four short store promises in a compact row, no cards.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "",
+      "subheading": "",
+      "items": [
+        {
+          "icon": "🚚",
+          "title": "Free shipping",
+          "text": "On every order over Rs 999."
+        },
+        {
+          "icon": "↩️",
+          "title": "30-day returns",
+          "text": "Changed your mind? No problem."
+        },
+        {
+          "icon": "🔒",
+          "title": "Secure payments",
+          "text": "UPI, cards and cash on delivery."
+        },
+        {
+          "icon": "🎁",
+          "title": "Free gift wrap",
+          "text": "On request at checkout."
+        }
+      ]
+    },
+    "style": {
+      "background": "#f8fafc",
+      "align": "center",
+      "paddingY": 48
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "title": {
+        "fontSize": 17
+      },
+      "text": {
+        "fontSize": 14
+      }
+    }
+  }
+}

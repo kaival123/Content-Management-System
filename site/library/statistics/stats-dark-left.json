@@ -1,0 +1,50 @@
+{
+  "name": "Dark left-aligned stats",
+  "description": "Left-aligned metrics on a dark slate background.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Built for scale",
+      "items": [
+        {
+          "value": "500M",
+          "label": "API calls per day"
+        },
+        {
+          "value": "12ms",
+          "label": "Median latency"
+        },
+        {
+          "value": "99.995%",
+          "label": "Availability"
+        },
+        {
+          "value": "SOC 2",
+          "label": "Type II certified"
+        }
+      ]
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#f8fafc",
+      "align": "left",
+      "paddingY": 72
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "left",
+      "gap": 32
+    },
+    "elements": {
+      "value": {
+        "color": "#38bdf8"
+      },
+      "label": {
+        "color": "#94a3b8"
+      }
+    }
+  }
+}

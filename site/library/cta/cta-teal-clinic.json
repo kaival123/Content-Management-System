@@ -1,0 +1,29 @@
+{
+  "name": "Teal care banner",
+  "description": "Calm teal for healthcare and wellness.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Book your check-up online",
+      "text": "Same-week appointments with friendly, board-certified doctors.",
+      "buttonLabel": "Book appointment",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "background": "#0f766e",
+      "textColor": "#ccfbf1",
+      "align": "center",
+      "paddingY": 76
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "#0f766e",
+        "radius": 999
+      }
+    }
+  }
+}

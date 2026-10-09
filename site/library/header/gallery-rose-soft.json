@@ -1,0 +1,35 @@
+{
+  "name": "Gallery page rose header",
+  "description": "Blush rose header with elegant centered text for a gallery or wedding page.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Home / Gallery",
+      "heading": "Moments we have captured",
+      "text": "A look at weddings, portraits and celebrations photographed across Rajasthan over the last decade.",
+      "buttonLabel": "",
+      "buttonHref": ""
+    },
+    "style": {
+      "background": "#fff1f2",
+      "textColor": "#4c0519",
+      "align": "center",
+      "paddingY": 100
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#be123c",
+        "italic": true
+      },
+      "heading": {
+        "color": "#881337",
+        "fontWeight": 500,
+        "fontSize": 50,
+        "italic": true
+      },
+      "text": {
+        "color": "#9f1239"
+      }
+    }
+  }
+}

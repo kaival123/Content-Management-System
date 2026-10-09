@@ -1,0 +1,45 @@
+{
+  "name": "Community co-op gradient",
+  "description": "Green gradient section for a co-operative with white text.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Owned by the farmers it serves",
+      "text": "GreenAcre is a co-operative of 1,800 member farms. Profits are shared among members, so better prices at the market gate mean better lives at home.",
+      "bullets": [
+        "Direct buyer contracts",
+        "Profit sharing every season",
+        "Free agronomy support"
+      ],
+      "buttonLabel": "Become a member",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1692369584496-3216a88f94c1?w=1200&q=80",
+      "imageSide": "right"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#14532d",
+      "gradientTo": "#16a34a",
+      "gradientAngle": 140,
+      "textColor": "#ffffff",
+      "paddingY": 104
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "text": {
+        "color": "#dcfce7"
+      },
+      "image": {
+        "radius": 20,
+        "shadow": "lg"
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "#14532d",
+        "radius": 10
+      }
+    }
+  }
+}

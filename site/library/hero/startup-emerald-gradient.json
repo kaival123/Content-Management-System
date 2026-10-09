@@ -1,0 +1,47 @@
+{
+  "name": "Startup emerald gradient",
+  "description": "Fresh emerald gradient for a sustainability startup with a centered product shot.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Climate tech, simplified",
+      "heading": "Measure your carbon footprint in minutes",
+      "subheading": "Connect your accounting tool and get an audit-ready emissions report, plus a clear plan to cut it year after year.",
+      "primaryLabel": "Get your free report",
+      "primaryHref": "#report",
+      "secondaryLabel": "How it works",
+      "secondaryHref": "#how",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+      "layout": "center"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#064e3b",
+      "gradientTo": "#10b981",
+      "gradientAngle": 145,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 108
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "subheading": {
+        "color": "#d1fae5"
+      },
+      "primary": {
+        "background": "#ffffff",
+        "color": "#065f46"
+      },
+      "secondary": {
+        "color": "#ecfdf5",
+        "borderColor": "#6ee7b7"
+      },
+      "image": {
+        "radius": 16,
+        "shadow": "lg"
+      }
+    }
+  }
+}

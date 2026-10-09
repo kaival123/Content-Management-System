@@ -1,0 +1,93 @@
+{
+  "name": "Photo wall, square",
+  "description": "Eight square photos with tight spacing over a photo background.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "The photo wall",
+      "subheading": "",
+      "shape": "1/1",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "title": "City at dusk",
+          "caption": "Travel",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
+          "title": "Concrete lines",
+          "caption": "Architecture",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "title": "Green corner",
+          "caption": "Interiors",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "title": "Quiet studio",
+          "caption": "Workspace",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+          "title": "Morning farm",
+          "caption": "Landscape",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+          "title": "Roads out",
+          "caption": "Travel",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=900&q=80",
+          "title": "Orchard rows",
+          "caption": "Nature",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "title": "Late shift",
+          "caption": "Workplace",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80",
+      "overlayColor": "#0b2436",
+      "overlayOpacity": 68,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 120,
+      "paddingBottom": 120,
+      "parallax": true
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 8,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(11,36,54,0.75)",
+        "radius": 12,
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

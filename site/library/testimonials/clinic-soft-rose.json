@@ -1,0 +1,57 @@
+{
+  "name": "Patient stories, soft rose",
+  "description": "Centred patient reviews for a clinic on a soft rose background.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Words from our patients",
+      "items": [
+        {
+          "quote": "I was nervous about the procedure, but the whole team walked me through every step.",
+          "name": "Anita Desai",
+          "role": "Patient since 2021",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+        },
+        {
+          "quote": "Appointments run on time and the doctors actually listen. That is rare.",
+          "name": "Rohan Malhotra",
+          "role": "Patient, family care",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+        },
+        {
+          "quote": "My daughter loves coming here. She asks when she can see Dr. Shah again.",
+          "name": "Kavita Rao",
+          "role": "Parent of a young patient",
+          "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "#fff1f2",
+      "textColor": "#881337",
+      "align": "center",
+      "paddingTop": 84,
+      "paddingBottom": 84
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 26,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#881337"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#4c0519",
+        "radius": 22,
+        "paddingX": 24,
+        "paddingY": 28
+      }
+    }
+  }
+}

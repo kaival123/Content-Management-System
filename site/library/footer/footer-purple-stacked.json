@@ -1,0 +1,60 @@
+{
+  "name": "Footer · purple stacked",
+  "description": "Violet stacked footer with social links.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [
+        {
+          "label": "Discord",
+          "href": "#"
+        },
+        {
+          "label": "Twitch",
+          "href": "#"
+        },
+        {
+          "label": "Twitter",
+          "href": "#"
+        }
+      ],
+      "divider": "line",
+      "copyrightAlign": "auto",
+      "linkStyle": "pills",
+      "brand": "Pixelmint",
+      "tagline": "Games made by players, for players.",
+      "layout": "stacked",
+      "links": [
+        {
+          "label": "Games",
+          "href": "#"
+        },
+        {
+          "label": "Press kit",
+          "href": "#"
+        },
+        {
+          "label": "Jobs",
+          "href": "#"
+        },
+        {
+          "label": "Support",
+          "href": "#"
+        }
+      ],
+      "copyright": "© 2026 Pixelmint Games"
+    },
+    "style": {
+      "paddingY": 56,
+      "background": "#3b0764",
+      "textColor": "#e9d5ff"
+    },
+    "elements": {
+      "brand": {
+        "color": "#f5d0fe",
+        "fontWeight": 800
+      }
+    }
+  }
+}

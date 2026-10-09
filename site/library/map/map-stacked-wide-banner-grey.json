@@ -1,0 +1,23 @@
+{
+  "name": "Stacked tall greyscale",
+  "description": "Stacked heading above a tall greyscale map with a button.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Showroom and workshop",
+      "text": "Drop in to see materials, samples and finished pieces.",
+      "details": "Wed-Sat 10am - 5pm",
+      "buttonLabel": "Navigate to us",
+      "address": "Meatpacking District, New York, NY 10014",
+      "layout": "stacked",
+      "grayscale": true,
+      "height": 600,
+      "radius": 0,
+      "shadow": "none"
+    },
+    "style": {
+      "paddingY": 56,
+      "align": "left"
+    }
+  }
+}

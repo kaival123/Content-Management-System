@@ -1,0 +1,50 @@
+{
+  "name": "Restaurant highlights",
+  "description": "Warm cream restaurant highlights with three centered items.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Why locals keep coming back",
+      "subheading": "Good food, honest prices and a kitchen that never cuts corners.",
+      "items": [
+        {
+          "icon": "🍝",
+          "title": "Fresh pasta daily",
+          "text": "Rolled by hand each morning from durum wheat and farm eggs."
+        },
+        {
+          "icon": "🍷",
+          "title": "Curated wine list",
+          "text": "Fifty bottles from small growers, with generous by-the-glass pours."
+        },
+        {
+          "icon": "🌿",
+          "title": "Seasonal produce",
+          "text": "Menus change monthly based on what local farms harvest."
+        }
+      ]
+    },
+    "style": {
+      "background": "#fdf6e3",
+      "textColor": "#3b2410",
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 40,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#3b2410",
+        "fontWeight": 600
+      },
+      "icon": {
+        "fontSize": 44
+      }
+    }
+  }
+}

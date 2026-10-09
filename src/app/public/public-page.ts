@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+import { PageStore } from '../core/page-store';
+import { withSharedSections } from '../core/shared-sections';
 import { SiteService } from '../core/site.service';
 import { WebsiteStore } from '../core/website-store';
 import { PageRenderer } from '../renderer/page-renderer';
@@ -21,7 +23,7 @@ import { PageRenderer } from '../renderer/page-renderer';
           <a [routerLink]="['/admin/pages', p.id]">Back to editor</a>
         </div>
       }
-      <app-page-renderer [page]="p" />
+      <app-page-renderer [page]="shown()!" />
     } @else {
       <div class="not-found">
         <h1>404</h1>
@@ -40,6 +42,7 @@ export class PublicPage {
 
   private readonly sites = inject(SiteService);
   private readonly websites = inject(WebsiteStore);
+  private readonly store = inject(PageStore);
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);
 
@@ -48,6 +51,12 @@ export class PublicPage {
     const p = this.sites.pageForPath(this.site(), segs);
     if (!p) return undefined;
     return p.status === 'published' || this.preview() !== undefined ? p : undefined;
+  });
+
+  /** The page plus the website-wide sections (e.g. the mini header) that live on other pages. */
+  protected readonly shown = computed(() => {
+    const p = this.page();
+    return p ? withSharedSections(p, this.store.pagesOf(p.website)) : undefined;
   });
 
   constructor() {

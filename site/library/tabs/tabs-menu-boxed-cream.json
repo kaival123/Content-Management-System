@@ -1,0 +1,52 @@
+{
+  "name": "Tabs · menu boxed",
+  "description": "Boxed tabs for starters, mains and desserts on cream.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Our menu",
+      "heading": "Seasonal and made to share",
+      "orientation": "horizontal",
+      "style": "boxed",
+      "tabAlign": "center",
+      "items": [
+        {
+          "label": "Starters",
+          "icon": "🥗",
+          "title": "Small plates",
+          "text": "Burrata with roasted tomatoes, charred leeks with romesco, and crispy polenta with whipped feta.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80"
+        },
+        {
+          "label": "Mains",
+          "icon": "🍝",
+          "title": "From the wood oven",
+          "text": "Slow-cooked lamb shoulder, line-caught sea bass, and hand-rolled pappardelle with wild mushrooms.",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=80"
+        },
+        {
+          "label": "Desserts",
+          "icon": "🍨",
+          "title": "Something sweet",
+          "text": "Olive oil cake, dark chocolate pot and a rotating gelato from our own kitchen.",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+          "buttonLabel": "Book a table",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#fdf8ee",
+      "textColor": "#3b2f1e",
+      "paddingY": 92,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#4a3418",
+        "fontWeight": 600
+      }
+    }
+  }
+}

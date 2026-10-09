@@ -1,0 +1,56 @@
+{
+  "name": "SaaS dark cards",
+  "description": "Three product-team quotes on a dark navy background.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Trusted by product teams that ship weekly",
+      "items": [
+        {
+          "quote": "Roadmap reviews used to eat Mondays. Now the whole backlog is triaged before standup.",
+          "name": "Elena Petrova",
+          "role": "VP Product, Stackline",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+        },
+        {
+          "quote": "We cut our release cycle from three weeks to five days without adding headcount.",
+          "name": "Marcus Chen",
+          "role": "Engineering Manager, Loop",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+        },
+        {
+          "quote": "The audit trail alone saved us during our SOC 2 review.",
+          "name": "Tara Nguyen",
+          "role": "Head of Security, Relay",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "align": "center",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#1e293b",
+        "radius": 16,
+        "paddingX": 28,
+        "paddingY": 28
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "name": "Health ministry bar",
+  "description": "Teal bar for health and wellness portals.",
+  "section": {
+    "type": "mini-header",
+    "data": {
+      "showFontSize": true,
+      "keepPageColors": false,
+      "pillStyle": "outline",
+      "themeLabel": "Theme:",
+      "links": [
+        {
+          "label": "Skip to Main Content",
+          "href": "#main"
+        },
+        {
+          "label": "Screen Reader Access",
+          "href": "#screen-reader"
+        }
+      ],
+      "languages": [
+        {
+          "label": "English",
+          "code": "en",
+          "href": ""
+        },
+        {
+          "label": "हिन्दी",
+          "code": "hi",
+          "href": ""
+        },
+        {
+          "label": "ગુજરાતી",
+          "code": "gu",
+          "href": ""
+        }
+      ],
+      "themes": [
+        {
+          "name": "Teal",
+          "color": "#0d9488",
+          "background": "#d5f1ee",
+          "surface": "#f1fbfa",
+          "text": "#0b2f2c"
+        },
+        {
+          "name": "Blue",
+          "color": "#2563eb",
+          "background": "#dbe8fb",
+          "surface": "#f3f8ff",
+          "text": "#10264a"
+        },
+        {
+          "name": "Green",
+          "color": "#16a34a",
+          "background": "#dcf2e3",
+          "surface": "#f3fbf6",
+          "text": "#123222"
+        },
+        {
+          "name": "Dark",
+          "color": "#f59e0b",
+          "background": "#0b0b0f",
+          "surface": "#17171f",
+          "text": "#f3f4f6",
+          "dot": "#111111"
+        }
+      ],
+      "title": "Ministry of Health & Family Welfare",
+      "barColor": "theme",
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 6,
+      "align": "left",
+      "backgroundType": "color",
+      "textColor": "#ecfeff",
+      "background": "#0b3d3a"
+    }
+  }
+}

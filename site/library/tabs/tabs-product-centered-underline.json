@@ -1,0 +1,52 @@
+{
+  "name": "Tabs · product centred underline",
+  "description": "Centred underline tabs with images for a software product.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "The platform",
+      "heading": "One workspace, every workflow",
+      "subheading": "Plan, build and ship without switching tools.",
+      "orientation": "horizontal",
+      "style": "underline",
+      "tabAlign": "center",
+      "items": [
+        {
+          "label": "Plan",
+          "icon": "🗺️",
+          "title": "Roadmaps that stay honest",
+          "text": "Turn goals into milestones, assign owners and see risks before they slip.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
+        },
+        {
+          "label": "Build",
+          "icon": "🛠️",
+          "title": "Keep everyone in sync",
+          "text": "Tasks, docs and discussions live side by side so context never gets lost.",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80"
+        },
+        {
+          "label": "Ship",
+          "icon": "🚀",
+          "title": "Release with confidence",
+          "text": "Automated checks and change logs make every launch calm and predictable.",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "buttonLabel": "See release tools",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ffffff",
+      "textColor": "#0f172a",
+      "paddingY": 96,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#0f172a"
+      }
+    }
+  }
+}

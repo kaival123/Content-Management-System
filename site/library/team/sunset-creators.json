@@ -1,0 +1,71 @@
+{
+  "name": "Creators on sunset gradient",
+  "description": "Content creators team on an orange-pink gradient.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "The faces of the channel",
+      "subheading": "Three presenters and a producer, all talking too fast.",
+      "members": [
+        {
+          "name": "Isabella Romano",
+          "role": "Host",
+          "bio": "Cooks, tastes and talks about it.",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Diego Alvarez",
+          "role": "Producer",
+          "bio": "Edits, schedules and fixes the audio.",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Grace Whitfield",
+          "role": "Presenter",
+          "bio": "Travel and city guides.",
+          "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Tariq Anwar",
+          "role": "Camera",
+          "bio": "Finds the light.",
+          "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f97316",
+      "gradientTo": "#db2777",
+      "gradientAngle": 160,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 22,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontWeight": 800
+      },
+      "card": {
+        "background": "rgba(0,0,0,0.22)",
+        "radius": 16,
+        "paddingX": 24,
+        "paddingY": 26
+      }
+    }
+  }
+}

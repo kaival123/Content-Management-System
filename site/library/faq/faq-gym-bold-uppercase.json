@@ -1,0 +1,67 @@
+{
+  "name": "FAQ · gym bold",
+  "description": "High-contrast black and lime style with uppercase questions.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Join the crew",
+      "heading": "Membership FAQ",
+      "items": [
+        {
+          "question": "Is there a joining fee?",
+          "answer": "No joining fee this month. Just pick a plan and start training the same day.",
+          "icon": ""
+        },
+        {
+          "question": "Can I freeze my membership?",
+          "answer": "Yes, for up to three months per year if you are travelling, injured or on leave.",
+          "icon": ""
+        },
+        {
+          "question": "Are classes included?",
+          "answer": "All group classes, from spin to HIIT to yoga, are included in every membership.",
+          "icon": ""
+        },
+        {
+          "question": "What are your opening hours?",
+          "answer": "We are open 5am to midnight, every day of the year including holidays.",
+          "icon": ""
+        }
+      ],
+      "layout": "stacked",
+      "style": "accent",
+      "icon": "plus",
+      "iconPosition": "right",
+      "numbered": true,
+      "singleOpen": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#0a0a0a",
+      "textColor": "#d4d4d8",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#a3e635",
+        "textTransform": "uppercase",
+        "fontWeight": 900,
+        "letterSpacing": 1
+      },
+      "eyebrow": {
+        "color": "#ffffff",
+        "textTransform": "uppercase",
+        "letterSpacing": 3
+      },
+      "question": {
+        "textTransform": "uppercase",
+        "fontWeight": 700,
+        "color": "#ffffff"
+      },
+      "item": {
+        "background": "#18181b"
+      }
+    }
+  }
+}

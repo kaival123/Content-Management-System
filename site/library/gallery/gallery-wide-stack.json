@@ -1,0 +1,44 @@
+{
+  "name": "Wide single column",
+  "description": "Large 16:9 images stacked one per row.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Selected architecture and interior commissions.",
+      "captionOnHover": false,
+      "heading": "Featured projects",
+      "shape": "16/9",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80",
+          "title": "Harbour Tower",
+          "caption": "Commercial",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "title": "Loft workspace",
+          "caption": "Interior",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80",
+          "title": "Garden pavilion",
+          "caption": "Residential",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "paddingY": 96,
+      "width": "narrow"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "desktop": 1,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 32
+    }
+  }
+}

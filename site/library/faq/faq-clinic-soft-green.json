@@ -1,0 +1,70 @@
+{
+  "name": "FAQ · clinic soft green",
+  "description": "Calm green two-column FAQ for a health clinic.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Patient information",
+      "heading": "Your first visit, explained",
+      "subheading": "A few things new patients often ask us.",
+      "items": [
+        {
+          "question": "Do I need a referral?",
+          "answer": "No referral is needed for physiotherapy or dietetics. Some specialist services do require a GP letter, and we will tell you when you book.",
+          "icon": ""
+        },
+        {
+          "question": "What should I bring?",
+          "answer": "Your Medicare or insurance card, any recent scans or reports, and comfortable clothing you can move in.",
+          "icon": ""
+        },
+        {
+          "question": "How long is an appointment?",
+          "answer": "Initial consultations last 45 minutes. Follow-up sessions are 30 minutes.",
+          "icon": ""
+        },
+        {
+          "question": "Can I claim through private health?",
+          "answer": "Yes. We have HICAPS terminals on site so you can claim on the spot.",
+          "icon": ""
+        },
+        {
+          "question": "What if I need to cancel?",
+          "answer": "Please give us 24 hours notice by phone or text so we can offer your slot to someone else.",
+          "icon": ""
+        },
+        {
+          "question": "Is parking available?",
+          "answer": "There are six free spaces behind the clinic and street parking on Alder Lane.",
+          "icon": ""
+        }
+      ],
+      "layout": "two-column",
+      "style": "filled",
+      "icon": "chevron",
+      "iconPosition": "right",
+      "openFirst": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#f0f7f2",
+      "textColor": "#1f3d2b",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#14532d"
+      },
+      "eyebrow": {
+        "color": "#15803d",
+        "textTransform": "uppercase",
+        "letterSpacing": 2
+      },
+      "item": {
+        "background": "#ffffff",
+        "radius": 12
+      }
+    }
+  }
+}

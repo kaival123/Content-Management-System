@@ -1,0 +1,144 @@
+{
+  "name": "Client logo ticker",
+  "description": "Five partner names in a quiet, auto-scrolling strip with no controls.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "",
+      "slideHeight": 0,
+      "heading": "Trusted by teams in 40+ countries",
+      "variant": "logo",
+      "slides": [
+        {
+          "heading": "Northwind",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Lumen Health",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Brightline",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Harbor & Co",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Vertex Labs",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Orchard",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Kestrel",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Maple Bank",
+          "eyebrow": "",
+          "text": "",
+          "image": "",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__bg__",
+      "align": "center",
+      "paddingTop": 56,
+      "paddingBottom": 56
+    },
+    "carousel": {
+      "perViewDesktop": 5,
+      "perViewTablet": 4,
+      "perViewMobile": 2,
+      "gap": 48,
+      "autoplay": true,
+      "autoplaySpeed": 1800,
+      "speed": 900,
+      "loop": true,
+      "arrows": false,
+      "dots": false,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": false,
+      "easing": "linear"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 20,
+        "fontWeight": 600,
+        "color": "__text__",
+        "marginBottom": 24
+      }
+    }
+  }
+}

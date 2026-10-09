@@ -1,0 +1,67 @@
+{
+  "name": "Minimal black portfolio",
+  "description": "Gapless black grid, uppercase heading, no card chrome.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Selected",
+      "subheading": "",
+      "shape": "1/1",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Mark 01",
+          "caption": "Identity",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "title": "Poster 14",
+          "caption": "Print",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+          "title": "Label 07",
+          "caption": "Packaging",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+          "title": "Campaign 22",
+          "caption": "Campaign",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#0a0a0a",
+      "textColor": "#f5f5f5",
+      "align": "left",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 0,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "textTransform": "uppercase",
+        "letterSpacing": 4,
+        "fontSize": 28
+      },
+      "card": {
+        "borderColor": "#333333",
+        "radius": 0,
+        "paddingX": 28,
+        "paddingY": 32
+      }
+    }
+  }
+}

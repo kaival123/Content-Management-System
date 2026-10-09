@@ -1,0 +1,63 @@
+{
+  "name": "Agronomy advisors",
+  "description": "Field advisors on a light earthy background.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Our agronomy advisors",
+      "subheading": "Local experts who visit your field, not just your inbox.",
+      "members": [
+        {
+          "name": "Ramesh Patil",
+          "role": "Soil Scientist",
+          "bio": "PhD in soil health, 15 years in the field.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Jayashree Naik",
+          "role": "Crop Advisor",
+          "bio": "Specialises in drip irrigation and vegetables.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Gurpreet Singh",
+          "role": "Seed Specialist",
+          "bio": "Matches seed varieties to your soil and season.",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Anil Kumar",
+          "role": "Market Linkages",
+          "bio": "Connects growers to fair-price buyers.",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#fefce8",
+      "textColor": "#422006",
+      "align": "left",
+      "paddingTop": 80,
+      "paddingBottom": 96,
+      "width": "boxed"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#78350f",
+        "fontWeight": 800
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Startup founders note",
+  "description": "Minimal slate section with a founders note and bold heading.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Why we built Orbit",
+      "text": "After years of running ops at fast-growing companies, we were tired of juggling ten tools for one workflow. Orbit brings planning, approvals and reporting together so teams spend time on work, not coordination.",
+      "bullets": [
+        "Backed by leading seed investors",
+        "Used by 3,000+ teams",
+        "Made in Bengaluru"
+      ],
+      "buttonLabel": "Read the founders letter",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80",
+      "imageSide": "left"
+    },
+    "style": {
+      "background": "#f1f5f9",
+      "textColor": "#0f172a",
+      "paddingY": 100
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 42,
+        "fontWeight": 800,
+        "letterSpacing": -0.5
+      },
+      "image": {
+        "radius": 0,
+        "shadow": "md"
+      },
+      "button": {
+        "background": "#0f172a",
+        "color": "#ffffff",
+        "radius": 0
+      }
+    }
+  }
+}

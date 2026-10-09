@@ -1,0 +1,27 @@
+{
+  "name": "Finance brief newsletter",
+  "description": "Serious sand-toned sign-up for a markets digest.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "Work email",
+      "buttonLabel": "Get the brief",
+      "heading": "The Morning Ledger",
+      "text": "Five-minute market briefing delivered before the opening bell, every weekday.",
+      "note": "Read by 31,000 analysts and founders.",
+      "successMessage": "Subscribed. See you before the bell."
+    },
+    "style": {
+      "background": "#f5f5f4",
+      "textColor": "#1c1917",
+      "align": "left",
+      "paddingY": 64
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 34,
+        "fontWeight": 700
+      }
+    }
+  }
+}

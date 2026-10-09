@@ -1,0 +1,19 @@
+{
+  "name": "Map with details (text left)",
+  "description": "Contact details on the left, Google Map on the right.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Visit our office",
+      "text": "We would love to meet you in person.",
+      "details": "Mon–Fri, 9am – 6pm\n+1 (415) 555-0142",
+      "buttonLabel": "Get directions",
+      "address": "548 Market Street, San Francisco, CA 94104",
+      "layout": "split",
+      "grayscale": false,
+      "height": 420,
+      "radius": 16,
+      "shadow": "medium"
+    }
+  }
+}

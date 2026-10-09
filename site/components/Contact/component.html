@@ -1,18 +1,25 @@
-<div class="lp-split lp-contact-inner">
-  <div>
-    <h2 class="lp-h2" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h2>
-    <p class="lp-lead lp-pre" data-el="text" data-edit="text">{{text}}</p>
-    <dl class="lp-contact-details" data-el="details">
-      {{#if email}}<dt>Email</dt><dd>{{email}}</dd>{{/if}}
-      {{#if phone}}<dt>Phone</dt><dd>{{phone}}</dd>{{/if}}
-      {{#if address}}<dt>Address</dt><dd class="lp-pre">{{address}}</dd>{{/if}}
-    </dl>
+<div class="lp-contact-wrap{{#if mapAddress}} lp-contact-map-{{default mapLayout "side"}}{{/if}}">
+  <div class="lp-split lp-contact-inner">
+    <div>
+      <h2 class="lp-h2" data-el="heading" data-edit="heading" data-ph="Heading">{{heading}}</h2>
+      <p class="lp-lead lp-pre" data-el="text" data-edit="text">{{text}}</p>
+      <dl class="lp-contact-details" data-el="details">
+        {{#if email}}<dt>Email</dt><dd>{{email}}</dd>{{/if}}
+        {{#if phone}}<dt>Phone</dt><dd>{{phone}}</dd>{{/if}}
+        {{#if address}}<dt>Address</dt><dd class="lp-pre">{{address}}</dd>{{/if}}
+      </dl>
+    </div>
+    {{!-- data-form="contact" makes the page collect submissions; data-success is shown after sending. --}}
+    <form class="lp-card lp-form" data-el="form" data-form="contact" data-success="{{successMessage}}">
+      <label>Name<input name="name" required autocomplete="name" /></label>
+      <label>Email<input name="email" type="email" required autocomplete="email" /></label>
+      <label>Message<textarea name="message" rows="4" required></textarea></label>
+      <button class="lp-btn lp-btn-primary" type="submit" data-el="submit" data-edit="buttonLabel">{{buttonLabel}}</button>
+    </form>
   </div>
-  {{!-- data-form="contact" makes the page collect submissions; data-success is shown after sending. --}}
-  <form class="lp-card lp-form" data-el="form" data-form="contact" data-success="{{successMessage}}">
-    <label>Name<input name="name" required autocomplete="name" /></label>
-    <label>Email<input name="email" type="email" required autocomplete="email" /></label>
-    <label>Message<textarea name="message" rows="4" required></textarea></label>
-    <button class="lp-btn lp-btn-primary" type="submit" data-el="submit" data-edit="buttonLabel">{{buttonLabel}}</button>
-  </form>
+  {{#mapUrl mapAddress}}
+  <div class="lp-contact-map lp-map-shadow-{{default ../mapShadow "soft"}}" style="border-radius: {{default ../mapRadius 12}}px" data-el="map">
+    <iframe src="{{this}}" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+  {{/mapUrl}}
 </div>

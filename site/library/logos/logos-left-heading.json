@@ -1,0 +1,46 @@
+{
+  "name": "Left-aligned heading",
+  "description": "Left aligned heading with logos in a row.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Trusted by the best in construction",
+      "logos": [
+        {
+          "name": "Brickline",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "SteelFrame",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Pinnacle Build",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Ironbridge",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "paddingY": 56,
+      "align": "left"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "left",
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 24,
+      "itemAlign": "start"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "name": "Course catalog",
+  "description": "Online course cards with prices, three across on a cool slate background.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "Self-paced courses taught by working professionals.",
+      "slideHeight": 0,
+      "heading": "Learn something new this month",
+      "variant": "product",
+      "slides": [
+        {
+          "heading": "UX Research Foundations",
+          "eyebrow": "Design · 6 weeks",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80",
+          "price": "$79",
+          "buttonLabel": "Enrol now",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Data Storytelling",
+          "eyebrow": "Analytics · 4 weeks",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+          "price": "$59",
+          "buttonLabel": "Enrol now",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Brand Strategy Basics",
+          "eyebrow": "Marketing · 5 weeks",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "price": "$69",
+          "buttonLabel": "Enrol now",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Modern Web Layouts",
+          "eyebrow": "Development · 8 weeks",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "price": "$99",
+          "buttonLabel": "Enrol now",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Freelance Finance",
+          "eyebrow": "Business · 3 weeks",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "price": "$49",
+          "buttonLabel": "Enrol now",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#f1f5f9",
+      "paddingTop": 80,
+      "paddingBottom": 80
+    },
+    "carousel": {
+      "perViewDesktop": 3,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 24,
+      "autoplay": true,
+      "autoplaySpeed": 5500,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "top-center",
+      "arrowStyle": "square",
+      "dotsStyle": "progress",
+      "dotsPosition": "below",
+      "controlColor": "__accent__",
+      "radius": 10
+    }
+  }
+}

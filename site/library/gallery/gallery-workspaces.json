@@ -1,0 +1,61 @@
+{
+  "name": "Workspace tour",
+  "description": "Interior photographs of workspaces.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Light-filled rooms designed for focus and collaboration.",
+      "captionOnHover": true,
+      "heading": "Tour our workspaces",
+      "shape": "4/3",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "title": "Open studio",
+          "caption": "Hot desks",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "title": "Meeting room",
+          "caption": "Meeting suites",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+          "title": "Team session",
+          "caption": "Social area",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "title": "Workshop",
+          "caption": "Workshop room",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80",
+          "title": "Handshake",
+          "caption": "Lounge",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=80",
+          "title": "Laptop crew",
+          "caption": "Boardroom",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "paddingY": 72
+    },
+    "grid": {
+      "cardStyle": "none",
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 12
+    }
+  }
+}

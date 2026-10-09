@@ -1,0 +1,61 @@
+{
+  "name": "Dark feature cards",
+  "description": "Dark section with three flat cards and glowing indigo accents.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Built for performance-obsessed teams",
+      "subheading": "Every millisecond counts. So we obsess over them.",
+      "items": [
+        {
+          "icon": "⚡",
+          "title": "Edge-rendered pages",
+          "text": "Pages are served from 200+ locations so first paint stays under 400 ms worldwide."
+        },
+        {
+          "icon": "🧪",
+          "title": "Built-in A/B testing",
+          "text": "Test headlines, images and layouts with one click and ship the winner automatically."
+        },
+        {
+          "icon": "📈",
+          "title": "Core Web Vitals",
+          "text": "Real-user monitoring catches regressions before search rankings do."
+        }
+      ]
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "flat",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "subheading": {
+        "color": "#94a3b8"
+      },
+      "card": {
+        "background": "#1e293b",
+        "radius": 16,
+        "paddingY": 32,
+        "paddingX": 24
+      },
+      "title": {
+        "color": "#ffffff"
+      },
+      "text": {
+        "color": "#cbd5e1"
+      }
+    }
+  }
+}

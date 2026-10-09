@@ -1,0 +1,56 @@
+{
+  "name": "Services · left list",
+  "description": "Services in a single column list with accent icons.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Our dental care",
+      "subheading": "Gentle treatment for the whole family.",
+      "items": [
+        {
+          "icon": "🦷",
+          "title": "Check-ups & cleaning",
+          "text": "Routine exams, scale and polish every six months."
+        },
+        {
+          "icon": "✨",
+          "title": "Teeth whitening",
+          "text": "Safe in-chair whitening for up to eight shades brighter."
+        },
+        {
+          "icon": "😁",
+          "title": "Invisible braces",
+          "text": "Clear aligners planned with 3D scans."
+        },
+        {
+          "icon": "👶",
+          "title": "Children's dentistry",
+          "text": "Friendly visits that build lifelong habits."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 1,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 12,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "style": {
+      "paddingY": 72,
+      "background": "#ffffff"
+    },
+    "elements": {
+      "card": {
+        "radius": 12,
+        "borderColor": "#bae6fd",
+        "paddingY": 20
+      },
+      "icon": {
+        "background": "#e0f2fe",
+        "radius": 50
+      }
+    }
+  }
+}

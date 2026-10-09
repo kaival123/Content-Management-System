@@ -1,0 +1,56 @@
+{
+  "name": "Agri farming benefits",
+  "description": "Earthy green benefits for an agri-advisory service, three cards.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Smarter farming, steadier income",
+      "subheading": "Practical advice backed by data from 5,000 acres.",
+      "items": [
+        {
+          "icon": "🌱",
+          "title": "Soil health plans",
+          "text": "Lab testing and a crop-by-crop nutrient plan tailored to your fields."
+        },
+        {
+          "icon": "☔",
+          "title": "Weather alerts",
+          "text": "Hyperlocal rain and pest warnings sent to your phone in your language."
+        },
+        {
+          "icon": "🚜",
+          "title": "Market linkage",
+          "text": "Sell directly to verified buyers at transparent, guaranteed prices."
+        }
+      ]
+    },
+    "style": {
+      "background": "#ecfccb",
+      "textColor": "#1a2e05"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "card": {
+        "background": "#ffffff",
+        "radius": 20,
+        "paddingY": 32,
+        "paddingX": 28
+      },
+      "icon": {
+        "background": "#bef264",
+        "radius": 999,
+        "fontSize": 28
+      },
+      "title": {
+        "color": "#3f6212"
+      }
+    }
+  }
+}

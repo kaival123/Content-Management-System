@@ -1,0 +1,63 @@
+{
+  "name": "Accordion · onboarding week",
+  "description": "Orange gradient onboarding checklist with numbered steps.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Welcome aboard",
+      "heading": "Your first week",
+      "items": [
+        {
+          "icon": "",
+          "question": "Day 1 · Meet your buddy",
+          "answer": "You will be paired with a teammate who answers questions and shows you the ropes."
+        },
+        {
+          "icon": "",
+          "question": "Day 2 · Set up your tools",
+          "answer": "Laptop, accounts and access arrive before you start. We will walk you through the rest."
+        },
+        {
+          "icon": "",
+          "question": "Day 3 · Ship something small",
+          "answer": "Pick a starter task and get a change live. It is the best way to learn the codebase."
+        },
+        {
+          "icon": "",
+          "question": "Day 5 · Share your first impressions",
+          "answer": "A relaxed catch-up with your manager to talk about what is working and what is not."
+        }
+      ],
+      "layout": "stacked",
+      "style": "accent",
+      "icon": "chevron",
+      "iconPosition": "right",
+      "numbered": true,
+      "singleOpen": true,
+      "openFirst": true
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#7c2d12",
+      "gradientTo": "#ea580c",
+      "gradientAngle": 135,
+      "textColor": "#ffedd5",
+      "paddingY": 92,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#fed7aa"
+      },
+      "question": {
+        "color": "#ffffff"
+      },
+      "answer": {
+        "color": "#ffedd5"
+      }
+    }
+  }
+}

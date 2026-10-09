@@ -1,0 +1,57 @@
+{
+  "name": "Tabs · wellness classes",
+  "description": "Soft green pills with class descriptions.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Studio timetable",
+      "heading": "Find your practice",
+      "subheading": "Classes for every level, from first-timers to seasoned yogis.",
+      "orientation": "horizontal",
+      "style": "pills",
+      "tabAlign": "left",
+      "items": [
+        {
+          "label": "Yoga",
+          "icon": "🧘",
+          "title": "Flow and restore",
+          "text": "Gentle vinyasa and slow restorative classes to build strength, flexibility and calm.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80"
+        },
+        {
+          "label": "Pilates",
+          "icon": "🤸",
+          "title": "Core strength",
+          "text": "Mat and reformer sessions focused on posture, balance and deep stabilising muscles.",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=80"
+        },
+        {
+          "label": "Meditation",
+          "icon": "🌿",
+          "title": "Quiet the mind",
+          "text": "Guided sessions and breathwork to reduce stress and sharpen focus.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "buttonLabel": "See timetable",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ecf5ee",
+      "textColor": "#1c3a2a",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#14532d"
+      },
+      "eyebrow": {
+        "color": "#16a34a",
+        "textTransform": "uppercase",
+        "letterSpacing": 2
+      }
+    }
+  }
+}

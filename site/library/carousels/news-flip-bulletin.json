@@ -1,0 +1,98 @@
+{
+  "name": "News bulletin · flip",
+  "description": "Announcement slides that flip over on a bold brand-coloured panel.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "",
+      "slideHeight": 340,
+      "heading": "",
+      "variant": "content",
+      "slides": [
+        {
+          "heading": "Group bookings are here",
+          "eyebrow": "New feature",
+          "text": "Reserve ten tables or a hundred in one click, with deposits handled for you.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "See how it works",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Join our spring meet-up",
+          "eyebrow": "Community",
+          "text": "An evening of talks, tastings and good conversation on 18 April.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "Save your seat",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Faster checkout for everyone",
+          "eyebrow": "Update",
+          "text": "We rebuilt the payment step and shaved almost four seconds off every order.",
+          "image": "",
+          "price": "",
+          "buttonLabel": "Read the story",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "paddingTop": 56,
+      "paddingBottom": 56,
+      "width": "boxed"
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": true,
+      "autoplaySpeed": 6500,
+      "speed": 900,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "flip",
+      "pauseOnHover": true,
+      "arrowPosition": "bottom-right",
+      "arrowStyle": "outline",
+      "dotsStyle": "numbers",
+      "dotsPosition": "below-left",
+      "contentX": "left",
+      "contentY": "middle",
+      "heightMode": "fixed",
+      "heightDesktop": 340,
+      "heightTablet": 380,
+      "heightMobile": 420,
+      "radius": 24,
+      "paginationFg": "#ffffff"
+    },
+    "elements": {
+      "slideHeading": {
+        "fontSize": 40,
+        "fontWeight": 800
+      },
+      "slideText": {
+        "fontSize": 18,
+        "maxWidth": 560
+      }
+    }
+  }
+}

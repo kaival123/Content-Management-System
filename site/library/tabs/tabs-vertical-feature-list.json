@@ -1,0 +1,56 @@
+{
+  "name": "Tabs · vertical feature list",
+  "description": "Vertical underline-style tabs listing features with images.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Features",
+      "heading": "Why teams switch to us",
+      "subheading": "Four reasons customers never go back.",
+      "orientation": "vertical",
+      "style": "underline",
+      "items": [
+        {
+          "label": "Speed",
+          "icon": "⚡",
+          "title": "Instant by design",
+          "text": "Every page and report loads in under 200 milliseconds, even with millions of rows.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
+        },
+        {
+          "label": "Security",
+          "icon": "🔒",
+          "title": "Enterprise-grade protection",
+          "text": "Encryption, SSO and detailed audit logs come as standard, not as extras.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80"
+        },
+        {
+          "label": "Automation",
+          "icon": "🤖",
+          "title": "Let it run itself",
+          "text": "Build rules once and watch routine work disappear from your to-do list.",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80"
+        },
+        {
+          "label": "Support",
+          "icon": "💬",
+          "title": "Humans on call",
+          "text": "Real engineers answer in minutes, any day of the week.",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#f8fafc",
+      "textColor": "#0f172a",
+      "paddingY": 92,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#0f172a"
+      }
+    }
+  }
+}

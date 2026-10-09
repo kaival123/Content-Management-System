@@ -1,0 +1,51 @@
+{
+  "name": "Footer · SaaS spread",
+  "description": "Brand left, product links right on deep navy.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [],
+      "divider": "line",
+      "copyrightAlign": "auto",
+      "linkStyle": "underline",
+      "brand": "Orbit",
+      "tagline": "Analytics your whole team will use.",
+      "layout": "spread",
+      "links": [
+        {
+          "label": "Product",
+          "href": "#features"
+        },
+        {
+          "label": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "label": "Docs",
+          "href": "#"
+        },
+        {
+          "label": "Status",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Orbit Labs, Inc."
+    },
+    "style": {
+      "paddingY": 48,
+      "background": "#0b1220",
+      "textColor": "#94a3b8"
+    },
+    "elements": {
+      "brand": {
+        "color": "#ffffff",
+        "fontWeight": 700
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Customer stories gallery",
+  "description": "Customer story covers in portrait format on soft lavender.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Customer stories",
+      "subheading": "Meet the people behind the results.",
+      "shape": "3/4",
+      "captionOnHover": false,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+          "title": "A bakery goes online",
+          "caption": "Retail",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=900&q=80",
+          "title": "From orchard to shelf",
+          "caption": "Agriculture",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "title": "A designer goes solo",
+          "caption": "Freelance",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "title": "City clinics, one system",
+          "caption": "Healthcare",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f5f3ff",
+      "textColor": "#4c1d95",
+      "align": "center",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 18,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#5b21b6",
+        "italic": true
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#3b0764",
+        "radius": 24,
+        "paddingX": 26,
+        "paddingY": 30
+      }
+    }
+  }
+}

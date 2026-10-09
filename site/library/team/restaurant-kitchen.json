@@ -1,0 +1,63 @@
+{
+  "name": "Restaurant kitchen crew",
+  "description": "Chefs and front-of-house with a warm cream background.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Who is in the kitchen",
+      "subheading": "The hands behind every plate.",
+      "members": [
+        {
+          "name": "Chef Luca Bianchi",
+          "role": "Executive Chef",
+          "bio": "Trained in Bologna, cooks with whatever the farm sends that morning.",
+          "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Sana Qureshi",
+          "role": "Pastry Chef",
+          "bio": "Makes the cardamom tart people travel for.",
+          "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Peter Hollis",
+          "role": "Sommelier",
+          "bio": "Pairs wines with patience and zero snobbery.",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Grace Whitfield",
+          "role": "Front of House",
+          "bio": "Remembers every regular by name.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#fef9ec",
+      "textColor": "#78350f",
+      "align": "left",
+      "paddingTop": 80,
+      "paddingBottom": 96,
+      "width": "boxed"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#78350f",
+        "fontWeight": 800
+      }
+    }
+  }
+}

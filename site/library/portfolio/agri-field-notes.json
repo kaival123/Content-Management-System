@@ -1,0 +1,73 @@
+{
+  "name": "Agriculture project gallery",
+  "description": "Farm and harvest projects with hover captions on cream.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "From our fields",
+      "subheading": "Projects across 12 districts and 3,400 acres.",
+      "shape": "4/3",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+          "title": "Orchard cooperative",
+          "caption": "Horticulture",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "title": "Greenhouse tomatoes",
+          "caption": "Protected farming",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=900&q=80",
+          "title": "Wheat harvest",
+          "caption": "Grains",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=900&q=80",
+          "title": "Hybrid maize trial",
+          "caption": "Seed research",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=900&q=80",
+          "title": "Apple grading shed",
+          "caption": "Post-harvest",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?w=900&q=80",
+          "title": "Land-cover survey",
+          "caption": "Remote sensing",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#fef9ec",
+      "textColor": "#78350f",
+      "align": "left",
+      "paddingTop": 80,
+      "paddingBottom": 96,
+      "width": "boxed"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#78350f",
+        "fontWeight": 800
+      }
+    }
+  }
+}

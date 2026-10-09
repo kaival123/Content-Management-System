@@ -1,0 +1,79 @@
+{
+  "name": "Ecommerce case studies",
+  "description": "Light grid of retail projects with captions on hover.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Stores we have launched",
+      "subheading": "Fast, conversion-focused storefronts.",
+      "shape": "1/1",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "title": "Homeware storefront",
+          "caption": "Shopify",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=900&q=80",
+          "title": "Audio brand site",
+          "caption": "Direct-to-consumer",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+          "title": "Coffee subscription",
+          "caption": "Subscriptions",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "title": "Plant nursery shop",
+          "caption": "Local retail",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Stationery label",
+          "caption": "Branding",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "title": "Art-print store",
+          "caption": "Marketplace",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f5f3ff",
+      "textColor": "#4c1d95",
+      "align": "center",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 18,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#5b21b6",
+        "italic": true
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#3b0764",
+        "radius": 24,
+        "paddingX": 26,
+        "paddingY": 30
+      }
+    }
+  }
+}

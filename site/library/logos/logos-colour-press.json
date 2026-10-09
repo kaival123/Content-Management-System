@@ -1,0 +1,51 @@
+{
+  "name": "Press mentions in colour",
+  "description": "Colour logos, centered, light background.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": false,
+      "heading": "Seen in the press",
+      "logos": [
+        {
+          "name": "The Tribune",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Wired Weekly",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Daily Ledger",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Metro Post",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Forbes Asia",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#ffffff",
+      "paddingY": 64,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 5,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 32
+    }
+  }
+}

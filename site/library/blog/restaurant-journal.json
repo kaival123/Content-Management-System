@@ -1,0 +1,62 @@
+{
+  "name": "Restaurant journal",
+  "description": "Seasonal menus and kitchen stories on warm cream.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "From the kitchen",
+      "subheading": "Menus, producers and the stories behind the plates.",
+      "posts": [
+        {
+          "title": "Meet the farm behind our autumn menu",
+          "excerpt": "We visited the family who grows our squash, kale and quince.",
+          "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+          "category": "Producers",
+          "date": "Oct 4, 2026",
+          "author": "Chef Luca",
+          "link": "#"
+        },
+        {
+          "title": "Apple season: five dishes to try",
+          "excerpt": "Crisp, sharp and surprisingly good with lamb.",
+          "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=900&q=80",
+          "category": "Menu",
+          "date": "Sep 22, 2026",
+          "author": "Sana Qureshi",
+          "link": "#"
+        },
+        {
+          "title": "Why we grow our own herbs",
+          "excerpt": "A tiny greenhouse changed how we cook.",
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "category": "Kitchen",
+          "date": "Sep 9, 2026",
+          "author": "Peter Hollis",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#fef9ec",
+      "textColor": "#78350f",
+      "align": "left",
+      "paddingTop": 80,
+      "paddingBottom": 96,
+      "width": "boxed"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#78350f",
+        "fontWeight": 800
+      }
+    }
+  }
+}

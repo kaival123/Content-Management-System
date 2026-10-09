@@ -1,0 +1,60 @@
+{
+  "name": "Gold on black",
+  "description": "Luxury brands, black and gold.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": false,
+      "heading": "Our maisons",
+      "logos": [
+        {
+          "name": "Maison Verre",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Aurelle",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Belmont",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Cartier & Fils",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Dorsay",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#0a0a0a",
+      "textColor": "#fbbf24",
+      "paddingY": 80,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 5,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 32
+    },
+    "elements": {
+      "heading": {
+        "color": "#d6d3d1",
+        "letterSpacing": 3,
+        "textTransform": "uppercase",
+        "fontSize": 13
+      }
+    }
+  }
+}

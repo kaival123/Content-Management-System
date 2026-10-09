@@ -1,0 +1,79 @@
+{
+  "name": "Fixed-fee legal services",
+  "description": "Fixed fees for common legal work on a light stone background.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Fixed fees, no billable-hour anxiety",
+      "subheading": "Know the cost before we start.",
+      "plans": [
+        {
+          "name": "Company setup",
+          "price": "$850",
+          "period": "",
+          "description": "Incorporation",
+          "features": [
+            "Name check and filing",
+            "Founder agreement",
+            "Tax registration"
+          ],
+          "buttonLabel": "Start setup",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Contract review",
+          "price": "$300",
+          "period": "",
+          "description": "Per document",
+          "features": [
+            "Plain-English summary",
+            "Redlines and advice",
+            "48-hour turnaround"
+          ],
+          "buttonLabel": "Send a contract",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Trademark",
+          "price": "$1,200",
+          "period": "",
+          "description": "Per class",
+          "features": [
+            "Search and filing",
+            "Office action support",
+            "Registration monitoring"
+          ],
+          "buttonLabel": "Protect my brand",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "flat",
+      "textAlign": "center"
+    },
+    "elements": {
+      "card": {
+        "background": "#ffffff",
+        "radius": 8,
+        "paddingX": 26,
+        "paddingY": 28,
+        "borderColor": "#d6d3d1",
+        "borderWidth": 1
+      }
+    }
+  }
+}

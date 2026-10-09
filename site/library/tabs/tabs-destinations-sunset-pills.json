@@ -1,0 +1,56 @@
+{
+  "name": "Tabs · destinations",
+  "description": "Sunset gradient pills for travel destinations with images.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Where to next",
+      "heading": "Pick your destination",
+      "orientation": "horizontal",
+      "style": "pills",
+      "tabAlign": "center",
+      "items": [
+        {
+          "label": "Coast",
+          "icon": "🌊",
+          "title": "Island hopping",
+          "text": "Sail between quiet coves, snorkel clear lagoons and eat fresh seafood on the beach.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80"
+        },
+        {
+          "label": "Mountains",
+          "icon": "🏔️",
+          "title": "Alpine escapes",
+          "text": "Hut-to-hut hikes and lake swims with views you will remember for years.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
+        },
+        {
+          "label": "Cities",
+          "icon": "🏙️",
+          "title": "Culture and cuisine",
+          "text": "Long weekends in great food cities with local guides and skip-the-line tickets.",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "buttonLabel": "Plan a trip",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#fb923c",
+      "gradientTo": "#db2777",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "paddingY": 96,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#ffedd5"
+      }
+    }
+  }
+}

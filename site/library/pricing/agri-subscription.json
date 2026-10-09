@@ -1,0 +1,84 @@
+{
+  "name": "Farm box subscriptions",
+  "description": "Weekly produce boxes in earthy cards.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Fresh from the farm, every week",
+      "subheading": "Harvested within 24 hours of delivery. Skip or pause any week.",
+      "plans": [
+        {
+          "name": "Small box",
+          "price": "₹549",
+          "period": "/week",
+          "description": "Serves 1 – 2",
+          "features": [
+            "6 seasonal vegetables",
+            "1 leafy bundle",
+            "Recipe card"
+          ],
+          "buttonLabel": "Subscribe",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Family box",
+          "price": "₹899",
+          "period": "/week",
+          "description": "Serves 3 – 4",
+          "features": [
+            "10 seasonal vegetables",
+            "2 fruits",
+            "Eggs (half dozen)"
+          ],
+          "buttonLabel": "Subscribe",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Big harvest",
+          "price": "₹1,399",
+          "period": "/week",
+          "description": "Serves 5+",
+          "features": [
+            "14 seasonal vegetables",
+            "3 fruits",
+            "Eggs and honey"
+          ],
+          "buttonLabel": "Subscribe",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "background": "#fef9ec",
+      "textColor": "#78350f",
+      "align": "left",
+      "paddingTop": 80,
+      "paddingBottom": 96,
+      "width": "boxed"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#78350f",
+        "fontWeight": 800
+      },
+      "card": {
+        "borderColor": "#d97706",
+        "radius": 12,
+        "paddingX": 26,
+        "paddingY": 28,
+        "background": "#fffbeb"
+      }
+    }
+  }
+}

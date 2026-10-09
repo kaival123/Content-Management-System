@@ -1,0 +1,64 @@
+{
+  "name": "FAQ · restaurant dark gold",
+  "description": "Black and gold two-column FAQ for a fine-dining venue.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Dining at Olive & Ember",
+      "heading": "Reservations and dining",
+      "items": [
+        {
+          "question": "How do I reserve a table?",
+          "answer": "Book online up to 60 days in advance, or call us after 2pm. Parties of eight or more are handled by phone.",
+          "icon": ""
+        },
+        {
+          "question": "Do you cater for allergies?",
+          "answer": "Yes. Tell us when booking and our chef will adapt the menu. We cook with nuts and shellfish in the kitchen.",
+          "icon": ""
+        },
+        {
+          "question": "Is there a dress code?",
+          "answer": "Smart casual. We ask guests to avoid sportswear and beachwear.",
+          "icon": ""
+        },
+        {
+          "question": "Can I book a private room?",
+          "answer": "Our cellar room seats up to 18 and has its own tasting menu. Enquire for availability.",
+          "icon": ""
+        },
+        {
+          "question": "What are your corkage terms?",
+          "answer": "Corkage is $35 per bottle, with a limit of one bottle per table.",
+          "icon": ""
+        }
+      ],
+      "layout": "two-column",
+      "style": "divided",
+      "icon": "circle",
+      "iconPosition": "left"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#141110",
+      "textColor": "#e7e0d3",
+      "paddingY": 96,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#d4af37",
+        "fontWeight": 500,
+        "letterSpacing": 1
+      },
+      "eyebrow": {
+        "color": "#a8a29e",
+        "textTransform": "uppercase",
+        "letterSpacing": 3
+      },
+      "question": {
+        "color": "#f5efe3"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Services · gradient banner",
+  "description": "Gradient background with three white cards.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Legal help, made simple",
+      "subheading": "Clear advice and transparent fees for individuals and small businesses.",
+      "items": [
+        {
+          "icon": "📄",
+          "title": "Contracts",
+          "text": "Drafting and review in plain English, usually within 48 hours."
+        },
+        {
+          "icon": "🏢",
+          "title": "Company formation",
+          "text": "Incorporation, shareholder agreements and filings."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Dispute resolution",
+          "text": "Practical negotiation first, courtroom only when needed."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#1e3a8a",
+      "gradientTo": "#0ea5e9",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "paddingY": 88
+    },
+    "elements": {
+      "card": {
+        "background": "#ffffff",
+        "color": "#0f172a",
+        "radius": 16
+      }
+    }
+  }
+}

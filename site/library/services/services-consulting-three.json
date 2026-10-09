@@ -1,0 +1,47 @@
+{
+  "name": "Services · consulting columns",
+  "description": "Three consulting practices, left aligned with borders.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Advisory practices",
+      "subheading": "Specialist teams, one coordinated engagement.",
+      "items": [
+        {
+          "icon": "📊",
+          "title": "Strategy",
+          "text": "Market entry, pricing and portfolio decisions backed by data."
+        },
+        {
+          "icon": "⚙️",
+          "title": "Operations",
+          "text": "Process redesign that cuts cost without hurting service."
+        },
+        {
+          "icon": "👥",
+          "title": "People & culture",
+          "text": "Org design, leadership coaching and change programmes."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 0,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "style": {
+      "paddingY": 80,
+      "background": "#ffffff"
+    },
+    "elements": {
+      "card": {
+        "radius": 0,
+        "paddingY": 36,
+        "paddingX": 32
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Language switcher bar",
+  "description": "Slim bar with only a language dropdown and theme colours.",
+  "section": {
+    "type": "mini-header",
+    "data": {
+      "showFontSize": false,
+      "title": "Global Trade Council",
+      "links": [],
+      "languages": [
+        {
+          "label": "English",
+          "code": "en",
+          "href": ""
+        },
+        {
+          "label": "हिन्दी",
+          "code": "hi",
+          "href": ""
+        },
+        {
+          "label": "ગુજરાતી",
+          "code": "gu",
+          "href": ""
+        }
+      ],
+      "themeLabel": "",
+      "themes": [
+        {
+          "name": "Sky",
+          "color": "#0284c7",
+          "background": "#d9eefa",
+          "surface": "#f2faff",
+          "text": "#0c2d40"
+        },
+        {
+          "name": "Green",
+          "color": "#16a34a",
+          "background": "#dcf2e3",
+          "surface": "#f3fbf6",
+          "text": "#123222"
+        },
+        {
+          "name": "Purple",
+          "color": "#7c3aed",
+          "background": "#e9e0fb",
+          "surface": "#f7f3ff",
+          "text": "#261245"
+        },
+        {
+          "name": "Dark",
+          "color": "#f59e0b",
+          "background": "#0b0b0f",
+          "surface": "#17171f",
+          "text": "#f3f4f6",
+          "dot": "#111111"
+        }
+      ],
+      "pillStyle": "filled",
+      "keepPageColors": false,
+      "barColor": "theme",
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 6,
+      "backgroundType": "color",
+      "textColor": "#f1f5f9",
+      "align": "left",
+      "background": "#0f172a"
+    }
+  }
+}

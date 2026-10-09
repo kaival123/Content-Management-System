@@ -1,0 +1,61 @@
+{
+  "name": "Consulting client quotes",
+  "description": "Brand-colour background with white quote cards.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Results our clients measure",
+      "items": [
+        {
+          "quote": "The operating model they designed saved us $2.3M in the first year.",
+          "name": "Richard Hale",
+          "role": "COO, Meridian Logistics",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+        },
+        {
+          "quote": "They worked with our people, not around them. Adoption was immediate.",
+          "name": "Dr. Sunita Rao",
+          "role": "Director, Apex Healthcare",
+          "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80"
+        },
+        {
+          "quote": "A rare consultancy that tells you when you do not need them.",
+          "name": "Peter Lindqvist",
+          "role": "CEO, Nordform",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 92,
+      "paddingBottom": 92
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#0f172a",
+        "radius": 12,
+        "paddingX": 26,
+        "paddingY": 26,
+        "shadow": "md"
+      },
+      "name": {
+        "fontWeight": 700
+      }
+    }
+  }
+}

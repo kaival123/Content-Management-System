@@ -1,0 +1,37 @@
+{
+  "name": "Contact · boutique with map below",
+  "description": "Blush boutique contact with a soft-shadow map below.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Visit the boutique",
+      "text": "Come and try on our latest collection, or send us a message for styling advice.",
+      "email": "hello@maisonrose.shop",
+      "phone": "+33 1 55 50 01 23",
+      "address": "18 Rue des Rosiers\n75004 Paris",
+      "buttonLabel": "Send message",
+      "successMessage": "Merci! We will reply very soon.",
+      "mapAddress": "18 Rue des Rosiers, 75004 Paris",
+      "mapLayout": "below",
+      "mapRadius": 12,
+      "mapShadow": "soft"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#fdf2f4",
+      "textColor": "#4a1d2a",
+      "paddingY": 92,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#9d174d",
+        "fontWeight": 500
+      },
+      "form": {
+        "background": "#ffffff",
+        "radius": 12
+      }
+    }
+  }
+}

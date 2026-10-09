@@ -1,0 +1,293 @@
+{
+  "type": "mini-header",
+  "label": "Mini header (top bar)",
+  "description": "Slim top bar with title, quick links, text size, language and theme colours",
+  "icon": "layout",
+  "fields": [
+    {
+      "key": "allPages",
+      "label": "Show on every page of this website (edit it on this page)",
+      "type": "toggle"
+    },
+    {
+      "key": "logo",
+      "label": "Logo / emblem",
+      "type": "image"
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text"
+    },
+    {
+      "key": "titleHref",
+      "label": "Title link",
+      "type": "text"
+    },
+    {
+      "key": "links",
+      "label": "Quick links",
+      "type": "list",
+      "itemLabel": "Link",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Link",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "showFontSize",
+      "label": "Show text size − A +",
+      "type": "toggle"
+    },
+    {
+      "key": "languages",
+      "label": "Languages (empty = no dropdown)",
+      "type": "list",
+      "itemLabel": "Language",
+      "itemFields": [
+        {
+          "key": "label",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "key": "code",
+          "label": "Language code (hi, gu, fr…)",
+          "type": "text"
+        },
+        {
+          "key": "href",
+          "label": "Own page link (empty = auto-translate)",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "themeLabel",
+      "label": "Theme label",
+      "type": "text"
+    },
+    {
+      "key": "themes",
+      "label": "Themes (dots): colours applied to the whole page",
+      "type": "list",
+      "itemLabel": "Theme",
+      "itemFields": [
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "key": "color",
+          "label": "Accent colour (buttons, links)",
+          "type": "color"
+        },
+        {
+          "key": "background",
+          "label": "Page background",
+          "type": "color"
+        },
+        {
+          "key": "surface",
+          "label": "Cards / surface colour",
+          "type": "color"
+        },
+        {
+          "key": "text",
+          "label": "Text colour",
+          "type": "color"
+        },
+        {
+          "key": "dot",
+          "label": "Dot colour (empty = accent)",
+          "type": "color"
+        }
+      ]
+    },
+    {
+      "key": "keepPageColors",
+      "label": "Keep the page colours until a theme dot is clicked",
+      "type": "toggle"
+    },
+    {
+      "key": "pillStyle",
+      "label": "Button style",
+      "type": "select",
+      "options": [
+        {
+          "label": "Outline",
+          "value": "outline"
+        },
+        {
+          "label": "Filled",
+          "value": "filled"
+        },
+        {
+          "label": "Plain",
+          "value": "plain"
+        }
+      ]
+    },
+    {
+      "key": "barColor",
+      "label": "Bar colour",
+      "type": "select",
+      "options": [
+        {
+          "label": "Selected theme (default)",
+          "value": "theme"
+        },
+        {
+          "label": "Custom (section background)",
+          "value": "custom"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "key": "logo",
+      "label": "Logo",
+      "kind": "image",
+      "fields": [
+        "logo"
+      ]
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "kind": "text",
+      "fields": [
+        "title",
+        "allPages"
+      ]
+    },
+    {
+      "key": "link",
+      "label": "Quick links",
+      "kind": "box",
+      "list": "links",
+      "fields": [
+        "label",
+        "href"
+      ]
+    },
+    {
+      "key": "font",
+      "label": "Text size",
+      "kind": "box",
+      "fields": [
+        "showFontSize"
+      ]
+    },
+    {
+      "key": "language",
+      "label": "Language",
+      "kind": "box",
+      "fields": [
+        "languages"
+      ]
+    },
+    {
+      "key": "themes",
+      "label": "Theme colours",
+      "kind": "box",
+      "fields": [
+        "themeLabel",
+        "themes",
+        "keepPageColors"
+      ]
+    }
+  ],
+  "defaults": {
+    "title": "Government of India, State Disaster Management Authority",
+    "titleHref": "#",
+    "links": [
+      {
+        "label": "Skip to Main Content",
+        "href": "#main"
+      },
+      {
+        "label": "Screen Reader Access",
+        "href": "#screen-reader"
+      }
+    ],
+    "showFontSize": true,
+    "languages": [
+      {
+        "label": "English",
+        "code": "en",
+        "href": ""
+      },
+      {
+        "label": "हिन्दी",
+        "code": "hi",
+        "href": ""
+      },
+      {
+        "label": "ગુજરાતી",
+        "code": "gu",
+        "href": ""
+      }
+    ],
+    "themeLabel": "Theme:",
+    "themes": [
+      {
+        "name": "Amber",
+        "color": "#d97706",
+        "background": "#fff1d6",
+        "surface": "#fffaf0",
+        "text": "#3b2a12"
+      },
+      {
+        "name": "Red",
+        "color": "#dc2626",
+        "background": "#fde2e2",
+        "surface": "#fff5f5",
+        "text": "#3b1212"
+      },
+      {
+        "name": "Blue",
+        "color": "#2563eb",
+        "background": "#dbe8fb",
+        "surface": "#f3f8ff",
+        "text": "#10264a"
+      },
+      {
+        "name": "Purple",
+        "color": "#7c3aed",
+        "background": "#e9e0fb",
+        "surface": "#f7f3ff",
+        "text": "#261245"
+      },
+      {
+        "name": "Dark",
+        "color": "#f59e0b",
+        "background": "#0b0b0f",
+        "surface": "#17171f",
+        "text": "#f3f4f6",
+        "dot": "#111111"
+      }
+    ],
+    "pillStyle": "outline",
+    "keepPageColors": false,
+    "barColor": "theme",
+    "allPages": true
+  },
+  "defaultStyle": {
+    "paddingY": 6,
+    "align": "left",
+    "backgroundType": "color",
+    "textColor": "#ffffff",
+    "background": "#0a0a2a"
+  }
+}

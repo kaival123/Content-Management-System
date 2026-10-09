@@ -1,0 +1,61 @@
+{
+  "name": "Accordion · menu sections",
+  "description": "Cafe menu categories on a dark photo background.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Our menu",
+      "heading": "Fresh every morning",
+      "items": [
+        {
+          "icon": "☕",
+          "question": "Coffee",
+          "answer": "Single-origin espresso, flat white, cold brew and seasonal pour-overs roasted weekly in-house."
+        },
+        {
+          "icon": "🥐",
+          "question": "Bakery",
+          "answer": "Butter croissants, cardamom buns and sourdough loaves baked before sunrise."
+        },
+        {
+          "icon": "🥗",
+          "question": "Lunch",
+          "answer": "Grain bowls, toasties and soups made with produce from local farms."
+        },
+        {
+          "icon": "🍰",
+          "question": "Sweet things",
+          "answer": "Brown-butter cookies, lemon cake and a daily rotating tart."
+        }
+      ],
+      "style": "divided",
+      "icon": "plus",
+      "iconPosition": "right",
+      "singleOpen": true,
+      "openFirst": true
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1920&q=80",
+      "overlayColor": "#1c1410",
+      "overlayOpacity": 68,
+      "textColor": "#f5ebe0",
+      "paddingY": 100,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#f0c987"
+      },
+      "question": {
+        "color": "#ffffff"
+      },
+      "answer": {
+        "color": "#e7d8c6"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Case study photo header",
+  "description": "Farmland photo with green overlay for a case study page.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Case studies / GreenAcre Co-op",
+      "heading": "How 1,800 farmers raised yields by 32%",
+      "text": "A two-year programme combining soil data, advisory visits and direct market access.",
+      "buttonLabel": "Read the full story",
+      "buttonHref": "#story"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?w=1920&q=80",
+      "overlayColor": "#052e16",
+      "overlayOpacity": 65,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingY": 116
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 50
+      },
+      "text": {
+        "color": "#d9f99d"
+      },
+      "button": {
+        "background": "#bef264",
+        "color": "#14532d",
+        "radius": 6
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Accordion · wedding packages",
+  "description": "Rose gradient with soft cards for photography packages.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Wedding photography",
+      "heading": "Choose your coverage",
+      "subheading": "Every package includes an online gallery and print rights.",
+      "items": [
+        {
+          "icon": "💍",
+          "question": "Elopement · 3 hours",
+          "answer": "Ceremony, portraits and a handful of candid moments. 150 edited images."
+        },
+        {
+          "icon": "🥂",
+          "question": "Classic · 8 hours",
+          "answer": "From getting ready to first dance, with a second shooter. 500 edited images."
+        },
+        {
+          "icon": "🎞️",
+          "question": "Full story · 12 hours",
+          "answer": "Everything in Classic plus the rehearsal dinner and a hand-bound 30-page album."
+        }
+      ],
+      "layout": "stacked",
+      "style": "cards",
+      "icon": "circle",
+      "iconPosition": "left",
+      "singleOpen": true,
+      "openFirst": true
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#fdf2f8",
+      "gradientTo": "#fce7f3",
+      "gradientAngle": 160,
+      "textColor": "#4a044e",
+      "paddingY": 96,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#86198f",
+        "fontWeight": 500
+      },
+      "item": {
+        "radius": 18,
+        "background": "#ffffff"
+      }
+    }
+  }
+}

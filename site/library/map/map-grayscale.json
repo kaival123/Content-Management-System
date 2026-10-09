@@ -1,0 +1,19 @@
+{
+  "name": "Grayscale map",
+  "description": "Muted black-and-white map that suits minimal designs.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Where to find us",
+      "text": "Right in the heart of the city.",
+      "details": "",
+      "buttonLabel": "",
+      "address": "548 Market Street, San Francisco, CA 94104",
+      "layout": "stacked",
+      "grayscale": true,
+      "height": 400,
+      "radius": 0,
+      "shadow": "none"
+    }
+  }
+}

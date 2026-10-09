@@ -1,0 +1,54 @@
+{
+  "name": "Wellness benefits",
+  "description": "Soft rose, centered three-up benefits for a wellness brand.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Feel better, every day",
+      "subheading": "Gentle routines that fit into real, busy lives.",
+      "items": [
+        {
+          "icon": "🧘",
+          "title": "Guided practice",
+          "text": "Short daily sessions for every level, from five minutes to an hour."
+        },
+        {
+          "icon": "😴",
+          "title": "Better sleep",
+          "text": "Evening wind-down routines designed with sleep specialists."
+        },
+        {
+          "icon": "🍵",
+          "title": "Mindful nutrition",
+          "text": "Seasonal recipes and simple habits that nourish rather than restrict."
+        }
+      ]
+    },
+    "style": {
+      "background": "#fff1f2",
+      "textColor": "#4c0519",
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "card": {
+        "radius": 24,
+        "paddingY": 36,
+        "paddingX": 28
+      },
+      "title": {
+        "color": "#9f1239"
+      },
+      "icon": {
+        "fontSize": 40
+      }
+    }
+  }
+}

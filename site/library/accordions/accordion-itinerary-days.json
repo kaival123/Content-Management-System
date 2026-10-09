@@ -1,0 +1,65 @@
+{
+  "name": "Accordion · itinerary",
+  "description": "Day-by-day trip itinerary on a warm gradient.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Lisbon & Porto · 6 days",
+      "heading": "Your itinerary",
+      "items": [
+        {
+          "icon": "✈️",
+          "question": "Day 1 · Arrive in Lisbon",
+          "answer": "Airport transfer, check in and an evening walk through Alfama ending with a fado dinner."
+        },
+        {
+          "icon": "🚋",
+          "question": "Day 2 · Old town and Belem",
+          "answer": "Ride tram 28, taste pasteis de nata at the source and visit the monastery of Jeronimos."
+        },
+        {
+          "icon": "🏰",
+          "question": "Day 3 · Sintra",
+          "answer": "Palaces and gardens in the hills with a private driver and a long lunch."
+        },
+        {
+          "icon": "🚆",
+          "question": "Day 4 · Train to Porto",
+          "answer": "A scenic morning train followed by free time along the Ribeira."
+        },
+        {
+          "icon": "🍷",
+          "question": "Day 5 · Douro Valley",
+          "answer": "River cruise, a vineyard lunch and a tasting at a family-owned quinta."
+        },
+        {
+          "icon": "🏠",
+          "question": "Day 6 · Departure",
+          "answer": "Slow breakfast, then a transfer to the airport."
+        }
+      ],
+      "style": "divided",
+      "icon": "chevron",
+      "iconPosition": "left",
+      "singleOpen": true,
+      "openFirst": true
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#fff7ed",
+      "gradientTo": "#ffedd5",
+      "gradientAngle": 170,
+      "textColor": "#431407",
+      "paddingY": 92,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#9a3412"
+      },
+      "eyebrow": {
+        "color": "#c2410c"
+      }
+    }
+  }
+}

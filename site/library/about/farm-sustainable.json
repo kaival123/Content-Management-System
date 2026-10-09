@@ -1,0 +1,40 @@
+{
+  "name": "Farm and sustainability",
+  "description": "Earthy green section for an organic farm, image on the right.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Grown slowly, harvested with care",
+      "text": "Our 120-acre farm in Maharashtra uses regenerative practices that rebuild the soil instead of draining it. Everything we sell is picked within 24 hours of delivery.",
+      "bullets": [
+        "Certified organic since 2014",
+        "Zero synthetic pesticides",
+        "Solar-powered irrigation",
+        "Fair wages for every worker"
+      ],
+      "buttonLabel": "Visit the farm",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1752775312083-1cefe2f93358?w=1200&q=80",
+      "imageSide": "right"
+    },
+    "style": {
+      "background": "#f7fee7",
+      "textColor": "#1a2e05",
+      "paddingY": 96
+    },
+    "elements": {
+      "heading": {
+        "color": "#365314"
+      },
+      "image": {
+        "radius": 12,
+        "aspectRatio": "4/3"
+      },
+      "button": {
+        "background": "#4d7c0f",
+        "color": "#ffffff",
+        "radius": 6
+      }
+    }
+  }
+}

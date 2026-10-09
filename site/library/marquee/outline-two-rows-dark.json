@@ -1,0 +1,49 @@
+{
+  "name": "Outlined dual rows on dark",
+  "description": "Two huge outlined rows moving in opposite directions.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Design",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Build",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Launch",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Grow",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Scale",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 45,
+      "secondRow": true,
+      "size": "huge",
+      "separator": "none",
+      "gap": 60,
+      "outline": true,
+      "fade": false
+    },
+    "style": {
+      "background": "#111111",
+      "textColor": "#ffffff",
+      "paddingY": 48
+    }
+  }
+}

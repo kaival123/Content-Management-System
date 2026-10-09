@@ -1,0 +1,81 @@
+{
+  "name": "Agriculture earth bar",
+  "description": "Earthy brown and green for farm and cooperative sites.",
+  "section": {
+    "type": "mini-header",
+    "data": {
+      "showFontSize": true,
+      "keepPageColors": false,
+      "pillStyle": "outline",
+      "themeLabel": "Theme:",
+      "links": [
+        {
+          "label": "Skip to Main Content",
+          "href": "#main"
+        },
+        {
+          "label": "Screen Reader Access",
+          "href": "#screen-reader"
+        }
+      ],
+      "languages": [
+        {
+          "label": "English",
+          "code": "en",
+          "href": ""
+        },
+        {
+          "label": "हिन्दी",
+          "code": "hi",
+          "href": ""
+        },
+        {
+          "label": "ગુજરાતી",
+          "code": "gu",
+          "href": ""
+        }
+      ],
+      "themes": [
+        {
+          "name": "Green",
+          "color": "#16a34a",
+          "background": "#dcf2e3",
+          "surface": "#f3fbf6",
+          "text": "#123222"
+        },
+        {
+          "name": "Amber",
+          "color": "#d97706",
+          "background": "#fff1d6",
+          "surface": "#fffaf0",
+          "text": "#3b2a12"
+        },
+        {
+          "name": "Teal",
+          "color": "#0d9488",
+          "background": "#d5f1ee",
+          "surface": "#f1fbfa",
+          "text": "#0b2f2c"
+        },
+        {
+          "name": "Dark",
+          "color": "#f59e0b",
+          "background": "#0b0b0f",
+          "surface": "#17171f",
+          "text": "#f3f4f6",
+          "dot": "#111111"
+        }
+      ],
+      "title": "Kisan Cooperative Federation",
+      "barColor": "theme",
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 6,
+      "align": "left",
+      "backgroundType": "color",
+      "textColor": "#f5efe6",
+      "background": "#3f2d1b"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Clinic care promises",
+  "description": "Four soft teal care promises in a row.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Care you can count on",
+      "subheading": "Our promise to every patient who walks through our doors.",
+      "items": [
+        {
+          "icon": "⏱️",
+          "title": "Short waits",
+          "text": "Most patients are seen within 15 minutes of their appointment time."
+        },
+        {
+          "icon": "👩‍⚕️",
+          "title": "Experienced doctors",
+          "text": "Specialists with an average of 14 years in practice."
+        },
+        {
+          "icon": "🧾",
+          "title": "Clear pricing",
+          "text": "Know your costs upfront, with no surprise bills."
+        },
+        {
+          "icon": "📞",
+          "title": "Follow-up calls",
+          "text": "We check in after treatment to make sure you are recovering well."
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0fdfa",
+      "textColor": "#134e4a"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "card": {
+        "background": "#ccfbf1",
+        "radius": 16,
+        "paddingY": 28,
+        "paddingX": 22
+      },
+      "title": {
+        "color": "#115e59"
+      }
+    }
+  }
+}

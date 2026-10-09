@@ -1,0 +1,60 @@
+{
+  "name": "Logo strip no heading",
+  "description": "Compact strip with no heading.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "",
+      "logos": [
+        {
+          "name": "Acorn",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Birch",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Cedar",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Dune",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Elm",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Fern",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Gale",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "paddingY": 32,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 7,
+      "tablet": 4,
+      "mobile": 3,
+      "gap": 16
+    }
+  }
+}

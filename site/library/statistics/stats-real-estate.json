@@ -1,0 +1,41 @@
+{
+  "name": "Real estate stats",
+  "description": "Three stats with a subdued label colour.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Homes found, families settled",
+      "items": [
+        {
+          "value": "1,420",
+          "label": "Homes sold in 2025"
+        },
+        {
+          "value": "21 days",
+          "label": "Median time on market"
+        },
+        {
+          "value": "103%",
+          "label": "Average of asking price"
+        }
+      ]
+    },
+    "style": {
+      "align": "center",
+      "paddingY": 72
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 3,
+      "mobile": 1,
+      "cardStyle": "bordered",
+      "textAlign": "center",
+      "gap": 24
+    },
+    "elements": {
+      "label": {
+        "color": "#6b7280"
+      }
+    }
+  }
+}

@@ -57,6 +57,7 @@ const BASIC = 'components';
             <article class="lib-card">
               <button type="button" class="lib-thumb" (click)="choose(card)" [attr.aria-label]="'Insert ' + card.name">
                 <app-page-thumb [page]="previewPage(card)" />
+                <span class="lib-name">{{ card.name }}</span>
                 <span class="lib-insert"><app-icon name="plus" [size]="16" /> Insert</span>
               </button>
               <div class="lib-info">

@@ -1,0 +1,63 @@
+{
+  "name": "Services · bold fitness",
+  "description": "High-contrast black and lime fitness services.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "TRAIN YOUR WAY",
+      "subheading": "Every session is coached, tracked and built around you.",
+      "items": [
+        {
+          "icon": "🏋️",
+          "title": "Strength",
+          "text": "Small-group barbell coaching."
+        },
+        {
+          "icon": "🏃",
+          "title": "Conditioning",
+          "text": "Intervals that build real stamina."
+        },
+        {
+          "icon": "🧘",
+          "title": "Mobility",
+          "text": "Recovery and flexibility classes."
+        },
+        {
+          "icon": "🥗",
+          "title": "Nutrition",
+          "text": "Simple plans from certified coaches."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "style": {
+      "background": "#0a0a0a",
+      "textColor": "#ffffff",
+      "paddingY": 80
+    },
+    "elements": {
+      "heading": {
+        "textTransform": "uppercase",
+        "fontWeight": 900,
+        "letterSpacing": 2
+      },
+      "card": {
+        "background": "#18181b",
+        "borderWidth": 2,
+        "borderColor": "#a3e635",
+        "radius": 0
+      },
+      "icon": {
+        "background": "#a3e635",
+        "radius": 0
+      }
+    }
+  }
+}

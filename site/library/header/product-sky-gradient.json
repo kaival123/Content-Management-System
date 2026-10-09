@@ -1,0 +1,37 @@
+{
+  "name": "Product page sky gradient",
+  "description": "Light sky-blue gradient with a dark title for a product page.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Products / Analytics",
+      "heading": "Dashboards your team will actually open",
+      "text": "Build live reports from your data in minutes and share them with a link.",
+      "buttonLabel": "Start for free",
+      "buttonHref": "#signup"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#e0f2fe",
+      "gradientTo": "#bae6fd",
+      "gradientAngle": 160,
+      "textColor": "#0c4a6e",
+      "align": "left",
+      "paddingY": 92
+    },
+    "elements": {
+      "heading": {
+        "color": "#0c4a6e",
+        "fontSize": 46
+      },
+      "text": {
+        "color": "#075985"
+      },
+      "button": {
+        "background": "#0284c7",
+        "color": "#ffffff",
+        "radius": 6
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Contact · photo overlay",
+  "description": "Office photo with a dark overlay and white heading.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Come and say hello",
+      "text": "Whether you have a project, a question or just want coffee, we would love to hear from you.",
+      "email": "hello@northwind.studio",
+      "phone": "+1 (646) 555-0119",
+      "address": "35 Warren Street\nNew York, NY 10007",
+      "buttonLabel": "Send message",
+      "successMessage": "Thanks for reaching out. We will reply very soon."
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+      "overlayColor": "#0b1020",
+      "overlayOpacity": 68,
+      "textColor": "#f8fafc",
+      "paddingY": 112,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "text": {
+        "color": "#e2e8f0"
+      },
+      "form": {
+        "background": "#ffffff",
+        "color": "#0f172a",
+        "radius": 14
+      }
+    }
+  }
+}

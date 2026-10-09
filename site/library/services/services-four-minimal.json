@@ -1,0 +1,56 @@
+{
+  "name": "Services · minimal four",
+  "description": "Four lightweight text-led services, no cards.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "What we offer",
+      "subheading": "",
+      "items": [
+        {
+          "icon": "◆",
+          "title": "Audit",
+          "text": "A fixed-fee review of your current setup."
+        },
+        {
+          "icon": "◆",
+          "title": "Roadmap",
+          "text": "A prioritised plan for the next twelve months."
+        },
+        {
+          "icon": "◆",
+          "title": "Delivery",
+          "text": "Embedded specialists who ship alongside your team."
+        },
+        {
+          "icon": "◆",
+          "title": "Training",
+          "text": "Workshops that leave your team self-sufficient."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "style": {
+      "paddingY": 64,
+      "paddingSide": 40
+    },
+    "elements": {
+      "icon": {
+        "color": "#f59e0b",
+        "fontSize": 16
+      },
+      "title": {
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "fontSize": 15
+      }
+    }
+  }
+}

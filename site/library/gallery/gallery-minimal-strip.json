@@ -1,0 +1,44 @@
+{
+  "name": "Minimal image strip",
+  "description": "Just images, no heading, three tall tiles.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "",
+      "captionOnHover": false,
+      "heading": "",
+      "shape": "3/4",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "title": "Storefront",
+          "caption": "Retail",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "title": "Analytics",
+          "caption": "Tech",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+          "title": "Dashboard",
+          "caption": "Tech",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "paddingY": 24,
+      "paddingSide": 0
+    },
+    "grid": {
+      "cardStyle": "none",
+      "desktop": 3,
+      "tablet": 3,
+      "mobile": 1,
+      "gap": 4
+    }
+  }
+}

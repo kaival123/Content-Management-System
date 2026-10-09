@@ -1,0 +1,19 @@
+{
+  "name": "Map with floating card",
+  "description": "Full-width Google Map with an address card on top.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Our office",
+      "text": "548 Market Street, San Francisco",
+      "details": "Open Mon–Fri, 9am – 6pm",
+      "buttonLabel": "Get directions",
+      "address": "548 Market Street, San Francisco, CA 94104",
+      "layout": "overlay",
+      "grayscale": false,
+      "height": 480,
+      "radius": 16,
+      "shadow": "large"
+    }
+  }
+}

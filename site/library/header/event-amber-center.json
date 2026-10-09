@@ -1,0 +1,39 @@
+{
+  "name": "Event page amber header",
+  "description": "Amber banner announcing an event with a registration button.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Events / Annual summit",
+      "heading": "Annual Growers Summit 2027",
+      "text": "Two days of talks, field demos and networking for 800 farmers and agri-entrepreneurs. 18-19 September, Nashik.",
+      "buttonLabel": "Register now",
+      "buttonHref": "#register"
+    },
+    "style": {
+      "background": "#fbbf24",
+      "textColor": "#1c1917",
+      "align": "center",
+      "paddingY": 96
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#78350f",
+        "fontWeight": 700
+      },
+      "heading": {
+        "color": "#1c1917",
+        "fontSize": 50,
+        "fontWeight": 800
+      },
+      "text": {
+        "color": "#422006"
+      },
+      "button": {
+        "background": "#1c1917",
+        "color": "#fbbf24",
+        "radius": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Fresh mint banner",
+  "description": "Soft mint background with dark green text.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Fresh groceries, delivered",
+      "text": "Order before 2 pm and get your weekly box at the door tomorrow.",
+      "buttonLabel": "Order my first box",
+      "buttonHref": "#order"
+    },
+    "style": {
+      "background": "#d1fae5",
+      "textColor": "#064e3b",
+      "align": "center",
+      "paddingY": 80
+    },
+    "elements": {
+      "button": {
+        "background": "#059669",
+        "color": "#ffffff",
+        "radius": 999
+      }
+    }
+  }
+}

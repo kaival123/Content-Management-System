@@ -1,0 +1,82 @@
+{
+  "name": "Agency retainers",
+  "description": "Four monthly retainers in a bordered light grid.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Retainers that fit your growth",
+      "subheading": "Dedicated hours, a named team and a monthly report you will actually read.",
+      "plans": [
+        {
+          "name": "Launch",
+          "price": "$1,800",
+          "period": "/month",
+          "description": "15 hours",
+          "features": [
+            "Landing page updates",
+            "Monthly analytics report"
+          ],
+          "buttonLabel": "Choose Launch",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Build",
+          "price": "$3,500",
+          "period": "/month",
+          "description": "35 hours",
+          "features": [
+            "Design and development",
+            "A/B test program",
+            "Weekly check-in"
+          ],
+          "buttonLabel": "Choose Build",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Scale",
+          "price": "$6,200",
+          "period": "/month",
+          "description": "70 hours",
+          "features": [
+            "Full creative team",
+            "Paid media management",
+            "Quarterly strategy day"
+          ],
+          "buttonLabel": "Choose Scale",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Partner",
+          "price": "Custom",
+          "period": "",
+          "description": "Embedded team",
+          "features": [
+            "Dedicated pod",
+            "Custom SLAs",
+            "Executive reporting"
+          ],
+          "buttonLabel": "Request proposal",
+          "buttonHref": "#contact",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "background": "",
+      "align": "left",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    }
+  }
+}

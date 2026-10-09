@@ -1,0 +1,32 @@
+{
+  "name": "Consulting text-only about",
+  "description": "Narrow, centered text-only about with no image.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Independent advice, no agenda",
+      "text": "We are a small advisory firm that never sells software or takes referral fees. That means our recommendations are based on one thing only: what is best for your business.",
+      "bullets": [
+        "Fixed-fee engagements",
+        "Senior consultants only",
+        "Clear deliverables in four weeks"
+      ],
+      "buttonLabel": "Request a proposal",
+      "buttonHref": "#",
+      "image": "",
+      "imageSide": "right"
+    },
+    "style": {
+      "background": "#ffffff",
+      "textColor": "#1f2937",
+      "paddingY": 96,
+      "width": "narrow",
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 38
+      }
+    }
+  }
+}

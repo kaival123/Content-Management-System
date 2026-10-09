@@ -1,0 +1,67 @@
+{
+  "name": "Sunset gradient bar",
+  "description": "Orange to rose gradient for lively brands.",
+  "section": {
+    "type": "mini-header",
+    "data": {
+      "showFontSize": true,
+      "keepPageColors": false,
+      "pillStyle": "filled",
+      "themeLabel": "Theme:",
+      "links": [
+        {
+          "label": "Skip to Main Content",
+          "href": "#main"
+        },
+        {
+          "label": "Screen Reader Access",
+          "href": "#screen-reader"
+        }
+      ],
+      "languages": [],
+      "themes": [
+        {
+          "name": "Amber",
+          "color": "#d97706",
+          "background": "#fff1d6",
+          "surface": "#fffaf0",
+          "text": "#3b2a12"
+        },
+        {
+          "name": "Rose",
+          "color": "#e11d48",
+          "background": "#fde0e8",
+          "surface": "#fff4f7",
+          "text": "#3d0f1c"
+        },
+        {
+          "name": "Purple",
+          "color": "#7c3aed",
+          "background": "#e9e0fb",
+          "surface": "#f7f3ff",
+          "text": "#261245"
+        },
+        {
+          "name": "Dark",
+          "color": "#f59e0b",
+          "background": "#0b0b0f",
+          "surface": "#17171f",
+          "text": "#f3f4f6",
+          "dot": "#111111"
+        }
+      ],
+      "title": "Festival of Colours 2026",
+      "barColor": "custom",
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 6,
+      "align": "left",
+      "backgroundType": "gradient",
+      "gradientFrom": "#ea580c",
+      "gradientTo": "#be185d",
+      "gradientAngle": 90,
+      "textColor": "#ffffff"
+    }
+  }
+}

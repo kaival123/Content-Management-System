@@ -1,0 +1,32 @@
+{
+  "name": "Crimson urgency",
+  "description": "Strong red banner for limited offers.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Sale ends Sunday at midnight",
+      "text": "Save up to 40% on selected winter collections while stock lasts.",
+      "buttonLabel": "Shop the sale",
+      "buttonHref": "#sale"
+    },
+    "style": {
+      "background": "#b91c1c",
+      "textColor": "#fee2e2",
+      "align": "center",
+      "paddingY": 56
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "fontSize": 32
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "#b91c1c",
+        "radius": 0
+      }
+    }
+  }
+}

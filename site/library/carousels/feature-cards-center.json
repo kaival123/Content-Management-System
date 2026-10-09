@@ -1,0 +1,105 @@
+{
+  "name": "Feature cards · centre mode",
+  "description": "Service cards with the active card centred and neighbours peeking in.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "From first booking to follow-up care.",
+      "slideHeight": 0,
+      "heading": "Everything your clinic needs",
+      "variant": "card",
+      "slides": [
+        {
+          "heading": "Online booking",
+          "eyebrow": "Scheduling",
+          "text": "Patients pick a time that suits them, 24 hours a day.",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Digital records",
+          "eyebrow": "Compliance",
+          "text": "Secure notes, scans and prescriptions in a single timeline.",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Automated reminders",
+          "eyebrow": "Engagement",
+          "text": "Text and email nudges that cut missed appointments.",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Billing & insurance",
+          "eyebrow": "Payments",
+          "text": "Claims submitted and tracked without the paperwork.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Team collaboration",
+          "eyebrow": "Operations",
+          "text": "Shared tasks and handovers keep every shift in sync.",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "price": "",
+          "buttonLabel": "Learn more",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__bg__",
+      "align": "center",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "carousel": {
+      "perViewDesktop": 3,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 28,
+      "autoplay": false,
+      "autoplaySpeed": 5000,
+      "speed": 550,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": true,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "bottom-center",
+      "arrowStyle": "solid",
+      "dotsStyle": "capsule",
+      "dotsPosition": "below",
+      "radius": 18,
+      "easing": "gentle"
+    }
+  }
+}

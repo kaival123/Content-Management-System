@@ -30,6 +30,58 @@
       "type": "textarea"
     },
     {
+      "key": "mapAddress",
+      "label": "Map address (empty = no map)",
+      "type": "text"
+    },
+    {
+      "key": "mapLayout",
+      "label": "Map position",
+      "type": "select",
+      "options": [
+        {
+          "label": "Right of form",
+          "value": "side"
+        },
+        {
+          "label": "Left of form",
+          "value": "side-reverse"
+        },
+        {
+          "label": "Below form",
+          "value": "below"
+        }
+      ]
+    },
+    {
+      "key": "mapRadius",
+      "label": "Map border radius (px)",
+      "type": "number"
+    },
+    {
+      "key": "mapShadow",
+      "label": "Map shadow",
+      "type": "select",
+      "options": [
+        {
+          "label": "None",
+          "value": "none"
+        },
+        {
+          "label": "Soft",
+          "value": "soft"
+        },
+        {
+          "label": "Medium",
+          "value": "medium"
+        },
+        {
+          "label": "Large",
+          "value": "large"
+        }
+      ]
+    },
+    {
       "key": "buttonLabel",
       "label": "Submit button label",
       "type": "text"
@@ -74,6 +126,17 @@
       "fields": [
         "buttonLabel",
         "successMessage"
+      ]
+    },
+    {
+      "key": "map",
+      "label": "Google Map",
+      "kind": "box",
+      "fields": [
+        "mapAddress",
+        "mapLayout",
+        "mapRadius",
+        "mapShadow"
       ]
     },
     {

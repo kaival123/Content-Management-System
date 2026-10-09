@@ -1,0 +1,55 @@
+{
+  "name": "Minimal slow slash",
+  "description": "Tiny uppercase words with slashes, very slow drift.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Architecture",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Interiors",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Landscape",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Urbanism",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Research",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "right",
+      "speed": 70,
+      "size": "small",
+      "separator": "slash",
+      "gap": 28,
+      "fade": true,
+      "pause": false
+    },
+    "style": {
+      "paddingY": 18,
+      "borderTopWidth": 1,
+      "borderBottomWidth": 1,
+      "borderColor": "#e5e7eb"
+    },
+    "elements": {
+      "item": {
+        "textTransform": "uppercase",
+        "letterSpacing": 3
+      }
+    }
+  }
+}

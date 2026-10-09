@@ -1,0 +1,74 @@
+{
+  "name": "Developer tool capabilities",
+  "description": "Slate section with monospace-feel flat cards for a developer product.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Made for developers",
+      "subheading": "APIs, SDKs and tooling that stay out of your way.",
+      "items": [
+        {
+          "icon": "🧰",
+          "title": "Typed SDKs",
+          "text": "First-class libraries for TypeScript, Python, Go and Java."
+        },
+        {
+          "icon": "🪝",
+          "title": "Reliable webhooks",
+          "text": "Signed events with automatic retries and replay from the dashboard."
+        },
+        {
+          "icon": "🧪",
+          "title": "Sandbox environment",
+          "text": "Test every endpoint safely with realistic seed data."
+        },
+        {
+          "icon": "📖",
+          "title": "Clear docs",
+          "text": "Copy-paste examples, changelog and status page in one place."
+        },
+        {
+          "icon": "⏱️",
+          "title": "Sub-50ms latency",
+          "text": "Global edge network keeps API responses fast for every user."
+        },
+        {
+          "icon": "💬",
+          "title": "Engineer support",
+          "text": "Talk directly to the people who built the API."
+        }
+      ]
+    },
+    "style": {
+      "background": "#1e293b",
+      "textColor": "#e2e8f0"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#f8fafc"
+      },
+      "subheading": {
+        "color": "#94a3b8"
+      },
+      "card": {
+        "background": "#0f172a",
+        "borderColor": "#334155",
+        "radius": 10
+      },
+      "title": {
+        "color": "#7dd3fc"
+      },
+      "text": {
+        "color": "#cbd5e1"
+      }
+    }
+  }
+}

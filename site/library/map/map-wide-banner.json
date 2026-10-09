@@ -1,0 +1,19 @@
+{
+  "name": "Wide map banner",
+  "description": "Short, full-width map strip with square corners.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "",
+      "text": "",
+      "details": "",
+      "buttonLabel": "",
+      "address": "548 Market Street, San Francisco, CA 94104",
+      "layout": "stacked",
+      "grayscale": false,
+      "height": 300,
+      "radius": 0,
+      "shadow": "none"
+    }
+  }
+}

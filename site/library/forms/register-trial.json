@@ -1,0 +1,21 @@
+{
+  "name": "Free trial sign-up",
+  "description": "register",
+  "section": {
+    "type": "auth",
+    "data": {
+      "mode": {
+        "heading": "Start your free trial",
+        "text": "Create a workspace in under a minute. Cancel anytime.",
+        "buttonLabel": "Start free trial",
+        "switchText": "Already a member?",
+        "switchLabel": "Sign in",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80"
+      },
+      "switchHref": "#login",
+      "action": "",
+      "background": "__surface__",
+      "paddingY": 80
+    }
+  }
+}

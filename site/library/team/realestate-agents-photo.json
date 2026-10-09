@@ -1,0 +1,64 @@
+{
+  "name": "Real estate agents on photo",
+  "description": "Agent profiles over a darkened cityscape.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Your local agents",
+      "subheading": "Ask us about any street, school or commute. We have walked them all.",
+      "members": [
+        {
+          "name": "Vikram Joshi",
+          "role": "Senior Agent, Sales",
+          "bio": "Over 400 homes sold in the western suburbs.",
+          "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Neha Kulkarni",
+          "role": "Lettings Manager",
+          "bio": "Matches tenants and landlords with care.",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Omar Haddad",
+          "role": "Luxury Specialist",
+          "bio": "Penthouses, villas and waterfront homes.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80",
+      "overlayColor": "#0b2436",
+      "overlayOpacity": 68,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 120,
+      "paddingBottom": 120,
+      "parallax": true
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(11,36,54,0.75)",
+        "radius": 12,
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

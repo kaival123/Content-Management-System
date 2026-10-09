@@ -1,0 +1,27 @@
+{
+  "name": "Ocean gradient",
+  "description": "Deep blue to teal diagonal gradient.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Plan your next getaway",
+      "text": "Handpicked stays and flexible bookings in over 90 destinations.",
+      "buttonLabel": "Browse destinations",
+      "buttonHref": "#destinations"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0c4a6e",
+      "gradientTo": "#14b8a6",
+      "gradientAngle": 160,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 96
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 42
+      }
+    }
+  }
+}

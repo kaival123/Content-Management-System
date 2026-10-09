@@ -1,0 +1,53 @@
+{
+  "name": "Single featured quote",
+  "description": "One large featured customer quote on a charcoal gradient.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "A customer story",
+      "items": [
+        {
+          "quote": "We moved 40,000 customer records in a weekend and nobody on our team lost a minute of sleep. It is the smoothest migration I have led in fifteen years.",
+          "name": "Catherine Doyle",
+          "role": "Chief Information Officer, Harlow Insurance",
+          "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#111827",
+      "gradientTo": "#374151",
+      "gradientAngle": 180,
+      "textColor": "#f3f4f6",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 1,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#1f2937",
+        "color": "#f3f4f6",
+        "radius": 14,
+        "paddingX": 26,
+        "paddingY": 26
+      },
+      "quote": {
+        "fontSize": 24,
+        "lineHeight": 1.5
+      }
+    }
+  }
+}

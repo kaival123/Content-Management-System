@@ -1,0 +1,31 @@
+{
+  "name": "FAQ header soft green",
+  "description": "Gentle green header for a help or FAQ page, centered.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Help centre / FAQ",
+      "heading": "Frequently asked questions",
+      "text": "Quick answers about orders, delivery, returns and payments. Cannot find yours? Our support team is one message away.",
+      "buttonLabel": "Contact support",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#064e3b",
+      "align": "center",
+      "paddingY": 80
+    },
+    "elements": {
+      "heading": {
+        "color": "#065f46",
+        "fontSize": 44
+      },
+      "button": {
+        "background": "#059669",
+        "color": "#ffffff",
+        "radius": 999
+      }
+    }
+  }
+}

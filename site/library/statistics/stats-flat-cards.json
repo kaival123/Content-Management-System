@@ -1,0 +1,40 @@
+{
+  "name": "Flat cards stats",
+  "description": "Flat tinted cards with left aligned text for a SaaS product.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Teams ship faster with Flowdesk",
+      "items": [
+        {
+          "value": "38%",
+          "label": "Fewer status meetings"
+        },
+        {
+          "value": "2.5 hrs",
+          "label": "Saved per person weekly"
+        },
+        {
+          "value": "14k",
+          "label": "Teams onboarded"
+        },
+        {
+          "value": "4.7/5",
+          "label": "G2 review score"
+        }
+      ]
+    },
+    "style": {
+      "align": "left",
+      "paddingY": 68
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "flat",
+      "textAlign": "left",
+      "gap": 20
+    }
+  }
+}

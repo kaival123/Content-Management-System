@@ -1,0 +1,50 @@
+{
+  "name": "Night glow stats",
+  "description": "Black background with pink accent figures.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Community by the numbers",
+      "items": [
+        {
+          "value": "85K",
+          "label": "Members"
+        },
+        {
+          "value": "1,200",
+          "label": "Events hosted"
+        },
+        {
+          "value": "40",
+          "label": "Cities"
+        },
+        {
+          "value": "9.6M",
+          "label": "Messages sent"
+        }
+      ]
+    },
+    "style": {
+      "background": "#09090b",
+      "textColor": "#fafafa",
+      "align": "center",
+      "paddingY": 80
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "bordered",
+      "textAlign": "center",
+      "gap": 16
+    },
+    "elements": {
+      "card": {
+        "borderColor": "#27272a"
+      },
+      "value": {
+        "color": "#f472b6"
+      }
+    }
+  }
+}

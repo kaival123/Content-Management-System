@@ -1,0 +1,21 @@
+{
+  "name": "Multiple locations (tabs)",
+  "description": "Switch between several office locations with tabs.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Our locations",
+      "text": "Find the office nearest to you.",
+      "buttonLabel": "Get directions",
+      "locationsView": "tabs",
+      "locations": [
+        { "name": "San Francisco", "address": "548 Market Street, San Francisco, CA 94104", "details": "Mon–Fri, 9am – 6pm\n+1 (415) 555-0142" },
+        { "name": "New York", "address": "350 5th Avenue, New York, NY 10118", "details": "Mon–Fri, 9am – 6pm\n+1 (212) 555-0188" },
+        { "name": "London", "address": "10 Downing Street, London SW1A 2AA, UK", "details": "Mon–Fri, 9am – 5pm\n+44 20 7946 0123" }
+      ],
+      "height": 420,
+      "radius": 12,
+      "shadow": "soft"
+    }
+  }
+}

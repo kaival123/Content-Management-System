@@ -1,0 +1,40 @@
+{
+  "name": "Clinic trust and credentials",
+  "description": "Soft teal section highlighting the clinic and its credentials.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Medicine with time for you",
+      "text": "Our doctors book longer appointments so you can ask every question. We combine modern diagnostics with a personal approach, from newborn check-ups to senior care.",
+      "bullets": [
+        "Board-certified specialists",
+        "On-site lab with same-day results",
+        "Cashless insurance with 40+ providers",
+        "Evening and Saturday clinics"
+      ],
+      "buttonLabel": "Meet our doctors",
+      "buttonHref": "#team",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+      "imageSide": "right"
+    },
+    "style": {
+      "background": "#f0fdfa",
+      "textColor": "#134e4a",
+      "paddingY": 88
+    },
+    "elements": {
+      "heading": {
+        "color": "#115e59"
+      },
+      "image": {
+        "radius": 24,
+        "shadow": "md"
+      },
+      "button": {
+        "background": "#0d9488",
+        "color": "#ffffff",
+        "radius": 999
+      }
+    }
+  }
+}

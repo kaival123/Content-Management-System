@@ -1,0 +1,43 @@
+{
+  "name": "Real estate hero with photo",
+  "description": "Warm neutral hero for a property agency, text left and a home photo right.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Homes across Pune and Mumbai",
+      "heading": "Find the home you will never want to leave",
+      "subheading": "Browse 1,200+ verified listings, book a viewing in two taps and get guidance from agents who live in your neighbourhood.",
+      "primaryLabel": "Search properties",
+      "primaryHref": "#listings",
+      "secondaryLabel": "Talk to an agent",
+      "secondaryHref": "#contact",
+      "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&q=80",
+      "layout": "split"
+    },
+    "style": {
+      "background": "#fffbeb",
+      "textColor": "#292524",
+      "align": "left",
+      "paddingY": 100
+    },
+    "elements": {
+      "eyebrow": {
+        "color": "#b45309"
+      },
+      "primary": {
+        "background": "#292524",
+        "color": "#fafaf9",
+        "radius": 6
+      },
+      "secondary": {
+        "color": "#292524",
+        "borderColor": "#292524",
+        "radius": 6
+      },
+      "image": {
+        "radius": 4,
+        "shadow": "md"
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "SaaS three tiers, dark",
+  "description": "Starter, Growth and Scale plans on a dark navy background.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Pricing that scales with your team",
+      "subheading": "Start free, upgrade when you outgrow it. No per-seat surprises.",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$0",
+          "period": "/month",
+          "description": "For side projects",
+          "features": [
+            "3 projects",
+            "1,000 events / month",
+            "Community support"
+          ],
+          "buttonLabel": "Start free",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Growth",
+          "price": "$49",
+          "period": "/month",
+          "description": "For growing teams",
+          "features": [
+            "Unlimited projects",
+            "100k events / month",
+            "Slack integration",
+            "Priority email support"
+          ],
+          "buttonLabel": "Start 14-day trial",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Scale",
+          "price": "$199",
+          "period": "/month",
+          "description": "For larger orgs",
+          "features": [
+            "Unlimited events",
+            "SSO and audit log",
+            "Custom roles",
+            "Dedicated success manager"
+          ],
+          "buttonLabel": "Talk to sales",
+          "buttonHref": "#contact",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "align": "center",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#1e293b",
+        "radius": 16,
+        "paddingX": 28,
+        "paddingY": 28
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "Coworking desk plans",
+  "description": "Hot desk, dedicated desk and private office options.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Find your desk",
+      "subheading": "Includes fibre internet, coffee and meeting-room credits.",
+      "plans": [
+        {
+          "name": "Hot desk",
+          "price": "£180",
+          "period": "/month",
+          "description": "Sit anywhere",
+          "features": [
+            "Open lounge access",
+            "4 meeting-room hours",
+            "Free coffee"
+          ],
+          "buttonLabel": "Book a tour",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Dedicated desk",
+          "price": "£310",
+          "period": "/month",
+          "description": "Your own space",
+          "features": [
+            "Lockable storage",
+            "10 meeting-room hours",
+            "Mail handling"
+          ],
+          "buttonLabel": "Book a tour",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Private office",
+          "price": "£1,150",
+          "period": "/month",
+          "description": "Teams of 4",
+          "features": [
+            "Lockable office",
+            "25 meeting-room hours",
+            "24/7 key card"
+          ],
+          "buttonLabel": "Book a tour",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80",
+      "overlayColor": "#0b2436",
+      "overlayOpacity": 68,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 120,
+      "paddingBottom": 120,
+      "parallax": true
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(11,36,54,0.8)",
+        "radius": 12,
+        "paddingX": 28,
+        "paddingY": 30
+      }
+    }
+  }
+}

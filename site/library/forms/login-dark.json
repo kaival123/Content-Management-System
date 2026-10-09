@@ -1,0 +1,28 @@
+{
+  "name": "Dark login",
+  "description": "login",
+  "section": {
+    "type": "auth",
+    "data": {
+      "mode": {
+        "heading": "Sign in to Nimbus",
+        "text": "Access your dashboards, alerts and team workspace.",
+        "buttonLabel": "Sign in",
+        "switchText": "Need an account?",
+        "switchLabel": "Request access",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+      },
+      "switchHref": "#login",
+      "action": "",
+      "background": "#0f172a",
+      "textColor": "#f8fafc",
+      "paddingY": 72
+    },
+    "style": {
+      "button": {
+        "background": "#38bdf8",
+        "color": "#0f172a"
+      }
+    }
+  }
+}

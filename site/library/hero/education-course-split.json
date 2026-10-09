@@ -1,0 +1,50 @@
+{
+  "name": "Online course hero",
+  "description": "Cohort-based course hero with indigo accents and outcome-focused copy.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Next cohort starts 3 March",
+      "heading": "Become a confident data analyst in 12 weeks",
+      "subheading": "Live classes, real company projects and 1:1 mentoring. 87% of graduates land a role within six months.",
+      "primaryLabel": "Reserve your seat",
+      "primaryHref": "#enrol",
+      "secondaryLabel": "Download syllabus",
+      "secondaryHref": "#syllabus",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+      "layout": "split"
+    },
+    "style": {
+      "background": "#eef2ff",
+      "textColor": "#1e1b4b",
+      "align": "left",
+      "paddingY": 100
+    },
+    "elements": {
+      "eyebrow": {
+        "color": "#4338ca",
+        "textTransform": "uppercase",
+        "letterSpacing": 1.5,
+        "fontWeight": 700
+      },
+      "heading": {
+        "color": "#1e1b4b",
+        "fontSize": 50
+      },
+      "primary": {
+        "background": "#4f46e5",
+        "color": "#ffffff",
+        "radius": 10
+      },
+      "secondary": {
+        "color": "#4338ca",
+        "borderColor": "#a5b4fc",
+        "radius": 10
+      },
+      "image": {
+        "radius": 20,
+        "shadow": "md"
+      }
+    }
+  }
+}

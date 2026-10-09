@@ -1,0 +1,35 @@
+{
+  "name": "Purple night",
+  "description": "Rich violet gradient with bold type.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Ship your app faster",
+      "text": "Join 12,000 developers building with our API. No credit card required.",
+      "buttonLabel": "Get an API key",
+      "buttonHref": "#signup"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#4c1d95",
+      "gradientTo": "#1e1b4b",
+      "gradientAngle": 200,
+      "textColor": "#ede9fe",
+      "align": "center",
+      "paddingY": 104
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 46,
+        "fontWeight": 800,
+        "letterSpacing": -1
+      },
+      "button": {
+        "background": "#a78bfa",
+        "color": "#1e1b4b",
+        "radius": 10
+      }
+    }
+  }
+}

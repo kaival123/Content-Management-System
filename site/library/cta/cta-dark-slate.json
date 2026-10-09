@@ -1,0 +1,30 @@
+{
+  "name": "Dark slate banner",
+  "description": "Dark, centered banner for SaaS sign-ups.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Stop chasing invoices",
+      "text": "Automate reminders and reconciliation in one afternoon. Cancel anytime.",
+      "buttonLabel": "Start free for 14 days",
+      "buttonHref": "#pricing"
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "align": "center",
+      "paddingY": 88
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 40
+      },
+      "button": {
+        "background": "#38bdf8",
+        "color": "#0f172a",
+        "radius": 999
+      }
+    }
+  }
+}

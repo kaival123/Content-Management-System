@@ -1,0 +1,125 @@
+{
+  "name": "Product showcase · outline arrows",
+  "description": "Four products per row with prices and outlined arrows above the cards.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "Hand-picked by our store team.",
+      "slideHeight": 0,
+      "heading": "Bestsellers this season",
+      "variant": "product",
+      "slides": [
+        {
+          "heading": "Trail Daypack 24L",
+          "eyebrow": "Outdoor",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=80",
+          "price": "$89",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Studio Headphones",
+          "eyebrow": "Audio",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=80",
+          "price": "$149",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Stoneware Mug Set",
+          "eyebrow": "Kitchen",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=900&q=80",
+          "price": "$42",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Classic Field Watch",
+          "eyebrow": "Accessories",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80",
+          "price": "$210",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Canvas Weekender",
+          "eyebrow": "Travel",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+          "price": "$118",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Linen Throw Blanket",
+          "eyebrow": "Home",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "price": "$76",
+          "buttonLabel": "Add to cart",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__bg__",
+      "paddingTop": 80,
+      "paddingBottom": 80
+    },
+    "carousel": {
+      "perViewDesktop": 4,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 20,
+      "autoplay": false,
+      "autoplaySpeed": 5000,
+      "speed": 450,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "top-right",
+      "arrowStyle": "outline",
+      "dotsStyle": "dots",
+      "dotsPosition": "below-left",
+      "radius": 14
+    },
+    "elements": {
+      "slidePrice": {
+        "fontSize": 20,
+        "fontWeight": 700,
+        "color": "__primary__"
+      },
+      "slide": {
+        "shadow": "sm"
+      }
+    }
+  }
+}

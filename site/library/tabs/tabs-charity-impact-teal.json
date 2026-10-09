@@ -1,0 +1,57 @@
+{
+  "name": "Tabs · impact areas",
+  "description": "Teal gradient with centred underline tabs on impact areas.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Our impact",
+      "heading": "Where your support goes",
+      "subheading": "Every contribution helps us reach more communities.",
+      "orientation": "horizontal",
+      "style": "underline",
+      "tabAlign": "center",
+      "items": [
+        {
+          "label": "Water",
+          "icon": "💧",
+          "title": "Clean water for 120 villages",
+          "text": "Wells and filtration systems that bring safe drinking water within a ten-minute walk."
+        },
+        {
+          "label": "Education",
+          "icon": "📚",
+          "title": "Schools that last",
+          "text": "Classrooms, books and trained teachers for more than 9,000 children."
+        },
+        {
+          "label": "Health",
+          "icon": "🩺",
+          "title": "Care close to home",
+          "text": "Community clinics and midwives that make a lifesaving difference.",
+          "buttonLabel": "Donate now",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0f766e",
+      "gradientTo": "#134e4a",
+      "gradientAngle": 150,
+      "textColor": "#ccfbf1",
+      "paddingY": 96,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#99f6e4"
+      },
+      "subheading": {
+        "color": "#ccfbf1"
+      }
+    }
+  }
+}

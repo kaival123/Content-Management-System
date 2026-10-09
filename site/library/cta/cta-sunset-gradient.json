@@ -1,0 +1,33 @@
+{
+  "name": "Sunset gradient",
+  "description": "Warm orange-to-pink gradient for consumer launches.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Your first class is on us",
+      "text": "Try yoga, pilates or HIIT at any of our studios with a free guest pass.",
+      "buttonLabel": "Claim my free class",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f97316",
+      "gradientTo": "#ec4899",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 100
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 44,
+        "fontWeight": 800
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "#be185d",
+        "radius": 12
+      }
+    }
+  }
+}

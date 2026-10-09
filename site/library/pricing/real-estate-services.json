@@ -1,0 +1,86 @@
+{
+  "name": "Real estate service fees",
+  "description": "Transparent agent fees for sellers and landlords.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Our fees, upfront",
+      "subheading": "No hidden costs. You pay only when the deal closes.",
+      "plans": [
+        {
+          "name": "Rental",
+          "price": "1 month",
+          "period": "",
+          "description": "Tenant placement",
+          "features": [
+            "Verified listings",
+            "Tenant screening",
+            "Agreement drafting"
+          ],
+          "buttonLabel": "List a rental",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Sale",
+          "price": "1.5%",
+          "period": "",
+          "description": "Of final sale price",
+          "features": [
+            "Professional photography",
+            "Open-house events",
+            "Legal paperwork support"
+          ],
+          "buttonLabel": "Sell with us",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Management",
+          "price": "8%",
+          "period": "/rent",
+          "description": "Full property care",
+          "features": [
+            "Rent collection",
+            "Maintenance coordination",
+            "Quarterly inspection"
+          ],
+          "buttonLabel": "Manage my property",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f8fafc",
+      "gradientTo": "#e0e7ff",
+      "gradientAngle": 90,
+      "textColor": "#1e293b",
+      "align": "left",
+      "paddingTop": 96,
+      "paddingBottom": 72,
+      "paddingMobile": 56
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#1e1b4b"
+      },
+      "card": {
+        "background": "#ffffff",
+        "borderColor": "#c7d2fe",
+        "radius": 12,
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

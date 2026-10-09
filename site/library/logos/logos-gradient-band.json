@@ -1,0 +1,68 @@
+{
+  "name": "Gradient logo band",
+  "description": "Indigo gradient with light logos.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Powering 500+ growing brands",
+      "logos": [
+        {
+          "name": "Lumio",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Quanta",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Nimbus",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Vertex",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Zenith",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Aurora",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#4338ca",
+      "gradientTo": "#7c3aed",
+      "gradientAngle": 100,
+      "textColor": "#ffffff",
+      "paddingY": 64,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 6,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 24
+    },
+    "elements": {
+      "heading": {
+        "color": "#e0e7ff",
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "fontSize": 14
+      }
+    }
+  }
+}

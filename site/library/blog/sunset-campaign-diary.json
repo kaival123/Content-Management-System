@@ -1,0 +1,70 @@
+{
+  "name": "Marketing diary, sunset",
+  "description": "Marketing stories on an orange-pink gradient.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Marketing diary",
+      "subheading": "Campaigns, experiments and what they taught us.",
+      "posts": [
+        {
+          "title": "The pop-up that sold out in a day",
+          "excerpt": "Planning, promotion and a little luck.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "category": "Campaigns",
+          "date": "Oct 2, 2026",
+          "author": "Isabella Romano",
+          "link": "#"
+        },
+        {
+          "title": "Rebrand: before and after",
+          "excerpt": "What changed, what stayed and what customers said.",
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "category": "Branding",
+          "date": "Sep 18, 2026",
+          "author": "Grace Whitfield",
+          "link": "#"
+        },
+        {
+          "title": "Testing headlines: 12 experiments",
+          "excerpt": "The winners were not the ones we expected.",
+          "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+          "category": "Testing",
+          "date": "Sep 4, 2026",
+          "author": "Tariq Anwar",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f97316",
+      "gradientTo": "#db2777",
+      "gradientAngle": 160,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 22,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontWeight": 800
+      },
+      "card": {
+        "background": "rgba(0,0,0,0.25)",
+        "radius": 16,
+        "paddingX": 0,
+        "paddingY": 0
+      }
+    }
+  }
+}

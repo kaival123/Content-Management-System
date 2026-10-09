@@ -1,0 +1,65 @@
+{
+  "name": "Minimal black grid",
+  "description": "Black background with hairline-bordered quote cells.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Kind words",
+      "items": [
+        {
+          "quote": "Sharp, fast and genuinely thoughtful.",
+          "name": "Alex Moreau",
+          "role": "Art Director, Atelier 9",
+          "avatar": ""
+        },
+        {
+          "quote": "They understood the brief before we finished explaining it.",
+          "name": "Yuki Tanaka",
+          "role": "Brand Manager, Kōyō",
+          "avatar": ""
+        },
+        {
+          "quote": "The cleanest handover we have ever received.",
+          "name": "Ben Adler",
+          "role": "CTO, Northpoint",
+          "avatar": ""
+        },
+        {
+          "quote": "We would hire them again tomorrow.",
+          "name": "Isha Kapoor",
+          "role": "Founder, Oma Foods",
+          "avatar": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#0a0a0a",
+      "textColor": "#f5f5f5",
+      "align": "left",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 0,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "fontSize": 32
+      },
+      "card": {
+        "borderColor": "#333333",
+        "radius": 0,
+        "paddingX": 28,
+        "paddingY": 32
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Pastel peach",
+  "description": "Gentle peach to lavender gradient.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Be the first to know",
+      "text": "Early members get launch pricing and a free onboarding session.",
+      "buttonLabel": "Join the waitlist",
+      "buttonHref": "#waitlist"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#fed7aa",
+      "gradientTo": "#e9d5ff",
+      "gradientAngle": 90,
+      "textColor": "#3b0764",
+      "align": "center",
+      "paddingY": 80
+    },
+    "elements": {
+      "heading": {
+        "color": "#3b0764"
+      },
+      "button": {
+        "background": "#7e22ce",
+        "color": "#ffffff",
+        "radius": 999
+      }
+    }
+  }
+}

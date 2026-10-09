@@ -1,0 +1,81 @@
+{
+  "name": "School fee structure",
+  "description": "Primary, middle and senior fees on a fresh green background.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Tuition and fees 2026-27",
+      "subheading": "Transparent annual fees. Sibling discounts and scholarships available.",
+      "plans": [
+        {
+          "name": "Primary",
+          "price": "₹84,000",
+          "period": "/year",
+          "description": "Grades 1 – 5",
+          "features": [
+            "Activity-based learning",
+            "Daily meals",
+            "Library and art studio"
+          ],
+          "buttonLabel": "Apply now",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Middle",
+          "price": "₹96,000",
+          "period": "/year",
+          "description": "Grades 6 – 8",
+          "features": [
+            "STEM lab access",
+            "Sports coaching",
+            "Language electives"
+          ],
+          "buttonLabel": "Apply now",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Senior",
+          "price": "₹1,12,000",
+          "period": "/year",
+          "description": "Grades 9 – 12",
+          "features": [
+            "Board exam preparation",
+            "Career counselling",
+            "Olympiad training"
+          ],
+          "buttonLabel": "Apply now",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#064e3b",
+      "align": "left",
+      "paddingTop": 90,
+      "paddingBottom": 90
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#047857"
+      },
+      "card": {
+        "radius": 14,
+        "background": "#d1fae5",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

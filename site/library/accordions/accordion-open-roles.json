@@ -1,0 +1,65 @@
+{
+  "name": "Accordion · open roles",
+  "description": "Open job roles with two columns of boxed items.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Careers",
+      "heading": "Open positions",
+      "subheading": "Join a remote-first team of 40 people across 12 countries.",
+      "items": [
+        {
+          "icon": "💻",
+          "question": "Senior Frontend Engineer",
+          "answer": "Build accessible, fast interfaces in Angular and TypeScript. Remote within Europe, full-time."
+        },
+        {
+          "icon": "🎨",
+          "question": "Product Designer",
+          "answer": "Own design from research to polish for our customer dashboard. Remote, full-time."
+        },
+        {
+          "icon": "📈",
+          "question": "Growth Marketing Lead",
+          "answer": "Run experiments across SEO, lifecycle and paid to double our trial signups."
+        },
+        {
+          "icon": "🧪",
+          "question": "QA Automation Engineer",
+          "answer": "Own our end-to-end test suite and release confidence. Remote, full-time."
+        },
+        {
+          "icon": "🤝",
+          "question": "Customer Success Manager",
+          "answer": "Help mid-market customers get value from day one. US time zones."
+        },
+        {
+          "icon": "📚",
+          "question": "Technical Writer",
+          "answer": "Make our documentation the best in the category. Part-time or full-time."
+        }
+      ],
+      "layout": "two-column",
+      "style": "boxed",
+      "icon": "plus",
+      "iconPosition": "right",
+      "singleOpen": false
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#eef2ff",
+      "textColor": "#1e1b4b",
+      "paddingY": 92,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#312e81"
+      },
+      "item": {
+        "background": "#ffffff",
+        "borderColor": "#c7d2fe"
+      }
+    }
+  }
+}

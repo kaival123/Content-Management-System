@@ -1,0 +1,105 @@
+{
+  "name": "Testimonial spotlight",
+  "description": "One large centred quote at a time, cross-fading on a soft gradient.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "",
+      "slideHeight": 0,
+      "heading": "Loved by the teams who use it",
+      "variant": "testimonial",
+      "slides": [
+        {
+          "heading": "Hannah Brooks",
+          "eyebrow": "Operations Director, Ridgeway Logistics",
+          "text": "Dispatch used to be a wall of spreadsheets. Now my team sees every route in one place and our late deliveries dropped by a third.",
+          "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Tomás Herrera",
+          "eyebrow": "Owner, Casa Verde Bakery",
+          "text": "I set up online ordering on a Sunday night. By Monday lunch we had forty pre-orders and no one had to call the shop.",
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Dr. Aisha Rahman",
+          "eyebrow": "Clinic Manager, Sunrise Dental",
+          "text": "Patients book themselves, reminders go out automatically, and no-shows are down to almost nothing.",
+          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Liam O'Connor",
+          "eyebrow": "Principal, O'Connor Architects",
+          "text": "Clients tell us our new site feels as considered as our buildings. That is the best compliment we could ask for.",
+          "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#eef2ff",
+      "gradientTo": "#fdf2f8",
+      "gradientAngle": 135,
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96,
+      "width": "narrow"
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": true,
+      "autoplaySpeed": 7000,
+      "speed": 800,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "fade",
+      "pauseOnHover": true,
+      "arrowPosition": "sides",
+      "arrowStyle": "minimal",
+      "dotsStyle": "lines",
+      "dotsPosition": "below",
+      "contentX": "center",
+      "easing": "smooth"
+    },
+    "elements": {
+      "slideText": {
+        "fontSize": 24,
+        "lineHeight": 1.5,
+        "italic": true,
+        "textAlign": "center"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Asia-Pacific pins map",
+  "description": "One embedded map with pins and a list for Asia-Pacific branches.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Asia-Pacific branches",
+      "text": "Paste your My Maps link to show every branch as a pin.",
+      "buttonLabel": "View branch",
+      "locationsView": "pins",
+      "embedUrl": "",
+      "address": "Singapore",
+      "locations": [
+        {
+          "name": "Singapore",
+          "address": "1 Raffles Place, Singapore 048616",
+          "details": "Mon-Fri 9am - 6pm"
+        },
+        {
+          "name": "Sydney",
+          "address": "1 Martin Place, Sydney NSW 2000",
+          "details": "Mon-Fri 8:30am - 5:30pm"
+        },
+        {
+          "name": "Tokyo",
+          "address": "1-9-2 Marunouchi, Chiyoda-ku, Tokyo",
+          "details": "Mon-Fri 9am - 6pm"
+        },
+        {
+          "name": "Mumbai",
+          "address": "Bandra Kurla Complex, Mumbai 400051",
+          "details": "Mon-Sat 10am - 7pm"
+        }
+      ],
+      "height": 540,
+      "radius": 14,
+      "shadow": "medium"
+    },
+    "style": {
+      "background": "__surface__",
+      "paddingY": 80
+    }
+  }
+}

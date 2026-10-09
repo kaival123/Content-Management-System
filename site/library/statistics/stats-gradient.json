@@ -1,0 +1,52 @@
+{
+  "name": "Gradient stats band",
+  "description": "Violet gradient band, no heading, white figures.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "",
+      "items": [
+        {
+          "value": "250K",
+          "label": "Downloads"
+        },
+        {
+          "value": "4.8★",
+          "label": "App Store rating"
+        },
+        {
+          "value": "35",
+          "label": "Languages"
+        },
+        {
+          "value": "1.2M",
+          "label": "Active learners"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#6d28d9",
+      "gradientTo": "#2563eb",
+      "gradientAngle": 120,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 60
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "value": {
+        "color": "#ffffff"
+      },
+      "label": {
+        "color": "#e0e7ff"
+      }
+    }
+  }
+}

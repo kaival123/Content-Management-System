@@ -1,0 +1,91 @@
+{
+  "name": "Destination cards",
+  "description": "Two travel cards per view with arrows tucked under the slides.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "Escapes our travellers booked most this year.",
+      "slideHeight": 0,
+      "heading": "Where to next?",
+      "variant": "card",
+      "slides": [
+        {
+          "heading": "Lisbon long weekend",
+          "eyebrow": "Portugal · 4 nights",
+          "text": "Tiled hillsides, custard tarts and sunset trams. From $640.",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+          "price": "",
+          "buttonLabel": "View itinerary",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Dolomites hut-to-hut",
+          "eyebrow": "Italy · 7 nights",
+          "text": "Guided alpine trails with mountain-hut dinners. From $1,290.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "price": "",
+          "buttonLabel": "View itinerary",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Kyoto in autumn",
+          "eyebrow": "Japan · 8 nights",
+          "text": "Temples, tea houses and fiery maple leaves. From $1,780.",
+          "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=80",
+          "price": "",
+          "buttonLabel": "View itinerary",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Cape Town coast",
+          "eyebrow": "South Africa · 6 nights",
+          "text": "Wine country, penguins and Table Mountain at dawn. From $1,150.",
+          "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=900&q=80",
+          "price": "",
+          "buttonLabel": "View itinerary",
+          "buttonHref": "#",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#fff7ed",
+      "paddingTop": 80,
+      "paddingBottom": 80
+    },
+    "carousel": {
+      "perViewDesktop": 2,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 32,
+      "autoplay": true,
+      "autoplaySpeed": 6000,
+      "speed": 600,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "bottom-left",
+      "arrowStyle": "circle",
+      "dotsStyle": "dots",
+      "dotsPosition": "below-right",
+      "radius": 8
+    }
+  }
+}

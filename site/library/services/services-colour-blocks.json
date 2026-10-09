@@ -1,0 +1,84 @@
+{
+  "name": "Services · colour blocks",
+  "description": "Coloured service blocks in an uneven mosaic.",
+  "section": {
+    "type": "grid",
+    "data": {
+      "heading": "Creative studio",
+      "subheading": "",
+      "items": [
+        {
+          "heading": "Branding",
+          "text": "Logos, identity systems and guidelines.",
+          "icon": "🎨",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "2",
+          "rowSpan": "1",
+          "background": "#7c3aed",
+          "textColor": "#ffffff"
+        },
+        {
+          "heading": "Motion",
+          "text": "Short animations for social and web.",
+          "icon": "🎬",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "#f59e0b",
+          "textColor": "#1f2937"
+        },
+        {
+          "heading": "Packaging",
+          "text": "Shelf-ready design for products.",
+          "icon": "📦",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "#10b981",
+          "textColor": "#ffffff"
+        },
+        {
+          "heading": "Illustration",
+          "text": "Custom artwork with a human touch.",
+          "icon": "✏️",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "#ec4899",
+          "textColor": "#ffffff"
+        },
+        {
+          "heading": "Print",
+          "text": "Brochures, posters and event materials.",
+          "icon": "🖨️",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "3",
+          "rowSpan": "1",
+          "background": "#0ea5e9",
+          "textColor": "#ffffff"
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 14,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "style": {
+      "paddingY": 72
+    }
+  }
+}

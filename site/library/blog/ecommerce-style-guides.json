@@ -1,0 +1,67 @@
+{
+  "name": "E-commerce style guides",
+  "description": "Shopping guides on soft rose with shadow cards.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "The style journal",
+      "subheading": "Buying guides, care tips and behind-the-scenes stories.",
+      "posts": [
+        {
+          "title": "How to build a capsule wardrobe",
+          "excerpt": "Twelve pieces that mix and match all season.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "category": "Style",
+          "date": "Oct 4, 2026",
+          "author": "Emily Carter",
+          "link": "#"
+        },
+        {
+          "title": "Choosing headphones for your commute",
+          "excerpt": "Noise-cancelling versus open-back, explained.",
+          "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=900&q=80",
+          "category": "Guides",
+          "date": "Sep 23, 2026",
+          "author": "Diego Alvarez",
+          "link": "#"
+        },
+        {
+          "title": "Low-light plants that thrive indoors",
+          "excerpt": "Hard to kill and easy to love.",
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "category": "Home",
+          "date": "Sep 11, 2026",
+          "author": "Anjali Menon",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#fff1f2",
+      "textColor": "#881337",
+      "align": "center",
+      "paddingTop": 84,
+      "paddingBottom": 84
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 26,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#881337"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#4c0519",
+        "radius": 22,
+        "paddingX": 24,
+        "paddingY": 28
+      }
+    }
+  }
+}

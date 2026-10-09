@@ -1,0 +1,24 @@
+{
+  "name": "Newsletter over photo",
+  "description": "Sign-up on a dimmed mountain photo for an outdoor brand.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "Your email",
+      "buttonLabel": "Sign me up",
+      "heading": "Trail reports, straight to you",
+      "text": "Seasonal route guides, gear tests and first dibs on limited drops.",
+      "note": "One email a month. Easy opt-out.",
+      "successMessage": "Welcome to the trail."
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&q=80",
+      "overlayColor": "#000000",
+      "overlayOpacity": 55,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 110
+    }
+  }
+}

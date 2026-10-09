@@ -1,0 +1,21 @@
+{
+  "name": "UX4G Accessibility Widget · saffron",
+  "description": "Saffron accent with a round button.",
+  "section": {
+    "type": "accessibility",
+    "data": {
+      "helpLabel": "Need Help?",
+      "helpHref": "#contact",
+      "title": "Accessibility Options by UX4G",
+      "intro": "",
+      "essentialOnly": false,
+      "buttonLabel": "Accessibility Options",
+      "accent": "#ea580c",
+      "position": "right",
+      "buttonStyle": "round"
+    },
+    "style": {
+      "paddingY": 0
+    }
+  }
+}

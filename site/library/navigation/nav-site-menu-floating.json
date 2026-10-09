@@ -1,0 +1,24 @@
+{
+  "name": "Navbar · site menu floating",
+  "description": "Automatic page menu in a floating bar with a pill button.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Harbor Legal",
+      "useSiteMenu": true,
+      "links": [],
+      "ctaLabel": "Free consultation",
+      "ctaHref": "#contact",
+      "sticky": true,
+      "layout": "default",
+      "linkStyle": "underline",
+      "ctaStyle": "pill",
+      "barStyle": "floating",
+      "mobileMenu": "card"
+    },
+    "style": {
+      "paddingY": 16,
+      "background": "#f1f5f9"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Green growth gradient",
+  "description": "Green gradient for sustainability brands.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Switch to clean energy today",
+      "text": "Get a free rooftop assessment and a savings estimate in 48 hours.",
+      "buttonLabel": "Get my estimate",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#166534",
+      "gradientTo": "#84cc16",
+      "gradientAngle": 110,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 92
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 42
+      }
+    }
+  }
+}

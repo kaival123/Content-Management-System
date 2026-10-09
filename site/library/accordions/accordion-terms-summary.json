@@ -1,0 +1,55 @@
+{
+  "name": "Accordion · terms summary",
+  "description": "Numbered terms of service sections, slate and blue.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "heading": "Terms at a glance",
+      "subheading": "A plain-language summary. The full terms apply.",
+      "items": [
+        {
+          "icon": "",
+          "question": "Your account",
+          "answer": "You are responsible for activity on your account and for keeping your login details secure."
+        },
+        {
+          "icon": "",
+          "question": "Acceptable use",
+          "answer": "Do not use the service to send spam, distribute malware or break the law."
+        },
+        {
+          "icon": "",
+          "question": "Payment",
+          "answer": "Subscriptions renew automatically. You can cancel before the renewal date from your billing page."
+        },
+        {
+          "icon": "",
+          "question": "Termination",
+          "answer": "Either of us can end the agreement with 30 days notice. We will export your data on request."
+        },
+        {
+          "icon": "",
+          "question": "Liability",
+          "answer": "Our liability is limited to the fees you paid in the previous twelve months."
+        }
+      ],
+      "style": "boxed",
+      "icon": "chevron",
+      "iconPosition": "right",
+      "numbered": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#f8fafc",
+      "textColor": "#1e293b",
+      "paddingY": 80,
+      "align": "left"
+    },
+    "elements": {
+      "item": {
+        "borderColor": "#cbd5e1",
+        "radius": 8
+      }
+    }
+  }
+}

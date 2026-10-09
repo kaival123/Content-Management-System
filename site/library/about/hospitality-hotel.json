@@ -1,0 +1,39 @@
+{
+  "name": "Boutique hotel about",
+  "description": "Sand-toned section for a boutique hotel with image on the right.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "A stay that feels personal",
+      "text": "Our 24-room heritage hotel sits beside the lake, with courtyard gardens, a rooftop restaurant and staff who greet you by name. Rooms are restored by local artisans using traditional materials.",
+      "bullets": [
+        "Lake-view suites",
+        "Farm-to-table breakfast included",
+        "Airport transfers on request"
+      ],
+      "buttonLabel": "Check availability",
+      "buttonHref": "#book",
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80",
+      "imageSide": "right"
+    },
+    "style": {
+      "background": "#f5efe6",
+      "textColor": "#3f2d1d",
+      "paddingY": 96
+    },
+    "elements": {
+      "heading": {
+        "color": "#3f2d1d"
+      },
+      "image": {
+        "radius": 8,
+        "shadow": "md"
+      },
+      "button": {
+        "background": "#3f2d1d",
+        "color": "#f5efe6",
+        "radius": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Recipe club newsletter",
+  "description": "Warm cream card for a food blog.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "Where should we send recipes?",
+      "buttonLabel": "Feed me",
+      "heading": "Join the Recipe Club",
+      "text": "Get three weeknight dinners and a shopping list in your inbox every Monday.",
+      "note": "Over 52,000 home cooks. Unsubscribe any time.",
+      "successMessage": "Yum. Your first recipes arrive Monday."
+    },
+    "style": {
+      "background": "#fff7ed",
+      "textColor": "#7c2d12",
+      "align": "center",
+      "paddingY": 72
+    },
+    "elements": {
+      "form": {
+        "background": "#ffffff",
+        "radius": 14,
+        "paddingX": 20,
+        "paddingY": 20,
+        "shadow": "md"
+      },
+      "button": {
+        "background": "#ea580c",
+        "color": "#ffffff"
+      }
+    }
+  }
+}

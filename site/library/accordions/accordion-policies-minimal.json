@@ -1,0 +1,49 @@
+{
+  "name": "Accordion · policies",
+  "description": "Minimal, text-only policy sections with no icons.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "heading": "Our policies",
+      "subheading": "The small print, kept short and readable.",
+      "items": [
+        {
+          "icon": "",
+          "question": "Shipping policy",
+          "answer": "Orders ship within 48 hours. Tracking details are emailed as soon as the parcel is collected."
+        },
+        {
+          "icon": "",
+          "question": "Returns policy",
+          "answer": "Return unused items within 30 days in their original packaging for a refund to your original payment method."
+        },
+        {
+          "icon": "",
+          "question": "Privacy policy",
+          "answer": "We collect only what we need to fulfil your order and never sell your personal data."
+        },
+        {
+          "icon": "",
+          "question": "Warranty",
+          "answer": "All hardware carries a two-year warranty against manufacturing defects."
+        }
+      ],
+      "style": "minimal",
+      "icon": "none",
+      "iconPosition": "right"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ffffff",
+      "textColor": "#27272a",
+      "paddingY": 96,
+      "align": "left",
+      "width": "narrow"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 34
+      }
+    }
+  }
+}

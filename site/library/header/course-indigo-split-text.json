@@ -1,0 +1,38 @@
+{
+  "name": "Course page header",
+  "description": "Indigo header for a course landing page with enrolment button.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Courses / Data & Analytics",
+      "heading": "Data Analytics Bootcamp",
+      "text": "12 weeks, 6 real projects, live mentoring. Learn SQL, Python and dashboarding from working analysts.",
+      "buttonLabel": "Enrol for March cohort",
+      "buttonHref": "#enrol"
+    },
+    "style": {
+      "background": "#4f46e5",
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingY": 84
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#c7d2fe"
+      },
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 44
+      },
+      "text": {
+        "color": "#e0e7ff"
+      },
+      "button": {
+        "background": "#facc15",
+        "color": "#1e1b4b",
+        "radius": 8,
+        "fontWeight": 700
+      }
+    }
+  }
+}

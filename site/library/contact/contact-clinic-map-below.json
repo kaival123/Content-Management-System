@@ -1,0 +1,38 @@
+{
+  "name": "Contact · clinic with map below",
+  "description": "Teal gradient with a rounded map beneath the form.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Book an appointment",
+      "text": "Call us or send a message and our reception team will find a time that suits you.",
+      "email": "reception@riverbendclinic.org",
+      "phone": "+61 3 9555 0142",
+      "address": "8 Riverbend Road\nMelbourne VIC 3000",
+      "buttonLabel": "Request appointment",
+      "successMessage": "Thank you. Reception will be in touch within a few hours.",
+      "mapAddress": "8 Riverbend Road, Melbourne VIC 3000",
+      "mapLayout": "below",
+      "mapRadius": 20,
+      "mapShadow": "large"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#ecfeff",
+      "gradientTo": "#cffafe",
+      "gradientAngle": 170,
+      "textColor": "#134e4a",
+      "paddingY": 92,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#0e7490"
+      },
+      "form": {
+        "background": "#ffffff",
+        "radius": 16
+      }
+    }
+  }
+}

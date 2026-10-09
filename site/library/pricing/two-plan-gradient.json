@@ -1,0 +1,74 @@
+{
+  "name": "Two plans on indigo gradient",
+  "description": "Monthly versus annual billing on an indigo gradient.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Choose how you pay",
+      "subheading": "The same product either way. Annual saves you two months.",
+      "plans": [
+        {
+          "name": "Monthly",
+          "price": "$24",
+          "period": "/month",
+          "description": "Stay flexible",
+          "features": [
+            "All features",
+            "Unlimited exports",
+            "Cancel any time"
+          ],
+          "buttonLabel": "Pay monthly",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Annual",
+          "price": "$240",
+          "period": "/year",
+          "description": "Save 17%",
+          "features": [
+            "All features",
+            "Unlimited exports",
+            "Priority support",
+            "Free onboarding call"
+          ],
+          "buttonLabel": "Pay annually",
+          "buttonHref": "#",
+          "highlighted": true
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#4f46e5",
+      "gradientTo": "#9333ea",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.14)",
+        "radius": 20,
+        "paddingX": 30,
+        "paddingY": 34,
+        "borderWidth": 1,
+        "borderColor": "rgba(255,255,255,0.3)"
+      }
+    }
+  }
+}

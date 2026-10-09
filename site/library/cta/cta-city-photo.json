@@ -1,0 +1,32 @@
+{
+  "name": "City skyline overlay",
+  "description": "Navy-tinted skyline photo behind the message.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Open an office in the heart of the city",
+      "text": "Flexible coworking suites from one desk to fifty, month to month.",
+      "buttonLabel": "Book a tour",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80",
+      "overlayColor": "#0b1f3a",
+      "overlayOpacity": 65,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 120
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 46
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "#0b1f3a",
+        "radius": 999
+      }
+    }
+  }
+}

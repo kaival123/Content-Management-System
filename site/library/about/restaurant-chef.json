@@ -1,0 +1,40 @@
+{
+  "name": "Chef introduction",
+  "description": "Dark wood-tone section introducing the chef with a rounded portrait.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Meet Chef Arjun Mehta",
+      "text": "Trained in Lyon and Mumbai, Chef Arjun brings French technique to Indian ingredients. His tasting menu changes every month, shaped by what local growers bring to the kitchen door.",
+      "bullets": [
+        "Michelin-trained team",
+        "Seven-course tasting menu",
+        "Vegetarian menu always available"
+      ],
+      "buttonLabel": "View tasting menu",
+      "buttonHref": "#menu",
+      "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80",
+      "imageSide": "right"
+    },
+    "style": {
+      "background": "#1c1410",
+      "textColor": "#e7d9c4",
+      "paddingY": 100
+    },
+    "elements": {
+      "heading": {
+        "color": "#f5e6cc",
+        "fontWeight": 500
+      },
+      "image": {
+        "radius": 999,
+        "aspectRatio": "1/1"
+      },
+      "button": {
+        "background": "#d4a94a",
+        "color": "#1c1410",
+        "radius": 2
+      }
+    }
+  }
+}

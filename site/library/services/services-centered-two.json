@@ -1,0 +1,48 @@
+{
+  "name": "Services · two big centered",
+  "description": "Two large centered service cards.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Choose your path",
+      "subheading": "Two ways to work with us, depending on how hands-on you want to be.",
+      "items": [
+        {
+          "icon": "🧭",
+          "title": "Done with you",
+          "text": "Weekly coaching sessions and templates so your team learns to do it themselves."
+        },
+        {
+          "icon": "🚀",
+          "title": "Done for you",
+          "text": "We take the whole project off your plate and deliver it end to end."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "shadow",
+      "textAlign": "center",
+      "itemAlign": "stretch"
+    },
+    "style": {
+      "paddingY": 96,
+      "background": "#f8fafc",
+      "align": "center"
+    },
+    "elements": {
+      "card": {
+        "paddingY": 40,
+        "paddingX": 32,
+        "radius": 20
+      },
+      "title": {
+        "fontSize": 24,
+        "fontWeight": 700
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Media features boxed",
+  "description": "Logos in bordered boxes.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Featured by",
+      "logos": [
+        {
+          "name": "Morning Brew",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "The Verge",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Fast Co",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Inc.",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Mashable",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "TechCrunch",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "paddingY": 72,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "bordered",
+      "textAlign": "center",
+      "desktop": 3,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 16
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Dark newsletter",
+  "description": "Night-mode sign-up with a bright button.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "dev@yourteam.io",
+      "buttonLabel": "Join the list",
+      "heading": "The Friday Build Log",
+      "text": "Every Friday: one engineering lesson, one tool worth trying, zero filler.",
+      "note": "9,400 developers read it. Leave anytime.",
+      "successMessage": "Welcome aboard. First issue lands Friday."
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#f8fafc",
+      "align": "center",
+      "paddingY": 80
+    },
+    "elements": {
+      "button": {
+        "background": "#38bdf8",
+        "color": "#0f172a"
+      }
+    }
+  }
+}

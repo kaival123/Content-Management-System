@@ -1,0 +1,21 @@
+{
+  "name": "UX4G Accessibility Widget · green",
+  "description": "Green accent for agriculture and environment sites.",
+  "section": {
+    "type": "accessibility",
+    "data": {
+      "helpLabel": "Need Help?",
+      "helpHref": "#contact",
+      "title": "Accessibility Options by UX4G",
+      "intro": "",
+      "essentialOnly": false,
+      "buttonLabel": "Accessibility Options",
+      "accent": "#15803d",
+      "position": "right",
+      "buttonStyle": "round"
+    },
+    "style": {
+      "paddingY": 0
+    }
+  }
+}

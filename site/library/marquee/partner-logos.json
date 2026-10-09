@@ -1,0 +1,49 @@
+{
+  "name": "Partner logo carousel",
+  "description": "Logos with names from partner brands, slow and pausable.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "heading": "Our technology partners",
+      "items": [
+        {
+          "text": "Northwind",
+          "image": "https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?w=1200&q=80",
+          "link": ""
+        },
+        {
+          "text": "Lumen",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+          "link": ""
+        },
+        {
+          "text": "Orbit",
+          "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+          "link": ""
+        },
+        {
+          "text": "Helix",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80",
+          "link": ""
+        },
+        {
+          "text": "Vertex",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&q=80",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 40,
+      "size": "small",
+      "separator": "none",
+      "gap": 72,
+      "fade": true,
+      "pause": true
+    },
+    "style": {
+      "background": "#ffffff",
+      "paddingY": 48,
+      "align": "center"
+    }
+  }
+}

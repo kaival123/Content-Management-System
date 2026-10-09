@@ -1,0 +1,57 @@
+{
+  "name": "Eight compact stats",
+  "description": "Eight small metrics in two rows of four on a light surface.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Our year in 8 numbers",
+      "items": [
+        {
+          "value": "120",
+          "label": "New hires"
+        },
+        {
+          "value": "14",
+          "label": "Countries"
+        },
+        {
+          "value": "6",
+          "label": "Product launches"
+        },
+        {
+          "value": "38K",
+          "label": "Support tickets solved"
+        },
+        {
+          "value": "91",
+          "label": "NPS score"
+        },
+        {
+          "value": "22",
+          "label": "Open-source releases"
+        },
+        {
+          "value": "5",
+          "label": "Offices"
+        },
+        {
+          "value": "1",
+          "label": "Big mission"
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center",
+      "paddingY": 64
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "flat",
+      "textAlign": "center",
+      "gap": 14
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Soft gradient, four quotes",
+  "description": "Light indigo gradient with four compact quote cards.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Why people stay with us",
+      "items": [
+        {
+          "quote": "Simple pricing and no surprises on the invoice.",
+          "name": "Ola Nilsson",
+          "role": "Freelance developer",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+        },
+        {
+          "quote": "Support replied in six minutes on a Sunday.",
+          "name": "Maya Rodriguez",
+          "role": "Shop owner",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+        },
+        {
+          "quote": "The export tools made migrating painless.",
+          "name": "Henry Obi",
+          "role": "Accountant",
+          "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80"
+        },
+        {
+          "quote": "I recommend it to every client I onboard.",
+          "name": "Divya Pillai",
+          "role": "Consultant",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f8fafc",
+      "gradientTo": "#e0e7ff",
+      "gradientAngle": 90,
+      "textColor": "#1e293b",
+      "align": "left",
+      "paddingTop": 96,
+      "paddingBottom": 72,
+      "paddingMobile": 56
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#1e1b4b"
+      },
+      "card": {
+        "background": "#ffffff",
+        "borderColor": "#c7d2fe",
+        "radius": 12,
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "FAQ · charity giving",
+  "description": "Soft blue filled items with a donate button underneath.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Giving",
+      "heading": "About your donation",
+      "subheading": "We want you to feel confident about where your gift goes.",
+      "items": [
+        {
+          "question": "Where does my money go?",
+          "answer": "Eighty-four pence of every pound goes directly to clean water projects. The rest covers fundraising and administration.",
+          "icon": ""
+        },
+        {
+          "question": "Is my donation tax deductible?",
+          "answer": "Yes. Brightwell is a registered charity and you will receive a receipt by email straight after giving.",
+          "icon": ""
+        },
+        {
+          "question": "Can I give monthly?",
+          "answer": "Monthly gifts help us plan ahead. You can pause, change or cancel at any time with one email.",
+          "icon": ""
+        },
+        {
+          "question": "Will I hear how it was used?",
+          "answer": "Supporters receive a twice-yearly impact report with photos and stories from the villages we work in.",
+          "icon": ""
+        }
+      ],
+      "layout": "stacked",
+      "style": "filled",
+      "icon": "plus",
+      "iconPosition": "right",
+      "openFirst": true,
+      "ctaText": "Ready to make a difference?",
+      "buttonLabel": "Donate today",
+      "buttonHref": "#donate"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#e0f2fe",
+      "gradientTo": "#ffffff",
+      "gradientAngle": 180,
+      "textColor": "#0c4a6e",
+      "paddingY": 90,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#075985"
+      },
+      "item": {
+        "background": "#ffffff",
+        "shadow": "soft",
+        "radius": 12
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Two headline stats",
+  "description": "Just two giant numbers, centred with generous space.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Why families choose us",
+      "items": [
+        {
+          "value": "28 yrs",
+          "label": "Caring for pets in Denver"
+        },
+        {
+          "value": "41,000",
+          "label": "Happy dogs and cats"
+        }
+      ]
+    },
+    "style": {
+      "align": "center",
+      "paddingY": 96
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "cardStyle": "none",
+      "textAlign": "center",
+      "gap": 48
+    },
+    "elements": {
+      "value": {
+        "fontSize": 80,
+        "fontWeight": 700,
+        "color": "__accent__"
+      }
+    }
+  }
+}

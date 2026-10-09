@@ -1,0 +1,41 @@
+{
+  "name": "Europe offices side list",
+  "description": "Side list of European offices with a large rounded map.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Offices across Europe",
+      "text": "Our teams are close to you.",
+      "buttonLabel": "Open map",
+      "locationsView": "side",
+      "locations": [
+        {
+          "name": "Berlin",
+          "address": "Torstrasse 1, 10119 Berlin, Germany",
+          "details": "Mon-Fri 9am - 6pm\n+49 30 5555 0142"
+        },
+        {
+          "name": "Amsterdam",
+          "address": "Herengracht 450, 1017 CA Amsterdam, Netherlands",
+          "details": "Mon-Fri 9am - 5:30pm\n+31 20 555 0188"
+        },
+        {
+          "name": "Madrid",
+          "address": "Calle de Alcala 42, 28014 Madrid, Spain",
+          "details": "Mon-Fri 9:30am - 6pm\n+34 91 555 0123"
+        },
+        {
+          "name": "Dublin",
+          "address": "2 Grand Canal Square, Dublin 2, Ireland",
+          "details": "Mon-Fri 9am - 5pm\n+353 1 555 0177"
+        }
+      ],
+      "height": 500,
+      "radius": 24,
+      "shadow": "large"
+    },
+    "style": {
+      "paddingY": 72
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Black and gold",
+  "description": "Luxury black with gold button.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Experience the private collection",
+      "text": "Appointments are limited. Reserve a viewing with our jewellers.",
+      "buttonLabel": "Reserve a viewing",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "background": "#0a0a0a",
+      "textColor": "#d6d3d1",
+      "align": "center",
+      "paddingY": 110
+    },
+    "elements": {
+      "heading": {
+        "color": "#fbbf24",
+        "fontSize": 44,
+        "fontWeight": 500,
+        "letterSpacing": 1
+      },
+      "button": {
+        "background": "#fbbf24",
+        "color": "#0a0a0a",
+        "radius": 0
+      }
+    }
+  }
+}

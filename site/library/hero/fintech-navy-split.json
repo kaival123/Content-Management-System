@@ -1,0 +1,50 @@
+{
+  "name": "Fintech navy hero",
+  "description": "Navy gradient fintech hero with product screenshot on the right.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "SOC 2 certified",
+      "heading": "Business banking that keeps up with you",
+      "subheading": "Multi-currency accounts, instant team cards and real-time cash visibility, with no monthly fees on your first year.",
+      "primaryLabel": "Open an account",
+      "primaryHref": "#signup",
+      "secondaryLabel": "Compare plans",
+      "secondaryHref": "#pricing",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+      "layout": "split"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#020617",
+      "gradientTo": "#1e3a8a",
+      "gradientAngle": 160,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingY": 112
+    },
+    "elements": {
+      "eyebrow": {
+        "color": "#38bdf8"
+      },
+      "heading": {
+        "color": "#ffffff"
+      },
+      "subheading": {
+        "color": "#cbd5e1"
+      },
+      "primary": {
+        "background": "#38bdf8",
+        "color": "#082f49"
+      },
+      "secondary": {
+        "color": "#e0f2fe",
+        "borderColor": "#38bdf8"
+      },
+      "image": {
+        "radius": 14,
+        "shadow": "lg"
+      }
+    }
+  }
+}

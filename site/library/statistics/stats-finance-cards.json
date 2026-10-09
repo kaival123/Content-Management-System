@@ -1,0 +1,43 @@
+{
+  "name": "Finance stats cards",
+  "description": "Three shadow cards with left-aligned figures for a bank.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Trusted with what matters",
+      "items": [
+        {
+          "value": "$4.2B",
+          "label": "Assets under care"
+        },
+        {
+          "value": "1.1M",
+          "label": "Members"
+        },
+        {
+          "value": "A+",
+          "label": "Credit rating"
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "left",
+      "paddingY": 76
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 3,
+      "mobile": 1,
+      "cardStyle": "shadow",
+      "textAlign": "left",
+      "gap": 28
+    },
+    "elements": {
+      "value": {
+        "color": "__primary__",
+        "fontWeight": 700
+      }
+    }
+  }
+}

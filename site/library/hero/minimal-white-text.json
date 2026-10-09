@@ -1,0 +1,49 @@
+{
+  "name": "Minimal text-only hero",
+  "description": "Clean white hero with no image, large type and generous whitespace.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "",
+      "heading": "Software for people who sweat the details",
+      "subheading": "We build quiet, dependable tools for design teams. Fewer features, better craft, nothing in your way.",
+      "primaryLabel": "Request access",
+      "primaryHref": "#access",
+      "secondaryLabel": "Read our manifesto",
+      "secondaryHref": "#about",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "background": "#ffffff",
+      "textColor": "#111827",
+      "align": "left",
+      "paddingTop": 140,
+      "paddingBottom": 120,
+      "width": "narrow"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 68,
+        "fontWeight": 600,
+        "letterSpacing": -1,
+        "lineHeight": 1.05,
+        "color": "#111827"
+      },
+      "subheading": {
+        "color": "#6b7280",
+        "fontSize": 20
+      },
+      "primary": {
+        "background": "#111827",
+        "color": "#ffffff",
+        "radius": 999
+      },
+      "secondary": {
+        "color": "#111827",
+        "borderColor": "#d1d5db",
+        "radius": 999
+      }
+    }
+  }
+}

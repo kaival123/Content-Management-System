@@ -1,0 +1,63 @@
+{
+  "name": "Event recap",
+  "description": "Conference highlights in a wide grid.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Two days, 40 talks and 1,200 attendees.",
+      "captionOnHover": true,
+      "heading": "Summit highlights",
+      "shape": "16/9",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80",
+          "title": "Opening keynote",
+          "caption": "Day 1",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+          "title": "Breakout session",
+          "caption": "Day 1",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=80",
+          "title": "Hands-on lab",
+          "caption": "Day 2",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80",
+          "title": "Networking",
+          "caption": "Day 2",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "title": "Workshops",
+          "caption": "Day 2",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "title": "Roundtable",
+          "caption": "Day 2",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#111827",
+      "textColor": "#f3f4f6",
+      "paddingY": 88
+    },
+    "grid": {
+      "cardStyle": "none",
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16
+    }
+  }
+}

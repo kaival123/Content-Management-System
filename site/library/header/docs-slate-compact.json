@@ -1,0 +1,40 @@
+{
+  "name": "Documentation header",
+  "description": "Slate header for a documentation hub with a search-style call to action.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Docs / Getting started",
+      "heading": "Developer documentation",
+      "text": "Guides, API references and code samples to help you integrate in under an hour.",
+      "buttonLabel": "Open API reference",
+      "buttonHref": "#api"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#1e293b",
+      "gradientTo": "#334155",
+      "gradientAngle": 90,
+      "textColor": "#f1f5f9",
+      "align": "left",
+      "paddingY": 72
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#94a3b8"
+      },
+      "heading": {
+        "color": "#f8fafc",
+        "fontSize": 40
+      },
+      "text": {
+        "color": "#cbd5e1"
+      },
+      "button": {
+        "background": "#38bdf8",
+        "color": "#0c4a6e",
+        "radius": 6
+      }
+    }
+  }
+}

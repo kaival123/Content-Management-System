@@ -1,0 +1,46 @@
+{
+  "name": "Sustainability stats",
+  "description": "Green background with environmental impact numbers.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Our footprint, measured",
+      "items": [
+        {
+          "value": "1.8M kg",
+          "label": "CO2 avoided"
+        },
+        {
+          "value": "72%",
+          "label": "Renewable energy"
+        },
+        {
+          "value": "9M",
+          "label": "Bottles recycled"
+        },
+        {
+          "value": "0",
+          "label": "Waste to landfill"
+        }
+      ]
+    },
+    "style": {
+      "background": "#14532d",
+      "textColor": "#f0fdf4",
+      "align": "center",
+      "paddingY": 72
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "value": {
+        "color": "#bbf7d0"
+      }
+    }
+  }
+}

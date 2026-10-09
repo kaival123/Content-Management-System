@@ -1,0 +1,42 @@
+{
+  "name": "Mission on dark",
+  "description": "Dark section stating the mission with light text and rounded image.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Our mission is simple: make software less stressful",
+      "text": "We believe tools should disappear into the background. That is why every release is tested with real customers, and every feature must earn its place before it ships.",
+      "bullets": [
+        "Customer interviews every sprint",
+        "Accessibility built in from day one",
+        "Public changelog and roadmap"
+      ],
+      "buttonLabel": "See the roadmap",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
+      "imageSide": "left"
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "paddingY": 104
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "text": {
+        "color": "#cbd5e1"
+      },
+      "image": {
+        "radius": 20,
+        "shadow": "lg"
+      },
+      "button": {
+        "background": "#38bdf8",
+        "color": "#082f49",
+        "radius": 8
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Navbar · links left with shadow",
+  "description": "Links beside the brand, soft button on the right, shadowed bar.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Pulse Health",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Programs",
+          "href": "#programs"
+        },
+        {
+          "label": "Coaches",
+          "href": "#coaches"
+        },
+        {
+          "label": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "label": "FAQ",
+          "href": "#faq"
+        }
+      ],
+      "ctaLabel": "Book a free class",
+      "ctaHref": "#book",
+      "sticky": true,
+      "layout": "links-left",
+      "linkStyle": "dot",
+      "ctaStyle": "soft",
+      "barStyle": "shadow",
+      "mobileMenu": "card"
+    },
+    "style": {
+      "paddingY": 14,
+      "background": "#ffffff"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Tech deep dives",
+  "description": "Three long-form engineering reads in a narrow panel.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Engineering deep dives",
+      "subheading": "Long reads from the team that builds the platform.",
+      "posts": [
+        {
+          "title": "Building a real-time metrics pipeline",
+          "excerpt": "From event stream to dashboard in under two seconds.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+          "category": "Architecture",
+          "date": "Oct 6, 2026",
+          "author": "Marcus Chen",
+          "link": "#"
+        },
+        {
+          "title": "Offline-first mobile sync",
+          "excerpt": "Conflict resolution without tears.",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80",
+          "category": "Mobile",
+          "date": "Sep 22, 2026",
+          "author": "Tara Nguyen",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f8fafc",
+      "textColor": "#0f172a",
+      "align": "center",
+      "paddingTop": 72,
+      "paddingBottom": 72,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#0f172a"
+      },
+      "card": {
+        "background": "#ffffff",
+        "borderColor": "#cbd5e1",
+        "radius": 10,
+        "paddingX": 0,
+        "paddingY": 0
+      }
+    }
+  }
+}

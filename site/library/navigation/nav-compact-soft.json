@@ -1,0 +1,37 @@
+{
+  "name": "Navbar · compact soft",
+  "description": "Slim bar with a soft tinted button and dot links.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Fieldnote",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Notes",
+          "href": "#notes"
+        },
+        {
+          "label": "Templates",
+          "href": "#templates"
+        },
+        {
+          "label": "Changelog",
+          "href": "#changelog"
+        }
+      ],
+      "ctaLabel": "Download app",
+      "ctaHref": "#download",
+      "sticky": true,
+      "layout": "links-left",
+      "linkStyle": "dot",
+      "ctaStyle": "soft",
+      "barStyle": "line",
+      "mobileMenu": "dropdown"
+    },
+    "style": {
+      "paddingY": 8,
+      "background": "#f8fafc"
+    }
+  }
+}

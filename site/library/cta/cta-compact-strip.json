@@ -1,0 +1,33 @@
+{
+  "name": "Compact strip",
+  "description": "Slim announcement-style call to action.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "New: free shipping on every order",
+      "text": "No minimum spend, no code needed.",
+      "buttonLabel": "Start shopping",
+      "buttonHref": "#shop"
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingY": 32,
+      "width": "full"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 24
+      },
+      "text": {
+        "fontSize": 15
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "__primary__",
+        "radius": 6
+      }
+    }
+  }
+}

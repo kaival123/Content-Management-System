@@ -1,0 +1,32 @@
+{
+  "name": "About page dark navy",
+  "description": "Dark navy banner with a light breadcrumb for an About page.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Home / About",
+      "heading": "About Northwind Labs",
+      "text": "An independent product studio helping ambitious teams design, build and launch software that people enjoy using.",
+      "buttonLabel": "",
+      "buttonHref": ""
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#f8fafc",
+      "align": "left",
+      "paddingY": 96
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#94a3b8"
+      },
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 48
+      },
+      "text": {
+        "color": "#cbd5e1"
+      }
+    }
+  }
+}

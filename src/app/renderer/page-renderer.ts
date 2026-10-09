@@ -118,6 +118,10 @@ export class PageRenderer {
     runtime.initAccordions(this.host);
     // Tabs: in the editor every panel is shown (so all can be edited); switching only matters on the site.
     runtime.initTabs(this.host);
+    // Mini header text size / theme / language tools (inert while editing).
+    runtime.initMiniHeader(this.host);
+    // Accessibility tools panel (inert while editing).
+    runtime.initAccessibility(this.host);
 
     effect(() => {
       const t = resolveTheme(this.page().theme);

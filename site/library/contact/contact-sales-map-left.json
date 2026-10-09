@@ -1,0 +1,32 @@
+{
+  "name": "Contact · sales team with map",
+  "description": "Sales enquiry form with a map on the left.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Talk to our sales team",
+      "text": "Get a tailored demo and a quote for your organisation. We reply within four business hours.",
+      "email": "sales@lumen.app",
+      "phone": "+1 (415) 555-0166",
+      "address": "1 Market Plaza, Suite 900\nSan Francisco, CA 94105",
+      "buttonLabel": "Book a demo",
+      "successMessage": "Thank you. A solutions engineer will contact you shortly.",
+      "mapAddress": "1 Market Plaza, San Francisco, CA 94105",
+      "mapLayout": "side-reverse",
+      "mapRadius": 14,
+      "mapShadow": "medium"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#f1f5f9",
+      "textColor": "#0f172a",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#0f172a"
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Instructors on teal gradient",
+  "description": "Course instructors on a teal gradient.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Learn from practitioners",
+      "subheading": "Every instructor works in the field they teach.",
+      "members": [
+        {
+          "name": "Kavita Rao",
+          "role": "Data Science",
+          "bio": "Lead data scientist at a retail bank.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Rohan Malhotra",
+          "role": "Product Management",
+          "bio": "Led product at two unicorns.",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Emily Carter",
+          "role": "UX Research",
+          "bio": "Ten years running research for health apps.",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0d9488",
+      "gradientTo": "#10b981",
+      "gradientAngle": 120,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#134e4a",
+        "radius": 18,
+        "paddingX": 20,
+        "paddingY": 24,
+        "shadow": "lg"
+      }
+    }
+  }
+}

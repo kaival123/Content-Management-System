@@ -1,0 +1,21 @@
+{
+  "name": "Minimal left newsletter",
+  "description": "Left-aligned, quiet sign-up for a design journal.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "Email address",
+      "buttonLabel": "Subscribe",
+      "heading": "Notes on quiet design",
+      "text": "A short essay every second Sunday about typography, space and restraint.",
+      "note": "No tracking pixels.",
+      "successMessage": "Thank you, see you on Sunday."
+    },
+    "style": {
+      "align": "left",
+      "paddingY": 56,
+      "borderTopWidth": 1,
+      "borderColor": "#e5e7eb"
+    }
+  }
+}

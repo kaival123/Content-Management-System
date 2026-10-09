@@ -1,0 +1,55 @@
+{
+  "name": "Clinic doctors",
+  "description": "Four doctors with specialties on a soft surface background.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Meet our doctors",
+      "subheading": "Experienced specialists who take the time to listen.",
+      "members": [
+        {
+          "name": "Dr. Anita Shah",
+          "role": "General Physician",
+          "bio": "Twenty years of family practice, with a focus on preventive care.",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Dr. Rahul Verma",
+          "role": "Cardiologist",
+          "bio": "Leads our heart-health clinic and cardiac rehab program.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Dr. Meera Nair",
+          "role": "Paediatrician",
+          "bio": "Gentle with children, and clear with their parents.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Dr. Imran Qureshi",
+          "role": "Orthopaedic Surgeon",
+          "bio": "Sports injuries and joint replacement.",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "flat",
+      "textAlign": "center"
+    }
+  }
+}

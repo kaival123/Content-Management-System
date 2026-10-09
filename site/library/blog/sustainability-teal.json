@@ -1,0 +1,71 @@
+{
+  "name": "Sustainability reports on teal",
+  "description": "Green business articles on a teal gradient.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Sustainability",
+      "subheading": "Our progress, our mistakes and our next steps.",
+      "posts": [
+        {
+          "title": "Cutting water use by 40 percent",
+          "excerpt": "What worked in our greenhouses.",
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "category": "Water",
+          "date": "Oct 4, 2026",
+          "author": "Jayashree Naik",
+          "link": "#"
+        },
+        {
+          "title": "Green roofs for urban offices",
+          "excerpt": "A pilot across three buildings.",
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "category": "Buildings",
+          "date": "Sep 21, 2026",
+          "author": "Colin Baxter",
+          "link": "#"
+        },
+        {
+          "title": "Mapping our land-use footprint",
+          "excerpt": "Satellite data meets farm records.",
+          "image": "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?w=900&q=80",
+          "category": "Data",
+          "date": "Sep 7, 2026",
+          "author": "Neelam Shah",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0d9488",
+      "gradientTo": "#10b981",
+      "gradientAngle": 120,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#134e4a",
+        "radius": 16,
+        "paddingX": 0,
+        "paddingY": 0,
+        "shadow": "lg"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Clinic split on dark",
+  "description": "Dark section with opening hours beside a map.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Visit Riverside Clinic",
+      "text": "Free parking behind the building. Step-free access.",
+      "details": "Mon-Fri 7:30am - 7pm\nSat 9am - 1pm\n+1 (312) 555-0170",
+      "buttonLabel": "Plan your route",
+      "address": "233 S Wacker Dr, Chicago, IL 60606",
+      "layout": "split",
+      "grayscale": false,
+      "height": 440,
+      "radius": 20,
+      "shadow": "large"
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#f8fafc",
+      "paddingY": 80
+    }
+  }
+}

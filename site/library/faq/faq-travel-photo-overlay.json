@@ -1,0 +1,66 @@
+{
+  "name": "FAQ · travel photo",
+  "description": "Mountain photo with a dark overlay and light text.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Before you book",
+      "heading": "Trekking with Summit Trails",
+      "subheading": "What to expect on our guided mountain journeys.",
+      "items": [
+        {
+          "question": "How fit do I need to be?",
+          "answer": "Our trips are graded from easy to challenging. If you can walk for five to six hours on uneven ground, most itineraries are suitable.",
+          "icon": ""
+        },
+        {
+          "question": "What gear is provided?",
+          "answer": "We supply tents, sleeping mats and group cooking equipment. You bring boots, a sleeping bag and personal layers.",
+          "icon": ""
+        },
+        {
+          "question": "Are guides certified?",
+          "answer": "Every lead guide holds a mountain leader award and current wilderness first aid certification.",
+          "icon": ""
+        },
+        {
+          "question": "What if the weather turns?",
+          "answer": "Safety comes first. We adjust routes or turn back, and we offer a rebooking credit on any cancelled departure.",
+          "icon": ""
+        }
+      ],
+      "layout": "split",
+      "style": "minimal",
+      "icon": "plus",
+      "iconPosition": "right",
+      "singleOpen": true,
+      "openFirst": true,
+      "ctaText": "Not sure which trip suits you?",
+      "buttonLabel": "Ask our team",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1920&q=80",
+      "overlayColor": "#0f172a",
+      "overlayOpacity": 62,
+      "textColor": "#ffffff",
+      "paddingY": 112,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#fcd34d"
+      },
+      "question": {
+        "color": "#ffffff"
+      },
+      "answer": {
+        "color": "#e2e8f0"
+      }
+    }
+  }
+}

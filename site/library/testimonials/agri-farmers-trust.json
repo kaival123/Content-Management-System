@@ -1,0 +1,56 @@
+{
+  "name": "Farmer cooperative reviews",
+  "description": "Earthy green cards for a farmers cooperative.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Farmers who grow with us",
+      "items": [
+        {
+          "quote": "Soil testing at our doorstep changed which crops we plant. Yield is up by a fifth.",
+          "name": "Ramesh Patil",
+          "role": "Sugarcane grower, Nashik",
+          "avatar": ""
+        },
+        {
+          "quote": "We get paid within a week of delivery. No middlemen, no haggling.",
+          "name": "Gurpreet Singh",
+          "role": "Wheat farmer, Ludhiana",
+          "avatar": ""
+        },
+        {
+          "quote": "The drip kit paid for itself in the first season.",
+          "name": "Jayashree Naik",
+          "role": "Vegetable grower, Belagavi",
+          "avatar": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#f7fee7",
+      "textColor": "#365314",
+      "align": "left",
+      "paddingTop": 90,
+      "paddingBottom": 90
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#3f6212"
+      },
+      "card": {
+        "background": "#ecfccb",
+        "radius": 8,
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

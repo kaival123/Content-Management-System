@@ -1,0 +1,52 @@
+{
+  "name": "Stats over photo",
+  "description": "White figures over a dimmed city photo.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Moving cities forward",
+      "items": [
+        {
+          "value": "18",
+          "label": "Metro lines"
+        },
+        {
+          "value": "3.4M",
+          "label": "Daily riders"
+        },
+        {
+          "value": "94%",
+          "label": "On-time arrivals"
+        },
+        {
+          "value": "2030",
+          "label": "Net zero target"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?w=1200&q=80",
+      "overlayColor": "#000000",
+      "overlayOpacity": 60,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 96
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "value": {
+        "color": "#ffffff"
+      },
+      "label": {
+        "color": "#e5e7eb"
+      }
+    }
+  }
+}

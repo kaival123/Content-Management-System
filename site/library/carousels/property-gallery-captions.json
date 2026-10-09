@@ -1,0 +1,95 @@
+{
+  "name": "Property gallery · captions",
+  "description": "Captioned photo slides with thumbnail pagination, two per view.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "",
+      "slideHeight": 380,
+      "heading": "Featured listings",
+      "variant": "image",
+      "slides": [
+        {
+          "heading": "Garden loft",
+          "eyebrow": "",
+          "text": "Bright two-bedroom loft with a private terrace in Riverside, $485,000.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Corner office suite",
+          "eyebrow": "",
+          "text": "Open-plan workspace with floor-to-ceiling windows, $3,200 a month.",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Studio apartment",
+          "eyebrow": "",
+          "text": "Compact, light-filled studio steps from the tram line, $1,450 a month.",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Family townhouse",
+          "eyebrow": "",
+          "text": "Four bedrooms, a courtyard garden and a double garage, $729,000.",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "paddingTop": 72,
+      "paddingBottom": 72
+    },
+    "carousel": {
+      "perViewDesktop": 2,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 16,
+      "autoplay": false,
+      "autoplaySpeed": 5000,
+      "speed": 500,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "sides",
+      "arrowStyle": "solid",
+      "dotsStyle": "thumbs",
+      "dotsPosition": "below",
+      "radius": 12,
+      "heightMode": "fixed",
+      "heightDesktop": 380,
+      "heightTablet": 340,
+      "heightMobile": 260
+    }
+  }
+}

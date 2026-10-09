@@ -1,0 +1,39 @@
+{
+  "name": "Contact · estate agent with map",
+  "description": "Navy section with a map on the right and a large radius.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Visit our office",
+      "text": "Drop in to talk about buying, selling or renting. Coffee is on us.",
+      "email": "info@harbourhomes.com",
+      "phone": "+61 2 5550 0199",
+      "address": "17 Circular Quay West\nSydney NSW 2000",
+      "buttonLabel": "Contact us",
+      "successMessage": "Thanks. One of our agents will be in touch today.",
+      "mapAddress": "17 Circular Quay West, Sydney NSW 2000",
+      "mapLayout": "side",
+      "mapRadius": 24,
+      "mapShadow": "large"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#0f2a43",
+      "textColor": "#dbeafe",
+      "paddingY": 96,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "text": {
+        "color": "#bfdbfe"
+      },
+      "form": {
+        "background": "#ffffff",
+        "radius": 16
+      }
+    }
+  }
+}

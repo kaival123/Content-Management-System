@@ -1,0 +1,45 @@
+{
+  "name": "Nonprofit hero with impact",
+  "description": "Emotional photo hero with a green overlay and a donation call to action.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Clean water for 300 villages",
+      "heading": "A single well can change a generation",
+      "subheading": "Every rupee you give builds borewells, trains local technicians and keeps children in school instead of walking miles for water.",
+      "primaryLabel": "Donate now",
+      "primaryHref": "#donate",
+      "secondaryLabel": "See our impact",
+      "secondaryHref": "#impact",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?w=1920&q=80",
+      "overlayColor": "#052e16",
+      "overlayOpacity": 58,
+      "minHeight": 80,
+      "verticalAlign": "end",
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 120,
+      "paddingBottom": 96
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 56
+      },
+      "subheading": {
+        "color": "#dcfce7",
+        "maxWidth": 620
+      },
+      "primary": {
+        "background": "#facc15",
+        "color": "#1a2e05",
+        "fontWeight": 800
+      }
+    }
+  }
+}

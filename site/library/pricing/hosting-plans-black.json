@@ -1,0 +1,97 @@
+{
+  "name": "Hosting plans, black",
+  "description": "Four hosting plans in a hairline grid on black.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Hosting without the guesswork",
+      "subheading": "Pick a plan. Move up when traffic does.",
+      "plans": [
+        {
+          "name": "Shared",
+          "price": "$4",
+          "period": "/month",
+          "description": "Blogs and brochures",
+          "features": [
+            "1 website",
+            "10 GB SSD",
+            "Free SSL"
+          ],
+          "buttonLabel": "Get Shared",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Business",
+          "price": "$12",
+          "period": "/month",
+          "description": "Growing sites",
+          "features": [
+            "10 websites",
+            "50 GB SSD",
+            "Daily backups"
+          ],
+          "buttonLabel": "Get Business",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Cloud",
+          "price": "$39",
+          "period": "/month",
+          "description": "High traffic",
+          "features": [
+            "Auto-scaling",
+            "200 GB NVMe",
+            "CDN included"
+          ],
+          "buttonLabel": "Get Cloud",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Dedicated",
+          "price": "$149",
+          "period": "/month",
+          "description": "Full control",
+          "features": [
+            "Own server",
+            "Root access",
+            "Managed security"
+          ],
+          "buttonLabel": "Get Dedicated",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "background": "#0a0a0a",
+      "textColor": "#f5f5f5",
+      "align": "left",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 0,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "fontSize": 30
+      },
+      "card": {
+        "borderColor": "#333333",
+        "radius": 0,
+        "paddingX": 26,
+        "paddingY": 30
+      }
+    }
+  }
+}

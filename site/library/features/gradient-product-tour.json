@@ -1,0 +1,64 @@
+{
+  "name": "Gradient product tour",
+  "description": "Violet gradient section with three white shadow cards.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Take a quick tour",
+      "subheading": "Three things you will love in your first week.",
+      "items": [
+        {
+          "icon": "✨",
+          "title": "AI drafts",
+          "text": "Generate first drafts of pages, emails and ads from a short brief."
+        },
+        {
+          "icon": "🎨",
+          "title": "Brand kit",
+          "text": "Fonts, colours and logos applied automatically to everything you make."
+        },
+        {
+          "icon": "👥",
+          "title": "Real-time collaboration",
+          "text": "Edit together, comment inline and approve without leaving the page."
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#6d28d9",
+      "gradientTo": "#2563eb",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "subheading": {
+        "color": "#ddd6fe"
+      },
+      "card": {
+        "background": "#ffffff",
+        "radius": 20,
+        "paddingY": 32,
+        "paddingX": 28
+      },
+      "title": {
+        "color": "#1e1b4b"
+      },
+      "text": {
+        "color": "#475569"
+      }
+    }
+  }
+}

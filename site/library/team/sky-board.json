@@ -1,0 +1,70 @@
+{
+  "name": "Board of advisors",
+  "description": "Advisors in a narrow sky-blue panel.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Board of advisors",
+      "subheading": "Guided by people who have been there.",
+      "members": [
+        {
+          "name": "Dr. Colin Baxter",
+          "role": "Chair",
+          "bio": "Former CEO of a listed healthcare group.",
+          "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Neelam Shah",
+          "role": "Advisor, Finance",
+          "bio": "Ex-CFO with three successful exits.",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Henry Obi",
+          "role": "Advisor, Product",
+          "bio": "Built consumer products used by millions.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Divya Pillai",
+          "role": "Advisor, Growth",
+          "bio": "Scaled two marketplaces to profitability.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0f9ff",
+      "textColor": "#0c4a6e",
+      "align": "center",
+      "paddingTop": 72,
+      "paddingBottom": 72,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#075985"
+      },
+      "card": {
+        "borderColor": "#bae6fd",
+        "radius": 14,
+        "background": "#ffffff",
+        "color": "#0c4a6e",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

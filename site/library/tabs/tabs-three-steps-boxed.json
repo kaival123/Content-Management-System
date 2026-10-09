@@ -1,0 +1,49 @@
+{
+  "name": "Tabs · three steps",
+  "description": "Vertical boxed tabs describing three steps.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Simple process",
+      "heading": "From idea to live in three steps",
+      "orientation": "vertical",
+      "style": "boxed",
+      "items": [
+        {
+          "label": "1. Tell us your goals",
+          "icon": "",
+          "title": "Share what you want to achieve in a 20-minute call",
+          "text": "We listen first, then outline what success looks like for you."
+        },
+        {
+          "label": "2. Approve the plan",
+          "icon": "",
+          "title": "A clear plan and a fixed price",
+          "text": "Receive timelines, deliverables and a fixed quote within two days."
+        },
+        {
+          "label": "3. We build and launch",
+          "icon": "",
+          "title": "Watch it come together",
+          "text": "Follow progress in a shared board and go live on the date we agreed.",
+          "buttonLabel": "Get started",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#fefce8",
+      "gradientTo": "#fef9c3",
+      "gradientAngle": 180,
+      "textColor": "#422006",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#713f12"
+      }
+    }
+  }
+}

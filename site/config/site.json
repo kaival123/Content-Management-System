@@ -47,6 +47,14 @@
       "label": "Header"
     },
     {
+      "id": "mini-header",
+      "label": "Mini header"
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility (UX4G 3.0)"
+    },
+    {
       "id": "navigation",
       "label": "Navigation"
     },
@@ -97,6 +105,10 @@
     {
       "id": "contact",
       "label": "Contact"
+    },
+    {
+      "id": "map",
+      "label": "Google Map"
     },
     {
       "id": "cta",

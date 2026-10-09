@@ -1,0 +1,62 @@
+{
+  "name": "FAQ · shop orders",
+  "description": "Warm peach background with left-hand circle icons.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Orders and returns",
+      "heading": "Shopping with Juniper & Co.",
+      "items": [
+        {
+          "question": "How long does delivery take?",
+          "answer": "Standard delivery takes 3 to 5 working days. Express orders placed before 2pm arrive the next day.",
+          "icon": ""
+        },
+        {
+          "question": "Is shipping free?",
+          "answer": "Orders over $60 ship free within the country. Otherwise a flat $5.90 fee applies.",
+          "icon": ""
+        },
+        {
+          "question": "Can I return something I have worn?",
+          "answer": "Unworn items with tags can be returned within 30 days for a full refund. Worn items can be exchanged if faulty.",
+          "icon": ""
+        },
+        {
+          "question": "Do you ship internationally?",
+          "answer": "We ship to 28 countries. Duties and taxes are shown at checkout so there are no surprises on delivery.",
+          "icon": ""
+        },
+        {
+          "question": "How do I track my parcel?",
+          "answer": "You will get an email with a tracking link as soon as your order leaves the warehouse.",
+          "icon": ""
+        }
+      ],
+      "layout": "stacked",
+      "style": "boxed",
+      "icon": "circle",
+      "iconPosition": "left",
+      "singleOpen": true
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#fff1e6",
+      "gradientTo": "#fde2e4",
+      "gradientAngle": 160,
+      "textColor": "#44251a",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#7c2d12"
+      },
+      "item": {
+        "background": "#ffffffcc",
+        "borderColor": "#f6c9b8",
+        "radius": 16
+      }
+    }
+  }
+}

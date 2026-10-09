@@ -1,0 +1,36 @@
+{
+  "name": "Contact · gym bold",
+  "description": "Black and lime contact form for a gym.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Start your trial",
+      "text": "Claim a free 7-day pass. Tell us your goals and we will get you booked in.",
+      "email": "join@ironworkgym.com",
+      "phone": "+1 (312) 555-0134",
+      "address": "800 W Randolph St\nChicago, IL 60607",
+      "buttonLabel": "Claim my free week",
+      "successMessage": "Welcome aboard! We will email your pass shortly."
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#0a0a0a",
+      "textColor": "#d4d4d8",
+      "paddingY": 92,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#a3e635",
+        "textTransform": "uppercase",
+        "fontWeight": 900
+      },
+      "form": {
+        "background": "#18181b",
+        "borderColor": "#27272a",
+        "borderWidth": 1,
+        "radius": 6
+      }
+    }
+  }
+}

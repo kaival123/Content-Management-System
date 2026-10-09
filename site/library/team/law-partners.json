@@ -1,0 +1,63 @@
+{
+  "name": "Law firm partners",
+  "description": "Partners with practice areas on charcoal.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Our partners",
+      "subheading": "Senior lawyers who stay involved from first call to final signature.",
+      "members": [
+        {
+          "name": "Richard Hale",
+          "role": "Managing Partner",
+          "bio": "Corporate and M&A. Advises founders and boards.",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Sunita Rao",
+          "role": "Partner, Litigation",
+          "bio": "Commercial disputes and arbitration.",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Peter Lindqvist",
+          "role": "Partner, Property",
+          "bio": "Real estate, planning and development.",
+          "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#1c1917",
+      "textColor": "#e7e5e4",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96,
+      "borderTopWidth": 3,
+      "borderColor": "#f59e0b"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#fbbf24"
+      },
+      "card": {
+        "borderColor": "#44403c",
+        "radius": 10,
+        "paddingX": 24,
+        "paddingY": 28,
+        "background": "#292524"
+      }
+    }
+  }
+}

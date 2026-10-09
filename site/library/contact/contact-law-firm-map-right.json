@@ -1,0 +1,37 @@
+{
+  "name": "Contact · law firm with map",
+  "description": "Clean light layout with a map to the right.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Speak to a solicitor",
+      "text": "Book a free 30-minute consultation. Everything you tell us is confidential.",
+      "email": "enquiries@hartleywhite.law",
+      "phone": "+44 20 7946 0321",
+      "address": "21 Chancery Lane\nLondon WC2A 1LP",
+      "buttonLabel": "Request a consultation",
+      "successMessage": "Thank you. A member of our team will call you within one working day.",
+      "mapAddress": "21 Chancery Lane, London WC2A 1LP",
+      "mapLayout": "side",
+      "mapRadius": 6,
+      "mapShadow": "medium"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ffffff",
+      "textColor": "#1e293b",
+      "paddingY": 96,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#0f172a"
+      },
+      "form": {
+        "background": "#f8fafc",
+        "borderColor": "#e2e8f0",
+        "borderWidth": 1
+      }
+    }
+  }
+}

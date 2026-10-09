@@ -1,0 +1,69 @@
+{
+  "name": "Architecture notes, stone",
+  "description": "Design essays on warm dark stone with amber highlights.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Notes on building",
+      "subheading": "Essays on materials, light and the places we make.",
+      "posts": [
+        {
+          "title": "Designing a house around a courtyard",
+          "excerpt": "How a void became the heart of the home.",
+          "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
+          "category": "Residential",
+          "date": "Oct 3, 2026",
+          "author": "Alex Moreau",
+          "link": "#"
+        },
+        {
+          "title": "The case for quiet rooms",
+          "excerpt": "Why every building needs somewhere to think.",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "category": "Interiors",
+          "date": "Sep 19, 2026",
+          "author": "Yuki Tanaka",
+          "link": "#"
+        },
+        {
+          "title": "Mid-rise: the unfashionable answer",
+          "excerpt": "Density without the towers.",
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "category": "Urbanism",
+          "date": "Sep 4, 2026",
+          "author": "Ben Adler",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#1c1917",
+      "textColor": "#e7e5e4",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96,
+      "borderTopWidth": 3,
+      "borderColor": "#f59e0b"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#fbbf24"
+      },
+      "card": {
+        "borderColor": "#44403c",
+        "radius": 10,
+        "paddingX": 24,
+        "paddingY": 28,
+        "background": "#292524"
+      }
+    }
+  }
+}

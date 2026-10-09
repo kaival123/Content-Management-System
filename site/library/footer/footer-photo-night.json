@@ -1,0 +1,60 @@
+{
+  "name": "Footer · photo background",
+  "description": "Night city photograph under a dark overlay.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [
+        {
+          "label": "Instagram",
+          "href": "#"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "#"
+        }
+      ],
+      "divider": "line",
+      "copyrightAlign": "auto",
+      "linkStyle": "plain",
+      "brand": "Nightowl Coworking",
+      "tagline": "Desks open 24 hours.",
+      "layout": "centered",
+      "links": [
+        {
+          "label": "Plans",
+          "href": "#"
+        },
+        {
+          "label": "Locations",
+          "href": "#"
+        },
+        {
+          "label": "Events",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Nightowl Spaces"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80",
+      "overlayColor": "#020617",
+      "overlayOpacity": 80,
+      "textColor": "#cbd5e1",
+      "paddingY": 80,
+      "background": "#020617"
+    },
+    "elements": {
+      "brand": {
+        "color": "#ffffff",
+        "fontSize": 28
+      }
+    }
+  }
+}

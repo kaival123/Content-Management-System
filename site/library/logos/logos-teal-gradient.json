@@ -1,0 +1,60 @@
+{
+  "name": "Teal gradient clients",
+  "description": "Teal to green gradient with six clients.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Clients we work with",
+      "logos": [
+        {
+          "name": "GreenGrid",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Aquaflow",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Solaris",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "EcoMove",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Terra",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Bloom",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0f766e",
+      "gradientTo": "#4d7c0f",
+      "gradientAngle": 120,
+      "textColor": "#f0fdf4",
+      "paddingY": 64,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 6,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 24
+    }
+  }
+}

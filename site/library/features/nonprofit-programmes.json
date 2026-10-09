@@ -1,0 +1,56 @@
+{
+  "name": "Nonprofit programmes",
+  "description": "Three programme cards on a gentle green background.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Our programmes",
+      "subheading": "Practical, community-led work in water, education and health.",
+      "items": [
+        {
+          "icon": "💧",
+          "title": "Clean water",
+          "text": "Borewells and filtration plants maintained by trained local technicians."
+        },
+        {
+          "icon": "📚",
+          "title": "Education access",
+          "text": "Scholarships, school kits and evening classes for 4,000 children."
+        },
+        {
+          "icon": "🩺",
+          "title": "Health camps",
+          "text": "Monthly eye, dental and maternal health camps in remote villages."
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0fdf4",
+      "textColor": "#14532d",
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "bordered",
+      "textAlign": "center"
+    },
+    "elements": {
+      "card": {
+        "borderColor": "#86efac",
+        "background": "#ffffff",
+        "radius": 20,
+        "paddingY": 36,
+        "paddingX": 28
+      },
+      "icon": {
+        "fontSize": 40
+      },
+      "title": {
+        "color": "#166534"
+      }
+    }
+  }
+}

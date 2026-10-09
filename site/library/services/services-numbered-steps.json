@@ -1,0 +1,51 @@
+{
+  "name": "Services · numbered process",
+  "description": "Four numbered steps from discovery to launch.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "How we work",
+      "subheading": "A simple four-step process that keeps projects on time and on budget.",
+      "items": [
+        {
+          "icon": "01",
+          "title": "Discover",
+          "text": "Workshops and interviews to understand your customers and goals."
+        },
+        {
+          "icon": "02",
+          "title": "Design",
+          "text": "Wireframes and visual concepts you can react to early."
+        },
+        {
+          "icon": "03",
+          "title": "Build",
+          "text": "Iterative development with a working preview every week."
+        },
+        {
+          "icon": "04",
+          "title": "Launch",
+          "text": "Testing, training and a smooth go-live with support after."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "style": {
+      "paddingY": 80
+    },
+    "elements": {
+      "icon": {
+        "fontSize": 40,
+        "fontWeight": 800,
+        "color": "#6366f1"
+      }
+    }
+  }
+}

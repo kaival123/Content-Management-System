@@ -1,0 +1,40 @@
+{
+  "name": "Two big portraits",
+  "description": "Two large portrait images with a calm layout.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Two teams, two transformations.",
+      "captionOnHover": false,
+      "heading": "Customer stories",
+      "shape": "3/4",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&q=80",
+          "title": "Anna, Head of Ops",
+          "caption": "Logistics",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=80",
+          "title": "Marcus, Founder",
+          "caption": "Retail",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#fff7f5",
+      "paddingY": 104,
+      "width": "narrow",
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32
+    }
+  }
+}

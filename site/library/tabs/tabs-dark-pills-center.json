@@ -1,0 +1,68 @@
+{
+  "name": "Tabs · dark pills",
+  "description": "Dark gradient with centred pill tabs.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Solutions",
+      "heading": "Built for every team",
+      "orientation": "horizontal",
+      "style": "pills",
+      "tabAlign": "center",
+      "items": [
+        {
+          "label": "Marketing",
+          "icon": "",
+          "title": "Launch campaigns faster",
+          "text": "Collaborate on briefs, assets and approvals in one place, then publish everywhere at once.",
+          "buttonLabel": "Explore marketing",
+          "buttonHref": "#contact"
+        },
+        {
+          "label": "Sales",
+          "icon": "",
+          "title": "Close more deals",
+          "text": "Keep every lead, call and proposal organised and follow up at exactly the right time.",
+          "buttonLabel": "Explore sales",
+          "buttonHref": "#contact"
+        },
+        {
+          "label": "Support",
+          "icon": "",
+          "title": "Resolve with context",
+          "text": "See the full customer history beside every ticket and answer in half the time.",
+          "buttonLabel": "Explore support",
+          "buttonHref": "#contact"
+        },
+        {
+          "label": "Finance",
+          "icon": "",
+          "title": "Close the books earlier",
+          "text": "Automate invoicing, approvals and reconciliation so month-end stops being a scramble.",
+          "buttonLabel": "Explore finance",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0f172a",
+      "gradientTo": "#312e81",
+      "gradientAngle": 145,
+      "textColor": "#e0e7ff",
+      "paddingY": 100,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#a5b4fc"
+      },
+      "subheading": {
+        "color": "#c7d2fe"
+      }
+    }
+  }
+}

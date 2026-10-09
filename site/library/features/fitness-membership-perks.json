@@ -1,0 +1,64 @@
+{
+  "name": "Fitness membership perks",
+  "description": "Bold black section with lime titles for gym membership perks.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Membership perks",
+      "subheading": "Everything is included. No add-ons, no upsells.",
+      "items": [
+        {
+          "icon": "🏋️",
+          "title": "24/7 gym access",
+          "text": "Train when it suits you with key-card entry at any hour."
+        },
+        {
+          "icon": "👟",
+          "title": "Unlimited classes",
+          "text": "HIIT, spin, yoga and strength classes included in every plan."
+        },
+        {
+          "icon": "🧊",
+          "title": "Recovery studio",
+          "text": "Sauna, cold plunge and mobility zone free for members."
+        },
+        {
+          "icon": "🥗",
+          "title": "Nutrition coaching",
+          "text": "Monthly one-to-one session with a certified nutritionist."
+        }
+      ]
+    },
+    "style": {
+      "background": "#09090b",
+      "textColor": "#d4d4d8"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "textTransform": "uppercase",
+        "fontWeight": 900
+      },
+      "card": {
+        "background": "#18181b",
+        "borderColor": "#3f3f46",
+        "radius": 0
+      },
+      "title": {
+        "color": "#a3e635",
+        "textTransform": "uppercase"
+      },
+      "text": {
+        "color": "#a1a1aa"
+      }
+    }
+  }
+}

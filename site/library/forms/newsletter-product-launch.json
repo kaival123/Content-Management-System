@@ -1,0 +1,28 @@
+{
+  "name": "Launch waitlist",
+  "description": "Primary-coloured waitlist for a product launch.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "Email for early access",
+      "buttonLabel": "Join the waitlist",
+      "heading": "Be first in line",
+      "text": "Our smart thermostat ships this autumn. Join the waitlist for 20% off launch pricing.",
+      "note": "We will only email about the launch.",
+      "successMessage": "You are on the waitlist."
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 96
+    },
+    "elements": {
+      "button": {
+        "background": "#ffffff",
+        "color": "#111827",
+        "radius": 999
+      }
+    }
+  }
+}

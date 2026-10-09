@@ -1,0 +1,52 @@
+{
+  "name": "Tabs · school departments",
+  "description": "Warm underline tabs for school departments.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Curriculum",
+      "heading": "Learning across every subject",
+      "orientation": "horizontal",
+      "style": "underline",
+      "tabAlign": "left",
+      "items": [
+        {
+          "label": "Science",
+          "icon": "🔬",
+          "title": "Hands-on discovery",
+          "text": "Labs and field trips bring physics, chemistry and biology to life from the first term."
+        },
+        {
+          "label": "Humanities",
+          "icon": "📜",
+          "title": "Ideas and debate",
+          "text": "History, geography and philosophy taught through discussion and primary sources."
+        },
+        {
+          "label": "Arts",
+          "icon": "🎭",
+          "title": "Create and perform",
+          "text": "Studios, theatre and a full orchestra give every pupil a stage."
+        },
+        {
+          "label": "Sport",
+          "icon": "🏅",
+          "title": "Active every day",
+          "text": "Team and individual sport across eleven disciplines, with elite coaching."
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#fff7ed",
+      "textColor": "#431407",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#9a3412"
+      }
+    }
+  }
+}

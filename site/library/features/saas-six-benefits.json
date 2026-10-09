@@ -1,0 +1,54 @@
+{
+  "name": "SaaS six benefits",
+  "description": "Six benefit cards in three columns for a SaaS product.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Everything your team needs to ship faster",
+      "subheading": "One workspace for planning, building and reporting.",
+      "items": [
+        {
+          "icon": "🗓️",
+          "title": "Visual planning",
+          "text": "Drag tasks across timelines and see dependencies before they become blockers."
+        },
+        {
+          "icon": "🤖",
+          "title": "Smart automations",
+          "text": "Route approvals, assign owners and send reminders without writing a line of code."
+        },
+        {
+          "icon": "📊",
+          "title": "Live dashboards",
+          "text": "Share real-time progress with clients and leadership in a single link."
+        },
+        {
+          "icon": "🔗",
+          "title": "100+ integrations",
+          "text": "Connect Slack, GitHub, Google Drive and Jira in a couple of clicks."
+        },
+        {
+          "icon": "🛡️",
+          "title": "Enterprise security",
+          "text": "SSO, audit logs and granular permissions keep every project safe."
+        },
+        {
+          "icon": "📱",
+          "title": "Mobile apps",
+          "text": "Approve, comment and track work from iOS and Android."
+        }
+      ]
+    },
+    "style": {
+      "background": "#ffffff"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Nonprofit leadership",
+  "description": "Leadership team with warm green accents.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "The team on the ground",
+      "subheading": "A small paid team supported by 600 volunteers.",
+      "members": [
+        {
+          "name": "Lakshmi Devi",
+          "role": "Executive Director",
+          "bio": "Built the organisation from a single classroom in 2012.",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Tomas Berg",
+          "role": "Programs Lead",
+          "bio": "Oversees food security and education programs.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Hannah Cole",
+          "role": "Development Director",
+          "bio": "Keeps our donors informed and inspired.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0fdf4",
+      "textColor": "#14532d",
+      "align": "left",
+      "paddingTop": 90,
+      "paddingBottom": 90
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#166534"
+      },
+      "card": {
+        "borderColor": "#86efac",
+        "radius": 12,
+        "background": "#ffffff",
+        "paddingX": 20,
+        "paddingY": 24
+      }
+    }
+  }
+}

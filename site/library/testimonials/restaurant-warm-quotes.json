@@ -1,0 +1,52 @@
+{
+  "name": "Restaurant guest reviews",
+  "description": "Warm cream background with large unframed guest quotes.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "What our guests are saying",
+      "items": [
+        {
+          "quote": "The slow-cooked lamb is the best thing I have eaten this year. We booked again before leaving.",
+          "name": "Isabella Romano",
+          "role": "Saturday regular",
+          "avatar": ""
+        },
+        {
+          "quote": "Cosy room, honest cooking and a wine list that does not need a mortgage.",
+          "name": "Peter Hollis",
+          "role": "Food writer",
+          "avatar": ""
+        },
+        {
+          "quote": "Celebrated our anniversary here and the staff remembered the little details.",
+          "name": "Sana & Imran",
+          "role": "Anniversary dinner",
+          "avatar": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#fef9ec",
+      "textColor": "#78350f",
+      "align": "left",
+      "paddingTop": 96,
+      "paddingBottom": 96,
+      "width": "boxed"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 32,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#78350f",
+        "fontWeight": 800
+      }
+    }
+  }
+}

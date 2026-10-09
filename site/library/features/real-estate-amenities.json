@@ -1,0 +1,61 @@
+{
+  "name": "Real estate amenities",
+  "description": "Six amenity items with emoji icons and no card borders.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Amenities that make everyday life better",
+      "subheading": "Thoughtful spaces for families, friends and quiet moments.",
+      "items": [
+        {
+          "icon": "🏊",
+          "title": "Infinity pool",
+          "text": "Heated pool with sunset deck and kids' splash zone."
+        },
+        {
+          "icon": "🌳",
+          "title": "Landscaped gardens",
+          "text": "Three acres of walking trails, play areas and open lawns."
+        },
+        {
+          "icon": "🏋️",
+          "title": "Clubhouse and gym",
+          "text": "Fully equipped fitness centre, indoor courts and co-working lounge."
+        },
+        {
+          "icon": "🔒",
+          "title": "24/7 security",
+          "text": "Gated entry, CCTV and trained guards at every tower."
+        },
+        {
+          "icon": "🚗",
+          "title": "Covered parking",
+          "text": "Two allotted spots per home with EV charging points."
+        },
+        {
+          "icon": "☀️",
+          "title": "Solar power",
+          "text": "Rooftop panels cut common-area electricity bills by 60%."
+        }
+      ]
+    },
+    "style": {
+      "background": "#fafaf9",
+      "textColor": "#292524",
+      "align": "center"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 36,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "icon": {
+        "fontSize": 42
+      }
+    }
+  }
+}

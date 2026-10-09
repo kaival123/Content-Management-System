@@ -1,0 +1,69 @@
+{
+  "name": "Fitness coaches, dark",
+  "description": "Four coaches in dark cards with uppercase heading.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Your coaches",
+      "subheading": "Certified, encouraging and relentlessly on time.",
+      "members": [
+        {
+          "name": "Jake Morrison",
+          "role": "Head Strength Coach",
+          "bio": "Powerlifter turned coach, 12 years training beginners.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Aisha Rahman",
+          "role": "Yoga and Mobility",
+          "bio": "Helps desk workers move without pain.",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Carlos Mendes",
+          "role": "HIIT Specialist",
+          "bio": "Runs the 6 a.m. class that members never miss.",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Nina Petrova",
+          "role": "Nutrition Coach",
+          "bio": "Builds meal plans around real life, not diets.",
+          "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#0a0a0a",
+      "textColor": "#f5f5f5",
+      "align": "left",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 0,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "textTransform": "uppercase",
+        "letterSpacing": 3,
+        "fontSize": 30
+      },
+      "card": {
+        "borderColor": "#333333",
+        "radius": 0,
+        "paddingX": 20,
+        "paddingY": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Travel stories on photo",
+  "description": "Traveller reviews over a darkened cityscape photo.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Trips our travellers still talk about",
+      "items": [
+        {
+          "quote": "The local guide took us to places no guidebook mentions. Easily our best holiday.",
+          "name": "Julia & Mark Stevens",
+          "role": "Portugal, 10 days",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+        },
+        {
+          "quote": "Every transfer, every hotel, every reservation was exactly as promised.",
+          "name": "Anil Kumar",
+          "role": "Kerala family trip",
+          "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80"
+        },
+        {
+          "quote": "Planned our honeymoon around our tastes. It felt personal from the first call.",
+          "name": "Sofia Rossi",
+          "role": "Japan, 14 days",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80",
+      "overlayColor": "#0b2436",
+      "overlayOpacity": 68,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 120,
+      "paddingBottom": 120,
+      "parallax": true
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(11,36,54,0.75)",
+        "radius": 12,
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

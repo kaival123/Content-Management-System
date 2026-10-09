@@ -1,0 +1,103 @@
+{{!--
+  Single map (address) or several locations. With "locations" filled the map section shows them as
+  tabs, a side list, or a grid of maps. Tabs / side list reuse the site runtime's tabs
+  ([data-tabs]); in the visual editor every location stays visible so it can be edited.
+--}}
+{{#if locations}}
+{{#is locationsView "pins"}}
+<div class="lp-map-multi lp-map-view-pins{{#if grayscale}} lp-map-gray{{/if}}">
+  {{#if heading}}
+  <h2 class="lp-h2 lp-head" data-el="heading" data-edit="heading">{{heading}}</h2>
+  {{/if}}
+  {{#if text}}
+  <p class="lp-lead lp-pre" data-el="text" data-edit="text">{{text}}</p>
+  {{/if}}
+  <div class="lp-map-multi-body">
+    <div class="lp-map-locs">
+      {{#each locations}}
+      <div class="lp-map-loc" data-el="location">
+        <strong data-edit="name">{{name}}</strong>
+        {{#if address}}<span class="lp-map-loc-addr lp-pre" data-edit="address">{{address}}</span>{{/if}}
+        {{#if details}}<span class="lp-map-loc-addr lp-pre" data-edit="details">{{details}}</span>{{/if}}
+        {{#if ../buttonLabel}}<a class="lp-map-loc-link" href="{{mapDirections address}}" target="_blank" rel="noopener">{{../buttonLabel}}</a>{{/if}}
+      </div>
+      {{/each}}
+    </div>
+    <div class="lp-map-panels">
+      {{#mapSrc embedUrl address}}
+      <div class="lp-map lp-map-shadow-{{default ../shadow "none"}}" style="border-radius: {{default ../radius 12}}px" data-el="map">
+        <iframe src="{{this}}" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="height: {{default ../height 400}}px"></iframe>
+      </div>
+      {{else}}
+      <p class="lp-lead">Paste a Google My Maps embed link (or enter an address) to show the map.</p>
+      {{/mapSrc}}
+    </div>
+  </div>
+</div>
+{{else}}
+<div class="lp-map-multi lp-map-view-{{default locationsView "tabs"}}{{#if grayscale}} lp-map-gray{{/if}}{{#if @editor}} lp-map-editing{{/if}}" {{#is locationsView "grid"}}{{else}}data-tabs{{/is}}>
+  {{#if heading}}
+  <h2 class="lp-h2 lp-head" data-el="heading" data-edit="heading">{{heading}}</h2>
+  {{/if}}
+  {{#if text}}
+  <p class="lp-lead lp-pre" data-el="text" data-edit="text">{{text}}</p>
+  {{/if}}
+  <div class="lp-map-multi-body">
+    {{#is locationsView "grid"}}{{else}}
+    <div class="lp-map-locs" role="tablist">
+      {{#each locations}}
+      <button type="button" class="lp-map-loc{{#if @first}} is-active{{/if}}" role="tab" data-tab data-el="location" aria-selected="{{#if @first}}true{{else}}false{{/if}}">
+        <strong data-edit="name">{{name}}</strong>
+        {{#if address}}<span class="lp-map-loc-addr lp-pre" data-edit="address">{{address}}</span>{{/if}}
+      </button>
+      {{/each}}
+    </div>
+    {{/is}}
+    <div class="lp-map-panels">
+      {{#each locations}}
+      <div class="lp-map-panel{{#if @first}} is-active{{/if}}" {{#is ../locationsView "grid"}}{{else}}data-tab-panel{{/is}} data-el="panel">
+        <div class="lp-map lp-map-shadow-{{default ../shadow "none"}}" style="border-radius: {{default ../radius 12}}px" data-el="map">
+          <iframe src="{{mapUrl address}}" title="{{name}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="height: {{default ../height 400}}px"></iframe>
+        </div>
+        {{#is ../locationsView "grid"}}
+        <div class="lp-map-panel-info">
+          <h3 class="lp-h3" data-edit="name">{{name}}</h3>
+          <p class="lp-pre" data-edit="address">{{address}}</p>
+          {{#if details}}<p class="lp-map-details lp-pre" data-edit="details">{{details}}</p>{{/if}}
+          {{#if ../buttonLabel}}<a class="lp-btn lp-btn-primary" href="{{mapDirections address}}" target="_blank" rel="noopener">{{../buttonLabel}}</a>{{/if}}
+        </div>
+        {{else}}
+        {{#if details}}<p class="lp-map-details lp-pre" data-edit="details">{{details}}</p>{{/if}}
+        {{#if ../buttonLabel}}<a class="lp-btn lp-btn-primary lp-map-dir" href="{{mapDirections address}}" target="_blank" rel="noopener">{{../buttonLabel}}</a>{{/if}}
+        {{/is}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+{{/is}}
+{{else}}
+<div class="lp-map-wrap lp-map-layout-{{default layout "stacked"}}{{#if grayscale}} lp-map-gray{{/if}}">
+  <div class="lp-map-info">
+    {{#if heading}}
+    <h2 class="lp-h2 lp-head" data-el="heading" data-edit="heading">{{heading}}</h2>
+    {{/if}}
+    {{#if text}}
+    <p class="lp-lead lp-pre" data-el="text" data-edit="text">{{text}}</p>
+    {{/if}}
+    {{#if details}}
+    <p class="lp-map-details lp-pre" data-el="details" data-edit="details">{{details}}</p>
+    {{/if}}
+    {{#if buttonLabel}}
+    <a class="lp-btn lp-btn-primary" data-el="button" data-edit="buttonLabel" href="{{mapDirections address}}" target="_blank" rel="noopener">{{buttonLabel}}</a>
+    {{/if}}
+  </div>
+  {{#mapSrc embedUrl address}}
+  <div class="lp-map lp-map-shadow-{{default ../shadow "none"}}" style="border-radius: {{default ../radius 12}}px" data-el="map">
+    <iframe src="{{this}}" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="height: {{default ../height 400}}px"></iframe>
+  </div>
+  {{else}}
+  <p class="lp-lead">Enter an address to show the map.</p>
+  {{/mapSrc}}
+</div>
+{{/if}}

@@ -1,0 +1,64 @@
+{
+  "name": "Accordion · course modules",
+  "description": "Course syllabus with numbered modules on a dark gradient.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Syllabus",
+      "heading": "What you will learn",
+      "subheading": "Eight weeks, four modules, one finished project.",
+      "items": [
+        {
+          "icon": "",
+          "question": "Foundations",
+          "answer": "Core concepts, tooling setup and your first working prototype. You will ship something small in week one."
+        },
+        {
+          "icon": "",
+          "question": "Data and state",
+          "answer": "Model real data, handle forms and keep your interface in sync as it changes."
+        },
+        {
+          "icon": "",
+          "question": "Testing and quality",
+          "answer": "Write automated tests, catch regressions early and review code like a professional."
+        },
+        {
+          "icon": "",
+          "question": "Launch",
+          "answer": "Deploy, monitor and improve your project, then present it to a panel of working engineers."
+        }
+      ],
+      "layout": "split",
+      "style": "accent",
+      "icon": "plus",
+      "iconPosition": "left",
+      "numbered": true,
+      "singleOpen": true,
+      "openFirst": true
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0f2027",
+      "gradientTo": "#2c5364",
+      "gradientAngle": 150,
+      "textColor": "#e0f2fe",
+      "paddingY": 96,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#67e8f9"
+      },
+      "question": {
+        "color": "#ffffff"
+      },
+      "answer": {
+        "color": "#cbd5e1"
+      }
+    }
+  }
+}

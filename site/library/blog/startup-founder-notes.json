@@ -1,0 +1,63 @@
+{
+  "name": "Startup founder notes",
+  "description": "Founder lessons in a clean bordered light grid.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Founder notes",
+      "subheading": "Honest lessons from building a company.",
+      "posts": [
+        {
+          "title": "What we got wrong in our first landing page",
+          "excerpt": "Five mistakes that cost us signups.",
+          "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+          "category": "Growth",
+          "date": "Oct 5, 2026",
+          "author": "Aisha Khan",
+          "link": "#"
+        },
+        {
+          "title": "How we hire for a remote team",
+          "excerpt": "Our process in six steps.",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "category": "Hiring",
+          "date": "Sep 26, 2026",
+          "author": "Marco Rossi",
+          "link": "#"
+        },
+        {
+          "title": "The metrics we stopped tracking",
+          "excerpt": "Less noise, more signal.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "category": "Metrics",
+          "date": "Sep 14, 2026",
+          "author": "Lena Park",
+          "link": "#"
+        },
+        {
+          "title": "Why we dropped our weekly all-hands",
+          "excerpt": "And what replaced it.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "category": "Culture",
+          "date": "Aug 31, 2026",
+          "author": "David Osei",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "",
+      "align": "left",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    }
+  }
+}

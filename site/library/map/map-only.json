@@ -1,0 +1,15 @@
+{
+  "name": "Google Map only",
+  "description": "A tall, full-width Google Map with no text.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "",
+      "text": "",
+      "address": "548 Market Street, San Francisco, CA 94104",
+      "height": 480,
+      "radius": 12,
+      "shadow": "soft"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "University partners",
+  "description": "Academic institutions on a clean white row.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Research partners",
+      "logos": [
+        {
+          "name": "Oxford Institute",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Stanford Lab",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "ETH Zurich",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "NUS Centre",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "McGill",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#ffffff",
+      "textColor": "#1e293b",
+      "paddingY": 64,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 5,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 28
+    },
+    "elements": {
+      "heading": {
+        "italic": true
+      }
+    }
+  }
+}

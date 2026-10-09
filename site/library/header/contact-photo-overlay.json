@@ -1,0 +1,35 @@
+{
+  "name": "Contact photo banner",
+  "description": "Office photo with dark overlay behind a Contact us title.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Home / Contact",
+      "heading": "Let us talk",
+      "text": "Questions, project ideas or just want to say hello? Our team replies within one working day.",
+      "buttonLabel": "Call us now",
+      "buttonHref": "tel:+912012345678"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=80",
+      "overlayColor": "#0f172a",
+      "overlayOpacity": 60,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 120
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 56
+      },
+      "text": {
+        "color": "#e2e8f0"
+      },
+      "breadcrumb": {
+        "color": "#cbd5e1"
+      }
+    }
+  }
+}

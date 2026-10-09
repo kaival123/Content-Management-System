@@ -1,0 +1,86 @@
+{
+  "name": "Hero slider · wipe with nav bar",
+  "description": "Wipe transition and a single control bar, text aligned to the right.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "",
+      "slideHeight": 600,
+      "heading": "",
+      "variant": "hero",
+      "overlay": 45,
+      "slides": [
+        {
+          "heading": "Software that keeps up",
+          "eyebrow": "Release 4.0",
+          "text": "Faster searches, cleaner dashboards and workflows you set up once.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Start free trial",
+          "buttonHref": "#trial",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "One workspace, every team",
+          "eyebrow": "Collaboration",
+          "text": "Plans, files and conversations finally live in the same place.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Take the tour",
+          "buttonHref": "#tour",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        },
+        {
+          "heading": "Built to scale with you",
+          "eyebrow": "Enterprise",
+          "text": "Single sign-on, audit logs and uptime you can put in a contract.",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80",
+          "price": "",
+          "buttonLabel": "Talk to sales",
+          "buttonHref": "#contact",
+          "background": "",
+          "textColor": "#ffffff",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "width": "full",
+      "paddingSide": 0
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": true,
+      "autoplaySpeed": 6000,
+      "speed": 900,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "mask-wipe",
+      "pauseOnHover": true,
+      "arrowStyle": "square",
+      "dotsPosition": "bar",
+      "dotsStyle": "fraction",
+      "contentX": "right",
+      "contentY": "middle",
+      "heightMode": "fixed",
+      "heightDesktop": 600,
+      "heightTablet": 520,
+      "heightMobile": 500,
+      "easing": "snappy"
+    }
+  }
+}

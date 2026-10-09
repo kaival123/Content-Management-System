@@ -1,0 +1,48 @@
+{
+  "name": "Six stats bordered grid",
+  "description": "Six bordered tiles in a three-by-two grid.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "The school at a glance",
+      "items": [
+        {
+          "value": "1,850",
+          "label": "Students enrolled"
+        },
+        {
+          "value": "94%",
+          "label": "Graduate on time"
+        },
+        {
+          "value": "12:1",
+          "label": "Student-teacher ratio"
+        },
+        {
+          "value": "60+",
+          "label": "Clubs and societies"
+        },
+        {
+          "value": "38",
+          "label": "Nationalities"
+        },
+        {
+          "value": "1962",
+          "label": "Founded"
+        }
+      ]
+    },
+    "style": {
+      "align": "center",
+      "paddingY": 64
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "cardStyle": "bordered",
+      "textAlign": "center",
+      "gap": 20
+    }
+  }
+}

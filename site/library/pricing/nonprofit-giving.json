@@ -1,0 +1,83 @@
+{
+  "name": "Nonprofit giving levels",
+  "description": "Monthly giving tiers with an impact line on each.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Give monthly, change lives",
+      "subheading": "Every contribution is tax deductible and goes to field programs.",
+      "plans": [
+        {
+          "name": "Friend",
+          "price": "$10",
+          "period": "/month",
+          "description": "Feeds a child for a month",
+          "features": [
+            "Welcome pack",
+            "Quarterly newsletter"
+          ],
+          "buttonLabel": "Give $10",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Champion",
+          "price": "$25",
+          "period": "/month",
+          "description": "Funds a classroom kit",
+          "features": [
+            "Everything in Friend",
+            "Impact report",
+            "Invitation to annual dinner"
+          ],
+          "buttonLabel": "Give $25",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Guardian",
+          "price": "$75",
+          "period": "/month",
+          "description": "Sponsors a student",
+          "features": [
+            "Everything in Champion",
+            "Letters from your student",
+            "Annual field visit"
+          ],
+          "buttonLabel": "Give $75",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0f9ff",
+      "textColor": "#0c4a6e",
+      "align": "center",
+      "paddingTop": 72,
+      "paddingBottom": 72,
+      "width": "boxed"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#075985"
+      },
+      "card": {
+        "borderColor": "#bae6fd",
+        "radius": 14,
+        "background": "#ffffff",
+        "color": "#0c4a6e",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Services · support plans",
+  "description": "Support tiers as tall blocks with a featured plan.",
+  "section": {
+    "type": "grid",
+    "data": {
+      "heading": "Support plans",
+      "subheading": "Pick the level of help that suits your team.",
+      "items": [
+        {
+          "heading": "Essential",
+          "text": "Email support within one business day and quarterly health checks.",
+          "icon": "✉️",
+          "image": "",
+          "buttonLabel": "Choose Essential",
+          "buttonHref": "#contact",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Professional",
+          "text": "Priority chat, monthly reviews and a named engineer.",
+          "icon": "💬",
+          "image": "",
+          "buttonLabel": "Choose Professional",
+          "buttonHref": "#contact",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "#1d4ed8",
+          "textColor": "#ffffff"
+        },
+        {
+          "heading": "Enterprise",
+          "text": "24/7 phone line, on-site visits and custom SLAs.",
+          "icon": "🏢",
+          "image": "",
+          "buttonLabel": "Talk to sales",
+          "buttonHref": "#contact",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "bordered",
+      "textAlign": "center",
+      "itemAlign": "center"
+    },
+    "style": {
+      "paddingY": 88,
+      "align": "center"
+    }
+  }
+}

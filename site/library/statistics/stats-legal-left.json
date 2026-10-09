@@ -1,0 +1,47 @@
+{
+  "name": "Law firm stats",
+  "description": "Left-aligned stats with a thin top border for a law firm.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Experience that counts",
+      "items": [
+        {
+          "value": "35",
+          "label": "Years in practice"
+        },
+        {
+          "value": "2,900",
+          "label": "Cases won"
+        },
+        {
+          "value": "18",
+          "label": "Partners"
+        },
+        {
+          "value": "24h",
+          "label": "Response guarantee"
+        }
+      ]
+    },
+    "style": {
+      "align": "left",
+      "paddingY": 64,
+      "borderTopWidth": 2,
+      "borderColor": "__primary__"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "left",
+      "gap": 28
+    },
+    "elements": {
+      "value": {
+        "fontWeight": 600
+      }
+    }
+  }
+}

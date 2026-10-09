@@ -1,0 +1,54 @@
+{
+  "name": "Agency benefits left-aligned",
+  "description": "Four large left-aligned benefit cards with shadow on light grey.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Why brands choose our studio",
+      "subheading": "Senior talent, clear process and results you can measure.",
+      "items": [
+        {
+          "icon": "🎯",
+          "title": "Strategy-led design",
+          "text": "Every layout decision is tied to a business goal and tested against real data."
+        },
+        {
+          "icon": "🧑‍🎨",
+          "title": "Senior-only team",
+          "text": "You work directly with designers and developers who have 8+ years of experience."
+        },
+        {
+          "icon": "📅",
+          "title": "Predictable delivery",
+          "text": "Fixed scopes, fixed dates and weekly demos so nothing surprises you."
+        },
+        {
+          "icon": "🔁",
+          "title": "Free 60-day support",
+          "text": "We stay on after launch to fix, tweak and optimise at no extra cost."
+        }
+      ]
+    },
+    "style": {
+      "background": "#f3f4f6"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "elements": {
+      "card": {
+        "radius": 12,
+        "paddingY": 32,
+        "paddingX": 32
+      },
+      "title": {
+        "fontSize": 22
+      }
+    }
+  }
+}

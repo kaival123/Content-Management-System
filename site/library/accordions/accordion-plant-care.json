@@ -1,0 +1,61 @@
+{
+  "name": "Accordion · plant care guide",
+  "description": "Plant care tips over a leafy photo with centred text.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Care guide",
+      "heading": "Keep your plants thriving",
+      "items": [
+        {
+          "icon": "☀️",
+          "question": "Light",
+          "answer": "Most houseplants prefer bright, indirect light. Avoid midday sun on leaves."
+        },
+        {
+          "icon": "💦",
+          "question": "Water",
+          "answer": "Water when the top two centimetres of soil feel dry, then let excess drain away."
+        },
+        {
+          "icon": "🌡️",
+          "question": "Temperature",
+          "answer": "Keep plants between 16 and 24 degrees and away from radiators and draughts."
+        },
+        {
+          "icon": "🪴",
+          "question": "Repotting",
+          "answer": "Repot every one to two years in spring, choosing a pot only slightly larger."
+        }
+      ],
+      "style": "minimal",
+      "icon": "plus",
+      "iconPosition": "right",
+      "singleOpen": true
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1920&q=80",
+      "overlayColor": "#052e16",
+      "overlayOpacity": 60,
+      "textColor": "#f0fdf4",
+      "paddingY": 104,
+      "align": "center",
+      "width": "narrow"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#bbf7d0"
+      },
+      "question": {
+        "color": "#ffffff"
+      },
+      "answer": {
+        "color": "#dcfce7"
+      }
+    }
+  }
+}

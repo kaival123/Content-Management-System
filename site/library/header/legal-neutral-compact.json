@@ -1,0 +1,32 @@
+{
+  "name": "Legal page compact header",
+  "description": "Compact neutral header for terms and privacy pages.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Legal",
+      "heading": "Privacy policy",
+      "text": "Last updated 1 January 2027. This page explains what we collect, why we collect it and how you stay in control.",
+      "buttonLabel": "",
+      "buttonHref": ""
+    },
+    "style": {
+      "background": "#f5f5f4",
+      "textColor": "#1c1917",
+      "align": "left",
+      "paddingTop": 56,
+      "paddingBottom": 48,
+      "width": "narrow"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 36,
+        "fontWeight": 700
+      },
+      "text": {
+        "color": "#57534e",
+        "fontSize": 16
+      }
+    }
+  }
+}

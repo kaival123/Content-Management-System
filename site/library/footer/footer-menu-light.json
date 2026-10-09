@@ -1,0 +1,24 @@
+{
+  "name": "Footer · site menu light",
+  "description": "Uses the site page menu, light surface, centered.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": true,
+      "socials": [],
+      "divider": "line",
+      "copyrightAlign": "center",
+      "linkStyle": "underline",
+      "brand": "Northgate Dental",
+      "tagline": "Gentle care for the whole family.",
+      "layout": "centered",
+      "links": [],
+      "copyright": "© 2026 Northgate Dental Group"
+    },
+    "style": {
+      "paddingY": 48,
+      "background": "__surface__",
+      "textColor": "__text__"
+    }
+  }
+}

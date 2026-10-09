@@ -1,0 +1,47 @@
+{
+  "name": "Agency purple gradient",
+  "description": "Vibrant purple-to-pink gradient for a creative studio, centered.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Brand, web and motion studio",
+      "heading": "We make brands people remember",
+      "subheading": "A 12-person studio crafting identities, websites and campaigns for startups that refuse to blend in.",
+      "primaryLabel": "See our work",
+      "primaryHref": "#work",
+      "secondaryLabel": "Start a project",
+      "secondaryHref": "#contact",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#7c3aed",
+      "gradientTo": "#db2777",
+      "gradientAngle": 120,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 128
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 64,
+        "fontWeight": 800
+      },
+      "subheading": {
+        "color": "#fce7f3"
+      },
+      "primary": {
+        "background": "#ffffff",
+        "color": "#7c3aed",
+        "radius": 999
+      },
+      "secondary": {
+        "color": "#ffffff",
+        "borderColor": "#f9a8d4",
+        "radius": 999
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Partners on dark",
+  "description": "Light-on-dark partner strip.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Integrates with your stack",
+      "logos": [
+        {
+          "name": "Slack",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Notion",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Stripe",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Zapier",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Shopify",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "HubSpot",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "paddingY": 56,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 6,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 24
+    }
+  }
+}

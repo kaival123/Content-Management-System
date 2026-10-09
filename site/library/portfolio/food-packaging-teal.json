@@ -1,0 +1,82 @@
+{
+  "name": "Food and packaging",
+  "description": "Food brand and packaging work on a teal gradient.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Good food, well dressed",
+      "subheading": "Packaging and labels for makers, growers and cafes.",
+      "shape": "1/1",
+      "captionOnHover": false,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+          "title": "Roastery bags",
+          "caption": "Packaging",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=900&q=80",
+          "title": "Orchard juice labels",
+          "caption": "Labels",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=900&q=80",
+          "title": "Heritage grain boxes",
+          "caption": "Retail",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "title": "Microgreens range",
+          "caption": "Branding",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Cafe identity",
+          "caption": "Branding",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "title": "Menu prints",
+          "caption": "Print",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#0d9488",
+      "gradientTo": "#10b981",
+      "gradientAngle": 120,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 18,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#134e4a",
+        "radius": 20,
+        "paddingX": 24,
+        "paddingY": 28,
+        "shadow": "lg"
+      }
+    }
+  }
+}

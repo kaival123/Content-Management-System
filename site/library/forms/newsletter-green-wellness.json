@@ -1,0 +1,27 @@
+{
+  "name": "Wellness newsletter",
+  "description": "Soft green sign-up for a wellness studio.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "Your email address",
+      "buttonLabel": "Count me in",
+      "heading": "Breathe, stretch, subscribe",
+      "text": "Weekly mini-practices and class schedule updates from our studio.",
+      "note": "Gentle emails only.",
+      "successMessage": "Namaste. You are subscribed."
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#064e3b",
+      "align": "center",
+      "paddingY": 64
+    },
+    "elements": {
+      "button": {
+        "background": "#059669",
+        "color": "#ffffff"
+      }
+    }
+  }
+}

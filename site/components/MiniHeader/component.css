@@ -1,0 +1,318 @@
+/* Mini header */
+
+
+.lp-mh {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+  font-size: 0.85rem;
+}
+
+.lp-mh-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lp-mh-brand img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.lp-mh-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lp-mh-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, currentColor 55%, transparent);
+  background: transparent;
+  line-height: 1.6;
+}
+
+.lp-mh-s-filled .lp-mh-pill {
+  border-color: transparent;
+  background: color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.lp-mh-s-plain .lp-mh-pill {
+  border-color: transparent;
+  padding-inline: 8px;
+}
+
+a.lp-mh-pill:hover {
+  border-color: currentColor;
+}
+
+.lp-mh-font {
+  padding: 2px 6px;
+  gap: 2px;
+}
+
+.lp-mh-font button {
+  font: inherit;
+  font-weight: 700;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.lp-mh-font button:hover {
+  background: color-mix(in srgb, currentColor 15%, transparent);
+}
+
+
+.lp-mh-dot {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.lp-mh-dot:hover,
+.lp-mh-dot.is-active {
+  border-color: #fff;
+  box-shadow: 0 0 0 1px currentColor;
+}
+
+@media (max-width: 760px) {
+  .lp-mh {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .lp-mh-tools {
+    justify-content: center;
+  }
+}
+
+/* Screen reader access mode (toggled by a #screen-reader link) */
+.lp-sr-mode a:not(.lp-btn):not(.lp-mh-pill):not(.lp-mh-brand):not(.lp-brand):not(.lp-nav-links a) {
+  text-decoration: underline;
+}
+
+.lp-sr-mode :focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 2px;
+}
+
+.lp-sr-mode a[data-mh-reader] {
+  border-color: currentColor;
+  background: color-mix(in srgb, currentColor 22%, transparent);
+}
+
+.lp-sr-mode a[data-mh-reader]::before {
+  content: "\2713";
+  font-weight: 700;
+}
+
+/* Hide Google Translate's own banner and tooltip; the mini header's language menu replaces them */
+body > .skiptranslate,
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/*
+ * Theme dots with a page background: the whole page follows the theme.
+ * - sections alternate between the page background and the surface colour
+ * - the top bar and footer get a deep shade of the accent colour
+ * Gradient sections are flattened to the theme too; only sections with a background picture keep it (and their own text colour).
+ */
+.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-footer):not([style*="url("]) {
+  color: var(--lp-text) !important;
+}
+
+.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-footer):not(.lp-sec-navbar):not([style*="url("]) {
+  background: var(--lp-bg) !important;
+}
+
+.lp-themed .lp-section:not(.lp-sec-mini-header):not(.lp-sec-footer):not(.lp-sec-navbar):not([style*="url("]):nth-child(even) {
+  background: var(--lp-surface) !important;
+}
+
+.lp-themed .lp-sec-mini-header,
+.lp-themed .lp-sec-footer {
+  color: #f8fafc !important;
+  background: color-mix(in srgb, var(--lp-primary) 24%, #0a0a14) !important;
+}
+
+.lp-themed .lp-sec-navbar {
+  background: var(--lp-surface) !important;
+  box-shadow: 0 2px 14px color-mix(in srgb, var(--lp-text) 12%, transparent);
+}
+
+/* Dark themes: the top bar and footer are plain dark surfaces, not a tinted shade of the accent */
+.lp-themed-dark .lp-sec-mini-header,
+.lp-themed-dark .lp-sec-footer {
+  color: var(--lp-text) !important;
+  background: var(--lp-surface) !important;
+}
+
+.lp-themed-dark .lp-sec-mini-header {
+  border-bottom: 1px solid color-mix(in srgb, var(--lp-text) 14%, transparent);
+}
+
+/*
+ * Bar colour "Theme" (the default): the bar uses the selected theme - a deep shade of its accent colour, or the
+ * dark surface in dark themes. With "Custom" the section's own background and text colour are used.
+ */
+.lp-sec-mini-header:has(.lp-mh-bar-theme) {
+  color: #f8fafc !important;
+  background: color-mix(in srgb, var(--lp-primary) 24%, #0a0a14) !important;
+}
+
+.lp-themed-dark .lp-sec-mini-header:has(.lp-mh-bar-theme) {
+  color: var(--lp-text) !important;
+  background: var(--lp-surface) !important;
+}
+
+/* Language menu: a button with a globe and chevron, and a floating list */
+.lp-mh-langbox {
+  position: relative;
+}
+
+.lp-mh-native {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lp-mh-lang-btn {
+  cursor: pointer;
+  font-weight: 600;
+  gap: 8px;
+}
+
+.lp-mh-chev {
+  transition: transform 0.18s ease;
+}
+
+.lp-mh-langbox.is-open .lp-mh-chev {
+  transform: rotate(180deg);
+}
+
+.lp-mh-langlist {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 100%;
+  width: max-content;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  border-radius: 12px;
+  border: 1px solid rgb(15 23 42 / 0.1);
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 18px 40px -12px rgb(15 23 42 / 0.35), 0 4px 10px -4px rgb(15 23 42 / 0.15);
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  transform-origin: top right;
+  visibility: hidden;
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+  text-align: left;
+}
+
+.lp-mh-langbox.is-open .lp-mh-langlist {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.lp-mh-langopt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.lp-mh-langopt:hover,
+.lp-mh-langopt:focus-visible {
+  background: color-mix(in srgb, var(--lp-primary, #2563eb) 12%, #ffffff);
+}
+
+.lp-mh-langopt[aria-selected="true"] {
+  font-weight: 700;
+  color: var(--lp-primary, #2563eb);
+}
+
+.lp-mh-tick {
+  visibility: hidden;
+}
+
+.lp-mh-langopt[aria-selected="true"] .lp-mh-tick {
+  visibility: visible;
+}
+
+.lp-themed-dark .lp-mh-langlist {
+  background: #1b1b24;
+  color: #f3f4f6;
+  border-color: rgb(255 255 255 / 0.12);
+}
+
+.lp-themed-dark .lp-mh-langopt:hover,
+.lp-themed-dark .lp-mh-langopt:focus-visible {
+  background: rgb(255 255 255 / 0.08);
+}
+
+.lp-sr-mode .lp-mh-langlist {
+  text-decoration: none;
+}
+
+/* Translating: the globe spins until the page text has changed */
+@keyframes lp-mh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lp-mh-langbox.is-translating .lp-mh-globe {
+  animation: lp-mh-spin 0.9s linear infinite;
+}
+
+.lp-mh-langbox.is-translating .lp-mh-lang-btn {
+  opacity: 0.8;
+  cursor: progress;
+}

@@ -1,0 +1,124 @@
+{
+  "type": "accessibility",
+  "label": "Accessibility widget (UX4G 3.0)",
+  "description": "UX4G Accessibility Widget: round button and a side drawer with profiles, colour, content and orientation tools",
+  "icon": "settings",
+  "fields": [
+    {
+      "key": "buttonLabel",
+      "label": "Button label (screen readers / tooltip)",
+      "type": "text"
+    },
+    {
+      "key": "title",
+      "label": "Drawer title",
+      "type": "text"
+    },
+    {
+      "key": "intro",
+      "label": "Intro text (optional)",
+      "type": "textarea"
+    },
+    {
+      "key": "accent",
+      "label": "Accent colour",
+      "type": "color"
+    },
+    {
+      "key": "position",
+      "label": "Side",
+      "type": "select",
+      "options": [
+        {
+          "label": "Right",
+          "value": "right"
+        },
+        {
+          "label": "Left",
+          "value": "left"
+        }
+      ]
+    },
+    {
+      "key": "buttonStyle",
+      "label": "Button style",
+      "type": "select",
+      "options": [
+        {
+          "label": "Round icon (UX4G)",
+          "value": "round"
+        },
+        {
+          "label": "Pill with label",
+          "value": "pill"
+        },
+        {
+          "label": "Rounded square with label",
+          "value": "square"
+        }
+      ]
+    },
+    {
+      "key": "essentialOnly",
+      "label": "Show only the essential tools",
+      "type": "toggle"
+    },
+    {
+      "key": "helpLabel",
+      "label": "Footer help link label",
+      "type": "text"
+    },
+    {
+      "key": "helpHref",
+      "label": "Footer help link",
+      "type": "url"
+    }
+  ],
+  "elements": [
+    {
+      "key": "button",
+      "label": "Floating button",
+      "kind": "button",
+      "fields": [
+        "buttonLabel",
+        "buttonStyle",
+        "position",
+        "accent"
+      ]
+    },
+    {
+      "key": "panel",
+      "label": "Drawer",
+      "kind": "box",
+      "fields": [
+        "title",
+        "intro",
+        "essentialOnly"
+      ]
+    },
+    {
+      "key": "help",
+      "label": "Help link",
+      "kind": "button",
+      "fields": [
+        "helpLabel",
+        "helpHref"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "accessibility",
+    "buttonLabel": "Accessibility Options",
+    "title": "Accessibility Options by UX4G",
+    "intro": "",
+    "accent": "#613af5",
+    "position": "right",
+    "buttonStyle": "round",
+    "essentialOnly": false,
+    "helpLabel": "Need Help?",
+    "helpHref": "#contact"
+  },
+  "defaultStyle": {
+    "paddingY": 0
+  }
+}

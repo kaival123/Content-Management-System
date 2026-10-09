@@ -1,0 +1,45 @@
+{
+  "name": "Gradient tagline band",
+  "description": "Purple-to-pink gradient band with medium white taglines.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Made with care",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Built to last",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Designed for people",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Shipped on time",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "right",
+      "speed": 26,
+      "size": "medium",
+      "separator": "star",
+      "gap": 40,
+      "fade": false
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#7c3aed",
+      "gradientTo": "#ec4899",
+      "gradientAngle": 90,
+      "textColor": "#ffffff",
+      "paddingY": 20
+    }
+  }
+}

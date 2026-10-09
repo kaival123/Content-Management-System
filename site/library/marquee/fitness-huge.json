@@ -1,0 +1,43 @@
+{
+  "name": "Fitness huge words",
+  "description": "Giant solid words in lime on black for a gym brand.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Lift",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Sweat",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Repeat",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Recover",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 32,
+      "size": "huge",
+      "separator": "star",
+      "gap": 50,
+      "outline": false,
+      "fade": false
+    },
+    "style": {
+      "background": "#000000",
+      "textColor": "#bef264",
+      "paddingY": 40
+    }
+  }
+}

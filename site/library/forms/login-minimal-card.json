@@ -1,0 +1,31 @@
+{
+  "name": "Minimal card login",
+  "description": "login",
+  "section": {
+    "type": "auth",
+    "data": {
+      "mode": {
+        "heading": "Log in",
+        "text": "",
+        "buttonLabel": "Continue",
+        "switchText": "Forgot access?",
+        "switchLabel": "Contact support",
+        "image": ""
+      },
+      "switchHref": "#login",
+      "action": "",
+      "background": "__bg__",
+      "paddingY": 96,
+      "align": "center"
+    },
+    "style": {
+      "form": {
+        "borderWidth": 1,
+        "borderColor": "#e5e7eb",
+        "radius": 12,
+        "paddingX": 28,
+        "paddingY": 28
+      }
+    }
+  }
+}

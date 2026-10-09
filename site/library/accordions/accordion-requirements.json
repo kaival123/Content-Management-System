@@ -1,0 +1,56 @@
+{
+  "name": "Accordion · requirements checklist",
+  "description": "Light-green accordion listing what to prepare.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Getting ready",
+      "heading": "What you need to apply",
+      "items": [
+        {
+          "icon": "🪪",
+          "question": "Proof of identity",
+          "answer": "A valid passport or national ID card. Scans or clear phone photos are fine."
+        },
+        {
+          "icon": "🏠",
+          "question": "Proof of address",
+          "answer": "A utility bill or bank statement dated within the last three months."
+        },
+        {
+          "icon": "💼",
+          "question": "Proof of income",
+          "answer": "Your last three payslips, or two years of accounts if you are self-employed."
+        },
+        {
+          "icon": "📄",
+          "question": "Application form",
+          "answer": "Complete it online in about ten minutes. You can save and return at any time."
+        }
+      ],
+      "layout": "stacked",
+      "style": "accent",
+      "icon": "chevron",
+      "iconPosition": "right",
+      "singleOpen": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ecfdf5",
+      "textColor": "#064e3b",
+      "paddingY": 84,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#065f46"
+      },
+      "eyebrow": {
+        "color": "#059669"
+      },
+      "item": {
+        "background": "#ffffff"
+      }
+    }
+  }
+}

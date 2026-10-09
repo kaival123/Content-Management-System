@@ -1,0 +1,53 @@
+{
+  "name": "Navbar · restaurant",
+  "description": "Warm, centered menu with an outlined reservation button.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Olive & Ember",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Menu",
+          "href": "#menu"
+        },
+        {
+          "label": "Wine list",
+          "href": "#wine"
+        },
+        {
+          "label": "Private dining",
+          "href": "#events"
+        },
+        {
+          "label": "Visit",
+          "href": "#visit"
+        }
+      ],
+      "ctaLabel": "Reserve a table",
+      "ctaHref": "#reserve",
+      "sticky": true,
+      "layout": "centered",
+      "linkStyle": "plain",
+      "ctaStyle": "outline",
+      "barStyle": "none",
+      "mobileMenu": "dropdown"
+    },
+    "style": {
+      "paddingY": 22,
+      "background": "#2a1d15",
+      "textColor": "#f5e9dc"
+    },
+    "elements": {
+      "brand": {
+        "fontWeight": 700,
+        "textTransform": "uppercase",
+        "letterSpacing": 3
+      },
+      "cta": {
+        "color": "#f5e9dc",
+        "borderColor": "#c9a27a"
+      }
+    }
+  }
+}

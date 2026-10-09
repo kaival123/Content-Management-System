@@ -1,0 +1,60 @@
+{
+  "name": "Real estate market notes",
+  "description": "Market commentary in a wide two-column layout.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Market notes",
+      "subheading": "What buyers, sellers and landlords should know this quarter.",
+      "posts": [
+        {
+          "title": "Are prices peaking in the western suburbs?",
+          "excerpt": "Our data on listings, offers and days on market.",
+          "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
+          "category": "Market",
+          "date": "Oct 1, 2026",
+          "author": "Vikram Joshi",
+          "link": "#"
+        },
+        {
+          "title": "The five neighbourhoods to watch in 2027",
+          "excerpt": "New transit lines are changing where people want to live.",
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "category": "Neighbourhoods",
+          "date": "Sep 15, 2026",
+          "author": "Neha Kulkarni",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0f9ff",
+      "textColor": "#0c4a6e",
+      "align": "center",
+      "paddingTop": 72,
+      "paddingBottom": 72,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#075985"
+      },
+      "card": {
+        "borderColor": "#bae6fd",
+        "radius": 14,
+        "background": "#ffffff",
+        "color": "#0c4a6e",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

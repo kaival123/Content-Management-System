@@ -1,0 +1,66 @@
+{
+  "name": "SaaS product updates",
+  "description": "Release notes and engineering posts on a dark background.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Product updates",
+      "subheading": "What we shipped, what we learned and what is next.",
+      "posts": [
+        {
+          "title": "Introducing custom dashboards",
+          "excerpt": "Drag, drop and share live charts with your whole team.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+          "category": "Release",
+          "date": "Oct 2, 2026",
+          "author": "Elena Petrova",
+          "link": "#"
+        },
+        {
+          "title": "Our new mobile app is live",
+          "excerpt": "Approve requests and check metrics from anywhere.",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=900&q=80",
+          "category": "Release",
+          "date": "Sep 19, 2026",
+          "author": "Marcus Chen",
+          "link": "#"
+        },
+        {
+          "title": "How we cut query time by 80%",
+          "excerpt": "A look at the indexing changes behind the speed-up.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "category": "Engineering",
+          "date": "Sep 5, 2026",
+          "author": "Tara Nguyen",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "align": "center",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#1e293b",
+        "radius": 16,
+        "paddingX": 28,
+        "paddingY": 28
+      }
+    }
+  }
+}

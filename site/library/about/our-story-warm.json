@@ -1,0 +1,37 @@
+{
+  "name": "Our story on warm cream",
+  "description": "Founder-style story with cream background, image right.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "A family bakery with a big heart",
+      "text": "What began as a single oven in our grandmother's kitchen is now a neighbourhood favourite. We still knead every loaf by hand, using stone-ground flour from farms we know by name.",
+      "bullets": [
+        "Baked fresh every morning from 4 am",
+        "Naturally leavened, no additives",
+        "Three generations of recipes"
+      ],
+      "buttonLabel": "Read our story",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1200&q=80",
+      "imageSide": "right"
+    },
+    "style": {
+      "background": "#fdf6e3",
+      "textColor": "#3b2410",
+      "paddingY": 96
+    },
+    "elements": {
+      "image": {
+        "radius": 200,
+        "aspectRatio": "1/1",
+        "objectFit": "cover"
+      },
+      "button": {
+        "background": "#9a3412",
+        "color": "#ffffff",
+        "radius": 999
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Large team photos, dark",
+  "description": "Large photo-led cards on a dark gradient.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Behind the scenes",
+      "subheading": "The people who answer when you call.",
+      "members": [
+        {
+          "name": "Aaron Blake",
+          "role": "Operations",
+          "bio": "Keeps the trains running.",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Zoe Mitchell",
+          "role": "Marketing",
+          "bio": "Tells our story.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Arjun Nair",
+          "role": "Engineering",
+          "bio": "Writes the code and the docs.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#111827",
+      "gradientTo": "#374151",
+      "gradientAngle": 180,
+      "textColor": "#f3f4f6",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#1f2937",
+        "color": "#f3f4f6",
+        "radius": 14,
+        "paddingX": 26,
+        "paddingY": 26
+      }
+    }
+  }
+}

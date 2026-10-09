@@ -1,0 +1,39 @@
+{
+  "name": "Donate page header",
+  "description": "Bold green header for a donation page with strong call to action.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Home / Get involved / Donate",
+      "heading": "Give clean water, give a future",
+      "text": "Rs 1,500 provides safe drinking water for a family for a full year. Every donation is tax exempt under 80G.",
+      "buttonLabel": "Donate Rs 1,500",
+      "buttonHref": "#donate"
+    },
+    "style": {
+      "background": "#15803d",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 92
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#bbf7d0"
+      },
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 48,
+        "fontWeight": 800
+      },
+      "text": {
+        "color": "#dcfce7"
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "#14532d",
+        "radius": 999,
+        "fontWeight": 700
+      }
+    }
+  }
+}

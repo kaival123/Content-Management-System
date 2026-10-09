@@ -1,0 +1,54 @@
+{
+  "name": "Navbar · floating dark bar",
+  "description": "Rounded floating dark bar with a coloured button.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Orbit",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Product",
+          "href": "#product"
+        },
+        {
+          "label": "Customers",
+          "href": "#customers"
+        },
+        {
+          "label": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "label": "Docs",
+          "href": "#docs"
+        }
+      ],
+      "ctaLabel": "Try Orbit",
+      "ctaHref": "#signup",
+      "sticky": true,
+      "layout": "default",
+      "linkStyle": "plain",
+      "ctaStyle": "solid",
+      "barStyle": "floating",
+      "mobileMenu": "card"
+    },
+    "style": {
+      "paddingY": 18,
+      "background": "#111827",
+      "textColor": "#ffffff"
+    },
+    "elements": {
+      "brand": {
+        "color": "#ffffff"
+      },
+      "link": {
+        "color": "#e2e8f0"
+      },
+      "cta": {
+        "background": "#6366f1",
+        "color": "#ffffff"
+      }
+    }
+  }
+}

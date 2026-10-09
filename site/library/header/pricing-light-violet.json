@@ -1,0 +1,34 @@
+{
+  "name": "Pricing page header",
+  "description": "Soft violet header with a centered title for a pricing page.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Home / Pricing",
+      "heading": "Simple, transparent pricing",
+      "text": "Start free and upgrade when you are ready. No setup fees, no lock-in, cancel any time.",
+      "buttonLabel": "Compare all plans",
+      "buttonHref": "#plans"
+    },
+    "style": {
+      "background": "#f5f3ff",
+      "textColor": "#2e1065",
+      "align": "center",
+      "paddingY": 88
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#7c3aed"
+      },
+      "heading": {
+        "color": "#2e1065",
+        "fontWeight": 800
+      },
+      "button": {
+        "background": "#7c3aed",
+        "color": "#ffffff",
+        "radius": 10
+      }
+    }
+  }
+}

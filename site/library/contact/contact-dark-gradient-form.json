@@ -1,0 +1,36 @@
+{
+  "name": "Contact · dark gradient",
+  "description": "Dark indigo gradient with a light form box.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Let us build something great",
+      "text": "Tell us a little about your project and a strategist will reply within one working day.",
+      "email": "studio@pixelforge.io",
+      "phone": "+1 (212) 555-0188",
+      "address": "90 Fifth Avenue, Floor 7\nNew York, NY 10011",
+      "buttonLabel": "Start the conversation",
+      "successMessage": "Thanks, we have your message and will reply within one working day."
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#1e1b4b",
+      "gradientTo": "#4c1d95",
+      "gradientAngle": 135,
+      "textColor": "#e9d5ff",
+      "paddingY": 104,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "text": {
+        "color": "#ddd6fe"
+      },
+      "details": {
+        "color": "#e9d5ff"
+      }
+    }
+  }
+}

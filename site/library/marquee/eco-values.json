@@ -1,0 +1,47 @@
+{
+  "name": "Eco values strip",
+  "description": "Soft green strip of sustainability promises.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Carbon neutral shipping",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Recycled packaging",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Plant-based dyes",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Fair-wage partners",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "1% for the planet",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 36,
+      "size": "medium",
+      "separator": "star",
+      "gap": 42,
+      "fade": true
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#065f46",
+      "paddingY": 26
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Left-aligned light",
+  "description": "Light surface, left aligned, understated.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Questions before you buy?",
+      "text": "Our solutions team answers within one business day, with no sales pressure.",
+      "buttonLabel": "Talk to an expert",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "background": "__surface__",
+      "textColor": "__text__",
+      "align": "left",
+      "paddingY": 72,
+      "width": "narrow"
+    },
+    "elements": {
+      "button": {
+        "radius": 6
+      }
+    }
+  }
+}

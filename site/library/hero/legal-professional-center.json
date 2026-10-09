@@ -1,0 +1,49 @@
+{
+  "name": "Law firm hero",
+  "description": "Conservative centered hero in navy and gold for a professional services firm.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Corporate and commercial law",
+      "heading": "Clear counsel for complex decisions",
+      "subheading": "Thirty years of experience guiding founders and family businesses through contracts, disputes and growth.",
+      "primaryLabel": "Book a consultation",
+      "primaryHref": "#contact",
+      "secondaryLabel": "Practice areas",
+      "secondaryHref": "#services",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "background": "#0b1f3a",
+      "textColor": "#f8fafc",
+      "align": "center",
+      "paddingY": 120
+    },
+    "elements": {
+      "eyebrow": {
+        "color": "#d4a94a",
+        "textTransform": "uppercase",
+        "letterSpacing": 3
+      },
+      "heading": {
+        "color": "#f8fafc",
+        "fontWeight": 600,
+        "fontSize": 54
+      },
+      "subheading": {
+        "color": "#cbd5e1"
+      },
+      "primary": {
+        "background": "#d4a94a",
+        "color": "#0b1f3a",
+        "radius": 2
+      },
+      "secondary": {
+        "color": "#f8fafc",
+        "borderColor": "#d4a94a",
+        "radius": 2
+      }
+    }
+  }
+}

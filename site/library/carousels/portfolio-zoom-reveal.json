@@ -1,0 +1,96 @@
+{
+  "name": "Portfolio · zoom reveal",
+  "description": "One project at a time revealed with a zoom mask, bold bar controls.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "",
+      "slideHeight": 520,
+      "heading": "Selected projects",
+      "variant": "portfolio",
+      "overlay": 35,
+      "slides": [
+        {
+          "heading": "Fintech banking app",
+          "eyebrow": "Product design",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=1400&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#case-1",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Alpine travel platform",
+          "eyebrow": "Web design",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1400&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#case-2",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Analytics dashboard",
+          "eyebrow": "SaaS",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#case-3",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Artisan packaging",
+          "eyebrow": "Branding",
+          "text": "",
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1400&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "#case-4",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "paddingTop": 80,
+      "paddingBottom": 80,
+      "width": "boxed"
+    },
+    "carousel": {
+      "perViewDesktop": 1,
+      "perViewTablet": 1,
+      "perViewMobile": 1,
+      "gap": 0,
+      "autoplay": true,
+      "autoplaySpeed": 6000,
+      "speed": 900,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": false,
+      "transition": "mask-zoom",
+      "pauseOnHover": true,
+      "dotsPosition": "bar",
+      "dotsStyle": "fraction",
+      "arrowStyle": "square",
+      "radius": 20,
+      "heightMode": "fixed",
+      "heightDesktop": 520,
+      "heightTablet": 420,
+      "heightMobile": 320
+    }
+  }
+}

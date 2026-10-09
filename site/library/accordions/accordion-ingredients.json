@@ -1,0 +1,53 @@
+{
+  "name": "Accordion · ingredients",
+  "description": "Skincare ingredients with emoji, fast animation and light teal.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "What is inside",
+      "heading": "Ingredients we trust",
+      "items": [
+        {
+          "icon": "💧",
+          "question": "Hyaluronic acid",
+          "answer": "Holds up to 1000 times its weight in water, leaving skin plump and hydrated all day."
+        },
+        {
+          "icon": "🍊",
+          "question": "Vitamin C",
+          "answer": "A stable 10 percent formula that brightens tone and protects against daily pollution."
+        },
+        {
+          "icon": "🌾",
+          "question": "Oat extract",
+          "answer": "Calms redness and supports a healthy skin barrier, ideal for sensitive skin."
+        },
+        {
+          "icon": "🧴",
+          "question": "Squalane",
+          "answer": "A lightweight, plant-derived oil that seals in moisture without feeling greasy."
+        }
+      ],
+      "layout": "two-column",
+      "style": "filled",
+      "icon": "plus",
+      "iconPosition": "left",
+      "speed": 200
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#f0fdfa",
+      "textColor": "#134e4a",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#0f766e"
+      },
+      "eyebrow": {
+        "color": "#0d9488"
+      }
+    }
+  }
+}

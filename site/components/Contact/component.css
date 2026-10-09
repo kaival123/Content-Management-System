@@ -56,3 +56,59 @@
   font-weight: 600;
   margin: 0;
 }
+
+/* Optional map next to / below the form */
+.lp-contact-map {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--lp-text) 15%, transparent);
+  min-height: 360px;
+}
+
+.lp-contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  border: 0;
+}
+
+.lp-contact-map-side,
+.lp-contact-map-side-reverse {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Stack details above the form inside the left column when a map takes the other half */
+.lp-contact-map-side .lp-contact-inner,
+.lp-contact-map-side-reverse .lp-contact-inner {
+  grid-template-columns: 1fr;
+}
+
+.lp-contact-map-side-reverse .lp-contact-map {
+  order: -1;
+}
+
+.lp-contact-map-below .lp-contact-map {
+  margin-top: 32px;
+}
+
+.lp-contact-map-below .lp-contact-map iframe {
+  height: 380px;
+}
+
+@media (max-width: 860px) {
+  .lp-contact-map-side,
+  .lp-contact-map-side-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-contact-map-side-reverse .lp-contact-map {
+    order: 0;
+  }
+}
+
+.lp-contact-map.lp-map-shadow-soft { box-shadow: 0 4px 14px rgb(0 0 0 / 0.08); }
+.lp-contact-map.lp-map-shadow-medium { box-shadow: 0 10px 30px rgb(0 0 0 / 0.15); }
+.lp-contact-map.lp-map-shadow-large { box-shadow: 0 20px 50px rgb(0 0 0 / 0.25); }

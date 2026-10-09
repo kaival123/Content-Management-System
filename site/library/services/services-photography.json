@@ -1,0 +1,55 @@
+{
+  "name": "Services · photography packages",
+  "description": "Wedding and portrait packages with soft cards.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Photography services",
+      "subheading": "Natural, candid photography for life's big moments.",
+      "items": [
+        {
+          "icon": "💒",
+          "title": "Weddings",
+          "text": "Full-day coverage, second shooter and a private online gallery."
+        },
+        {
+          "icon": "👨‍👩‍👧",
+          "title": "Family portraits",
+          "text": "Relaxed sessions outdoors or at home, edited within two weeks."
+        },
+        {
+          "icon": "🏢",
+          "title": "Corporate headshots",
+          "text": "On-site team portraits with consistent lighting."
+        },
+        {
+          "icon": "📦",
+          "title": "Product shoots",
+          "text": "Clean studio and lifestyle imagery for online shops."
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "style": {
+      "background": "#fffbeb",
+      "paddingY": 84
+    },
+    "elements": {
+      "card": {
+        "radius": 6,
+        "paddingY": 30,
+        "paddingX": 28
+      },
+      "icon": {
+        "fontSize": 34
+      }
+    }
+  }
+}

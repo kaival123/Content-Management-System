@@ -1,0 +1,216 @@
+{
+  "type": "map",
+  "label": "Google Map",
+  "description": "Embedded Google Map for an address",
+  "icon": "globe",
+  "fields": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "type": "text"
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "type": "textarea"
+    },
+    {
+      "key": "address",
+      "label": "Address / place",
+      "type": "text"
+    },
+    {
+      "key": "embedUrl",
+      "label": "One map with many pins: Google My Maps embed link or code",
+      "type": "textarea"
+    },
+    {
+      "key": "locations",
+      "label": "Locations (leave empty for a single map)",
+      "type": "list",
+      "itemLabel": "Location",
+      "itemFields": [
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text"
+        },
+        {
+          "key": "address",
+          "label": "Address / place",
+          "type": "text"
+        },
+        {
+          "key": "details",
+          "label": "Details (hours, phone…)",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "key": "locationsView",
+      "label": "Locations view",
+      "type": "select",
+      "options": [
+        {
+          "label": "Tabs",
+          "value": "tabs"
+        },
+        {
+          "label": "Side list",
+          "value": "side"
+        },
+        {
+          "label": "Grid of maps",
+          "value": "grid"
+        },
+        {
+          "label": "One map, all locations as pins",
+          "value": "pins"
+        }
+      ]
+    },
+    {
+      "key": "details",
+      "label": "Details (hours, phone…)",
+      "type": "textarea"
+    },
+    {
+      "key": "buttonLabel",
+      "label": "Directions button label",
+      "type": "text"
+    },
+    {
+      "key": "height",
+      "label": "Map height (px)",
+      "type": "number"
+    },
+    {
+      "key": "radius",
+      "label": "Border radius (px)",
+      "type": "number"
+    },
+    {
+      "key": "shadow",
+      "label": "Shadow",
+      "type": "select",
+      "options": [
+        {
+          "label": "None",
+          "value": "none"
+        },
+        {
+          "label": "Soft",
+          "value": "soft"
+        },
+        {
+          "label": "Medium",
+          "value": "medium"
+        },
+        {
+          "label": "Large",
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "key": "layout",
+      "label": "Layout",
+      "type": "select",
+      "options": [
+        {
+          "label": "Text above map",
+          "value": "stacked"
+        },
+        {
+          "label": "Text left, map right",
+          "value": "split"
+        },
+        {
+          "label": "Map left, text right",
+          "value": "split-reverse"
+        },
+        {
+          "label": "Card over map",
+          "value": "overlay"
+        }
+      ]
+    },
+    {
+      "key": "grayscale",
+      "label": "Grayscale map",
+      "type": "toggle"
+    }
+  ],
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "kind": "text",
+      "fields": [
+        "heading"
+      ]
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "kind": "text",
+      "fields": [
+        "text"
+      ]
+    },
+    {
+      "key": "details",
+      "label": "Details",
+      "kind": "text",
+      "fields": [
+        "details"
+      ]
+    },
+    {
+      "key": "button",
+      "label": "Directions button",
+      "kind": "button",
+      "fields": [
+        "buttonLabel"
+      ]
+    },
+    {
+      "key": "location",
+      "label": "Location buttons",
+      "kind": "box",
+      "list": "locations",
+      "fields": [
+        "name",
+        "address"
+      ]
+    },
+    {
+      "key": "map",
+      "label": "Map",
+      "kind": "box",
+      "fields": [
+        "address",
+        "height",
+        "radius",
+        "shadow",
+        "layout",
+        "grayscale",
+        "locations",
+        "locationsView",
+        "embedUrl"
+      ]
+    }
+  ],
+  "defaults": {
+    "anchor": "map",
+    "heading": "Find us here",
+    "text": "Visit our office or get directions below.",
+    "address": "123 Main Street, San Francisco, CA",
+    "height": 400,
+    "radius": 12,
+    "shadow": "soft",
+    "layout": "stacked",
+    "locationsView": "tabs"
+  }
+}

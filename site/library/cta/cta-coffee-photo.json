@@ -1,0 +1,30 @@
+{
+  "name": "Studio photo banner",
+  "description": "Left aligned over a studio photograph.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Taste the difference this week",
+      "text": "Freshly roasted beans, ground to order, with free shipping over $30.",
+      "buttonLabel": "Shop the roast",
+      "buttonHref": "#shop"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1920&q=80",
+      "overlayColor": "#1c1917",
+      "overlayOpacity": 60,
+      "textColor": "#fafaf9",
+      "align": "left",
+      "paddingY": 112,
+      "width": "narrow"
+    },
+    "elements": {
+      "button": {
+        "background": "#d97706",
+        "color": "#ffffff",
+        "radius": 6
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Services · priced services",
+  "description": "Services with starting prices in each card.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Salon menu",
+      "subheading": "Prices shown are starting rates; final quote after consultation.",
+      "items": [
+        {
+          "icon": "💇",
+          "title": "Cut & style",
+          "text": "From $45"
+        },
+        {
+          "icon": "🎨",
+          "title": "Colour & highlights",
+          "text": "From $110"
+        },
+        {
+          "icon": "💆",
+          "title": "Scalp treatment",
+          "text": "From $60"
+        },
+        {
+          "icon": "💅",
+          "title": "Manicure",
+          "text": "From $35"
+        },
+        {
+          "icon": "💍",
+          "title": "Bridal package",
+          "text": "From $250"
+        },
+        {
+          "icon": "🧖",
+          "title": "Facial",
+          "text": "From $80"
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 18,
+      "cardStyle": "bordered",
+      "textAlign": "center"
+    },
+    "style": {
+      "background": "#fdf2f8",
+      "paddingY": 76,
+      "align": "center"
+    },
+    "elements": {
+      "card": {
+        "borderColor": "#f9a8d4",
+        "radius": 10
+      },
+      "text": {
+        "fontSize": 20,
+        "fontWeight": 700,
+        "color": "#be185d"
+      }
+    }
+  }
+}

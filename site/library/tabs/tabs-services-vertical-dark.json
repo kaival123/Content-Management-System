@@ -1,0 +1,53 @@
+{
+  "name": "Tabs · vertical dark pills",
+  "description": "Dark vertical pill tabs with panel images.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Our services",
+      "heading": "Creative that converts",
+      "orientation": "vertical",
+      "style": "pills",
+      "items": [
+        {
+          "label": "Branding",
+          "icon": "🎯",
+          "title": "Identity that sticks",
+          "text": "Logos, colour, tone of voice and guidelines that make your business unforgettable.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
+        },
+        {
+          "label": "Web design",
+          "icon": "🖥️",
+          "title": "Sites that perform",
+          "text": "Fast, accessible websites designed around your customers and built to convert.",
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80"
+        },
+        {
+          "label": "Content",
+          "icon": "✍️",
+          "title": "Words that work",
+          "text": "Case studies, blog posts and campaign copy written by specialists in your industry.",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "buttonLabel": "See our work",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#0b0f19",
+      "textColor": "#cbd5e1",
+      "paddingY": 100,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#38bdf8"
+      }
+    }
+  }
+}

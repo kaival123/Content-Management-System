@@ -1,0 +1,55 @@
+{
+  "name": "Accordion · support topics",
+  "description": "White cards with icons in two columns for support topics.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "heading": "Browse help topics",
+      "subheading": "Find a guide, or contact us if you cannot see what you need.",
+      "items": [
+        {
+          "icon": "🔑",
+          "question": "Logging in",
+          "answer": "Reset your password from the sign-in page. If you are locked out, contact support to verify your identity."
+        },
+        {
+          "icon": "💳",
+          "question": "Billing",
+          "answer": "Update your card, download invoices and change plans from Settings, then Billing."
+        },
+        {
+          "icon": "📥",
+          "question": "Importing data",
+          "answer": "Upload a CSV or connect an existing tool. Imports of up to 100,000 rows take a few minutes."
+        },
+        {
+          "icon": "👥",
+          "question": "Teams and roles",
+          "answer": "Invite colleagues and choose between admin, editor and viewer permissions."
+        }
+      ],
+      "layout": "two-column",
+      "style": "cards",
+      "icon": "chevron",
+      "iconPosition": "right",
+      "ctaText": "Still stuck?",
+      "buttonLabel": "Open a ticket",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ffffff",
+      "textColor": "#111827",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#111827"
+      },
+      "item": {
+        "radius": 12
+      }
+    }
+  }
+}

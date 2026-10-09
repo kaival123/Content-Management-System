@@ -1,0 +1,42 @@
+{
+  "name": "Travel experience about",
+  "description": "Sunset-toned about section for a travel company, image right.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Travel that feels like coming home",
+      "text": "We design trips with local families, not big hotels. You will cook with a village grandmother, hike with a guide who grew up on the trail and leave with friends in every region.",
+      "bullets": [
+        "Groups capped at 12",
+        "Locally owned stays",
+        "Carbon-offset itineraries"
+      ],
+      "buttonLabel": "Browse journeys",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80",
+      "imageSide": "right"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#fff7ed",
+      "gradientTo": "#ffedd5",
+      "gradientAngle": 160,
+      "textColor": "#431407",
+      "paddingY": 92
+    },
+    "elements": {
+      "heading": {
+        "color": "#9a3412"
+      },
+      "image": {
+        "radius": 24,
+        "shadow": "md"
+      },
+      "button": {
+        "background": "#ea580c",
+        "color": "#ffffff",
+        "radius": 999
+      }
+    }
+  }
+}

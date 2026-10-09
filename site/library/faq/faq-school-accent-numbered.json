@@ -1,0 +1,64 @@
+{
+  "name": "FAQ · school admissions",
+  "description": "Cream background with accent bars and numbered questions.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Admissions",
+      "heading": "Joining Maplewood Academy",
+      "subheading": "Guidance for parents applying for the coming school year.",
+      "items": [
+        {
+          "question": "When do applications open?",
+          "answer": "Applications open on 1 September and close on 15 January for entry the following autumn.",
+          "icon": ""
+        },
+        {
+          "question": "Do you offer open days?",
+          "answer": "Yes. We hold open mornings each month, and private tours can be booked any weekday.",
+          "icon": ""
+        },
+        {
+          "question": "What is the class size?",
+          "answer": "We cap classes at 22 pupils, with a teaching assistant in every year group up to Year 4.",
+          "icon": ""
+        },
+        {
+          "question": "Are scholarships available?",
+          "answer": "Means-tested bursaries and academic and music scholarships are available from Year 7.",
+          "icon": ""
+        },
+        {
+          "question": "Is there wraparound care?",
+          "answer": "Breakfast club runs from 7:30am and after-school clubs finish at 6pm.",
+          "icon": ""
+        }
+      ],
+      "layout": "stacked",
+      "style": "accent",
+      "icon": "chevron",
+      "iconPosition": "right",
+      "numbered": true,
+      "singleOpen": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#fffbeb",
+      "textColor": "#292524",
+      "paddingY": 92,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#78350f",
+        "fontWeight": 800
+      },
+      "eyebrow": {
+        "color": "#b45309"
+      },
+      "item": {
+        "background": "#ffffff"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Accessibility tools only",
+  "description": "Text size and screen reader access, nothing else.",
+  "section": {
+    "type": "mini-header",
+    "data": {
+      "showFontSize": true,
+      "title": "",
+      "links": [
+        {
+          "label": "Screen Reader Access",
+          "href": "#screen-reader"
+        }
+      ],
+      "languages": [],
+      "themes": [],
+      "pillStyle": "outline",
+      "barColor": "custom",
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 6,
+      "backgroundType": "color",
+      "textColor": "#111827",
+      "align": "right",
+      "background": "#ffffff"
+    }
+  }
+}

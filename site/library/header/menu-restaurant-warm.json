@@ -1,0 +1,37 @@
+{
+  "name": "Restaurant menu header",
+  "description": "Warm cream header for a menu page with a serif-feel uppercase title.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Home / Menu",
+      "heading": "Our seasonal menu",
+      "text": "Cooked over open fire, sourced from farms within 80 km. Menu changes with the market.",
+      "buttonLabel": "Download PDF menu",
+      "buttonHref": "#menu-pdf"
+    },
+    "style": {
+      "background": "#fdf6e3",
+      "textColor": "#3b2410",
+      "align": "center",
+      "paddingY": 96
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#a16207"
+      },
+      "heading": {
+        "color": "#3b2410",
+        "textTransform": "uppercase",
+        "letterSpacing": 4,
+        "fontSize": 42,
+        "fontWeight": 600
+      },
+      "button": {
+        "background": "#3b2410",
+        "color": "#fdf6e3",
+        "radius": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Startup screens",
+  "description": "Three-column product and dashboard screenshots on a light blue background.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Built for how you work",
+      "subheading": "A look at the dashboards teams use every day.",
+      "shape": "4/3",
+      "captionOnHover": true,
+      "images": [
+        { "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80", "title": "Live reporting", "caption": "Analytics", "link": "" },
+        { "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80", "title": "Revenue forecasts", "caption": "Finance", "link": "" },
+        { "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&q=80", "title": "Mobile companion", "caption": "Apps", "link": "" }
+      ]
+    },
+    "style": { "background": "#eff6ff", "paddingY": 84 },
+    "grid": { "desktop": 3, "tablet": 3, "mobile": 1, "gap": 20, "cardStyle": "shadow" }
+  }
+}

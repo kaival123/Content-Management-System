@@ -1,0 +1,31 @@
+{
+  "name": "Nonprofit updates signup",
+  "description": "Blue sign-up with a boxed form for a charity.",
+  "section": {
+    "type": "newsletter",
+    "data": {
+      "placeholder": "Your email address",
+      "buttonLabel": "Stay in touch",
+      "heading": "See where your help goes",
+      "text": "Quarterly stories from the field and updates on every project we support.",
+      "note": "We never share your details.",
+      "successMessage": "Thank you for staying with us."
+    },
+    "style": {
+      "background": "#e0f2fe",
+      "textColor": "#0c4a6e",
+      "align": "left",
+      "paddingY": 72
+    },
+    "elements": {
+      "form": {
+        "background": "#ffffff",
+        "radius": 12,
+        "paddingX": 18,
+        "paddingY": 18,
+        "borderWidth": 1,
+        "borderColor": "#bae6fd"
+      }
+    }
+  }
+}

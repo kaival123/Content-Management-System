@@ -1,0 +1,48 @@
+{
+  "name": "Navbar · dark pills",
+  "description": "Dark bar with pill links and a bright pill button.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Nightfall",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Work",
+          "href": "#work"
+        },
+        {
+          "label": "Services",
+          "href": "#services"
+        },
+        {
+          "label": "Journal",
+          "href": "#blog"
+        },
+        {
+          "label": "About",
+          "href": "#about"
+        }
+      ],
+      "ctaLabel": "Hire us",
+      "ctaHref": "#contact",
+      "sticky": true,
+      "layout": "default",
+      "linkStyle": "pills",
+      "ctaStyle": "pill",
+      "barStyle": "none"
+    },
+    "style": {
+      "paddingY": 14,
+      "background": "#0b1020",
+      "textColor": "#e2e8f0"
+    },
+    "elements": {
+      "cta": {
+        "background": "#38bdf8",
+        "color": "#0b1020",
+        "fontWeight": 700
+      }
+    }
+  }
+}

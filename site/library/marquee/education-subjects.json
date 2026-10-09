@@ -1,0 +1,60 @@
+{
+  "name": "Education subjects",
+  "description": "Friendly subject names in a blue band, two rows.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "heading": "Courses for every curious mind",
+      "items": [
+        {
+          "text": "Mathematics",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Biology",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Creative writing",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Robotics",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "World history",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Music theory",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Chemistry",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 42,
+      "secondRow": true,
+      "size": "medium",
+      "separator": "dot",
+      "gap": 40,
+      "fade": true
+    },
+    "style": {
+      "background": "#eff6ff",
+      "textColor": "#1e3a8a",
+      "paddingY": 44,
+      "align": "center"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Agriculture advisory",
+  "description": "Seasonal farming advice with three cards on light green.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Farm advisory",
+      "subheading": "Timely advice for every season, from our field team.",
+      "posts": [
+        {
+          "title": "Preparing maize fields for the monsoon",
+          "excerpt": "Soil prep, spacing and seed treatment checklist.",
+          "image": "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=900&q=80",
+          "category": "Crops",
+          "date": "Oct 3, 2026",
+          "author": "Ramesh Patil",
+          "link": "#"
+        },
+        {
+          "title": "Drip irrigation: is it worth it?",
+          "excerpt": "We compared water use and yield across 40 farms.",
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "category": "Irrigation",
+          "date": "Sep 21, 2026",
+          "author": "Jayashree Naik",
+          "link": "#"
+        },
+        {
+          "title": "Storing grain safely after harvest",
+          "excerpt": "Cut losses with simple moisture and pest checks.",
+          "image": "https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=900&q=80",
+          "category": "Post-harvest",
+          "date": "Sep 8, 2026",
+          "author": "Gurpreet Singh",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#064e3b",
+      "align": "left",
+      "paddingTop": 90,
+      "paddingBottom": 90
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#047857"
+      },
+      "card": {
+        "radius": 14,
+        "background": "#d1fae5",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Footer · nonprofit columns",
+  "description": "Green columns footer with donate-focused links.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [
+        {
+          "label": "Facebook",
+          "href": "#"
+        },
+        {
+          "label": "Twitter",
+          "href": "#"
+        },
+        {
+          "label": "YouTube",
+          "href": "#"
+        }
+      ],
+      "divider": "line",
+      "copyrightAlign": "auto",
+      "linkStyle": "underline",
+      "brand": "Rootwell Foundation",
+      "tagline": "Clean water for every village.",
+      "layout": "columns",
+      "links": [
+        {
+          "label": "Donate",
+          "href": "#"
+        },
+        {
+          "label": "Our impact",
+          "href": "#"
+        },
+        {
+          "label": "Volunteer",
+          "href": "#"
+        },
+        {
+          "label": "Annual report",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Rootwell Foundation. Registered charity."
+    },
+    "style": {
+      "paddingY": 80,
+      "background": "#14532d",
+      "textColor": "#bbf7d0"
+    },
+    "elements": {
+      "brand": {
+        "color": "#ffffff"
+      }
+    }
+  }
+}

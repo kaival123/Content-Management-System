@@ -1,0 +1,42 @@
+{
+  "name": "Agri farm hero overlay",
+  "description": "Sunlit field photo with deep green overlay for an agriculture business.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Farm-to-market advisory",
+      "heading": "Grow more with every acre",
+      "subheading": "Soil testing, crop planning and direct buyer access that help smallholder farmers raise yields and earn fairer prices.",
+      "primaryLabel": "Talk to an agronomist",
+      "primaryHref": "#contact",
+      "secondaryLabel": "Our programmes",
+      "secondaryHref": "#services",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1709633644385-e4e51e5646f1?w=1920&q=80",
+      "overlayColor": "#14532d",
+      "overlayOpacity": 50,
+      "minHeight": 75,
+      "verticalAlign": "center",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 112
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 58
+      },
+      "subheading": {
+        "color": "#ecfccb"
+      },
+      "primary": {
+        "background": "#84cc16",
+        "color": "#1a2e05"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "SaaS split on soft blue",
+  "description": "Light blue background with a bold headline and a dashboard screenshot.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Invoicing without the busywork",
+      "heading": "Get paid 2x faster with automated invoicing",
+      "subheading": "Send professional invoices, chase late payments automatically and reconcile your bank in one tidy dashboard.",
+      "primaryLabel": "Start 14-day trial",
+      "primaryHref": "#pricing",
+      "secondaryLabel": "Watch 2-min demo",
+      "secondaryHref": "#demo",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80",
+      "layout": "split"
+    },
+    "style": {
+      "background": "#eff6ff",
+      "textColor": "#0f172a",
+      "align": "left",
+      "paddingY": 104
+    },
+    "elements": {
+      "eyebrow": {
+        "background": "#dbeafe",
+        "color": "#1d4ed8",
+        "radius": 999
+      },
+      "image": {
+        "radius": 16,
+        "shadow": "lg"
+      }
+    }
+  }
+}

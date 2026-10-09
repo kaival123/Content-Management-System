@@ -1,0 +1,81 @@
+{
+  "name": "Campaign highlights",
+  "description": "Bold sunset gradient with six campaign thumbnails.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Campaigns that moved the needle",
+      "subheading": "Creative work with measurable results.",
+      "shape": "4/3",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+          "title": "Summer sale push",
+          "caption": "3.2x ROAS",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=900&q=80",
+          "title": "Headphone launch",
+          "caption": "1.4M views",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Rebrand reveal",
+          "caption": "+68% awareness",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "title": "Festival posters",
+          "caption": "Sold out",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80",
+          "title": "Pop-up store",
+          "caption": "12k visitors",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80",
+          "title": "Launch event",
+          "caption": "900 guests",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f97316",
+      "gradientTo": "#db2777",
+      "gradientAngle": 160,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontWeight": 800
+      },
+      "card": {
+        "background": "rgba(0,0,0,0.22)",
+        "radius": 16,
+        "paddingX": 24,
+        "paddingY": 26
+      }
+    }
+  }
+}

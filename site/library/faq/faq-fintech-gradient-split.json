@@ -1,0 +1,69 @@
+{
+  "name": "FAQ · fintech gradient split",
+  "description": "Indigo gradient, heading left with a support button.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Security and billing",
+      "heading": "Questions about your money",
+      "subheading": "We know trust matters. Here is how Ledgerly keeps your funds safe.",
+      "items": [
+        {
+          "question": "Is my money protected?",
+          "answer": "Customer funds are held in segregated accounts at regulated partner banks and protected up to the local deposit guarantee limit.",
+          "icon": ""
+        },
+        {
+          "question": "Are there any hidden fees?",
+          "answer": "No. Domestic transfers are free and international transfers show the exact fee and exchange rate before you confirm.",
+          "icon": ""
+        },
+        {
+          "question": "How fast are payments?",
+          "answer": "Domestic payments arrive instantly. International transfers typically land within one business day.",
+          "icon": ""
+        },
+        {
+          "question": "What if my card is stolen?",
+          "answer": "Freeze it in the app in one tap. We will ship a replacement within two working days.",
+          "icon": ""
+        }
+      ],
+      "layout": "split",
+      "style": "divided",
+      "icon": "plus",
+      "iconPosition": "right",
+      "singleOpen": true,
+      "openFirst": true,
+      "ctaText": "Need to talk to a human?",
+      "buttonLabel": "Chat with support",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#1e1b4b",
+      "gradientTo": "#6d28d9",
+      "gradientAngle": 140,
+      "textColor": "#ede9fe",
+      "paddingY": 100,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#c4b5fd"
+      },
+      "subheading": {
+        "color": "#ddd6fe"
+      },
+      "question": {
+        "color": "#ffffff"
+      },
+      "answer": {
+        "color": "#ddd6fe"
+      }
+    }
+  }
+}

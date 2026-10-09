@@ -1,0 +1,87 @@
+{
+  "name": "Gym memberships",
+  "description": "Three membership levels with gradient sunset background.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Pick your membership",
+      "subheading": "No joining fee this month. Freeze or cancel any time.",
+      "plans": [
+        {
+          "name": "Basic",
+          "price": "₹1,499",
+          "period": "/month",
+          "description": "Off-peak access",
+          "features": [
+            "Gym floor 6 am – 4 pm",
+            "Locker room access",
+            "1 fitness assessment"
+          ],
+          "buttonLabel": "Join Basic",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Plus",
+          "price": "₹2,499",
+          "period": "/month",
+          "description": "Most popular",
+          "features": [
+            "24/7 access",
+            "All group classes",
+            "Monthly body scan",
+            "Free guest pass"
+          ],
+          "buttonLabel": "Join Plus",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Elite",
+          "price": "₹4,999",
+          "period": "/month",
+          "description": "Train with a coach",
+          "features": [
+            "Everything in Plus",
+            "8 personal training sessions",
+            "Nutrition plan",
+            "Towel service"
+          ],
+          "buttonLabel": "Join Elite",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f97316",
+      "gradientTo": "#db2777",
+      "gradientAngle": 160,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 22,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontWeight": 800
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.16)",
+        "radius": 20,
+        "paddingX": 28,
+        "paddingY": 32
+      }
+    }
+  }
+}

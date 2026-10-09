@@ -1,0 +1,48 @@
+{
+  "name": "Clinic hero with teal accent",
+  "description": "Calm clinic hero with reassuring copy and a team photo on the right.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Family health, close to home",
+      "heading": "Care that listens before it prescribes",
+      "subheading": "Same-week appointments, transparent pricing and a team that remembers your name. New patients are always welcome.",
+      "primaryLabel": "Book an appointment",
+      "primaryHref": "#book",
+      "secondaryLabel": "Our doctors",
+      "secondaryHref": "#team",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+      "layout": "split"
+    },
+    "style": {
+      "background": "#f0fdfa",
+      "textColor": "#134e4a",
+      "align": "left",
+      "paddingY": 96
+    },
+    "elements": {
+      "eyebrow": {
+        "color": "#0f766e"
+      },
+      "heading": {
+        "color": "#134e4a",
+        "fontWeight": 800
+      },
+      "primary": {
+        "background": "#0d9488",
+        "color": "#ffffff",
+        "radius": 999
+      },
+      "secondary": {
+        "color": "#0f766e",
+        "borderColor": "#0d9488",
+        "radius": 999
+      },
+      "image": {
+        "radius": 24,
+        "aspectRatio": "4/3",
+        "objectFit": "cover"
+      }
+    }
+  }
+}

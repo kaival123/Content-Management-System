@@ -1,0 +1,52 @@
+{
+  "name": "Banking partners",
+  "description": "Deep blue strip for fintech trust.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Regulated and backed by",
+      "logos": [
+        {
+          "name": "Barclay Trust",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Allied Capital",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Crown Reserve",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Vanguard One",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#1e3a8a",
+      "textColor": "#dbeafe",
+      "paddingY": 64,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 32
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      }
+    }
+  }
+}

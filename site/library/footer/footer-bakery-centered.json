@@ -1,0 +1,56 @@
+{
+  "name": "Footer · bakery centered",
+  "description": "Warm cream footer, centered, with pill links.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [
+        {
+          "label": "Instagram",
+          "href": "#"
+        },
+        {
+          "label": "Facebook",
+          "href": "#"
+        }
+      ],
+      "divider": "line",
+      "copyrightAlign": "auto",
+      "linkStyle": "pills",
+      "brand": "Maple & Rye Bakery",
+      "tagline": "Baked fresh every morning since 1998.",
+      "layout": "centered",
+      "links": [
+        {
+          "label": "Menu",
+          "href": "#menu"
+        },
+        {
+          "label": "Catering",
+          "href": "#"
+        },
+        {
+          "label": "Visit us",
+          "href": "#contact"
+        },
+        {
+          "label": "Gift cards",
+          "href": "#"
+        }
+      ],
+      "copyright": "© 2026 Maple & Rye Bakery. Made with butter."
+    },
+    "style": {
+      "paddingY": 56,
+      "background": "#fef3c7",
+      "textColor": "#78350f"
+    },
+    "elements": {
+      "brand": {
+        "color": "#451a03",
+        "fontSize": 24
+      }
+    }
+  }
+}

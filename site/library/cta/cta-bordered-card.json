@@ -1,0 +1,32 @@
+{
+  "name": "White with big heading",
+  "description": "Plain white with oversized heading.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Let us handle the paperwork",
+      "text": "Tax filing, bookkeeping and payroll for small businesses, done right.",
+      "buttonLabel": "Schedule a call",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "background": "#ffffff",
+      "textColor": "#1f2937",
+      "align": "center",
+      "paddingY": 96
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 52,
+        "fontWeight": 800,
+        "color": "#111827"
+      },
+      "button": {
+        "background": "#111827",
+        "color": "#ffffff",
+        "radius": 8,
+        "paddingX": 32
+      }
+    }
+  }
+}

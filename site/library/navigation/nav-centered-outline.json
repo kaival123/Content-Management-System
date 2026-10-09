@@ -1,0 +1,41 @@
+{
+  "name": "Navbar · centered outline button",
+  "description": "Links centered between brand and an outline button.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Alder & Co",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Collections",
+          "href": "#collections"
+        },
+        {
+          "label": "Story",
+          "href": "#story"
+        },
+        {
+          "label": "Stockists",
+          "href": "#stockists"
+        },
+        {
+          "label": "Journal",
+          "href": "#journal"
+        }
+      ],
+      "ctaLabel": "Visit the shop",
+      "ctaHref": "#shop",
+      "sticky": true,
+      "layout": "centered",
+      "linkStyle": "underline",
+      "ctaStyle": "outline",
+      "barStyle": "line"
+    },
+    "style": {
+      "paddingY": 20,
+      "background": "#fffaf5",
+      "textColor": "#3b2f2f"
+    }
+  }
+}

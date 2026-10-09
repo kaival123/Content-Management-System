@@ -1,0 +1,66 @@
+{
+  "name": "Nonprofit impact stories",
+  "description": "Impact stories and field reports with green accents.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Stories of impact",
+      "subheading": "How your support is changing lives.",
+      "posts": [
+        {
+          "title": "A reading circle takes off",
+          "excerpt": "Forty children now read every week in Rampur.",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+          "category": "Education",
+          "date": "Oct 3, 2026",
+          "author": "Lakshmi Devi",
+          "link": "#"
+        },
+        {
+          "title": "Community gardens feed 300 families",
+          "excerpt": "Our first harvest report is in.",
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "category": "Food security",
+          "date": "Sep 20, 2026",
+          "author": "Tomas Berg",
+          "link": "#"
+        },
+        {
+          "title": "Training farmers in water-smart growing",
+          "excerpt": "The results from our first cohort.",
+          "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+          "category": "Livelihoods",
+          "date": "Sep 6, 2026",
+          "author": "Hannah Cole",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0fdf4",
+      "textColor": "#14532d",
+      "align": "left",
+      "paddingTop": 90,
+      "paddingBottom": 90
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#166534"
+      },
+      "card": {
+        "radius": 14,
+        "background": "#d1fae5",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

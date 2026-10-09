@@ -1,0 +1,60 @@
+{
+  "name": "Footer · law firm",
+  "description": "Formal columns on charcoal.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [
+        {
+          "label": "LinkedIn",
+          "href": "#"
+        },
+        {
+          "label": "Twitter",
+          "href": "#"
+        }
+      ],
+      "divider": "line",
+      "copyrightAlign": "auto",
+      "linkStyle": "plain",
+      "brand": "Hartwell & Associates",
+      "tagline": "Counsel you can rely on.",
+      "layout": "columns",
+      "links": [
+        {
+          "label": "Practice areas",
+          "href": "#"
+        },
+        {
+          "label": "Our attorneys",
+          "href": "#"
+        },
+        {
+          "label": "Case results",
+          "href": "#"
+        },
+        {
+          "label": "Careers",
+          "href": "#"
+        },
+        {
+          "label": "Disclaimer",
+          "href": "#"
+        }
+      ],
+      "copyright": "© 2026 Hartwell & Associates LLP. Attorney advertising."
+    },
+    "style": {
+      "paddingY": 72,
+      "background": "#1f2937",
+      "textColor": "#d1d5db"
+    },
+    "elements": {
+      "brand": {
+        "color": "#e5e7eb",
+        "letterSpacing": 1
+      }
+    }
+  }
+}

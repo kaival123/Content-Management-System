@@ -1,0 +1,42 @@
+{
+  "name": "Two founders",
+  "description": "Two founders with long bios in a narrow panel.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Founded by two friends",
+      "subheading": "We started this company after one too many bad experiences with the alternatives.",
+      "members": [
+        {
+          "name": "Aisha Khan",
+          "role": "Co-founder and CEO",
+          "bio": "Spent a decade in product at high-growth startups before starting the company in 2019. She still answers customer emails on Fridays.",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Marco Rossi",
+          "role": "Co-founder and CTO",
+          "bio": "Built payment systems for banks across three continents. He believes software should be boring in production and delightful in use.",
+          "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "",
+      "align": "left",
+      "paddingTop": 88,
+      "paddingBottom": 88,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    }
+  }
+}

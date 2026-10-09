@@ -1,0 +1,36 @@
+{
+  "name": "Tech platform about",
+  "description": "Light blue background, image left, product-focused copy.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "A platform that grows as you do",
+      "text": "Start with a single workflow and add automation, analytics and integrations when you need them. Our API-first architecture means you are never locked in.",
+      "bullets": [
+        "99.99% uptime SLA",
+        "Open API and webhooks",
+        "Enterprise single sign-on"
+      ],
+      "buttonLabel": "Explore the platform",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+      "imageSide": "left"
+    },
+    "style": {
+      "background": "#eff6ff",
+      "textColor": "#1e3a8a",
+      "paddingY": 96
+    },
+    "elements": {
+      "image": {
+        "radius": 14,
+        "shadow": "lg"
+      },
+      "button": {
+        "background": "#2563eb",
+        "color": "#ffffff",
+        "radius": 8
+      }
+    }
+  }
+}

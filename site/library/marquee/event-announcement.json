@@ -1,0 +1,43 @@
+{
+  "name": "Event announcement",
+  "description": "Conference announcement bar with arrows and dates.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Summit 2027 tickets live",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Oct 14-16, Austin",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "40+ speakers",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Early bird ends Friday",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 24,
+      "size": "small",
+      "separator": "arrow",
+      "gap": 32,
+      "fade": false,
+      "pause": true
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "paddingY": 14
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Tabs · property details",
+  "description": "Boxed tabs with large images for a property listing.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "12 Harbour View",
+      "heading": "A home with room to breathe",
+      "orientation": "horizontal",
+      "style": "boxed",
+      "tabAlign": "left",
+      "items": [
+        {
+          "label": "Interior",
+          "icon": "",
+          "title": "Light-filled living",
+          "text": "Open-plan living with oak floors, a gas fireplace and floor-to-ceiling windows.",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=80"
+        },
+        {
+          "label": "Garden",
+          "icon": "",
+          "title": "Private outdoor space",
+          "text": "A south-facing garden with a covered terrace, fruit trees and a heated studio.",
+          "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=900&q=80"
+        },
+        {
+          "label": "Neighbourhood",
+          "icon": "",
+          "title": "Close to everything",
+          "text": "Five minutes to the station, a market square and two outstanding primary schools.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "buttonLabel": "Book a viewing",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ffffff",
+      "textColor": "#1f2937",
+      "paddingY": 96,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#111827"
+      }
+    }
+  }
+}

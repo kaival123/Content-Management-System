@@ -1,0 +1,66 @@
+{
+  "name": "Press mentions",
+  "description": "As seen in publications, slowly gliding with slashes.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "heading": "As seen in",
+      "items": [
+        {
+          "text": "The Daily Ledger",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Forbes India",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Wired Weekly",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Morning Brew",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "TechPulse",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Business Today",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "The Verge Review",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 60,
+      "size": "medium",
+      "separator": "slash",
+      "gap": 56,
+      "fade": true,
+      "pause": false
+    },
+    "style": {
+      "paddingY": 44,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 14,
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "color": "#6b7280"
+      }
+    }
+  }
+}

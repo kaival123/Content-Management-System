@@ -1,0 +1,78 @@
+{
+  "name": "Agency insights on gradient",
+  "description": "Design and strategy articles on an indigo gradient.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Studio insights",
+      "subheading": "Notes on branding, product and the craft of good work.",
+      "posts": [
+        {
+          "title": "What makes a brand system flexible",
+          "excerpt": "Rules that bend without breaking, with three real examples.",
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "category": "Branding",
+          "date": "Oct 1, 2026",
+          "author": "Noor Hassan",
+          "link": "#"
+        },
+        {
+          "title": "Designing portfolio sites that get calls",
+          "excerpt": "Five patterns from sites that win work.",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "category": "Web",
+          "date": "Sep 17, 2026",
+          "author": "Chris Albright",
+          "link": "#"
+        },
+        {
+          "title": "Inside our design critique",
+          "excerpt": "How we give feedback without ego.",
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "category": "Process",
+          "date": "Sep 3, 2026",
+          "author": "Lucia Fernández",
+          "link": "#"
+        },
+        {
+          "title": "Running workshops remotely",
+          "excerpt": "Tools and tricks for keeping energy high.",
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+          "category": "Workshops",
+          "date": "Aug 20, 2026",
+          "author": "Ravi Kapoor",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#4f46e5",
+      "gradientTo": "#9333ea",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.14)",
+        "radius": 16,
+        "paddingX": 0,
+        "paddingY": 0
+      }
+    }
+  }
+}

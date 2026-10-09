@@ -1,0 +1,47 @@
+{
+  "name": "Three large partners",
+  "description": "Only three partners, spacious padding.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Official partners",
+      "logos": [
+        {
+          "name": "Northern Rail",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "City Council",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Metro Airways",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#fefce8",
+      "paddingY": 88,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 3,
+      "tablet": 3,
+      "mobile": 1,
+      "gap": 48
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 20,
+        "fontWeight": 700
+      }
+    }
+  }
+}

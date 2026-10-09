@@ -1,0 +1,105 @@
+{
+  "name": "Team spotlight · dark",
+  "description": "Centred team portraits on a dark band, with the middle card emphasised.",
+  "section": {
+    "type": "carousel",
+    "data": {
+      "subheading": "A small studio of designers, engineers and strategists.",
+      "slideHeight": 0,
+      "heading": "Meet the people behind the work",
+      "variant": "team",
+      "slides": [
+        {
+          "heading": "Priya Nair",
+          "eyebrow": "Creative Director",
+          "text": "Twelve years shaping brands for food and wellness companies.",
+          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Marcus Bell",
+          "eyebrow": "Lead Engineer",
+          "text": "Builds fast, accessible sites and the tooling behind them.",
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Elena Rossi",
+          "eyebrow": "Head of Strategy",
+          "text": "Turns messy briefs into clear, measurable plans.",
+          "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Jonas Weber",
+          "eyebrow": "Motion Designer",
+          "text": "Makes interfaces feel alive without getting in the way.",
+          "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        },
+        {
+          "heading": "Grace Mensah",
+          "eyebrow": "Client Partner",
+          "text": "Your first call, and the person who keeps projects on track.",
+          "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80",
+          "price": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "background": "",
+          "textColor": "",
+          "html": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#f8fafc",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "carousel": {
+      "perViewDesktop": 3,
+      "perViewTablet": 2,
+      "perViewMobile": 1,
+      "gap": 32,
+      "autoplay": true,
+      "autoplaySpeed": 4500,
+      "speed": 700,
+      "loop": true,
+      "arrows": true,
+      "dots": true,
+      "drag": true,
+      "touch": true,
+      "keyboard": true,
+      "center": true,
+      "transition": "slide",
+      "pauseOnHover": true,
+      "arrowPosition": "outside",
+      "arrowStyle": "circle",
+      "dotsStyle": "pills",
+      "dotsPosition": "below",
+      "controlColor": "__accent__"
+    }
+  }
+}

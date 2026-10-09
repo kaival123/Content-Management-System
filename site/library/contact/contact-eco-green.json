@@ -1,0 +1,37 @@
+{
+  "name": "Contact · eco business",
+  "description": "Forest green tone for a sustainability business.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Work with us",
+      "text": "Ask for a free energy assessment or talk to our team about your next project.",
+      "email": "contact@greenleafenergy.com",
+      "phone": "+1 (720) 555-0149",
+      "address": "350 Pearl Street\nBoulder, CO 80302",
+      "buttonLabel": "Request assessment",
+      "successMessage": "Thank you. We will arrange your free assessment soon."
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#14532d",
+      "gradientTo": "#166534",
+      "gradientAngle": 160,
+      "textColor": "#dcfce7",
+      "paddingY": 96,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "text": {
+        "color": "#bbf7d0"
+      },
+      "form": {
+        "background": "#f0fdf4",
+        "color": "#14532d"
+      }
+    }
+  }
+}

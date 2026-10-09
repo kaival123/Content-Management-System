@@ -1,0 +1,60 @@
+{
+  "name": "School faculty",
+  "description": "Teachers and heads of department with short bios.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Our teachers",
+      "subheading": "Educators who love their subjects and their students.",
+      "members": [
+        {
+          "name": "Ms. Priya Menon",
+          "role": "Head of Mathematics",
+          "bio": "Coaches our national olympiad team.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Mr. Thomas Ashby",
+          "role": "Head of Sciences",
+          "bio": "Former research chemist who still runs the robotics club.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Ms. Farah Khan",
+          "role": "English and Drama",
+          "bio": "Directs the annual school play.",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#064e3b",
+      "align": "left",
+      "paddingTop": 90,
+      "paddingBottom": 90
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#047857"
+      },
+      "card": {
+        "radius": 14,
+        "background": "#d1fae5",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

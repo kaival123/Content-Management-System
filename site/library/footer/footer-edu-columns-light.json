@@ -1,0 +1,60 @@
+{
+  "name": "Footer · education light columns",
+  "description": "Light columns footer for schools and courses.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [
+        {
+          "label": "LinkedIn",
+          "href": "#"
+        },
+        {
+          "label": "YouTube",
+          "href": "#"
+        }
+      ],
+      "divider": "line",
+      "copyrightAlign": "auto",
+      "linkStyle": "underline",
+      "brand": "BrightPath Academy",
+      "tagline": "Learning that grows with you.",
+      "layout": "columns",
+      "links": [
+        {
+          "label": "Courses",
+          "href": "#"
+        },
+        {
+          "label": "Admissions",
+          "href": "#"
+        },
+        {
+          "label": "Scholarships",
+          "href": "#"
+        },
+        {
+          "label": "Student login",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 BrightPath Academy"
+    },
+    "style": {
+      "paddingY": 72,
+      "background": "#f8fafc",
+      "textColor": "#475569"
+    },
+    "elements": {
+      "brand": {
+        "color": "#1e3a8a",
+        "fontWeight": 700
+      }
+    }
+  }
+}

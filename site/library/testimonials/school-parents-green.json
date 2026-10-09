@@ -1,0 +1,56 @@
+{
+  "name": "School parent feedback",
+  "description": "Parent and teacher quotes on a fresh green background.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Parents and teachers on life at our school",
+      "items": [
+        {
+          "quote": "My son went from dreading maths to joining the olympiad club in one year.",
+          "name": "Meera Iyer",
+          "role": "Parent, Grade 6",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+        },
+        {
+          "quote": "Small classes mean every child is known by name. You can feel it in the corridors.",
+          "name": "David Mutua",
+          "role": "Parent, Grade 9",
+          "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80"
+        },
+        {
+          "quote": "Teaching here is a joy. We are trusted to try new ideas.",
+          "name": "Ms. Priyanka Bose",
+          "role": "Science Teacher",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#064e3b",
+      "align": "left",
+      "paddingTop": 90,
+      "paddingBottom": 90
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#047857"
+      },
+      "card": {
+        "radius": 14,
+        "background": "#d1fae5",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

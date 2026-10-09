@@ -1,0 +1,42 @@
+{
+  "name": "Three big numbers",
+  "description": "Three oversized numbers with an accent colour.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Our impact in numbers",
+      "items": [
+        {
+          "value": "2.4M",
+          "label": "Meals delivered"
+        },
+        {
+          "value": "380",
+          "label": "Partner kitchens"
+        },
+        {
+          "value": "61",
+          "label": "Cities"
+        }
+      ]
+    },
+    "style": {
+      "align": "center",
+      "paddingY": 80
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 3,
+      "mobile": 1,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "value": {
+        "fontSize": 64,
+        "fontWeight": 800,
+        "color": "__primary__"
+      }
+    }
+  }
+}

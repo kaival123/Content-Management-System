@@ -1,0 +1,42 @@
+{
+  "name": "Contact · agency gradient with map",
+  "description": "Magenta-to-purple gradient with a map on the right.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Let us talk",
+      "text": "Share your brief and budget range and we will suggest the best way forward.",
+      "email": "new@brightspark.agency",
+      "phone": "+1 (310) 555-0155",
+      "address": "2200 Colorado Ave\nSanta Monica, CA 90404",
+      "buttonLabel": "Send brief",
+      "successMessage": "Thanks! A producer will be in touch within one day.",
+      "mapAddress": "2200 Colorado Ave, Santa Monica, CA 90404",
+      "mapLayout": "side",
+      "mapRadius": 18,
+      "mapShadow": "medium"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#be185d",
+      "gradientTo": "#6d28d9",
+      "gradientAngle": 140,
+      "textColor": "#fce7f3",
+      "paddingY": 100,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "text": {
+        "color": "#fbcfe8"
+      },
+      "form": {
+        "background": "#ffffff",
+        "color": "#1f2937",
+        "radius": 16
+      }
+    }
+  }
+}

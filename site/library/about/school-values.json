@@ -1,0 +1,38 @@
+{
+  "name": "School values about",
+  "description": "Friendly yellow about section for a school describing its values.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Where learning feels like discovery",
+      "text": "Our teachers know every child by name. Small classes, hands-on projects and strong pastoral care help students build confidence as well as grades.",
+      "bullets": [
+        "Average class size of 18",
+        "Robotics, music and sports for all",
+        "98% pass rate in board exams"
+      ],
+      "buttonLabel": "Explore our school",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
+      "imageSide": "left"
+    },
+    "style": {
+      "background": "#fffbeb",
+      "textColor": "#451a03",
+      "paddingY": 88
+    },
+    "elements": {
+      "heading": {
+        "color": "#92400e"
+      },
+      "image": {
+        "radius": 28
+      },
+      "button": {
+        "background": "#d97706",
+        "color": "#ffffff",
+        "radius": 12
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Accordion · plan details",
+  "description": "What each pricing plan includes, as cards.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "heading": "What is included in each plan",
+      "items": [
+        {
+          "icon": "🌱",
+          "question": "Starter · $12 / month",
+          "answer": "One site, 5 pages, free SSL and email support. Ideal for personal projects and portfolios."
+        },
+        {
+          "icon": "🚀",
+          "question": "Growth · $39 / month",
+          "answer": "Up to five sites, unlimited pages, form automation, analytics and priority chat support."
+        },
+        {
+          "icon": "🏢",
+          "question": "Scale · $99 / month",
+          "answer": "Unlimited sites, team roles, staging environments, audit logs and a dedicated success manager."
+        }
+      ],
+      "style": "cards",
+      "icon": "circle",
+      "iconPosition": "right",
+      "openFirst": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#ffffff",
+      "textColor": "#0f172a",
+      "paddingY": 80,
+      "align": "left"
+    },
+    "elements": {
+      "item": {
+        "radius": 14
+      }
+    }
+  }
+}

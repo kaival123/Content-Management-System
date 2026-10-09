@@ -1,0 +1,74 @@
+{
+  "name": "Tight four column grid",
+  "description": "Small square tiles with no gap, edge to edge feel.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Photos from our community.",
+      "captionOnHover": true,
+      "heading": "#shotonlocation",
+      "shape": "1/1",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80",
+          "title": "Alpine lake",
+          "caption": "Hiker",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=900&q=80",
+          "title": "Coastal cliffs",
+          "caption": "Camper",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=80",
+          "title": "Golden fields",
+          "caption": "Farmer",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+          "title": "Summit ridge",
+          "caption": "Climber",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=80",
+          "title": "Forest trail",
+          "caption": "Walker",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+          "title": "City break",
+          "caption": "Traveller",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "title": "Skyline dusk",
+          "caption": "Nomad",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=80",
+          "title": "Quiet valley",
+          "caption": "Wanderer",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "paddingY": 64,
+      "paddingSide": 0
+    },
+    "grid": {
+      "cardStyle": "none",
+      "desktop": 4,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 0
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "E-commerce customer praise",
+  "description": "Light background with short shopper reviews.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Over 12,000 five-star orders",
+      "items": [
+        {
+          "quote": "Arrived in two days and packaged beautifully. The leather is gorgeous.",
+          "name": "Emily Carter",
+          "role": "Verified buyer",
+          "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80"
+        },
+        {
+          "quote": "Returns were painless. Refund landed the next morning.",
+          "name": "Diego Alvarez",
+          "role": "Verified buyer",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+        },
+        {
+          "quote": "Third order this year. Quality has never slipped.",
+          "name": "Anjali Menon",
+          "role": "Repeat customer",
+          "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "",
+      "align": "left",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "elements": {
+      "quote": {
+        "fontSize": 17,
+        "italic": true
+      }
+    }
+  }
+}

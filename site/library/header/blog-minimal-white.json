@@ -1,0 +1,35 @@
+{
+  "name": "Blog header minimal",
+  "description": "Plain white header with large heading for a blog index.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Journal",
+      "heading": "Notes on design and growth",
+      "text": "Essays, case studies and lessons learned from helping 200+ businesses grow online.",
+      "buttonLabel": "",
+      "buttonHref": ""
+    },
+    "style": {
+      "background": "#ffffff",
+      "textColor": "#111827",
+      "align": "left",
+      "paddingTop": 96,
+      "paddingBottom": 56,
+      "width": "narrow"
+    },
+    "elements": {
+      "breadcrumb": {
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "color": "#6b7280",
+        "fontSize": 13
+      },
+      "heading": {
+        "fontSize": 56,
+        "fontWeight": 700,
+        "letterSpacing": -1
+      }
+    }
+  }
+}

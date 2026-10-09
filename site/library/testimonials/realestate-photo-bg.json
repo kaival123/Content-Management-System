@@ -1,0 +1,61 @@
+{
+  "name": "Real estate buyers on photo",
+  "description": "Home-buyer testimonials over a darkened photo.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Homes found, keys handed over",
+      "items": [
+        {
+          "quote": "They found us a flat in our budget in nine days and handled all the paperwork.",
+          "name": "Vikram & Neha Joshi",
+          "role": "First-time buyers",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+        },
+        {
+          "quote": "Honest advice. They told us what not to buy, which is why we trusted them.",
+          "name": "Grace Whitfield",
+          "role": "Relocated from London",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+        },
+        {
+          "quote": "Sold above asking in two weeks. The photography made all the difference.",
+          "name": "Omar Haddad",
+          "role": "Seller, Marine Drive",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+      "overlayColor": "#0b1220",
+      "overlayOpacity": 74,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 112,
+      "paddingBottom": 112
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.1)",
+        "radius": 14,
+        "paddingX": 26,
+        "paddingY": 26,
+        "borderWidth": 1,
+        "borderColor": "rgba(255,255,255,0.25)"
+      }
+    }
+  }
+}

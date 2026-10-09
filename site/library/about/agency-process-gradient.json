@@ -1,0 +1,46 @@
+{
+  "name": "Agency approach on gradient",
+  "description": "Purple gradient about section for an agency approach story.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Strategy first, pixels second",
+      "text": "We start by understanding your customers and your numbers. Only then do we design. The result is work that looks great and moves the metrics that matter.",
+      "bullets": [
+        "Two-week discovery sprint",
+        "Transparent weekly reporting",
+        "One senior lead on every project"
+      ],
+      "buttonLabel": "How we work",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
+      "imageSide": "left"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#4c1d95",
+      "gradientTo": "#be185d",
+      "gradientAngle": 130,
+      "textColor": "#ffffff",
+      "paddingY": 100
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 40
+      },
+      "text": {
+        "color": "#fce7f3"
+      },
+      "image": {
+        "radius": 16,
+        "shadow": "lg"
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "#701a75",
+        "radius": 999
+      }
+    }
+  }
+}

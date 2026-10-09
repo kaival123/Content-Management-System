@@ -1,0 +1,38 @@
+{
+  "name": "Restaurant tabs, warm",
+  "description": "Warm tabbed list of restaurant locations with shorter map.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Three tables, one kitchen",
+      "text": "Reservations recommended on weekends.",
+      "buttonLabel": "Reserve and navigate",
+      "locationsView": "tabs",
+      "locations": [
+        {
+          "name": "Old Town",
+          "address": "14 Via dei Condotti, 00187 Roma, Italy",
+          "details": "Tue-Sun 12pm - 11pm"
+        },
+        {
+          "name": "Trastevere",
+          "address": "Via della Lungaretta 60, 00153 Roma, Italy",
+          "details": "Daily 6pm - midnight"
+        },
+        {
+          "name": "Monti",
+          "address": "Via Urbana 25, 00184 Roma, Italy",
+          "details": "Wed-Mon 12pm - 10pm"
+        }
+      ],
+      "height": 340,
+      "radius": 18,
+      "shadow": "soft"
+    },
+    "style": {
+      "background": "#fff7ed",
+      "textColor": "#7c2d12",
+      "paddingY": 64
+    }
+  }
+}

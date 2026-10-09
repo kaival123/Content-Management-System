@@ -1,0 +1,23 @@
+{
+  "name": "Law firm split reverse",
+  "description": "Map on the left with the contact block on the right.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Come see us",
+      "text": "Consultations by appointment, first meeting is free.",
+      "details": "Mon-Fri 9am - 5pm\n+44 20 7946 0555\nreception@harlowlaw.example",
+      "buttonLabel": "Get directions",
+      "address": "10 Downing Street, London SW1A 2AA, UK",
+      "layout": "split-reverse",
+      "grayscale": true,
+      "height": 460,
+      "radius": 4,
+      "shadow": "none"
+    },
+    "style": {
+      "align": "left",
+      "paddingY": 72
+    }
+  }
+}

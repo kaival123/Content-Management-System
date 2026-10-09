@@ -1,0 +1,35 @@
+{
+  "name": "Contact · charity enquiries",
+  "description": "Warm sunrise gradient for a charity contact page.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "Get involved",
+      "text": "Volunteer, partner with us or ask about fundraising. We would love to hear from you.",
+      "email": "team@brightwell.org",
+      "phone": "+44 161 555 0147",
+      "address": "Unit 4, Mill Yard\nManchester M4 5JD",
+      "buttonLabel": "Send enquiry",
+      "successMessage": "Thank you for your support. We will be in touch soon."
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#fff1f2",
+      "gradientTo": "#ffedd5",
+      "gradientAngle": 150,
+      "textColor": "#4c0519",
+      "paddingY": 96,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#9f1239"
+      },
+      "form": {
+        "background": "#ffffff",
+        "radius": 18,
+        "shadow": "soft"
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Travel destinations",
+  "description": "Destination names spaced widely with big type.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "heading": "Where will you go next?",
+      "items": [
+        {
+          "text": "Lisbon",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Kyoto",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Marrakech",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Reykjavik",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Cape Town",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Oaxaca",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Hanoi",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "right",
+      "speed": 48,
+      "size": "large",
+      "separator": "none",
+      "gap": 70,
+      "fade": true,
+      "pause": true
+    },
+    "style": {
+      "background": "__bg__",
+      "paddingY": 52,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 20,
+        "fontWeight": 600
+      }
+    }
+  }
+}

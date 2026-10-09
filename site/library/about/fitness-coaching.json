@@ -1,0 +1,48 @@
+{
+  "name": "Fitness coaching about",
+  "description": "Black and lime fitness section about the coaching philosophy.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Coaching built on science, not slogans",
+      "text": "Every programme starts with an assessment and ends with measurable progress. Our certified coaches track your lifts, sleep and recovery so you can see exactly what works.",
+      "bullets": [
+        "Certified strength coaches",
+        "Body composition tracking",
+        "Nutrition guidance included"
+      ],
+      "buttonLabel": "Book a free assessment",
+      "buttonHref": "#",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80",
+      "imageSide": "right"
+    },
+    "style": {
+      "background": "#09090b",
+      "textColor": "#e4e4e7",
+      "paddingY": 104
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "textTransform": "uppercase",
+        "fontWeight": 900
+      },
+      "text": {
+        "color": "#a1a1aa"
+      },
+      "bullets": {
+        "color": "#d4d4d8"
+      },
+      "button": {
+        "background": "#a3e635",
+        "color": "#09090b",
+        "radius": 0,
+        "fontWeight": 800
+      },
+      "image": {
+        "radius": 0,
+        "objectFit": "cover"
+      }
+    }
+  }
+}

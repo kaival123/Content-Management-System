@@ -1,0 +1,52 @@
+{
+  "name": "Navbar · gradient bar",
+  "description": "Violet to blue gradient header with white links.",
+  "section": {
+    "type": "navbar",
+    "data": {
+      "brand": "Lumio",
+      "useSiteMenu": false,
+      "links": [
+        {
+          "label": "Features",
+          "href": "#features"
+        },
+        {
+          "label": "Integrations",
+          "href": "#integrations"
+        },
+        {
+          "label": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "label": "Help",
+          "href": "#help"
+        }
+      ],
+      "ctaLabel": "Get Lumio free",
+      "ctaHref": "#signup",
+      "sticky": true,
+      "layout": "default",
+      "linkStyle": "pills",
+      "ctaStyle": "solid",
+      "barStyle": "none",
+      "mobileMenu": "full"
+    },
+    "style": {
+      "paddingY": 16,
+      "backgroundType": "gradient",
+      "gradientFrom": "#7c3aed",
+      "gradientTo": "#2563eb",
+      "gradientAngle": 90,
+      "textColor": "#ffffff"
+    },
+    "elements": {
+      "cta": {
+        "background": "#ffffff",
+        "color": "#4c1d95",
+        "fontWeight": 700
+      }
+    }
+  }
+}

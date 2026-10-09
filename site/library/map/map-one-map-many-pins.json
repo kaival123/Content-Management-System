@@ -1,0 +1,23 @@
+{
+  "name": "One map with all locations",
+  "description": "A single Google map showing every location as a pin, with the address list beside it. Paste your Google My Maps embed link.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "All our locations",
+      "text": "Every office on one map.",
+      "buttonLabel": "Get directions",
+      "locationsView": "pins",
+      "embedUrl": "",
+      "address": "United States",
+      "locations": [
+        { "name": "San Francisco", "address": "548 Market Street, San Francisco, CA 94104", "details": "Mon–Fri, 9am – 6pm" },
+        { "name": "New York", "address": "350 5th Avenue, New York, NY 10118", "details": "Mon–Fri, 9am – 6pm" },
+        { "name": "Chicago", "address": "233 S Wacker Dr, Chicago, IL 60606", "details": "Mon–Fri, 9am – 5pm" }
+      ],
+      "height": 460,
+      "radius": 12,
+      "shadow": "soft"
+    }
+  }
+}

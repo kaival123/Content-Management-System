@@ -1,0 +1,52 @@
+{
+  "name": "Awards and certifications",
+  "description": "Certification names in colour on soft green.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": false,
+      "heading": "Certified and award winning",
+      "logos": [
+        {
+          "name": "ISO 27001",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "SOC 2 Type II",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "GDPR Ready",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Best Startup 2025",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "B Corp",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#ecfdf5",
+      "textColor": "#065f46",
+      "paddingY": 60,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 5,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 24
+    }
+  }
+}

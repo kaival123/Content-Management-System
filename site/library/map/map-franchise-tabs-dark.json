@@ -1,0 +1,43 @@
+{
+  "name": "Franchise tabs on dark",
+  "description": "Dark tabbed location switcher for a gym franchise.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Train at a gym near you",
+      "text": "Choose a club to see its hours and get directions.",
+      "buttonLabel": "Get directions",
+      "locationsView": "tabs",
+      "locations": [
+        {
+          "name": "Austin",
+          "address": "1100 S Congress Ave, Austin, TX 78704",
+          "details": "Open 24 hours\n+1 (512) 555-0121"
+        },
+        {
+          "name": "Denver",
+          "address": "1550 Wynkoop St, Denver, CO 80202",
+          "details": "5am - 11pm daily\n+1 (303) 555-0166"
+        },
+        {
+          "name": "Seattle",
+          "address": "1201 Pike St, Seattle, WA 98101",
+          "details": "5am - 10pm daily\n+1 (206) 555-0139"
+        },
+        {
+          "name": "Phoenix",
+          "address": "2 E Jefferson St, Phoenix, AZ 85004",
+          "details": "Open 24 hours\n+1 (602) 555-0188"
+        }
+      ],
+      "height": 460,
+      "radius": 8,
+      "shadow": "medium"
+    },
+    "style": {
+      "background": "#111827",
+      "textColor": "#f9fafb",
+      "paddingY": 72
+    }
+  }
+}

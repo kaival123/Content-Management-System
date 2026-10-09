@@ -1,0 +1,83 @@
+{
+  "name": "Services · tiles with banner",
+  "description": "Four tiles and a full-width call-to-action banner.",
+  "section": {
+    "type": "grid",
+    "data": {
+      "heading": "Accounting for growing firms",
+      "subheading": "Stay compliant and know your numbers.",
+      "items": [
+        {
+          "heading": "Bookkeeping",
+          "text": "Monthly reconciliations and clear reports.",
+          "icon": "📒",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Tax planning",
+          "text": "Year-round planning to keep more of what you earn.",
+          "icon": "🧾",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Payroll",
+          "text": "On-time pay runs and pension filings.",
+          "icon": "💷",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Forecasting",
+          "text": "Cash flow models for confident decisions.",
+          "icon": "📈",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Switch to us in a week",
+          "text": "We handle the handover from your current accountant.",
+          "icon": "",
+          "image": "",
+          "buttonLabel": "Get a quote",
+          "buttonHref": "#contact",
+          "colSpan": "4",
+          "rowSpan": "1",
+          "background": "#0f766e",
+          "textColor": "#ffffff"
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16,
+      "cardStyle": "bordered"
+    },
+    "style": {
+      "paddingY": 72
+    }
+  }
+}

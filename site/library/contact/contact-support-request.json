@@ -1,0 +1,35 @@
+{
+  "name": "Contact · support request",
+  "description": "Blue-grey support request form with fast response copy.",
+  "section": {
+    "type": "contact",
+    "data": {
+      "heading": "We are here to help",
+      "text": "Describe the issue and include any error messages. Our support team replies within two hours.",
+      "email": "support@cloudnest.io",
+      "phone": "+1 (800) 555-0100",
+      "address": "",
+      "buttonLabel": "Submit request",
+      "successMessage": "Thanks. Your ticket has been created and a specialist will reply soon."
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#e2e8f0",
+      "gradientTo": "#f8fafc",
+      "gradientAngle": 180,
+      "textColor": "#0f172a",
+      "paddingY": 88,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#1e3a8a"
+      },
+      "form": {
+        "background": "#ffffff",
+        "shadow": "medium",
+        "radius": 12
+      }
+    }
+  }
+}

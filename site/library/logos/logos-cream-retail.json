@@ -1,0 +1,57 @@
+{
+  "name": "Retail stockists",
+  "description": "Warm background listing stockists.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Find us at",
+      "logos": [
+        {
+          "name": "Harvest Market",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Greenleaf",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Corner Pantry",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Urban Basket",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Daily Fresh",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Wholesome",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#fff7ed",
+      "textColor": "#7c2d12",
+      "paddingY": 56,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 6,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 20
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Footer · fitness bold",
+  "description": "Energetic lime-on-black stacked footer.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [
+        {
+          "label": "Instagram",
+          "href": "#"
+        },
+        {
+          "label": "YouTube",
+          "href": "#"
+        },
+        {
+          "label": "TikTok",
+          "href": "#"
+        }
+      ],
+      "divider": "line",
+      "copyrightAlign": "left",
+      "linkStyle": "underline",
+      "brand": "IRONWORKS GYM",
+      "tagline": "No excuses. Just results.",
+      "layout": "stacked",
+      "links": [
+        {
+          "label": "Memberships",
+          "href": "#"
+        },
+        {
+          "label": "Classes",
+          "href": "#"
+        },
+        {
+          "label": "Trainers",
+          "href": "#"
+        },
+        {
+          "label": "Free trial",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Ironworks Fitness Ltd."
+    },
+    "style": {
+      "paddingY": 60,
+      "background": "#0a0a0a",
+      "textColor": "#a3a3a3"
+    },
+    "elements": {
+      "brand": {
+        "color": "#a3e635",
+        "fontSize": 26,
+        "fontWeight": 800,
+        "letterSpacing": 2
+      },
+      "tagline": {
+        "color": "#ffffff"
+      }
+    }
+  }
+}

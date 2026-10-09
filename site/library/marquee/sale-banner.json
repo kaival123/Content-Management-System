@@ -1,0 +1,44 @@
+{
+  "name": "Sale banner strip",
+  "description": "Bold red promo strip with an arrow between offers.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Free shipping over $50",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Summer sale up to 40% off",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "New arrivals every Friday",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "30-day easy returns",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 22,
+      "size": "small",
+      "separator": "arrow",
+      "gap": 36,
+      "fade": false,
+      "pause": true
+    },
+    "style": {
+      "background": "#dc2626",
+      "textColor": "#ffffff",
+      "paddingY": 12,
+      "align": "center"
+    }
+  }
+}

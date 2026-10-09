@@ -1,0 +1,22 @@
+{
+  "name": "Cafe overlay, greyscale",
+  "description": "Greyscale full-width map with a small card for a cafe.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Find the cafe",
+      "text": "Corner of Rua Augusta, Lisbon",
+      "details": "Daily 8am - 7pm\nHello@brasa.example",
+      "buttonLabel": "Open in Maps",
+      "address": "Rua Augusta 100, 1100-053 Lisboa, Portugal",
+      "layout": "overlay",
+      "grayscale": true,
+      "height": 520,
+      "radius": 0,
+      "shadow": "none"
+    },
+    "style": {
+      "paddingY": 0
+    }
+  }
+}

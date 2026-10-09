@@ -1,0 +1,58 @@
+{
+  "name": "Lavender coaching reviews",
+  "description": "Soft lavender cards with centred, rounded avatars.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Clients on their coaching journey",
+      "items": [
+        {
+          "quote": "I finally have clarity on my next five years, and a plan to get there.",
+          "name": "Camille Laurent",
+          "role": "Product Designer",
+          "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80"
+        },
+        {
+          "quote": "Every session leaves me lighter and more focused.",
+          "name": "Arjun Nair",
+          "role": "Startup Founder",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+        },
+        {
+          "quote": "She asks the questions I have been avoiding. Uncomfortable and so useful.",
+          "name": "Zoe Mitchell",
+          "role": "Marketing Director",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f5f3ff",
+      "textColor": "#4c1d95",
+      "align": "center",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#5b21b6",
+        "italic": true
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#3b0764",
+        "radius": 24,
+        "paddingX": 26,
+        "paddingY": 30
+      }
+    }
+  }
+}

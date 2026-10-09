@@ -1,0 +1,33 @@
+{
+  "name": "Photo overlay",
+  "description": "Full-width photo with a dark overlay.",
+  "section": {
+    "type": "cta",
+    "data": {
+      "heading": "Build the home you have imagined",
+      "text": "Book a free design consultation with our architects this month.",
+      "buttonLabel": "Book consultation",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80",
+      "overlayColor": "#000000",
+      "overlayOpacity": 55,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 128
+    },
+    "elements": {
+      "heading": {
+        "fontSize": 48,
+        "fontWeight": 700
+      },
+      "button": {
+        "background": "#f59e0b",
+        "color": "#111827",
+        "radius": 4
+      }
+    }
+  }
+}

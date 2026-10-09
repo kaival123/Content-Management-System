@@ -1,0 +1,28 @@
+{
+  "name": "Student registration",
+  "description": "register",
+  "section": {
+    "type": "auth",
+    "data": {
+      "mode": {
+        "heading": "Join the learning community",
+        "text": "Sign up to enrol in courses, track progress and earn certificates.",
+        "buttonLabel": "Enrol now",
+        "switchText": "Have an account?",
+        "switchLabel": "Log in here",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
+      },
+      "switchHref": "#login",
+      "action": "",
+      "background": "#eff6ff",
+      "textColor": "#1e3a8a",
+      "paddingY": 64
+    },
+    "style": {
+      "button": {
+        "background": "#2563eb",
+        "color": "#ffffff"
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { ComponentDef, renderSection } from './engine/render';
 import { escapeHtml } from './engine/template';
 import { LandingPage, Website } from './models';
 import { PageStore } from './page-store';
+import { withSharedSections } from './shared-sections';
 import { ProjectService, pageDir } from './project.service';
 import { siteRuntime } from './site-runtime';
 import { SiteService } from './site.service';
@@ -28,6 +29,8 @@ function runtimeJs(): string {
     rt.initBackToTop(document);
     rt.initAccordions(document);
     rt.initTabs(document);
+    rt.initMiniHeader(document);
+    rt.initAccessibility(document);
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
@@ -116,7 +119,7 @@ export class Exporter {
         homeHref: link(website.homepage ?? page.slug),
       },
     };
-    const body = page.sections
+    const body = withSharedSections(page, this.store.pagesOf(website.slug)).sections
       .filter((s) => s.visible)
       .map((s) => renderSection(s, byType.get(s.type), opts))
       .join('\n');

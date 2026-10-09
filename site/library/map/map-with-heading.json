@@ -1,0 +1,15 @@
+{
+  "name": "Google Map with heading",
+  "description": "Heading and intro text above a full-width Google Map.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Find us here",
+      "text": "Visit our office or get directions below.",
+      "address": "548 Market Street, San Francisco, CA 94104",
+      "height": 400,
+      "radius": 12,
+      "shadow": "soft"
+    }
+  }
+}

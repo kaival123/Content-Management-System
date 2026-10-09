@@ -1,0 +1,50 @@
+{
+  "name": "Pastel creative gallery",
+  "description": "Pastel background with shadowed cards.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Bright ideas for brands that want to stand out.",
+      "captionOnHover": false,
+      "heading": "Creative campaigns",
+      "shape": "4/3",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "title": "Portfolio launch",
+          "caption": "Web",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&q=80",
+          "title": "App redesign",
+          "caption": "Product",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "title": "Gig posters",
+          "caption": "Print",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Brand refresh",
+          "caption": "Branding",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#fdf2f8",
+      "paddingY": 80
+    },
+    "grid": {
+      "cardStyle": "shadow",
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Stone and amber testimonials",
+  "description": "Dark stone cards with an amber heading and top border.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Craft that speaks for itself",
+      "items": [
+        {
+          "quote": "Our dining table has been the centre of every family dinner since it arrived.",
+          "name": "Helen Marsh",
+          "role": "Custom furniture client",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+        },
+        {
+          "quote": "The joinery is so good, guests ask which designer made it.",
+          "name": "Tariq Anwar",
+          "role": "Interior stylist",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+        },
+        {
+          "quote": "Fair price, honest timeline, and a handwritten thank-you card.",
+          "name": "Rosa Delgado",
+          "role": "Home owner",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "#1c1917",
+      "textColor": "#e7e5e4",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96,
+      "borderTopWidth": 3,
+      "borderColor": "#f59e0b"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#fbbf24"
+      },
+      "card": {
+        "borderColor": "#44403c",
+        "radius": 10,
+        "paddingX": 24,
+        "paddingY": 28,
+        "background": "#292524"
+      }
+    }
+  }
+}

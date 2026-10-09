@@ -1,0 +1,55 @@
+{
+  "name": "Tabs · plans by audience",
+  "description": "Light blue horizontal underline tabs by audience.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "Pricing",
+      "heading": "Plans for every stage",
+      "orientation": "horizontal",
+      "style": "underline",
+      "tabAlign": "center",
+      "items": [
+        {
+          "label": "Freelancers",
+          "icon": "",
+          "title": "$9 per month",
+          "text": "Everything a solo professional needs: invoicing, contracts and simple time tracking.",
+          "buttonLabel": "Start free",
+          "buttonHref": "#contact"
+        },
+        {
+          "label": "Small teams",
+          "icon": "",
+          "title": "$29 per month",
+          "text": "Shared projects, roles and client portals for up to ten people.",
+          "buttonLabel": "Start free",
+          "buttonHref": "#contact"
+        },
+        {
+          "label": "Companies",
+          "icon": "",
+          "title": "Custom pricing",
+          "text": "Advanced security, onboarding and a dedicated manager for larger organisations.",
+          "buttonLabel": "Talk to sales",
+          "buttonHref": "#contact"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#eff6ff",
+      "textColor": "#1e3a8a",
+      "paddingY": 88,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#1e3a8a"
+      },
+      "eyebrow": {
+        "color": "#2563eb"
+      }
+    }
+  }
+}

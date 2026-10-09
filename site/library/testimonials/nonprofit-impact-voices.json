@@ -1,0 +1,59 @@
+{
+  "name": "Nonprofit volunteer voices",
+  "description": "Supporter and beneficiary quotes in a narrow light panel.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Voices from our community",
+      "items": [
+        {
+          "quote": "Because of the scholarship, I am the first in my family to attend college.",
+          "name": "Lakshmi Devi",
+          "role": "Scholarship recipient",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+        },
+        {
+          "quote": "Volunteering every Saturday taught me more than any course did.",
+          "name": "Tomas Berg",
+          "role": "Volunteer, 3 years",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+        },
+        {
+          "quote": "Our monthly gift goes further here. We get a report on exactly where it went.",
+          "name": "Hannah Cole",
+          "role": "Monthly donor",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0f9ff",
+      "textColor": "#0c4a6e",
+      "align": "center",
+      "paddingTop": 72,
+      "paddingBottom": 72,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#075985"
+      },
+      "card": {
+        "borderColor": "#bae6fd",
+        "radius": 14,
+        "background": "#ffffff",
+        "color": "#0c4a6e",
+        "paddingX": 24,
+        "paddingY": 24
+      }
+    }
+  }
+}

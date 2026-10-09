@@ -1,0 +1,64 @@
+{
+  "name": "Workplace fit-outs",
+  "description": "Photo-led office fit-out projects over a dark photo.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Offices we have fitted out",
+      "subheading": "Calm, practical and built around the way teams actually work.",
+      "shape": "4/3",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "title": "Fintech HQ, 120 seats",
+          "caption": "Open plan",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80",
+          "title": "Design studio",
+          "caption": "Creative",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "title": "Wellness floor",
+          "caption": "Biophilic",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+      "overlayColor": "#0b1220",
+      "overlayOpacity": 74,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 112,
+      "paddingBottom": 112
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 14,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.1)",
+        "radius": 14,
+        "paddingX": 26,
+        "paddingY": 26,
+        "borderWidth": 1,
+        "borderColor": "rgba(255,255,255,0.25)"
+      }
+    }
+  }
+}

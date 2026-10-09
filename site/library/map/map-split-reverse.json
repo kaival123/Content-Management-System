@@ -1,0 +1,19 @@
+{
+  "name": "Map with details (map left)",
+  "description": "Google Map on the left, contact details on the right.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Come say hello",
+      "text": "Drop by for a coffee and a chat.",
+      "details": "Mon–Fri, 9am – 6pm\nhello@northstar.studio",
+      "buttonLabel": "Get directions",
+      "address": "548 Market Street, San Francisco, CA 94104",
+      "layout": "split-reverse",
+      "grayscale": false,
+      "height": 420,
+      "radius": 16,
+      "shadow": "medium"
+    }
+  }
+}

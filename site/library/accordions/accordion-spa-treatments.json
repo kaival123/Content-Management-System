@@ -1,0 +1,54 @@
+{
+  "name": "Accordion · spa treatments",
+  "description": "Treatments with emoji icons on soft sand.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "The menu",
+      "heading": "Treatments",
+      "items": [
+        {
+          "icon": "🌿",
+          "question": "Signature massage (60 min)",
+          "answer": "A slow, full-body massage using warmed botanical oils to release tension in the back, neck and shoulders."
+        },
+        {
+          "icon": "💆",
+          "question": "Deep-tissue therapy (45 min)",
+          "answer": "Focused pressure for stubborn knots, ideal for athletes and desk workers alike."
+        },
+        {
+          "icon": "🧖",
+          "question": "Hydrating facial (50 min)",
+          "answer": "Cleanse, exfoliate and mask with a hyaluronic serum for visibly plumper skin."
+        },
+        {
+          "icon": "🪨",
+          "question": "Hot stone ritual (75 min)",
+          "answer": "Smooth basalt stones melt away muscle tension while you drift into deep relaxation."
+        }
+      ],
+      "style": "filled",
+      "icon": "chevron",
+      "iconPosition": "right",
+      "singleOpen": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#f6efe6",
+      "textColor": "#4a3b2c",
+      "paddingY": 88,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#5b4630"
+      },
+      "eyebrow": {
+        "color": "#9a7b4f",
+        "letterSpacing": 2,
+        "textTransform": "uppercase"
+      }
+    }
+  }
+}

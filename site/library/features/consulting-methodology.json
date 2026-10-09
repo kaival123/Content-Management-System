@@ -1,0 +1,53 @@
+{
+  "name": "Consulting methodology",
+  "description": "Single-column-feeling two-column list for a consulting methodology.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Our four-step method",
+      "subheading": "A repeatable process that turns problems into plans.",
+      "items": [
+        {
+          "icon": "1️⃣",
+          "title": "Diagnose",
+          "text": "Interviews and data analysis to find the real constraint in your business."
+        },
+        {
+          "icon": "2️⃣",
+          "title": "Design",
+          "text": "Co-create options with your team and model the financial impact of each."
+        },
+        {
+          "icon": "3️⃣",
+          "title": "Deliver",
+          "text": "Embedded support while your people implement the chosen plan."
+        },
+        {
+          "icon": "4️⃣",
+          "title": "Embed",
+          "text": "Training, dashboards and playbooks so results keep compounding."
+        }
+      ]
+    },
+    "style": {
+      "background": "#ffffff",
+      "textColor": "#111827"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 36,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "title": {
+        "fontSize": 22
+      },
+      "icon": {
+        "fontSize": 34
+      }
+    }
+  }
+}

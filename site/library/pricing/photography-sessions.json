@@ -1,0 +1,87 @@
+{
+  "name": "Photography sessions",
+  "description": "Session prices over a darkened photo background.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Photography packages",
+      "subheading": "Every session includes edited, high-resolution images.",
+      "plans": [
+        {
+          "name": "Mini",
+          "price": "€150",
+          "period": "",
+          "description": "30 minutes",
+          "features": [
+            "1 location",
+            "10 edited images",
+            "Online gallery"
+          ],
+          "buttonLabel": "Book mini",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Signature",
+          "price": "€320",
+          "period": "",
+          "description": "2 hours",
+          "features": [
+            "2 locations",
+            "40 edited images",
+            "Printed proof book"
+          ],
+          "buttonLabel": "Book signature",
+          "buttonHref": "#",
+          "highlighted": true
+        },
+        {
+          "name": "Full day",
+          "price": "€780",
+          "period": "",
+          "description": "8 hours",
+          "features": [
+            "Unlimited locations",
+            "150 edited images",
+            "Second photographer",
+            "Prints included"
+          ],
+          "buttonLabel": "Book full day",
+          "buttonHref": "#",
+          "highlighted": false
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+      "overlayColor": "#0b1220",
+      "overlayOpacity": 74,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 112,
+      "paddingBottom": 112
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.1)",
+        "radius": 14,
+        "paddingX": 26,
+        "paddingY": 26,
+        "borderWidth": 1,
+        "borderColor": "rgba(255,255,255,0.25)"
+      }
+    }
+  }
+}

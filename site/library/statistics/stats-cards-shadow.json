@@ -1,0 +1,41 @@
+{
+  "name": "Stats in shadow cards",
+  "description": "Four metrics inside raised cards on a grey surface.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Results our clients see",
+      "items": [
+        {
+          "value": "3.1x",
+          "label": "Return on ad spend"
+        },
+        {
+          "value": "48%",
+          "label": "Lower acquisition cost"
+        },
+        {
+          "value": "9 days",
+          "label": "Average onboarding"
+        },
+        {
+          "value": "96%",
+          "label": "Client retention"
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center",
+      "paddingY": 72
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "shadow",
+      "textAlign": "center",
+      "gap": 24
+    }
+  }
+}

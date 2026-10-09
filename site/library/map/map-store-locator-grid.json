@@ -1,0 +1,42 @@
+{
+  "name": "Store locator grid",
+  "description": "Four store cards in a grid with an address each.",
+  "section": {
+    "type": "map",
+    "data": {
+      "heading": "Stores near you",
+      "text": "Walk in any day, no appointment needed.",
+      "buttonLabel": "Directions",
+      "locationsView": "grid",
+      "locations": [
+        {
+          "name": "Downtown",
+          "address": "12 King Street West, Toronto, ON M5H 1A1",
+          "details": "Mon-Sat 10am - 8pm"
+        },
+        {
+          "name": "Harbourfront",
+          "address": "235 Queens Quay W, Toronto, ON M5J 2G8",
+          "details": "Daily 10am - 9pm"
+        },
+        {
+          "name": "Yorkdale",
+          "address": "3401 Dufferin St, Toronto, ON M6A 2T9",
+          "details": "Daily 10am - 9pm"
+        },
+        {
+          "name": "Kensington",
+          "address": "60 Kensington Ave, Toronto, ON M5T 2K2",
+          "details": "Tue-Sun 11am - 6pm"
+        }
+      ],
+      "height": 380,
+      "radius": 10,
+      "shadow": "soft"
+    },
+    "style": {
+      "background": "__surface__",
+      "paddingY": 72
+    }
+  }
+}

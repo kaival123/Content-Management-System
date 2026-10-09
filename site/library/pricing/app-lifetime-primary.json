@@ -1,0 +1,82 @@
+{
+  "name": "App plans on brand colour",
+  "description": "Free, Pro and Lifetime on a solid brand background.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Own it for good",
+      "subheading": "One payment unlocks everything, forever.",
+      "plans": [
+        {
+          "name": "Free",
+          "price": "$0",
+          "period": "",
+          "description": "Try it out",
+          "features": [
+            "5 notebooks",
+            "Sync on 1 device"
+          ],
+          "buttonLabel": "Download",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Pro",
+          "price": "$3",
+          "period": "/month",
+          "description": "For power users",
+          "features": [
+            "Unlimited notebooks",
+            "Sync on all devices",
+            "Handwriting search"
+          ],
+          "buttonLabel": "Go Pro",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "Lifetime",
+          "price": "$79",
+          "period": "once",
+          "description": "Pay once, keep forever",
+          "features": [
+            "Everything in Pro",
+            "All future updates",
+            "Priority support"
+          ],
+          "buttonLabel": "Buy lifetime",
+          "buttonHref": "#",
+          "highlighted": true
+        }
+      ]
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 92,
+      "paddingBottom": 92
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#0f172a",
+        "radius": 12,
+        "paddingX": 26,
+        "paddingY": 26,
+        "shadow": "md"
+      }
+    }
+  }
+}

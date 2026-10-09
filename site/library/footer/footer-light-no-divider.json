@@ -1,0 +1,46 @@
+{
+  "name": "Footer · light no divider",
+  "description": "Clean white footer without a divider line.",
+  "section": {
+    "type": "footer",
+    "data": {
+      "useSiteMenu": false,
+      "socials": [],
+      "divider": "none",
+      "copyrightAlign": "auto",
+      "linkStyle": "plain",
+      "brand": "Linden Studio",
+      "tagline": "Interiors with a gentle touch.",
+      "layout": "spread",
+      "links": [
+        {
+          "label": "Projects",
+          "href": "#"
+        },
+        {
+          "label": "Journal",
+          "href": "#"
+        },
+        {
+          "label": "About",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "copyright": "© 2026 Linden Studio"
+    },
+    "style": {
+      "paddingY": 36,
+      "background": "#ffffff",
+      "textColor": "#52525b"
+    },
+    "elements": {
+      "brand": {
+        "color": "#18181b"
+      }
+    }
+  }
+}

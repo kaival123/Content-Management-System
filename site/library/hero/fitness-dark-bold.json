@@ -1,0 +1,52 @@
+{
+  "name": "Fitness bold dark hero",
+  "description": "High-contrast black and lime hero with oversized uppercase headline.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Strength. Conditioning. Community.",
+      "heading": "Train harder. Recover smarter.",
+      "subheading": "Small-group coaching, a 24/7 gym floor and a recovery studio under one roof. Your first week is on us.",
+      "primaryLabel": "Claim free week",
+      "primaryHref": "#join",
+      "secondaryLabel": "See class timetable",
+      "secondaryHref": "#classes",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "background": "#09090b",
+      "textColor": "#fafafa",
+      "align": "center",
+      "paddingY": 128
+    },
+    "elements": {
+      "eyebrow": {
+        "color": "#a3e635",
+        "textTransform": "uppercase",
+        "letterSpacing": 3
+      },
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 72,
+        "fontWeight": 900,
+        "textTransform": "uppercase",
+        "lineHeight": 1
+      },
+      "subheading": {
+        "color": "#d4d4d8"
+      },
+      "primary": {
+        "background": "#a3e635",
+        "color": "#09090b",
+        "radius": 0,
+        "fontWeight": 800
+      },
+      "secondary": {
+        "color": "#ffffff",
+        "borderColor": "#52525b",
+        "radius": 0
+      }
+    }
+  }
+}

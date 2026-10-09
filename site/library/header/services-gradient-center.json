@@ -1,0 +1,38 @@
+{
+  "name": "Services gradient banner",
+  "description": "Centered indigo gradient banner introducing a services page.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Home / Services",
+      "heading": "Services built around your goals",
+      "text": "From first idea to scaled product, choose the support that fits your stage and budget.",
+      "buttonLabel": "Get a free quote",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#312e81",
+      "gradientTo": "#6d28d9",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 104
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 52,
+        "fontWeight": 800
+      },
+      "text": {
+        "color": "#e0e7ff"
+      },
+      "button": {
+        "background": "#ffffff",
+        "color": "#4c1d95",
+        "radius": 999
+      }
+    }
+  }
+}

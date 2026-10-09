@@ -1,0 +1,40 @@
+{
+  "name": "Portfolio black header",
+  "description": "Black header with huge white title for a portfolio page.",
+  "section": {
+    "type": "page-header",
+    "data": {
+      "breadcrumb": "Selected work 2021-2026",
+      "heading": "Our work",
+      "text": "A curated look at brands, products and campaigns we have helped bring to life.",
+      "buttonLabel": "",
+      "buttonHref": ""
+    },
+    "style": {
+      "background": "#000000",
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 132,
+      "paddingBottom": 96
+    },
+    "elements": {
+      "breadcrumb": {
+        "color": "#a1a1aa",
+        "textTransform": "uppercase",
+        "letterSpacing": 3,
+        "fontSize": 12
+      },
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 84,
+        "fontWeight": 900,
+        "letterSpacing": -2,
+        "lineHeight": 1
+      },
+      "text": {
+        "color": "#a1a1aa",
+        "maxWidth": 540
+      }
+    }
+  }
+}

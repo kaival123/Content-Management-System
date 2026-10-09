@@ -1,0 +1,20 @@
+{
+  "name": "Back to top · dark square",
+  "description": "Dark rounded square with a bouncing chevron.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "rounded",
+      "icon": "chevron",
+      "look": "solid",
+      "hover": "bounce",
+      "background": "#111827",
+      "iconColor": "#ffffff",
+      "size": 52,
+      "position": "right",
+      "offsetX": 20,
+      "offsetY": 20,
+      "shadow": true
+    }
+  }
+}

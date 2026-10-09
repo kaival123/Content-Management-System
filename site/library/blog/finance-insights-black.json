@@ -1,0 +1,77 @@
+{
+  "name": "Finance insights, black",
+  "description": "Uppercase finance commentary on a black background.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "Market insights",
+      "subheading": "",
+      "posts": [
+        {
+          "title": "Q3 earnings: what the numbers hide",
+          "excerpt": "Reading beyond the headline margins.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "category": "Earnings",
+          "date": "Oct 6, 2026",
+          "author": "Richard Hale",
+          "link": "#"
+        },
+        {
+          "title": "Takeaways from Capital Markets Day",
+          "excerpt": "Guidance, capex and capital returns.",
+          "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80",
+          "category": "Events",
+          "date": "Sep 28, 2026",
+          "author": "Sunita Rao",
+          "link": "#"
+        },
+        {
+          "title": "Why we built our own risk dashboard",
+          "excerpt": "Off-the-shelf tools were not enough.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80",
+          "category": "Tools",
+          "date": "Sep 12, 2026",
+          "author": "Peter Lindqvist",
+          "link": "#"
+        },
+        {
+          "title": "Hiring in a hybrid world",
+          "excerpt": "What candidates now ask first.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "category": "People",
+          "date": "Aug 30, 2026",
+          "author": "Henry Obi",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#0a0a0a",
+      "textColor": "#f5f5f5",
+      "align": "left",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 0,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "textTransform": "uppercase",
+        "letterSpacing": 3,
+        "fontSize": 28
+      },
+      "card": {
+        "borderColor": "#333333",
+        "radius": 0,
+        "paddingX": 0,
+        "paddingY": 0
+      }
+    }
+  }
+}

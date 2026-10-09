@@ -1,0 +1,42 @@
+{
+  "name": "Law firm experience",
+  "description": "Navy and gold section describing a law firm's experience.",
+  "section": {
+    "type": "about",
+    "data": {
+      "heading": "Three decades of trusted counsel",
+      "text": "Our partners have advised on over 2,000 transactions and represented clients before every major tribunal. We pair rigorous analysis with plain language you can act on.",
+      "bullets": [
+        "Corporate and commercial",
+        "Dispute resolution",
+        "Intellectual property",
+        "Real estate and tax"
+      ],
+      "buttonLabel": "Our practice areas",
+      "buttonHref": "#services",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+      "imageSide": "left"
+    },
+    "style": {
+      "background": "#0b1f3a",
+      "textColor": "#e2e8f0",
+      "paddingY": 100
+    },
+    "elements": {
+      "heading": {
+        "color": "#d4a94a"
+      },
+      "text": {
+        "color": "#cbd5e1"
+      },
+      "image": {
+        "radius": 2
+      },
+      "button": {
+        "background": "#d4a94a",
+        "color": "#0b1f3a",
+        "radius": 2
+      }
+    }
+  }
+}

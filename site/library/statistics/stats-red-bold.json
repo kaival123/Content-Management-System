@@ -1,0 +1,54 @@
+{
+  "name": "Bold red stats",
+  "description": "Strong red band with uppercase labels for a sports brand.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Season in review",
+      "items": [
+        {
+          "value": "27",
+          "label": "Wins"
+        },
+        {
+          "value": "112",
+          "label": "Goals"
+        },
+        {
+          "value": "58K",
+          "label": "Average attendance"
+        },
+        {
+          "value": "3",
+          "label": "Trophies"
+        }
+      ]
+    },
+    "style": {
+      "background": "#b91c1c",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingY": 68
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "center",
+      "gap": 16
+    },
+    "elements": {
+      "value": {
+        "fontSize": 56,
+        "fontWeight": 800,
+        "color": "#ffffff"
+      },
+      "label": {
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "color": "#fecaca"
+      }
+    }
+  }
+}

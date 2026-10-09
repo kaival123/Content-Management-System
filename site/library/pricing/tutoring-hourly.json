@@ -1,0 +1,68 @@
+{
+  "name": "Tutoring rates",
+  "description": "Simple hourly tutoring rates in a narrow panel.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "Tutoring rates",
+      "subheading": "First lesson is free. Pay per session, no contracts.",
+      "plans": [
+        {
+          "name": "Group class",
+          "price": "$18",
+          "period": "/hour",
+          "description": "Up to 5 students",
+          "features": [
+            "Weekly homework review",
+            "Practice papers"
+          ],
+          "buttonLabel": "Join a group",
+          "buttonHref": "#",
+          "highlighted": false
+        },
+        {
+          "name": "One-to-one",
+          "price": "$45",
+          "period": "/hour",
+          "description": "Personal tutor",
+          "features": [
+            "Custom study plan",
+            "Progress reports",
+            "Flexible scheduling"
+          ],
+          "buttonLabel": "Book a tutor",
+          "buttonHref": "#",
+          "highlighted": true
+        }
+      ]
+    },
+    "style": {
+      "background": "#fefce8",
+      "textColor": "#713f12",
+      "align": "center",
+      "paddingTop": 72,
+      "paddingBottom": 72,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#854d0e"
+      },
+      "card": {
+        "borderColor": "#fde047",
+        "background": "#ffffff",
+        "radius": 14,
+        "paddingX": 26,
+        "paddingY": 28
+      }
+    }
+  }
+}

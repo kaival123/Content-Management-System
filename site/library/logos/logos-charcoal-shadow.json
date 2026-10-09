@@ -1,0 +1,52 @@
+{
+  "name": "Charcoal with shadow cards",
+  "description": "Light cards on charcoal.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": false,
+      "heading": "Sponsors",
+      "logos": [
+        {
+          "name": "Volt Motors",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Prime Telecom",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Atlas Insurance",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Nova Drinks",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#27272a",
+      "textColor": "#18181b",
+      "paddingY": 72,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "shadow",
+      "textAlign": "center",
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 24
+    },
+    "elements": {
+      "heading": {
+        "color": "#fafafa"
+      }
+    }
+  }
+}

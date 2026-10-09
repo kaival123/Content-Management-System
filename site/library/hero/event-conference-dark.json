@@ -1,0 +1,49 @@
+{
+  "name": "Conference event hero",
+  "description": "Dark photo-backed hero announcing a conference with date and venue in the eyebrow.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "12-13 November · Bengaluru",
+      "heading": "DevSummit 2027: build what is next",
+      "subheading": "Two days, 40 speakers and 1,500 engineers. Hands-on workshops on AI, cloud and developer experience.",
+      "primaryLabel": "Get tickets",
+      "primaryHref": "#tickets",
+      "secondaryLabel": "View speakers",
+      "secondaryHref": "#speakers",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&q=80",
+      "overlayColor": "#111827",
+      "overlayOpacity": 72,
+      "minHeight": 80,
+      "verticalAlign": "center",
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingY": 120,
+      "parallax": true
+    },
+    "elements": {
+      "eyebrow": {
+        "color": "#fbbf24",
+        "fontWeight": 700
+      },
+      "heading": {
+        "color": "#ffffff",
+        "fontSize": 64,
+        "fontWeight": 800
+      },
+      "subheading": {
+        "color": "#e5e7eb"
+      },
+      "primary": {
+        "background": "#fbbf24",
+        "color": "#111827",
+        "radius": 6
+      }
+    }
+  }
+}

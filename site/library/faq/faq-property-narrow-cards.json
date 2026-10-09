@@ -1,0 +1,59 @@
+{
+  "name": "FAQ · property buyers",
+  "description": "Narrow centred card FAQ on a light grey background.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Buying a home",
+      "heading": "First-time buyer questions",
+      "subheading": "The essentials, in plain English.",
+      "items": [
+        {
+          "question": "How much deposit do I need?",
+          "answer": "Most lenders ask for 5 to 10 percent. We will help you find schemes that lower that figure.",
+          "icon": ""
+        },
+        {
+          "question": "What fees should I budget for?",
+          "answer": "Allow for legal fees, a survey, stamp duty where it applies and moving costs, typically 2 to 3 percent of the price.",
+          "icon": ""
+        },
+        {
+          "question": "How long does a purchase take?",
+          "answer": "From accepted offer to keys usually takes 8 to 12 weeks, depending on the chain.",
+          "icon": ""
+        },
+        {
+          "question": "Can you recommend a mortgage broker?",
+          "answer": "Yes. We work with three independent brokers and there is no charge for an introduction.",
+          "icon": ""
+        }
+      ],
+      "layout": "stacked",
+      "style": "cards",
+      "icon": "chevron",
+      "iconPosition": "right",
+      "singleOpen": true
+    },
+    "style": {
+      "backgroundType": "color",
+      "background": "#f1f5f9",
+      "textColor": "#0f172a",
+      "paddingY": 84,
+      "align": "center",
+      "width": "narrow"
+    },
+    "elements": {
+      "heading": {
+        "color": "#0f172a",
+        "fontWeight": 700
+      },
+      "eyebrow": {
+        "color": "#0369a1"
+      },
+      "item": {
+        "radius": 10
+      }
+    }
+  }
+}

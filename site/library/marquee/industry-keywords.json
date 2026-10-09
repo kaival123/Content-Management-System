@@ -1,0 +1,53 @@
+{
+  "name": "Industry keywords",
+  "description": "Calm medium keywords for a logistics company, scrolling left to right.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "heading": "What we move",
+      "items": [
+        {
+          "text": "Freight",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Warehousing",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Last-mile",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Cold chain",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Customs",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Returns",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "right",
+      "speed": 50,
+      "size": "medium",
+      "separator": "dot",
+      "gap": 48,
+      "fade": true
+    },
+    "style": {
+      "background": "__surface__",
+      "paddingY": 40,
+      "align": "center"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Compact left pair",
+  "description": "Left aligned two-by-two grid.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Backed by",
+      "logos": [
+        {
+          "name": "Seedfund",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Angel Circle",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Ventura Partners",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Northstar VC",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#f8fafc",
+      "paddingY": 48,
+      "align": "left",
+      "width": "narrow"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "left",
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 24
+    }
+  }
+}

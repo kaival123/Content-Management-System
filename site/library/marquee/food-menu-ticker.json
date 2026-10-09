@@ -1,0 +1,52 @@
+{
+  "name": "Restaurant specials ticker",
+  "description": "Warm amber ticker of daily specials.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Wood-fired pizza",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Handmade pasta",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Tiramisu",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Negroni hour",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Sunday brunch",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Chef tasting menu",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 34,
+      "size": "large",
+      "separator": "dot",
+      "gap": 38,
+      "fade": true
+    },
+    "style": {
+      "background": "#fef3c7",
+      "textColor": "#92400e",
+      "paddingY": 30
+    }
+  }
+}

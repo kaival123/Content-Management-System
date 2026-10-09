@@ -1,0 +1,46 @@
+{
+  "name": "Warm amber stats",
+  "description": "Warm cream background with brown figures for a bakery.",
+  "section": {
+    "type": "stats",
+    "data": {
+      "heading": "Baked fresh since 1998",
+      "items": [
+        {
+          "value": "4:00",
+          "label": "Ovens on every morning"
+        },
+        {
+          "value": "62",
+          "label": "Recipes in rotation"
+        },
+        {
+          "value": "7",
+          "label": "Neighbourhood shops"
+        },
+        {
+          "value": "100%",
+          "label": "Local flour"
+        }
+      ]
+    },
+    "style": {
+      "background": "#fffbeb",
+      "textColor": "#78350f",
+      "align": "center",
+      "paddingY": 64
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "value": {
+        "color": "#b45309"
+      }
+    }
+  }
+}

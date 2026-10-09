@@ -1,0 +1,46 @@
+{
+  "name": "Restaurant hero over photo",
+  "description": "Full-screen food photo with warm overlay and uppercase heading.",
+  "section": {
+    "type": "hero",
+    "data": {
+      "eyebrow": "Wood-fired kitchen since 2009",
+      "heading": "Where every table has a story",
+      "subheading": "Seasonal Italian plates, hand-rolled pasta and a wine list worth lingering over. Open Tuesday to Sunday.",
+      "primaryLabel": "Reserve a table",
+      "primaryHref": "#reserve",
+      "secondaryLabel": "View the menu",
+      "secondaryHref": "#menu",
+      "image": "",
+      "layout": "center"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1920&q=80",
+      "overlayColor": "#2b1408",
+      "overlayOpacity": 62,
+      "minHeight": 85,
+      "verticalAlign": "center",
+      "textColor": "#fff7ed",
+      "align": "center",
+      "paddingY": 110
+    },
+    "elements": {
+      "heading": {
+        "color": "#fff7ed",
+        "fontSize": 60,
+        "textTransform": "uppercase",
+        "letterSpacing": 2,
+        "fontWeight": 700
+      },
+      "subheading": {
+        "color": "#fed7aa"
+      },
+      "primary": {
+        "background": "#ea580c",
+        "color": "#ffffff",
+        "radius": 4
+      }
+    }
+  }
+}

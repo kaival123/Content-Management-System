@@ -1,0 +1,46 @@
+{
+  "name": "Wide trio",
+  "description": "Three wide cinematic frames on black.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Frames from recent commercial work.",
+      "captionOnHover": false,
+      "heading": "Showreel stills",
+      "shape": "16/9",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+          "title": "City commercial",
+          "caption": "Film",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=80",
+          "title": "Harvest short",
+          "caption": "Film",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=900&q=80",
+          "title": "Coastal documentary",
+          "caption": "Film",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#000000",
+      "textColor": "#ffffff",
+      "paddingY": 72,
+      "paddingSide": 12
+    },
+    "grid": {
+      "cardStyle": "none",
+      "desktop": 3,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 12
+    }
+  }
+}

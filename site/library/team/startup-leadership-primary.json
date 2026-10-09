@@ -1,0 +1,69 @@
+{
+  "name": "Startup leadership on brand colour",
+  "description": "Leadership team on a solid brand background.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Leadership",
+      "subheading": "Operators who have scaled companies before.",
+      "members": [
+        {
+          "name": "Elena Petrova",
+          "role": "Chief Executive",
+          "bio": "",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Marcus Chen",
+          "role": "Chief Technology Officer",
+          "bio": "",
+          "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Tara Nguyen",
+          "role": "Chief Operating Officer",
+          "bio": "",
+          "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Daniel Lee",
+          "role": "Chief Revenue Officer",
+          "bio": "",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "__primary__",
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 92,
+      "paddingBottom": 92
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#0f172a",
+        "radius": 12,
+        "paddingX": 26,
+        "paddingY": 26,
+        "shadow": "md"
+      }
+    }
+  }
+}

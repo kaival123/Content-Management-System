@@ -1,0 +1,31 @@
+{
+  "name": "Gradient login",
+  "description": "login",
+  "section": {
+    "type": "auth",
+    "data": {
+      "mode": {
+        "heading": "Hello again",
+        "text": "Pick up your playlists and favourites where you left them.",
+        "buttonLabel": "Let me in",
+        "switchText": "First time here?",
+        "switchLabel": "Join for free",
+        "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80"
+      },
+      "switchHref": "#login",
+      "action": "",
+      "backgroundType": "gradient",
+      "gradientFrom": "#4f46e5",
+      "gradientTo": "#9333ea",
+      "gradientAngle": 150,
+      "textColor": "#ffffff",
+      "paddingY": 80
+    },
+    "style": {
+      "button": {
+        "background": "#ffffff",
+        "color": "#4f46e5"
+      }
+    }
+  }
+}

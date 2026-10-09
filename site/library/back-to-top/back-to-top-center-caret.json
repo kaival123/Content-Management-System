@@ -1,0 +1,20 @@
+{
+  "name": "Back to top · centre caret",
+  "description": "Soft tinted circle in the bottom centre with a lift.",
+  "section": {
+    "type": "back-to-top",
+    "data": {
+      "shape": "circle",
+      "icon": "caret",
+      "look": "soft",
+      "hover": "lift",
+      "position": "center",
+      "offsetY": 24,
+      "size": 46,
+      "background": "#4f46e5",
+      "iconColor": "#4f46e5",
+      "shadow": false,
+      "showAfter": 500
+    }
+  }
+}

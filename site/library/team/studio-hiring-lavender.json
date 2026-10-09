@@ -1,0 +1,69 @@
+{
+  "name": "Team with hiring note",
+  "description": "Friendly team intro with lavender background.",
+  "section": {
+    "type": "team",
+    "data": {
+      "heading": "Say hello",
+      "subheading": "We are a team of eight, and we are hiring a front-end engineer.",
+      "members": [
+        {
+          "name": "Camille Laurent",
+          "role": "Product Design",
+          "bio": "Sketches first, argues later.",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Zoe Mitchell",
+          "role": "Customer Stories",
+          "bio": "Interviews customers every week.",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Ola Nilsson",
+          "role": "Engineering",
+          "bio": "Loves a small pull request.",
+          "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
+          "link": "#"
+        },
+        {
+          "name": "Maya Rodriguez",
+          "role": "Community",
+          "bio": "Hosts our monthly meetups.",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#f5f3ff",
+      "textColor": "#4c1d95",
+      "align": "center",
+      "paddingTop": 88,
+      "paddingBottom": 88
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#5b21b6",
+        "italic": true
+      },
+      "card": {
+        "background": "#ffffff",
+        "color": "#3b0764",
+        "radius": 24,
+        "paddingX": 26,
+        "paddingY": 30
+      }
+    }
+  }
+}

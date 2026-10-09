@@ -53,6 +53,24 @@ export const HELPERS: Record<string, Helper> = {
   marker: (v: string) => JSON.stringify(v || '✓'),
   /** Embeddable YouTube/Vimeo player URL, or '' for anything else. */
   video: (url: string) => videoEmbedUrl(url) ?? '',
+  /** Google Maps embed URL for an address / place name (no API key needed), or '' when empty. */
+  mapUrl: (query: string) => {
+    const q = String(query ?? '').replace(/\s+/g, ' ').trim();
+    return q ? `https://www.google.com/maps?q=${encodeURIComponent(q)}&output=embed` : '';
+  },
+  /**
+   * Embed URL for one map: a pasted Google My Maps / "Share → Embed a map" link or <iframe> code
+   * (that is how one map can show several pins), otherwise a plain address. Only google.com/maps URLs are accepted.
+   */
+  mapSrc: (embed: string, query: string) => {
+    const raw = String(embed ?? '');
+    const url = (/src\s*=\s*["']([^"']+)["']/i.exec(raw)?.[1] ?? raw).trim().replace(/&amp;/g, '&');
+    if (/^https:\/\/(www\.)?google\.com\/maps\//i.test(url)) return url;
+    const q = String(query ?? '').replace(/\s+/g, ' ').trim();
+    return q ? `https://www.google.com/maps?q=${encodeURIComponent(q)}&output=embed` : '';
+  },
+  /** Google Maps directions link for an address / place name. */
+  mapDirections: (query: string) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(String(query ?? '').trim())}`,
   /** grid-template-columns for a column layout such as "2-1". */
   columns: (layout: string) =>
     layoutFractions(layout || '1')

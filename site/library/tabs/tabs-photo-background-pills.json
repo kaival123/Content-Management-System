@@ -1,0 +1,51 @@
+{
+  "name": "Tabs · photo background",
+  "description": "Pills over a dark office photo with white text.",
+  "section": {
+    "type": "tabs",
+    "data": {
+      "eyebrow": "About us",
+      "heading": "More than a workplace",
+      "orientation": "horizontal",
+      "style": "pills",
+      "tabAlign": "center",
+      "items": [
+        {
+          "label": "Mission",
+          "icon": "",
+          "title": "Why we exist",
+          "text": "We help independent businesses compete with the giants by giving them the same tools, at a fair price."
+        },
+        {
+          "label": "Values",
+          "icon": "",
+          "title": "How we behave",
+          "text": "Be honest, be curious, and leave every customer better off than we found them."
+        },
+        {
+          "label": "Culture",
+          "icon": "",
+          "title": "Life on the team",
+          "text": "Flexible hours, four-day summers and a learning budget for everyone."
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=80",
+      "overlayColor": "#0f172a",
+      "overlayOpacity": 72,
+      "textColor": "#ffffff",
+      "paddingY": 112,
+      "align": "center"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "eyebrow": {
+        "color": "#fcd34d"
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Eight logo grid",
+  "description": "Two rows of four on a surface.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Our valued clients",
+      "logos": [
+        {
+          "name": "Alder Bank",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "BlueRock",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Cobalt Energy",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Delta Foods",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Evergreen",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Fulcrum",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Granite Co",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Harbor Labs",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "paddingY": 72,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 2,
+      "gap": 24
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Branding case studies, dark",
+  "description": "Wide 16:9 brand projects on a dark background with hover captions.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "heading": "Brands we have built",
+      "subheading": "Identity systems for ambitious companies.",
+      "shape": "16/9",
+      "captionOnHover": true,
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80",
+          "title": "Northwind identity",
+          "caption": "Branding",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=80",
+          "title": "Roastery label system",
+          "caption": "Packaging",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
+          "title": "Opera season posters",
+          "caption": "Print",
+          "link": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=900&q=80",
+          "title": "Electric launch",
+          "caption": "Campaign",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "#0f172a",
+      "textColor": "#e2e8f0",
+      "align": "center",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "flat",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#1e293b",
+        "radius": 16,
+        "paddingX": 28,
+        "paddingY": 28
+      }
+    }
+  }
+}

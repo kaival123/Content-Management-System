@@ -1,0 +1,61 @@
+{
+  "name": "Single plan, centred",
+  "description": "One all-inclusive plan on a charcoal gradient.",
+  "section": {
+    "type": "pricing",
+    "data": {
+      "heading": "One plan. Everything included.",
+      "subheading": "No tiers, no feature gates, no sales calls.",
+      "plans": [
+        {
+          "name": "Complete",
+          "price": "$99",
+          "period": "/month",
+          "description": "For the whole company",
+          "features": [
+            "Unlimited users",
+            "All integrations",
+            "Advanced reporting",
+            "Single sign-on",
+            "24/7 support"
+          ],
+          "buttonLabel": "Start free trial",
+          "buttonHref": "#",
+          "highlighted": true
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#111827",
+      "gradientTo": "#374151",
+      "gradientAngle": 180,
+      "textColor": "#f3f4f6",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100,
+      "width": "narrow"
+    },
+    "grid": {
+      "desktop": 1,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "#111827",
+        "borderWidth": 1,
+        "borderColor": "#4b5563",
+        "radius": 20,
+        "paddingX": 40,
+        "paddingY": 40
+      }
+    }
+  }
+}

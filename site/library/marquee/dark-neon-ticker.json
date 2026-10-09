@@ -1,0 +1,47 @@
+{
+  "name": "Dark neon ticker",
+  "description": "Large light text on near-black with star separators.",
+  "section": {
+    "type": "marquee",
+    "data": {
+      "items": [
+        {
+          "text": "Live music",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Late nights",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Rooftop sets",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Open decks",
+          "image": "",
+          "link": ""
+        },
+        {
+          "text": "Pop-up bars",
+          "image": "",
+          "link": ""
+        }
+      ],
+      "direction": "left",
+      "speed": 28,
+      "size": "large",
+      "separator": "star",
+      "gap": 44,
+      "fade": true
+    },
+    "style": {
+      "background": "#0b0f1a",
+      "textColor": "#a5f3fc",
+      "paddingY": 36
+    }
+  }
+}

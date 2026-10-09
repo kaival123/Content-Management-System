@@ -1,0 +1,70 @@
+{
+  "name": "Services · feature image block",
+  "description": "Large photo block beside smaller service tiles.",
+  "section": {
+    "type": "grid",
+    "data": {
+      "heading": "Landscape & garden design",
+      "subheading": "From first sketch to final planting.",
+      "items": [
+        {
+          "heading": "Garden design",
+          "text": "Complete designs tailored to your site, soil and style.",
+          "icon": "",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "buttonLabel": "See our gardens",
+          "buttonHref": "#gallery",
+          "colSpan": "2",
+          "rowSpan": "2",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Planting plans",
+          "text": "Seasonal colour and low-maintenance borders.",
+          "icon": "🌱",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Hard landscaping",
+          "text": "Patios, paths and retaining walls.",
+          "icon": "🧱",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Maintenance",
+          "text": "Monthly visits to keep it looking its best.",
+          "icon": "✂️",
+          "image": "",
+          "buttonLabel": "",
+          "buttonHref": "",
+          "colSpan": "2",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 16
+    },
+    "style": {
+      "paddingY": 80
+    }
+  }
+}

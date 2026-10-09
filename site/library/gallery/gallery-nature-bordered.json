@@ -1,0 +1,62 @@
+{
+  "name": "Nature bordered grid",
+  "description": "Bordered cards with captions beneath.",
+  "section": {
+    "type": "gallery",
+    "data": {
+      "subheading": "Protected landscapes you can visit.",
+      "captionOnHover": false,
+      "heading": "Wild places",
+      "shape": "4/3",
+      "images": [
+        {
+          "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80",
+          "title": "Alpine lake",
+          "caption": "National park",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=900&q=80",
+          "title": "Coastal cliffs",
+          "caption": "Coast",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=80",
+          "title": "Golden fields",
+          "caption": "Meadow",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80",
+          "title": "Summit ridge",
+          "caption": "Alpine",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=80",
+          "title": "Forest trail",
+          "caption": "Woodland",
+          "link": ""
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+          "title": "City break",
+          "caption": "Valley",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "#f0fdf4",
+      "paddingY": 80
+    },
+    "grid": {
+      "cardStyle": "bordered",
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20
+    }
+  }
+}

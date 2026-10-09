@@ -1,0 +1,48 @@
+{
+  "name": "Services · wide two-column",
+  "description": "Two wide service blocks with image and buttons.",
+  "section": {
+    "type": "grid",
+    "data": {
+      "heading": "Healthcare consulting",
+      "subheading": "Practical help for clinics and care providers.",
+      "items": [
+        {
+          "heading": "Clinic operations",
+          "text": "Scheduling, patient flow and staffing models that cut waiting times.",
+          "icon": "",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+          "buttonLabel": "Read case study",
+          "buttonHref": "#cases",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        },
+        {
+          "heading": "Digital health",
+          "text": "Choose and roll out booking, records and telehealth tools.",
+          "icon": "",
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=900&q=80",
+          "buttonLabel": "Read case study",
+          "buttonHref": "#cases",
+          "colSpan": "1",
+          "rowSpan": "1",
+          "background": "",
+          "textColor": ""
+        }
+      ]
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 1,
+      "mobile": 1,
+      "gap": 28,
+      "cardStyle": "shadow",
+      "textAlign": "left"
+    },
+    "style": {
+      "paddingY": 84
+    }
+  }
+}

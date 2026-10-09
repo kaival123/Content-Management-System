@@ -1,0 +1,83 @@
+{
+  "name": "Education purple gradient",
+  "description": "Purple gradient strip for schools and academies.",
+  "section": {
+    "type": "mini-header",
+    "data": {
+      "showFontSize": true,
+      "keepPageColors": false,
+      "pillStyle": "filled",
+      "themeLabel": "Theme:",
+      "links": [
+        {
+          "label": "Skip to Main Content",
+          "href": "#main"
+        },
+        {
+          "label": "Screen Reader Access",
+          "href": "#screen-reader"
+        }
+      ],
+      "languages": [
+        {
+          "label": "English",
+          "code": "en",
+          "href": ""
+        },
+        {
+          "label": "हिन्दी",
+          "code": "hi",
+          "href": ""
+        },
+        {
+          "label": "ગુજરાતી",
+          "code": "gu",
+          "href": ""
+        }
+      ],
+      "themes": [
+        {
+          "name": "Purple",
+          "color": "#7c3aed",
+          "background": "#e9e0fb",
+          "surface": "#f7f3ff",
+          "text": "#261245"
+        },
+        {
+          "name": "Rose",
+          "color": "#e11d48",
+          "background": "#fde0e8",
+          "surface": "#fff4f7",
+          "text": "#3d0f1c"
+        },
+        {
+          "name": "Blue",
+          "color": "#2563eb",
+          "background": "#dbe8fb",
+          "surface": "#f3f8ff",
+          "text": "#10264a"
+        },
+        {
+          "name": "Dark",
+          "color": "#f59e0b",
+          "background": "#0b0b0f",
+          "surface": "#17171f",
+          "text": "#f3f4f6",
+          "dot": "#111111"
+        }
+      ],
+      "title": "Bright Minds Academy",
+      "barColor": "custom",
+      "allPages": true
+    },
+    "style": {
+      "paddingY": 6,
+      "align": "left",
+      "backgroundType": "gradient",
+      "gradientFrom": "#4c1d95",
+      "gradientTo": "#7c3aed",
+      "gradientAngle": 90,
+      "textColor": "#ffffff"
+    }
+  }
+}

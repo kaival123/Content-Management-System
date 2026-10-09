@@ -1,0 +1,69 @@
+{
+  "name": "FAQ · agency studio",
+  "description": "Studio photo with a dark overlay, split layout, no icons.",
+  "section": {
+    "type": "faq",
+    "data": {
+      "eyebrow": "Working together",
+      "heading": "How we work with clients",
+      "subheading": "Clear scope, clear pricing, no surprises.",
+      "items": [
+        {
+          "question": "Do you work on fixed prices?",
+          "answer": "Yes. Every project starts with a fixed-scope proposal. Changes are quoted before we begin them.",
+          "icon": ""
+        },
+        {
+          "question": "How long does a website take?",
+          "answer": "A typical marketing site is live in six to eight weeks from kick-off.",
+          "icon": ""
+        },
+        {
+          "question": "Who owns the work?",
+          "answer": "You do. All design files, code and content are yours once the final invoice is paid.",
+          "icon": ""
+        },
+        {
+          "question": "Do you offer ongoing support?",
+          "answer": "Monthly care plans cover updates, security, hosting and a set number of change requests.",
+          "icon": ""
+        },
+        {
+          "question": "Can you work with our in-house team?",
+          "answer": "Absolutely. We often join existing teams as design or front-end partners.",
+          "icon": ""
+        }
+      ],
+      "layout": "split",
+      "style": "boxed",
+      "icon": "none",
+      "iconPosition": "right",
+      "singleOpen": true,
+      "openFirst": true,
+      "ctaText": "Have a project in mind?",
+      "buttonLabel": "Start a conversation",
+      "buttonHref": "#contact"
+    },
+    "style": {
+      "backgroundType": "image",
+      "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+      "overlayColor": "#111827",
+      "overlayOpacity": 70,
+      "textColor": "#f9fafb",
+      "paddingY": 108,
+      "align": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "item": {
+        "background": "#ffffff14",
+        "borderColor": "#ffffff33"
+      },
+      "answer": {
+        "color": "#e5e7eb"
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Indigo gradient glass cards",
+  "description": "Frosted cards on an indigo-to-violet gradient.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Teams love working this way",
+      "items": [
+        {
+          "quote": "Handoffs between design and dev finally feel effortless.",
+          "name": "Noor Hassan",
+          "role": "Design Lead, Pixelhaus",
+          "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80"
+        },
+        {
+          "quote": "Clients approve work in hours instead of days.",
+          "name": "Chris Albright",
+          "role": "Founder, Brightside Studio",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+        },
+        {
+          "quote": "It feels like the tool was built by people who actually run agencies.",
+          "name": "Lucia Fernández",
+          "role": "Creative Director, Nuevo",
+          "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#4f46e5",
+      "gradientTo": "#9333ea",
+      "gradientAngle": 135,
+      "textColor": "#ffffff",
+      "align": "center",
+      "paddingTop": 100,
+      "paddingBottom": 100
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff"
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.14)",
+        "radius": 18,
+        "paddingX": 26,
+        "paddingY": 26,
+        "borderWidth": 1,
+        "borderColor": "rgba(255,255,255,0.3)"
+      }
+    }
+  }
+}

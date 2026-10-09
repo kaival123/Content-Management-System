@@ -1,0 +1,66 @@
+{
+  "name": "Fitness member results",
+  "description": "Energetic sunset gradient with member results.",
+  "section": {
+    "type": "testimonials",
+    "data": {
+      "heading": "Real members, real results",
+      "items": [
+        {
+          "quote": "Down 14 kg in five months and I finally enjoy training.",
+          "name": "Aaron Blake",
+          "role": "Member since January",
+          "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80"
+        },
+        {
+          "quote": "The 6 a.m. class is the best part of my day. The coaches push without pushing you over.",
+          "name": "Fatima Zaidi",
+          "role": "Strength program",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+        },
+        {
+          "quote": "Came back from a knee injury stronger than before. Thank you, team.",
+          "name": "Liam O’Connor",
+          "role": "Rehab and conditioning",
+          "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+        },
+        {
+          "quote": "Group classes made gym anxiety disappear for me.",
+          "name": "Sasha Ivanova",
+          "role": "Member for 2 years",
+          "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+        }
+      ]
+    },
+    "style": {
+      "backgroundType": "gradient",
+      "gradientFrom": "#f97316",
+      "gradientTo": "#db2777",
+      "gradientAngle": 160,
+      "textColor": "#ffffff",
+      "align": "left",
+      "paddingTop": 104,
+      "paddingBottom": 104
+    },
+    "grid": {
+      "desktop": 2,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 22,
+      "cardStyle": "none",
+      "textAlign": "left"
+    },
+    "elements": {
+      "heading": {
+        "color": "#ffffff",
+        "fontWeight": 800
+      },
+      "card": {
+        "background": "rgba(0,0,0,0.22)",
+        "radius": 16,
+        "paddingX": 24,
+        "paddingY": 26
+      }
+    }
+  }
+}

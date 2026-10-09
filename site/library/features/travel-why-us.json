@@ -1,0 +1,54 @@
+{
+  "name": "Travel why choose us",
+  "description": "Sunset-warm cards listing travel benefits, four columns.",
+  "section": {
+    "type": "features",
+    "data": {
+      "heading": "Why travel with us",
+      "subheading": "Experiences that big tour operators cannot offer.",
+      "items": [
+        {
+          "icon": "🧭",
+          "title": "Local guides",
+          "text": "Born and raised on the routes they lead."
+        },
+        {
+          "icon": "🏡",
+          "title": "Family-run stays",
+          "text": "Boutique lodges and homestays, never chains."
+        },
+        {
+          "icon": "👥",
+          "title": "Small groups",
+          "text": "Maximum of 12 travellers per departure."
+        },
+        {
+          "icon": "🛡️",
+          "title": "Flexible booking",
+          "text": "Free date changes up to 30 days before departure."
+        }
+      ]
+    },
+    "style": {
+      "background": "#fff7ed",
+      "textColor": "#431407"
+    },
+    "grid": {
+      "desktop": 4,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 20,
+      "cardStyle": "bordered",
+      "textAlign": "left"
+    },
+    "elements": {
+      "card": {
+        "borderColor": "#fdba74",
+        "radius": 14
+      },
+      "title": {
+        "color": "#9a3412"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "School news",
+  "description": "Announcements and student stories on a surface background.",
+  "section": {
+    "type": "blog",
+    "data": {
+      "heading": "News from school",
+      "subheading": "Achievements, events and stories from our community.",
+      "posts": [
+        {
+          "title": "Grade 9 team wins state science fair",
+          "excerpt": "Their solar dryer design impressed the judges.",
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80",
+          "category": "Achievements",
+          "date": "Oct 5, 2026",
+          "author": "Ms. Farah Khan",
+          "link": "#"
+        },
+        {
+          "title": "Open day: what to expect",
+          "excerpt": "Tours, classroom demos and conversations with teachers.",
+          "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
+          "category": "Admissions",
+          "date": "Sep 25, 2026",
+          "author": "Admissions Office",
+          "link": "#"
+        },
+        {
+          "title": "Our new school garden",
+          "excerpt": "Students grow vegetables for the canteen.",
+          "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=900&q=80",
+          "category": "Campus",
+          "date": "Sep 10, 2026",
+          "author": "Mr. Thomas Ashby",
+          "link": "#"
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "align": "center",
+      "paddingTop": 96,
+      "paddingBottom": 96
+    },
+    "grid": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1,
+      "gap": 24,
+      "cardStyle": "flat",
+      "textAlign": "center"
+    }
+  }
+}

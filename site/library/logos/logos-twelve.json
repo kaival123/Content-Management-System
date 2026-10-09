@@ -1,0 +1,86 @@
+{
+  "name": "Twelve logo wall",
+  "description": "Three rows of four for large customer lists.",
+  "section": {
+    "type": "logos",
+    "data": {
+      "grayscale": true,
+      "heading": "Over 2,000 companies grow with us",
+      "logos": [
+        {
+          "name": "Aero",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Bolt",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Cirrus",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Drift",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Ember",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Flux",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Glide",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Helix",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Ion",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Jet",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Kite",
+          "image": "",
+          "link": ""
+        },
+        {
+          "name": "Lynx",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "style": {
+      "background": "__surface__",
+      "paddingY": 80,
+      "align": "center"
+    },
+    "grid": {
+      "cardStyle": "none",
+      "textAlign": "center",
+      "desktop": 4,
+      "tablet": 3,
+      "mobile": 2,
+      "gap": 16
+    }
+  }
+}
